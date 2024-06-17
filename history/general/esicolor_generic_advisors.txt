@@ -1,0 +1,2925 @@
+# For minor countries where advisors are not defined
+# Generate them from a generic template
+
+every_possible_country = {
+	# Ideology Advisors
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = staunch_monarchist characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_staunch_monarchist
+			advisor = {
+				slot = political_advisor
+				traits = { staunch_monarchist }
+
+				ai_will_do = {
+					factor = 0
+
+					modifier = {
+						has_country_flag = ai_go_neutrality
+						NOT = { has_government = neutrality }
+
+						add = 10
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = democratic_reformer characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_democratic_reformer_esieaw
+			advisor = {
+				slot = political_advisor
+				traits = { democratic_reformer }
+
+				ai_will_do = {
+					factor = 0
+
+					modifier = {
+						has_country_flag = ai_go_democratic
+						NOT = { has_government = democratic }
+
+						add = 10
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = fascist_demagogue characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_fascist_demagogue_esieaw
+			advisor = {
+				slot = political_advisor
+				traits = { fascist_demagogue }
+
+				ai_will_do = {
+					factor = 0
+
+					modifier = {
+						has_country_flag = ai_go_fascism
+						NOT = { has_government = fascism }
+
+						add = 10
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = communist_revolutionary characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_communist_revolutionary_esieaw
+			advisor = {
+				slot = political_advisor
+				traits = { communist_revolutionary }
+
+				ai_will_do = {
+					factor = 0
+
+					modifier = {
+						has_country_flag = ai_go_communism
+						NOT = { has_government = communism }
+
+						add = 10
+					}
+				}
+			}
+		}
+	}
+
+	# Other Political Advisors
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = popular_figurehead characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_popular_figurehead
+			advisor = {
+				slot = political_advisor
+				traits = { popular_figurehead }
+
+				visible = {
+					NOT = { has_country_flag = popular_figurehead_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = popular_figurehead_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 1
+
+					modifier = {
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add = 9
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = propaganda_expert characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_propaganda_expert
+			advisor = {
+				slot = political_advisor
+				traits = { propaganda_expert }
+
+				visible = {
+					NOT = { has_country_flag = propaganda_expert_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = propaganda_expert_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 1
+
+					modifier = {
+						has_war_support > 0.4
+						has_war_support < 0.5
+
+						add = 9
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = silent_workhorse characters = yes }
+				has_allowed_idea_with_traits = { idea = silent_workgriffon characters = yes }
+				has_allowed_idea_with_traits = { idea = silent_workdog characters = yes }
+				has_allowed_idea_with_traits = { idea = silent_workdeer characters = yes }
+				has_allowed_idea_with_traits = { idea = silent_workbull characters = yes }
+				has_allowed_idea_with_traits = { idea = silent_workling characters = yes }
+				has_allowed_idea_with_traits = { idea = silent_workdragon characters = yes }
+				has_allowed_idea_with_traits = { idea = silent_workbear characters = yes }
+				has_allowed_idea_with_traits = { idea = silent_workpenguin characters = yes }
+				has_allowed_idea_with_traits = { idea = silent_workyak characters = yes }
+			}
+		}
+		if = {
+			limit = { is_griffon_race = yes }
+			generate_character = {
+				token_base = generic_silent_workhorse_griffon
+				advisor = {
+					slot = political_advisor
+					traits = { silent_workgriffon }
+
+					visible = {
+						NOT = { has_country_flag = silent_workhorse_disabled }
+					}
+					available = {
+						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
+					}
+
+					ai_will_do = {
+						factor = 15
+					}
+				}
+				portraits = {
+					army = { small = GFX_idea_unknown_advisor_griffon }
+				}
+			}
+		}
+		else_if = {
+			limit = { is_diamond_dog_race = yes }
+			generate_character = {
+				token_base = generic_silent_workhorse_dog
+				advisor = {
+					slot = political_advisor
+					traits = { silent_workdog }
+
+					visible = {
+						NOT = { has_country_flag = silent_workhorse_disabled }
+					}
+					available = {
+						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
+					}
+
+					ai_will_do = {
+						factor = 15
+					}
+				}
+				portraits = {
+					army = { small = GFX_idea_unknown_advisor_dog }
+				}
+			}
+		}
+		else_if = {
+			limit = { is_deer_race = yes }
+			generate_character = {
+				token_base = generic_silent_workhorse_deer
+				advisor = {
+					slot = political_advisor
+					traits = { silent_workdeer }
+
+					visible = {
+						NOT = { has_country_flag = silent_workhorse_disabled }
+					}
+					available = {
+						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
+					}
+
+					ai_will_do = {
+						factor = 15
+					}
+				}
+				portraits = {
+					army = { small = GFX_idea_deer_generic }
+				}
+			}
+		}
+		else_if = {
+			limit = { is_minotaur_race = yes }
+			generate_character = {
+				token_base = generic_silent_workhorse_minotaur
+				advisor = {
+					slot = political_advisor
+					traits = { silent_workbull }
+
+					visible = {
+						NOT = { has_country_flag = silent_workhorse_disabled }
+					}
+					available = {
+						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
+					}
+
+					ai_will_do = {
+						factor = 15
+					}
+				}
+				portraits = {
+					army = { small = GFX_idea_unknown_advisor_minotaur }
+				}
+			}
+		}
+		else_if = {
+			limit = { is_buffalo_race = yes }
+			generate_character = {
+				token_base = generic_silent_workhorse_buffalo
+				advisor = {
+					slot = political_advisor
+					traits = { silent_workbull }
+
+					visible = {
+						NOT = { has_country_flag = silent_workhorse_disabled }
+					}
+					available = {
+						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
+					}
+
+					ai_will_do = {
+						factor = 15
+					}
+				}
+				portraits = {
+					army = { small = GFX_idea_unknown_advisor_buffalo }
+				}
+			}
+		}
+		else_if = {
+			limit = { is_changeling_race = yes }
+			generate_character = {
+				token_base = generic_silent_workhorse_changeling
+				advisor = {
+					slot = political_advisor
+					traits = { silent_workling }
+
+					visible = {
+						NOT = { has_country_flag = silent_workhorse_disabled }
+					}
+					available = {
+						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
+					}
+
+					ai_will_do = {
+						factor = 15
+					}
+				}
+				portraits = {
+					army = { small = GFX_idea_unknown_advisor_bug }
+				}
+			}
+		}
+		else_if = {
+			limit = { is_dragon_race = yes }
+			generate_character = {
+				token_base = generic_silent_workhorse_dragon
+				advisor = {
+					slot = political_advisor
+					traits = { silent_workdragon }
+
+					visible = {
+						NOT = { has_country_flag = silent_workhorse_disabled }
+					}
+					available = {
+						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
+					}
+
+					ai_will_do = {
+						factor = 15
+					}
+				}
+				portraits = {
+					army = { small = GFX_idea_unknown_advisor_dragon }
+				}
+			}
+		}
+		else_if = {
+			limit = { is_polar_race = yes }
+			generate_character = {
+				token_base = generic_silent_workhorse_polar
+				advisor = {
+					slot = political_advisor
+					traits = { silent_workbear }
+
+					visible = {
+						NOT = { has_country_flag = silent_workhorse_disabled }
+					}
+					available = {
+						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
+					}
+
+					ai_will_do = {
+						factor = 15
+					}
+				}
+				portraits = {
+					army = { small = GFX_idea_unknown_advisor_bear }
+				}
+			}
+		}
+		else_if = {
+			limit = { is_penguin_race = yes }
+			generate_character = {
+				token_base = generic_silent_workhorse_penguin
+				advisor = {
+					slot = political_advisor
+					traits = { silent_workpenguin }
+
+					visible = {
+						NOT = { has_country_flag = silent_workhorse_disabled }
+					}
+					available = {
+						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
+					}
+
+					ai_will_do = {
+						factor = 15
+					}
+				}
+				portraits = {
+					army = { small = GFX_idea_unknown_advisor_pingu }
+				}
+			}
+		}
+		else_if = {
+			limit = { is_yak_race = yes }
+			generate_character = {
+				token_base = generic_silent_workhorse_yak
+				advisor = {
+					slot = political_advisor
+					traits = { silent_workyak }
+
+					visible = {
+						NOT = { has_country_flag = silent_workhorse_disabled }
+					}
+					available = {
+						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
+					}
+
+					ai_will_do = {
+						factor = 15
+					}
+				}
+				portraits = {
+					army = { small = GFX_idea_unknown_advisor_yak }
+				}
+			}
+
+			else = {
+				generate_character = {
+					token_base = generic_silent_workhorse
+					advisor = {
+						slot = political_advisor
+						traits = { silent_workhorse }
+
+						visible = {
+							NOT = { has_country_flag = silent_workhorse_disabled }
+						}
+						available = {
+							hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
+						}
+
+						ai_will_do = {
+							factor = 15
+						}
+					}
+					portraits = {
+						army = { small = GFX_idea_unknown_advisor }
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = prince_of_terror characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_prince_of_terror
+			advisor = {
+				slot = political_advisor
+				traits = { prince_of_terror }
+
+				visible = {
+					NOT = { has_country_flag = prince_of_terror_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = prince_of_terror_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 1
+
+					modifier = {
+						any_owned_state = {
+							resistance > 50
+						}
+
+						add = 9
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = backroom_backstabber characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_backroom_backstabber
+			advisor = {
+				slot = political_advisor
+				traits = { backroom_backstabber }
+
+				visible = {
+					NOT = { has_country_flag = backroom_backstabber_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = backroom_backstabber_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 5
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = editor characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_editor
+			advisor = {
+				slot = political_advisor
+				traits = { editor }
+
+				visible = {
+					NOT = { has_country_flag = editor_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = editor_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 5
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = ideological_crusader characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_ideological_crusader
+			advisor = {
+				slot = political_advisor
+				traits = { ideological_crusader }
+
+				visible = {
+					NOT = { has_country_flag = ideological_crusader_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = ideological_crusader_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 0
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = compassionate_gentleman characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_compassionate_gentleman
+			advisor = {
+				slot = political_advisor
+				traits = { compassionate_gentleman }
+
+				visible = {
+					NOT = { has_country_flag = compassionate_gentleman_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = compassionate_gentleman_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 0
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = smooth_talking_charmer characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_smooth_talking_charmer
+			advisor = {
+				slot = political_advisor
+				traits = { smooth_talking_charmer }
+
+				visible = {
+					NOT = { has_country_flag = smooth_talking_charmer_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = smooth_talking_charmer } }
+				}
+
+				ai_will_do = {
+					factor = 1
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = financial_expert characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_financial_expert
+			advisor = {
+				slot = political_advisor
+				traits = { financial_expert }
+
+				visible = {
+					NOT = { has_country_flag = financial_expert_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = financial_expert_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 1
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = economist characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_economist
+			advisor = {
+				slot = political_advisor
+				traits = { economist }
+
+				visible = {
+					NOT = { has_country_flag = economist_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = economist_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 1
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = captain_of_industry characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_captain_of_industry_esieaw
+			advisor = {
+				slot = political_advisor
+				traits = { captain_of_industry }
+
+				visible = {
+					NOT = { has_country_flag = captain_of_industry_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = captain_of_industry_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 1
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = war_industrialist characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_war_industrialist_esieaw
+			advisor = {
+				slot = political_advisor
+				traits = { war_industrialist }
+
+				visible = {
+					NOT = { has_country_flag = war_industrialist_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = war_industrialist_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 1
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = fortification_engineer characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_fortification_engineer_esieaw
+			advisor = {
+				slot = political_advisor
+				traits = { fortification_engineer }
+
+				visible = {
+					NOT = { has_country_flag = fortification_engineer_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = fortification_engineer_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 1
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = quartermaster_general characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_quartermaster_general
+			advisor = {
+				slot = political_advisor
+				traits = { quartermaster_general }
+
+				visible = {
+					NOT = { has_country_flag = quartermaster_general_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = quartermaster_general_disabled } }
+				}
+					ai_will_do = {
+					factor = 1
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = armaments_organizer characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_armaments_organizer
+			advisor = {
+				slot = political_advisor
+				traits = { armaments_organizer }
+
+				visible = {
+					NOT = { has_country_flag = armaments_organizer_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = armaments_organizer_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 0
+				}
+			}
+		}
+	}
+
+	# Political Advisors with Negative Modifiers
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = unhindered_scientist characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_unhindered_scientist
+			advisor = {
+				slot = political_advisor
+				traits = { unhindered_scientist }
+
+				visible = {
+					NOT = { has_country_flag = unhindered_scientist_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = unhindered_scientist_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 0
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = occultist characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_occultist
+			advisor = {
+				slot = political_advisor
+				traits = { occultist }
+
+				visible = {
+					NOT = { has_country_flag = occultist_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = occultist_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 0
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = bureaucrat characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_bureaucrat
+			advisor = {
+				slot = political_advisor
+				traits = { bureaucrat }
+
+				visible = {
+					NOT = { has_country_flag = bureaucrat_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = bureaucrat_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 0
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = industrialist characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_industrialist
+			advisor = {
+				slot = political_advisor
+				traits = { industrialist }
+
+				visible = {
+					NOT = { has_country_flag = industrialist_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = industrialist_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 0
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_dlc = "La Resistance"
+				has_allowed_idea_with_traits = { idea = secret_police_chief characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_secret_police_chief
+			advisor = {
+				slot = political_advisor
+				traits = { secret_police_chief }
+
+				visible = {
+					NOT = { has_country_flag = secret_police_chief_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = secret_police_chief_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 0
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			has_dlc = "La Resistance"
+			NOT = {
+				has_allowed_idea_with_traits = { idea = secret_police_chief_lar characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_secret_police_chief_lar
+			advisor = {
+				slot = political_advisor
+				traits = { secret_police_chief_lar }
+
+				visible = {
+					NOT = { has_country_flag = secret_police_chief_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = secret_police_chief_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 0
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = friendly_priest characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_friendly_priest
+			advisor = {
+				slot = political_advisor
+				traits = { friendly_priest }
+
+				visible = {
+					NOT = { has_country_flag = friendly_priest_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = friendly_priest_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 0
+				}
+			}
+		}
+	}
+
+	# Intelligence Advisors
+	if = {
+		limit = {
+			has_dlc = "La Resistance"
+			NOT = {
+				has_allowed_idea_with_traits = { idea = head_of_intelligence characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_head_of_intelligence_esieaw
+			advisor = {
+				slot = political_advisor
+				traits = { head_of_intelligence }
+
+				visible = {
+					can_create_intelligence_agency = yes
+					NOT = { has_country_flag = head_of_intelligence_disabled }
+				}
+				available = {
+					has_intelligence_agency = yes
+					hidden_trigger = { NOT = { has_country_flag = head_of_intelligence_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						has_intelligence_agency = no
+						factor = 0
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			has_dlc = "La Resistance"
+			NOT = {
+				has_allowed_idea_with_traits = { idea = code_breaker characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_code_breaker
+			advisor = {
+				slot = political_advisor
+				traits = { code_breaker }
+
+				visible = {
+					can_create_intelligence_agency = yes
+					NOT = { has_country_flag = code_breaker_disabled }
+				}
+				available = {
+					has_intelligence_agency = yes
+					hidden_trigger = { NOT = { has_country_flag = code_breaker_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						has_intelligence_agency = no
+						factor = 0
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			has_dlc = "La Resistance"
+			NOT = {
+				has_allowed_idea_with_traits = { idea = encryption_expert characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_encryption_expert
+			advisor = {
+				slot = political_advisor
+				traits = { encryption_expert }
+
+				visible = {
+					can_create_intelligence_agency = yes
+					NOT = { has_country_flag = encryption_expert_disabled }
+				}
+				available = {
+					has_intelligence_agency = yes
+					hidden_trigger = { NOT = { has_country_flag = encryption_expert_disabled } }
+				}
+
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						has_intelligence_agency = no
+						factor = 0
+					}
+				}
+			}
+		}
+	}
+
+	# Military Theorists
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = military_theorist characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_military_theorist_esieaw
+			advisor = {
+				slot = theorist
+				ledger = army
+				cost = 100
+				traits = { military_theorist }
+
+				visible = {
+					OR = {
+						has_country_flag = all_advisors_enabled
+						NOT = {
+							has_country_flag = military_theorist_disabled
+							has_country_flag = mobile_warfare_expert_enabled
+							has_country_flag = superior_firepower_expert_enabled
+							has_country_flag = grand_battle_plan_expert_enabled
+							has_country_flag = mass_assault_expert_enabled
+						}
+					}
+				}
+				available = {
+					hidden_trigger = {
+						OR = {
+							has_country_flag = all_advisors_enabled
+							NOT = {
+								has_country_flag = military_theorist_disabled
+								has_country_flag = mobile_warfare_expert_enabled
+								has_country_flag = superior_firepower_expert_enabled
+								has_country_flag = grand_battle_plan_expert_enabled
+								has_country_flag = mass_assault_expert_enabled
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = mobile_warfare_expert characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_mobile_warfare_expert
+			advisor = {
+				slot = theorist
+				ledger = army
+				cost = 150
+				traits = { mobile_warfare_expert }
+
+				visible = {
+					NOT = { has_country_flag = military_theorist_disabled }
+					has_country_flag = mobile_warfare_expert_enabled
+				}
+				available = {
+					hidden_trigger = {
+						NOT = { has_country_flag = military_theorist_disabled }
+						has_country_flag = mobile_warfare_expert_enabled
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = superior_firepower_expert characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_superior_firepower_expert
+			advisor = {
+				slot = theorist
+				ledger = army
+				cost = 150
+				traits = { superior_firepower_expert }
+
+				visible = {
+					NOT = { has_country_flag = military_theorist_disabled }
+					has_country_flag = superior_firepower_expert_enabled
+				}
+				available = {
+					hidden_trigger = {
+						NOT = { has_country_flag = military_theorist_disabled }
+						has_country_flag = superior_firepower_expert_enabled
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = grand_battle_plan_expert characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_grand_battle_plan_expert
+			advisor = {
+				slot = theorist
+				ledger = army
+				cost = 150
+				traits = { grand_battle_plan_expert }
+
+				visible = {
+					NOT = { has_country_flag = military_theorist_disabled }
+					has_country_flag = grand_battle_plan_expert_enabled
+				}
+				available = {
+					hidden_trigger = {
+						NOT = { has_country_flag = military_theorist_disabled }
+						has_country_flag = grand_battle_plan_expert_enabled
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = mass_assault_expert characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_mass_assault_expert
+			advisor = {
+				slot = theorist
+				ledger = army
+				cost = 150
+				traits = { mass_assault_expert }
+
+				visible = {
+					NOT = { has_country_flag = military_theorist_disabled }
+					has_country_flag = mass_assault_expert_enabled
+				}
+				available = {
+					hidden_trigger = {
+						NOT = { has_country_flag = military_theorist_disabled }
+						has_country_flag = mass_assault_expert_enabled
+					}
+				}
+			}
+		}
+	}
+
+	# Naval Theorists
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = naval_theorist characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_naval_theorist_esieaw
+			advisor = {
+				slot = theorist
+				ledger = navy
+				cost = 100
+				traits = { naval_theorist }
+
+				visible = {
+					OR = {
+						has_country_flag = all_advisors_enabled
+						NOT = {
+							has_country_flag = naval_theorist_disabled
+							has_country_flag = naval_aviation_pioneer_enabled
+							has_country_flag = grand_fleet_proponent_enabled
+							has_country_flag = submarine_specialist_enabled
+						}
+					}
+				}
+				available = {
+					hidden_trigger = {
+						OR = {
+							has_country_flag = all_advisors_enabled
+							NOT = {
+								has_country_flag = naval_theorist_disabled
+								has_country_flag = naval_aviation_pioneer_enabled
+								has_country_flag = grand_fleet_proponent_enabled
+								has_country_flag = submarine_specialist_enabled
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = naval_aviation_pioneer characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_naval_aviation_pioneer
+			advisor = {
+				slot = theorist
+				ledger = navy
+				cost = 150
+				traits = { naval_aviation_pioneer }
+
+				visible = {
+					NOT = { has_country_flag = naval_theorist_disabled }
+					has_country_flag = naval_aviation_pioneer_enabled
+				}
+				available = {
+					hidden_trigger = {
+						NOT = { has_country_flag = naval_theorist_disabled }
+						has_country_flag = naval_aviation_pioneer_enabled
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = grand_fleet_proponent characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_grand_fleet_proponent
+			advisor = {
+				slot = theorist
+				ledger = navy
+				cost = 150
+				traits = { grand_fleet_proponent }
+
+				visible = {
+					NOT = { has_country_flag = naval_theorist_disabled }
+					has_country_flag = grand_fleet_proponent_enabled
+				}
+				available = {
+					hidden_trigger = {
+						NOT = { has_country_flag = naval_theorist_disabled }
+						has_country_flag = grand_fleet_proponent_enabled
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = submarine_specialist characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_submarine_specialist
+			advisor = {
+				slot = theorist
+				ledger = navy
+				cost = 150
+				traits = { submarine_specialist }
+
+				visible = {
+					NOT = { has_country_flag = naval_theorist_disabled }
+					has_country_flag = submarine_specialist_enabled
+				}
+				available = {
+					hidden_trigger = {
+						NOT = { has_country_flag = naval_theorist_disabled }
+						has_country_flag = submarine_specialist_enabled
+					}
+				}
+			}
+		}
+	}
+
+	# Air Warfare Theorists
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_warfare_theorist characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_warfare_theorist_esieaw
+			advisor = {
+				slot = theorist
+				ledger = air
+				cost = 100
+				traits = { air_warfare_theorist }
+
+				visible = {
+					OR = {
+						has_country_flag = all_advisors_enabled
+						NOT = {
+							has_country_flag = air_warfare_theorist_disabled
+							has_country_flag = victory_through_airpower_enabled
+							has_country_flag = close_air_support_proponent_enabled
+							has_country_flag = assault_avaition_enabled
+						}
+					}
+				}
+				available = {
+					hidden_trigger = {
+						OR = {
+							has_country_flag = all_advisors_enabled
+							NOT = {
+								has_country_flag = air_warfare_theorist_disabled
+								has_country_flag = victory_through_airpower_enabled
+								has_country_flag = close_air_support_proponent_enabled
+								has_country_flag = assault_avaition_enabled
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = victory_through_airpower characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_victory_through_airpower
+			advisor = {
+				slot = theorist
+				ledger = air
+				cost = 150
+				traits = { victory_through_airpower }
+
+				visible = {
+					NOT = { has_country_flag = air_warfare_theorist_disabled }
+					has_country_flag = victory_through_airpower_enabled
+				}
+				available = {
+					hidden_trigger = {
+						NOT = { has_country_flag = air_warfare_theorist_disabled }
+						has_country_flag = victory_through_airpower_enabled
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = close_air_support_proponent characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_close_air_support_proponent
+			advisor = {
+				slot = theorist
+				ledger = air
+				cost = 150
+				traits = { close_air_support_proponent }
+
+				visible = {
+					NOT = { has_country_flag = air_warfare_theorist_disabled }
+					has_country_flag = close_air_support_proponent_enabled
+				}
+				available = {
+					hidden_trigger = {
+						NOT = { has_country_flag = air_warfare_theorist_disabled }
+						has_country_flag = close_air_support_proponent_enabled
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = assault_avaition characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_assault_avaition
+			advisor = {
+				slot = theorist
+				ledger = air
+				cost = 150
+				traits = { assault_avaition }
+
+				visible = {
+					NOT = { has_country_flag = air_warfare_theorist_disabled }
+					has_country_flag = assault_avaition_enabled
+				}
+				available = {
+					hidden_trigger = {
+						NOT = { has_country_flag = air_warfare_theorist_disabled }
+						has_country_flag = assault_avaition_enabled
+					}
+				}
+			}
+		}
+	}
+
+	# Scientists
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = nuclear_scientist characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_nuclear_scientist
+			advisor = {
+				slot = theorist
+				ledger = army
+				cost = 100
+				traits = { nuclear_scientist }
+				research_bonus = {
+					nuclear = 0.15
+				}
+
+				visible = {
+					NOT = { has_country_flag = nuclear_scientist_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = nuclear_scientist_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = rocket_scientist characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_rocket_scientist
+			advisor = {
+				slot = theorist
+				ledger = air
+				cost = 100
+				traits = { rocket_scientist }
+				research_bonus = {
+					rocketry = 0.15
+				}
+
+				visible = {
+					NOT = { has_country_flag = rocket_scientist_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = rocket_scientist_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = bookworm characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_bookworm
+			advisor = {
+				slot = theorist
+				ledger = army
+				cost = 100
+				traits = { bookworm }
+
+				visible = {
+					NOT = { has_country_flag = bookworm_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = bookworm_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = local_magician_esieaw characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_local_magician
+			advisor = {
+				slot = theorist
+				ledger = army
+				cost = 100
+				traits = { local_magician_esieaw }
+				research_bonus = {
+					magical_tech = 0.03
+					race_tech = 0.07
+				}
+
+				visible = {
+					NOT = { has_country_flag = local_magician_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = local_magician_disabled } }
+				}
+			}
+		}
+	}
+
+	# Chiefs of Army
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_chief_offensive_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_offensive_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_offensive_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_chief_offensive_esieaw
+			advisor = {
+				slot = army_chief
+				cost = 50
+				traits = { army_chief_offensive_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_chief_offensive_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_chief_offensive_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_chief_defensive_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_defensive_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_defensive_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_chief_defensive_esieaw
+			advisor = {
+				slot = army_chief
+				cost = 50
+				traits = { army_chief_defensive_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_chief_defensive_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_chief_defensive_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_chief_maneuver_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_maneuver_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_maneuver_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_chief_maneuver
+			advisor = {
+				slot = army_chief
+				cost = 50
+				traits = { army_chief_maneuver_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_chief_maneuver_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_chief_maneuver_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_chief_drill_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_drill_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_drill_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_chief_drill
+			advisor = {
+				slot = army_chief
+				cost = 50
+				traits = { army_chief_drill_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_chief_drill_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_chief_drill_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_chief_planning_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_planning_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_planning_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_chief_planning
+			advisor = {
+				slot = army_chief
+				cost = 50
+				traits = { army_chief_planning_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_chief_planning_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_chief_planning_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_chief_morale_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_morale_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_morale_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_chief_morale
+			advisor = {
+				slot = army_chief
+				cost = 50
+				traits = { army_chief_morale_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_chief_morale_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_chief_morale_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_chief_organizational_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_organizational_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_organizational_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_chief_organizational
+			advisor = {
+				slot = army_chief
+				cost = 50
+				traits = { army_chief_organizational_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_chief_organizational_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_chief_organizational_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_chief_entrenchment_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_entrenchment_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_entrenchment_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_chief_entrenchment
+			advisor = {
+				slot = army_chief
+				cost = 50
+				traits = { army_chief_entrenchment_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_chief_entrenchment_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_chief_entrenchment_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_chief_reform_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_reform_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_reform_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_chief_reform_esieaw
+			advisor = {
+				slot = army_chief
+				cost = 50
+				traits = { army_chief_reform_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_chief_reform_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_chief_reform_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_chief_old_guard characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_chief_old_guard
+			advisor = {
+				slot = army_chief
+				cost = 50
+				traits = { army_chief_old_guard }
+
+				visible = {
+					NOT = { has_country_flag = army_chief_old_guard_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_chief_old_guard_disabled } }
+				}
+			}
+		}
+	}
+
+
+	# Chiefs of Navy
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_chief_commerce_raiding_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_chief_commerce_raiding_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_chief_commerce_raiding_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_chief_commerce_raiding_esieaw
+			advisor = {
+				slot = navy_chief
+				cost = 100
+				traits = { navy_chief_commerce_raiding_2 }
+
+				visible = {
+					NOT = { has_country_flag = navy_chief_commerce_raiding_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_chief_commerce_raiding_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_chief_maneuver_2 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_chief_maneuver
+			advisor = {
+				slot = navy_chief
+				cost = 100
+				traits = { navy_chief_maneuver_2 }
+
+				visible = {
+					NOT = { has_country_flag = navy_chief_maneuver_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_chief_maneuver_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_chief_decisive_battle_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_chief_decisive_battle_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_chief_decisive_battle_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_chief_decisive_battle_esieaw
+			advisor = {
+				slot = navy_chief
+				cost = 100
+				traits = { navy_chief_decisive_battle_2 }
+
+				visible = {
+					NOT = { has_country_flag = navy_chief_decisive_battle_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_chief_decisive_battle_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_chief_naval_aviation_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_chief_naval_aviation_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_chief_naval_aviation_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_chief_naval_aviation
+			advisor = {
+				slot = navy_chief
+				cost = 100
+				traits = { navy_chief_naval_aviation_2 }
+
+				visible = {
+					NOT = { has_country_flag = navy_chief_naval_aviation_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_chief_naval_aviation_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_chief_reform_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_chief_reform_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_chief_reform_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_chief_reform_esieaw
+			advisor = {
+				slot = navy_chief
+				cost = 50
+				traits = { navy_chief_reform_1 }
+
+				visible = {
+					NOT = { has_country_flag = navy_chief_reform_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_chief_reform_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_chief_old_guard characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_chief_old_guard
+			advisor = {
+				slot = navy_chief
+				cost = 50
+				traits = { navy_chief_old_guard }
+
+				visible = {
+					NOT = { has_country_flag = navy_chief_old_guard_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_chief_old_guard_disabled } }
+				}
+			}
+		}
+	}
+
+	# Chiefs of Airforce
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_chief_night_operations_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_chief_night_operations_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_chief_night_operations_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_chief_night_operations
+			advisor = {
+				slot = air_chief
+				cost = 100
+				traits = { air_chief_night_operations_2 }
+
+				visible = {
+					NOT = { has_country_flag = air_chief_night_operations_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = air_chief_night_operations_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_chief_ground_support_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_chief_ground_support_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_chief_ground_support_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_chief_ground_support_esieaw
+			advisor = {
+				slot = air_chief
+				cost = 100
+				traits = { air_chief_ground_support_2 }
+
+				visible = {
+					NOT = { has_country_flag = air_chief_ground_support_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = air_chief_ground_support_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_chief_all_weather_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_chief_all_weather_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_chief_all_weather_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_chief_all_weather_esieaw
+			advisor = {
+				slot = air_chief
+				cost = 100
+				traits = { air_chief_all_weather_2 }
+
+				visible = {
+					NOT = { has_country_flag = air_chief_all_weather_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = air_chief_all_weather_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_chief_safety_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_chief_safety_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_chief_safety_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_chief_safety_esieaw
+			advisor = {
+				slot = air_chief
+				cost = 100
+				traits = { air_chief_safety_2 }
+
+				visible = {
+					NOT = { has_country_flag = air_chief_safety_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = air_chief_safety_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_chief_reform_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_chief_reform_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_chief_reform_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_chief_reform_esieaw
+			advisor = {
+				slot = air_chief
+				cost = 50
+				traits = { air_chief_reform_1 }
+
+				visible = {
+					NOT = { has_country_flag = air_chief_reform_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = air_chief_reform_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_chief_old_guard characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_chief_old_guard
+			advisor = {
+				slot = air_chief
+				cost = 50
+				traits = { air_chief_old_guard }
+
+				visible = {
+					NOT = { has_country_flag = air_chief_old_guard_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = air_chief_old_guard_disabled } }
+				}
+			}
+		}
+	}
+
+	# High Command - Army - Unit Specific
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_infantry_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_infantry_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_infantry_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_infantry
+			advisor = {
+				slot = high_command
+				ledger = army
+				cost = 50
+				traits = { army_infantry_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_infantry_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_infantry_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_artillery_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_artillery_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_artillery_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_artillery
+			advisor = {
+				slot = high_command
+				ledger = army
+				cost = 50
+				traits = { army_artillery_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_artillery_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_artillery_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_cavalry_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_cavalry_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_cavalry_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_cavalry
+			advisor = {
+				slot = high_command
+				ledger = army
+				cost = 50
+				traits = { army_cavalry_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_cavalry_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_cavalry_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_armored_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_armored_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_armored_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_armored
+			advisor = {
+				slot = high_command
+				ledger = army
+				cost = 50
+				traits = { army_armored_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_armored_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_armored_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_commando_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_commando_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_commando_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_commando
+			advisor = {
+				slot = high_command
+				ledger = army
+				cost = 50
+				traits = { army_commando_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_commando_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_commando_disabled } }
+				}
+			}
+		}
+	}
+
+	# High Command - Army - Generic
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_entrenchment_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_entrenchment_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_entrenchment_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_entrenchment_esieaw
+			advisor = {
+				slot = high_command
+				ledger = army
+				cost = 50
+				traits = { army_entrenchment_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_entrenchment_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_entrenchment_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_logistics_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_logistics_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_logistics_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_logistics_esieaw
+			advisor = {
+				slot = high_command
+				ledger = army
+				cost = 100
+				traits = { army_logistics_2 }
+
+				visible = {
+					NOT = { has_country_flag = army_logistics_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_logistics_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_regrouping_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_regrouping_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_regrouping_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_regrouping_esieaw
+			advisor = {
+				slot = high_command
+				ledger = army
+				cost = 100
+				traits = { army_regrouping_2 }
+
+				visible = {
+					NOT = { has_country_flag = army_regrouping_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_regrouping_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_concealment_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_concealment_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_concealment_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_concealment
+			advisor = {
+				slot = high_command
+				ledger = army
+				cost = 100
+				traits = { army_concealment_2 }
+
+				visible = {
+					NOT = { has_country_flag = army_concealment_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_concealment_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_radio_intelligence_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_radio_intelligence_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_radio_intelligence_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_radio_intelligence
+			advisor = {
+				slot = high_command
+				ledger = army
+				cost = 100
+				traits = { army_radio_intelligence_2 }
+
+				visible = {
+					NOT = { has_country_flag = army_radio_intelligence_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_radio_intelligence_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = army_jungle_warfare_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_jungle_warfare_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_jungle_warfare_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_jungle_warfare
+			advisor = {
+				slot = high_command
+				ledger = army
+				cost = 100
+				traits = { army_jungle_warfare_2 }
+
+				visible = {
+					NOT = { has_country_flag = army_jungle_warfare_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_jungle_warfare_disabled } }
+				}
+			}
+		}
+	}
+
+	# High Command - Navy
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_amphibious_assault_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_amphibious_assault_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_amphibious_assault_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_amphibious_assault_esieaw
+			advisor = {
+				slot = high_command
+				ledger = navy
+				cost = 50
+				traits = { navy_amphibious_assault_1 }
+
+				visible = {
+					NOT = { has_country_flag = navy_amphibious_assault_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_amphibious_assault_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_fleet_logistics_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_fleet_logistics_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_fleet_logistics_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_fleet_logistics_esieaw
+			advisor = {
+				slot = high_command
+				ledger = navy
+				cost = 50
+				traits = { navy_fleet_logistics_1 }
+
+				visible = {
+					NOT = { has_country_flag = navy_fleet_logistics_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_fleet_logistics_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_naval_air_defense_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_naval_air_defense_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_naval_air_defense_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_naval_air_defense_esieaw
+			advisor = {
+				slot = high_command
+				ledger = navy
+				cost = 50
+				traits = { navy_naval_air_defense_1 }
+
+				visible = {
+					NOT = { has_country_flag = navy_naval_air_defense_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_naval_air_defense_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_anti_submarine_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_anti_submarine_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_anti_submarine_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_anti_submarine
+			advisor = {
+				slot = high_command
+				ledger = navy
+				cost = 100
+				traits = { navy_anti_submarine_2 }
+
+				visible = {
+					NOT = { has_country_flag = navy_anti_submarine_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_anti_submarine_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_submarine_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_submarine_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_submarine_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_submarine
+			advisor = {
+				slot = high_command
+				ledger = navy
+				cost = 50
+				traits = { navy_submarine_1 }
+
+				visible = {
+					NOT = { has_country_flag = navy_submarine_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_submarine_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_capital_ship_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_capital_ship_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_capital_ship_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_capital_ship
+			advisor = {
+				slot = high_command
+				ledger = navy
+				cost = 50
+				traits = { navy_capital_ship_1 }
+
+				visible = {
+					NOT = { has_country_flag = navy_capital_ship_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_capital_ship_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_screen_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_screen_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_screen_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_screen
+			advisor = {
+				slot = high_command
+				ledger = navy
+				cost = 50
+				traits = { navy_screen_1 }
+
+				visible = {
+					NOT = { has_country_flag = navy_screen_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_screen_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = navy_carrier_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_carrier_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = navy_carrier_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_navy_carrier
+			advisor = {
+				slot = high_command
+				ledger = navy
+				cost = 50
+				traits = { navy_carrier_1 }
+
+				visible = {
+					NOT = { has_country_flag = navy_carrier_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = navy_carrier_disabled } }
+				}
+			}
+		}
+	}
+
+	# High Command - Air
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_air_superiority_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_air_superiority_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_air_superiority_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_air_superiority_esieaw
+			advisor = {
+				slot = high_command
+				ledger = air
+				cost = 50
+				traits = { air_air_superiority_1 }
+
+				visible = {
+					NOT = { has_country_flag = air_air_superiority_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = air_air_superiority_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_bomber_interception_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_bomber_interception_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_bomber_interception_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_bomber_interception
+			advisor = {
+				slot = high_command
+				ledger = air
+				cost = 100
+				traits = { air_bomber_interception_2 }
+
+				visible = {
+					NOT = { has_country_flag = air_bomber_interception_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = air_bomber_interception_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_close_air_support_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_close_air_support_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_close_air_support_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_close_air_support_esieaw
+			advisor = {
+				slot = high_command
+				ledger = air
+				cost = 100
+				traits = { air_close_air_support_2 }
+
+				visible = {
+					NOT = { has_country_flag = air_close_air_support_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = air_close_air_support_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_naval_strike_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_naval_strike_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_naval_strike_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_naval_strike
+			advisor = {
+				slot = high_command
+				ledger = air
+				cost = 50
+				traits = { air_naval_strike_1 }
+
+				visible = {
+					NOT = { has_country_flag = air_naval_strike_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = air_naval_strike_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_strategic_bombing_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_strategic_bombing_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_strategic_bombing_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_strategic_bombing_esieaw
+			advisor = {
+				slot = high_command
+				ledger = air
+				cost = 100
+				traits = { air_strategic_bombing_2 }
+
+				visible = {
+					NOT = { has_country_flag = air_strategic_bombing_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = air_strategic_bombing_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_airborne_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_airborne_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_airborne_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_airborne
+			advisor = {
+				slot = high_command
+				ledger = air
+				cost = 100
+				traits = { air_airborne_2 }
+
+				visible = {
+					NOT = { has_country_flag = air_airborne_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = air_airborne_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_allowed_idea_with_traits = { idea = air_air_combat_training_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_air_combat_training_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = air_air_combat_training_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_air_air_combat_training_esieaw
+			advisor = {
+				slot = high_command
+				ledger = air
+				cost = 100
+				traits = { air_air_combat_training_2 }
+
+				visible = {
+					NOT = { has_country_flag = air_air_combat_training_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = air_air_combat_training_disabled } }
+				}
+			}
+		}
+	}
+}
