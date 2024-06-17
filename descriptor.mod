@@ -1,13 +1,15 @@
-version="1.2"
-name="Every State Independent - Recolor and Namelists"
+version="2.0"
+replace_path="common/bookmarks"
+replace_path="common/characters"
+replace_path="common/countries"
+replace_path="common/country_tags"
+replace_path="history/countries"
+replace_path="history/general"
+replace_path="history/units"
 tags={
-	"Graphics"
-	"Map"
-	"Fixes"
-}
-dependencies={
-	"Every State Independent"
+	"Gameplay"
 }
 picture="thumbnail.png"
-supported_version="1.12.*"
+name="MustaphaTR's Every State Independent"
+supported_version="1.14.*"
 remote_file_id="2449480038"
