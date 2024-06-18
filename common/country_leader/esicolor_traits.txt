@@ -1,0 +1,97 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+leader_traits = {
+	code_breaker = {
+		random = no
+
+		operative_slot = 1
+		decryption_power = 15
+	}
+
+	encryption_expert = {
+		random = no
+
+		operative_slot = 1
+		crypto_strength = 1
+	}
+
+	army_jungle_warfare_1 = {
+		random = no
+		army_morale_factor = 0.015
+		heat_attrition_factor = -0.05
+		out_of_supply_factor = -0.015
+		#experience_gain_army = 0.06
+
+		command_cap = @tier1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	army_jungle_warfare_2 = {
+		random = no
+		army_morale_factor = 0.025
+		heat_attrition_factor = -0.1
+		out_of_supply_factor = -0.03
+		#experience_gain_army = 0.09
+
+		command_cap = @tier2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	army_jungle_warfare_3 = {
+		random = no
+		army_morale_factor = 0.035
+		heat_attrition_factor = -0.15
+		out_of_supply_factor = -0.045
+		#experience_gain_army = 0.12
+
+		command_cap = @tier3
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	agility_focused_aircraft_manufacturer = { 
+		random = no
+		equipment_bonus = {
+			small_plane_airframe = {
+				air_agility = 0.2
+			}
+			cv_small_plane_airframe = {
+				air_agility = 0.2
+			}
+			medium_plane_fighter_airframe = {
+				air_agility = 0.2
+				maximum_speed = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	mining_company_esicolor = {
+		random = no
+		local_resources_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+
+				check_variable = { resource@steel > 0 }
+				check_variable = { resource@steel < 10 }
+			}
+		}
+	}
+}
