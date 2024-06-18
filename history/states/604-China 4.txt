@@ -3,11 +3,8 @@ state = {
 	name = "STATE_604"
 
 	history = {
-
-		owner = OOO
-		add_core_of = XSM
-		add_core_of = CHI
-		add_core_of = PRC
+		owner = LOA
+		add_core_of = LOA
 
 		#victory_points = {
 		#	7940 10 # Goldmud was not ofunded until in the late fifties
@@ -17,24 +14,6 @@ state = {
 			infrastructure = 1
 			industrial_complex = 2
 		}
-
-		1938.10.25 = {
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "Waking the Tiger" 
-					}
-
-				}
-				CHI = {
-					transfer_state = PREV
-
-				}
-
-			}
-
-		}
-
 	}
 
 	provinces = {

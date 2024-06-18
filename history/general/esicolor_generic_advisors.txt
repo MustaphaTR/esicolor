@@ -184,278 +184,24 @@ every_possible_country = {
 		limit = {
 			NOT = {
 				has_allowed_idea_with_traits = { idea = silent_workhorse characters = yes }
-				has_allowed_idea_with_traits = { idea = silent_workgriffon characters = yes }
-				has_allowed_idea_with_traits = { idea = silent_workdog characters = yes }
-				has_allowed_idea_with_traits = { idea = silent_workdeer characters = yes }
-				has_allowed_idea_with_traits = { idea = silent_workbull characters = yes }
-				has_allowed_idea_with_traits = { idea = silent_workling characters = yes }
-				has_allowed_idea_with_traits = { idea = silent_workdragon characters = yes }
-				has_allowed_idea_with_traits = { idea = silent_workbear characters = yes }
-				has_allowed_idea_with_traits = { idea = silent_workpenguin characters = yes }
-				has_allowed_idea_with_traits = { idea = silent_workyak characters = yes }
 			}
 		}
-		if = {
-			limit = { is_griffon_race = yes }
-			generate_character = {
-				token_base = generic_silent_workhorse_griffon
-				advisor = {
-					slot = political_advisor
-					traits = { silent_workgriffon }
 
-					visible = {
-						NOT = { has_country_flag = silent_workhorse_disabled }
-					}
-					available = {
-						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
-					}
+		generate_character = {
+			token_base = generic_silent_workhorse
+			advisor = {
+				slot = political_advisor
+				traits = { propaganda_expert }
 
-					ai_will_do = {
-						factor = 15
-					}
+				visible = {
+					NOT = { has_country_flag = silent_workhorse_disabled }
 				}
-				portraits = {
-					army = { small = GFX_idea_unknown_advisor_griffon }
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
 				}
-			}
-		}
-		else_if = {
-			limit = { is_diamond_dog_race = yes }
-			generate_character = {
-				token_base = generic_silent_workhorse_dog
-				advisor = {
-					slot = political_advisor
-					traits = { silent_workdog }
 
-					visible = {
-						NOT = { has_country_flag = silent_workhorse_disabled }
-					}
-					available = {
-						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
-					}
-
-					ai_will_do = {
-						factor = 15
-					}
-				}
-				portraits = {
-					army = { small = GFX_idea_unknown_advisor_dog }
-				}
-			}
-		}
-		else_if = {
-			limit = { is_deer_race = yes }
-			generate_character = {
-				token_base = generic_silent_workhorse_deer
-				advisor = {
-					slot = political_advisor
-					traits = { silent_workdeer }
-
-					visible = {
-						NOT = { has_country_flag = silent_workhorse_disabled }
-					}
-					available = {
-						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
-					}
-
-					ai_will_do = {
-						factor = 15
-					}
-				}
-				portraits = {
-					army = { small = GFX_idea_deer_generic }
-				}
-			}
-		}
-		else_if = {
-			limit = { is_minotaur_race = yes }
-			generate_character = {
-				token_base = generic_silent_workhorse_minotaur
-				advisor = {
-					slot = political_advisor
-					traits = { silent_workbull }
-
-					visible = {
-						NOT = { has_country_flag = silent_workhorse_disabled }
-					}
-					available = {
-						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
-					}
-
-					ai_will_do = {
-						factor = 15
-					}
-				}
-				portraits = {
-					army = { small = GFX_idea_unknown_advisor_minotaur }
-				}
-			}
-		}
-		else_if = {
-			limit = { is_buffalo_race = yes }
-			generate_character = {
-				token_base = generic_silent_workhorse_buffalo
-				advisor = {
-					slot = political_advisor
-					traits = { silent_workbull }
-
-					visible = {
-						NOT = { has_country_flag = silent_workhorse_disabled }
-					}
-					available = {
-						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
-					}
-
-					ai_will_do = {
-						factor = 15
-					}
-				}
-				portraits = {
-					army = { small = GFX_idea_unknown_advisor_buffalo }
-				}
-			}
-		}
-		else_if = {
-			limit = { is_changeling_race = yes }
-			generate_character = {
-				token_base = generic_silent_workhorse_changeling
-				advisor = {
-					slot = political_advisor
-					traits = { silent_workling }
-
-					visible = {
-						NOT = { has_country_flag = silent_workhorse_disabled }
-					}
-					available = {
-						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
-					}
-
-					ai_will_do = {
-						factor = 15
-					}
-				}
-				portraits = {
-					army = { small = GFX_idea_unknown_advisor_bug }
-				}
-			}
-		}
-		else_if = {
-			limit = { is_dragon_race = yes }
-			generate_character = {
-				token_base = generic_silent_workhorse_dragon
-				advisor = {
-					slot = political_advisor
-					traits = { silent_workdragon }
-
-					visible = {
-						NOT = { has_country_flag = silent_workhorse_disabled }
-					}
-					available = {
-						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
-					}
-
-					ai_will_do = {
-						factor = 15
-					}
-				}
-				portraits = {
-					army = { small = GFX_idea_unknown_advisor_dragon }
-				}
-			}
-		}
-		else_if = {
-			limit = { is_polar_race = yes }
-			generate_character = {
-				token_base = generic_silent_workhorse_polar
-				advisor = {
-					slot = political_advisor
-					traits = { silent_workbear }
-
-					visible = {
-						NOT = { has_country_flag = silent_workhorse_disabled }
-					}
-					available = {
-						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
-					}
-
-					ai_will_do = {
-						factor = 15
-					}
-				}
-				portraits = {
-					army = { small = GFX_idea_unknown_advisor_bear }
-				}
-			}
-		}
-		else_if = {
-			limit = { is_penguin_race = yes }
-			generate_character = {
-				token_base = generic_silent_workhorse_penguin
-				advisor = {
-					slot = political_advisor
-					traits = { silent_workpenguin }
-
-					visible = {
-						NOT = { has_country_flag = silent_workhorse_disabled }
-					}
-					available = {
-						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
-					}
-
-					ai_will_do = {
-						factor = 15
-					}
-				}
-				portraits = {
-					army = { small = GFX_idea_unknown_advisor_pingu }
-				}
-			}
-		}
-		else_if = {
-			limit = { is_yak_race = yes }
-			generate_character = {
-				token_base = generic_silent_workhorse_yak
-				advisor = {
-					slot = political_advisor
-					traits = { silent_workyak }
-
-					visible = {
-						NOT = { has_country_flag = silent_workhorse_disabled }
-					}
-					available = {
-						hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
-					}
-
-					ai_will_do = {
-						factor = 15
-					}
-				}
-				portraits = {
-					army = { small = GFX_idea_unknown_advisor_yak }
-				}
-			}
-
-			else = {
-				generate_character = {
-					token_base = generic_silent_workhorse
-					advisor = {
-						slot = political_advisor
-						traits = { silent_workhorse }
-
-						visible = {
-							NOT = { has_country_flag = silent_workhorse_disabled }
-						}
-						available = {
-							hidden_trigger = { NOT = { has_country_flag = silent_workhorse_disabled } }
-						}
-
-						ai_will_do = {
-							factor = 15
-						}
-					}
-					portraits = {
-						army = { small = GFX_idea_unknown_advisor }
-					}
+				ai_will_do = {
+					factor = 15
 				}
 			}
 		}
@@ -819,198 +565,6 @@ every_possible_country = {
 		}
 	}
 
-	# Political Advisors with Negative Modifiers
-	if = {
-		limit = {
-			NOT = {
-				has_allowed_idea_with_traits = { idea = unhindered_scientist characters = yes }
-			}
-		}
-
-		generate_character = {
-			token_base = generic_unhindered_scientist
-			advisor = {
-				slot = political_advisor
-				traits = { unhindered_scientist }
-
-				visible = {
-					NOT = { has_country_flag = unhindered_scientist_disabled }
-				}
-				available = {
-					hidden_trigger = { NOT = { has_country_flag = unhindered_scientist_disabled } }
-				}
-
-				ai_will_do = {
-					factor = 0
-				}
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			NOT = {
-				has_allowed_idea_with_traits = { idea = occultist characters = yes }
-			}
-		}
-
-		generate_character = {
-			token_base = generic_occultist
-			advisor = {
-				slot = political_advisor
-				traits = { occultist }
-
-				visible = {
-					NOT = { has_country_flag = occultist_disabled }
-				}
-				available = {
-					hidden_trigger = { NOT = { has_country_flag = occultist_disabled } }
-				}
-
-				ai_will_do = {
-					factor = 0
-				}
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			NOT = {
-				has_allowed_idea_with_traits = { idea = bureaucrat characters = yes }
-			}
-		}
-
-		generate_character = {
-			token_base = generic_bureaucrat
-			advisor = {
-				slot = political_advisor
-				traits = { bureaucrat }
-
-				visible = {
-					NOT = { has_country_flag = bureaucrat_disabled }
-				}
-				available = {
-					hidden_trigger = { NOT = { has_country_flag = bureaucrat_disabled } }
-				}
-
-				ai_will_do = {
-					factor = 0
-				}
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			NOT = {
-				has_allowed_idea_with_traits = { idea = industrialist characters = yes }
-			}
-		}
-
-		generate_character = {
-			token_base = generic_industrialist
-			advisor = {
-				slot = political_advisor
-				traits = { industrialist }
-
-				visible = {
-					NOT = { has_country_flag = industrialist_disabled }
-				}
-				available = {
-					hidden_trigger = { NOT = { has_country_flag = industrialist_disabled } }
-				}
-
-				ai_will_do = {
-					factor = 0
-				}
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			NOT = {
-				has_dlc = "La Resistance"
-				has_allowed_idea_with_traits = { idea = secret_police_chief characters = yes }
-			}
-		}
-
-		generate_character = {
-			token_base = generic_secret_police_chief
-			advisor = {
-				slot = political_advisor
-				traits = { secret_police_chief }
-
-				visible = {
-					NOT = { has_country_flag = secret_police_chief_disabled }
-				}
-				available = {
-					hidden_trigger = { NOT = { has_country_flag = secret_police_chief_disabled } }
-				}
-
-				ai_will_do = {
-					factor = 0
-				}
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			has_dlc = "La Resistance"
-			NOT = {
-				has_allowed_idea_with_traits = { idea = secret_police_chief_lar characters = yes }
-			}
-		}
-
-		generate_character = {
-			token_base = generic_secret_police_chief_lar
-			advisor = {
-				slot = political_advisor
-				traits = { secret_police_chief_lar }
-
-				visible = {
-					NOT = { has_country_flag = secret_police_chief_disabled }
-				}
-				available = {
-					hidden_trigger = { NOT = { has_country_flag = secret_police_chief_disabled } }
-				}
-
-				ai_will_do = {
-					factor = 0
-				}
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			NOT = {
-				has_allowed_idea_with_traits = { idea = friendly_priest characters = yes }
-			}
-		}
-
-		generate_character = {
-			token_base = generic_friendly_priest
-			advisor = {
-				slot = political_advisor
-				traits = { friendly_priest }
-
-				visible = {
-					NOT = { has_country_flag = friendly_priest_disabled }
-				}
-				available = {
-					hidden_trigger = { NOT = { has_country_flag = friendly_priest_disabled } }
-				}
-
-				ai_will_do = {
-					factor = 0
-				}
-			}
-		}
-	}
-
 	# Intelligence Advisors
 	if = {
 		limit = {
@@ -1027,7 +581,6 @@ every_possible_country = {
 				traits = { head_of_intelligence }
 
 				visible = {
-					can_create_intelligence_agency = yes
 					NOT = { has_country_flag = head_of_intelligence_disabled }
 				}
 				available = {
@@ -1042,6 +595,9 @@ every_possible_country = {
 						factor = 0
 					}
 				}
+			}
+			portraits = { 
+				army = { small = GFX_idea_generic_head_of_intelligence }
 			}
 		}
 	}
@@ -1061,7 +617,6 @@ every_possible_country = {
 				traits = { code_breaker }
 
 				visible = {
-					can_create_intelligence_agency = yes
 					NOT = { has_country_flag = code_breaker_disabled }
 				}
 				available = {
@@ -1076,6 +631,9 @@ every_possible_country = {
 						factor = 0
 					}
 				}
+			}
+			portraits = { 
+				army = { small = GFX_idea_generic_head_of_intelligence }
 			}
 		}
 	}
@@ -1095,7 +653,6 @@ every_possible_country = {
 				traits = { encryption_expert }
 
 				visible = {
-					can_create_intelligence_agency = yes
 					NOT = { has_country_flag = encryption_expert_disabled }
 				}
 				available = {
@@ -1110,6 +667,9 @@ every_possible_country = {
 						factor = 0
 					}
 				}
+			}
+			portraits = { 
+				army = { small = GFX_idea_generic_head_of_intelligence }
 			}
 		}
 	}
