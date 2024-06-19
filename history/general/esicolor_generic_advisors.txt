@@ -1155,60 +1155,6 @@ every_possible_country = {
 		}
 	}
 
-	if = {
-		limit = {
-			NOT = {
-				has_allowed_idea_with_traits = { idea = bookworm characters = yes }
-			}
-		}
-
-		generate_character = {
-			token_base = generic_bookworm
-			advisor = {
-				slot = theorist
-				ledger = army
-				cost = 100
-				traits = { bookworm }
-
-				visible = {
-					NOT = { has_country_flag = bookworm_disabled }
-				}
-				available = {
-					hidden_trigger = { NOT = { has_country_flag = bookworm_disabled } }
-				}
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			NOT = {
-				has_allowed_idea_with_traits = { idea = local_magician_esieaw characters = yes }
-			}
-		}
-
-		generate_character = {
-			token_base = generic_local_magician
-			advisor = {
-				slot = theorist
-				ledger = army
-				cost = 100
-				traits = { local_magician_esieaw }
-				research_bonus = {
-					magical_tech = 0.03
-					race_tech = 0.07
-				}
-
-				visible = {
-					NOT = { has_country_flag = local_magician_disabled }
-				}
-				available = {
-					hidden_trigger = { NOT = { has_country_flag = local_magician_disabled } }
-				}
-			}
-		}
-	}
-
 	# Chiefs of Army
 	if = {
 		limit = {

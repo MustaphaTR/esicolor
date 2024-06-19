@@ -1,0 +1,39 @@
+characters={
+	IZA_king_gustaf_v = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name=SWE_king_gustaf_v
+			portraits={
+				civilian={
+					large="GFX_portrait_SWE_gustaf_v_patches"
+					small="GFX_idea_SWE_king_gustaf"
+				}
+			}
+			country_leader={
+				traits = { SWE_ardent_conservative }
+				ideology=centrism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name=SWE_king_gustaf_v
+			portraits={
+				civilian={
+					large = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				}
+			}
+			country_leader={
+				traits = { SWE_ardent_conservative }
+				ideology=centrism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
