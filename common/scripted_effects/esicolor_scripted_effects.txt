@@ -1,0 +1,272 @@
+setup_generic_advisor_portraits = {
+	if = {
+		limit = {
+			capital_scope = {
+				OR = {
+					is_on_continent = europe
+					is_on_continent = australia
+					is_on_continent = north_america
+				}
+			}
+		}
+
+		every_character = {
+			limit = {
+				NOT = {
+					has_army_ledger = yes
+					has_navy_ledger = yes
+					has_air_ledger = yes
+				}
+			}
+
+			random_list = {
+				seed = random
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_europe_1" }
+						army = { small = "GFX_idea_generic_political_advisor_europe_1" }
+						navy = { small = "GFX_idea_generic_political_advisor_europe_1" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_europe_2" }
+						army = { small = "GFX_idea_generic_political_advisor_europe_2" }
+						navy = { small = "GFX_idea_generic_political_advisor_europe_2" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_europe_3" }
+						army = { small = "GFX_idea_generic_political_advisor_europe_3" }
+						navy = { small = "GFX_idea_generic_political_advisor_europe_3" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_europe_4" }
+						army = { small = "GFX_idea_generic_political_advisor_europe_4" }
+						navy = { small = "GFX_idea_generic_political_advisor_europe_4" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_europe_5" }
+						army = { small = "GFX_idea_generic_political_advisor_europe_5" }
+						navy = { small = "GFX_idea_generic_political_advisor_europe_5" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_europe_6" }
+						army = { small = "GFX_idea_generic_political_advisor_europe_6" }
+						navy = { small = "GFX_idea_generic_political_advisor_europe_6" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_fascist_demagogue_western_european_2d" }
+						army = { small = "GFX_idea_generic_fascist_demagogue_western_european_2d" }
+						navy = { small = "GFX_idea_generic_fascist_demagogue_western_european_2d" }
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				is_on_continent = asia
+			}
+		}
+
+		every_character = {
+			limit = {
+				NOT = {
+					has_army_ledger = yes
+					has_navy_ledger = yes
+					has_air_ledger = yes
+				}
+			}
+
+			random_list = {
+				seed = random
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_asia_1" }
+						army = { small = "GFX_idea_generic_political_advisor_asia_1" }
+						navy = { small = "GFX_idea_generic_political_advisor_asia_1" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_asia_2" }
+						army = { small = "GFX_idea_generic_political_advisor_asia_2" }
+						navy = { small = "GFX_idea_generic_political_advisor_asia_2" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_asia_3" }
+						army = { small = "GFX_idea_generic_political_advisor_asia_3" }
+						navy = { small = "GFX_idea_generic_political_advisor_asia_3" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_fascist_demagogue_asian_2d" }
+						army = { small = "GFX_idea_generic_fascist_demagogue_asian_2d" }
+						navy = { small = "GFX_idea_generic_fascist_demagogue_asian_2d" }
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				is_on_continent = africa
+			}
+		}
+
+		every_character = {
+			limit = {
+				NOT = {
+					has_army_ledger = yes
+					has_navy_ledger = yes
+					has_air_ledger = yes
+				}
+			}
+
+			random_list = {
+				seed = random
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_african_1" }
+						army = { small = "GFX_idea_generic_political_advisor_african_1" }
+						navy = { small = "GFX_idea_generic_political_advisor_african_1" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_african_2" }
+						army = { small = "GFX_idea_generic_political_advisor_african_2" }
+						navy = { small = "GFX_idea_generic_political_advisor_african_2" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_african_3" }
+						army = { small = "GFX_idea_generic_political_advisor_african_3" }
+						navy = { small = "GFX_idea_generic_political_advisor_african_3" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_fascist_demagogue_african_2d" }
+						army = { small = "GFX_idea_generic_fascist_demagogue_african_2d" }
+						navy = { small = "GFX_idea_generic_fascist_demagogue_african_2d" }
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				is_on_continent = middle_east
+			}
+		}
+
+		every_character = {
+			limit = {
+				NOT = {
+					has_army_ledger = yes
+					has_navy_ledger = yes
+					has_air_ledger = yes
+				}
+			}
+
+			random_list = {
+				seed = random
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_arab_1" }
+						army = { small = "GFX_idea_generic_political_advisor_arab_1" }
+						navy = { small = "GFX_idea_generic_political_advisor_arab_1" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_arab_2" }
+						army = { small = "GFX_idea_generic_political_advisor_arab_2" }
+						navy = { small = "GFX_idea_generic_political_advisor_arab_2" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_arab_3" }
+						army = { small = "GFX_idea_generic_political_advisor_arab_3" }
+						navy = { small = "GFX_idea_generic_political_advisor_arab_3" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_fascist_demagogue_middle_eastern_2d" }
+						army = { small = "GFX_idea_generic_fascist_demagogue_middle_eastern_2d" }
+						navy = { small = "GFX_idea_generic_fascist_demagogue_middle_eastern_2d" }
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				is_on_continent = south_america
+			}
+		}
+
+		every_character = {
+			limit = {
+				NOT = {
+					has_army_ledger = yes
+					has_navy_ledger = yes
+					has_air_ledger = yes
+				}
+			}
+
+			random_list = {
+				seed = random
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_south_america_1" }
+						army = { small = "GFX_idea_generic_political_advisor_south_america_1" }
+						navy = { small = "GFX_idea_generic_political_advisor_south_america_1" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_south_america_2" }
+						army = { small = "GFX_idea_generic_political_advisor_south_america_2" }
+						navy = { small = "GFX_idea_generic_political_advisor_south_america_2" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_south_america_3" }
+						army = { small = "GFX_idea_generic_political_advisor_south_america_3" }
+						navy = { small = "GFX_idea_generic_political_advisor_south_america_3" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_fascist_demagogue_southamerican_2d" }
+						army = { small = "GFX_idea_generic_fascist_demagogue_southamerican_2d" }
+						navy = { small = "GFX_idea_generic_fascist_demagogue_southamerican_2d" }
+					}
+				}
+			}
+		}
+	}
+}

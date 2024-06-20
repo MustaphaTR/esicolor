@@ -86,20 +86,4 @@ leader_traits = {
 			factor = 1
 		}
 	}
-
-	mining_company_esicolor = {
-		random = no
-		local_resources_factor = 0.1
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-
-				check_variable = { resource@steel > 0 }
-				check_variable = { resource@steel < 10 }
-			}
-		}
-	}
 }

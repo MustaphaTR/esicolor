@@ -1,0 +1,13 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			log = "[GetDateText] MustaphaTR's Every State Independent main on_startup begin"
+
+			every_country = {
+				add_ideas = aggressive_ai
+
+				setup_generic_advisor_portraits = yes
+			}
+		}
+	}
+}
