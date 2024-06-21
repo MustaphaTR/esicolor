@@ -1,0 +1,36 @@
+characters={
+	OBS_albert_forster={
+		instance = {
+			allowed = {
+				has_dlc = "No Step Back"
+			}
+			name=OBS_albert_forster
+			portraits={
+				civilian={
+					large=GFX_portrait_DNZ_Albert_Forster
+				}
+			}
+			country_leader={
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Step Back" }
+			}
+			name=OBS_albert_forster
+			portraits={
+				civilian={
+					large=GFX_Portrait_Soviet_Generic_3
+				}
+			}
+			country_leader={
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
