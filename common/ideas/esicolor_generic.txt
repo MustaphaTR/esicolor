@@ -575,6 +575,27 @@ ideas = {
 			traits = { refinery_concern }
 		}
 
+		generic_telephone_company = {
+			picture = generic_radio_concern
+
+			allowed = {
+				has_custom_telephone_company = no
+			}
+			visible = {
+				NOT = {
+					has_global_flag = custom_designers_only
+					has_country_flag = telephone_company_disabled
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.06
+				radar_tech = 0.10
+			}
+
+			traits = { telephone_company }
+		}
+
 		generic_forestry_company = {
 			picture = generic_electronics_concern_3
 
