@@ -1,0 +1,77 @@
+is_neighboring_control_special_case_state = {
+	OR = {
+		AND = {
+			THIS = { state = 119 }
+			133 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 133 }
+			119 = { is_controlled_by = ROOT }
+		}
+	}
+}
+
+is_neighboring_ownership_special_case_state = {
+	OR = {
+		AND = {
+			THIS = { state = 119 }
+			133 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 133 }
+			119 = { is_owned_by = ROOT }
+		}
+	}
+}
+
+is_neighboring_core_special_case_state = {
+	OR = {
+		AND = {
+			THIS = { state = 119 }
+			133 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 133 }
+			119 = { is_core_of = ROOT }
+		}
+	}
+}
+
+is_neighboring_control_special_case_country = {
+	OR = {
+		AND = {
+			THIS = { controls_state = 119 }
+			ROOT = { controls_state = 133 }
+		}
+		AND = {
+			THIS = { controls_state = 133 }
+			ROOT = { controls_state = 119 }
+		}
+	}
+}
+
+is_neighboring_control_special_case_country_this_from = {
+	OR = {
+		AND = {
+			THIS = { controls_state = 119 }
+			FROM = { controls_state = 133 }
+		}
+		AND = {
+			THIS = { controls_state = 133 }
+			FROM = { controls_state = 119 }
+		}
+	}
+}
+
+is_neighboring_ownership_special_case_country = {
+	OR = {
+		AND = {
+			THIS = { owns_state = 119 }
+			ROOT = { owns_state = 133 }
+		}
+		AND = {
+			THIS = { owns_state = 133 }
+			ROOT = { owns_state = 119 }
+		}
+	}
+}
