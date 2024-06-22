@@ -4,17 +4,16 @@ on_actions = {
 			log = "[GetDateText] MustaphaTR's Every State Independent main on_startup begin"
 
 			every_country = {
+				if = {
+					limit = { is_ai = no }
+
+					country_event = esicolor.1
+				}
+
 				add_ideas = aggressive_ai
 
 				setup_generic_advisor_portraits = yes
 			}
-
-			# Set these here for now.
-			set_global_flag = claiming_give_war_goals
-			set_variable = { global.claiming_cost = 40 }
-			set_variable = { global.claiming_cost_minus_one = 39 }
-			set_variable = { global.claiming_cost_negative = -40 }
-			set_variable = { global.claiming_length = 60 }
 		}
 	}
 
