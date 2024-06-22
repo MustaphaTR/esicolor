@@ -1,0 +1,130 @@
+guiTypes = {
+	containerWindowType = {
+		name = "esicolor_state_action_category_container"
+		position = {x = 0 y = 0 }
+		size = { width= 300 height= 300 }
+
+		iconType = {
+			name = "esicolor_claim_button" 
+			position = { x = 460 y = 5 }
+			orientation = "UPPER_LEFT"
+			spriteType = "GFX_esicolor_claim_button_greyed"
+
+			pdx_tooltip = "esicolor_claim_button_tt"
+			pdx_tooltip_delayed = "esicolor_claim_button_tt_delayed"
+		}
+
+		iconType = {
+			name = "esicolor_compliance_button" 
+			position = { x = 460 y = 60 }
+			orientation = "UPPER_LEFT"
+			spriteType = "GFX_esicolor_compliance_button_greyed"
+
+			pdx_tooltip = "esicolor_compliance_button_tt"
+			pdx_tooltip_delayed = "esicolor_compliance_button_tt_delayed"
+		}
+
+		iconType = {
+			name = "esicolor_core_button" 
+			position = { x = 460 y = 115 }
+			orientation = "UPPER_LEFT"
+			spriteType = "GFX_esicolor_core_button_greyed"
+
+			pdx_tooltip = "esicolor_core_button_tt"
+			pdx_tooltip_delayed ="esicolor_core_button_tt_delayed"
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_claim_button_clickable_window"
+		buttonType = {
+			name = "esicolor_claim_button_clickable"
+			position = { x = 460 y = 5 }
+			orientation = "UPPER_LEFT"
+			spriteType = "GFX_esicolor_claim_button"
+
+			pdx_tooltip = "esicolor_claim_button_tt"
+			pdx_tooltip_delayed = "esicolor_claim_button_tt_delayed"
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_compliance_button_clickable_window"
+		buttonType = {
+			name = "esicolor_compliance_button_clickable"
+			position = { x = 460 y = 60 }
+			orientation = "UPPER_LEFT"
+			spriteType = "GFX_esicolor_compliance_button"
+
+			pdx_tooltip = "esicolor_compliance_button_tt"
+			pdx_tooltip_delayed = "esicolor_compliance_button_tt_delayed"
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_core_button_clickable_window"
+		buttonType = {
+			name = "esicolor_core_button_clickable"
+			position = { x = 460 y = 115 }
+			orientation = "UPPER_LEFT"
+			spriteType = "GFX_esicolor_core_button"
+
+			pdx_tooltip = "esicolor_core_button_tt"
+			pdx_tooltip_delayed = "esicolor_core_button_tt_delayed"
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_claim_button_timer"
+		instantTextBoxType = {
+			name = "esicolor_claim_button_timer_textbox"
+			position = { x = 409 y = 5 }
+			font = "hoi_20b"
+			borderSize = { x = 0 y = 0 }
+			text = "esicolor_claim_button_timer_text"
+			maxWidth = 170
+			maxHeight = 32
+			format = center
+			Orientation = "UPPER_LEFT"
+
+			pdx_tooltip = "esicolor_claim_button_tt"
+			pdx_tooltip_delayed = "esicolor_claim_button_tt_delayed"
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_compliance_button_timer"
+		instantTextBoxType = {
+			name = "esicolor_compliance_button_timer_textbox"
+			position = { x = 409 y = 60 }
+			font = "hoi_20b"
+			borderSize = { x = 0 y = 0 }
+			text = "esicolor_compliance_button_timer_text"
+			maxWidth = 170
+			maxHeight = 32
+			format = center
+			Orientation = "UPPER_LEFT"
+
+			pdx_tooltip = "esicolor_compliance_button_tt"
+			pdx_tooltip_delayed = "esicolor_compliance_button_tt_delayed"
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_core_button_timer"
+		instantTextBoxType = {
+			name = "esicolor_core_button_timer_textbox"
+			position = { x = 409 y = 115 }
+			font = "hoi_20b"
+			borderSize = { x = 0 y = 0 }
+			text = "esicolor_core_button_timer_text"
+			maxWidth = 170
+			maxHeight = 32
+			format = center
+			Orientation = "UPPER_LEFT"
+
+			pdx_tooltip = "esicolor_core_button_tt"
+			pdx_tooltip_delayed = "esicolor_core_button_tt_delayed"
+		}
+	}
+}

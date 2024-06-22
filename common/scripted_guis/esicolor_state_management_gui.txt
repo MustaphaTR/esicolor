@@ -1,0 +1,284 @@
+scripted_gui = {
+	esicolor_state_action_category_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+
+		visible = {
+			ROOT = { 
+				NOT = {
+					original_tag = OOO
+					has_global_flag =  state_management_disabled
+				}
+			}
+			THIS = {
+				NOT = {
+					is_owned_by = OOO
+				}
+			}
+		}
+
+		window_name = "esicolor_state_action_category_container"
+	}
+
+	esicolor_claim_button_clickable_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+
+		visible = {
+			ROOT = {
+				NOT = {
+					original_tag = OOO
+					has_global_flag =  state_management_disabled
+				}
+
+				has_political_power > global.claiming_cost_minus_one?19
+				political_power_daily > 0.1
+			}
+			THIS = {
+				NOT = {
+					if = {
+						limit = { has_global_flag = claiming_give_war_goals }
+
+						ROOT = {
+							OR = {
+								has_wargoal_against = PREV.owner
+								has_war_with = PREV.owner
+							}
+						}
+					}
+					else_if = {
+						limit = { has_global_flag = claiming_declare_war }
+
+						ROOT = { has_war_with = PREV.owner }
+
+						else = {
+							is_claimed_by = ROOT
+						}
+					}
+
+					is_in_array = { ROOT.states_being_claimed = THIS }
+				}
+
+				owner = {
+					NOT = {
+						original_tag = OOO
+						tag = ROOT
+
+						is_in_faction_with = ROOT
+						has_non_aggression_pact_with = ROOT
+					}
+				}
+
+				OR = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+					}
+
+					is_neighboring_control_special_case_state = yes
+				}
+			}
+		}
+
+		window_name = "esicolor_claim_button_clickable_window"
+
+		effects = {
+			esicolor_claim_button_clickable_click = {
+				THIS = {
+					add_to_array = { ROOT.states_being_claimed = THIS }
+				}
+
+				hidden_effect = {
+					ROOT = {
+						add_political_power = global.claiming_cost_negative?-20
+						subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.1 }
+						#country_event = { id = esicolorstatemanagement.1 days = global.claiming_length?30 }
+						set_variable = { ROOT.claim_timer_@PREV = global.claiming_length?30 }
+					}
+				}
+			}
+		}
+	}
+
+	esicolor_claim_button_timer_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+
+		visible = {
+			THIS = {
+				is_in_array = { ROOT.states_being_claimed = THIS }
+			}
+		}
+
+		window_name = "esicolor_claim_button_timer"
+	}
+
+	esicolor_compliance_button_clickable_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+
+		visible = {
+			ROOT = {
+				NOT = {
+					original_tag = OOO
+					has_global_flag =  state_management_disabled
+				}
+
+				num_of_civilian_factories_available_for_projects > 0
+				has_political_power > 39
+			}
+			THIS = {
+				NOT = {
+					is_core_of = ROOT
+
+					is_in_array = { ROOT.states_getting_compliance = THIS }
+				}
+				compliance < 100
+				owner = {
+					tag = ROOT
+				}
+				controller = {
+					tag = ROOT
+				}
+			}
+		}
+
+		window_name = "esicolor_compliance_button_clickable_window"
+
+		effects = {
+			esicolor_compliance_button_clickable_click = {
+				THIS = {
+					add_to_array = { ROOT.states_getting_compliance = THIS }
+				}
+
+				ROOT = {
+					hidden_effect = {
+						add_political_power = -40
+						add_to_variable = { ROOT.dynamic_civ_factory_use = 1 }
+						#country_event = { id = esicolorstatemanagement.2 days = 30 }
+						set_variable = { ROOT.compliance_timer_@PREV = 30 }
+					}
+				}
+			}
+		}
+	}
+
+	esicolor_compliance_button_timer_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+
+		visible = {
+			THIS = {
+				is_in_array = { ROOT.states_getting_compliance = THIS }
+			}
+		}
+
+		window_name = "esicolor_compliance_button_timer"
+	}
+
+	esicolor_core_button_clickable_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+
+		visible = {
+			ROOT = {
+				NOT = {
+					original_tag = OOO
+					has_global_flag =  state_management_disabled
+				}
+
+				if = {
+					limit = { is_in_array = { ROOT.formable_cores = PREV } }
+
+					has_political_power > 29
+					political_power_daily > 0.125
+				}
+				else = {
+					has_political_power > 59
+					political_power_daily > 0.25
+				}
+			}
+			THIS = {
+				NOT = {
+					is_core_of = ROOT
+
+					is_in_array = { ROOT.states_being_cored_normal = THIS }
+					is_in_array = { ROOT.states_being_cored_formable = THIS }
+				}
+				owner = {
+					tag = ROOT
+				}
+				controller = {
+					tag = ROOT
+				}
+				if = {
+					limit = { is_in_array = { ROOT.formable_cores = THIS } }
+
+					compliance > 20
+				}
+				else = {
+					compliance > 40
+
+					OR = {
+						any_neighbor_state = {
+							is_core_of = ROOT
+						}
+
+						is_neighboring_core_special_case_state = yes
+					}
+				}
+			}
+		}
+
+		window_name = "esicolor_core_button_clickable_window"
+
+		effects = {
+			esicolor_core_button_clickable_click = {
+				THIS = {
+					if = {
+						limit = { is_in_array = { ROOT.formable_cores = THIS } }
+
+						add_to_array = { ROOT.states_being_cored_formable = THIS }
+					}
+					else = {
+						add_to_array = { ROOT.states_being_cored_normal = THIS }
+					}
+				}
+
+				ROOT = {
+					hidden_effect = {
+						if = {
+							limit = { is_in_array = { ROOT.formable_cores = PREV } }
+
+							add_political_power > -30
+							subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.125 }
+							#country_event = { id = esicolorstatemanagement.4 days = 30 }
+							set_variable = { ROOT.core_timer_@PREV = 30 }
+						}
+						else = {
+							add_political_power > -60
+							subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.25 }
+							#country_event = { id = esicolorstatemanagement.3 days = 60 }
+							set_variable = { ROOT.core_timer_@PREV = 60 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	esicolor_core_button_timer_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+
+		visible = {
+			THIS = {
+				OR = {
+					is_in_array = { ROOT.states_being_cored_formable = THIS }
+					is_in_array = { ROOT.states_being_cored_normal = THIS }
+				}
+			}
+		}
+
+		window_name = "esicolor_core_button_timer"
+	}
+}

@@ -1,0 +1,432 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = { # Country
+	name = GetCoringCost
+	text = {
+		trigger = {
+			is_in_array = { ROOT.formable_cores = FROM }
+		}
+		localization_key = decision_cost_pp_30
+	}
+	text = {
+		trigger = {
+			NOT = { is_in_array = { ROOT.formable_cores = FROM } }
+		}
+		localization_key = decision_cost_pp_60
+	}
+}
+
+defined_text = { # Country
+	name = GetCoringCostBlocked
+	text = {
+		trigger = {
+			is_in_array = { ROOT.formable_cores = FROM }
+		}
+		localization_key = decision_cost_pp_30_blocked
+	}
+	text = {
+		trigger = {
+			NOT = { is_in_array = { ROOT.formable_cores = FROM } }
+		}
+		localization_key = decision_cost_pp_60_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetCoringCostTooltip
+	text = {
+		trigger = {
+			is_in_array = { ROOT.formable_cores = FROM }
+		}
+		localization_key = decision_cost_pp_30_tooltip
+	}
+	text = {
+		trigger = {
+			NOT = { is_in_array = { ROOT.formable_cores = FROM } }
+		}
+		localization_key = decision_cost_pp_60_tooltip
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostPP30
+	text = {
+		trigger = {
+			has_political_power > 29
+		}
+		localization_key = decision_cost_pp_30
+	}
+	text = {
+		localization_key = decision_cost_pp_30_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostPP60
+	text = {
+		trigger = {
+			has_political_power > 59
+		}
+		localization_key = decision_cost_pp_60
+	}
+	text = {
+		localization_key = decision_cost_pp_60_blocked
+	}
+}
+
+## Scripted GUI localization
+defined_text = { # Country
+	name = esicolor_claim_button_tt_delayed_option_check
+	text = {
+		trigger = {
+			has_global_flag = claiming_give_war_goals
+		}
+		localization_key = esicolor_claim_button_tt_delayed_war_goal
+	}
+	text = {
+		trigger = {
+			has_global_flag = claiming_declare_war
+		}
+		localization_key = esicolor_claim_button_tt_delayed_war
+	}
+	text = {
+		localization_key = esicolor_claim_button_tt_delayed_claim
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_claim_action_cost
+	text = {
+		trigger = {
+			ROOT = {
+				has_political_power > var:global.claiming_cost
+			}
+		}
+		localization_key = esicolor_claim_action_cost_met
+	}
+	text = {
+		localization_key = esicolor_claim_action_cost_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_claim_action_not_ours
+	text = {
+		trigger = {
+			THIS = {
+				NOT = {
+					is_owned_by = ROOT
+				}
+			}
+		}
+		localization_key = esicolor_claim_action_not_ours_met
+	}
+	text = {
+		localization_key = esicolor_claim_action_not_ours_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_claim_action_border
+	text = {
+		trigger = {
+			THIS = {
+				OR = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+					}
+
+					is_neighboring_control_special_case_state = yes
+				}
+			}
+		}
+		localization_key = esicolor_claim_action_border_met
+	}
+	text = {
+		localization_key = esicolor_claim_action_border_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_claim_action_no_claim
+	text = {
+		trigger = {
+			THIS = {
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		localization_key = esicolor_claim_action_no_claim_met
+	}
+	text = {
+		localization_key = esicolor_claim_action_no_claim_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_claim_action_no_war_goal
+	text = {
+		trigger = {
+			ROOT = {
+				NOT = {
+					has_wargoal_against = PREV.owner
+				}
+			}
+		}
+		localization_key = esicolor_claim_action_no_war_goal_met
+	}
+	text = {
+		localization_key = esicolor_claim_action_no_war_goal_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_claim_action_no_war
+	text = {
+		trigger = {
+			ROOT = {
+				NOT = {
+					has_war_with = PREV.owner
+				}
+			}
+		}
+		localization_key = esicolor_claim_action_no_war_met
+	}
+	text = {
+		localization_key = esicolor_claim_action_no_war_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_claim_action_no_faction
+	text = {
+		trigger = {
+			THIS = {
+				owner = {
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+		localization_key = esicolor_claim_action_no_faction_met
+	}
+	text = {
+		localization_key = esicolor_claim_action_no_faction_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_claim_action_no_nap
+	text = {
+		trigger = {
+			THIS = {
+				owner = {
+					NOT = {
+						has_non_aggression_pact_with = ROOT
+					}
+				}
+			}
+		}
+		localization_key = esicolor_claim_action_no_nap_met
+	}
+	text = {
+		localization_key = esicolor_claim_action_no_nap_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_compliance_action_cost
+	text = {
+		trigger = {
+			ROOT = {
+				has_political_power > 39
+			}
+		}
+		localization_key = esicolor_compliance_action_cost_met
+	}
+	text = {
+		localization_key = esicolor_compliance_action_cost_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_compliance_action_cost
+	text = {
+		trigger = {
+			ROOT = {
+				has_political_power > 39
+			}
+		}
+		localization_key = esicolor_compliance_action_cost_met
+	}
+	text = {
+		localization_key = esicolor_compliance_action_cost_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_compliance_action_ours
+	text = {
+		trigger = {
+			THIS = {
+				is_owned_by = ROOT
+				is_controlled_by = ROOT
+			}
+		}
+		localization_key = esicolor_compliance_action_ours_met
+	}
+	text = {
+		localization_key = esicolor_compliance_action_ours_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_compliance_action_not_core
+	text = {
+		trigger = {
+			THIS = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		localization_key = esicolor_compliance_action_not_core_met
+	}
+	text = {
+		localization_key = esicolor_compliance_action_not_core_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_compliance_action_no_full_compliance
+	text = {
+		trigger = {
+			THIS = {
+				compliance < 100
+			}
+		}
+		localization_key = esicolor_compliance_action_no_full_compliance_met
+	}
+	text = {
+		localization_key = esicolor_compliance_action_no_full_compliance_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_compliance_action_factory
+	text = {
+		trigger = {
+			ROOT = {
+				num_of_civilian_factories_available_for_projects > 0
+			}
+		}
+		localization_key = esicolor_compliance_action_factory_met
+	}
+	text = {
+		localization_key = esicolor_compliance_action_factory_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_core_button_tt_delayed_formable_check
+	text = {
+		trigger = {
+			is_in_array = { ROOT.formable_cores = THIS }
+		}
+		localization_key = esicolor_core_button_tt_delayed_formable
+	}
+	text = {
+		localization_key = esicolor_core_button_tt_delayed_normal
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_core_action_cost_formable
+	text = {
+		trigger = {
+			ROOT = {
+				has_political_power > 29
+			}
+		}
+		localization_key = esicolor_core_action_cost_30_met
+	}
+	text = {
+		localization_key = esicolor_core_action_cost_30_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_core_action_cost_normal
+	text = {
+		trigger = {
+			ROOT = {
+				has_political_power > 59
+			}
+		}
+		localization_key = esicolor_core_action_cost_60_met
+	}
+	text = {
+		localization_key = esicolor_core_action_cost_60_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_core_action_border
+	text = {
+		trigger = {
+			THIS = {
+				OR = {
+					any_neighbor_state = {
+						is_core_of = ROOT
+					}
+
+					is_neighboring_core_special_case_state = yes
+				}
+			}
+		}
+		localization_key = esicolor_core_action_border_met
+	}
+	text = {
+		localization_key = esicolor_core_action_border_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_core_action_compliance_20
+	text = {
+		trigger = {
+			THIS = {
+				compliance > 20
+			}
+		}
+		localization_key = esicolor_core_action_compliance_met
+	}
+	text = {
+		localization_key = esicolor_core_action_compliance_unmet
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_core_action_compliance_40
+	text = {
+		trigger = {
+			THIS = {
+				compliance > 40
+			}
+		}
+		localization_key = esicolor_core_action_compliance_met
+	}
+	text = {
+		localization_key = esicolor_core_action_compliance_unmet
+	}
+}
