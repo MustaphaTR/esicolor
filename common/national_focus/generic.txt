@@ -12,16 +12,15 @@
 	FOCUS_FILTER_ARMY_XP = 103
 	FOCUS_FILTER_NAVY_XP = 102
 	FOCUS_FILTER_AIR_XP = 101
-
 }
 
 focus_tree = {
 	id = generic_focus
-	
+
 	country = {
 		factor = 1
 	}
-	
+
 	default = no
 	reset_on_civilwar = no
 
@@ -34,12 +33,13 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 1
 		y = 0
-		cost = 10
+		cost = 8
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus army_effort"
 			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -57,13 +57,14 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = army_effort
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus equipment_effort"
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				bonus = 1.0
@@ -82,13 +83,14 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = army_effort
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus motorization_effort"
 			add_tech_bonus = {
 				name = motorized_bonus
 				bonus = 1.0
@@ -104,13 +106,14 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = army_effort
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus doctrine_effort"
 			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -128,13 +131,14 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = equipment_effort
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus equipment_effort_2"
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				bonus = 1.0
@@ -152,13 +156,14 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = motorization_effort
-		cost = 10
+		cost = 8
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus mechanization_effort"
 			add_tech_bonus = {
 				name = motorized_bonus
 				ahead_reduction = 2
@@ -179,13 +184,14 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = doctrine_effort
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus doctrine_effort_2"
 			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -194,6 +200,7 @@ focus_tree = {
 				category = land_doctrine
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -203,13 +210,14 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = equipment_effort_2
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus equipment_effort_3"
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				ahead_reduction = 2
@@ -218,6 +226,7 @@ focus_tree = {
 				category = artillery
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -227,13 +236,14 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = mechanization_effort
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus armor_effort"
 			add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1.0
@@ -252,13 +262,14 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = equipment_effort_3
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus special_forces"
 			add_ideas = special_forces
 			add_tech_bonus = {
 				name = special_forces_bonus
@@ -279,7 +290,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_airforce
 		x = 5
 		y = 0
-		cost = 10
+		cost = 8
 		
 		search_filters = {   FOCUS_FILTER_RESEARCH }
 
@@ -294,16 +305,17 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-			}			
+			}
 			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
-			}			
+			}
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus aviation_effort"
 			air_experience = 25
 
 			if = {
@@ -367,7 +379,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = aviation_effort
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -392,7 +404,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = aviation_effort
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -416,7 +428,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = bomber_focus
-		cost = 10
+		cost = 8
 
 		search_filters = {   FOCUS_FILTER_RESEARCH }
 		
@@ -433,13 +445,14 @@ focus_tree = {
 				}
 			}
 			add_doctrine_cost_reduction = {
-				name =  air_doc_bonus
+				name = air_doc_bonus
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
 		}
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus aviation_effort_2"
 			air_experience = 25
 			if = {
 				limit = {
@@ -485,12 +498,12 @@ focus_tree = {
 						type = air_base
 						level = 2
 						instant_build = yes
-					}				
+					}
 					ROOT = { set_country_flag = aviation_effort_2_AB }
 				}
 			}
 			add_doctrine_cost_reduction = {
-				name =  air_doc_bonus
+				name = air_doc_bonus
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
@@ -506,7 +519,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = aviation_effort_2
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -531,13 +544,14 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = aviation_effort_2
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus rocket_effort"
 			add_tech_bonus = {
 				name = jet_rocket_bonus
 				ahead_reduction = 2
@@ -564,7 +578,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = aviation_effort_2
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -586,7 +600,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 9
 		y = 0
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 		
@@ -594,10 +608,7 @@ focus_tree = {
 
 
 		available = {
-			any_state = {
-				is_coastal = yes
-				is_controlled_by = ROOT
-			}
+			any_controlled_state_is_coastal = yes
 		}
 
 		complete_tooltip = {
@@ -609,103 +620,76 @@ focus_tree = {
 				instant_build = yes
 			}
 		}
-		
+
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus naval_effort"
 			navy_experience = 25
-			if = {
+			random_controlled_state = {
 				limit = {
-					NOT = {
-						any_owned_state = {
-							dockyard > 0
-							free_building_slots = {
-								building = dockyard
-								size > 2
-								include_locked = yes
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+					if = {
+						limit = {
+							controller = {
+								any_owned_state = {
+									is_coastal = yes
+									free_building_slots = {
+										building = dockyard
+										size > 2
+										include_locked = yes
+									}
+									is_controlled_by = ROOT
+									is_core_of = ROOT
+								}
 							}
 						}
+						is_owned_by = ROOT
+						is_core_of = ROOT ## Prioritise owned cores.
 					}
-					any_owned_state = {
-						is_coastal = yes
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_coastal = yes
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
-					}
-				}
-				set_country_flag = naval_effort_built
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = naval_effort_built }
-					any_owned_state = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
-					}
-				}
-				set_country_flag = naval_effort_built
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = naval_effort_built }
-					NOT = {
-						any_owned_state = {
-							free_building_slots = {
-								building = dockyard
-								size > 2
-								include_locked = yes
+					else_if = {
+						limit = {
+							controller = {
+								any_controlled_state = {
+									is_coastal = yes
+									free_building_slots = {
+										building = dockyard
+										size > 2
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
 							}
 						}
+						is_core_of = ROOT ## Then controlled cores.
 					}
-				}
-				random_state = {
-					limit = {
-						controller = { tag = ROOT }
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
+					else_if = {
+						limit = {
+							controller = {
+								any_owned_state = {
+									is_coastal = yes
+									free_building_slots = {
+										building = dockyard
+										size > 2
+										include_locked = yes
+									}
+									is_controlled_by = ROOT
+								}
+							}
 						}
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
+						is_owned_by = ROOT ## Then owned non-cores, if this fails too it goes to a random state.
 					}
 				}
-			}			
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -717,7 +701,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = naval_effort
-		cost = 10
+		cost = 8
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
@@ -738,6 +722,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus flexible_navy"
 			add_doctrine_cost_reduction = {
 				name = sub_op_bonus
 				cost_reduction = 0.5
@@ -759,7 +744,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = naval_effort
-		cost = 10
+		cost = 8
 		
 		search_filters = {   FOCUS_FILTER_RESEARCH }
 
@@ -780,6 +765,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus large_navy"
 			add_doctrine_cost_reduction = {
 				name = fleet_in_being_bonus
 				cost_reduction = 0.25
@@ -796,12 +782,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = flexible_navy
-		cost = 10
+		cost = 8
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
-
 
 		ai_will_do = {
 			factor = 1
@@ -817,6 +802,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus submarine_effort"
 			add_tech_bonus = {
 				name = ss_bonus
 				bonus = 1.0
@@ -834,7 +820,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = large_navy
-		cost = 10
+		cost = 8
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
@@ -855,6 +841,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus cruiser_effort"
 			add_tech_bonus = {
 				name = cr_bonus
 				bonus = 1.0
@@ -873,12 +860,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = submarine_effort
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
-
 
 		ai_will_do = {
 			factor = 1
@@ -894,6 +880,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus destroyer_effort"
 			add_tech_bonus = {
 				name = dd_bonus
 				bonus = 1.0
@@ -911,7 +898,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = cruiser_effort
-		cost = 10
+		cost = 8
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -931,6 +918,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus capital_ships_effort"
 			navy_experience = 25
 			add_tech_bonus = {
 				name = capital_ships_bonus
@@ -949,13 +937,14 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		x = 13
 		y = 0
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus industrial_effort"
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1.0
@@ -966,24 +955,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 3
-			modifier = {
-				factor = 0
-				date < 1939.1.1
-				OR = { 
-					# we dont want chinese minors to go crazy on slots early since they get eaten
-					tag = GXC 
-					tag = YUN
-					tag = SHX
-					tag = XSM
-					tag = BEL
-					tag = LUX
-					tag = HOL
-					tag = DEN
-
-					# we also dont want tiny nations to go crazy with slots right away
-					num_of_controlled_states < 2
-				}				
-			}
 		}
 	}
 
@@ -994,14 +965,12 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = industrial_effort
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
 		available_if_capitulated = yes
 
-
-		
 		ai_will_do = {
 			factor = 2
 		}
@@ -1014,7 +983,7 @@ focus_tree = {
 						building = industrial_complex
 						size < 1
 						include_locked = yes
-					}					
+					}
 				}
 			}
 		}
@@ -1025,10 +994,11 @@ focus_tree = {
 				type = industrial_complex
 				level = 1
 				instant_build = yes
-			}			
+			}
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus construction_effort"
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1036,9 +1006,40 @@ focus_tree = {
 						size > 0
 						include_locked = yes
 					}
-					OR = {
+					if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+									is_core_of = ROOT
+								}
+							}
+						}
 						is_in_home_area = yes
-						NOT = {
+						is_core_of = ROOT ## Prioritise cores in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then cores not in home area.
+					}
+					else_if = {
+						limit = {
 							owner = {
 								any_owned_state = {
 									free_building_slots = {
@@ -1050,6 +1051,7 @@ focus_tree = {
 								}
 							}
 						}
+						is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1069,15 +1071,14 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = industrial_effort
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
 		available_if_capitulated = yes
 
-
 		ai_will_do = {
-			factor = 2			
+			factor = 2
 		}
 
 		bypass = {
@@ -1103,6 +1104,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus production_effort"
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1110,9 +1112,40 @@ focus_tree = {
 						size > 0
 						include_locked = yes
 					}
-					OR = {
+					if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+									is_core_of = ROOT
+								}
+							}
+						}
 						is_in_home_area = yes
-						NOT = {
+						is_core_of = ROOT ## Prioritise cores in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then cores not in home area.
+					}
+					else_if = {
+						limit = {
 							owner = {
 								any_owned_state = {
 									free_building_slots = {
@@ -1124,6 +1157,7 @@ focus_tree = {
 								}
 							}
 						}
+						is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1143,12 +1177,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = construction_effort
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
 		available_if_capitulated = yes
-
 
 		ai_will_do = {
 			factor = 2
@@ -1174,9 +1207,10 @@ focus_tree = {
 				level = 1
 				instant_build = yes
 			}
-		}		
+		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus construction_effort_2"
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1184,9 +1218,40 @@ focus_tree = {
 						size > 0
 						include_locked = yes
 					}
-					OR = {
+					if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+									is_core_of = ROOT
+								}
+							}
+						}
 						is_in_home_area = yes
-						NOT = {
+						is_core_of = ROOT ## Prioritise cores in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then cores not in home area.
+					}
+					else_if = {
+						limit = {
 							owner = {
 								any_owned_state = {
 									free_building_slots = {
@@ -1198,6 +1263,7 @@ focus_tree = {
 								}
 							}
 						}
+						is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1217,12 +1283,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = production_effort
-		cost = 10
+		cost = 8
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 
 		available_if_capitulated = yes
-
 
 		ai_will_do = {
 			factor = 2
@@ -1248,9 +1313,10 @@ focus_tree = {
 				level = 1
 				instant_build = yes
 			}
-		}		
+		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus production_effort_2"
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1258,9 +1324,40 @@ focus_tree = {
 						size > 0
 						include_locked = yes
 					}
-					OR = {
+					if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+									is_core_of = ROOT
+								}
+							}
+						}
 						is_in_home_area = yes
-						NOT = {
+						is_core_of = ROOT ## Prioritise cores in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then cores not in home area.
+					}
+					else_if = {
+						limit = {
 							owner = {
 								any_owned_state = {
 									free_building_slots = {
@@ -1272,6 +1369,7 @@ focus_tree = {
 								}
 							}
 						}
+						is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1291,7 +1389,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = construction_effort_2
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
@@ -1300,7 +1398,7 @@ focus_tree = {
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = infrastructure_effort_tt
-				all_owned_state = {			
+				all_owned_state = {
 					free_building_slots = {
 						building = infrastructure
 						size < 1
@@ -1323,6 +1421,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus infrastructure_effort"
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1387,7 +1486,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = production_effort_2
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
@@ -1406,7 +1505,7 @@ focus_tree = {
 						building = arms_factory
 						size < 1
 						include_locked = yes
-					}					
+					}
 				}
 			}
 		}
@@ -1418,9 +1517,10 @@ focus_tree = {
 				level = 1
 				instant_build = yes
 			}
-		}		
+		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus production_effort_3"
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1428,9 +1528,40 @@ focus_tree = {
 						size > 0
 						include_locked = yes
 					}
-					OR = {
+					if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+									is_core_of = ROOT
+								}
+							}
+						}
 						is_in_home_area = yes
-						NOT = {
+						is_core_of = ROOT ## Prioritise cores in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then cores not in home area.
+					}
+					else_if = {
+						limit = {
 							owner = {
 								any_owned_state = {
 									free_building_slots = {
@@ -1442,6 +1573,7 @@ focus_tree = {
 								}
 							}
 						}
+						is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1461,7 +1593,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = infrastructure_effort
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
@@ -1470,7 +1602,7 @@ focus_tree = {
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = infrastructure_effort_tt
-				all_owned_state = {			
+				all_owned_state = {
 					free_building_slots = {
 						building = infrastructure
 						size < 1
@@ -1493,6 +1625,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus infrastructure_effort_2"
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1557,7 +1690,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = infrastructure_effort
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
@@ -1591,6 +1724,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus construction_effort_3"
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1598,9 +1732,40 @@ focus_tree = {
 						size > 1
 						include_locked = yes
 					}
-					OR = {
+					if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+									is_core_of = ROOT
+								}
+							}
+						}
 						is_in_home_area = yes
-						NOT = {
+						is_core_of = ROOT ## Prioritise cores in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then cores not in home area.
+					}
+					else_if = {
+						limit = {
 							owner = {
 								any_owned_state = {
 									free_building_slots = {
@@ -1612,6 +1777,7 @@ focus_tree = {
 								}
 							}
 						}
+						is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
 					}
 				}
 				add_extra_state_shared_building_slots = 2
@@ -1631,13 +1797,14 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = infrastructure_effort_2
-		cost = 10
+		cost = 8
 		
 		search_filters = { FOCUS_FILTER_RESEARCH } 
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus nuclear_effort"
 			add_tech_bonus = {
 				name = nuclear_bonus
 				ahead_reduction = 2
@@ -1661,37 +1828,109 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = infrastructure_effort_2
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_RESEARCH } 
 		
 		available_if_capitulated = yes
 
+		bypass = {
+			amount_research_slots > 4
+		}
+
 		completion_reward = {
-			add_research_slot = 1
+			log = "[GetDateText]: [Root.GetName]: Focus extra_tech_slot"
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
+
 		}
 	}
-	
+
 	focus = {
-		id = extra_tech_slot_2
-		icon = GFX_focus_research
+		id = extra_tech_slot_mil
+		icon = GFX_focus_research2
 		prerequisite = { focus = extra_tech_slot }
 		available = {
-			num_of_factories > 50
+			OR = {
+				arms_factory > 24
+				dockyard > 24
+			}
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = extra_tech_slot
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_RESEARCH } 
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_research_slot = 1
+			log = "[GetDateText]: [Root.GetName]: Focus extra_tech_slot_mil"
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
+			else = {
+				add_tech_bonus = {
+					name = infantry_artillery_bonus
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = extra_tech_slot_civ
+		icon = GFX_focus_research2
+		prerequisite = { focus = extra_tech_slot }
+		available = {
+			industrial_complex > 24
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		x = 1
+		y = 1
+		relative_position_id = extra_tech_slot
+		cost = 8
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus extra_tech_slot_civ"
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
+			else = {
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 1.0
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 1.0
+					uses = 1
+					category = industry
+				}
+			}
 		}
 	}	
 
@@ -1702,13 +1941,14 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = infrastructure_effort_2
-		cost = 10
+		cost = 8
 
 		search_filters = { FOCUS_FILTER_RESEARCH } 
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus secret_weapons"
 			add_tech_bonus = {
 				name = secret_bonus
 				bonus = 0.5
@@ -1733,13 +1973,14 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		x = 19
 		y = 0
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus political_effort"
 			add_political_power = 120
 		}
 	}
@@ -1752,14 +1993,18 @@ focus_tree = {
 		available = {
 			OR = {
 				has_government = fascism
+				has_idea = fascist_influence
+				has_idea_with_trait = fascist_demagogue
 				has_government = communism
+				has_idea = communist_influence
+				has_idea_with_trait = communist_revolutionary
 				has_government = neutrality
 			}
 		}
 		x = -1
 		y = 1
 		relative_position_id = political_effort
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL   }
 
@@ -1777,14 +2022,20 @@ focus_tree = {
 					}
 					has_idea = neutrality_idea
 				}
-			}
-			modifier = {
-				factor = 20
-				has_idea = SOV_russian_political_influence
+				NOT = {
+					AND = {
+						has_global_flag = all_neutrality_starting
+						OR = {
+							has_country_flag = ai_go_fascism
+							has_country_flag = ai_go_communism
+						}
+					}
+				}
 			}
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus collectivist_ethos"
 			add_timed_idea = { idea = collectivist_ethos_focus days = 1095 }
 		}
 	}
@@ -1797,18 +2048,18 @@ focus_tree = {
 		available = {
 			OR = {
 				has_government = fascism
-				has_government = neutrality
+				has_idea = fascist_influence
+				has_idea_with_trait = fascist_demagogue
 			}
 		}
 		x = -2
 		y = 1
 		relative_position_id = collectivist_ethos
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 
 		available_if_capitulated = yes
-
 
 		ai_will_do = {
 			factor = 5
@@ -1823,49 +2074,46 @@ focus_tree = {
 				factor = 0
 				AND = {
 					is_historical_focus_on = yes
-					NOT = { has_government = fascism }
+					NOT = {
+						has_government = fascism
+						AND = {
+							has_global_flag = all_neutrality_starting
+							has_country_flag = ai_go_fascism
+						}
+					}
 				}
-			}
-			modifier = {
-				factor = 10
-				has_idea = SOV_russian_political_influence
 			}
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus nationalism_focus"
 			add_timed_idea = {
 				idea = nationalism
 				days = 720
 			}
 		}
 	}
-	
+
 	focus = {
 		id = internationalism_focus
 		icon = GFX_goal_support_communism #icon = GFX_goal_tripartite_pact
 		prerequisite = { focus = collectivist_ethos }
 		mutually_exclusive = { focus = nationalism_focus }
 		available = {
-			if = {
-				limit = { original_tag = CHI }
+			OR = {
 				has_government = communism
-				else = {
-					OR = {
-						has_government = communism
-						has_government = neutrality
-					}
-				}
+				has_idea = communist_influence
+				has_idea_with_trait = communist_revolutionary
 			}
 		}
 		x = 0
 		y = 1
 		relative_position_id = collectivist_ethos
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 
 		available_if_capitulated = yes
-
 
 		ai_will_do = {
 			factor = 5
@@ -1875,44 +2123,52 @@ focus_tree = {
 					is_major = yes
 					has_government = communism
 				}
-			}			
+			}
 			modifier = {
 				factor = 0
 				AND = {
 					is_historical_focus_on = yes
-					NOT = { has_government = communism }
+					NOT = {
+						has_government = communism
+						has_country_flag = ai_go_communism
+					}
 				}
 			}
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus internationalism_focus"
 			add_timed_idea = {
 				idea = internationalism
 				days = 720
 			}
 		}
-	}	
+	}
 
 	focus = {
 		id = liberty_ethos
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = political_effort }
 		mutually_exclusive = { focus = collectivist_ethos }
 		available = {
 			OR = {
 				has_government = democratic
+				has_idea = democratic_influence
+				has_idea_with_trait = democratic_reformer
 				has_government = neutrality
+				has_idea = neutrality_idea
+				has_idea = neutrality_influence
+				has_idea_with_trait = staunch_monarchist
 			}
 		}
 		x = 1
 		y = 1
 		relative_position_id = political_effort
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available_if_capitulated = yes
-
 
 		ai_will_do = {
 			factor = 95
@@ -1932,9 +2188,18 @@ focus_tree = {
 					}
 				}
 			}
+			modifier = {
+				factor = 0
+				
+				OR = {
+					has_country_flag = ai_go_fascism
+					has_country_flag = ai_go_communism
+				}
+			}
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus liberty_ethos"
 			add_ideas = liberty_ethos_focus
 		}
 	}
@@ -1946,17 +2211,18 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = nationalism_focus
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus militarism"
 			if = {
 				limit = { has_idea = neutrality_idea }
 				remove_ideas = neutrality_idea
-			}			
+			}
 			add_ideas = militarism_focus
 			army_experience = 20
 			set_rule = { can_send_volunteers = yes }
@@ -1970,19 +2236,78 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = internationalism_focus
-		cost = 10
-	
+		cost = 8
+
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus political_correctness"
 			if = {
 				limit = { has_idea = neutrality_idea }
 				remove_ideas = neutrality_idea
-			}		
+			}
 			add_political_power = 200
 			add_ideas = idea_political_correctness
+		}
+	}
+
+	focus = {
+		id = democracy_focus
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = liberty_ethos }
+		mutually_exclusive = { focus = neutrality_focus }
+		available = {
+			OR = {
+				has_government = democratic
+				has_idea = democratic_influence
+				has_idea_with_trait = democratic_reformer
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = liberty_ethos
+		cost = 8
+
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 95
+			modifier = {
+				factor = 0.1
+				any_neighbor_country = {
+					is_major = yes
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+				NOT = {
+					any_neighbor_country = {
+						is_major = yes
+						has_government = democratic
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+
+				NOT = {
+					has_government = democratic
+					has_country_flag = ai_go_democratic
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus democracy_focus"
+			add_timed_idea = {
+				idea = democratic_ideals
+				days = 720
+			}
 		}
 	}
 
@@ -1990,48 +2315,52 @@ focus_tree = {
 		id = neutrality_focus
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = liberty_ethos }
-		mutually_exclusive = { focus = interventionism_focus }
+		mutually_exclusive = { focus = democracy_focus }
+		available = {
+			OR = {
+				has_government = neutrality
+				has_idea = neutrality_idea
+				has_idea = neutrality_influence
+				has_idea_with_trait = staunch_monarchist
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = liberty_ethos
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available_if_capitulated = yes
 
+
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 0
-				tag = AUS
-			}
-			modifier = {
-				factor = 0
-				tag = SAU
-				is_in_faction_with = SOV
-				SOV = { has_government = communism }
+
+				NOT = {
+					has_global_flag = all_neutrality_starting
+					has_country_flag = ai_go_neutrality
+				}
 			}
 		}
 
 		completion_reward = {
-			if = {
-				limit = { NOT = { has_idea = neutrality_idea } }
-				add_ideas = neutrality_idea
-			}
-			add_political_power = 150
+			log = "[GetDateText]: [Root.GetName]: Focus neutrality_focus"
+			add_ideas = neutral_ideals
 		}
 	}
 
 	focus = {
 		id = interventionism_focus
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = liberty_ethos }
-		mutually_exclusive = { focus = neutrality_focus }
-		x = 2
+		prerequisite = { focus = neutrality_focus focus = democracy_focus }
+		mutually_exclusive = { focus = strict_neutrality }
+		x = 0
 		y = 1
-		relative_position_id = liberty_ethos
-		cost = 10
+		relative_position_id = democracy_focus
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2047,10 +2376,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus interventionism_focus"
 			if = {
 				limit = { has_idea = neutrality_idea }
 				remove_ideas = neutrality_idea
-			}	
+			}
 			set_rule = { can_send_volunteers = yes }
 			add_political_power = 150
 		}
@@ -2063,13 +2393,14 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = militarism
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus military_youth"
 			add_ideas = military_youth_focus
 			if = {
 				limit = { has_government = fascism }
@@ -2089,21 +2420,63 @@ focus_tree = {
 	}
 
 	focus = {
-		id = deterrence
-		icon = GFX_goal_generic_defence
-		prerequisite = { focus = neutrality_focus }
+		id = strict_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = neutrality_focus focus = democracy_focus }
+		mutually_exclusive = { focus = interventionism_focus }
 		x = 0
 		y = 1
 		relative_position_id = neutrality_focus
-		cost = 10
+		cost = 8
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus strict_neutrality"
+			if = {
+				limit = { NOT = { has_idea = neutrality_idea } }
+				add_ideas = neutrality_idea
+			}
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = deterrence
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = strict_neutrality }
+		x = 0
+		y = 1
+		relative_position_id = strict_neutrality
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus deterrence"
 			add_ideas = deterrence
 		}
+	}
+
+	focus = {
+		id = defence_of_our_land
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = deterrence }
+		x = 20
+		y = 5
+		cost = 8
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus defence_of_our_land"
+			add_ideas = defence_of_our_land_idea
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -2113,13 +2486,14 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = interventionism_focus
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus volunteer_corps"
 			add_ideas = volunteer_corps_focus
 		}
 	}
@@ -2131,13 +2505,14 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = military_youth
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus paramilitarism"
 			add_ideas = paramilitarism_focus
 		}
 	}
@@ -2149,13 +2524,14 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = political_correctness
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus indoctrination_focus"
 			add_ideas = indoctrination_focus
 			add_political_power = 150
 		}
@@ -2168,47 +2544,52 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = volunteer_corps
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = foreign_expeditions_focus
+			log = "[GetDateText]: [Root.GetName]: Focus foreign_expeditions"
+			swap_ideas = {
+				remove_idea = volunteer_corps_focus
+				add_idea = foreign_expeditions_focus
+			}
 		}
 	}
 
 	focus = {
 		id = why_we_fight
 		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = foreign_expeditions focus = deterrence }
-		available = { 
-			OR = { 
-				threat > 0.75 
-				has_defensive_war = yes 
+		prerequisite = { focus = foreign_expeditions focus = defence_of_our_land }
+		available = {
+			OR = {
+				threat > 0.75
+				has_defensive_war = yes
 			}
 		}
 
 		continue_if_invalid = yes
 		
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = foreign_expeditions
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus why_we_fight"
 			add_ideas = why_we_fight_focus
 			custom_effect_tooltip = why_we_fight_effect
 			hidden_effect = {
 				if = {
 					limit = { NOT = { has_idea = neutrality_idea } }
 					set_rule = { can_create_factions = yes }
-				}			
+				}
 			}
 		}
 	}
@@ -2222,13 +2603,14 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = indoctrination_focus
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus political_commissars"
 			add_ideas = political_commissars_focus
 			if = {
 				limit = { has_government = fascism }
@@ -2255,24 +2637,26 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = paramilitarism
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ideological_fanaticism"
 			add_ideas = ideological_fanaticism_focus
 			set_rule = {
 				can_create_factions = yes
 			}
 			hidden_effect = {
 				set_rule = { can_use_kamikaze_pilots = yes }
+				set_country_flag = kamikaze_flag
 			}
 			custom_effect_tooltip = kamikaze_focus_tooltip
 		}
 	}
-	
+
 	focus = {
 		id = technology_sharing
 		icon = GFX_goal_generic_scientific_exchange
@@ -2287,27 +2671,25 @@ focus_tree = {
 					num_of_factories > 50
 				}
 			}
-		}		
+		}
 		x = 2
 		y = 1
 		relative_position_id = ideological_fanaticism
-		cost = 10
+		cost = 8
 	
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus technology_sharing"
 			if = {
 				limit = {
-					original_research_slots < 3
+					amount_research_slots < 5
 				}
 				add_research_slot = 1
 			}
-			if = {
-				limit = {
-					original_research_slots > 2
-				}
+			else = {
 				add_tech_bonus = {
 					name = electronics_bonus
 					bonus = 1.0
@@ -2319,16 +2701,15 @@ focus_tree = {
 					bonus = 1.0
 					uses = 1
 					category = industry
-				}	
+				}
 				add_tech_bonus = {
-					name = infantry_artillery_bonus #@#
+					name = infantry_artillery_bonus
 					bonus = 1.0
 					uses = 1
 					category = infantry_weapons
 					category = artillery
-				}				
-			}			
+				}
+			}
 		}
 	}	
-
 }
