@@ -1,0 +1,257 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#################### 
+
+IIO_infantry_tank_organization = {
+	name = NOR_thunes_mekaniske_verksted_organization
+    include = esicolor_generic_infantry_tank_organization
+    icon = GFX_idea_NOR_thunes_mekaniske_vaerksted
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+			OR = {
+				original_tag = IIO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 110
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				110 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+IIO_battle_line_ship_organization = {
+	name = NOR_karljohansvern_verft_organization
+    include = esicolor_generic_battle_line_ship_organization
+    icon = GFX_idea_NOR_karljohansvern_verft
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = IIO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 110
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				110 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IIO_escort_ship_organization = {
+	name = NOR_akers_mekaniske_verksted_organization
+    include = esicolor_generic_escort_ship_organization
+    icon = GFX_idea_NOR_akers_mekaniske_verksted
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = IIO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 110
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				110 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+IIO_naval_aircraft_organization = {
+    name = NOR_marinens_flyvebaatfabrikk_organization
+    include = esicolor_generic_naval_aircraft_organization
+    icon = GFX_idea_NOR_marinens_flyvebaatfabrikk
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = IIO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 110
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				110 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+YZI_infantry_equipment_organization = {
+    name = NOR_kongsberg_vaapenfabrikk_organization
+    include = esicolor_generic_infantry_equipment_organization
+    icon = GFX_idea_NOR_kongsberg_vaapenfabrikk
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = YZI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 921
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				921 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IIO_support_equipment_organization = {
+    name = NOR_norsk_spraengstofindustri_organization
+    include = esicolor_generic_support_equipment_organization
+    icon = GFX_idea_NOR_norsk_Spraengstofindustri
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = IIO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 110
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				110 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+YZO_artillery_organization = {
+    name = NOR_raufoss_ammunisjonsfabrikker_organization
+    include = esicolor_generic_artillery_organization
+    icon = GFX_idea_NOR_raufoss_ammunisjonsfabrikker
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = YZO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 920
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				920 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

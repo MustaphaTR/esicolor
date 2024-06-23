@@ -1,0 +1,299 @@
+ideas = {
+	tank_manufacturer = {
+		designer = yes
+
+		IIO_infantry_tank_manufacturer = {
+			name = NOR_thunes_mekaniske_verksted_organization
+			picture = NOR_thunes_mekaniske_vaerksted
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+				OR = {
+					original_tag = IIO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 110
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					110 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { infantry_tank_manufacturer }
+		}
+	}
+	
+	naval_manufacturer = {
+		designer = yes
+
+		IIO_atlantic_fleet_naval_manufacturer = {
+			name = NOR_karljohansvern_verft_organization
+			picture = NOR_karljohansvern_verft
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = IIO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 110
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					110 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { atlantic_fleet_naval_manufacturer }
+		}
+
+		IIO_convoy_escort_naval_manufacturer = {
+			name = NOR_akers_mekaniske_verksted_organization
+			picture = NOR_akers_mekaniske_verksted
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = IIO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 110
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					110 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		IIO_naval_aircraft_manufacturer = {
+			name = NOR_marinens_flyvebaatfabrikk
+			picture = NOR_marinens_flyvebaatfabrikk
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = IIO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 110
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					110 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { naval_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		YZI_infantry_equipment_manufacturer = {
+			name = NOR_kongsberg_vaapenfabrikk_organization
+			picture = NOR_kongsberg_vaapenfabrikk
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = YZI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 921
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					921 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		IIO_support_equipment_manufacturer = {
+			name = NOR_norsk_spraengstofindustri_organization
+			picture = NOR_norsk_Spraengstofindustri
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = IIO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 110
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					110 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
+		}
+
+		YZO_artillery_manufacturer = {
+			name = NOR_raufoss_ammunisjonsfabrikker_organization
+			picture = NOR_raufoss_ammunisjonsfabrikker
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = YZO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 920
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					920 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		IIO_electronics_concern = {
+			name = NOR_tandbergs_radiofabrikk
+			picture = NOR_tandbergs_radiofabrikk
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = IIO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 110
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					110 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
+		YZI_refinery_concern = {
+			name = NOR_norsk_hydro
+			picture = NOR_norsk_hydro
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = refinery_concern_disabled }
+				OR = {
+					original_tag = YZI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 921
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					921 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+	}	
+}

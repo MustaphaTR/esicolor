@@ -1,6 +1,8 @@
 # Tank
 has_custom_infantry_tank_manufacturer = {
-	always = no
+	OR = {
+		original_tag = IIO
+	}
 }
 
 has_custom_fast_tank_manufacturer = {
@@ -25,7 +27,9 @@ has_custom_pacific_fleet_naval_manufacturer = {
 }
 
 has_custom_atlantic_fleet_naval_manufacturer = {
-	always = no
+	OR = {
+		original_tag = IIO
+	}
 }
 
 has_custom_mediterranean_naval_manufacturer = {
@@ -49,7 +53,9 @@ has_custom_raiding_fleet_naval_manufacturer = {
 }
 
 has_custom_convoy_escort_naval_manufacturer = {
-	always = no
+	OR = {
+		original_tag = IIO
+	}
 }
 
 # Aircraft
@@ -78,20 +84,28 @@ has_custom_heavy_aircraft_manufacturer = {
 }
 
 has_custom_naval_aircraft_manufacturer = {
-	always = no
+	OR = {
+		original_tag = IIO
+	}
 }
 
 # Materiel
 has_custom_infantry_equipment_manufacturer = {
-	always = no
+	OR = {
+		original_tag = YZI
+	}
 }
 
 has_custom_support_equipment_manufacturer = {
-	always = no
+	OR = {
+		original_tag = IIO
+	}
 }
 
 has_custom_artillery_manufacturer = {
-	always = no
+	OR = {
+		original_tag = YZO
+	}
 }
 
 has_custom_motorized_equipment_manufacturer = {
@@ -108,11 +122,15 @@ has_custom_industrial_concern = {
 }
 
 has_custom_electronics_concern = {
-	always = no
+	OR = {
+		original_tag = IIO
+	}
 }
 
 has_custom_refinery_concern = {
-	always = no
+	OR = {
+		original_tag = YZI
+	}
 }
 
 has_custom_telephone_company = {
