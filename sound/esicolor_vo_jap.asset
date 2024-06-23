@@ -1,0 +1,2272 @@
+category = {
+	name = "Voices"
+	soundeffects = {
+		ZBZ_infantry_idle
+		ZBZ_infantry_neutral_combat
+		ZBZ_infantry_positive_combat
+		ZBZ_infantry_retreat
+		ZBZ_infantry_move_out
+
+		SZL_infantry_idle
+		SZL_infantry_neutral_combat
+		SZL_infantry_positive_combat
+		SZL_infantry_retreat
+		SZL_infantry_move_out
+
+		SZB_infantry_idle
+		SZB_infantry_neutral_combat
+		SZB_infantry_positive_combat
+		SZB_infantry_retreat
+		SZB_infantry_move_out
+
+		SZY_infantry_idle
+		SZY_infantry_neutral_combat
+		SZY_infantry_positive_combat
+		SZY_infantry_retreat
+		SZY_infantry_move_out
+
+		SEO_infantry_idle
+		SEO_infantry_neutral_combat
+		SEO_infantry_positive_combat
+		SEO_infantry_retreat
+		SEO_infantry_move_out
+
+		SEI_infantry_idle
+		SEI_infantry_neutral_combat
+		SEI_infantry_positive_combat
+		SEI_infantry_retreat
+		SEI_infantry_move_out
+
+		SEZ_infantry_idle
+		SEZ_infantry_neutral_combat
+		SEZ_infantry_positive_combat
+		SEZ_infantry_retreat
+		SEZ_infantry_move_out
+
+		SEE_infantry_idle
+		SEE_infantry_neutral_combat
+		SEE_infantry_positive_combat
+		SEE_infantry_retreat
+		SEE_infantry_move_out
+
+		SEA_infantry_idle
+		SEA_infantry_neutral_combat
+		SEA_infantry_positive_combat
+		SEA_infantry_retreat
+		SEA_infantry_move_out
+
+		SES_infantry_idle
+		SES_infantry_neutral_combat
+		SES_infantry_positive_combat
+		SES_infantry_retreat
+		SES_infantry_move_out
+
+		SEL_infantry_idle
+		SEL_infantry_neutral_combat
+		SEL_infantry_positive_combat
+		SEL_infantry_retreat
+		SEL_infantry_move_out
+
+		SEF_infantry_idle
+		SEF_infantry_neutral_combat
+		SEF_infantry_positive_combat
+		SEF_infantry_retreat
+		SEF_infantry_move_out
+
+		SSS_infantry_idle
+		SSS_infantry_neutral_combat
+		SSS_infantry_positive_combat
+		SSS_infantry_retreat
+		SSS_infantry_move_out
+
+		LAS_infantry_idle
+		LAS_infantry_neutral_combat
+		LAS_infantry_positive_combat
+		LAS_infantry_retreat
+		LAS_infantry_move_out
+	}
+	compressor = 
+	{
+		enabled = yes
+		pregain = 0.0
+		postgain = 2.0
+		ratio = 10.0
+		threshold = -10.0
+		attacktime = 0.030
+		releasetime = 1.2
+	}
+}
+
+####################
+### Soundeffects ### 
+####################
+
+### ZBZ ### 
+
+soundeffect = 
+{
+    name = "ZBZ_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "ZBZ_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "ZBZ_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "ZBZ_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "ZBZ_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### SZL ### 
+
+soundeffect = 
+{
+    name = "SZL_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SZL_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SZL_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SZL_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SZL_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### SZB ### 
+
+soundeffect = 
+{
+    name = "SZB_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SZB_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SZB_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SZB_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SZB_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### SZY ### 
+
+soundeffect = 
+{
+    name = "SZY_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SZY_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SZY_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SZY_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SZY_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### SEO ### 
+
+soundeffect = 
+{
+    name = "SEO_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEO_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEO_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEO_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEO_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### SEI ### 
+
+soundeffect = 
+{
+    name = "SEI_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEI_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEI_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEI_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEI_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### SEZ ### 
+
+soundeffect = 
+{
+    name = "SEZ_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEZ_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEZ_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEZ_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEZ_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### SEE ### 
+
+soundeffect = 
+{
+    name = "SEE_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEE_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEE_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEE_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEE_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### SEA ### 
+
+soundeffect = 
+{
+    name = "SEA_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEA_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEA_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEA_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEA_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### SES ### 
+
+soundeffect = 
+{
+    name = "SES_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SES_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SES_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SES_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SES_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### SEL ### 
+
+soundeffect = 
+{
+    name = "SEL_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEL_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEL_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEL_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEL_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### SEF ### 
+
+soundeffect = 
+{
+    name = "SEF_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEF_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEF_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEF_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEF_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### SSS ### 
+
+soundeffect = 
+{
+    name = "SSS_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SSS_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SSS_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SSS_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SSS_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### LAS ### 
+
+soundeffect = 
+{
+    name = "LAS_infantry_idle"
+    sounds = {
+        sound = jp_Idle_001
+        sound = jp_Idle_002
+        sound = jp_Idle_003
+        sound = jp_Idle_004
+        sound = jp_Idle_005
+        sound = jp_Idle_006
+        sound = jp_Idle_007
+        sound = jp_Idle_008
+        sound = jp_Idle_009
+        sound = jp_Idle_010
+        sound = jp_Idle_011
+        sound = jp_Idle_012
+        sound = jp_Idle_013
+        sound = jp_Idle_014
+        sound = jp_Idle_015
+        sound = jp_Idle_016
+        sound = jp_Idle_017
+        sound = jp_Idle_018
+        sound = jp_Idle_019
+        sound = jp_Idle_020
+        sound = jp_Idle_021
+        sound = jp_Idle_022
+        sound = jp_Idle_023
+        sound = jp_Idle_024
+        sound = jp_Idle_025
+        sound = jp_Idle_026
+        sound = jp_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "LAS_infantry_neutral_combat"
+    sounds = {
+        sound = jp_Neutral_001
+        sound = jp_Neutral_002
+        sound = jp_Neutral_003
+        sound = jp_Neutral_004
+        sound = jp_Neutral_005
+        sound = jp_Neutral_006
+        sound = jp_Neutral_007
+        sound = jp_Neutral_008
+        sound = jp_Neutral_009
+        sound = jp_Neutral_010
+        sound = jp_Neutral_011
+        sound = jp_Neutral_012
+        sound = jp_Neutral_013
+        sound = jp_Neutral_014
+        sound = jp_Neutral_015
+        sound = jp_Neutral_016
+        sound = jp_Neutral_017
+        sound = jp_Neutral_018
+        sound = jp_Neutral_019
+        sound = jp_Neutral_020
+		sound = jp_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "LAS_infantry_positive_combat"
+    sounds = {
+        sound = jp_Positive_001
+        sound = jp_Positive_002
+        sound = jp_Positive_003
+        sound = jp_Positive_004
+        sound = jp_Positive_005
+        sound = jp_Positive_006
+        sound = jp_Positive_007
+        sound = jp_Positive_008
+        sound = jp_Positive_009
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+        sound = jp_Positive_013
+        sound = jp_Positive_014
+        sound = jp_Positive_015
+        sound = jp_Positive_016
+        sound = jp_Positive_017
+        sound = jp_Positive_018
+        sound = jp_Positive_019
+        sound = jp_Positive_020
+        sound = jp_Positive_021
+        sound = jp_Positive_022
+        sound = jp_Positive_023
+        sound = jp_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "LAS_infantry_retreat"
+    sounds = {
+        sound = jp_Retreat_001
+        sound = jp_Retreat_002
+        sound = jp_Retreat_003
+        sound = jp_Retreat_004
+        sound = jp_Retreat_005
+        sound = jp_Retreat_006
+        sound = jp_Retreat_007
+        sound = jp_Retreat_008
+        sound = jp_Retreat_009
+        sound = jp_Retreat_010
+        sound = jp_Retreat_011
+        sound = jp_Retreat_012
+        sound = jp_Retreat_013
+        sound = jp_Retreat_014
+        sound = jp_Retreat_015
+        sound = jp_Retreat_016
+        sound = jp_Retreat_016_alt
+        sound = jp_Retreat_017
+        sound = jp_Retreat_017_alt
+        sound = jp_Retreat_018
+		sound = jp_Retreat_018_alt
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "LAS_infantry_move_out"
+    sounds = {
+
+        sound = jp_Positive_010
+        sound = jp_Positive_011
+        sound = jp_Positive_012
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.45
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
