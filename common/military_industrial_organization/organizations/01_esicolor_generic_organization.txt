@@ -212,13 +212,13 @@ esicolor_generic_submarine_organization = {
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
-		owner = { has_custom_coastal_defence_naval_manufacturer = no }
+		owner = { has_custom_submarine_manufacturer = no }
 	}
 	visible = {
 		owner = {
 			NOT = {
 				has_global_flag = custom_designers_only
-				has_country_flag = coastal_defence_naval_manufacturer_disabled
+				has_country_flag = submarine_manufacturer_disabled
 			}
 		}
 	}

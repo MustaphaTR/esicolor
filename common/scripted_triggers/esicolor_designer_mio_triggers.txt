@@ -32,11 +32,20 @@ has_custom_atlantic_fleet_naval_manufacturer = {
 	OR = {
 		original_tag = IIO
 		original_tag = IAO
+		AND = {
+			has_dlc = "Arms Against Tyranny"
+			original_tag = FEL
+		}
 	}
 }
 
 has_custom_mediterranean_naval_manufacturer = {
-	always = no
+	OR = {
+		AND = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+			original_tag = ISB
+		}
+	}
 }
 
 has_custom_black_sea_naval_manufacturer = {
@@ -44,22 +53,46 @@ has_custom_black_sea_naval_manufacturer = {
 }
 
 has_custom_battlefleet_designer = {
-	always = no
+	OR = {
+		AND = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+			original_tag = FEL
+		}
+		AND = {
+			has_dlc = "Arms Against Tyranny"
+			original_tag = IIF
+		}
+	}
 }
 
 has_custom_coastal_defence_naval_manufacturer = {
 	always = no
 }
 
+has_custom_submarine_manufacturer = {
+	OR = {
+		original_tag = CBZ
+	}
+}
+
 has_custom_raiding_fleet_naval_manufacturer = {
 	OR = {
 		original_tag = IEB
+		original_tag = ISF
 	}
 }
 
 has_custom_convoy_escort_naval_manufacturer = {
 	OR = {
 		original_tag = IIO
+		AND = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+			original_tag = IIF
+		}
+		AND = {
+			has_dlc = "Arms Against Tyranny"
+			original_tag = ISB
+		}
 	}
 }
 
@@ -67,19 +100,26 @@ has_custom_convoy_escort_naval_manufacturer = {
 has_custom_light_aircraft_manufacturer = {
 	OR = {
 		original_tag = IAO
+		original_tag = ISY
 	}
 }
 
 has_custom_CAS_manufacturer = {
-	always = no
+	OR = {
+		original_tag = ISY
+	}
 }
 
 has_custom_medium_aircraft_manufacturer = {
-	always = no
+	OR = {
+		original_tag = IIF
+	}
 }
 
 has_custom_fuel_efficient_aircraft_manufacturer = {
-	always = no
+	OR = {
+		original_tag = ISB
+	}
 }
 
 has_custom_agility_focused_aircraft_manufacturer = {
@@ -87,12 +127,15 @@ has_custom_agility_focused_aircraft_manufacturer = {
 }
 
 has_custom_heavy_aircraft_manufacturer = {
-	always = no
+	OR = {
+		original_tag = ISB
+	}
 }
 
 has_custom_naval_aircraft_manufacturer = {
 	OR = {
 		original_tag = IIO
+		original_tag = FEL
 	}
 }
 
@@ -100,6 +143,7 @@ has_custom_naval_aircraft_manufacturer = {
 has_custom_infantry_equipment_manufacturer = {
 	OR = {
 		original_tag = IEY
+		original_tag = ISY
 		original_tag = YZI
 	}
 }
@@ -107,12 +151,14 @@ has_custom_infantry_equipment_manufacturer = {
 has_custom_support_equipment_manufacturer = {
 	OR = {
 		original_tag = IIO
+		original_tag = ISY
 	}
 }
 
 has_custom_artillery_manufacturer = {
 	OR = {
 		original_tag = IAI
+		original_tag = ISY
 		original_tag = YZO
 	}
 }
@@ -120,6 +166,7 @@ has_custom_artillery_manufacturer = {
 has_custom_motorized_equipment_manufacturer = {
 	OR = {
 		original_tag = IAO
+		original_tag = ISY
 	}
 }
 
@@ -133,17 +180,21 @@ has_custom_armored_car_manufacturer = {
 has_custom_industrial_concern = {
 	OR = {
 		original_tag = IAI
+		original_tag = ILO
+		original_tag = ILZ
 	}
 }
 
 has_custom_electronics_concern = {
 	OR = {
 		original_tag = IIO
+		original_tag = ILI
 	}
 }
 
 has_custom_refinery_concern = {
 	OR = {
+		original_tag = BSZ
 		original_tag = YZI
 	}
 }
@@ -159,7 +210,10 @@ has_custom_forestry_company = {
 }
 
 has_custom_construction_company = {
-	always = no
+	OR = {
+		original_tag = OOZ
+		original_tag = ISB
+	}
 }
 
 has_custom_mining_company = {
@@ -167,7 +221,9 @@ has_custom_mining_company = {
 }
 
 has_custom_railway_company = {
-	always = no
+	OR = {
+		original_tag = OOZ
+	}
 }
 
 # Availablity Option

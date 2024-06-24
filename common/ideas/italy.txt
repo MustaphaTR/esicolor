@@ -1,0 +1,745 @@
+ideas = {
+	tank_manufacturer = {
+		designer = yes
+
+		### FIAT is a generic tank designer, so excluding it.
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		FEL_battlefleet_designer = {
+			name = ITA_crda_organization
+			picture = crda
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = battlefleet_designer_disabled }
+				OR = {
+					original_tag = FEL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 736
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					736 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { battlefleet_designer }
+		}
+
+		ISB_mediterranean_naval_manufacturer = {
+			name = ITA_cantiere_oto_organization
+			picture = ITA_oto
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = mediterranean_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ISB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 158
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					158 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { mediterranean_naval_manufacturer }
+		}
+
+		IIF_convoy_escort_naval_manufacturer = {
+			name = ITA_navalmeccanica_organization
+			picture = ITA_navalmeccanica
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = IIF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 117
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					117 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+
+		ISF_raiding_fleet_naval_manufacturer = {
+			name = ITA_cantiere_navale_di_ancona_organization
+			picture = ITA_cantera_navale_di_ancona
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ISF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 157
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					157 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { raiding_fleet_naval_manufacturer }
+		}
+
+		CBZ_submarine_manufacturer = {
+			name = ITA_cantieri_navali_tosi_organization
+			picture = ITA_cantieri_navali_tosi
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = submarine_manufacturer_disabled }
+				OR = {
+					original_tag = CBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 849
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					849 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { submarine_manufacturer }
+		}
+	}
+	
+	aircraft_manufacturer = {
+		designer = yes
+
+		ISY_light_aircraft_manufacturer = {
+			name = ITA_macchi_organization
+			picture = macchi
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ISY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 159
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					159 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		ISY_CAS_manufacturer = {
+			name = ITA_caproni_organization
+			picture = caproni
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = CAS_manufacturer_disabled }
+				OR = {
+					original_tag = ISY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 159
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					159 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { CAS_manufacturer }
+		}
+
+		IIF_medium_aircraft_manufacturer = {
+			name = ITA_imam_organization
+			picture = ITA_imam
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = IIF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 117
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					117 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+
+		ISB_fuel_efficient_aircraft_manufacturer = {
+			name = ITA_fiat_aviazione_organization
+			picture = ITA_fiat_aviazione
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = fuel_efficient_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ISB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 158
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					158 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { fuel_efficient_aircraft_manufacturer }
+		}
+
+		### Savoia-Marchetti is a multi-role aircraft designer, which is not used in ESI for now, so excluding it.
+
+		ISB_heavy_aircraft_manufacturer = {
+			name = ITA_piaggio_organization
+			picture = piaggio
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ISB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 158
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					158 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { heavy_aircraft_manufacturer }
+		}
+
+		FEL_naval_aircraft_manufacturer = {
+			name = ITA_crda_cant_organization
+			picture = ITA_crda_cant
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = FEL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 736
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					736 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { naval_aircraft_manufacturer }
+		}
+
+		ITA_fiat_aviazione = { #NORTH
+			picture	= ITA_fiat_aviazione
+
+			allowed = {
+				original_tag = ITA
+			}
+
+			visible = {
+				NOT = {
+					AND = {
+						has_completed_focus = ITA_new_industrialization_program
+						has_completed_focus = ITA_strengthen_northern_industry
+					}
+				}
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = ITA_has_fiat_tt
+					OR = {
+						has_idea = fiat
+						has_idea = ITA_fiat_improved
+					}
+				}
+				controls_State = 158 #PIEDMONT (Torino)
+				ITA_is_northern_designer = yes
+			}
+
+			cost = 75
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { fuel_efficient_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		ISY_infantry_equipment_manufacturer = {
+			name = ITA_beretta_organization
+			picture = beretta
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ISY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 159
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					159 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		ISY_support_equipment_manufacturer = {
+			name = ITA_brescia_arsenal_organization
+			picture = ITA_brescia_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ISY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 159
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					159 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
+		}
+
+		ISY_artillery_manufacturer = {
+			name = ITA_breda_organization
+			picture = breda
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = ISY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 159
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					159 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		ISY_motorized_equipment_manufacturer = {
+			name = ITA_lancia_organization
+			picture = lancia
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ISY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 159
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					159 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		ILO_industrial_concern = {
+			name = danieli
+			picture = danieli
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = ILO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 160
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					160 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		ILZ_industrial_concern = {
+			name = ITA_terni_industria_ed_elettricita
+			picture = ITA_terni_industria_ed_elettricita
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = ILZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 162
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					162 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		ILI_electronics_concern = {
+			name = ITA_ducati_energia
+			picture = ITA_ducati_energia
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = ILI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 161
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					161 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
+		# Accoring to Wikipedia, its HQ was in Rome, but refineries in Fiume and Venice. Putting it in Fiume.
+		BSZ_refinery_concern = {
+			name = ITA_agip
+			picture = ITA_agip
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = refinery_concern_disabled }
+				OR = {
+					original_tag = BSZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 852
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					852 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+
+		OOZ_construction_company = {
+			name = ITA_astaldi
+			picture = ITA_astaldi
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = construction_company_disabled }
+				OR = {
+					original_tag = OOZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 2
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					2 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+			}
+			traits = { construction_company }
+		}
+
+		ISB_construction_company = {
+			name = ITA_italcementi
+			picture = ITA_italcementi
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = construction_company_disabled }
+				OR = {
+					original_tag = ISB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 158
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					158 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+			}
+			traits = { construction_company }
+		}
+
+		OOZ_railway_company = {
+			name = ITA_ferrovie_dello_stato_italiane
+			picture = ITA_ferrovie_dello_stato_italiane
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = OOZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 2
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					2 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
+		}
+	}
+}

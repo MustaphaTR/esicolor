@@ -370,6 +370,25 @@ ideas = {
 			traits = { coastal_defence_naval_manufacturer }
 		}
 
+		generic_submarine_manufacturer = {
+			picture = ITA_cantieri_navali_tosi
+
+			allowed = {
+				has_custom_submarine_manufacturer = no
+			}
+			visible = {
+				NOT = {
+					has_global_flag = custom_designers_only
+					has_country_flag = submarine_manufacturer_disabled
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { submarine_manufacturer }
+		}
+
 		generic_raiding_fleet_naval_manufacturer = {
 			picture = generic_naval_manufacturer_1
 

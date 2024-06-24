@@ -7551,7 +7551,19 @@ remove_ship_designer = {
 			modifier = {
 				factor = 0
 
-				has_country_flag = coastal_defence_naval_manufacturer_disabled
+				OR = {
+					has_dlc = "Arms Against Tyranny"
+					has_country_flag = coastal_defence_naval_manufacturer_disabled
+				}
+			}
+		}
+		15 = {
+			set_country_flag = submarine_manufacturer_disabled
+
+			modifier = {
+				factor = 0
+
+				has_country_flag = submarine_manufacturer_disabled
 			}
 		}
 		15 = {
@@ -7816,6 +7828,7 @@ randomise_designers = {
 		limit = { NOT = { has_dlc = "Arms Against Tyranny" } }
 
 		remove_ship_designer = yes
+		remove_ship_designer = yes
 	}
 
 	remove_aircraft_designer = yes
@@ -7902,6 +7915,7 @@ setup_default_companies = {
 	set_country_flag = black_sea_fleet_naval_manufacturer_disabled
 	set_country_flag = battlefleet_designer_disabled
 	set_country_flag = coastal_defence_naval_manufacturer_disabled
+	set_country_flag = submarine_manufacturer_disabled
 	set_country_flag = raiding_fleet_naval_manufacturer_disabled
 
 	set_country_flag = CAS_manufacturer_disabled
@@ -8030,6 +8044,7 @@ clear_company_disabled_flags = {
 	clr_country_flag = black_sea_fleet_naval_manufacturer_disabled
 	clr_country_flag = battlefleet_designer_disabled
 	clr_country_flag = coastal_defence_naval_manufacturer_disabled
+	clr_country_flag = submarine_manufacturer_disabled
 	clr_country_flag = raiding_fleet_naval_manufacturer_disabled
 	clr_country_flag = convoy_escort_naval_manufacturer_disabled
 
