@@ -6,7 +6,9 @@ has_custom_infantry_tank_manufacturer = {
 }
 
 has_custom_fast_tank_manufacturer = {
-	always = no
+	OR = {
+		original_tag = IEB
+	}
 }
 
 has_custom_medium_tank_manufacturer = {
@@ -29,6 +31,7 @@ has_custom_pacific_fleet_naval_manufacturer = {
 has_custom_atlantic_fleet_naval_manufacturer = {
 	OR = {
 		original_tag = IIO
+		original_tag = IAO
 	}
 }
 
@@ -49,7 +52,9 @@ has_custom_coastal_defence_naval_manufacturer = {
 }
 
 has_custom_raiding_fleet_naval_manufacturer = {
-	always = no
+	OR = {
+		original_tag = IEB
+	}
 }
 
 has_custom_convoy_escort_naval_manufacturer = {
@@ -60,7 +65,9 @@ has_custom_convoy_escort_naval_manufacturer = {
 
 # Aircraft
 has_custom_light_aircraft_manufacturer = {
-	always = no
+	OR = {
+		original_tag = IAO
+	}
 }
 
 has_custom_CAS_manufacturer = {
@@ -92,6 +99,7 @@ has_custom_naval_aircraft_manufacturer = {
 # Materiel
 has_custom_infantry_equipment_manufacturer = {
 	OR = {
+		original_tag = IEY
 		original_tag = YZI
 	}
 }
@@ -104,21 +112,28 @@ has_custom_support_equipment_manufacturer = {
 
 has_custom_artillery_manufacturer = {
 	OR = {
+		original_tag = IAI
 		original_tag = YZO
 	}
 }
 
 has_custom_motorized_equipment_manufacturer = {
-	always = no
+	OR = {
+		original_tag = IAO
+	}
 }
 
 has_custom_armored_car_manufacturer = {
-	always = no
+	OR = {
+		original_tag = IAI
+	}
 }
 
 # Industrial
 has_custom_industrial_concern = {
-	always = no
+	OR = {
+		original_tag = IAI
+	}
 }
 
 has_custom_electronics_concern = {
@@ -134,7 +149,9 @@ has_custom_refinery_concern = {
 }
 
 has_custom_telephone_company = {
-	always = no
+	OR = {
+		original_tag = IAI
+	}
 }
 
 has_custom_forestry_company = {

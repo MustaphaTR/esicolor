@@ -1,0 +1,288 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+IEB_mobile_tank_organization = {
+	name = SWE_landsverk_organization
+	include = esicolor_generic_mobile_tank_organization
+	icon = GFX_idea_SWE_landsverk
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			OR = {
+				original_tag = IEB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 138
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				138 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+IAO_battle_line_ship_organization = {
+	name = SWE_gotaverken_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_SWE_gotaverken
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = IAO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 140
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				140 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IEB_raider_ship_organization = {
+	name = SWE_kockums_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_SWE_kockums
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = IEB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 138
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				138 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+IAO_light_aircraft_organization = {
+	name = SWE_saab_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_SWE_saab
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = IAO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 140
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				140 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+IEY_infantry_equipment_organization = {
+	name = SWE_husqvarna_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_SWE_husqvarna
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = IEY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 139
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				139 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IAI_artillery_organization = {
+	name = SWE_bofors_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_SWE_bofors
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = IAI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 141
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				141 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IAO_motorized_mechanized_organization = {
+	name = SWE_volvo_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_SWE_volvo
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = IAO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 140
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				140 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IAI_armored_car_organization = {
+	name = SWE_scania_vabis_organization
+	include = esicolor_generic_armored_car_organization
+	icon = GFX_idea_scania
+
+	allowed = { 
+		has_dlc = "La Resistance"
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = armored_car_manufacturer_disabled }
+			OR = {
+				original_tag = IAI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 141
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				141 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

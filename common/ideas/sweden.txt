@@ -1,0 +1,331 @@
+ideas = {
+	tank_manufacturer = { 
+		designer = yes
+
+		IAI_armored_car_manufacturer = {
+			name = SWE_scania_vabis_organization
+			picture = scania
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = armored_car_manufacturer_disabled }
+				OR = {
+					original_tag = IAI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 141
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					141 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { armored_car_manufacturer }
+		}
+
+		IEB_fast_tank_manufacturer = {
+			name = SWE_landsverk_organization
+			picture = SWE_landsverk
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+				OR = {
+					original_tag = IEB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 138
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					138 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { fast_tank_manufacturer }
+		}
+	}
+	
+	naval_manufacturer = {
+		designer = yes
+
+		IAO_atlantic_fleet_naval_manufacturer = {
+			name = SWE_gotaverken_organization
+			picture = SWE_gotaverken
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = IAO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 140
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					140 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { atlantic_fleet_naval_manufacturer }
+		}
+
+		IEB_raiding_fleet_naval_manufacturer = {
+			name = SWE_kockums_organization
+			picture = SWE_kockums
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = IEB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 138
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					138 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { raiding_fleet_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		IAO_light_aircraft_manufacturer = {
+			name = SWE_saab_organization
+			picture = SWE_saab
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = IAO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 140
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					140 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		IEY_infantry_equipment_manufacturer = {
+			name = SWE_husqvarna_organization
+			picture = SWE_husqvarna
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = IEY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 139
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					139 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		IAI_artillery_manufacturer = {
+			name = SWE_bofors_organization
+			picture = SWE_bofors
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = IAI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 141
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					141 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		IAO_motorized_equipment_manufacturer = {
+			name = SWE_volvo_organization
+			picture = SWE_volvo
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = IAO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 140
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					140 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		IAI_industrial_concern = {
+			name = SWE_vattenfall
+			picture = SWE_vattenfall
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = IAI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 141
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					141 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		IAI_telephone_company = {
+			name = SWE_ericsson
+			picture = SWE_ericsson
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = telephone_company_disabled }
+				OR = {
+					original_tag = IAI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 141
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					141 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.06
+				radar_tech = 0.10
+			}
+			traits = { telephone_company }
+		}
+	}
+}
