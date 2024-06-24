@@ -17,6 +17,18 @@ on_actions = {
 		}
 	}
 
+	on_ruling_party_change = {
+		effect = {
+			log = "[GetDateText] MustaphaTR's Every State Independent main on_ruling_party_change begin"
+
+			if = {
+				limit = { has_global_flag = leader_traits_disabled }
+
+				clear_leader_traits = yes
+			}
+		}
+	}
+
 	on_daily = {
 		effect = {
 			log = "[GetDateText] MustaphaTR's Every State Independent main on_daily begin for [Root.GetName]"
