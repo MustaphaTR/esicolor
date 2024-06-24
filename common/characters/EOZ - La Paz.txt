@@ -1,0 +1,51 @@
+characters={
+	# This is the default leader of Bolivia, as such has a portrait without ToA, but gets a different one with the DLC.
+	EOZ_jose_luis_tejada_sorzano = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=BOL_jose_luis_tejada_sorzano
+			portraits={
+				civilian={
+					large="GFX_portrait_BOL_jose_luis_tejada_sorzano"
+				}
+			}
+			country_leader={
+				traits={ JUNO_unpopular_economist }
+				ideology=liberalism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ JUNO_unpopular_economist }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=BOL_jose_luis_tejada_sorzano
+			portraits={
+				civilian={
+					large="GFX_portrait_Jose_Luis_Tejada_Sorzano"
+				}
+			}
+			country_leader={
+				traits={ JUNO_unpopular_economist }
+				ideology=liberalism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ JUNO_unpopular_economist }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

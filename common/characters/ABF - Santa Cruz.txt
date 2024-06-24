@@ -1,0 +1,38 @@
+characters={
+	ABF_oscar_unzaga_de_la_vega = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=BOL_oscar_unzaga_de_la_vega
+			portraits={
+				civilian={
+					large="GFX_portrait_BOL_oscar_unzaga_de_la_vega"
+				}
+			}
+			country_leader={
+				traits={ JUNO_bolivian_falange }
+				ideology=falangism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=BOL_oscar_unzaga_de_la_vega
+			portraits={
+				civilian={
+					large="GFX_portrait_Oscar_Unzaga_de_la_Vega"
+				}
+			}
+			country_leader={
+				traits={ JUNO_bolivian_falange }
+				ideology=falangism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

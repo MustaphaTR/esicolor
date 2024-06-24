@@ -1,0 +1,38 @@
+characters={
+	EOI_eusebio_ayala = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=PAR_Eusebio_Ayala
+			portraits={
+				civilian={
+					large="GFX_portrait_PAR_eusebio_ayala"
+				}
+			}
+			country_leader={
+				traits={ JUNO_president_of_victory JUNO_unpopular }
+				ideology=liberalism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=PAR_Eusebio_Ayala
+			portraits={
+				civilian={
+					large="GFX_Portrait_South_America_Generic_2"
+				}
+			}
+			country_leader={
+				traits={ JUNO_president_of_victory JUNO_unpopular }
+				ideology=liberalism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
