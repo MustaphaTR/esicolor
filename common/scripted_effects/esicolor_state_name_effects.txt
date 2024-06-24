@@ -1,0 +1,84 @@
+adjust_state_name_195 = {
+	if = {
+		limit = { 195 = { owner = { has_government = communism } } }
+
+		set_province_name = {
+			id = 3151
+			name = VICTORY_POINTS_3151
+		}
+		195 = { set_state_name = STATE_195 }
+	}
+	else = {
+		set_province_name = {
+			id = 3151
+			name = SOV_StPetersburg
+		}
+		195 = { set_state_name = SOV_StPetersburg }
+	}
+}
+
+adjust_state_name_217 = {
+	if = {
+		limit = { 217 = { owner = { has_government = communism } } }
+
+		set_province_name = {
+			id = 3529
+			name = VICTORY_POINTS_3529
+		}
+		217 = { set_state_name = STATE_217 }
+	}
+	else_if = {
+		limit = { 217 = { owner = { has_government = democratic } } }
+
+		set_province_name = {
+			id = 3529
+			name = SOV_Volgograd
+		}
+		217 = { set_state_name = SOV_Volgograd }
+	}
+	else = {
+		set_province_name = {
+			id = 3529
+			name = SOV_Tsaritsyn
+		}
+		217 = { set_state_name = SOV_Tsaritsyn }
+	}
+}
+
+adjust_state_name_227 = {
+	if = {
+		limit = { 227 = { owner = { has_government = communism } } }
+
+		set_province_name = {
+			id = 6474
+			name = VICTORY_POINTS_6474
+		}
+		227 = { set_state_name = STATE_227 }
+	}
+	else = {
+		set_province_name = {
+			id = 6474
+			name = SOV_Donetsk
+		}
+		227 = { set_state_name = SOV_Donetsk }
+	}
+}
+
+adjust_state_name_742 = {
+	if = {
+		limit = { 742 = { owner = { has_government = communism } } }
+
+		set_province_name = {
+			id = 1384
+			name = VICTORY_POINTS_1384
+		}
+		742 = { set_state_name = STATE_742 }
+	}
+	else = {
+		set_province_name = {
+			id = 1384
+			name = SOV_Dushanbe
+		}
+		742 = { set_state_name = SOV_Dushanbe }
+	}
+}

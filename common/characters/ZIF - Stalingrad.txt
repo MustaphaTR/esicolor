@@ -1,0 +1,44 @@
+characters={
+	# Tsar Stalin portrait is locked behind NSB, unfortunately.
+	ZIF_iosif_stalin = {
+		instance = {
+			allowed = {
+				has_dlc = "No Step Back"
+			}
+			name=SOV_iosif_stalin
+			portraits={
+				civilian={
+					large="GFX_portrait_SOV_iosif_stalin"
+				}
+			}
+			country_leader={
+				traits={ stalin_heart_of_steel }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Step Back" }
+			}
+			name=SOV_iosif_stalin
+			portraits={
+				civilian={
+					large="GFX_portrait_SOV_iosif_stalin"
+				}
+			}
+			country_leader={
+				traits={ stalin_heart_of_steel }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

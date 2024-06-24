@@ -17,14 +17,90 @@ on_actions = {
 		}
 	}
 
+	on_state_control_changed = {
+		effect = {
+			log = "[GetDateText] MustaphaTR's Every State Independent main on_state_control_changed begin"
+
+			if = {
+				limit = { state = 195 }
+				adjust_state_name_195 = yes
+			}
+			else_if = {
+				limit = { state = 217 }
+				adjust_state_name_217 = yes
+			}
+			else_if = {
+				limit = { state = 227 }
+				adjust_state_name_227 = yes
+			}
+			else_if = {
+				limit = { state = 742 }
+				adjust_state_name_742 = yes
+			}
+		}
+	}
+
 	on_ruling_party_change = {
 		effect = {
 			log = "[GetDateText] MustaphaTR's Every State Independent main on_ruling_party_change begin"
 
 			if = {
+				limit = { original_tag = IYS }
+				adjust_state_name_195 = yes
+			}
+			else_if = {
+				limit = { original_tag = ZIF }
+				adjust_state_name_217 = yes
+			}
+			else_if = {
+				limit = { original_tag = ZZF }
+				adjust_state_name_227 = yes
+			}
+			else_if = {
+				limit = { original_tag = FAZ }
+				adjust_state_name_742 = yes
+			}
+
+			if = {
 				limit = { has_global_flag = leader_traits_disabled }
 
 				clear_leader_traits = yes
+			}
+
+			if = {
+				limit = { has_character = ZIF_iosif_stalin }
+
+				if = {
+					limit = { has_government = neutrality }
+
+					ZIF_iosif_stalin = {
+						set_character_name = ZIF_tsar_joseph_i
+
+						set_portraits = {
+							civilian = {
+								large = "GFX_portrait_SOV_tsar_stalin"
+							}
+							army = {
+								large = "GFX_portrait_SOV_tsar_stalin"
+							}
+						}
+					}
+
+					else = {
+						ZIF_iosif_stalin = {
+							set_character_name = SOV_iosif_stalin
+
+							set_portraits = {
+								civilian = {
+									large = "GFX_portrait_SOV_iosif_stalin"
+								}
+								army = {
+									large = "GFX_portrait_SOV_iosif_stalin"
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
