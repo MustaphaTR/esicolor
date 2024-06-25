@@ -1,5 +1,6 @@
 is_neighboring_control_special_case_state = {
 	OR = {
+		# Lanark-Northern Ireland
 		AND = {
 			THIS = { state = 119 }
 			133 = { is_controlled_by = ROOT }
@@ -8,11 +9,1146 @@ is_neighboring_control_special_case_state = {
 			THIS = { state = 133 }
 			119 = { is_controlled_by = ROOT }
 		}
+
+		# Corsica-Var/Toscana
+		AND = {
+			THIS = { state = 1 }
+			OR = {
+				162 = { is_controlled_by = ROOT }
+				851 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 162
+					state = 851
+				}
+			}
+			1 = { is_controlled_by = ROOT }
+		}
+
+		# Sicilia-Sardegna/Malta
+		AND = {
+			THIS = { state = 115 }
+			OR = {
+				114 = { is_controlled_by = ROOT }
+				116 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 114
+					state = 116
+				}
+			}
+			115 = { is_controlled_by = ROOT }
+		}
+
+		# Islas Baleares-Cataluña/Sardegna
+		AND = {
+			THIS = { state = 177 }
+			OR = {
+				115 = { is_controlled_by = ROOT }
+				165 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 115
+					state = 165
+				}
+			}
+			177 = { is_controlled_by = ROOT }
+		}
+
+		# Crete-Peloponnese/Aegean Islands/Dodecanese
+		AND = {
+			THIS = { state = 182 }
+			OR = {
+				164 = { is_controlled_by = ROOT }
+				186 = { is_controlled_by = ROOT }
+				187 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 164
+					state = 186
+					state = 187
+				}
+			}
+			182 = { is_controlled_by = ROOT }
+		}
+
+		# Cyprus-Dodecanese/Mersin
+		AND = {
+			THIS = { state = 183 }
+			OR = {
+				164 = { is_controlled_by = ROOT }
+				345 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 164
+					state = 345
+				}
+			}
+			183 = { is_controlled_by = ROOT }
+		}
+
+		# Gibraltar-Spanish Africa
+		AND = {
+			THIS = { state = 118 }
+			290 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 290 }
+			118 = { is_controlled_by = ROOT }
+		}
+
+		# Cape Verde-Senegal/Rio Grande do Norte
+		AND = {
+			THIS = { state = 702 }
+			OR = {
+				272 = { is_controlled_by = ROOT }
+				498 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 272
+					state = 498
+				}
+			}
+			702 = { is_controlled_by = ROOT }
+		}
+
+		# Islas Canarias-Cape Verde/Rio de Oro/Madeira
+		AND = {
+			THIS = { state = 178 }
+			OR = {
+				697 = { is_controlled_by = ROOT }
+				699 = { is_controlled_by = ROOT }
+				702 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 697
+					state = 699
+					state = 702
+				}
+			}
+			178 = { is_controlled_by = ROOT }
+		}
+
+		# Madeira-Beja
+		AND = {
+			THIS = { state = 179 }
+			697 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 697 }
+			179 = { is_controlled_by = ROOT }
+		}
+
+		# Azores-Madeira/Bermuda/French Carribean
+		AND = {
+			THIS = { state = 698 }
+			OR = {
+				694 = { is_controlled_by = ROOT }
+				696 = { is_controlled_by = ROOT }
+				697 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 694
+					state = 696
+					state = 697
+				}
+			}
+			698 = { is_controlled_by = ROOT }
+		}
+
+		# Trinidad-Windward Islands
+		AND = {
+			THIS = { state = 691 }
+			692 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 692 }
+			691 = { is_controlled_by = ROOT }
+		}
+
+		# Dominican Republic-Puerto Rico
+		AND = {
+			THIS = { state = 319 }
+			686 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 686 }
+			319 = { is_controlled_by = ROOT }
+		}
+
+		# Northern Bahamas-Southern Bahamas/Florida/Bermuda
+		AND = {
+			THIS = { state = 690 }
+			OR = {
+				366 = { is_controlled_by = ROOT }
+				693 = { is_controlled_by = ROOT }
+				696 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 366
+					state = 693
+					state = 696
+				}
+			}
+			690 = { is_controlled_by = ROOT }
+		}
+
+		# Cuba-Yucatan/Southern Bahamas/Haiti
+		AND = {
+			THIS = { state = 315 }
+			OR = {
+				318 = { is_controlled_by = ROOT }
+				474 = { is_controlled_by = ROOT }
+				693 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 318
+					state = 474
+					state = 693
+				}
+			}
+			315 = { is_controlled_by = ROOT }
+		}
+
+		# Haiti-Jamaica
+		AND = {
+			THIS = { state = 318 }
+			689 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 689 }
+			318 = { is_controlled_by = ROOT }
+		}
+
+		# Bermuda-North Carolina
+		AND = {
+			THIS = { state = 363 }
+			696 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 696 }
+			363 = { is_controlled_by = ROOT }
+		}
+
+		# Ecuador-Galapagos Islands
+		AND = {
+			THIS = { state = 305 }
+			649 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 649 }
+			305 = { is_controlled_by = ROOT }
+		}
+
+		# Easter Island-Santiago/Pitcairn Island
+		AND = {
+			THIS = { state = 948 }
+			OR = {
+				270 = { is_controlled_by = ROOT }
+				279 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 270
+					state = 279
+				}
+			}
+			948 = { is_controlled_by = ROOT }
+		}
+
+		# Haida Gwaii-Upper British Columbia
+		AND = {
+			THIS = { state = 471 }
+			739 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 739 }
+			471 = { is_controlled_by = ROOT }
+		}
+
+		# Attu Island-Kamchatka/Midway Island/Alaska
+		AND = {
+			THIS = { state = 650 }
+			OR = {
+				463 = { is_controlled_by = ROOT }
+				631 = { is_controlled_by = ROOT }
+				637 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 463
+					state = 631
+					state = 637
+				}
+			}
+			650 = { is_controlled_by = ROOT }
+		}
+
+		# Chukchi Peninsula-Chukotka/Alaska
+		AND = {
+			THIS = { state = 875 }
+			OR = {
+				463 = { is_controlled_by = ROOT }
+				822 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 463
+					state = 822
+				}
+			}
+			875 = { is_controlled_by = ROOT }
+		}
+
+		# Newfoundland-Nova Scotia/Côte-Nord/St. Pierre and Miquelon
+		AND = {
+			THIS = { state = 331 }
+			OR = {
+				464 = { is_controlled_by = ROOT }
+				730 = { is_controlled_by = ROOT }
+				860 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 464
+					state = 730
+					state = 860
+				}
+			}
+			331 = { is_controlled_by = ROOT }
+		}
+
+		# Greenland-Labrador/Iceland
+		AND = {
+			THIS = { state = 101 }
+			OR = {
+				100 = { is_controlled_by = ROOT }
+				332 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 100
+					state = 332
+				}
+			}
+			101 = { is_controlled_by = ROOT }
+		}
+
+		# Jan Mayen-Nordland/Iceland
+		AND = {
+			THIS = { state = 914 }
+			OR = {
+				100 = { is_controlled_by = ROOT }
+				144 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 100
+					state = 144
+				}
+			}
+			914 = { is_controlled_by = ROOT }
+		}
+
+		# Faroe Islands-Shetland Islands/Iceland
+		AND = {
+			THIS = { state = 337 }
+			OR = {
+				100 = { is_controlled_by = ROOT }
+				933 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 100
+					state = 933
+				}
+			}
+			337 = { is_controlled_by = ROOT }
+		}
+
+		# Shetland Islands-Scottish Highlands/Vestlandet
+		AND = {
+			THIS = { state = 933 }
+			OR = {
+				120 = { is_controlled_by = ROOT }
+				142 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 120
+					state = 142
+				}
+			}
+			933 = { is_controlled_by = ROOT }
+		}
+
+		# Isle of Man-Northern Ireland/Lanark/Cumbria
+		AND = {
+			THIS = { state = 932 }
+			OR = {
+				119 = { is_controlled_by = ROOT }
+				133 = { is_controlled_by = ROOT }
+				931 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 119
+					state = 133
+					state = 931
+				}
+			}
+			932 = { is_controlled_by = ROOT }
+		}
+
+		# Sussex-Nord-Pas-de-Calais
+		AND = {
+			THIS = { state = 29 }
+			127 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 127 }
+			29 = { is_controlled_by = ROOT }
+		}
+
+		# Aland-Södermanland/Turku/Gotland
+		AND = {
+			THIS = { state = 145 }
+			OR = {
+				124 = { is_controlled_by = ROOT }
+				141 = { is_controlled_by = ROOT }
+				926 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 124
+					state = 141
+					state = 926
+				}
+			}
+			145 = { is_controlled_by = ROOT }
+		}
+
+		# Gotland-Smaland
+		AND = {
+			THIS = { state = 124 }
+			139 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 139 }
+			124 = { is_controlled_by = ROOT }
+		}
+
+		# Bornholm-Skane
+		AND = {
+			THIS = { state = 138 }
+			910 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 910 }
+			138 = { is_controlled_by = ROOT }
+		}
+
+		# Hokkaido-South Sakhalin
+		AND = {
+			THIS = { state = 536 }
+			537 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 537 }
+			536 = { is_controlled_by = ROOT }
+		}
+
+		# Kuril Islands-Kamchatka
+		AND = {
+			THIS = { state = 555 }
+			637 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 637 }
+			555 = { is_controlled_by = ROOT }
+		}
+
+		# Kyushu-South Korea/Okinawa
+		AND = {
+			THIS = { state = 528 }
+			OR = {
+				525 = { is_controlled_by = ROOT }
+				526 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 525
+					state = 526
+				}
+			}
+			528 = { is_controlled_by = ROOT }
+		}
+
+		# Taiwan-Fujian/Okinawa/Luzon
+		AND = {
+			THIS = { state = 524 }
+			OR = {
+				526 = { is_controlled_by = ROOT }
+				595 = { is_controlled_by = ROOT }
+				623 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 526
+					state = 595
+					state = 623
+				}
+			}
+			524 = { is_controlled_by = ROOT }
+		}
+
+		# Cebu-Cental Islands/Samar/Mindanao
+		AND = {
+			THIS = { state = 628 }
+			OR = {
+				624 = { is_controlled_by = ROOT }
+				625 = { is_controlled_by = ROOT }
+				627 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 624
+					state = 625
+					state = 627
+				}
+			}
+			628 = { is_controlled_by = ROOT }
+		}
+
+		# Palawan-Cental Islands/North Borneo
+		AND = {
+			THIS = { state = 626 }
+			OR = {
+				333 = { is_controlled_by = ROOT }
+				624 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 333
+					state = 624
+				}
+			}
+			626 = { is_controlled_by = ROOT }
+		}
+
+		# Hawaii-California
+		AND = {
+			THIS = { state = 378 }
+			629 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 629 }
+			378 = { is_controlled_by = ROOT }
+		}
+
+		# Johnston Atoll-Hawaii/Midway Island/Line Islands
+		AND = {
+			THIS = { state = 630 }
+			OR = {
+				629 = { is_controlled_by = ROOT }
+				631 = { is_controlled_by = ROOT }
+				727 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 629
+					state = 631
+					state = 727
+				}
+			}
+			630 = { is_controlled_by = ROOT }
+		}
+
+		# Wake Island-Marcus Island/Midway Island/Marshall Islands
+		AND = {
+			THIS = { state = 632 }
+			OR = {
+				631 = { is_controlled_by = ROOT }
+				633 = { is_controlled_by = ROOT }
+				648 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 631
+					state = 633
+					state = 648
+				}
+			}
+			632 = { is_controlled_by = ROOT }
+		}
+
+		# Iwo Jima-Marcus Island/Saipan/Okinawa
+		AND = {
+			THIS = { state = 645 }
+			OR = {
+				526 = { is_controlled_by = ROOT }
+				646 = { is_controlled_by = ROOT }
+				648 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 526
+					state = 646
+					state = 648
+				}
+			}
+			645 = { is_controlled_by = ROOT }
+		}
+
+		# Guam-Caroline Islands/Saipan
+		AND = {
+			THIS = { state = 638 }
+			OR = {
+				646 = { is_controlled_by = ROOT }
+				684 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 646
+					state = 684
+				}
+			}
+			638 = { is_controlled_by = ROOT }
+		}
+
+		# Palau-Caroline Islands/Mindanao
+		AND = {
+			THIS = { state = 647 }
+			OR = {
+				627 = { is_controlled_by = ROOT }
+				684 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 627
+					state = 684
+				}
+			}
+			647 = { is_controlled_by = ROOT }
+		}
+
+		# Caroline Islands-Marshall Islands
+		AND = {
+			THIS = { state = 633 }
+			684 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 684 }
+			633 = { is_controlled_by = ROOT }
+		}
+
+		# Gilbert Islands-Marshall Islands/Nauru/Elice Islands
+		AND = {
+			THIS = { state = 639 }
+			OR = {
+				633 = { is_controlled_by = ROOT }
+				643 = { is_controlled_by = ROOT }
+				725 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 633
+					state = 643
+					state = 725
+				}
+			}
+			639 = { is_controlled_by = ROOT }
+		}
+
+		# Nauru-Caroline Islands/Nendo/Elice Islands
+		AND = {
+			THIS = { state = 725 }
+			OR = {
+				643 = { is_controlled_by = ROOT }
+				684 = { is_controlled_by = ROOT }
+				734 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 643
+					state = 684
+					state = 734
+				}
+			}
+			725 = { is_controlled_by = ROOT }
+		}
+
+		# Phoenix Island-Line Islands/Samoa/Elice Islands
+		AND = {
+			THIS = { state = 642 }
+			OR = {
+				643 = { is_controlled_by = ROOT }
+				726 = { is_controlled_by = ROOT }
+				727 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 643
+					state = 726
+					state = 727
+				}
+			}
+			642 = { is_controlled_by = ROOT }
+		}
+
+		# Tahiti-Pitcairn Island/Samoa
+		AND = {
+			THIS = { state = 641 }
+			OR = {
+				270 = { is_controlled_by = ROOT }
+				726 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 270
+					state = 726
+				}
+			}
+			641 = { is_controlled_by = ROOT }
+		}
+
+		# Fiji-North Island/Samoa/Elice Islands/New Caledonia
+		AND = {
+			THIS = { state = 636 }
+			OR = {
+				284 = { is_controlled_by = ROOT }
+				635 = { is_controlled_by = ROOT }
+				643 = { is_controlled_by = ROOT }
+				726 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 284
+					state = 635
+					state = 643
+					state = 726
+				}
+			}
+			636 = { is_controlled_by = ROOT }
+		}
+
+		# Solomon Islands-Bismarck/Nendo
+		AND = {
+			THIS = { state = 634 }
+			OR = {
+				734 = { is_controlled_by = ROOT }
+				737 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 734
+					state = 737
+				}
+			}
+			634 = { is_controlled_by = ROOT }
+		}
+
+		# New Caledonia-North Island/Nendo
+		AND = {
+			THIS = { state = 635 }
+			OR = {
+				284 = { is_controlled_by = ROOT }
+				734 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 284
+					state = 734
+				}
+			}
+			635 = { is_controlled_by = ROOT }
+		}
+
+		# Tasmania-Victoria/South Island
+		AND = {
+			THIS = { state = 518 }
+			OR = {
+				517 = { is_controlled_by = ROOT }
+				723 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 517
+					state = 723
+				}
+			}
+			518 = { is_controlled_by = ROOT }
+		}
+
+		# Papua-North Queensland
+		AND = {
+			THIS = { state = 523 }
+			872 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 872 }
+			523 = { is_controlled_by = ROOT }
+		}
+
+		# Aru Islands-Portugese Timor/West Papua
+		AND = {
+			THIS = { state = 738 }
+			OR = {
+				669 = { is_controlled_by = ROOT }
+				721 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 669
+					state = 721
+				}
+			}
+			738 = { is_controlled_by = ROOT }
+		}
+
+		# The Moluccas-Sulawesi/Mindanao/West Papua
+		AND = {
+			THIS = { state = 668 }
+			OR = {
+				627 = { is_controlled_by = ROOT }
+				673 = { is_controlled_by = ROOT }
+				669 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 627
+					state = 673
+					state = 669
+				}
+			}
+			668 = { is_controlled_by = ROOT }
+		}
+
+		# Kalimantan-Sulawesi/Sumatra
+		AND = {
+			THIS = { state = 334 }
+			OR = {
+				672 = { is_controlled_by = ROOT }
+				673 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 672
+					state = 673
+				}
+			}
+			334 = { is_controlled_by = ROOT }
+		}
+
+		# Sumatra-Singapore
+		AND = {
+			THIS = { state = 336 }
+			672 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 672 }
+			336 = { is_controlled_by = ROOT }
+		}
+
+		# Andaman-Burma/Sumatra
+		AND = {
+			THIS = { state = 733 }
+			OR = {
+				228 = { is_controlled_by = ROOT }
+				672 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 228
+					state = 672
+				}
+			}
+			733 = { is_controlled_by = ROOT }
+		}
+
+		# Christmas Island-Java/Cocos Islands/Western Australia
+		AND = {
+			THIS = { state = 711 }
+			OR = {
+				335 = { is_controlled_by = ROOT }
+				522 = { is_controlled_by = ROOT }
+				712 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 335
+					state = 522
+					state = 712
+				}
+			}
+			711 = { is_controlled_by = ROOT }
+		}
+
+		# Diego Garcia-Maldives/Cocos Islands/Seychelles/Mauritius
+		AND = {
+			THIS = { state = 710 }
+			OR = {
+				281 = { is_controlled_by = ROOT }
+				707 = { is_controlled_by = ROOT }
+				709 = { is_controlled_by = ROOT }
+				712 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 281
+					state = 707
+					state = 709
+					state = 712
+				}
+			}
+			710 = { is_controlled_by = ROOT }
+		}
+
+		# Reunion-Madagascar/Kerguelen/Mauritius
+		AND = {
+			THIS = { state = 706 }
+			OR = {
+				543 = { is_controlled_by = ROOT }
+				707 = { is_controlled_by = ROOT }
+				713 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 543
+					state = 707
+					state = 713
+				}
+			}
+			706 = { is_controlled_by = ROOT }
+		}
+
+		# Comoro Islands-Madagascar/Zambezia-Moçambique
+		AND = {
+			THIS = { state = 708 }
+			OR = {
+				543 = { is_controlled_by = ROOT }
+				897 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 543
+					state = 897
+				}
+			}
+			708 = { is_controlled_by = ROOT }
+		}
+
+		# Madurai-Ceylon/Maldives
+		AND = {
+			THIS = { state = 423 }
+			OR = {
+				281 = { is_controlled_by = ROOT }
+				422 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 281
+					state = 422
+				}
+			}
+			423 = { is_controlled_by = ROOT }
+		}
+
+		# Socotra-Aden/Somaliland/Maldives/Seychelles
+		AND = {
+			THIS = { state = 906 }
+			OR = {
+				281 = { is_controlled_by = ROOT }
+				559 = { is_controlled_by = ROOT }
+				659 = { is_controlled_by = ROOT }
+				709 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 281
+					state = 559
+					state = 659
+					state = 709
+				}
+			}
+			906 = { is_controlled_by = ROOT }
+		}
+
+		# Ascension-Cape Verde/Sao Tome/Saint Helena
+		AND = {
+			THIS = { state = 703 }
+			OR = {
+				702 = { is_controlled_by = ROOT }
+				704 = { is_controlled_by = ROOT }
+				705 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 702
+					state = 704
+					state = 705
+				}
+			}
+			703 = { is_controlled_by = ROOT }
+		}
+
+		# Sao Tome-Equatoral Guinea
+		AND = {
+			THIS = { state = 297 }
+			705 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 705 }
+			297 = { is_controlled_by = ROOT }
+		}
+
+		# South Georgia-Falkland Islands/Saint Helena
+		AND = {
+			THIS = { state = 720 }
+			OR = {
+				229 = { is_controlled_by = ROOT }
+				704 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 229
+					state = 704
+				}
+			}
+			720 = { is_controlled_by = ROOT }
+		}
+
+		# Falkland Islands-Chubut/Tierra del Fuego
+		AND = {
+			THIS = { state = 229 }
+			OR = {
+				953 = { is_controlled_by = ROOT }
+				955 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 953
+					state = 955
+				}
+			}
+			229 = { is_controlled_by = ROOT }
+		}
 	}
 }
 
 is_neighboring_ownership_special_case_state = {
 	OR = {
+		# Lanark-Northern Ireland
 		AND = {
 			THIS = { state = 119 }
 			133 = { is_owned_by = ROOT }
@@ -21,11 +1157,1146 @@ is_neighboring_ownership_special_case_state = {
 			THIS = { state = 133 }
 			119 = { is_owned_by = ROOT }
 		}
+
+		# Corsica-Var/Toscana
+		AND = {
+			THIS = { state = 1 }
+			OR = {
+				162 = { is_owned_by = ROOT }
+				851 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 162
+					state = 851
+				}
+			}
+			1 = { is_owned_by = ROOT }
+		}
+
+		# Sicilia-Sardegna/Malta
+		AND = {
+			THIS = { state = 115 }
+			OR = {
+				114 = { is_owned_by = ROOT }
+				116 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 114
+					state = 116
+				}
+			}
+			115 = { is_owned_by = ROOT }
+		}
+
+		# Islas Baleares-Cataluña/Sardegna
+		AND = {
+			THIS = { state = 177 }
+			OR = {
+				115 = { is_owned_by = ROOT }
+				165 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 115
+					state = 165
+				}
+			}
+			177 = { is_owned_by = ROOT }
+		}
+
+		# Crete-Peloponnese/Aegean Islands/Dodecanese
+		AND = {
+			THIS = { state = 182 }
+			OR = {
+				164 = { is_owned_by = ROOT }
+				186 = { is_owned_by = ROOT }
+				187 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 164
+					state = 186
+					state = 187
+				}
+			}
+			182 = { is_owned_by = ROOT }
+		}
+
+		# Cyprus-Dodecanese/Mersin
+		AND = {
+			THIS = { state = 183 }
+			OR = {
+				164 = { is_owned_by = ROOT }
+				345 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 164
+					state = 345
+				}
+			}
+			183 = { is_owned_by = ROOT }
+		}
+
+		# Gibraltar-Spanish Africa
+		AND = {
+			THIS = { state = 118 }
+			290 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 290 }
+			118 = { is_owned_by = ROOT }
+		}
+
+		# Cape Verde-Senegal/Rio Grande do Norte
+		AND = {
+			THIS = { state = 702 }
+			OR = {
+				272 = { is_owned_by = ROOT }
+				498 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 272
+					state = 498
+				}
+			}
+			702 = { is_owned_by = ROOT }
+		}
+
+		# Islas Canarias-Cape Verde/Rio de Oro/Madeira
+		AND = {
+			THIS = { state = 178 }
+			OR = {
+				697 = { is_owned_by = ROOT }
+				699 = { is_owned_by = ROOT }
+				702 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 697
+					state = 699
+					state = 702
+				}
+			}
+			178 = { is_owned_by = ROOT }
+		}
+
+		# Madeira-Beja
+		AND = {
+			THIS = { state = 179 }
+			697 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 697 }
+			179 = { is_owned_by = ROOT }
+		}
+
+		# Azores-Madeira/Bermuda/French Carribean
+		AND = {
+			THIS = { state = 698 }
+			OR = {
+				694 = { is_owned_by = ROOT }
+				696 = { is_owned_by = ROOT }
+				697 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 694
+					state = 696
+					state = 697
+				}
+			}
+			698 = { is_owned_by = ROOT }
+		}
+
+		# Trinidad-Windward Islands
+		AND = {
+			THIS = { state = 691 }
+			692 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 692 }
+			691 = { is_owned_by = ROOT }
+		}
+
+		# Dominican Republic-Puerto Rico
+		AND = {
+			THIS = { state = 319 }
+			686 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 686 }
+			319 = { is_owned_by = ROOT }
+		}
+
+		# Northern Bahamas-Southern Bahamas/Florida/Bermuda
+		AND = {
+			THIS = { state = 690 }
+			OR = {
+				366 = { is_owned_by = ROOT }
+				693 = { is_owned_by = ROOT }
+				696 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 366
+					state = 693
+					state = 696
+				}
+			}
+			690 = { is_owned_by = ROOT }
+		}
+
+		# Cuba-Yucatan/Southern Bahamas/Haiti
+		AND = {
+			THIS = { state = 315 }
+			OR = {
+				318 = { is_owned_by = ROOT }
+				474 = { is_owned_by = ROOT }
+				693 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 318
+					state = 474
+					state = 693
+				}
+			}
+			315 = { is_owned_by = ROOT }
+		}
+
+		# Haiti-Jamaica
+		AND = {
+			THIS = { state = 318 }
+			689 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 689 }
+			318 = { is_owned_by = ROOT }
+		}
+
+		# Bermuda-North Carolina
+		AND = {
+			THIS = { state = 363 }
+			696 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 696 }
+			363 = { is_owned_by = ROOT }
+		}
+
+		# Ecuador-Galapagos Islands
+		AND = {
+			THIS = { state = 305 }
+			649 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 649 }
+			305 = { is_owned_by = ROOT }
+		}
+
+		# Easter Island-Santiago/Pitcairn Island
+		AND = {
+			THIS = { state = 948 }
+			OR = {
+				270 = { is_owned_by = ROOT }
+				279 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 270
+					state = 279
+				}
+			}
+			948 = { is_owned_by = ROOT }
+		}
+
+		# Haida Gwaii-Upper British Columbia
+		AND = {
+			THIS = { state = 471 }
+			739 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 739 }
+			471 = { is_owned_by = ROOT }
+		}
+
+		# Attu Island-Kamchatka/Midway Island/Alaska
+		AND = {
+			THIS = { state = 650 }
+			OR = {
+				463 = { is_owned_by = ROOT }
+				631 = { is_owned_by = ROOT }
+				637 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 463
+					state = 631
+					state = 637
+				}
+			}
+			650 = { is_owned_by = ROOT }
+		}
+
+		# Chukchi Peninsula-Chukotka/Alaska
+		AND = {
+			THIS = { state = 875 }
+			OR = {
+				463 = { is_owned_by = ROOT }
+				822 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 463
+					state = 822
+				}
+			}
+			875 = { is_owned_by = ROOT }
+		}
+
+		# Newfoundland-Nova Scotia/Côte-Nord/St. Pierre and Miquelon
+		AND = {
+			THIS = { state = 331 }
+			OR = {
+				464 = { is_owned_by = ROOT }
+				730 = { is_owned_by = ROOT }
+				860 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 464
+					state = 730
+					state = 860
+				}
+			}
+			331 = { is_owned_by = ROOT }
+		}
+
+		# Greenland-Labrador/Iceland
+		AND = {
+			THIS = { state = 101 }
+			OR = {
+				100 = { is_owned_by = ROOT }
+				332 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 100
+					state = 332
+				}
+			}
+			101 = { is_owned_by = ROOT }
+		}
+
+		# Jan Mayen-Nordland/Iceland
+		AND = {
+			THIS = { state = 914 }
+			OR = {
+				100 = { is_owned_by = ROOT }
+				144 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 100
+					state = 144
+				}
+			}
+			914 = { is_owned_by = ROOT }
+		}
+
+		# Faroe Islands-Shetland Islands/Iceland
+		AND = {
+			THIS = { state = 337 }
+			OR = {
+				100 = { is_owned_by = ROOT }
+				933 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 100
+					state = 933
+				}
+			}
+			337 = { is_owned_by = ROOT }
+		}
+
+		# Shetland Islands-Scottish Highlands/Vestlandet
+		AND = {
+			THIS = { state = 933 }
+			OR = {
+				120 = { is_owned_by = ROOT }
+				142 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 120
+					state = 142
+				}
+			}
+			933 = { is_owned_by = ROOT }
+		}
+
+		# Isle of Man-Northern Ireland/Lanark/Cumbria
+		AND = {
+			THIS = { state = 932 }
+			OR = {
+				119 = { is_owned_by = ROOT }
+				133 = { is_owned_by = ROOT }
+				931 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 119
+					state = 133
+					state = 931
+				}
+			}
+			932 = { is_owned_by = ROOT }
+		}
+
+		# Sussex-Nord-Pas-de-Calais
+		AND = {
+			THIS = { state = 29 }
+			127 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 127 }
+			29 = { is_owned_by = ROOT }
+		}
+
+		# Aland-Södermanland/Turku/Gotland
+		AND = {
+			THIS = { state = 145 }
+			OR = {
+				124 = { is_owned_by = ROOT }
+				141 = { is_owned_by = ROOT }
+				926 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 124
+					state = 141
+					state = 926
+				}
+			}
+			145 = { is_owned_by = ROOT }
+		}
+
+		# Gotland-Smaland
+		AND = {
+			THIS = { state = 124 }
+			139 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 139 }
+			124 = { is_owned_by = ROOT }
+		}
+
+		# Bornholm-Skane
+		AND = {
+			THIS = { state = 138 }
+			910 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 910 }
+			138 = { is_owned_by = ROOT }
+		}
+
+		# Hokkaido-South Sakhalin
+		AND = {
+			THIS = { state = 536 }
+			537 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 537 }
+			536 = { is_owned_by = ROOT }
+		}
+
+		# Kuril Islands-Kamchatka
+		AND = {
+			THIS = { state = 555 }
+			637 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 637 }
+			555 = { is_owned_by = ROOT }
+		}
+
+		# Kyushu-South Korea/Okinawa
+		AND = {
+			THIS = { state = 528 }
+			OR = {
+				525 = { is_owned_by = ROOT }
+				526 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 525
+					state = 526
+				}
+			}
+			528 = { is_owned_by = ROOT }
+		}
+
+		# Taiwan-Fujian/Okinawa/Luzon
+		AND = {
+			THIS = { state = 524 }
+			OR = {
+				526 = { is_owned_by = ROOT }
+				595 = { is_owned_by = ROOT }
+				623 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 526
+					state = 595
+					state = 623
+				}
+			}
+			524 = { is_owned_by = ROOT }
+		}
+
+		# Cebu-Cental Islands/Samar/Mindanao
+		AND = {
+			THIS = { state = 628 }
+			OR = {
+				624 = { is_owned_by = ROOT }
+				625 = { is_owned_by = ROOT }
+				627 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 624
+					state = 625
+					state = 627
+				}
+			}
+			628 = { is_owned_by = ROOT }
+		}
+
+		# Palawan-Cental Islands/North Borneo
+		AND = {
+			THIS = { state = 626 }
+			OR = {
+				333 = { is_owned_by = ROOT }
+				624 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 333
+					state = 624
+				}
+			}
+			626 = { is_owned_by = ROOT }
+		}
+
+		# Hawaii-California
+		AND = {
+			THIS = { state = 378 }
+			629 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 629 }
+			378 = { is_owned_by = ROOT }
+		}
+
+		# Johnston Atoll-Hawaii/Midway Island/Line Islands
+		AND = {
+			THIS = { state = 630 }
+			OR = {
+				629 = { is_owned_by = ROOT }
+				631 = { is_owned_by = ROOT }
+				727 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 629
+					state = 631
+					state = 727
+				}
+			}
+			630 = { is_owned_by = ROOT }
+		}
+
+		# Wake Island-Marcus Island/Midway Island/Marshall Islands
+		AND = {
+			THIS = { state = 632 }
+			OR = {
+				631 = { is_owned_by = ROOT }
+				633 = { is_owned_by = ROOT }
+				648 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 631
+					state = 633
+					state = 648
+				}
+			}
+			632 = { is_owned_by = ROOT }
+		}
+
+		# Iwo Jima-Marcus Island/Saipan/Okinawa
+		AND = {
+			THIS = { state = 645 }
+			OR = {
+				526 = { is_owned_by = ROOT }
+				646 = { is_owned_by = ROOT }
+				648 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 526
+					state = 646
+					state = 648
+				}
+			}
+			645 = { is_owned_by = ROOT }
+		}
+
+		# Guam-Caroline Islands/Saipan
+		AND = {
+			THIS = { state = 638 }
+			OR = {
+				646 = { is_owned_by = ROOT }
+				684 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 646
+					state = 684
+				}
+			}
+			638 = { is_owned_by = ROOT }
+		}
+
+		# Palau-Caroline Islands/Mindanao
+		AND = {
+			THIS = { state = 647 }
+			OR = {
+				627 = { is_owned_by = ROOT }
+				684 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 627
+					state = 684
+				}
+			}
+			647 = { is_owned_by = ROOT }
+		}
+
+		# Caroline Islands-Marshall Islands
+		AND = {
+			THIS = { state = 633 }
+			684 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 684 }
+			633 = { is_owned_by = ROOT }
+		}
+
+		# Gilbert Islands-Marshall Islands/Nauru/Elice Islands
+		AND = {
+			THIS = { state = 639 }
+			OR = {
+				633 = { is_owned_by = ROOT }
+				643 = { is_owned_by = ROOT }
+				725 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 633
+					state = 643
+					state = 725
+				}
+			}
+			639 = { is_owned_by = ROOT }
+		}
+
+		# Nauru-Caroline Islands/Nendo/Elice Islands
+		AND = {
+			THIS = { state = 725 }
+			OR = {
+				643 = { is_owned_by = ROOT }
+				684 = { is_owned_by = ROOT }
+				734 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 643
+					state = 684
+					state = 734
+				}
+			}
+			725 = { is_owned_by = ROOT }
+		}
+
+		# Phoenix Island-Line Islands/Samoa/Elice Islands
+		AND = {
+			THIS = { state = 642 }
+			OR = {
+				643 = { is_owned_by = ROOT }
+				726 = { is_owned_by = ROOT }
+				727 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 643
+					state = 726
+					state = 727
+				}
+			}
+			642 = { is_owned_by = ROOT }
+		}
+
+		# Tahiti-Pitcairn Island/Samoa
+		AND = {
+			THIS = { state = 641 }
+			OR = {
+				270 = { is_owned_by = ROOT }
+				726 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 270
+					state = 726
+				}
+			}
+			641 = { is_owned_by = ROOT }
+		}
+
+		# Fiji-North Island/Samoa/Elice Islands/New Caledonia
+		AND = {
+			THIS = { state = 636 }
+			OR = {
+				284 = { is_owned_by = ROOT }
+				635 = { is_owned_by = ROOT }
+				643 = { is_owned_by = ROOT }
+				726 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 284
+					state = 635
+					state = 643
+					state = 726
+				}
+			}
+			636 = { is_owned_by = ROOT }
+		}
+
+		# Solomon Islands-Bismarck/Nendo
+		AND = {
+			THIS = { state = 634 }
+			OR = {
+				734 = { is_owned_by = ROOT }
+				737 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 734
+					state = 737
+				}
+			}
+			634 = { is_owned_by = ROOT }
+		}
+
+		# New Caledonia-North Island/Nendo
+		AND = {
+			THIS = { state = 635 }
+			OR = {
+				284 = { is_owned_by = ROOT }
+				734 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 284
+					state = 734
+				}
+			}
+			635 = { is_owned_by = ROOT }
+		}
+
+		# Tasmania-Victoria/South Island
+		AND = {
+			THIS = { state = 518 }
+			OR = {
+				517 = { is_owned_by = ROOT }
+				723 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 517
+					state = 723
+				}
+			}
+			518 = { is_owned_by = ROOT }
+		}
+
+		# Papua-North Queensland
+		AND = {
+			THIS = { state = 523 }
+			872 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 872 }
+			523 = { is_owned_by = ROOT }
+		}
+
+		# Aru Islands-Portugese Timor/West Papua
+		AND = {
+			THIS = { state = 738 }
+			OR = {
+				669 = { is_owned_by = ROOT }
+				721 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 669
+					state = 721
+				}
+			}
+			738 = { is_owned_by = ROOT }
+		}
+
+		# The Moluccas-Sulawesi/Mindanao/West Papua
+		AND = {
+			THIS = { state = 668 }
+			OR = {
+				627 = { is_owned_by = ROOT }
+				673 = { is_owned_by = ROOT }
+				669 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 627
+					state = 673
+					state = 669
+				}
+			}
+			668 = { is_owned_by = ROOT }
+		}
+
+		# Kalimantan-Sulawesi/Sumatra
+		AND = {
+			THIS = { state = 334 }
+			OR = {
+				672 = { is_owned_by = ROOT }
+				673 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 672
+					state = 673
+				}
+			}
+			334 = { is_owned_by = ROOT }
+		}
+
+		# Sumatra-Singapore
+		AND = {
+			THIS = { state = 336 }
+			672 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 672 }
+			336 = { is_owned_by = ROOT }
+		}
+
+		# Andaman-Burma/Sumatra
+		AND = {
+			THIS = { state = 733 }
+			OR = {
+				228 = { is_owned_by = ROOT }
+				672 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 228
+					state = 672
+				}
+			}
+			733 = { is_owned_by = ROOT }
+		}
+
+		# Christmas Island-Java/Cocos Islands/Western Australia
+		AND = {
+			THIS = { state = 711 }
+			OR = {
+				335 = { is_owned_by = ROOT }
+				522 = { is_owned_by = ROOT }
+				712 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 335
+					state = 522
+					state = 712
+				}
+			}
+			711 = { is_owned_by = ROOT }
+		}
+
+		# Diego Garcia-Maldives/Cocos Islands/Seychelles/Mauritius
+		AND = {
+			THIS = { state = 710 }
+			OR = {
+				281 = { is_owned_by = ROOT }
+				707 = { is_owned_by = ROOT }
+				709 = { is_owned_by = ROOT }
+				712 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 281
+					state = 707
+					state = 709
+					state = 712
+				}
+			}
+			710 = { is_owned_by = ROOT }
+		}
+
+		# Reunion-Madagascar/Kerguelen/Mauritius
+		AND = {
+			THIS = { state = 706 }
+			OR = {
+				543 = { is_owned_by = ROOT }
+				707 = { is_owned_by = ROOT }
+				713 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 543
+					state = 707
+					state = 713
+				}
+			}
+			706 = { is_owned_by = ROOT }
+		}
+
+		# Comoro Islands-Madagascar/Zambezia-Moçambique
+		AND = {
+			THIS = { state = 708 }
+			OR = {
+				543 = { is_owned_by = ROOT }
+				897 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 543
+					state = 897
+				}
+			}
+			708 = { is_owned_by = ROOT }
+		}
+
+		# Madurai-Ceylon/Maldives
+		AND = {
+			THIS = { state = 423 }
+			OR = {
+				281 = { is_owned_by = ROOT }
+				422 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 281
+					state = 422
+				}
+			}
+			423 = { is_owned_by = ROOT }
+		}
+
+		# Socotra-Aden/Somaliland/Maldives/Seychelles
+		AND = {
+			THIS = { state = 906 }
+			OR = {
+				281 = { is_owned_by = ROOT }
+				559 = { is_owned_by = ROOT }
+				659 = { is_owned_by = ROOT }
+				709 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 281
+					state = 559
+					state = 659
+					state = 709
+				}
+			}
+			906 = { is_owned_by = ROOT }
+		}
+
+		# Ascension-Cape Verde/Sao Tome/Saint Helena
+		AND = {
+			THIS = { state = 703 }
+			OR = {
+				702 = { is_owned_by = ROOT }
+				704 = { is_owned_by = ROOT }
+				705 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 702
+					state = 704
+					state = 705
+				}
+			}
+			703 = { is_owned_by = ROOT }
+		}
+
+		# Sao Tome-Equatoral Guinea
+		AND = {
+			THIS = { state = 297 }
+			705 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 705 }
+			297 = { is_owned_by = ROOT }
+		}
+
+		# South Georgia-Falkland Islands/Saint Helena
+		AND = {
+			THIS = { state = 720 }
+			OR = {
+				229 = { is_owned_by = ROOT }
+				704 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 229
+					state = 704
+				}
+			}
+			720 = { is_owned_by = ROOT }
+		}
+
+		# Falkland Islands-Chubut/Tierra del Fuego
+		AND = {
+			THIS = { state = 229 }
+			OR = {
+				953 = { is_owned_by = ROOT }
+				955 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 953
+					state = 955
+				}
+			}
+			229 = { is_owned_by = ROOT }
+		}
 	}
 }
 
 is_neighboring_core_special_case_state = {
 	OR = {
+		# Lanark-Northern Ireland
 		AND = {
 			THIS = { state = 119 }
 			133 = { is_core_of = ROOT }
@@ -34,11 +2305,1146 @@ is_neighboring_core_special_case_state = {
 			THIS = { state = 133 }
 			119 = { is_core_of = ROOT }
 		}
+
+		# Corsica-Var/Toscana
+		AND = {
+			THIS = { state = 1 }
+			OR = {
+				162 = { is_core_of = ROOT }
+				851 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 162
+					state = 851
+				}
+			}
+			1 = { is_core_of = ROOT }
+		}
+
+		# Sicilia-Sardegna/Malta
+		AND = {
+			THIS = { state = 115 }
+			OR = {
+				114 = { is_core_of = ROOT }
+				116 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 114
+					state = 116
+				}
+			}
+			115 = { is_core_of = ROOT }
+		}
+
+		# Islas Baleares-Cataluña/Sardegna
+		AND = {
+			THIS = { state = 177 }
+			OR = {
+				115 = { is_core_of = ROOT }
+				165 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 115
+					state = 165
+				}
+			}
+			177 = { is_core_of = ROOT }
+		}
+
+		# Crete-Peloponnese/Aegean Islands/Dodecanese
+		AND = {
+			THIS = { state = 182 }
+			OR = {
+				164 = { is_core_of = ROOT }
+				186 = { is_core_of = ROOT }
+				187 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 164
+					state = 186
+					state = 187
+				}
+			}
+			182 = { is_core_of = ROOT }
+		}
+
+		# Cyprus-Dodecanese/Mersin
+		AND = {
+			THIS = { state = 183 }
+			OR = {
+				164 = { is_core_of = ROOT }
+				345 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 164
+					state = 345
+				}
+			}
+			183 = { is_core_of = ROOT }
+		}
+
+		# Gibraltar-Spanish Africa
+		AND = {
+			THIS = { state = 118 }
+			290 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 290 }
+			118 = { is_core_of = ROOT }
+		}
+
+		# Cape Verde-Senegal/Rio Grande do Norte
+		AND = {
+			THIS = { state = 702 }
+			OR = {
+				272 = { is_core_of = ROOT }
+				498 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 272
+					state = 498
+				}
+			}
+			702 = { is_core_of = ROOT }
+		}
+
+		# Islas Canarias-Cape Verde/Rio de Oro/Madeira
+		AND = {
+			THIS = { state = 178 }
+			OR = {
+				697 = { is_core_of = ROOT }
+				699 = { is_core_of = ROOT }
+				702 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 697
+					state = 699
+					state = 702
+				}
+			}
+			178 = { is_core_of = ROOT }
+		}
+
+		# Madeira-Beja
+		AND = {
+			THIS = { state = 179 }
+			697 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 697 }
+			179 = { is_core_of = ROOT }
+		}
+
+		# Azores-Madeira/Bermuda/French Carribean
+		AND = {
+			THIS = { state = 698 }
+			OR = {
+				694 = { is_core_of = ROOT }
+				696 = { is_core_of = ROOT }
+				697 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 694
+					state = 696
+					state = 697
+				}
+			}
+			698 = { is_core_of = ROOT }
+		}
+
+		# Trinidad-Windward Islands
+		AND = {
+			THIS = { state = 691 }
+			692 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 692 }
+			691 = { is_core_of = ROOT }
+		}
+
+		# Dominican Republic-Puerto Rico
+		AND = {
+			THIS = { state = 319 }
+			686 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 686 }
+			319 = { is_core_of = ROOT }
+		}
+
+		# Northern Bahamas-Southern Bahamas/Florida/Bermuda
+		AND = {
+			THIS = { state = 690 }
+			OR = {
+				366 = { is_core_of = ROOT }
+				693 = { is_core_of = ROOT }
+				696 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 366
+					state = 693
+					state = 696
+				}
+			}
+			690 = { is_core_of = ROOT }
+		}
+
+		# Cuba-Yucatan/Southern Bahamas/Haiti
+		AND = {
+			THIS = { state = 315 }
+			OR = {
+				318 = { is_core_of = ROOT }
+				474 = { is_core_of = ROOT }
+				693 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 318
+					state = 474
+					state = 693
+				}
+			}
+			315 = { is_core_of = ROOT }
+		}
+
+		# Haiti-Jamaica
+		AND = {
+			THIS = { state = 318 }
+			689 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 689 }
+			318 = { is_core_of = ROOT }
+		}
+
+		# Bermuda-North Carolina
+		AND = {
+			THIS = { state = 363 }
+			696 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 696 }
+			363 = { is_core_of = ROOT }
+		}
+
+		# Ecuador-Galapagos Islands
+		AND = {
+			THIS = { state = 305 }
+			649 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 649 }
+			305 = { is_core_of = ROOT }
+		}
+
+		# Easter Island-Santiago/Pitcairn Island
+		AND = {
+			THIS = { state = 948 }
+			OR = {
+				270 = { is_core_of = ROOT }
+				279 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 270
+					state = 279
+				}
+			}
+			948 = { is_core_of = ROOT }
+		}
+
+		# Haida Gwaii-Upper British Columbia
+		AND = {
+			THIS = { state = 471 }
+			739 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 739 }
+			471 = { is_core_of = ROOT }
+		}
+
+		# Attu Island-Kamchatka/Midway Island/Alaska
+		AND = {
+			THIS = { state = 650 }
+			OR = {
+				463 = { is_core_of = ROOT }
+				631 = { is_core_of = ROOT }
+				637 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 463
+					state = 631
+					state = 637
+				}
+			}
+			650 = { is_core_of = ROOT }
+		}
+
+		# Chukchi Peninsula-Chukotka/Alaska
+		AND = {
+			THIS = { state = 875 }
+			OR = {
+				463 = { is_core_of = ROOT }
+				822 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 463
+					state = 822
+				}
+			}
+			875 = { is_core_of = ROOT }
+		}
+
+		# Newfoundland-Nova Scotia/Côte-Nord/St. Pierre and Miquelon
+		AND = {
+			THIS = { state = 331 }
+			OR = {
+				464 = { is_core_of = ROOT }
+				730 = { is_core_of = ROOT }
+				860 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 464
+					state = 730
+					state = 860
+				}
+			}
+			331 = { is_core_of = ROOT }
+		}
+
+		# Greenland-Labrador/Iceland
+		AND = {
+			THIS = { state = 101 }
+			OR = {
+				100 = { is_core_of = ROOT }
+				332 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 100
+					state = 332
+				}
+			}
+			101 = { is_core_of = ROOT }
+		}
+
+		# Jan Mayen-Nordland/Iceland
+		AND = {
+			THIS = { state = 914 }
+			OR = {
+				100 = { is_core_of = ROOT }
+				144 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 100
+					state = 144
+				}
+			}
+			914 = { is_core_of = ROOT }
+		}
+
+		# Faroe Islands-Shetland Islands/Iceland
+		AND = {
+			THIS = { state = 337 }
+			OR = {
+				100 = { is_core_of = ROOT }
+				933 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 100
+					state = 933
+				}
+			}
+			337 = { is_core_of = ROOT }
+		}
+
+		# Shetland Islands-Scottish Highlands/Vestlandet
+		AND = {
+			THIS = { state = 933 }
+			OR = {
+				120 = { is_core_of = ROOT }
+				142 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 120
+					state = 142
+				}
+			}
+			933 = { is_core_of = ROOT }
+		}
+
+		# Isle of Man-Northern Ireland/Lanark/Cumbria
+		AND = {
+			THIS = { state = 932 }
+			OR = {
+				119 = { is_core_of = ROOT }
+				133 = { is_core_of = ROOT }
+				931 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 119
+					state = 133
+					state = 931
+				}
+			}
+			932 = { is_core_of = ROOT }
+		}
+
+		# Sussex-Nord-Pas-de-Calais
+		AND = {
+			THIS = { state = 29 }
+			127 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 127 }
+			29 = { is_core_of = ROOT }
+		}
+
+		# Aland-Södermanland/Turku/Gotland
+		AND = {
+			THIS = { state = 145 }
+			OR = {
+				124 = { is_core_of = ROOT }
+				141 = { is_core_of = ROOT }
+				926 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 124
+					state = 141
+					state = 926
+				}
+			}
+			145 = { is_core_of = ROOT }
+		}
+
+		# Gotland-Smaland
+		AND = {
+			THIS = { state = 124 }
+			139 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 139 }
+			124 = { is_core_of = ROOT }
+		}
+
+		# Bornholm-Skane
+		AND = {
+			THIS = { state = 138 }
+			910 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 910 }
+			138 = { is_core_of = ROOT }
+		}
+
+		# Hokkaido-South Sakhalin
+		AND = {
+			THIS = { state = 536 }
+			537 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 537 }
+			536 = { is_core_of = ROOT }
+		}
+
+		# Kuril Islands-Kamchatka
+		AND = {
+			THIS = { state = 555 }
+			637 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 637 }
+			555 = { is_core_of = ROOT }
+		}
+
+		# Kyushu-South Korea/Okinawa
+		AND = {
+			THIS = { state = 528 }
+			OR = {
+				525 = { is_core_of = ROOT }
+				526 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 525
+					state = 526
+				}
+			}
+			528 = { is_core_of = ROOT }
+		}
+
+		# Taiwan-Fujian/Okinawa/Luzon
+		AND = {
+			THIS = { state = 524 }
+			OR = {
+				526 = { is_core_of = ROOT }
+				595 = { is_core_of = ROOT }
+				623 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 526
+					state = 595
+					state = 623
+				}
+			}
+			524 = { is_core_of = ROOT }
+		}
+
+		# Cebu-Cental Islands/Samar/Mindanao
+		AND = {
+			THIS = { state = 628 }
+			OR = {
+				624 = { is_core_of = ROOT }
+				625 = { is_core_of = ROOT }
+				627 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 624
+					state = 625
+					state = 627
+				}
+			}
+			628 = { is_core_of = ROOT }
+		}
+
+		# Palawan-Cental Islands/North Borneo
+		AND = {
+			THIS = { state = 626 }
+			OR = {
+				333 = { is_core_of = ROOT }
+				624 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 333
+					state = 624
+				}
+			}
+			626 = { is_core_of = ROOT }
+		}
+
+		# Hawaii-California
+		AND = {
+			THIS = { state = 378 }
+			629 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 629 }
+			378 = { is_core_of = ROOT }
+		}
+
+		# Johnston Atoll-Hawaii/Midway Island/Line Islands
+		AND = {
+			THIS = { state = 630 }
+			OR = {
+				629 = { is_core_of = ROOT }
+				631 = { is_core_of = ROOT }
+				727 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 629
+					state = 631
+					state = 727
+				}
+			}
+			630 = { is_core_of = ROOT }
+		}
+
+		# Wake Island-Marcus Island/Midway Island/Marshall Islands
+		AND = {
+			THIS = { state = 632 }
+			OR = {
+				631 = { is_core_of = ROOT }
+				633 = { is_core_of = ROOT }
+				648 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 631
+					state = 633
+					state = 648
+				}
+			}
+			632 = { is_core_of = ROOT }
+		}
+
+		# Iwo Jima-Marcus Island/Saipan/Okinawa
+		AND = {
+			THIS = { state = 645 }
+			OR = {
+				526 = { is_core_of = ROOT }
+				646 = { is_core_of = ROOT }
+				648 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 526
+					state = 646
+					state = 648
+				}
+			}
+			645 = { is_core_of = ROOT }
+		}
+
+		# Guam-Caroline Islands/Saipan
+		AND = {
+			THIS = { state = 638 }
+			OR = {
+				646 = { is_core_of = ROOT }
+				684 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 646
+					state = 684
+				}
+			}
+			638 = { is_core_of = ROOT }
+		}
+
+		# Palau-Caroline Islands/Mindanao
+		AND = {
+			THIS = { state = 647 }
+			OR = {
+				627 = { is_core_of = ROOT }
+				684 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 627
+					state = 684
+				}
+			}
+			647 = { is_core_of = ROOT }
+		}
+
+		# Caroline Islands-Marshall Islands
+		AND = {
+			THIS = { state = 633 }
+			684 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 684 }
+			633 = { is_core_of = ROOT }
+		}
+
+		# Gilbert Islands-Marshall Islands/Nauru/Elice Islands
+		AND = {
+			THIS = { state = 639 }
+			OR = {
+				633 = { is_core_of = ROOT }
+				643 = { is_core_of = ROOT }
+				725 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 633
+					state = 643
+					state = 725
+				}
+			}
+			639 = { is_core_of = ROOT }
+		}
+
+		# Nauru-Caroline Islands/Nendo/Elice Islands
+		AND = {
+			THIS = { state = 725 }
+			OR = {
+				643 = { is_core_of = ROOT }
+				684 = { is_core_of = ROOT }
+				734 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 643
+					state = 684
+					state = 734
+				}
+			}
+			725 = { is_core_of = ROOT }
+		}
+
+		# Phoenix Island-Line Islands/Samoa/Elice Islands
+		AND = {
+			THIS = { state = 642 }
+			OR = {
+				643 = { is_core_of = ROOT }
+				726 = { is_core_of = ROOT }
+				727 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 643
+					state = 726
+					state = 727
+				}
+			}
+			642 = { is_core_of = ROOT }
+		}
+
+		# Tahiti-Pitcairn Island/Samoa
+		AND = {
+			THIS = { state = 641 }
+			OR = {
+				270 = { is_core_of = ROOT }
+				726 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 270
+					state = 726
+				}
+			}
+			641 = { is_core_of = ROOT }
+		}
+
+		# Fiji-North Island/Samoa/Elice Islands/New Caledonia
+		AND = {
+			THIS = { state = 636 }
+			OR = {
+				284 = { is_core_of = ROOT }
+				635 = { is_core_of = ROOT }
+				643 = { is_core_of = ROOT }
+				726 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 284
+					state = 635
+					state = 643
+					state = 726
+				}
+			}
+			636 = { is_core_of = ROOT }
+		}
+
+		# Solomon Islands-Bismarck/Nendo
+		AND = {
+			THIS = { state = 634 }
+			OR = {
+				734 = { is_core_of = ROOT }
+				737 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 734
+					state = 737
+				}
+			}
+			634 = { is_core_of = ROOT }
+		}
+
+		# New Caledonia-North Island/Nendo
+		AND = {
+			THIS = { state = 635 }
+			OR = {
+				284 = { is_core_of = ROOT }
+				734 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 284
+					state = 734
+				}
+			}
+			635 = { is_core_of = ROOT }
+		}
+
+		# Tasmania-Victoria/South Island
+		AND = {
+			THIS = { state = 518 }
+			OR = {
+				517 = { is_core_of = ROOT }
+				723 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 517
+					state = 723
+				}
+			}
+			518 = { is_core_of = ROOT }
+		}
+
+		# Papua-North Queensland
+		AND = {
+			THIS = { state = 523 }
+			872 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 872 }
+			523 = { is_core_of = ROOT }
+		}
+
+		# Aru Islands-Portugese Timor/West Papua
+		AND = {
+			THIS = { state = 738 }
+			OR = {
+				669 = { is_core_of = ROOT }
+				721 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 669
+					state = 721
+				}
+			}
+			738 = { is_core_of = ROOT }
+		}
+
+		# The Moluccas-Sulawesi/Mindanao/West Papua
+		AND = {
+			THIS = { state = 668 }
+			OR = {
+				627 = { is_core_of = ROOT }
+				673 = { is_core_of = ROOT }
+				669 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 627
+					state = 673
+					state = 669
+				}
+			}
+			668 = { is_core_of = ROOT }
+		}
+
+		# Kalimantan-Sulawesi/Sumatra
+		AND = {
+			THIS = { state = 334 }
+			OR = {
+				672 = { is_core_of = ROOT }
+				673 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 672
+					state = 673
+				}
+			}
+			334 = { is_core_of = ROOT }
+		}
+
+		# Sumatra-Singapore
+		AND = {
+			THIS = { state = 336 }
+			672 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 672 }
+			336 = { is_core_of = ROOT }
+		}
+
+		# Andaman-Burma/Sumatra
+		AND = {
+			THIS = { state = 733 }
+			OR = {
+				228 = { is_core_of = ROOT }
+				672 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 228
+					state = 672
+				}
+			}
+			733 = { is_core_of = ROOT }
+		}
+
+		# Christmas Island-Java/Cocos Islands/Western Australia
+		AND = {
+			THIS = { state = 711 }
+			OR = {
+				335 = { is_core_of = ROOT }
+				522 = { is_core_of = ROOT }
+				712 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 335
+					state = 522
+					state = 712
+				}
+			}
+			711 = { is_core_of = ROOT }
+		}
+
+		# Diego Garcia-Maldives/Cocos Islands/Seychelles/Mauritius
+		AND = {
+			THIS = { state = 710 }
+			OR = {
+				281 = { is_core_of = ROOT }
+				707 = { is_core_of = ROOT }
+				709 = { is_core_of = ROOT }
+				712 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 281
+					state = 707
+					state = 709
+					state = 712
+				}
+			}
+			710 = { is_core_of = ROOT }
+		}
+
+		# Reunion-Madagascar/Kerguelen/Mauritius
+		AND = {
+			THIS = { state = 706 }
+			OR = {
+				543 = { is_core_of = ROOT }
+				707 = { is_core_of = ROOT }
+				713 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 543
+					state = 707
+					state = 713
+				}
+			}
+			706 = { is_core_of = ROOT }
+		}
+
+		# Comoro Islands-Madagascar/Zambezia-Moçambique
+		AND = {
+			THIS = { state = 708 }
+			OR = {
+				543 = { is_core_of = ROOT }
+				897 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 543
+					state = 897
+				}
+			}
+			708 = { is_core_of = ROOT }
+		}
+
+		# Madurai-Ceylon/Maldives
+		AND = {
+			THIS = { state = 423 }
+			OR = {
+				281 = { is_core_of = ROOT }
+				422 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 281
+					state = 422
+				}
+			}
+			423 = { is_core_of = ROOT }
+		}
+
+		# Socotra-Aden/Somaliland/Maldives/Seychelles
+		AND = {
+			THIS = { state = 906 }
+			OR = {
+				281 = { is_core_of = ROOT }
+				559 = { is_core_of = ROOT }
+				659 = { is_core_of = ROOT }
+				709 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 281
+					state = 559
+					state = 659
+					state = 709
+				}
+			}
+			906 = { is_core_of = ROOT }
+		}
+
+		# Ascension-Cape Verde/Sao Tome/Saint Helena
+		AND = {
+			THIS = { state = 703 }
+			OR = {
+				702 = { is_core_of = ROOT }
+				704 = { is_core_of = ROOT }
+				705 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 702
+					state = 704
+					state = 705
+				}
+			}
+			703 = { is_core_of = ROOT }
+		}
+
+		# Sao Tome-Equatoral Guinea
+		AND = {
+			THIS = { state = 297 }
+			705 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 705 }
+			297 = { is_core_of = ROOT }
+		}
+
+		# South Georgia-Falkland Islands/Saint Helena
+		AND = {
+			THIS = { state = 720 }
+			OR = {
+				229 = { is_core_of = ROOT }
+				704 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 229
+					state = 704
+				}
+			}
+			720 = { is_core_of = ROOT }
+		}
+
+		# Falkland Islands-Chubut/Tierra del Fuego
+		AND = {
+			THIS = { state = 229 }
+			OR = {
+				953 = { is_core_of = ROOT }
+				955 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 953
+					state = 955
+				}
+			}
+			229 = { is_core_of = ROOT }
+		}
 	}
 }
 
 is_neighboring_control_special_case_country = {
 	OR = {
+		# Lanark-Northern Ireland
 		AND = {
 			THIS = { controls_state = 119 }
 			ROOT = { controls_state = 133 }
@@ -47,11 +3453,1246 @@ is_neighboring_control_special_case_country = {
 			THIS = { controls_state = 133 }
 			ROOT = { controls_state = 119 }
 		}
+
+		# Corsica-Var/Toscana
+		AND = {
+			THIS = { controls_state = 1 }
+			ROOT = {
+				OR = {
+					controls_state = 162
+					controls_state = 851
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 162
+					controls_state = 851
+				}
+			}
+			ROOT = { controls_state = 1 }
+		}
+
+		# Sicilia-Sardegna/Malta
+		AND = {
+			THIS = { controls_state = 115 }
+			ROOT = {
+				OR = {
+					controls_state = 114
+					controls_state = 116
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 114
+					controls_state = 116
+				}
+			}
+			ROOT = { controls_state = 115 }
+		}
+
+		# Islas Baleares-Cataluña/Sardegna
+		AND = {
+			THIS = { controls_state = 177 }
+			ROOT = {
+				OR = {
+					controls_state = 115
+					controls_state = 165
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 115
+					controls_state = 165
+				}
+			}
+			ROOT = { controls_state = 177 }
+		}
+
+		# Crete-Peloponnese/Aegean Islands/Dodecanese
+		AND = {
+			THIS = { controls_state = 182 }
+			ROOT = {
+				OR = {
+					controls_state = 164
+					controls_state = 186
+					controls_state = 187
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 164
+					controls_state = 186
+					controls_state = 187
+				}
+			}
+			ROOT = { controls_state = 182 }
+		}
+
+		# Cyprus-Dodecanese/Mersin
+		AND = {
+			THIS = { controls_state = 183 }
+			ROOT = {
+				OR = {
+					controls_state = 164
+					controls_state = 345
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 164
+					controls_state = 345
+				}
+			}
+			ROOT = { controls_state = 183 }
+		}
+
+		# Gibraltar-Spanish Africa
+		AND = {
+			THIS = { controls_state = 118 }
+			ROOT = { controls_state = 290 }
+		}
+		AND = {
+			THIS = { controls_state = 290 }
+			ROOT = { controls_state = 118 }
+		}
+
+		# Cape Verde-Senegal/Rio Grande do Norte
+		AND = {
+			THIS = { controls_state = 702 }
+			ROOT = {
+				OR = {
+					controls_state = 272
+					controls_state = 498
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 272
+					controls_state = 498
+				}
+			}
+			ROOT = { controls_state = 702 }
+		}
+
+		# Islas Canarias-Cape Verde/Rio de Oro/Madeira
+		AND = {
+			THIS = { controls_state = 178 }
+			ROOT = {
+				OR = {
+					controls_state = 697
+					controls_state = 699
+					controls_state = 702
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 697
+					controls_state = 699
+					controls_state = 702
+				}
+			}
+			ROOT = { controls_state = 178 }
+		}
+
+		# Madeira-Beja
+		AND = {
+			THIS = { controls_state = 179 }
+			ROOT = { controls_state = 697 }
+		}
+		AND = {
+			THIS = { controls_state = 697 }
+			ROOT = { controls_state = 179 }
+		}
+
+		# Azores-Madeira/Bermuda/French Carribean
+		AND = {
+			THIS = { controls_state = 698 }
+			ROOT = {
+				OR = {
+					controls_state = 694
+					controls_state = 696
+					controls_state = 697
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 694
+					controls_state = 696
+					controls_state = 697
+				}
+			}
+			ROOT = { controls_state = 698 }
+		}
+
+		# Trinidad-Windward Islands
+		AND = {
+			THIS = { controls_state = 691 }
+			ROOT = { controls_state = 692 }
+		}
+		AND = {
+			THIS = { controls_state = 692 }
+			ROOT = { controls_state = 691 }
+		}
+
+		# Dominican Republic-Puerto Rico
+		AND = {
+			THIS = { controls_state = 319 }
+			ROOT = { controls_state = 686 }
+		}
+		AND = {
+			THIS = { controls_state = 686 }
+			ROOT = { controls_state = 319 }
+		}
+
+		# Northern Bahamas-Southern Bahamas/Florida/Bermuda
+		AND = {
+			THIS = { controls_state = 690 }
+			ROOT = {
+				OR = {
+					controls_state = 366
+					controls_state = 693
+					controls_state = 696
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 366
+					controls_state = 693
+					controls_state = 696
+				}
+			}
+			ROOT = { controls_state = 690 }
+		}
+
+		# Cuba-Yucatan/Southern Bahamas/Haiti
+		AND = {
+			THIS = { controls_state = 315 }
+			ROOT = {
+				OR = {
+					controls_state = 318
+					controls_state = 474
+					controls_state = 693
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 318
+					controls_state = 474
+					controls_state = 693
+				}
+			}
+			ROOT = { controls_state = 315 }
+		}
+
+		# Haiti-Jamaica
+		AND = {
+			THIS = { controls_state = 318 }
+			ROOT = { controls_state = 689 }
+		}
+		AND = {
+			THIS = { controls_state = 689 }
+			ROOT = { controls_state = 318 }
+		}
+
+		# Bermuda-North Carolina
+		AND = {
+			THIS = { controls_state = 363 }
+			ROOT = { controls_state = 696 }
+		}
+		AND = {
+			THIS = { controls_state = 696 }
+			ROOT = { controls_state = 363 }
+		}
+
+		# Ecuador-Galapagos Islands
+		AND = {
+			THIS = { controls_state = 305 }
+			ROOT = { controls_state = 649 }
+		}
+		AND = {
+			THIS = { controls_state = 649 }
+			ROOT = { controls_state = 305 }
+		}
+
+		# Easter Island-Santiago/Pitcairn Island
+		AND = {
+			THIS = { controls_state = 948 }
+			ROOT = {
+				OR = {
+					controls_state = 270
+					controls_state = 279
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 270
+					controls_state = 279
+				}
+			}
+			ROOT = { controls_state = 948 }
+		}
+
+		# Haida Gwaii-Upper British Columbia
+		AND = {
+			THIS = { controls_state = 471 }
+			ROOT = { controls_state = 739 }
+		}
+		AND = {
+			THIS = { controls_state = 739 }
+			ROOT = { controls_state = 471 }
+		}
+
+		# Attu Island-Kamchatka/Midway Island/Alaska
+		AND = {
+			THIS = { controls_state = 650 }
+			ROOT = {
+				OR = {
+					controls_state = 463
+					controls_state = 631
+					controls_state = 637
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 463
+					controls_state = 631
+					controls_state = 637
+				}
+			}
+			ROOT = { controls_state = 650 }
+		}
+
+		# Chukchi Peninsula-Chukotka/Alaska
+		AND = {
+			THIS = { controls_state = 875 }
+			ROOT = {
+				OR = {
+					controls_state = 463
+					controls_state = 822
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 463
+					controls_state = 822
+				}
+			}
+			ROOT = { controls_state = 875 }
+		}
+
+		# Newfoundland-Nova Scotia/Côte-Nord/St. Pierre and Miquelon
+		AND = {
+			THIS = { controls_state = 331 }
+			ROOT = {
+				OR = {
+					controls_state = 464
+					controls_state = 730
+					controls_state = 860
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 464
+					controls_state = 730
+					controls_state = 860
+				}
+			}
+			ROOT = { controls_state = 331 }
+		}
+
+		# Greenland-Labrador/Iceland
+		AND = {
+			THIS = { controls_state = 101 }
+			ROOT = {
+				OR = {
+					controls_state = 100
+					controls_state = 332
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 100
+					controls_state = 332
+				}
+			}
+			ROOT = { controls_state = 101 }
+		}
+
+		# Jan Mayen-Nordland/Iceland
+		AND = {
+			THIS = { controls_state = 914 }
+			ROOT = {
+				OR = {
+					controls_state = 100
+					controls_state = 144
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 100
+					controls_state = 144
+				}
+			}
+			ROOT = { controls_state = 914 }
+		}
+
+		# Faroe Islands-Shetland Islands/Iceland
+		AND = {
+			THIS = { controls_state = 337 }
+			ROOT = {
+				OR = {
+					controls_state = 100
+					controls_state = 933
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 100
+					controls_state = 933
+				}
+			}
+			ROOT = { controls_state = 337 }
+		}
+
+		# Shetland Islands-Scottish Highlands/Vestlandet
+		AND = {
+			THIS = { controls_state = 933 }
+			ROOT = {
+				OR = {
+					controls_state = 120
+					controls_state = 142
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 120
+					controls_state = 142
+				}
+			}
+			ROOT = { controls_state = 933 }
+		}
+
+		# Isle of Man-Northern Ireland/Lanark/Cumbria
+		AND = {
+			THIS = { controls_state = 932 }
+			ROOT = {
+				OR = {
+					controls_state = 119
+					controls_state = 133
+					controls_state = 931
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 119
+					controls_state = 133
+					controls_state = 931
+				}
+			}
+			ROOT = { controls_state = 932 }
+		}
+
+		# Sussex-Nord-Pas-de-Calais
+		AND = {
+			THIS = { controls_state = 29 }
+			ROOT = { controls_state = 127 }
+		}
+		AND = {
+			THIS = { controls_state = 127 }
+			ROOT = { controls_state = 29 }
+		}
+
+		# Aland-Södermanland/Turku/Gotland
+		AND = {
+			THIS = { controls_state = 145 }
+			ROOT = {
+				OR = {
+					controls_state = 124
+					controls_state = 141
+					controls_state = 926
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 124
+					controls_state = 141
+					controls_state = 926
+				}
+			}
+			ROOT = { controls_state = 145 }
+		}
+
+		# Gotland-Smaland
+		AND = {
+			THIS = { controls_state = 124 }
+			ROOT = { controls_state = 139 }
+		}
+		AND = {
+			THIS = { controls_state = 139 }
+			ROOT = { controls_state = 124 }
+		}
+
+		# Bornholm-Skane
+		AND = {
+			THIS = { controls_state = 138 }
+			ROOT = { controls_state = 910 }
+		}
+		AND = {
+			THIS = { controls_state = 910 }
+			ROOT = { controls_state = 138 }
+		}
+
+		# Hokkaido-South Sakhalin
+		AND = {
+			THIS = { controls_state = 536 }
+			ROOT = { controls_state = 537 }
+		}
+		AND = {
+			THIS = { controls_state = 537 }
+			ROOT = { controls_state = 536 }
+		}
+
+		# Kuril Islands-Kamchatka
+		AND = {
+			THIS = { controls_state = 555 }
+			ROOT = { controls_state = 637 }
+		}
+		AND = {
+			THIS = { controls_state = 637 }
+			ROOT = { controls_state = 555 }
+		}
+
+		# Kyushu-South Korea/Okinawa
+		AND = {
+			THIS = { controls_state = 528 }
+			ROOT = {
+				OR = {
+					controls_state = 525
+					controls_state = 526
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 525
+					controls_state = 526
+				}
+			}
+			ROOT = { controls_state = 528 }
+		}
+
+		# Taiwan-Fujian/Okinawa/Luzon
+		AND = {
+			THIS = { controls_state = 524 }
+			ROOT = {
+				OR = {
+					controls_state = 526
+					controls_state = 595
+					controls_state = 623
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 526
+					controls_state = 595
+					controls_state = 623
+				}
+			}
+			ROOT = { controls_state = 524 }
+		}
+
+		# Cebu-Cental Islands/Samar/Mindanao
+		AND = {
+			THIS = { controls_state = 628 }
+			ROOT = {
+				OR = {
+					controls_state = 624
+					controls_state = 625
+					controls_state = 627
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 624
+					controls_state = 625
+					controls_state = 627
+				}
+			}
+			ROOT = { controls_state = 628 }
+		}
+
+		# Palawan-Cental Islands/North Borneo
+		AND = {
+			THIS = { controls_state = 626 }
+			ROOT = {
+				OR = {
+					controls_state = 333
+					controls_state = 624
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 333
+					controls_state = 624
+				}
+			}
+			ROOT = { controls_state = 626 }
+		}
+
+		# Hawaii-California
+		AND = {
+			THIS = { controls_state = 378 }
+			ROOT = { controls_state = 629 }
+		}
+		AND = {
+			THIS = { controls_state = 629 }
+			ROOT = { controls_state = 378 }
+		}
+
+		# Johnston Atoll-Hawaii/Midway Island/Line Islands
+		AND = {
+			THIS = { controls_state = 630 }
+			ROOT = {
+				OR = {
+					controls_state = 629
+					controls_state = 631
+					controls_state = 727
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 629
+					controls_state = 631
+					controls_state = 727
+				}
+			}
+			ROOT = { controls_state = 630 }
+		}
+
+		# Wake Island-Marcus Island/Midway Island/Marshall Islands
+		AND = {
+			THIS = { controls_state = 632 }
+			ROOT = {
+				OR = {
+					controls_state = 631
+					controls_state = 633
+					controls_state = 648
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 631
+					controls_state = 633
+					controls_state = 648
+				}
+			}
+			ROOT = { controls_state = 632 }
+		}
+
+		# Iwo Jima-Marcus Island/Saipan/Okinawa
+		AND = {
+			THIS = { controls_state = 645 }
+			ROOT = {
+				OR = {
+					controls_state = 526
+					controls_state = 646
+					controls_state = 648
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 526
+					controls_state = 646
+					controls_state = 648
+				}
+			}
+			ROOT = { controls_state = 645 }
+		}
+
+		# Guam-Caroline Islands/Saipan
+		AND = {
+			THIS = { controls_state = 638 }
+			ROOT = {
+				OR = {
+					controls_state = 646
+					controls_state = 684
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 646
+					controls_state = 684
+				}
+			}
+			ROOT = { controls_state = 638 }
+		}
+
+		# Palau-Caroline Islands/Mindanao
+		AND = {
+			THIS = { controls_state = 647 }
+			ROOT = {
+				OR = {
+					controls_state = 627
+					controls_state = 684
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 627
+					controls_state = 684
+				}
+			}
+			ROOT = { controls_state = 647 }
+		}
+
+		# Caroline Islands-Marshall Islands
+		AND = {
+			THIS = { controls_state = 633 }
+			ROOT = { controls_state = 684 }
+		}
+		AND = {
+			THIS = { controls_state = 684 }
+			ROOT = { controls_state = 633 }
+		}
+
+		# Gilbert Islands-Marshall Islands/Nauru/Elice Islands
+		AND = {
+			THIS = { controls_state = 639 }
+			ROOT = {
+				OR = {
+					controls_state = 633
+					controls_state = 643
+					controls_state = 725
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 633
+					controls_state = 643
+					controls_state = 725
+				}
+			}
+			ROOT = { controls_state = 639 }
+		}
+
+		# Nauru-Caroline Islands/Nendo/Elice Islands
+		AND = {
+			THIS = { controls_state = 639 }
+			ROOT = {
+				OR = {
+					controls_state = 643
+					controls_state = 684
+					controls_state = 734
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 643
+					controls_state = 684
+					controls_state = 734
+				}
+			}
+			ROOT = { controls_state = 639 }
+		}
+
+		# Phoenix Island-Line Islands/Samoa/Elice Islands
+		AND = {
+			THIS = { controls_state = 642 }
+			ROOT = {
+				OR = {
+					controls_state = 643
+					controls_state = 726
+					controls_state = 727
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 643
+					controls_state = 726
+					controls_state = 727
+				}
+			}
+			ROOT = { controls_state = 642 }
+		}
+
+		# Tahiti-Pitcairn Island/Samoa
+		AND = {
+			THIS = { controls_state = 641 }
+			ROOT = {
+				OR = {
+					controls_state = 270
+					controls_state = 726
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 270
+					controls_state = 726
+				}
+			}
+			ROOT = { controls_state = 641 }
+		}
+
+		# Fiji-North Island/Samoa/Elice Islands/New Caledonia
+		AND = {
+			THIS = { controls_state = 636 }
+			ROOT = {
+				OR = {
+					controls_state = 284
+					controls_state = 635
+					controls_state = 643
+					controls_state = 726
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 284
+					controls_state = 635
+					controls_state = 643
+					controls_state = 726
+				}
+			}
+			ROOT = { controls_state = 636 }
+		}
+
+		# Solomon Islands-Bismarck/Nendo
+		AND = {
+			THIS = { controls_state = 634 }
+			ROOT = {
+				OR = {
+					controls_state = 734
+					controls_state = 737
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 734
+					controls_state = 737
+				}
+			}
+			ROOT = { controls_state = 634 }
+		}
+
+		# New Caledonia-North Island/Nendo
+		AND = {
+			THIS = { controls_state = 635 }
+			ROOT = {
+				OR = {
+					controls_state = 284
+					controls_state = 734
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 284
+					controls_state = 734
+				}
+			}
+			ROOT = { controls_state = 635 }
+		}
+
+		# Tasmania-Victoria/South Island
+		AND = {
+			THIS = { controls_state = 518 }
+			ROOT = {
+				OR = {
+					controls_state = 517
+					controls_state = 723
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 517
+					controls_state = 723
+				}
+			}
+			ROOT = { controls_state = 518 }
+		}
+
+		# Papua-North Queensland
+		AND = {
+			THIS = { controls_state = 523 }
+			ROOT = { controls_state = 872 }
+		}
+		AND = {
+			THIS = { controls_state = 872 }
+			ROOT = { controls_state = 523 }
+		}
+
+		# Aru Islands-Portugese Timor/West Papua
+		AND = {
+			THIS = { controls_state = 738 }
+			ROOT = {
+				OR = {
+					controls_state = 669
+					controls_state = 721
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 669
+					controls_state = 721
+				}
+			}
+			ROOT = { controls_state = 738 }
+		}
+
+		# The Moluccas-Sulawesi/Mindanao/West Papua
+		AND = {
+			THIS = { controls_state = 668 }
+			ROOT = {
+				OR = {
+					controls_state = 627
+					controls_state = 673
+					controls_state = 669
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 627
+					controls_state = 673
+					controls_state = 669
+				}
+			}
+			ROOT = { controls_state = 668 }
+		}
+
+		# Kalimantan-Sulawesi/Sumatra
+		AND = {
+			THIS = { controls_state = 334 }
+			ROOT = {
+				OR = {
+					controls_state = 672
+					controls_state = 673
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 672
+					controls_state = 673
+				}
+			}
+			ROOT = { controls_state = 334 }
+		}
+
+		# Sumatra-Singapore
+		AND = {
+			THIS = { controls_state = 336 }
+			ROOT = { controls_state = 672 }
+		}
+		AND = {
+			THIS = { controls_state = 672 }
+			ROOT = { controls_state = 336 }
+		}
+
+		# Andaman-Burma/Sumatra
+		AND = {
+			THIS = { controls_state = 733 }
+			ROOT = {
+				OR = {
+					controls_state = 228
+					controls_state = 672
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 228
+					controls_state = 672
+				}
+			}
+			ROOT = { controls_state = 733 }
+		}
+
+		# Christmas Island-Java/Cocos Islands/Western Australia
+		AND = {
+			THIS = { controls_state = 711 }
+			ROOT = {
+				OR = {
+					controls_state = 335
+					controls_state = 522
+					controls_state = 712
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 335
+					controls_state = 522
+					controls_state = 712
+				}
+			}
+			ROOT = { controls_state = 711 }
+		}
+
+		# Diego Garcia-Maldives/Cocos Islands/Seychelles/Mauritius
+		AND = {
+			THIS = { controls_state = 710 }
+			ROOT = {
+				OR = {
+					controls_state = 281
+					controls_state = 707
+					controls_state = 709
+					controls_state = 712
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 281
+					controls_state = 707
+					controls_state = 709
+					controls_state = 712
+				}
+			}
+			ROOT = { controls_state = 710 }
+		}
+
+		# Reunion-Madagascar/Kerguelen/Mauritius
+		AND = {
+			THIS = { controls_state = 706 }
+			ROOT = {
+				OR = {
+					controls_state = 543
+					controls_state = 707
+					controls_state = 713
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 543
+					controls_state = 707
+					controls_state = 713
+				}
+			}
+			ROOT = { controls_state = 706 }
+		}
+
+		# Comoro Islands-Madagascar/Zambezia-Moçambique
+		AND = {
+			THIS = { controls_state = 708 }
+			ROOT = {
+				OR = {
+					controls_state = 543
+					controls_state = 897
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 543
+					controls_state = 897
+				}
+			}
+			ROOT = { controls_state = 708 }
+		}
+
+		# Madurai-Ceylon/Maldives
+		AND = {
+			THIS = { controls_state = 423 }
+			ROOT = {
+				OR = {
+					controls_state = 281
+					controls_state = 422
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 281
+					controls_state = 422
+				}
+			}
+			ROOT = { controls_state = 423 }
+		}
+
+		# Socotra-Aden/Somaliland/Maldives/Seychelles
+		AND = {
+			THIS = { controls_state = 906 }
+			ROOT = {
+				OR = {
+					controls_state = 281
+					controls_state = 559
+					controls_state = 659
+					controls_state = 709
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 281
+					controls_state = 559
+					controls_state = 659
+					controls_state = 709
+				}
+			}
+			ROOT = { controls_state = 906 }
+		}
+
+		# Ascension-Cape Verde/Sao Tome/Saint Helena
+		AND = {
+			THIS = { controls_state = 703 }
+			ROOT = {
+				OR = {
+					controls_state = 702
+					controls_state = 704
+					controls_state = 705
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 702
+					controls_state = 704
+					controls_state = 705
+				}
+			}
+			ROOT = { controls_state = 703 }
+		}
+
+		# Sao Tome-Equatoral Guinea
+		AND = {
+			THIS = { controls_state = 297 }
+			ROOT = { controls_state = 705 }
+		}
+		AND = {
+			THIS = { controls_state = 705 }
+			ROOT = { controls_state = 297 }
+		}
+
+		# South Georgia-Falkland Islands/Saint Helena
+		AND = {
+			THIS = { controls_state = 720 }
+			ROOT = {
+				OR = {
+					controls_state = 229
+					controls_state = 704
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 229
+					controls_state = 704
+				}
+			}
+			ROOT = { controls_state = 720 }
+		}
+
+		# Falkland Islands-Chubut/Tierra del Fuego
+		AND = {
+			THIS = { controls_state = 229 }
+			ROOT = {
+				OR = {
+					controls_state = 953
+					controls_state = 955
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 953
+					controls_state = 955
+				}
+			}
+			ROOT = { controls_state = 229 }
+		}
 	}
 }
 
 is_neighboring_control_special_case_country_this_from = {
 	OR = {
+		# Lanark-Northern Ireland
 		AND = {
 			THIS = { controls_state = 119 }
 			FROM = { controls_state = 133 }
@@ -60,11 +4701,1246 @@ is_neighboring_control_special_case_country_this_from = {
 			THIS = { controls_state = 133 }
 			FROM = { controls_state = 119 }
 		}
+
+		# Corsica-Var/Toscana
+		AND = {
+			THIS = { controls_state = 1 }
+			FROM = {
+				OR = {
+					controls_state = 162
+					controls_state = 851
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 162
+					controls_state = 851
+				}
+			}
+			FROM = { controls_state = 1 }
+		}
+
+		# Sicilia-Sardegna/Malta
+		AND = {
+			THIS = { controls_state = 115 }
+			FROM = {
+				OR = {
+					controls_state = 114
+					controls_state = 116
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 114
+					controls_state = 116
+				}
+			}
+			FROM = { controls_state = 115 }
+		}
+
+		# Islas Baleares-Cataluña/Sardegna
+		AND = {
+			THIS = { controls_state = 177 }
+			FROM = {
+				OR = {
+					controls_state = 115
+					controls_state = 165
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 115
+					controls_state = 165
+				}
+			}
+			FROM = { controls_state = 177 }
+		}
+
+		# Crete-Peloponnese/Aegean Islands/Dodecanese
+		AND = {
+			THIS = { controls_state = 182 }
+			FROM = {
+				OR = {
+					controls_state = 164
+					controls_state = 186
+					controls_state = 187
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 164
+					controls_state = 186
+					controls_state = 187
+				}
+			}
+			FROM = { controls_state = 182 }
+		}
+
+		# Cyprus-Dodecanese/Mersin
+		AND = {
+			THIS = { controls_state = 183 }
+			FROM = {
+				OR = {
+					controls_state = 164
+					controls_state = 345
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 164
+					controls_state = 345
+				}
+			}
+			FROM = { controls_state = 183 }
+		}
+
+		# Gibraltar-Spanish Africa
+		AND = {
+			THIS = { controls_state = 118 }
+			FROM = { controls_state = 290 }
+		}
+		AND = {
+			THIS = { controls_state = 290 }
+			FROM = { controls_state = 118 }
+		}
+
+		# Cape Verde-Senegal/Rio Grande do Norte
+		AND = {
+			THIS = { controls_state = 702 }
+			FROM = {
+				OR = {
+					controls_state = 272
+					controls_state = 498
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 272
+					controls_state = 498
+				}
+			}
+			FROM = { controls_state = 702 }
+		}
+
+		# Islas Canarias-Cape Verde/Rio de Oro/Madeira
+		AND = {
+			THIS = { controls_state = 178 }
+			FROM = {
+				OR = {
+					controls_state = 697
+					controls_state = 699
+					controls_state = 702
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 697
+					controls_state = 699
+					controls_state = 702
+				}
+			}
+			FROM = { controls_state = 178 }
+		}
+
+		# Madeira-Beja
+		AND = {
+			THIS = { controls_state = 179 }
+			FROM = { controls_state = 697 }
+		}
+		AND = {
+			THIS = { controls_state = 697 }
+			FROM = { controls_state = 179 }
+		}
+
+		# Azores-Madeira/Bermuda/French Carribean
+		AND = {
+			THIS = { controls_state = 698 }
+			FROM = {
+				OR = {
+					controls_state = 694
+					controls_state = 696
+					controls_state = 697
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 694
+					controls_state = 696
+					controls_state = 697
+				}
+			}
+			FROM = { controls_state = 698 }
+		}
+
+		# Trinidad-Windward Islands
+		AND = {
+			THIS = { controls_state = 691 }
+			FROM = { controls_state = 692 }
+		}
+		AND = {
+			THIS = { controls_state = 692 }
+			FROM = { controls_state = 691 }
+		}
+
+		# Dominican Republic-Puerto Rico
+		AND = {
+			THIS = { controls_state = 319 }
+			FROM = { controls_state = 686 }
+		}
+		AND = {
+			THIS = { controls_state = 686 }
+			FROM = { controls_state = 319 }
+		}
+
+		# Northern Bahamas-Southern Bahamas/Florida/Bermuda
+		AND = {
+			THIS = { controls_state = 690 }
+			FROM = {
+				OR = {
+					controls_state = 366
+					controls_state = 693
+					controls_state = 696
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 366
+					controls_state = 693
+					controls_state = 696
+				}
+			}
+			FROM = { controls_state = 690 }
+		}
+
+		# Cuba-Yucatan/Southern Bahamas/Haiti
+		AND = {
+			THIS = { controls_state = 315 }
+			FROM = {
+				OR = {
+					controls_state = 318
+					controls_state = 474
+					controls_state = 693
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 318
+					controls_state = 474
+					controls_state = 693
+				}
+			}
+			FROM = { controls_state = 315 }
+		}
+
+		# Haiti-Jamaica
+		AND = {
+			THIS = { controls_state = 318 }
+			FROM = { controls_state = 689 }
+		}
+		AND = {
+			THIS = { controls_state = 689 }
+			FROM = { controls_state = 318 }
+		}
+
+		# Bermuda-North Carolina
+		AND = {
+			THIS = { controls_state = 363 }
+			FROM = { controls_state = 696 }
+		}
+		AND = {
+			THIS = { controls_state = 696 }
+			FROM = { controls_state = 363 }
+		}
+
+		# Ecuador-Galapagos Islands
+		AND = {
+			THIS = { controls_state = 305 }
+			FROM = { controls_state = 649 }
+		}
+		AND = {
+			THIS = { controls_state = 649 }
+			FROM = { controls_state = 305 }
+		}
+
+		# Easter Island-Santiago/Pitcairn Island
+		AND = {
+			THIS = { controls_state = 948 }
+			FROM = {
+				OR = {
+					controls_state = 270
+					controls_state = 279
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 270
+					controls_state = 279
+				}
+			}
+			FROM = { controls_state = 948 }
+		}
+
+		# Haida Gwaii-Upper British Columbia
+		AND = {
+			THIS = { controls_state = 471 }
+			FROM = { controls_state = 739 }
+		}
+		AND = {
+			THIS = { controls_state = 739 }
+			FROM = { controls_state = 471 }
+		}
+
+		# Attu Island-Kamchatka/Midway Island/Alaska
+		AND = {
+			THIS = { controls_state = 650 }
+			FROM = {
+				OR = {
+					controls_state = 463
+					controls_state = 631
+					controls_state = 637
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 463
+					controls_state = 631
+					controls_state = 637
+				}
+			}
+			FROM = { controls_state = 650 }
+		}
+
+		# Chukchi Peninsula-Chukotka/Alaska
+		AND = {
+			THIS = { controls_state = 875 }
+			FROM = {
+				OR = {
+					controls_state = 463
+					controls_state = 822
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 463
+					controls_state = 822
+				}
+			}
+			FROM = { controls_state = 875 }
+		}
+
+		# Newfoundland-Nova Scotia/Côte-Nord/St. Pierre and Miquelon
+		AND = {
+			THIS = { controls_state = 331 }
+			FROM = {
+				OR = {
+					controls_state = 464
+					controls_state = 730
+					controls_state = 860
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 464
+					controls_state = 730
+					controls_state = 860
+				}
+			}
+			FROM = { controls_state = 331 }
+		}
+
+		# Greenland-Labrador/Iceland
+		AND = {
+			THIS = { controls_state = 101 }
+			FROM = {
+				OR = {
+					controls_state = 100
+					controls_state = 332
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 100
+					controls_state = 332
+				}
+			}
+			FROM = { controls_state = 101 }
+		}
+
+		# Jan Mayen-Nordland/Iceland
+		AND = {
+			THIS = { controls_state = 914 }
+			FROM = {
+				OR = {
+					controls_state = 100
+					controls_state = 144
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 100
+					controls_state = 144
+				}
+			}
+			FROM = { controls_state = 914 }
+		}
+
+		# Faroe Islands-Shetland Islands/Iceland
+		AND = {
+			THIS = { controls_state = 337 }
+			FROM = {
+				OR = {
+					controls_state = 100
+					controls_state = 933
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 100
+					controls_state = 933
+				}
+			}
+			FROM = { controls_state = 337 }
+		}
+
+		# Shetland Islands-Scottish Highlands/Vestlandet
+		AND = {
+			THIS = { controls_state = 933 }
+			FROM = {
+				OR = {
+					controls_state = 120
+					controls_state = 142
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 120
+					controls_state = 142
+				}
+			}
+			FROM = { controls_state = 933 }
+		}
+
+		# Isle of Man-Northern Ireland/Lanark/Cumbria
+		AND = {
+			THIS = { controls_state = 932 }
+			FROM = {
+				OR = {
+					controls_state = 119
+					controls_state = 133
+					controls_state = 931
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 119
+					controls_state = 133
+					controls_state = 931
+				}
+			}
+			FROM = { controls_state = 932 }
+		}
+
+		# Sussex-Nord-Pas-de-Calais
+		AND = {
+			THIS = { controls_state = 29 }
+			FROM = { controls_state = 127 }
+		}
+		AND = {
+			THIS = { controls_state = 127 }
+			FROM = { controls_state = 29 }
+		}
+
+		# Aland-Södermanland/Turku/Gotland
+		AND = {
+			THIS = { controls_state = 145 }
+			FROM = {
+				OR = {
+					controls_state = 124
+					controls_state = 141
+					controls_state = 926
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 124
+					controls_state = 141
+					controls_state = 926
+				}
+			}
+			FROM = { controls_state = 145 }
+		}
+
+		# Gotland-Smaland
+		AND = {
+			THIS = { controls_state = 124 }
+			FROM = { controls_state = 139 }
+		}
+		AND = {
+			THIS = { controls_state = 139 }
+			FROM = { controls_state = 124 }
+		}
+
+		# Bornholm-Skane
+		AND = {
+			THIS = { controls_state = 138 }
+			FROM = { controls_state = 910 }
+		}
+		AND = {
+			THIS = { controls_state = 910 }
+			FROM = { controls_state = 138 }
+		}
+
+		# Hokkaido-South Sakhalin
+		AND = {
+			THIS = { controls_state = 536 }
+			FROM = { controls_state = 537 }
+		}
+		AND = {
+			THIS = { controls_state = 537 }
+			FROM = { controls_state = 536 }
+		}
+
+		# Kuril Islands-Kamchatka
+		AND = {
+			THIS = { controls_state = 555 }
+			FROM = { controls_state = 637 }
+		}
+		AND = {
+			THIS = { controls_state = 637 }
+			FROM = { controls_state = 555 }
+		}
+
+		# Kyushu-South Korea/Okinawa
+		AND = {
+			THIS = { controls_state = 528 }
+			FROM = {
+				OR = {
+					controls_state = 525
+					controls_state = 526
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 525
+					controls_state = 526
+				}
+			}
+			FROM = { controls_state = 528 }
+		}
+
+		# Taiwan-Fujian/Okinawa/Luzon
+		AND = {
+			THIS = { controls_state = 524 }
+			FROM = {
+				OR = {
+					controls_state = 526
+					controls_state = 595
+					controls_state = 623
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 526
+					controls_state = 595
+					controls_state = 623
+				}
+			}
+			FROM = { controls_state = 524 }
+		}
+
+		# Cebu-Cental Islands/Samar/Mindanao
+		AND = {
+			THIS = { controls_state = 628 }
+			FROM = {
+				OR = {
+					controls_state = 624
+					controls_state = 625
+					controls_state = 627
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 624
+					controls_state = 625
+					controls_state = 627
+				}
+			}
+			FROM = { controls_state = 628 }
+		}
+
+		# Palawan-Cental Islands/North Borneo
+		AND = {
+			THIS = { controls_state = 626 }
+			FROM = {
+				OR = {
+					controls_state = 333
+					controls_state = 624
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 333
+					controls_state = 624
+				}
+			}
+			FROM = { controls_state = 626 }
+		}
+
+		# Hawaii-California
+		AND = {
+			THIS = { controls_state = 378 }
+			FROM = { controls_state = 629 }
+		}
+		AND = {
+			THIS = { controls_state = 629 }
+			FROM = { controls_state = 378 }
+		}
+
+		# Johnston Atoll-Hawaii/Midway Island/Line Islands
+		AND = {
+			THIS = { controls_state = 630 }
+			FROM = {
+				OR = {
+					controls_state = 629
+					controls_state = 631
+					controls_state = 727
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 629
+					controls_state = 631
+					controls_state = 727
+				}
+			}
+			FROM = { controls_state = 630 }
+		}
+
+		# Wake Island-Marcus Island/Midway Island/Marshall Islands
+		AND = {
+			THIS = { controls_state = 632 }
+			FROM = {
+				OR = {
+					controls_state = 631
+					controls_state = 633
+					controls_state = 648
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 631
+					controls_state = 633
+					controls_state = 648
+				}
+			}
+			FROM = { controls_state = 632 }
+		}
+
+		# Iwo Jima-Marcus Island/Saipan/Okinawa
+		AND = {
+			THIS = { controls_state = 645 }
+			FROM = {
+				OR = {
+					controls_state = 526
+					controls_state = 646
+					controls_state = 648
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 526
+					controls_state = 646
+					controls_state = 648
+				}
+			}
+			FROM = { controls_state = 645 }
+		}
+
+		# Guam-Caroline Islands/Saipan
+		AND = {
+			THIS = { controls_state = 638 }
+			FROM = {
+				OR = {
+					controls_state = 646
+					controls_state = 684
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 646
+					controls_state = 684
+				}
+			}
+			FROM = { controls_state = 638 }
+		}
+
+		# Palau-Caroline Islands/Mindanao
+		AND = {
+			THIS = { controls_state = 647 }
+			FROM = {
+				OR = {
+					controls_state = 627
+					controls_state = 684
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 627
+					controls_state = 684
+				}
+			}
+			FROM = { controls_state = 647 }
+		}
+
+		# Caroline Islands-Marshall Islands
+		AND = {
+			THIS = { controls_state = 633 }
+			FROM = { controls_state = 684 }
+		}
+		AND = {
+			THIS = { controls_state = 684 }
+			FROM = { controls_state = 633 }
+		}
+
+		# Gilbert Islands-Marshall Islands/Nauru/Elice Islands
+		AND = {
+			THIS = { controls_state = 639 }
+			FROM = {
+				OR = {
+					controls_state = 633
+					controls_state = 643
+					controls_state = 725
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 633
+					controls_state = 643
+					controls_state = 725
+				}
+			}
+			FROM = { controls_state = 639 }
+		}
+
+		# Nauru-Caroline Islands/Nendo/Elice Islands
+		AND = {
+			THIS = { controls_state = 639 }
+			FROM = {
+				OR = {
+					controls_state = 643
+					controls_state = 684
+					controls_state = 734
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 643
+					controls_state = 684
+					controls_state = 734
+				}
+			}
+			FROM = { controls_state = 639 }
+		}
+
+		# Phoenix Island-Line Islands/Samoa/Elice Islands
+		AND = {
+			THIS = { controls_state = 642 }
+			FROM = {
+				OR = {
+					controls_state = 643
+					controls_state = 726
+					controls_state = 727
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 643
+					controls_state = 726
+					controls_state = 727
+				}
+			}
+			FROM = { controls_state = 642 }
+		}
+
+		# Tahiti-Pitcairn Island/Samoa
+		AND = {
+			THIS = { controls_state = 641 }
+			FROM = {
+				OR = {
+					controls_state = 270
+					controls_state = 726
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 270
+					controls_state = 726
+				}
+			}
+			FROM = { controls_state = 641 }
+		}
+
+		# Fiji-North Island/Samoa/Elice Islands/New Caledonia
+		AND = {
+			THIS = { controls_state = 636 }
+			FROM = {
+				OR = {
+					controls_state = 284
+					controls_state = 635
+					controls_state = 643
+					controls_state = 726
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 284
+					controls_state = 635
+					controls_state = 643
+					controls_state = 726
+				}
+			}
+			FROM = { controls_state = 636 }
+		}
+
+		# Solomon Islands-Bismarck/Nendo
+		AND = {
+			THIS = { controls_state = 634 }
+			FROM = {
+				OR = {
+					controls_state = 734
+					controls_state = 737
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 734
+					controls_state = 737
+				}
+			}
+			FROM = { controls_state = 634 }
+		}
+
+		# New Caledonia-North Island/Nendo
+		AND = {
+			THIS = { controls_state = 635 }
+			FROM = {
+				OR = {
+					controls_state = 284
+					controls_state = 734
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 284
+					controls_state = 734
+				}
+			}
+			FROM = { controls_state = 635 }
+		}
+
+		# Tasmania-Victoria/South Island
+		AND = {
+			THIS = { controls_state = 518 }
+			FROM = {
+				OR = {
+					controls_state = 517
+					controls_state = 723
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 517
+					controls_state = 723
+				}
+			}
+			FROM = { controls_state = 518 }
+		}
+
+		# Papua-North Queensland
+		AND = {
+			THIS = { controls_state = 523 }
+			FROM = { controls_state = 872 }
+		}
+		AND = {
+			THIS = { controls_state = 872 }
+			FROM = { controls_state = 523 }
+		}
+
+		# Aru Islands-Portugese Timor/West Papua
+		AND = {
+			THIS = { controls_state = 738 }
+			FROM = {
+				OR = {
+					controls_state = 669
+					controls_state = 721
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 669
+					controls_state = 721
+				}
+			}
+			FROM = { controls_state = 738 }
+		}
+
+		# The Moluccas-Sulawesi/Mindanao/West Papua
+		AND = {
+			THIS = { controls_state = 668 }
+			FROM = {
+				OR = {
+					controls_state = 627
+					controls_state = 673
+					controls_state = 669
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 627
+					controls_state = 673
+					controls_state = 669
+				}
+			}
+			FROM = { controls_state = 668 }
+		}
+
+		# Kalimantan-Sulawesi/Sumatra
+		AND = {
+			THIS = { controls_state = 334 }
+			FROM = {
+				OR = {
+					controls_state = 672
+					controls_state = 673
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 672
+					controls_state = 673
+				}
+			}
+			FROM = { controls_state = 334 }
+		}
+
+		# Sumatra-Singapore
+		AND = {
+			THIS = { controls_state = 336 }
+			FROM = { controls_state = 672 }
+		}
+		AND = {
+			THIS = { controls_state = 672 }
+			FROM = { controls_state = 336 }
+		}
+
+		# Andaman-Burma/Sumatra
+		AND = {
+			THIS = { controls_state = 733 }
+			FROM = {
+				OR = {
+					controls_state = 228
+					controls_state = 672
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 228
+					controls_state = 672
+				}
+			}
+			FROM = { controls_state = 733 }
+		}
+
+		# Christmas Island-Java/Cocos Islands/Western Australia
+		AND = {
+			THIS = { controls_state = 711 }
+			FROM = {
+				OR = {
+					controls_state = 335
+					controls_state = 522
+					controls_state = 712
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 335
+					controls_state = 522
+					controls_state = 712
+				}
+			}
+			FROM = { controls_state = 711 }
+		}
+
+		# Diego Garcia-Maldives/Cocos Islands/Seychelles/Mauritius
+		AND = {
+			THIS = { controls_state = 710 }
+			FROM = {
+				OR = {
+					controls_state = 281
+					controls_state = 707
+					controls_state = 709
+					controls_state = 712
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 281
+					controls_state = 707
+					controls_state = 709
+					controls_state = 712
+				}
+			}
+			FROM = { controls_state = 710 }
+		}
+
+		# Reunion-Madagascar/Kerguelen/Mauritius
+		AND = {
+			THIS = { controls_state = 706 }
+			FROM = {
+				OR = {
+					controls_state = 543
+					controls_state = 707
+					controls_state = 713
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 543
+					controls_state = 707
+					controls_state = 713
+				}
+			}
+			FROM = { controls_state = 706 }
+		}
+
+		# Comoro Islands-Madagascar/Zambezia-Moçambique
+		AND = {
+			THIS = { controls_state = 708 }
+			FROM = {
+				OR = {
+					controls_state = 543
+					controls_state = 897
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 543
+					controls_state = 897
+				}
+			}
+			FROM = { controls_state = 708 }
+		}
+
+		# Madurai-Ceylon/Maldives
+		AND = {
+			THIS = { controls_state = 423 }
+			FROM = {
+				OR = {
+					controls_state = 281
+					controls_state = 422
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 281
+					controls_state = 422
+				}
+			}
+			FROM = { controls_state = 423 }
+		}
+
+		# Socotra-Aden/Somaliland/Maldives/Seychelles
+		AND = {
+			THIS = { controls_state = 906 }
+			FROM = {
+				OR = {
+					controls_state = 281
+					controls_state = 559
+					controls_state = 659
+					controls_state = 709
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 281
+					controls_state = 559
+					controls_state = 659
+					controls_state = 709
+				}
+			}
+			FROM = { controls_state = 906 }
+		}
+
+		# Ascension-Cape Verde/Sao Tome/Saint Helena
+		AND = {
+			THIS = { controls_state = 703 }
+			FROM = {
+				OR = {
+					controls_state = 702
+					controls_state = 704
+					controls_state = 705
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 702
+					controls_state = 704
+					controls_state = 705
+				}
+			}
+			FROM = { controls_state = 703 }
+		}
+
+		# Sao Tome-Equatoral Guinea
+		AND = {
+			THIS = { controls_state = 297 }
+			FROM = { controls_state = 705 }
+		}
+		AND = {
+			THIS = { controls_state = 705 }
+			FROM = { controls_state = 297 }
+		}
+
+		# South Georgia-Falkland Islands/Saint Helena
+		AND = {
+			THIS = { controls_state = 720 }
+			FROM = {
+				OR = {
+					controls_state = 229
+					controls_state = 704
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 229
+					controls_state = 704
+				}
+			}
+			FROM = { controls_state = 720 }
+		}
+
+		# Falkland Islands-Chubut/Tierra del Fuego
+		AND = {
+			THIS = { controls_state = 229 }
+			FROM = {
+				OR = {
+					controls_state = 953
+					controls_state = 955
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 953
+					controls_state = 955
+				}
+			}
+			FROM = { controls_state = 229 }
+		}
 	}
 }
 
 is_neighboring_ownership_special_case_country = {
 	OR = {
+		# Lanark-Northern Ireland
 		AND = {
 			THIS = { owns_state = 119 }
 			ROOT = { owns_state = 133 }
@@ -72,6 +5948,1240 @@ is_neighboring_ownership_special_case_country = {
 		AND = {
 			THIS = { owns_state = 133 }
 			ROOT = { owns_state = 119 }
+		}
+
+		# Corsica-Var/Toscana
+		AND = {
+			THIS = { owns_state = 1 }
+			ROOT = {
+				OR = {
+					owns_state = 162
+					owns_state = 851
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 162
+					owns_state = 851
+				}
+			}
+			ROOT = { owns_state = 1 }
+		}
+
+		# Sicilia-Sardegna/Malta
+		AND = {
+			THIS = { owns_state = 115 }
+			ROOT = {
+				OR = {
+					owns_state = 114
+					owns_state = 116
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 114
+					owns_state = 116
+				}
+			}
+			ROOT = { owns_state = 115 }
+		}
+
+		# Islas Baleares-Cataluña/Sardegna
+		AND = {
+			THIS = { owns_state = 177 }
+			ROOT = {
+				OR = {
+					owns_state = 115
+					owns_state = 165
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 115
+					owns_state = 165
+				}
+			}
+			ROOT = { owns_state = 177 }
+		}
+
+		# Crete-Peloponnese/Aegean Islands/Dodecanese
+		AND = {
+			THIS = { owns_state = 182 }
+			ROOT = {
+				OR = {
+					owns_state = 164
+					owns_state = 186
+					owns_state = 187
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 164
+					owns_state = 186
+					owns_state = 187
+				}
+			}
+			ROOT = { owns_state = 182 }
+		}
+
+		# Cyprus-Dodecanese/Mersin
+		AND = {
+			THIS = { owns_state = 183 }
+			ROOT = {
+				OR = {
+					owns_state = 164
+					owns_state = 345
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 164
+					owns_state = 345
+				}
+			}
+			ROOT = { owns_state = 183 }
+		}
+
+		# Gibraltar-Spanish Africa
+		AND = {
+			THIS = { owns_state = 118 }
+			ROOT = { owns_state = 290 }
+		}
+		AND = {
+			THIS = { owns_state = 290 }
+			ROOT = { owns_state = 118 }
+		}
+
+		# Cape Verde-Senegal/Rio Grande do Norte
+		AND = {
+			THIS = { owns_state = 702 }
+			ROOT = {
+				OR = {
+					owns_state = 272
+					owns_state = 498
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 272
+					owns_state = 498
+				}
+			}
+			ROOT = { owns_state = 702 }
+		}
+
+		# Islas Canarias-Cape Verde/Rio de Oro/Madeira
+		AND = {
+			THIS = { owns_state = 178 }
+			ROOT = {
+				OR = {
+					owns_state = 697
+					owns_state = 699
+					owns_state = 702
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 697
+					owns_state = 699
+					owns_state = 702
+				}
+			}
+			ROOT = { owns_state = 178 }
+		}
+
+		# Madeira-Beja
+		AND = {
+			THIS = { owns_state = 179 }
+			ROOT = { owns_state = 697 }
+		}
+		AND = {
+			THIS = { owns_state = 697 }
+			ROOT = { owns_state = 179 }
+		}
+
+		# Azores-Madeira/Bermuda/French Carribean
+		AND = {
+			THIS = { owns_state = 698 }
+			ROOT = {
+				OR = {
+					owns_state = 694
+					owns_state = 696
+					owns_state = 697
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 694
+					owns_state = 696
+					owns_state = 697
+				}
+			}
+			ROOT = { owns_state = 698 }
+		}
+
+		# Trinidad-Windward Islands
+		AND = {
+			THIS = { owns_state = 691 }
+			ROOT = { owns_state = 692 }
+		}
+		AND = {
+			THIS = { owns_state = 692 }
+			ROOT = { owns_state = 691 }
+		}
+
+		# Dominican Republic-Puerto Rico
+		AND = {
+			THIS = { owns_state = 319 }
+			ROOT = { owns_state = 686 }
+		}
+		AND = {
+			THIS = { owns_state = 686 }
+			ROOT = { owns_state = 319 }
+		}
+
+		# Northern Bahamas-Southern Bahamas/Florida/Bermuda
+		AND = {
+			THIS = { owns_state = 690 }
+			ROOT = {
+				OR = {
+					owns_state = 366
+					owns_state = 693
+					owns_state = 696
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 366
+					owns_state = 693
+					owns_state = 696
+				}
+			}
+			ROOT = { owns_state = 690 }
+		}
+
+		# Cuba-Yucatan/Southern Bahamas/Haiti
+		AND = {
+			THIS = { owns_state = 315 }
+			ROOT = {
+				OR = {
+					owns_state = 318
+					owns_state = 474
+					owns_state = 693
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 318
+					owns_state = 474
+					owns_state = 693
+				}
+			}
+			ROOT = { owns_state = 315 }
+		}
+
+		# Haiti-Jamaica
+		AND = {
+			THIS = { owns_state = 318 }
+			ROOT = { owns_state = 689 }
+		}
+		AND = {
+			THIS = { owns_state = 689 }
+			ROOT = { owns_state = 318 }
+		}
+
+		# Bermuda-North Carolina
+		AND = {
+			THIS = { owns_state = 363 }
+			ROOT = { owns_state = 696 }
+		}
+		AND = {
+			THIS = { owns_state = 696 }
+			ROOT = { owns_state = 363 }
+		}
+
+		# Ecuador-Galapagos Islands
+		AND = {
+			THIS = { owns_state = 305 }
+			ROOT = { owns_state = 649 }
+		}
+		AND = {
+			THIS = { owns_state = 649 }
+			ROOT = { owns_state = 305 }
+		}
+
+		# Easter Island-Santiago/Pitcairn Island
+		AND = {
+			THIS = { owns_state = 948 }
+			ROOT = {
+				OR = {
+					owns_state = 270
+					owns_state = 279
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 270
+					owns_state = 279
+				}
+			}
+			ROOT = { owns_state = 948 }
+		}
+
+		# Haida Gwaii-Upper British Columbia
+		AND = {
+			THIS = { owns_state = 471 }
+			ROOT = { owns_state = 739 }
+		}
+		AND = {
+			THIS = { owns_state = 739 }
+			ROOT = { owns_state = 471 }
+		}
+
+		# Attu Island-Kamchatka/Midway Island/Alaska
+		AND = {
+			THIS = { owns_state = 650 }
+			ROOT = {
+				OR = {
+					owns_state = 463
+					owns_state = 631
+					owns_state = 637
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 463
+					owns_state = 631
+					owns_state = 637
+				}
+			}
+			ROOT = { owns_state = 650 }
+		}
+
+		# Chukchi Peninsula-Chukotka/Alaska
+		AND = {
+			THIS = { owns_state = 875 }
+			ROOT = {
+				OR = {
+					owns_state = 463
+					owns_state = 822
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 463
+					owns_state = 822
+				}
+			}
+			ROOT = { owns_state = 875 }
+		}
+
+		# Newfoundland-Nova Scotia/Côte-Nord/St. Pierre and Miquelon
+		AND = {
+			THIS = { owns_state = 331 }
+			ROOT = {
+				OR = {
+					owns_state = 464
+					owns_state = 730
+					owns_state = 860
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 464
+					owns_state = 730
+					owns_state = 860
+				}
+			}
+			ROOT = { owns_state = 331 }
+		}
+
+		# Greenland-Labrador/Iceland
+		AND = {
+			THIS = { owns_state = 101 }
+			ROOT = {
+				OR = {
+					owns_state = 100
+					owns_state = 332
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 100
+					owns_state = 332
+				}
+			}
+			ROOT = { owns_state = 101 }
+		}
+
+		# Jan Mayen-Nordland/Iceland
+		AND = {
+			THIS = { owns_state = 914 }
+			ROOT = {
+				OR = {
+					owns_state = 100
+					owns_state = 144
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 100
+					owns_state = 144
+				}
+			}
+			ROOT = { owns_state = 914 }
+		}
+
+		# Faroe Islands-Shetland Islands/Iceland
+		AND = {
+			THIS = { owns_state = 337 }
+			ROOT = {
+				OR = {
+					owns_state = 100
+					owns_state = 933
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 100
+					owns_state = 933
+				}
+			}
+			ROOT = { owns_state = 337 }
+		}
+
+		# Shetland Islands-Scottish Highlands/Vestlandet
+		AND = {
+			THIS = { owns_state = 933 }
+			ROOT = {
+				OR = {
+					owns_state = 120
+					owns_state = 142
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 120
+					owns_state = 142
+				}
+			}
+			ROOT = { owns_state = 933 }
+		}
+
+		# Isle of Man-Northern Ireland/Lanark/Cumbria
+		AND = {
+			THIS = { owns_state = 932 }
+			ROOT = {
+				OR = {
+					owns_state = 119
+					owns_state = 133
+					owns_state = 931
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 119
+					owns_state = 133
+					owns_state = 931
+				}
+			}
+			ROOT = { owns_state = 932 }
+		}
+
+		# Sussex-Nord-Pas-de-Calais
+		AND = {
+			THIS = { owns_state = 29 }
+			ROOT = { owns_state = 127 }
+		}
+		AND = {
+			THIS = { owns_state = 127 }
+			ROOT = { owns_state = 29 }
+		}
+
+		# Aland-Södermanland/Turku/Gotland
+		AND = {
+			THIS = { owns_state = 145 }
+			ROOT = {
+				OR = {
+					owns_state = 124
+					owns_state = 141
+					owns_state = 926
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 124
+					owns_state = 141
+					owns_state = 926
+				}
+			}
+			ROOT = { owns_state = 145 }
+		}
+
+		# Gotland-Smaland
+		AND = {
+			THIS = { owns_state = 124 }
+			ROOT = { owns_state = 139 }
+		}
+		AND = {
+			THIS = { owns_state = 139 }
+			ROOT = { owns_state = 124 }
+		}
+
+		# Bornholm-Skane
+		AND = {
+			THIS = { owns_state = 138 }
+			ROOT = { owns_state = 910 }
+		}
+		AND = {
+			THIS = { owns_state = 910 }
+			ROOT = { owns_state = 138 }
+		}
+
+		# Hokkaido-South Sakhalin
+		AND = {
+			THIS = { owns_state = 536 }
+			ROOT = { owns_state = 537 }
+		}
+		AND = {
+			THIS = { owns_state = 537 }
+			ROOT = { owns_state = 536 }
+		}
+
+		# Kuril Islands-Kamchatka
+		AND = {
+			THIS = { owns_state = 555 }
+			ROOT = { owns_state = 637 }
+		}
+		AND = {
+			THIS = { owns_state = 637 }
+			ROOT = { owns_state = 555 }
+		}
+
+		# Kyushu-South Korea/Okinawa
+		AND = {
+			THIS = { owns_state = 528 }
+			ROOT = {
+				OR = {
+					owns_state = 525
+					owns_state = 526
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 525
+					owns_state = 526
+				}
+			}
+			ROOT = { owns_state = 528 }
+		}
+
+		# Taiwan-Fujian/Okinawa/Luzon
+		AND = {
+			THIS = { owns_state = 524 }
+			ROOT = {
+				OR = {
+					owns_state = 526
+					owns_state = 595
+					owns_state = 623
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 526
+					owns_state = 595
+					owns_state = 623
+				}
+			}
+			ROOT = { owns_state = 524 }
+		}
+
+		# Cebu-Cental Islands/Samar/Mindanao
+		AND = {
+			THIS = { owns_state = 628 }
+			ROOT = {
+				OR = {
+					owns_state = 624
+					owns_state = 625
+					owns_state = 627
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 624
+					owns_state = 625
+					owns_state = 627
+				}
+			}
+			ROOT = { owns_state = 628 }
+		}
+
+		# Palawan-Cental Islands/North Borneo
+		AND = {
+			THIS = { owns_state = 626 }
+			ROOT = {
+				OR = {
+					owns_state = 333
+					owns_state = 624
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 333
+					owns_state = 624
+				}
+			}
+			ROOT = { owns_state = 626 }
+		}
+
+		# Hawaii-California
+		AND = {
+			THIS = { owns_state = 378 }
+			ROOT = { owns_state = 629 }
+		}
+		AND = {
+			THIS = { owns_state = 629 }
+			ROOT = { owns_state = 378 }
+		}
+
+		# Johnston Atoll-Hawaii/Midway Island/Line Islands
+		AND = {
+			THIS = { owns_state = 630 }
+			ROOT = {
+				OR = {
+					owns_state = 629
+					owns_state = 631
+					owns_state = 727
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 629
+					owns_state = 631
+					owns_state = 727
+				}
+			}
+			ROOT = { owns_state = 630 }
+		}
+
+		# Wake Island-Marcus Island/Midway Island/Marshall Islands
+		AND = {
+			THIS = { owns_state = 632 }
+			ROOT = {
+				OR = {
+					owns_state = 631
+					owns_state = 633
+					owns_state = 648
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 631
+					owns_state = 633
+					owns_state = 648
+				}
+			}
+			ROOT = { owns_state = 632 }
+		}
+
+		# Iwo Jima-Marcus Island/Saipan/Okinawa
+		AND = {
+			THIS = { owns_state = 645 }
+			ROOT = {
+				OR = {
+					owns_state = 526
+					owns_state = 646
+					owns_state = 648
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 526
+					owns_state = 646
+					owns_state = 648
+				}
+			}
+			ROOT = { owns_state = 645 }
+		}
+
+		# Guam-Caroline Islands/Saipan
+		AND = {
+			THIS = { owns_state = 638 }
+			ROOT = {
+				OR = {
+					owns_state = 646
+					owns_state = 684
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 646
+					owns_state = 684
+				}
+			}
+			ROOT = { owns_state = 638 }
+		}
+
+		# Palau-Caroline Islands/Mindanao
+		AND = {
+			THIS = { owns_state = 647 }
+			ROOT = {
+				OR = {
+					owns_state = 627
+					owns_state = 684
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 627
+					owns_state = 684
+				}
+			}
+			ROOT = { owns_state = 647 }
+		}
+
+		# Caroline Islands-Marshall Islands
+		AND = {
+			THIS = { owns_state = 633 }
+			ROOT = { owns_state = 684 }
+		}
+		AND = {
+			THIS = { owns_state = 684 }
+			ROOT = { owns_state = 633 }
+		}
+
+		# Gilbert Islands-Marshall Islands/Nauru/Elice Islands
+		AND = {
+			THIS = { owns_state = 639 }
+			ROOT = {
+				OR = {
+					owns_state = 633
+					owns_state = 643
+					owns_state = 725
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 633
+					owns_state = 643
+					owns_state = 725
+				}
+			}
+			ROOT = { owns_state = 639 }
+		}
+
+		# Nauru-Caroline Islands/Nendo/Elice Islands
+		AND = {
+			THIS = { owns_state = 639 }
+			ROOT = {
+				OR = {
+					owns_state = 643
+					owns_state = 684
+					owns_state = 734
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 643
+					owns_state = 684
+					owns_state = 734
+				}
+			}
+			ROOT = { owns_state = 639 }
+		}
+
+		# Phoenix Island-Line Islands/Samoa/Elice Islands
+		AND = {
+			THIS = { owns_state = 642 }
+			ROOT = {
+				OR = {
+					owns_state = 643
+					owns_state = 726
+					owns_state = 727
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 643
+					owns_state = 726
+					owns_state = 727
+				}
+			}
+			ROOT = { owns_state = 642 }
+		}
+
+		# Tahiti-Pitcairn Island/Samoa
+		AND = {
+			THIS = { owns_state = 641 }
+			ROOT = {
+				OR = {
+					owns_state = 270
+					owns_state = 726
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 270
+					owns_state = 726
+				}
+			}
+			ROOT = { owns_state = 641 }
+		}
+
+		# Fiji-North Island/Samoa/Elice Islands/New Caledonia
+		AND = {
+			THIS = { owns_state = 636 }
+			ROOT = {
+				OR = {
+					owns_state = 284
+					owns_state = 635
+					owns_state = 643
+					owns_state = 726
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 284
+					owns_state = 635
+					owns_state = 643
+					owns_state = 726
+				}
+			}
+			ROOT = { owns_state = 636 }
+		}
+
+		# Solomon Islands-Bismarck/Nendo
+		AND = {
+			THIS = { owns_state = 634 }
+			ROOT = {
+				OR = {
+					owns_state = 734
+					owns_state = 737
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 734
+					owns_state = 737
+				}
+			}
+			ROOT = { owns_state = 634 }
+		}
+
+		# New Caledonia-North Island/Nendo
+		AND = {
+			THIS = { owns_state = 635 }
+			ROOT = {
+				OR = {
+					owns_state = 284
+					owns_state = 734
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 284
+					owns_state = 734
+				}
+			}
+			ROOT = { owns_state = 635 }
+		}
+
+		# Tasmania-Victoria/South Island
+		AND = {
+			THIS = { owns_state = 518 }
+			ROOT = {
+				OR = {
+					owns_state = 517
+					owns_state = 723
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 517
+					owns_state = 723
+				}
+			}
+			ROOT = { owns_state = 518 }
+		}
+
+		# Papua-North Queensland
+		AND = {
+			THIS = { owns_state = 523 }
+			ROOT = { owns_state = 872 }
+		}
+		AND = {
+			THIS = { owns_state = 872 }
+			ROOT = { owns_state = 523 }
+		}
+
+		# Aru Islands-Portugese Timor/West Papua
+		AND = {
+			THIS = { owns_state = 738 }
+			ROOT = {
+				OR = {
+					owns_state = 669
+					owns_state = 721
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 669
+					owns_state = 721
+				}
+			}
+			ROOT = { owns_state = 738 }
+		}
+
+		# The Moluccas-Sulawesi/Mindanao/West Papua
+		AND = {
+			THIS = { owns_state = 668 }
+			ROOT = {
+				OR = {
+					owns_state = 627
+					owns_state = 673
+					owns_state = 669
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 627
+					owns_state = 673
+					owns_state = 669
+				}
+			}
+			ROOT = { owns_state = 668 }
+		}
+
+		# Kalimantan-Sulawesi/Sumatra
+		AND = {
+			THIS = { owns_state = 334 }
+			ROOT = {
+				OR = {
+					owns_state = 672
+					owns_state = 673
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 672
+					owns_state = 673
+				}
+			}
+			ROOT = { owns_state = 334 }
+		}
+
+		# Sumatra-Singapore
+		AND = {
+			THIS = { owns_state = 336 }
+			ROOT = { owns_state = 672 }
+		}
+		AND = {
+			THIS = { owns_state = 672 }
+			ROOT = { owns_state = 336 }
+		}
+
+		# Andaman-Burma/Sumatra
+		AND = {
+			THIS = { owns_state = 733 }
+			ROOT = {
+				OR = {
+					owns_state = 228
+					owns_state = 672
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 228
+					owns_state = 672
+				}
+			}
+			ROOT = { owns_state = 733 }
+		}
+
+		# Christmas Island-Java/Cocos Islands/Western Australia
+		AND = {
+			THIS = { owns_state = 711 }
+			ROOT = {
+				OR = {
+					owns_state = 335
+					owns_state = 522
+					owns_state = 712
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 335
+					owns_state = 522
+					owns_state = 712
+				}
+			}
+			ROOT = { owns_state = 711 }
+		}
+
+		# Diego Garcia-Maldives/Cocos Islands/Seychelles/Mauritius
+		AND = {
+			THIS = { owns_state = 710 }
+			ROOT = {
+				OR = {
+					owns_state = 281
+					owns_state = 707
+					owns_state = 709
+					owns_state = 712
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 281
+					owns_state = 707
+					owns_state = 709
+					owns_state = 712
+				}
+			}
+			ROOT = { owns_state = 710 }
+		}
+
+		# Reunion-Madagascar/Kerguelen/Mauritius
+		AND = {
+			THIS = { owns_state = 706 }
+			ROOT = {
+				OR = {
+					owns_state = 543
+					owns_state = 707
+					owns_state = 713
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 543
+					owns_state = 707
+					owns_state = 713
+				}
+			}
+			ROOT = { owns_state = 706 }
+		}
+
+		# Comoro Islands-Madagascar/Zambezia-Moçambique
+		AND = {
+			THIS = { owns_state = 708 }
+			ROOT = {
+				OR = {
+					owns_state = 543
+					owns_state = 897
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 543
+					owns_state = 897
+				}
+			}
+			ROOT = { owns_state = 708 }
+		}
+
+		# Madurai-Ceylon/Maldives
+		AND = {
+			THIS = { owns_state = 423 }
+			ROOT = {
+				OR = {
+					owns_state = 281
+					owns_state = 422
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 281
+					owns_state = 422
+				}
+			}
+			ROOT = { owns_state = 423 }
+		}
+
+		# Socotra-Aden/Somaliland/Maldives/Seychelles
+		AND = {
+			THIS = { owns_state = 906 }
+			ROOT = {
+				OR = {
+					owns_state = 281
+					owns_state = 559
+					owns_state = 659
+					owns_state = 709
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 281
+					owns_state = 559
+					owns_state = 659
+					owns_state = 709
+				}
+			}
+			ROOT = { owns_state = 906 }
+		}
+
+		# Ascension-Cape Verde/Sao Tome/Saint Helena
+		AND = {
+			THIS = { owns_state = 703 }
+			ROOT = {
+				OR = {
+					owns_state = 702
+					owns_state = 704
+					owns_state = 705
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 702
+					owns_state = 704
+					owns_state = 705
+				}
+			}
+			ROOT = { owns_state = 703 }
+		}
+
+		# Sao Tome-Equatoral Guinea
+		AND = {
+			THIS = { owns_state = 297 }
+			ROOT = { owns_state = 705 }
+		}
+		AND = {
+			THIS = { owns_state = 705 }
+			ROOT = { owns_state = 297 }
+		}
+
+		# South Georgia-Falkland Islands/Saint Helena
+		AND = {
+			THIS = { owns_state = 720 }
+			ROOT = {
+				OR = {
+					owns_state = 229
+					owns_state = 704
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 229
+					owns_state = 704
+				}
+			}
+			ROOT = { owns_state = 720 }
+		}
+
+		# Falkland Islands-Chubut/Tierra del Fuego
+		AND = {
+			THIS = { owns_state = 229 }
+			ROOT = {
+				OR = {
+					owns_state = 953
+					owns_state = 955
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 953
+					owns_state = 955
+				}
+			}
+			ROOT = { owns_state = 229 }
 		}
 	}
 }
