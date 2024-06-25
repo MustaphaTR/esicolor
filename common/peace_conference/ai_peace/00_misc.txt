@@ -1,0 +1,61 @@
+# Scripted AI desire for peace actions.
+# See documentation.info file for more detailed scripting information.
+
+peace_ai_desires = {
+
+	take_everything = {
+        peace_action_type = { take_states }
+        enable = {
+            always = yes
+        }
+        ai_desire = 200000
+    }
+
+	dont_do_other_stuff = {
+        peace_action_type = { force_government liberate puppet }
+        enable = {
+            always = yes
+        }
+        ai_desire = -200000
+    }
+
+    civil_war_participants_dont_accept_each_other = {
+        peace_action_type = { force_government puppet liberate }
+        enable = {
+			ROOT = {
+				has_civil_war = yes
+				original_tag = FROM # has same original tag as Recipient
+			}
+        }
+        ai_desire = -20000
+    }
+
+	#############
+	# Puppets
+	#############
+
+	puppets_dont_interfere_take_states = { #Puppets will focus on helping others most likely, or bidding on their own claims/cores
+		peace_action_type = take_states
+		enable = {
+			is_subject = yes
+			NOT = {
+				OR = {
+					ROOT.FROM.FROM.FROM = { is_claimed_by = ROOT.FROM }
+					ROOT.FROM.FROM.FROM = { is_core_of = ROOT.FROM }
+				}
+			}
+		}
+		ai_desire = -20000
+	}
+
+	puppets_dont_interfere_others = { #Puppets will not try and puppet/liberate/force-gov
+		peace_action_type = { force_government puppet liberate }
+		enable = {
+			is_subject = yes
+			OVERLORD = {
+				NOT = { tag = ROOT.FROM }
+			}
+		}
+		ai_desire = -20000
+	}
+}
