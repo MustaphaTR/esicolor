@@ -1,0 +1,40 @@
+characters={
+	SLL_lavrenty_beriya = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name=SOV_lavrenty_beriya
+			portraits={
+				civilian={
+					large="GFX_portrait_SOV_lavrenty_beriya"
+					small="GFX_idea_SOV_lavrenty_beriya"
+				}
+			}
+			country_leader={
+				traits={ unscrupulous_orchestrator }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name=SOV_lavrenty_beriya
+			portraits={
+				civilian={
+					large="GFX_portrait_SOV_lavrenty_beriya"
+					small="GFX_idea_SOV_lavrenty_beriya"
+				}
+			}
+			country_leader={
+				traits={ unscrupulous_orchestrator_no_lar }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
