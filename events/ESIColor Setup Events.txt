@@ -23,6 +23,8 @@ country_event = {
 				setup_default_companies = yes
 			}
 
+			make_default_ais_choose_path = yes
+
 			set_global_flag = claiming_give_war_goals
 			set_variable = { global.claiming_cost = 40 }
 			set_variable = { global.claiming_cost_minus_one = 39 }
@@ -167,6 +169,7 @@ country_event = {
 	option = {
 		name = esicolor.2.a
 		country_event = esicolor.3
+		make_default_ais_choose_path = yes
 	}
 	option = {
 		name = esicolor.2.b

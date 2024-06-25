@@ -1,3 +1,24 @@
+make_default_ais_choose_path = {
+	hidden_effect = {
+		every_country = {
+			limit = {
+				democratic < 0.26
+				fascism < 0.26
+				communism < 0.26
+				neutrality < 0.26
+			}
+
+			random_list = {
+				seed = random
+				25 = { set_country_flag = ai_go_neutrality }
+				25 = { set_country_flag = ai_go_democratic }
+				25 = { set_country_flag = ai_go_fascism }
+				25 = { set_country_flag = ai_go_communism }
+			}
+		}
+	}
+}
+
 set_ideologies_to_neutrality = {
 	set_politics = {
 		ruling_party = neutrality
@@ -8099,8 +8120,9 @@ clear_leader_traits = {
 	remove_country_leader_trait = underage_monarch
 	remove_country_leader_trait = dealbroker
 	remove_country_leader_trait = stout_defender
-	remove_country_leader_trait = anti_communist
 	remove_country_leader_trait = headstrong
+	remove_country_leader_trait = dislikes_germany
+	remove_country_leader_trait = anti_communist
 	remove_country_leader_trait = anti_democrat
 	remove_country_leader_trait = resolute_social_democrat
 	remove_country_leader_trait = warrior_code
