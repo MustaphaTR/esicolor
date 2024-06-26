@@ -1,0 +1,137 @@
+﻿###########################
+# Political Events
+###########################
+
+add_namespace = esicolorpolitical
+
+country_event = {
+	id = esicolorpolitical.1
+	title = esicolorpolitical.1.t
+	desc = esicolorpolitical.1.d
+	picture = GFX_report_event_journalists_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = esicolorpolitical.1.c
+		if = {
+			limit = { has_government = fascism }
+			add_timed_idea = { idea = fascism_defeated days = 730 }
+		}
+		if = {
+			limit = { has_government = communism }
+			add_timed_idea = { idea = communism_defeated days = 730 }
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		add_stability = -0.05
+	}
+}
+
+# Neutrality on the Rise
+country_event = {
+	id = esicolorpolitical.2
+	title = esicolorpolitical.2.t
+	desc = esicolorpolitical.2.d
+	picture = GFX_report_event_worker_protests
+
+	trigger = {
+		NOT = { has_government = neutrality }
+		neutrality > 0.6
+	}
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	# We need a referendum
+	option = {
+		name = esicolorpolitical.2.c
+		add_political_power = -100
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+	}
+
+	# Not right now
+	option = {
+		name = esicolorpolitical.2.e
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = impending_civil_war_tt
+	}
+}
+
+# [Root.Capital.GetName] Grill Party
+country_event = {
+	id = esicolorpolitical.3
+	title = esicolorpolitical.3.t
+	desc = esicolorpolitical.3.d
+	# picture = GFX_report_event_fascist_militia
+
+	trigger = {
+		has_idea_with_trait = staunch_monarchist
+		NOT = { has_government = neutrality }
+		neutrality > 0.3
+		NOT = { neutrality > 0.59 }
+		NOT = { has_idea = aftermath_of_grill_party }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.5
+			has_country_flag = neutrality_popular_movement
+		}
+	}
+
+	option = {
+		name = esicolorpolitical.3.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_ideas = aftermath_of_grill_party
+	}
+}
+
+# The Threat of Extremism
+country_event = {
+	id = esicolorpolitical.4
+	title = esicolorpolitical.4.t
+	desc = esicolorpolitical.4.d
+	picture = GFX_report_event_worker_protests
+	
+	trigger = {
+		has_idea_with_trait = staunch_monarchist
+		NOT = { has_government = neutrality }
+		neutrality > 0.25
+		NOT = { neutrality > 0.59 }
+		any_neighbor_country = {
+			has_government = communism
+			has_government = fascism
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.5
+			has_country_flag = neutrality_popular_movement
+		}
+	}
+
+	option = {
+		name = esicolorpolitical.4.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+	}
+}

@@ -19,6 +19,24 @@ ideas = {
 	}
 	
 	country = {
+		aftermath_of_grill_party = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = generic_neutrality_drift_bonus
+			
+			modifier = {
+				stability_factor = 0.05
+				conscription = -0.005
+				neutrality_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
 		idea_political_correctness = {
 			allowed = {
 				always = no
