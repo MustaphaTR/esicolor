@@ -1,0 +1,216 @@
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+OEF_task_force_ship_organization = {
+    name = DEN_burmeister_wain_organization
+    include = esicolor_generic_task_force_ship_organization
+    icon = GFX_idea_DEN_burmeister_wain_organization
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OEF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 37
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				37 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OEF_raider_ship_organization = {
+    name = DEN_orlogsvaerftet_organization
+    include = esicolor_generic_raider_ship_organization
+    icon = GFX_idea_DEN_orlogsvaerftet_organization
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OEF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 37
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				37 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OEF_naval_aircraft_organization = {
+    name = DEN_flyvemaskinevaerksted_organization
+    include = esicolor_generic_naval_aircraft_organization
+    icon = GFX_idea_DEN_flyvemaskinevaerksted_organization
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OEF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 37
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				37 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+OEF_infantry_equipment_organization = {
+    name = DEN_DISA_organization
+    include = esicolor_generic_infantry_equipment_organization
+    icon = GFX_idea_DEN_DISA_organization
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OEF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 37
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				37 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OYY_artillery_organization = {
+    name = DEN_haerens_tekniske_korps_organization
+    include = esicolor_generic_artillery_organization
+    icon = GFX_idea_DEN_haerens_tekniske_korps_organization
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = OYY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 99
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				99 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+YII_motorized_mechanized_organization = {
+    name = DEN_triangel_organization
+    include = esicolor_generic_motorized_mechanized_organization
+    icon = GFX_idea_DEN_triangel_organization
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = YII
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 911
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				911 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
