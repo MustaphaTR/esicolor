@@ -1,0 +1,40 @@
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OAB_light_aircraft_organization = {
+	name = BUL_dar_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_bul_dar
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OAB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 48
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				48 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
