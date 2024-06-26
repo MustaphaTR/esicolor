@@ -1,0 +1,71 @@
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+BAZ_infantry_equipment_organization = {
+	name = ETH_hmmbi
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_ETH_hmmbi
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = BAZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 842
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				842 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZFI_support_equipment_organization = {
+	name = ETH_ncgf
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_ETH_ncgf
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZFI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 271
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				271 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

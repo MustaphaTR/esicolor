@@ -1,0 +1,163 @@
+ideas = {
+	# Some of these companies didn't exist in '36, but i would like to have something in Africa for the custom companies only mode.
+	materiel_manufacturer = {
+		designer = yes
+
+		BAZ_infantry_equipment_manufacturer = {
+			name = ETH_hmmbi
+			picture = ETH_hmmbi
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = BAZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 842
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					842 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		ZFI_support_equipment_manufacturer = {
+			name = ETH_ncgf
+			picture = ETH_ncgf
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZFI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 271
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					271 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { support_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		BES_industrial_concern = {
+			name = ETH_dire_dawa_industries
+			picture = ETH_dire_dawa_industries
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = BES
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 835
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					835 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		ZFI_electronics_concern = {
+			name = ETH_ethiopian_electric_power
+			picture = ETH_ethiopian_electric_power
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = ZFI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 271
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					271 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
+		ZLB_railway_company = {
+			name = ZLB_railway_company
+			picture = ETH_cie
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = ZLB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 268
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					268 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
+		}
+	}
+}
