@@ -1,0 +1,112 @@
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OBA_light_aircraft_organization = {
+	name = ROM_iar_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_ROM_iar
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OBA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 84
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				84 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OAL_naval_aircraft_organization = {
+	name = ROM_set_organization
+	include = esicolor_generic_naval_aircraft_organization
+	icon = GFX_idea_ROM_SET
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OAL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 46
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				46 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+OBA_infantry_equipment_organization = {
+	name = ROM_cugir_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_ROM_cugir  #used with permission from Turning Point mod
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OBA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 84
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				84 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
