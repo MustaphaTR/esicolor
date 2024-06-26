@@ -1,0 +1,163 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OAS_light_aircraft_organization = {
+	name = YUG_ikarus_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_YUG_ikarus
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OAS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 45
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				45 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IOF_medium_aircraft_organization = {
+	name = YUG_rogozarski_organization
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_YUG_rogozarski
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = IOF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 107
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				107 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IOF_heavy_aircraft_organization = {
+	name = YUG_zmaj_organization
+	include = esicolor_generic_heavy_aircraft_organization
+	icon = GFX_idea_YUG_zmaj
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = IOF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 107
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				107 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+IOF_infantry_equipment_organization = {
+	name = YUG_zastava_arms_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_zastava_arms
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = IOF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 107
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				107 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

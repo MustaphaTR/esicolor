@@ -1,0 +1,39 @@
+characters={
+	CBZ_sandro_pertini = {
+		instance = {
+			allowed = {
+				has_dlc = "By Blood Alone"
+			}
+			name=ITA_sandro_pertini
+			portraits={
+				civilian={
+					large=GFX_portrait_ITA_sandro_pertini
+					small=GFX_portrait_ITA_sandro_pertini_small
+				}
+			}
+			country_leader={
+				traits={ staunch_anti_fascist }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "By Blood Alone" }
+			}
+			name=ITA_sandro_pertini
+			portraits={
+				civilian={
+					large="gfx/leaders/ITA/Portrait_Italy_Generic_1.dds"
+				}
+			}
+			country_leader={
+				traits={ staunch_anti_fascist }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

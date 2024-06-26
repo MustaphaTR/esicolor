@@ -1,0 +1,23 @@
+﻿characters={
+	ISB_prince_amedeo = { 
+		name = AOI_prince_amedeo
+		portraits = {
+			civilian = {
+				large = GFX_portrait_AOI_amedeo_di_savoia_aosta
+				small = GFX_portrait_AOI_amedeo_di_savoia_aosta_small
+			}
+		}
+		country_leader={
+			traits={ duke_of_aosta iron_duke }
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			traits={ duke_of_aosta } # viceroy_of_aoi doesn't work here, AOI didn't exist yet in 1936, that's why he is in Piemonte.
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

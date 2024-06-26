@@ -1,0 +1,63 @@
+handle_special_generals = {
+	if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = OOZ_vittorio_emanuele_iii ruling_only = yes }
+
+				NOT = { has_global_flag = umberto_created }
+			}
+		}
+
+		set_global_flag = umberto_created
+		set_character_name = ITA_prince_umberto
+
+		set_portraits = {
+			civilian = {
+				large=GFX_portrait_ITA_prince_umberto
+				small=GFX_portrait_ITA_prince_umberto_small
+			}
+			army = {
+				large=GFX_portrait_ITA_prince_umberto
+				small=GFX_portrait_ITA_prince_umberto_small
+			}
+			navy = {
+				large=GFX_portrait_ITA_prince_umberto
+				small=GFX_portrait_ITA_prince_umberto_small
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = BSE_josip_broz_tito ruling_only = yes }
+
+				NOT = { has_global_flag = gosnjak_created }
+			}
+		}
+
+		set_global_flag = gosnjak_created
+		set_character_name = YUG_ivan_gosnjak
+
+		set_portraits = {
+			civilian = {
+				large=GFX_Portrait_yugoslavia_ivan_gosnjak
+				small=GFX_portrait_YUG_ivan_gosnjak_small
+			}
+			army = {
+				large=GFX_Portrait_yugoslavia_ivan_gosnjak
+				small=GFX_portrait_YUG_ivan_gosnjak_small
+			}
+			navy = {
+				large=GFX_Portrait_yugoslavia_ivan_gosnjak
+				small=GFX_portrait_YUG_ivan_gosnjak_small
+			}
+		}
+
+		remove_unit_leader_trait = pony_race_trait
+		add_unit_leader_trait = griffon_race_trait
+	}
+}
+
+handle_special_admirals = {
+
+}

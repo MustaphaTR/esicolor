@@ -1,0 +1,134 @@
+ideas = {
+	aircraft_manufacturer = { 
+		designer = yes
+
+		OAS_light_aircraft_manufacturer = {
+			name = YUG_ikarus_organization
+			picture = YUG_ikarus
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OAS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 45
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					45 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		IOF_medium_aircraft_manufacturer = {
+			name = YUG_rogozarski_organization
+			picture = YUG_rogozarski
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = IOF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 107
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					107 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+
+		IOF_heavy_aircraft_manufacturer = {
+			name = YUG_zmaj_organization
+			picture = YUG_zmaj
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = IOF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 107
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					107 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { heavy_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		# HQ in Kragujevac, which seems to fall to Belgrade state, but i'm not 100% positive.
+		IOF_infantry_equipment_manufacturer = {
+			name = YUG_zastava_arms_organization
+			picture = zastava_arms
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = IOF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 107
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					107 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+}

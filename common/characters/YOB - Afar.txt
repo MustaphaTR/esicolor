@@ -1,0 +1,40 @@
+characters={
+	# Portrait is DLC locked for some reason, despite being starting leader of a country existing in 1936.
+	YOB_mohamed_yayyo = {
+		instance = {
+			allowed = {
+				has_dlc = "By Blood Alone"
+			}
+			name=YOB_mohamed_yayyo
+			portraits={
+				civilian={
+					large = GFX_portrait_AFA_mohamed_yayyo
+					small = GFX_portrait_AFA_mohamed_yayyo_small
+				}
+			}
+			country_leader={
+				traits={ rich_sultan }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "By Blood Alone" }
+			}
+			name=YOB_mohamed_yayyo
+			portraits={
+				civilian={
+					large="GFX_Portrait_The_Raj_Political_Leader_Generic"
+				}
+			}
+			country_leader={
+				traits={ rich_sultan }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

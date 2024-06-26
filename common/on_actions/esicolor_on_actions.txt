@@ -105,6 +105,57 @@ on_actions = {
 		}
 	}
 
+	on_unit_leader_promote_from_ranks_veteran = { #Unit leader scope, FROM is unit
+		effect = {
+			log = "[GetDateText]: ROOT: [Root.GetName] FROM: [From.GetName] on_unit_leader_promote_from_ranks_veteran"
+			owner = {
+				set_temp_variable = {
+					creator = THIS
+				}
+			}
+			handle_special_generals = yes
+		}
+	}
+
+	on_unit_leader_promote_from_ranks_green = { #Unit leader scope, FROM is unit
+		effect = {
+			log = "[GetDateText]: ROOT: [Root.GetName] FROM: [From.GetName] on_unit_leader_promote_from_ranks_green"
+			owner = {
+				set_temp_variable = {
+					creator = THIS
+				}
+			}
+			handle_special_generals = yes
+		}
+	}
+
+	on_unit_leader_created = {
+		effect = {
+			log = "[GetDateText]: ROOT: [Root.GetName] FROM: [From.GetName] on_unit_leader_created"
+
+			FROM = {
+				set_temp_variable = {
+					creator = THIS
+				}
+			}
+			if = {
+				limit = {
+					is_army_leader = yes
+					NOT = { has_dlc = "By Blood Alone" }
+				}
+
+				handle_special_generals = yes
+			}
+			else_if = {
+				limit = {
+					is_navy_leader = yes
+				}
+
+				handle_special_admirals = yes
+			}
+		}
+	}
+
 	on_daily = {
 		effect = {
 			log = "[GetDateText] MustaphaTR's Every State Independent main on_daily begin for [Root.GetName]"
