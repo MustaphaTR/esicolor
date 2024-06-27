@@ -843,11 +843,25 @@ country_event = {
 
 	option = {
 		name = esicolor.15.a
-		country_event = esicolor.19
+		if = {
+			limit = { is_seperate_island_country = yes }
+
+			country_event = esicolor.20
+		}
+		else = {
+			country_event = esicolor.19
+		}
 	}
 	option = {
 		name = esicolor.15.b
-		country_event = esicolor.19
+		if = {
+			limit = { is_seperate_island_country = yes }
+
+			country_event = esicolor.20
+		}
+		else = {
+			country_event = esicolor.19
+		}
 		every_country = {
 			limit = { is_led_by_an_agent = yes }
 
@@ -856,7 +870,14 @@ country_event = {
 	}
 	option = {
 		name = esicolor.15.c
-		country_event = esicolor.19
+		if = {
+			limit = { is_seperate_island_country = yes }
+
+			country_event = esicolor.20
+		}
+		else = {
+			country_event = esicolor.19
+		}
 		every_country = {
 			random_list = {
 				seed = random
@@ -969,11 +990,12 @@ country_event = {
 
 	option = {
 		name = esicolor.19.a
-		country_event = esicolor.30 # esicolor.20
+		country_event = esicolor.20
 	}
 	option = {
 		name = esicolor.19.b
-		country_event = esicolor.30 # esicolor.20
+		trigger = { is_seperate_island_country = no }
+		country_event = esicolor.20
 		every_state = {
 			limit = { is_seperate_island_state = yes }
 			OOO = {
@@ -985,7 +1007,8 @@ country_event = {
 	}
 	option = {
 		name = esicolor.19.c
-		country_event = esicolor.30 # esicolor.20
+		trigger = { is_unconnected_island_country = no }
+		country_event = esicolor.20
 		every_state = {
 			limit = { is_unconnected_island_state = yes }
 			OOO = {
@@ -997,7 +1020,8 @@ country_event = {
 	}
 	option = {
 		name = esicolor.19.e
-		country_event = esicolor.30 # esicolor.20
+		trigger = { is_island_country = no }
+		country_event = esicolor.20
 		every_state = {
 			limit = { is_island_state_esicolor = yes }
 			OOO = {
@@ -1006,6 +1030,178 @@ country_event = {
 			remove_from_array = { global.states_ingame = THIS }
 		}
 		set_global_flag = islands_removed_all
+	}
+}
+
+# Continent Removal (Page 1 - Europe, Asia, ME, Africa)
+country_event = {
+	id = esicolor.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event esicolor.20"}
+	title = esicolor.20.t
+	desc = esicolor.20.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = esicolor.20.a
+		country_event = esicolor.31
+	}
+	option = {
+		name = esicolor.20.b
+		trigger = {
+			NOT = {
+				capital_scope = { is_on_continent = europe }
+				has_global_flag = europe_removed
+			}
+		}
+		set_global_flag = europe_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = europe_removed
+					has_global_flag = asia_removed
+					has_global_flag = middle_east_removed
+					AND = {
+						capital_on_continent_group_1 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.31
+
+			else = {
+				country_event = esicolor.36
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = europe }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+	option = {
+		name = esicolor.20.c
+		trigger = {
+			NOT = {
+				capital_scope = { is_on_continent = asia }
+				has_global_flag = asia_removed
+			}
+		}
+		set_global_flag = asia_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = europe_removed
+					has_global_flag = asia_removed
+					has_global_flag = middle_east_removed
+					AND = {
+						capital_on_continent_group_1 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.31
+
+			else = {
+				country_event = esicolor.36
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = asia }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+	option = {
+		name = esicolor.20.e
+		trigger = {
+			NOT = {
+				capital_scope = { is_on_continent = middle_east }
+				has_global_flag = middle_east_removed
+			}
+		}
+		set_global_flag = middle_east_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = europe_removed
+					has_global_flag = asia_removed
+					has_global_flag = middle_east_removed
+					AND = {
+						capital_on_continent_group_1 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.31
+
+			else = {
+				country_event = esicolor.36
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = middle_east }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+	option = {
+		name = esicolor.20.f
+		trigger = {
+			capital_scope = {
+				NOT = {
+					is_on_continent = north_america
+					is_on_continent = south_america
+					is_on_continent = australia
+					is_on_continent = africa
+				}
+			}
+			NOT = { has_global_flag = africa_removed }
+		}
+		set_global_flag = africa_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = europe_removed
+					has_global_flag = asia_removed
+					has_global_flag = middle_east_removed
+					AND = {
+						capital_on_continent_group_1 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.31
+
+			else = {
+				country_event = esicolor.36
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = africa }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
 	}
 }
 
@@ -1272,25 +1468,39 @@ country_event = {
 
 	option = {
 		name = esicolor.25.a
-		if = {
-			limit = { has_dlc = "La Resistance" }
+		#if = {
+		#	limit = { has_dlc = "La Resistance" }
+		#
+		#	country_event = esicolor.19 # esicolor.15
+		#}
+		#else = {
+			if = {
+				limit = { is_seperate_island_country = yes }
 
-			country_event = esicolor.30 # esicolor.15
-		}
-		else = {
-			country_event = esicolor.30 # esicolor.19
-		}
+				country_event = esicolor.20
+			}
+			else = {
+				country_event = esicolor.19
+			}
+		#}
 	}
 	option = {
 		name = esicolor.25.b
-		if = {
-			limit = { has_dlc = "La Resistance" }
+		#if = {
+		#	limit = { has_dlc = "La Resistance" }
+		#
+		#	country_event = esicolor.19 # esicolor.15
+		#}
+		#else = {
+			if = {
+				limit = { is_seperate_island_country = yes }
 
-			country_event = esicolor.30 # esicolor.15
-		}
-		else = {
-			country_event = esicolor.30 # esicolor.19
-		}
+				country_event = esicolor.20
+			}
+			else = {
+				country_event = esicolor.19
+			}
+		#}
 		hidden_effect = {
 			every_country = {
 				clear_leader_traits = yes
@@ -1524,6 +1734,351 @@ country_event = {
 	}
 }
 
+# Continent Removal (Page 2 - NA, SA, Australia, Africa)
+country_event = {
+	id = esicolor.31
+	immediate = {log = "[GetDateText]: [Root.GetName]: event esicolor.31"}
+	title = esicolor.31.t
+	desc = esicolor.31.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = esicolor.20.a
+		country_event = esicolor.30
+	}
+	option = {
+		name = esicolor.31.b
+		trigger = {
+			NOT = {
+				capital_scope = { is_on_continent = north_america }
+				has_global_flag = north_america_removed
+			}
+		}
+		set_global_flag = north_america_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = north_america_removed
+					has_global_flag = south_america_removed
+					has_global_flag = australia_removed
+					AND = {
+						capital_on_continent_group_2 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.30
+
+			else = {
+				country_event = esicolor.32
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = north_america }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+	option = {
+		name = esicolor.31.c
+		trigger = {
+			NOT = {
+				capital_scope = { is_on_continent = south_america }
+				has_global_flag = south_america_removed
+			}
+		}
+		set_global_flag = south_america_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = north_america_removed
+					has_global_flag = south_america_removed
+					has_global_flag = australia_removed
+					AND = {
+						capital_on_continent_group_2 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.30
+
+			else = {
+				country_event = esicolor.32
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = south_america }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+	option = {
+		name = esicolor.31.e
+		trigger = {
+			NOT = {
+				capital_scope = { is_on_continent = australia }
+				has_global_flag = australia_removed
+			}
+		}
+		set_global_flag = australia_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = north_america_removed
+					has_global_flag = south_america_removed
+					has_global_flag = australia_removed
+					AND = {
+						capital_on_continent_group_2 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.30
+
+			else = {
+				country_event = esicolor.32
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = australia }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+	option = {
+		name = esicolor.20.f
+		trigger = {
+			capital_scope = {
+				NOT = {
+					is_on_continent = europe
+					is_on_continent = asia
+					is_on_continent = middle_east
+					is_on_continent = africa
+				}
+			}
+			NOT = { has_global_flag = africa_removed }
+		}
+		set_global_flag = africa_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = north_america_removed
+					has_global_flag = south_america_removed
+					has_global_flag = australia_removed
+					AND = {
+						capital_on_continent_group_2 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.30
+
+			else = {
+				country_event = esicolor.32
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = africa }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+}
+
+# Continent Removal (Page 2 - NA, SA, Australia, Africa)
+# Duplicate of esicolor.31. Doesn't seem like i can recall the same event from the options.
+country_event = {
+	id = esicolor.32
+	immediate = {log = "[GetDateText]: [Root.GetName]: event esicolor.32"}
+	title = esicolor.31.t
+	desc = esicolor.31.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = esicolor.20.a
+		country_event = esicolor.30
+	}
+	option = {
+		name = esicolor.31.b
+		trigger = {
+			NOT = {
+				capital_scope = { is_on_continent = north_america }
+				has_global_flag = north_america_removed
+			}
+		}
+		set_global_flag = north_america_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = north_america_removed
+					has_global_flag = south_america_removed
+					has_global_flag = australia_removed
+					AND = {
+						capital_on_continent_group_2 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.30
+
+			else = {
+				country_event = esicolor.31
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = north_america }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+	option = {
+		name = esicolor.31.c
+		trigger = {
+			NOT = {
+				capital_scope = { is_on_continent = south_america }
+				has_global_flag = south_america_removed
+			}
+		}
+		set_global_flag = south_america_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = north_america_removed
+					has_global_flag = south_america_removed
+					has_global_flag = australia_removed
+					AND = {
+						capital_on_continent_group_2 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.30
+
+			else = {
+				country_event = esicolor.31
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = south_america }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+	option = {
+		name = esicolor.31.e
+		trigger = {
+			NOT = {
+				capital_scope = { is_on_continent = australia }
+				has_global_flag = australia_removed
+			}
+		}
+		set_global_flag = australia_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = north_america_removed
+					has_global_flag = south_america_removed
+					has_global_flag = australia_removed
+					AND = {
+						capital_on_continent_group_2 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.30
+
+			else = {
+				country_event = esicolor.31
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = australia }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+	option = {
+		name = esicolor.20.f
+		trigger = {
+			capital_scope = {
+				NOT = {
+					is_on_continent = europe
+					is_on_continent = asia
+					is_on_continent = middle_east
+					is_on_continent = africa
+				}
+			}
+			NOT = { has_global_flag = africa_removed }
+		}
+		set_global_flag = africa_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = north_america_removed
+					has_global_flag = south_america_removed
+					has_global_flag = australia_removed
+					AND = {
+						capital_on_continent_group_2 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.30
+
+			else = {
+				country_event = esicolor.31
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = africa }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+}
+
 # Military Advisor Levels
 country_event = {
 	id = esicolor.35
@@ -1579,6 +2134,179 @@ country_event = {
 			every_country = {
 				randomise_military_advisor_levels = yes
 			}
+		}
+	}
+}
+
+# Continent Removal (Page 1 - Europe, Asia, ME, Africa)
+# Duplicate of esicolor.20. Doesn't seem like i can recall the same event from the options.
+country_event = {
+	id = esicolor.36
+	immediate = {log = "[GetDateText]: [Root.GetName]: event esicolor.36"}
+	title = esicolor.20.t
+	desc = esicolor.20.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = esicolor.20.a
+		country_event = esicolor.31
+	}
+	option = {
+		name = esicolor.20.b
+		trigger = {
+			NOT = {
+				capital_scope = { is_on_continent = europe }
+				has_global_flag = europe_removed
+			}
+		}
+		set_global_flag = europe_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = europe_removed
+					has_global_flag = asia_removed
+					has_global_flag = middle_east_removed
+					AND = {
+						capital_on_continent_group_1 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.31
+
+			else = {
+				country_event = esicolor.20
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = europe }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+	option = {
+		name = esicolor.20.c
+		trigger = {
+			NOT = {
+				capital_scope = { is_on_continent = asia }
+				has_global_flag = asia_removed
+			}
+		}
+		set_global_flag = asia_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = europe_removed
+					has_global_flag = asia_removed
+					has_global_flag = middle_east_removed
+					AND = {
+						capital_on_continent_group_1 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.31
+
+			else = {
+				country_event = esicolor.20
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = asia }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+	option = {
+		name = esicolor.20.e
+		trigger = {
+			NOT = {
+				capital_scope = { is_on_continent = middle_east }
+				has_global_flag = middle_east_removed
+			}
+		}
+		set_global_flag = middle_east_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = europe_removed
+					has_global_flag = asia_removed
+					has_global_flag = middle_east_removed
+					AND = {
+						capital_on_continent_group_1 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.31
+
+			else = {
+				country_event = esicolor.20
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = middle_east }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
+		}
+	}
+	option = {
+		name = esicolor.20.f
+		trigger = {
+			capital_scope = {
+				NOT = {
+					is_on_continent = north_america
+					is_on_continent = south_america
+					is_on_continent = australia
+					is_on_continent = africa
+				}
+			}
+			NOT = { has_global_flag = africa_removed }
+		}
+		set_global_flag = africa_removed
+		if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+
+					has_global_flag = europe_removed
+					has_global_flag = asia_removed
+					has_global_flag = middle_east_removed
+					AND = {
+						capital_on_continent_group_1 = yes
+						has_global_flag = africa_removed
+					}
+				}
+			}
+
+			country_event = esicolor.31
+
+			else = {
+				country_event = esicolor.20
+			}
+		}
+		every_state = {
+			limit = { is_on_continent = africa }
+			OOO = {
+				transfer_state = PREV
+			}
+			remove_from_array = { global.states_ingame = THIS }
 		}
 	}
 }
