@@ -1,0 +1,38 @@
+characters={
+	FYS_rolao_preto = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name=POR_rolao_preto
+			portraits={
+				civilian={
+					large=GFX_portrait_POR_rolao_preto
+				}
+			}
+			country_leader={
+				traits={ fascist_militia_leader }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name=POR_rolao_preto
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_America_Generic_land_3
+				}
+			}
+			country_leader={
+				traits={ fascist_militia_leader }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+characters={
+	LYB_jose_mendes_cabecadas = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name=POR_jose_mendes_cabecadas
+			portraits={
+				civilian={
+					large=GFX_portrait_por_jose_mendes_cabecadas
+					small=GFX_portrait_POR_jose_mendes_cabecadas_small
+				}
+			}
+			country_leader={
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name=POR_jose_mendes_cabecadas
+			portraits={
+				civilian={
+					large=GFX_Portrait_Europe_Generic_navy_1
+				}
+			}
+			country_leader={
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

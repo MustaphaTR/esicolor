@@ -1,0 +1,38 @@
+characters={
+	IFY_dom_duarte_nuno = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name=IFY_dom_duarte_nuno
+			portraits={
+				civilian={
+					large=GFX_portrait_Dom_Duarte_Nuno
+				}
+			}
+			country_leader={
+				traits={ constitutional_monarch_minor }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name=IFY_dom_duarte_nuno
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_America_Generic_3
+				}
+			}
+			country_leader={
+				traits={ constitutional_monarch_minor }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

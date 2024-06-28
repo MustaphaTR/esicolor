@@ -1,0 +1,38 @@
+characters={
+	IBI_bento_goncalves = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name=POR_bento_goncalves
+			portraits={
+				civilian={
+					large=GFX_portrait_POR_bento_goncalves
+				}
+			}
+			country_leader={
+				traits={ veteran_communist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name=POR_bento_goncalves
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_America_Generic_land_5
+				}
+			}
+			country_leader={
+				traits={ veteran_communist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
