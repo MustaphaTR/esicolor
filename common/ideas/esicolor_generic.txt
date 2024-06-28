@@ -259,6 +259,25 @@ ideas = {
 			}
 			traits = { heavy_tank_manufacturer }
 		}
+
+		generic_tank_refurbishment_plant = {
+			picture = SOV_mytishchy_machine_building_plant
+
+			allowed = {
+				has_custom_tank_refurbishment_plant = no
+			}
+			visible = {
+				NOT = {
+					has_global_flag = custom_designers_only
+					has_country_flag = tank_refurbishment_plant_disabled
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { tank_refurbishment_plant_esicolor }
+		}
 	}
 
 	naval_manufacturer = {
@@ -332,7 +351,7 @@ ideas = {
 		}
 
 		generic_black_sea_naval_manufacturer = {
-			picture = generic_naval_manufacturer_3
+			picture = SOV_black_sea_shipyard
 
 			allowed = {
 				has_custom_black_sea_naval_manufacturer = no
@@ -367,6 +386,25 @@ ideas = {
 				naval_equipment = 0.15
 			}
 			traits = { battlefleet_designer }
+		}
+
+		generic_repair_and_refurbishment_plant = {
+			picture = generic_naval_manufacturer_3
+
+			allowed = {
+				has_custom_repair_and_refurbishment_plant = no
+			}
+			visible = {
+				NOT = {
+					has_global_flag = custom_designers_only
+					has_country_flag = repair_and_refurbishment_plant_disabled
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { repair_and_refurbishment_plant_esicolor }
 		}
 
 		generic_coastal_defence_naval_manufacturer = {

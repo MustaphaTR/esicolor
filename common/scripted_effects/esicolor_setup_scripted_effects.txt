@@ -9968,7 +9968,7 @@ remove_tank_designer = {
 				OR = {
 					NOT = { has_dlc = "La Resistance" }
 					has_dlc = "Arms Against Tyranny" # MIO version is under Materiel Tab.
-					has_country_flag = infantry_tank_manufacturer_disabled
+					has_country_flag = armored_car_manufacturer_disabled
 				}
 			}
 		}
@@ -10014,10 +10014,7 @@ remove_tank_designer = {
 			modifier = {
 				factor = 0
 
-				OR = {
-					NOT = { has_dlc = "Arms Against Tyranny" }
-					has_country_flag = tank_refurbishment_plant_disabled
-				}
+				has_country_flag = tank_refurbishment_plant_disabled
 			}
 		}
 	}
@@ -10097,7 +10094,19 @@ remove_ship_designer = {
 			modifier = {
 				factor = 0
 
-				has_country_flag = battlefleet_designer_disabled
+				OR = {
+					has_dlc = "Arms Against Tyranny"
+					has_country_flag = battlefleet_designer_disabled
+				}
+			}
+		}
+		15 = {
+			set_country_flag = repair_and_refurbishment_plant_disabled
+
+			modifier = {
+				factor = 0
+
+				has_country_flag = repair_and_refurbishment_plant_disabled
 			}
 		}
 		15 = {
@@ -10361,11 +10370,7 @@ randomise_designers = {
 	clear_company_disabled_flags = yes
 
 	remove_tank_designer = yes
-	if = {
-		limit = { has_dlc = "Arms Against Tyranny" }
-
-		remove_tank_designer = yes
-	}
+	remove_tank_designer = yes
 	if = {
 		limit = {
 			has_dlc = "La Resistance"
@@ -10382,6 +10387,7 @@ randomise_designers = {
 	if = {
 		limit = { NOT = { has_dlc = "Arms Against Tyranny" } }
 
+		remove_ship_designer = yes
 		remove_ship_designer = yes
 		remove_ship_designer = yes
 	}
@@ -10469,6 +10475,7 @@ setup_default_companies = {
 
 	set_country_flag = black_sea_fleet_naval_manufacturer_disabled
 	set_country_flag = battlefleet_designer_disabled
+	set_country_flag = repair_and_refurbishment_plant_disabled
 	set_country_flag = coastal_defence_naval_manufacturer_disabled
 	set_country_flag = submarine_manufacturer_disabled
 	set_country_flag = raiding_fleet_naval_manufacturer_disabled
@@ -10592,12 +10599,14 @@ clear_company_disabled_flags = {
 	clr_country_flag = fast_tank_manufacturer_disabled
 	clr_country_flag = medium_tank_manufacturer_disabled
 	clr_country_flag = heavy_tank_manufacturer_disabled
+	clr_country_flag = tank_refurbishment_plant_disabled
 
 	clr_country_flag = pacific_fleet_naval_manufacturer_disabled
 	clr_country_flag = atlantic_fleet_naval_manufacturer_disabled
 	clr_country_flag = mediterranean_fleet_naval_manufacturer_disabled
 	clr_country_flag = black_sea_fleet_naval_manufacturer_disabled
 	clr_country_flag = battlefleet_designer_disabled
+	clr_country_flag = repair_and_refurbishment_plant_disabled
 	clr_country_flag = coastal_defence_naval_manufacturer_disabled
 	clr_country_flag = submarine_manufacturer_disabled
 	clr_country_flag = raiding_fleet_naval_manufacturer_disabled

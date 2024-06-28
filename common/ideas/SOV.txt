@@ -1,0 +1,579 @@
+ideas = {
+	tank_manufacturer = {
+		designer = yes
+
+		IYS_infantry_tank_manufacturer = {
+			name = okmo
+			picture = okmo
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+				OR = {
+					original_tag = IYS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 195
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					195 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { infantry_tank_manufacturer }
+		}
+
+		ZZI_fast_tank_manufacturer = {
+			name = morozov_design_bureau
+			picture = morozov_design_bureau
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+				OR = {
+					original_tag = ZZI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 221
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					221 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { fast_tank_manufacturer }
+		}
+
+		# Dunno where this one goes.
+		#SOV_medium_tank_manufacturer = {
+		#	name = astrov_design_bureau
+		#	picture = astrov_design_bureau
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+		#		OR = {
+		#			original_tag = SOV
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 221
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			221 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		armor = 0.15
+		#	}
+		#	traits = { medium_tank_manufacturer }
+		#}
+
+		IYS_heavy_tank_manufacturer = {
+			name = SOV_kirov
+			picture = SOV_kirov
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = heavy_tank_manufacturer_disabled }
+				OR = {
+					original_tag = IYS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 195
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					195 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { heavy_tank_manufacturer }
+		}
+
+		ZIY_tank_refurbishment_plant = {
+			name = SOV_mytishchy_machine_building_plant
+			picture = SOV_mytishchy_machine_building_plant
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = tank_refurbishment_plant_disabled }
+				OR = {
+					original_tag = ZIY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 219
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					219 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { tank_refurbishment_plant_esicolor }
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		IYF_black_sea_naval_manufacturer = {
+			name = SOV_black_sea_shipyard
+			picture = SOV_black_sea_shipyard
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = black_sea_naval_manufacturer_disabled }
+				OR = {
+					original_tag = IYF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 197
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					197 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { black_sea_naval_manufacturer }
+		}
+
+		IYS_battlefleet_designer = {
+			name = nevskoye_design_bureau
+			picture = nevskoye_design_bureau
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = battlefleet_designer_disabled }
+				OR = {
+					original_tag = IYS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 195
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					195 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { battlefleet_designer }
+		}
+
+		IEF_repair_and_refurbishment_plant = {
+			name = SOV_sevastopol_marine_plant
+			picture = SOV_sevastopol_marine_plant
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = repair_and_refurbishment_plant_disabled }
+				OR = {
+					original_tag = IEF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 137
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					137 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { repair_and_refurbishment_plant_esicolor }
+		}
+
+		IYS_raiding_fleet_naval_manufacturer = {
+			name = SOV_rubin_design_bureau
+			picture = SOV_rubin_design_bureau
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = IYS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 195
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					195 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { raiding_fleet_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		ZIY_light_aircraft_manufacturer = {
+			name = mig_design_bureau
+			picture = mig_design_bureau
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ZIY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 219
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					219 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		ZIY_medium_aircraft_manufacturer = {
+			name = ilyushin_design_bureau
+			picture = ilyushin_design_bureau
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ZIY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 219
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					219 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+
+		ZIY_heavy_aircraft_manufacturer = {
+			name = tupolev_design_bureau
+			picture = tupolev_design_bureau
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ZIY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 219
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					219 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { heavy_aircraft_manufacturer }
+		}
+
+		ZIY_naval_aircraft_manufacturer = {
+			name = yakovlev_design_bureau
+			picture = yakovlev_design_bureau
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ZIY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 219
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					219 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { naval_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		ZZE_infantry_equipment_manufacturer = {
+			name = tula_arms_plant
+			picture = tula_arms_plant
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZZE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 223
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					223 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		ZSZ_artillery_manufacturer = {
+			name = grabin_design_bureau
+			picture = grabin_design_bureau
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = ZSZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 252
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					252 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		ZSZ_motorized_equipment_manufacturer = {
+			name = gaz
+			picture = gaz
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZSZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 252
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					252 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		ZIF_industrial_concern = {
+			name = stalingrad_tractor_factory
+			picture = stalingrad_tractor_factory
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = ZIF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 217
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					217 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		IYS_electronics_concern = {
+			name = leningrad_polytechnical_institute
+			picture = leningrad_polytechnical_institute
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = IYS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 195
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					195 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+	}
+}

@@ -1,0 +1,503 @@
+########    ###    ##    ## ##    ##  ######  
+   ##      ## ##   ###   ## ##   ##  ##    ## 
+   ##     ##   ##  ####  ## ##  ##   ##       
+   ##    ##     ## ## ## ## #####     ######  
+   ##    ######### ##  #### ##  ##         ## 
+   ##    ##     ## ##   ### ##   ##  ##    ## 
+   ##    ##     ## ##    ## ##    ##  ######  
+
+IYS_infantry_tank_organization = {
+	name = SOV_okmo_organization
+	include = esicolor_generic_infantry_tank_organization
+	icon = GFX_idea_okmo
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+			OR = {
+				original_tag = IYS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 195
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				195 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZZI_mobile_tank_organization = {
+	name = SOV_morozov_design_bureau_organization
+	include = esicolor_generic_mobile_tank_organization
+	icon = GFX_idea_morozov_design_bureau
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			OR = {
+				original_tag = ZZI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 221
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				221 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+# Dunno where this one goes.
+#SOV_medium_tank_organization = {
+#	name = SOV_astrov_design_bureau_organization
+#	include = esicolor_generic_medium_tank_organization
+#	icon = GFX_idea_astrov_design_bureau
+#}
+
+IYS_heavy_tank_organization = {
+	name = SOV_kirov_organization
+	include = esicolor_generic_heavy_tank_organization
+	icon = GFX_idea_SOV_kirov
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_tank_manufacturer_disabled }
+			OR = {
+				original_tag = IYS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 195
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				195 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZIY_tank_refurbishment_plant_organization = {
+	name = SOV_mytishchy_machine_building_plant_organization
+	include = esicolor_generic_tank_refurbishment_plant_organization
+	icon = GFX_idea_SOV_mytishchy_machine_building_plant
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = tank_refurbishment_plant_disabled }
+			OR = {
+				original_tag = ZIY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 219
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				219 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ ######  ##     ## #### ########   ######  
+##    ## ##     ##  ##  ##     ## ##    ## 
+##       ##     ##  ##  ##     ## ##       
+ ######  #########  ##  ########   ######  
+      ## ##     ##  ##  ##              ## 
+##    ## ##     ##  ##  ##        ##    ## 
+ ######  ##     ## #### ##         ######  
+
+IYS_battle_line_ship_organization = {
+	name = SOV_nevskoye_design_bureau_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_nevskoye_design_bureau
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer }
+			OR = {
+				original_tag = IYS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 195
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				195 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IYF_black_sea_fleet_organization = {
+	name = SOV_black_sea_shipyard_organization
+	include = esicolor_generic_black_sea_fleet_organization
+	icon = GFX_idea_SOV_black_sea_shipyard
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = black_sea_naval_manufacturer_disabled }
+			OR = {
+				original_tag = IYF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 197
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				197 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IEF_refurbishment_repair_organization = {
+	name = SOV_sevastopol_marine_plant_organization
+	include = esicolor_generic_refurbishment_repair_organization
+	icon = GFX_idea_SOV_sevastopol_marine_plant
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = repair_and_refurbishment_plant_disabled }
+			OR = {
+				original_tag = IEF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 137
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				137 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IYS_raider_ship_organization = {
+	name = SOV_rubin_design_bureau_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_SOV_rubin_design_bureau
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = IYS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 195
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				195 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+########  ##          ###    ##    ## ########  ######  
+##     ## ##         ## ##   ###   ## ##       ##    ## 
+##     ## ##        ##   ##  ####  ## ##       ##       
+########  ##       ##     ## ## ## ## ######    ######  
+##        ##       ######### ##  #### ##             ## 
+##        ##       ##     ## ##   ### ##       ##    ## 
+##        ######## ##     ## ##    ## ########  ######  
+
+ZIY_light_aircraft_organization = {
+	name = SOV_mig_design_bureau_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_mig_design_bureau
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ZIY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 219
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				219 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZIY_medium_aircraft_organization = {
+	name = SOV_ilyushin_design_bureau_organization
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_ilyushin_design_bureau
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ZIY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 219
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				219 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZIY_heavy_aircraft_organization = {
+	name = SOV_tupolev_design_bureau_organization
+	include = esicolor_generic_heavy_aircraft_organization
+	icon = GFX_idea_tupolev_design_bureau
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ZIY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 219
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				219 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZIY_naval_aircraft_organization = {
+	name = generic_naval_aircraft_organization
+	include = esicolor_generic_naval_aircraft_organization
+	icon = GFX_idea_yakovlev_design_bureau
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ZIY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 219
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				219 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+##     ##    ###    ######## ######## ########  #### ######## ##       
+###   ###   ## ##      ##    ##       ##     ##  ##  ##       ##       
+#### ####  ##   ##     ##    ##       ##     ##  ##  ##       ##       
+## ### ## ##     ##    ##    ######   ########   ##  ######   ##       
+##     ## #########    ##    ##       ##   ##    ##  ##       ##       
+##     ## ##     ##    ##    ##       ##    ##   ##  ##       ##       
+##     ## ##     ##    ##    ######## ##     ## #### ######## ######## 
+
+ZZE_infantry_equipment_organization = {
+	name = SOV_tula_arms_plant_organization	
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_tula_arms_plant
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZZE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 223
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				223 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZSZ_artillery_organization = {
+	name = SOV_grabin_design_bureau_organization
+	include = generic_artillery_organization
+	icon = GFX_idea_grabin_design_bureau
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = ZSZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 252
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				252 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZSZ_motorized_mechanized_organization = {
+	name = SOV_gaz_organization
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_gaz
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZSZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 252
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				252 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

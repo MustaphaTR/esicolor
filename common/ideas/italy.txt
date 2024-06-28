@@ -354,43 +354,6 @@ ideas = {
 			}
 			traits = { naval_aircraft_manufacturer }
 		}
-
-		ITA_fiat_aviazione = { #NORTH
-			picture	= ITA_fiat_aviazione
-
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				NOT = {
-					AND = {
-						has_completed_focus = ITA_new_industrialization_program
-						has_completed_focus = ITA_strengthen_northern_industry
-					}
-				}
-			}
-
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = ITA_has_fiat_tt
-					OR = {
-						has_idea = fiat
-						has_idea = ITA_fiat_improved
-					}
-				}
-				controls_State = 158 #PIEDMONT (Torino)
-				ITA_is_northern_designer = yes
-			}
-
-			cost = 75
-						
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { fuel_efficient_aircraft_manufacturer }
-		}
 	}
 
 	materiel_manufacturer = {

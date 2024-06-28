@@ -1,13 +1,15 @@
-# Tank
+### Tank
 has_custom_infantry_tank_manufacturer = {
 	OR = {
 		original_tag = IIO
+		original_tag = IYS
 	}
 }
 
 has_custom_fast_tank_manufacturer = {
 	OR = {
 		original_tag = IEB
+		original_tag = ZZI
 	}
 }
 
@@ -16,14 +18,18 @@ has_custom_medium_tank_manufacturer = {
 }
 
 has_custom_heavy_tank_manufacturer = {
-	always = no
+	OR = {
+		original_tag = IYS
+	}
 }
 
-has_custom_tank_refurbishment_plant_organization = {
-	always = no
+has_custom_tank_refurbishment_plant = {
+	OR = {
+		original_tag = ZIY
+	}
 }
 
-# Ship
+### Ship
 has_custom_pacific_fleet_naval_manufacturer = {
 	OR = {
 		original_tag = OEF
@@ -36,37 +42,46 @@ has_custom_atlantic_fleet_naval_manufacturer = {
 		original_tag = IAO
 		AND = {
 			has_dlc = "Arms Against Tyranny"
-			original_tag = FEL
+			OR = {
+				original_tag = IYS
+				original_tag = FEL
+			}
 		}
 	}
 }
 
+# Only available without AAT.
 has_custom_mediterranean_naval_manufacturer = {
 	OR = {
-		AND = {
-			NOT = { has_dlc = "Arms Against Tyranny" }
-			original_tag = ISB
-		}
+		original_tag = ISB
 	}
 }
 
 has_custom_black_sea_naval_manufacturer = {
-	always = no
+	OR = {
+		original_tag = IYF
+	}
 }
 
+# Only available without AAT.
 has_custom_battlefleet_designer = {
 	OR = {
-		AND = {
-			NOT = { has_dlc = "Arms Against Tyranny" }
-			original_tag = FEL
-		}
+		original_tag = IYS
+		original_tag = FEL
+	}
+}
+
+has_custom_repair_and_refurbishment_plant = {
+	OR = {
 		AND = {
 			has_dlc = "Arms Against Tyranny"
 			original_tag = IIF
 		}
+		original_tag = IEF
 	}
 }
 
+# Only available without AAT.
 has_custom_coastal_defence_naval_manufacturer = {
 	always = no
 }
@@ -82,6 +97,7 @@ has_custom_raiding_fleet_naval_manufacturer = {
 		original_tag = OEF
 		original_tag = IEB
 		original_tag = ISF
+		original_tag = IYS
 	}
 }
 
@@ -99,7 +115,7 @@ has_custom_convoy_escort_naval_manufacturer = {
 	}
 }
 
-# Aircraft
+### Aircraft
 has_custom_light_aircraft_manufacturer = {
 	OR = {
 		original_tag = OAS
@@ -107,6 +123,7 @@ has_custom_light_aircraft_manufacturer = {
 		original_tag = OBA
 		original_tag = IAO
 		original_tag = ISY
+		original_tag = ZIY
 	}
 }
 
@@ -120,6 +137,7 @@ has_custom_medium_aircraft_manufacturer = {
 	OR = {
 		original_tag = IOF
 		original_tag = IIF
+		original_tag = ZIY
 	}
 }
 
@@ -137,6 +155,7 @@ has_custom_heavy_aircraft_manufacturer = {
 	OR = {
 		original_tag = IOF
 		original_tag = ISB
+		original_tag = ZIY
 	}
 }
 
@@ -145,11 +164,12 @@ has_custom_naval_aircraft_manufacturer = {
 		original_tag = OEF
 		original_tag = OAL
 		original_tag = IIO
+		original_tag = ZIY
 		original_tag = FEL
 	}
 }
 
-# Materiel
+### Materiel
 has_custom_infantry_equipment_manufacturer = {
 	OR = {
 		original_tag = OEF
@@ -157,6 +177,7 @@ has_custom_infantry_equipment_manufacturer = {
 		original_tag = IOF
 		original_tag = IEY
 		original_tag = ISY
+		original_tag = ZZE
 		original_tag = BAZ
 		original_tag = YZI
 	}
@@ -175,6 +196,7 @@ has_custom_artillery_manufacturer = {
 		original_tag = OYY
 		original_tag = IAI
 		original_tag = ISY
+		original_tag = ZSZ
 		original_tag = YZO
 	}
 }
@@ -183,23 +205,26 @@ has_custom_motorized_equipment_manufacturer = {
 	OR = {
 		original_tag = IAO
 		original_tag = ISY
+		original_tag = ZSZ
 		original_tag = YII
 	}
 }
 
+# Without AAT, this is a Tank Designer.
 has_custom_armored_car_manufacturer = {
 	OR = {
 		original_tag = IAI
 	}
 }
 
-# Industrial
+### Industrial
 has_custom_industrial_concern = {
 	OR = {
 		original_tag = OBA
 		original_tag = IAI
 		original_tag = ILO
 		original_tag = ILZ
+		original_tag = ZIF
 		original_tag = BES
 	}
 }
@@ -208,6 +233,7 @@ has_custom_electronics_concern = {
 	OR = {
 		original_tag = IIO
 		original_tag = ILI
+		original_tag = IYS
 		original_tag = ZFI
 	}
 }

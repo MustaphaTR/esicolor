@@ -86,4 +86,52 @@ leader_traits = {
 			factor = 1
 		}
 	}
+
+	# Modifiers from SOV_mytishchy_machine_building_plant included.
+	tank_refurbishment_plant_esicolor = {
+		random = no
+
+		equipment_conversion_speed = 0.15
+		equipment_capture_factor = 0.15
+		land_equipment_upgrade_xp_cost = -0.1
+
+		equipment_bonus = {
+			armor = {
+				reliability = 0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# Modifiers from SOV_sevastopol_marine_plant included.
+	repair_and_refurbishment_plant_esicolor = {
+		random = no
+
+		naval_accidents_chance = -0.15
+		repair_speed_factor = 0.1
+		refit_ic_cost = -0.1
+		refit_speed = 0.1
+
+		equipment_bonus = {
+			screen_ship = {
+				build_cost_ic = -0.05
+			}
+			submarine = {
+				build_cost_ic = -0.05
+			}
+			capital_ship = {
+				build_cost_ic = -0.05
+			}
+			carrier = {
+				build_cost_ic = -0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
