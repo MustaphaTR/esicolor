@@ -1,0 +1,91 @@
+characters={
+	BAF_clara_thalmann={
+		name=SWI_clara_thalmann
+		portraits={
+			civilian={
+				large=GFX_portrait_IA_clara_thalmann
+				small=GFX_portrait_IA_clara_thalmann_small
+			}
+		}
+		country_leader={
+			traits={ SWI_anarchist }
+			ideology=anarchist_communism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BAF_rudolf_roessler = {
+		instance = {
+			allowed = {
+				has_dlc = "By Blood Alone"
+			}
+			name=BAF_rudolf_roessler
+			portraits={
+				civilian={
+					large=GFX_portrait_SWI_rudolf_roessler
+					small=GFX_portrait_SWI_rudolf_roessler_small
+				}
+			}
+			country_leader={
+				traits={ SWI_soviet_spy }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "By Blood Alone" }
+			}
+			name=BAF_rudolf_roessler
+			portraits={
+				civilian={
+					large=GFX_Portrait_Europe_Generic_1
+				}
+			}
+			country_leader={
+				traits={ SWI_soviet_spy }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+	BAF_lucien_tronchet = {
+		instance = {
+			allowed = {
+				has_dlc = "By Blood Alone"
+			}
+			name=SWI_lucien_tronchet
+			portraits={
+				civilian={
+					large=GFX_portrait_SWI_lucien_tronchet
+					small=GFX_portrait_SWI_lucien_tronchet_small
+				}
+			}
+			country_leader={
+				traits={ SWI_trade_unionist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "By Blood Alone" }
+			}
+			name=SWI_lucien_tronchet
+			portraits={
+				civilian={
+					large=GFX_Portrait_Europe_Generic_land_3
+				}
+			}
+			country_leader={
+				traits={ SWI_trade_unionist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

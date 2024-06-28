@@ -8,16 +8,27 @@ set_technology = {
 
 set_convoys = 5
 set_popularities = {
-	democratic = 25
-	fascism = 25
-	communism = 25
-	neutrality = 25
+	democratic = 85
+	fascism = 5
+	communism = 5
+	neutrality = 5
 }
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = democratic
 	last_election = "1935.10.10"
 	election_frequency = 36
-	elections_allowed = no
+	elections_allowed = yes
+}
+
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	recruit_character = OOE_albert_meyer
+
+	else = {
+		recruit_character = OOE_federal_assembly # Just use the assemby if we have no DLC, so there's at least one proper portrait.
+	}
 }
 
 set_rule = {

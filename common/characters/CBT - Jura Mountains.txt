@@ -1,0 +1,39 @@
+characters={
+	CBT_adolf_furrer = {
+		instance = {
+			allowed = {
+				has_dlc = "By Blood Alone"
+			}
+			name=SWI_adolf_furrer
+			portraits={
+				civilian={
+					large=GFX_portrait_SWI_adolf_furrer
+					small=GFX_portrait_SWI_adolf_furrer_small
+				}
+			}
+			country_leader={
+				traits={ SWI_weapons_designer }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "By Blood Alone" }
+			}
+			name=SWI_adolf_furrer
+			portraits={
+				civilian={
+					large=GFX_Portrait_France_Generic_land_2
+				}
+			}
+			country_leader={
+				traits={ SWI_weapons_designer }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
