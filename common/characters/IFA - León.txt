@@ -1,0 +1,38 @@
+characters={
+	IFA_jose_antonio_primo_de_rivera = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name=SPA_jose_antonio_primo_de_rivera
+			portraits={
+				civilian={
+					large=GFX_portrait_SPA_jose_antonio_primo_de_rivera
+				}
+			}
+			country_leader={
+				traits={ sins_of_the_father }
+				ideology=falangism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name=SPA_jose_antonio_primo_de_rivera
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_America_Generic_land_4
+				}
+			}
+			country_leader={
+				traits={ sins_of_the_father }
+				ideology=falangism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

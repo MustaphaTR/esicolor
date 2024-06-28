@@ -1,0 +1,38 @@
+characters={
+	IFL_manuel_fal_conde = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name=IFL_manuel_fal_conde
+			portraits={
+				civilian={
+					large=GFX_portrait_SPA_manuel_fal_conde
+				}
+			}
+			country_leader={
+				traits={ jefe }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name=IFL_manuel_fal_conde
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_America_Generic_land_2
+				}
+			}
+			country_leader={
+				traits={ jefe }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+characters={
+	ILS_julian_gorkin = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name=ILS_julian_gorkin
+			portraits={
+				civilian={
+					large=GFX_portrait_SPR_julian_gorkin
+				}
+			}
+			country_leader={
+				traits={ militant_socialist }
+				ideology=anarchist_communism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name=ILS_julian_gorkin
+			portraits={
+				civilian={
+					large="gfx/leaders/Europe/portrait_europe_generic_5.dds"
+				}
+			}
+			country_leader={
+				traits={ militant_socialist }
+				ideology=anarchist_communism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
