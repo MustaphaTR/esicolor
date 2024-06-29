@@ -1,0 +1,38 @@
+characters={
+	ZIE_tsar_vladimir_kirillovich = {
+		instance = {
+			allowed = {
+				has_dlc = "No Step Back"
+			}
+			name=SOV_tsar_vladimir_kirillovich
+			portraits={
+				civilian={
+					large=GFX_portrait_SOV_vladimir_kirillovich
+				}
+			}
+			country_leader={
+				traits={ emperor_and_autocrat_of_all_the_russias }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Step Back" }
+			}
+			name=SOV_tsar_vladimir_kirillovich
+			portraits={
+				civilian={
+					large=GFX_Portrait_Soviet_Generic_3
+				}
+			}
+			country_leader={
+				traits={ emperor_and_autocrat_of_all_the_russias }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
