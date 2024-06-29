@@ -1,0 +1,39 @@
+characters={
+	BAE_ras_imru_haile_selassie = {
+		instance = {
+			allowed = {
+				has_dlc = "By Blood Alone"
+			}
+			name=ETH_ras_imru_haile_selassie
+			portraits={
+				civilian={
+					large=GFX_portrait_ETH_ras_imru_haile_selassie
+					small=GFX_portrait_ETH_ras_imru_haile_selassie_small
+				}
+			}
+			country_leader={
+				traits={ the_red_ras }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "By Blood Alone" }
+			}
+			name=ETH_ras_imru_haile_selassie
+			portraits={
+				civilian={
+					large="GFX_Portrait_Arabia_Generic_3"
+				}
+			}
+			country_leader={
+				traits={ the_red_ras }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

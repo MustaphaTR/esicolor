@@ -1,0 +1,39 @@
+characters={
+	BAO_hailu_tekle_haymanot = {
+		instance = {
+			allowed = {
+				has_dlc = "By Blood Alone"
+			}
+			name=ETH_hailu_tekle_haymanot
+			portraits={
+				civilian={
+					large=GFX_portrait_ETH_hailu_tekle_haymanot
+					small=GFX_portrait_ETH_hailu_tekle_hayamot_small
+				}
+			}
+			country_leader={
+				traits={ tainted_ras }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "By Blood Alone" }
+			}
+			name=ETH_hailu_tekle_haymanot
+			portraits={
+				civilian={
+					large="GFX_portrait_africa_generic_land_5"
+				}
+			}
+			country_leader={
+				traits={ tainted_ras }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

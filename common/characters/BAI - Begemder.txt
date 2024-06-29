@@ -1,0 +1,39 @@
+characters={
+	BAI_alemework_beyene = {
+		instance = {
+			allowed = {
+				has_dlc = "By Blood Alone"
+			}
+			name=ETH_alemework_beyene
+			portraits={
+				civilian={
+					large=GFX_portrait_ETH_alemework_beyene
+					small=GFX_portrait_ETH_alemework_beyene_small
+				}
+			}
+			country_leader={
+				traits={ gallant_doctor }
+				ideology=anarchist_communism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "By Blood Alone" }
+			}
+			name=ETH_alemework_beyene
+			portraits={
+				civilian={
+					large="GFX_Portrait_Africa_Generic_1"
+				}
+			}
+			country_leader={
+				traits={ gallant_doctor }
+				ideology=anarchist_communism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

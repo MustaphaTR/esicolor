@@ -1,0 +1,38 @@
+characters={
+	CFM_amha_selassie = {
+		instance = {
+			allowed = {
+				has_dlc = "By Blood Alone"
+			}
+			name=ETH_amha_selassie
+			portraits={
+				civilian={
+					large=GFX_portrait_ETH_amha_selassie
+				}
+			}
+			country_leader={
+				# traits={ king_of_ethiopia }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "By Blood Alone" }
+			}
+			name=ETH_amha_selassie
+			portraits={
+				civilian={
+					large="GFX_Portrait_Arabia_Generic_2"
+				}
+			}
+			country_leader={
+				# traits={ king_of_ethiopia }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

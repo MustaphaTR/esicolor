@@ -1,0 +1,39 @@
+characters={
+	BAZ_haile_selassie_gugsa = {
+		instance = {
+			allowed = {
+				has_dlc = "By Blood Alone"
+			}
+			name=ETH_haile_selassie_gugsa
+			portraits={
+				civilian={
+					large=GFX_portrait_ETH_haile_selassie_gugsa
+					small=GFX_portrait_ETH_haile_selassie_gugsa_small
+				}
+			}
+			country_leader={
+				traits={ crowned_adder }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "By Blood Alone" }
+			}
+			name=ETH_haile_selassie_gugsa
+			portraits={
+				civilian={
+					large="GFX_Portrait_Africa_Generic_3"
+				}
+			}
+			country_leader={
+				traits={ crowned_adder }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
