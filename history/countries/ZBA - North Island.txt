@@ -8,17 +8,19 @@ set_technology = {
 
 set_convoys = 5
 set_popularities = {
-	democratic = 25
-	fascism = 25
-	communism = 25
-	neutrality = 25
+	democratic = 75
+	fascism = 10
+	communism = 5
+	neutrality = 10
 }
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = democratic
 	last_election = "1935.10.10"
 	election_frequency = 36
-	elections_allowed = no
+	elections_allowed = yes
 }
+
+recruit_character = ZBA_michael_joseph_savage
 
 set_rule = {
 	can_generate_female_aces = yes
