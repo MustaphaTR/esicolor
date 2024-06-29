@@ -1,0 +1,428 @@
+ideas = {
+	# TECHNOLOGY
+	tank_manufacturer = {
+		designer = yes
+
+		OOY_fast_tank_manufacturer = {
+			name = CZE_ckd
+			picture = CZE_ckd
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+				OR = {
+					original_tag = OOY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 9
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					9 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { fast_tank_manufacturer }
+		}
+
+		OFA_medium_tank_manufacturer = {
+			name = CZE_tatra
+			picture = CZE_tatra
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+				OR = {
+					original_tag = OFA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 74
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					74 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { medium_tank_manufacturer }
+		}
+
+		# Skoda is doing 4 different things, let's keep it to 1.
+		#OOY_heavy_tank_manufacturer = {
+		#	name = CZE_skoda_armor
+		#	picture = CZE_skoda_armor
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = heavy_tank_manufacturer_disabled }
+		#		OR = {
+		#			original_tag = OOY
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 9
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			9 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		armor = 0.15
+		#	}
+		#	traits = { heavy_tank_manufacturer }
+		#}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		# Skoda is doing 4 different things, let's keep it to 1.
+		#OOY_coastal_defence_naval_manufacturer = {
+		#	name = CZE_skoda_shipyards
+		#	picture = CZE_skoda_shipyards
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = coastal_defence_naval_manufacturer_disabled }
+		#		OR = {
+		#			original_tag = OOY
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 9
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			9 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		naval_equipment = 0.15
+		#	}
+		#	traits = { coastal_defence_naval_manufacturer }
+		#}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		OOY_light_aircraft_manufacturer = {
+			name = CZE_avia
+			picture = CZE_avia
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OOY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 9
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					9 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		OOY_medium_aircraft_manufacturer = {
+			name = CZE_aero
+			picture = CZE_aero
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OOY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 9
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					9 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+
+		OOY_heavy_aircraft_manufacturer = {
+			name = CZE_letov
+			picture = CZE_letov
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OOY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 9
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					9 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { heavy_aircraft_manufacturer }
+		}
+
+		# Similar thing with Skoda, keeping the Tank Designer one.
+		#OOY_naval_aircraft_manufacturer = {
+		#	name = CZE_ckd_praga
+		#	picture = CZE_ckd_praga
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+		#		OR = {
+		#			original_tag = OOY
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 9
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			9 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		air_equipment = 0.15
+		#	}
+		#	traits = { naval_aircraft_manufacturer }
+		#}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		OFS_infantry_equipment_manufacturer = {
+			name = CZE_zbrojovka_brno
+			picture = CZE_zbrojovka_brno
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = OFS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 75
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					75 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		# Skoda is doing 4 different things, let's keep it to 1.
+		#OOY_artillery_manufacturer = {
+		#	name = CZE_skoda_artillery
+		#	picture = CZE_skoda_artillery
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = artillery_manufacturer_disabled }
+		#		OR = {
+		#			original_tag = OOY
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 9
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			9 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		artillery = 0.15
+		#	}
+		#	traits = { artillery_manufacturer }
+		#}
+
+		OOY_motorized_equipment_manufacturer = {
+			name = CZE_praga
+			picture = CZE_praga
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = OOY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 9
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					9 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		OOY_industrial_concern = {
+			name = CZE_skoda_works_2
+			picture = CZE_skoda_works_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = OOY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 9
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					9 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		OOY_electronics_concern = {
+			name = CZE_elektra
+			picture = CZE_elektra
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = OOY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 9
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					9 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+	}
+}

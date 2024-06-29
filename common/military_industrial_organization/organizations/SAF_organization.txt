@@ -1,0 +1,40 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+ZFS_medium_tank_organization = {
+    name = SAF_iscor_organization
+    include = esicolor_generic_medium_tank_organization
+    icon = GFX_idea_SAF_idea_iscor
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+			OR = {
+				original_tag = ZFS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 275
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				275 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

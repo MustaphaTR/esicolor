@@ -1,0 +1,384 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+ 
+#####################
+
+OOY_mobile_tank_organization = {
+	name = CZE_ckd_organization
+	include = esicolor_generic_mobile_tank_organization
+	icon = GFX_idea_CZE_ckd
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OOY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 9
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				9 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OFA_medium_tank_organization = {
+	name = CZE_tatra_organization
+	include = esicolor_generic_medium_tank_organization
+	icon = GFX_idea_CZE_tatra
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OFA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 74
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				74 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+# Skoda is doing 4 different things, let's keep it to 1.
+#OOY_heavy_tank_organization = {
+#	name = CZE_skoda_armor_organization
+#	include = esicolor_generic_heavy_tank_organization
+#	icon = GFX_idea_CZE_skoda_armor
+#
+#	allowed = {
+#		has_dlc = "Arms Against Tyranny"
+#	}
+#	visible = {
+#		owner = {
+#			NOT = { has_country_flag = heavy_tank_manufacturer_disabled }
+#			OR = {
+#				original_tag = OOY
+#				AND = {
+#					has_global_flag = custom_designers_only
+#					owns_state = 9
+#				}
+#			}
+#		}
+#	}
+#	available = {
+#		if = {
+#			limit = { has_global_flag = custom_designers_only }
+#
+#			owner = {
+#				9 = { state_designer_availabile = yes }
+#			}
+#		}
+#	}
+#}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+# Skoda is doing 4 different things, let's keep it to 1.
+#OOY_escort_ship_organization = {
+#	name = CZE_skoda_shipyards_organization
+#	include = esicolor_generic_escort_ship_organization
+#	icon = GFX_idea_CZE_skoda_shipyards
+#
+#	allowed = {
+#		has_dlc = "Arms Against Tyranny"
+#	}
+#	visible = {
+#		owner = {
+#			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+#			OR = {
+#				original_tag = OOY
+#				AND = {
+#					has_global_flag = custom_designers_only
+#					owns_state = 9
+#				}
+#			}
+#		}
+#	}
+#	available = {
+#		if = {
+#			limit = { has_global_flag = custom_designers_only }
+#
+#			owner = {
+#				9 = { state_designer_availabile = yes }
+#			}
+#		}
+#	}
+#}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OOY_light_aircraft_organization = {
+	name = CZE_avia
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_CZE_avia
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OOY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 9
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				9 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OOY_medium_aircraft_organization = {
+	name = CZE_aero_organization
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_CZE_aero
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OOY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 9
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				9 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OOY_heavy_aircraft_organization = {
+	name = generic_heavy_aircraft_organization
+	include = esicolor_generic_heavy_aircraft_organization
+	icon = GFX_idea_CZE_letov
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OOY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 9
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				9 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+# Similar thing with Skoda, keeping the Tank Designer one.
+#OOY_naval_aircraft_organization = {
+#	name = CZE_ckd_praga_organization
+#	include = esicolor_generic_naval_aircraft_organization
+#	icon = GFX_idea_CZE_ckd_praga
+#
+#	allowed = {
+#		has_dlc = "Arms Against Tyranny"
+#	}
+#	visible = {
+#		owner = {
+#			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+#			OR = {
+#				original_tag = OOY
+#				AND = {
+#					has_global_flag = custom_designers_only
+#					owns_state = 9
+#				}
+#			}
+#		}
+#	}
+#	available = {
+#		if = {
+#			limit = { has_global_flag = custom_designers_only }
+#
+#			owner = {
+#				9 = { state_designer_availabile = yes }
+#			}
+#		}
+#	}
+#}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+OFS_infantry_equipment_organization = {
+	name = CZE_zbrojovka_brno_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_CZE_zbrojovka_brno
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OFS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 75
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				75 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+# Skoda is doing 4 different things, let's keep it to 1.
+#OOY_artillery_organization = {
+#	name = CZE_skoda_artillery_organization
+#	include = generic_artillery_organization
+#	icon = GFX_idea_CZE_skoda_artillery
+#
+#	allowed = {
+#		has_dlc = "Arms Against Tyranny"
+#	}
+#	visible = {
+#		owner = {
+#			NOT = { has_country_flag = artillery_manufacturer_disabled }
+#			OR = {
+#				original_tag = OOY
+#				AND = {
+#					has_global_flag = custom_designers_only
+#					owns_state = 9
+#				}
+#			}
+#		}
+#	}
+#	available = {
+#		if = {
+#			limit = { has_global_flag = custom_designers_only }
+#
+#			owner = {
+#				9 = { state_designer_availabile = yes }
+#			}
+#		}
+#	}
+#}
+
+OOY_motorized_mechanized_organization = {
+	name = CZE_praga_organization
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_CZE_praga
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OOY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 9
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				9 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

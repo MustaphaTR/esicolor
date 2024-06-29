@@ -1,0 +1,34 @@
+ideas = {
+	tank_manufacturer = {
+		ZFS_medium_tank_manufacturer = {
+			name = SAF_iscor_organization
+			picture = SAF_idea_iscor
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+				OR = {
+					original_tag = ZFS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 275
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					275 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { medium_tank_manufacturer }
+		}
+	}
+}
