@@ -3679,13 +3679,76 @@ give_early_fighter = {
 					engine_type_slot = engine_1_1x
 					special_type_slot_1 = lmg_defense_turret
 				}
-				icon = "GFX_early_fighter_medium"
 			}
 		}
 	}
 	else = {
 		set_technology = {
 			early_fighter = 1
+		}
+	}
+}
+
+give_basic_cas = {
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+		}
+		set_technology = {
+			basic_small_airframe = 1
+			early_bombs = 1
+		}
+
+		if = {
+			limit = { is_ai = yes }
+			create_equipment_variant = {
+				name = "Basic CAS"
+				type = small_plane_cas_airframe_1
+				modules = {
+					fixed_main_weapon_slot = small_bomb_bay
+					fixed_auxiliary_weapon_slot_1 = empty
+					engine_type_slot = engine_2_1x
+					special_type_slot_1 = empty
+					special_type_slot_2 = empty
+				}
+			}
+		}
+	}
+	else = {
+		set_technology = {
+			CAS1 = 1
+		}
+	}
+}
+
+give_basic_naval_bomber = {
+	if = {
+		limit = {
+			has_dlc = "By Blood Alone"
+		}
+		set_technology = {
+			basic_small_airframe = 1
+			air_torpedoe_1 = 1
+		}
+
+		if = {
+			limit = { is_ai = yes }
+			create_equipment_variant = {
+				name = "Basic Naval Bomber"
+				type = small_plane_naval_bomber_airframe_1
+				modules = {
+					fixed_main_weapon_slot = torpedo_mounting
+					fixed_auxiliary_weapon_slot_1 = empty
+					engine_type_slot = engine_2_1x
+					special_type_slot_1 = empty
+					special_type_slot_2 = empty
+				}
+			}
+		}
+	}
+	else = {
+		set_technology = {
+			naval_bomber1 = 1
 		}
 	}
 }
@@ -3711,7 +3774,6 @@ give_early_bomber = {
 					engine_type_slot = engine_1_3x
 					special_type_slot_1 = lmg_defense_turret
 				}
-				icon = "GFX_early_bomber_medium"
 			}
 		}
 	}
@@ -3724,7 +3786,9 @@ give_early_bomber = {
 
 setup_technology_option_1 = {
 	set_technology = {
+		tech_trucks = 1
 		tech_support = 1
+		gw_artillery = 1
 	}
 	give_transport_1 = yes
 }
@@ -3732,75 +3796,273 @@ setup_technology_option_1 = {
 randomise_techonology = {
 	random_list = {
 		seed = random
-		60 = {
+		30 = {
 			random_list = {
 				seed = random
-				20 = {
+				30 = {
+					set_technology = {
+						infantry_weapons1 = 1
+					}
+				}
+				25 = {
+					set_technology = {
+						support_weapons = 1
+					}
+				}
+				5 = {
+					set_technology = {
+						infantry_weapons1 = 1
+						support_weapons = 1
+					}
+				}
+				30 = { }
+			}
+
+			random_list = {
+				seed = random
+				5 = {
+					modifier = {
+						factor = 2
+						any_owned_state = {
+							is_coastal = yes
+						}
+					}
+
+					set_technology = {
+						marines = 1
+					}
+				}
+				5 = {
+					set_technology = {
+						paratroopers = 1
+					}
+				}
+				5 = {
+					modifier = {
+						factor = 0.5
+						any_owned_state = {
+							is_coastal = yes
+						}
+					}
+
+					set_technology = {
+						tech_mountaineers = 1
+					}
+				}
+				85 = { }
+			}
+			random_list = {
+				seed = random
+				10 = {
+					set_technology = {
+						tech_trucks = 1
+					}
+				}
+				10 = {
+					set_technology = {
+						gw_artillery = 1
+					}
+				}
+				80 = { }
+			}
+
+			random_list = {
+				seed = random
+				15 = {
+					set_technology = {
+						basic_machine_tools = 1
+					}
+				}
+				85 = { }
+			}
+
+			random_list = {
+				seed = random
+				15 = {
+					modifier = {
+						factor = 3
+						any_owned_state = {
+							is_coastal = yes
+						}
+					}
+
+					give_transport_1 = yes
+				}
+				85 = { }
+			}
+			random_list = {
+				seed = random
+				15 = {
+					modifier = {
+						factor = 3
+						any_owned_state = {
+							is_coastal = yes
+						}
+					}
+
+					give_destroyer_1 = yes
+				}
+				85 = { }
+			}
+		}
+		50 = {
+			set_technology = {
+				infantry_weapons1 = 1
+			}
+
+			random_list = {
+				seed = random
+				40 = {
+					set_technology = {
+						support_weapons = 1
+					}
+				}
+				60 = { }
+			}
+			random_list = {
+				seed = random
+				10 = {
+					modifier = {
+						factor = 2
+						any_owned_state = {
+							is_coastal = yes
+						}
+					}
+
+					set_technology = {
+						marines = 1
+					}
+				}
+				10 = {
+					set_technology = {
+						paratroopers = 1
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0.5
+						any_owned_state = {
+							is_coastal = yes
+						}
+					}
+
+					set_technology = {
+						tech_mountaineers = 1
+					}
+				}
+				70 = { }
+			}
+			random_list = {
+				seed = random
+				60 = {
 					set_technology = {
 						tech_trucks = 1
 					}
 
 					random_list = {
 						seed = random
-						1 = {
+						10 = {
 							set_technology = {
 								motorised_infantry = 1
 							}
 						}
-						99 = { }
+						20 = {
+							set_technology = {
+								basic_train = 1
+							}
+						}
+						70 = { }
 					}
 				}
-				10 = {
-					set_technology = {
-						basic_train = 1
-					}
-				}
-				5 = {
-					set_technology = {
-						gw_artillery = 1
-					}
-				}
-				5 = {
-					give_gwtank = yes
-				}
-				60 = { }
+				40 = { }
 			}
 			random_list = {
 				seed = random
-				25 = {
+				60 = {
+					set_technology = {
+						gw_artillery = 1
+					}
+
+					random_list = {
+						seed = random
+						10 = {
+							set_technology = {
+								interwar_antiair = 1
+							}
+						}
+						10 = {
+							set_technology = {
+								interwar_antitank = 1
+							}
+						}
+						10 = {
+							give_gwtank = yes
+						}
+						70 = { }
+					}
+				}
+				40 = { }
+			}
+			random_list = {
+				seed = random
+				30 = {
 					set_technology = {
 						tech_support = 1
 					}
 
 					random_list = {
 						seed = random
-						5 = {
+						10 = {
 							set_technology = {
 								tech_recon = 1
 							}
 						}
-						5 = {
+						10 = {
 							set_technology = {
 								tech_engineers = 1
+							}
+						}
+						5 = {
+							set_technology = {
+								tech_military_police = 1
+							}
+						}
+						75 = { }
+					}
+				}
+				70 = { }
+			}
+
+			random_list = {
+				seed = random
+				30 = {
+					set_technology = {
+						electronic_mechanical_engineering = 1
+					}
+
+					random_list = {
+						10 = {
+							set_technology = {
+								radio = 1
+							}
+
+							random_list = {
+								10 = {
+									set_technology = {
+										radio_detection = 1
+									}
+								}
+								90 = { }
 							}
 						}
 						90 = { }
 					}
 				}
-				75 = { }
+				70 = { }
 			}
 			random_list = {
 				seed = random
-				25 = {
-					set_technology = {
-						electronic_mechanical_engineering = 1
-					}
-				}
-				75 = { }
-			}
-			random_list = {
-				seed = random
-				25 = {
+				30 = {
 					set_technology = {
 						basic_machine_tools = 1
 					}
@@ -3814,14 +4076,22 @@ randomise_techonology = {
 						90 = { }
 					}
 				}
-				75 = { }
+				70 = { }
 			}
-
 			random_list = {
 				seed = random
 				30 = {
 					set_technology = {
 						fuel_silos = 1
+					}
+
+					random_list = {
+						5 = {
+							set_technology = {
+								fuel_refining = 1
+							}
+						}
+						95 = { }
 					}
 				}
 				70 = { }
@@ -3874,18 +4144,46 @@ randomise_techonology = {
 				seed = random
 				20 = {
 					give_early_fighter = yes
+
+					random_list = {
+						5 = {
+							modifier = {
+								factor = 0.5
+								any_owned_state = {
+									is_coastal = yes
+								}
+							}
+
+							set_technology = {
+								give_basic_cas = 1
+							}
+						}
+						5 = {
+							modifier = {
+								factor = 2
+								any_owned_state = {
+									is_coastal = yes
+								}
+							}
+
+							set_technology = {
+								give_basic_naval_bomber = 1
+							}
+						}
+						90 = { }
+					}
 				}
 				80 = { }
 			}
 			random_list = {
 				seed = random
-				8 = {
+				10 = {
 					give_early_bomber = yes
 				}
-				92 = { }
+				90 = { }
 			}
 		}
-		10 = { }
+		20 = { }
 	}
 }
 
