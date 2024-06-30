@@ -1,0 +1,566 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+EYL_mobile_tank_organization = {
+	name = USA_marmon_herrington_organization
+	include = esicolor_generic_mobile_tank_organization
+	icon = GFX_idea_marmon_herrington
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			OR = {
+				original_tag = EYL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 396
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				396 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+EYE_medium_tank_organization = {
+	name = USA_chrysler_organization
+	include = esicolor_generic_medium_tank_organization
+	icon = GFX_idea_chrysler
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+			OR = {
+				original_tag = EYE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 393
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				393 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ELZ_medium_tank_organization = {
+	name = USA_army_ordnance_department_organization
+	include = esicolor_generic_medium_tank_organization
+	icon = GFX_idea_army_ordnance_department
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+			OR = {
+				original_tag = ELZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 362
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				362 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+ESB_battle_line_ship_organization = {
+	name = USA_brooklyn_naval_yard_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_brooklyn_naval_yard
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = ESB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 358
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				358 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ELZ_task_force_ship_organization = {
+	name = USA_newport_news_shipbuilding_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_newport_news_shipbuilding
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = ELZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 362
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				362 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ESF_submarine_organization = {
+	name = USA_electric_boat_company_organization
+	include = esicolor_generic_submarine_organization
+	icon = GFX_idea_electric_boat_company
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = submarine_manufacturer_disabled }
+			OR = {
+				original_tag = ESF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 357
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				357 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ELZ_escort_ship_organization = {
+	name = USA_norfolk_naval_yard_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_norfolk_naval_yard
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = ELZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 362
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				362 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+ESB_light_aircraft_organization = {
+	name = bell
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_bell
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ESB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 358
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				358 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+EFB_cas_aircraft_organization = {
+	name = USA_douglas_aircraft_company_organization
+	include = esicolor_generic_cas_aircraft_organization
+	icon = GFX_idea_douglas_aircraft_company
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = CAS_manufacturer_disabled }
+			OR = {
+				original_tag = EFB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 378
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				378 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+EFB_medium_aircraft_organization = {
+	name = USA_lockheed_organization
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_lockheed
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = EFB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 378
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				378 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+EFB_range_focused_aircraft_organization = {
+	name = USA_north_american_aviation_organization
+	include = esicolor_generic_range_focused_aircraft_organization
+	icon = GFX_idea_north_american_aviation
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fuel_efficient_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = EFB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 378
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				378 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+EBL_heavy_aircraft_organization = {
+	name = USA_boeing_organization
+	include = esicolor_generic_heavy_aircraft_organization
+	icon = GFX_idea_boeing
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = EBL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 386
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				386 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ESB_heavy_aircraft_organization = {
+	name = consolidated_aircraft
+	include = esicolor_generic_heavy_aircraft_organization
+	icon = GFX_idea_consolidated_aircraft
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ESB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 358
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				358 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ESB_naval_aircraft_organization = {
+	name = USA_grumman_organization
+	include = esicolor_generic_naval_aircraft_organization
+	icon = GFX_idea_grumman
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ESB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 358
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				358 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+ESF_infantry_equipment_organization = {
+	name = USA_springfield_armory_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_springfield_armory
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ESF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 357
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				357 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+EYS_artillery_organization = {
+	name = USA_rock_island_arsenal_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_rock_island_arsenal
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = EYS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 395
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				395 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+EYE_motorized_mechanized_organization = {
+	name = USA_ford_motor_company_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_ford_motor_company
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = EYE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 393
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				393 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

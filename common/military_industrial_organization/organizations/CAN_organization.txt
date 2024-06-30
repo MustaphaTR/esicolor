@@ -1,0 +1,248 @@
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+ZFL_task_force_ship_organization = {
+	name = CAN_kingston_shipbuilding_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_kingston_shipbuilding
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = ZFL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 276
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				276 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ALA_escort_ship_organization = {
+	name = CAN_halifax_shipyard_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_halifax_shipyard
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = ALA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 464
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				464 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+BMC_light_aircraft_organization = {
+	name = CAN_canadian_car_foundry_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_canadian_car_foundry
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = BMC
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 468
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				468 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZFL_medium_aircraft_organization = {
+	name = havilland_canada # Organisation version do not mention Canada, this is a subsidiary of a British company.
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_de_havilland
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ZFL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 276
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				276 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+# Handley Page is a mainland British Company, excluding.
+
+BMC_naval_aircraft_organization = {
+	name = CAN_fairchild_aircraft_ltd_organization
+	include = esicolor_generic_naval_aircraft_organization
+	icon = GFX_idea_generic_naval_manufacturer_2 # Has a generic icon in basegame as well, but not this one. Keeping the one generic naval designer uses.
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = BMC
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 468
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				468 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+ZFL_infantry_equipment_organization = {
+	name = CAN_small_arms_limited_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_small_arms_limited
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZFL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 276
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				276 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZFL_support_equipment_organization = {
+	name = CAN_inglis_company_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_inglis_company
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZFL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 276
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				276 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

@@ -1,0 +1,673 @@
+ideas = {
+	tank_manufacturer = { 
+		designer = yes
+
+		EYL_fast_tank_manufacturer = {
+			name = marmon_herrington
+			picture = marmon_herrington
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+				OR = {
+					original_tag = EYL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 396
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					396 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { fast_tank_manufacturer }
+		}
+
+		EYE_medium_tank_manufacturer = {
+			name = chrysler
+			picture = chrysler
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+				OR = {
+					original_tag = EYE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 393
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					393 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { medium_tank_manufacturer }
+		}
+
+		ELZ_heavy_tank_manufacturer = {
+			name = army_ordnance_department
+			picture = army_ordnance_department
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = heavy_tank_manufacturer_disabled }
+				OR = {
+					original_tag = ELZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 362
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					362 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { heavy_tank_manufacturer }
+		}
+	}
+	
+	naval_manufacturer = { 
+		designer = yes
+
+		ESB_atlantic_fleet_naval_manufacturer = {
+			name = brooklyn_naval_yard
+			picture = brooklyn_naval_yard
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ESB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 358
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					358 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { atlantic_fleet_naval_manufacturer }
+		}
+
+		ELZ_pacific_fleet_naval_manufacturer = {
+			name = newport_news_shipbuilding
+			picture = newport_news_shipbuilding
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ELZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 362
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					362 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+
+		ELZ_coastal_defence_naval_manufacturer = {
+			name = norfolk_naval_yard
+			picture = norfolk_naval_yard
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = coastal_defence_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ELZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 362
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					362 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { coastal_defence_naval_manufacturer }
+		}
+
+		ESF_raiding_fleet_naval_manufacturer = {
+			name = electric_boat_company
+			picture = electric_boat_company
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ESF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 357
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					357 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { raiding_fleet_naval_manufacturer }
+		}
+	}
+	
+	aircraft_manufacturer = { 
+		designer = yes
+
+		ESB_light_aircraft_manufacturer = {
+			name = bell
+			picture = bell
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ESB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 358
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					358 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		EFB_light_aircraft_manufacturer = {
+			name = north_american_aviation
+			picture = north_american_aviation
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = EFB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 378
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					378 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		EFB_CAS_manufacturer = {
+			name = douglas_aircraft_company
+			picture = douglas_aircraft_company
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = CAS_manufacturer_disabled }
+				OR = {
+					original_tag = EFB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 378
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					378 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { CAS_manufacturer }
+		}
+
+		EFB_medium_aircraft_manufacturer = {
+			name = lockheed
+			picture = lockheed
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = EFB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 378
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					378 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+
+		EBL_heavy_aircraft_manufacturer = {
+			name = boeing
+			picture = boeing
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = EBL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 386
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					386 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { heavy_aircraft_manufacturer }
+		}
+
+		ESB_heavy_aircraft_manufacturer = {
+			name = consolidated_aircraft
+			picture = consolidated_aircraft
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ESB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 358
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					358 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { heavy_aircraft_manufacturer }
+		}
+
+		ESB_naval_aircraft_manufacturer = {
+			name = grumman
+			picture = grumman
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ESB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 358
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					358 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { naval_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		ESF_infantry_equipment_manufacturer = {
+			name = springfield_armory
+			picture = springfield_armory
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ESF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 357
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					357 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		EYS_artillery_manufacturer = {
+			name = rock_island_arsenal
+			picture = rock_island_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = EYS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 395
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					395 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		EYE_motorized_equipment_manufacturer = {
+			name = ford_motor_company
+			picture = ford_motor_company
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = EYE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 393
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					393 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		EYE_industrial_concern = {
+			name = USA_general_motors
+			picture = USA_general_motors
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = EYE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 393
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					393 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		ESB_electronics_concern = {
+			name = general_electric
+			picture = general_electric
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = ESB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 358
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					358 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
+		EFB_refinery_concern = {
+			name = standard_oil_california
+			picture = standard_oil_california
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = refinery_concern_disabled }
+				OR = {
+					original_tag = EFB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 378
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					378 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+
+		# No idea on this one, it is HQed in Nebraska now, but most likely wasn't back then.
+		#USA_railway_company = {
+		#	name = USA_union_pacific_railway
+		#	picture = idea_USA_union_pacific_railway
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = railway_company_disabled }
+		#		OR = {
+		#			original_tag = ELI
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 361
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			361 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		train_tech = 0.15
+		#	}
+		#	traits = { railway_company }
+		#}
+	}
+}

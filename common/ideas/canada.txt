@@ -1,0 +1,330 @@
+ideas = {
+	naval_manufacturer = {
+		designer = yes
+
+		ZFL_pacific_fleet_naval_manufacturer = {
+			name = kingston_shipbuilding
+			picture = kingston_shipbuilding
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ZFL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 276
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					276 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+
+		ALA_convoy_escort_naval_manufacturer = {
+			name = halifax_shipyard_limited
+			picture = halifax_shipyard_limited
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ALA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 464
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					464 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		BMC_light_aircraft_manufacturer = {
+			name = canadian_car_foundry
+			picture = canadian_car_foundry
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = BMC
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 468
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					468 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		ZFL_medium_aircraft_manufacturer = {
+			name = havilland_canada
+			picture = havilland_canada
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ZFL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 276
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					276 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+
+		# Handley Page is a mainland British Company, excluding.
+
+		BMC_naval_aircraft_manufacturer = {
+			name = CAN_fairchild_aircraft_ltd
+			picture = generic_naval_manufacturer_2 # Has a generic icon in basegame as well, but not this one. Keeping the one generic naval designer uses.
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = BMC
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 468
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					468 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { naval_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		ZFL_infantry_equipment_manufacturer = {
+			name = small_arms_limited
+			picture = small_arms_limited
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZFL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 276
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					276 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		ZFL_support_equipment_manufacturer = {
+			name = inglis_company
+			picture = inglis_company
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZFL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 276
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					276 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		# Was created in 40s.
+		BMC_electronics_concern = {
+			name = montreal_lab
+			picture = montreal_lab
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = BMC
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 468
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					468 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
+		# Was created in 40s.
+		ZFL_refinery_concern = {
+			name = polymer_corporation
+			picture = polymer_corporation
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = refinery_concern_disabled }
+				OR = {
+					original_tag = ZFL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 276
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					276 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+
+		ZFL_railway_company = {
+			name = canadian_pacific_railway
+			picture = CAN_canadian_pacific_railway
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = ZFL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 276
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					276 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
+		}
+	}
+}

@@ -11,6 +11,7 @@ has_custom_fast_tank_manufacturer = {
 		original_tag = OOY
 		original_tag = IEB
 		original_tag = ZZI
+		original_tag = EYL
 	}
 }
 
@@ -18,12 +19,21 @@ has_custom_medium_tank_manufacturer = {
 	OR = {
 		original_tag = OFA
 		original_tag = ZFS
+		original_tag = EYE
+		AND = {
+			has_dlc = "Arms Against Tyranny"
+			original_tag = ELZ
+		}
 	}
 }
 
 has_custom_heavy_tank_manufacturer = {
 	OR = {
 		original_tag = IYS
+		AND = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+			original_tag = ELZ
+		}
 	}
 }
 
@@ -37,6 +47,8 @@ has_custom_tank_refurbishment_plant = {
 has_custom_pacific_fleet_naval_manufacturer = {
 	OR = {
 		original_tag = OEF
+		original_tag = ZFL
+		original_tag = ELZ
 	}
 }
 
@@ -44,6 +56,7 @@ has_custom_atlantic_fleet_naval_manufacturer = {
 	OR = {
 		original_tag = IIO
 		original_tag = IAO
+		original_tag = ESB
 		AND = {
 			has_dlc = "Arms Against Tyranny"
 			OR = {
@@ -87,11 +100,17 @@ has_custom_repair_and_refurbishment_plant = {
 
 # Only available without AAT.
 has_custom_coastal_defence_naval_manufacturer = {
-	always = no
+	OR = {
+		original_tag = ELZ
+	}
 }
 
 has_custom_submarine_manufacturer = {
 	OR = {
+		AND = {
+			has_dlc = "Arms Against Tyranny"
+			original_tag = ESF
+		}
 		original_tag = CBZ
 	}
 }
@@ -102,19 +121,27 @@ has_custom_raiding_fleet_naval_manufacturer = {
 		original_tag = IEB
 		original_tag = ISF
 		original_tag = IYS
+		AND = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+			original_tag = ESF
+		}
 	}
 }
 
 has_custom_convoy_escort_naval_manufacturer = {
 	OR = {
 		original_tag = IIO
+		original_tag = ALA
 		AND = {
 			NOT = { has_dlc = "Arms Against Tyranny" }
 			original_tag = IIF
 		}
 		AND = {
 			has_dlc = "Arms Against Tyranny"
-			original_tag = ISB
+			OR = {
+				original_tag = ISB
+				original_tag = ELZ
+			}
 		}
 	}
 }
@@ -129,12 +156,19 @@ has_custom_light_aircraft_manufacturer = {
 		original_tag = IAO
 		original_tag = ISY
 		original_tag = ZIY
+		original_tag = ESB
+		original_tag = BMC # ALB
+		AND = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+			original_tag = EFB
+		}
 	}
 }
 
 has_custom_CAS_manufacturer = {
 	OR = {
 		original_tag = ISY
+		original_tag = EFB
 	}
 }
 
@@ -144,12 +178,18 @@ has_custom_medium_aircraft_manufacturer = {
 		original_tag = IOF
 		original_tag = IIF
 		original_tag = ZIY
+		original_tag = ZFL
+		original_tag = EFB
 	}
 }
 
 has_custom_fuel_efficient_aircraft_manufacturer = {
 	OR = {
 		original_tag = ISB
+		AND = {
+			has_dlc = "Arms Against Tyranny"
+			original_tag = EFB
+		}
 	}
 }
 
@@ -163,6 +203,8 @@ has_custom_heavy_aircraft_manufacturer = {
 		original_tag = IOF
 		original_tag = ISB
 		original_tag = ZIY
+		original_tag = ESB
+		original_tag = EBL
 	}
 }
 
@@ -172,6 +214,8 @@ has_custom_naval_aircraft_manufacturer = {
 		original_tag = OAL
 		original_tag = IIO
 		original_tag = ZIY
+		original_tag = ESB
+		original_tag = BMC # ALB
 		original_tag = FEL
 	}
 }
@@ -186,6 +230,8 @@ has_custom_infantry_equipment_manufacturer = {
 		original_tag = IEY
 		original_tag = ISY
 		original_tag = ZZE
+		original_tag = ZFL
+		original_tag = ESF
 		original_tag = BAZ
 		original_tag = YZI
 	}
@@ -196,6 +242,7 @@ has_custom_support_equipment_manufacturer = {
 		original_tag = IIO
 		original_tag = ISY
 		original_tag = ZFI
+		original_tag = ZFL
 	}
 }
 
@@ -205,6 +252,7 @@ has_custom_artillery_manufacturer = {
 		original_tag = IAI
 		original_tag = ISY
 		original_tag = ZSZ
+		original_tag = EYS
 		original_tag = YZO
 	}
 }
@@ -215,6 +263,7 @@ has_custom_motorized_equipment_manufacturer = {
 		original_tag = IAO
 		original_tag = ISY
 		original_tag = ZSZ
+		original_tag = EYE
 		original_tag = YII
 	}
 }
@@ -235,6 +284,7 @@ has_custom_industrial_concern = {
 		original_tag = ILO
 		original_tag = ILZ
 		original_tag = ZIF
+		original_tag = EYE
 		original_tag = BES
 	}
 }
@@ -246,12 +296,16 @@ has_custom_electronics_concern = {
 		original_tag = ILI
 		original_tag = IYS
 		original_tag = ZFI
+		original_tag = ESB
+		original_tag = BMC # ALB
 	}
 }
 
 has_custom_refinery_concern = {
 	OR = {
 		original_tag = OAB
+		original_tag = ZFL
+		original_tag = EFB
 		original_tag = BSZ
 		original_tag = YZI
 	}
@@ -283,6 +337,7 @@ has_custom_railway_company = {
 	OR = {
 		original_tag = OOZ
 		original_tag = ZLB
+		original_tag = ZFL
 	}
 }
 
