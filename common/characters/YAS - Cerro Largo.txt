@@ -1,0 +1,38 @@
+characters={
+	YAS_alfredo_baldomir_ferrari = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=URG_alfredo_baldomir_ferrari
+			portraits={
+				civilian={
+					large=GFX_portrait_URG_alfredo_baldomir_ferrari
+				}
+			}
+			country_leader={
+				traits={ pro_allied_politician }
+				ideology=liberalism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=URG_alfredo_baldomir_ferrari
+			portraits={
+				civilian={
+					large=GFX_portrait_Alfredo_Baldomir_Ferrari
+				}
+			}
+			country_leader={
+				traits={ pro_allied_politician }
+				ideology=liberalism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

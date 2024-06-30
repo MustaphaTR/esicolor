@@ -1,0 +1,38 @@
+characters={
+	YAL_arnulf_fuhrmann = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=URG_arnulf_fuhrmann
+			portraits={
+				civilian={
+					large=GFX_portrait_URG_arnulf_fuhrmann
+				}
+			}
+			country_leader={
+				traits={ the_german_connection }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=URG_arnulf_fuhrmann
+			portraits={
+				civilian={
+					large=GFX_portrait_Bernardo_Gonzalez
+				}
+			}
+			country_leader={
+				traits={ the_german_connection }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

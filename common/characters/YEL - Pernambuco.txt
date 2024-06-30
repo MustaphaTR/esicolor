@@ -1,0 +1,39 @@
+characters={
+	# He has a proper portrait without ToA as well, but gets a different one with the DLC.
+	YEL_mascarenhas_de_morais = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=BRA_mascarenhas_de_morais
+			portraits={
+				civilian={
+					large=GFX_portrait_BRA_mascarenhas_de_morais_2
+					small=GFX_portrait_BRA_mascarenhas_de_morais_2_small
+				}
+			}
+			country_leader={
+				ideology=oligarchism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=BRA_mascarenhas_de_morais
+			portraits={
+				civilian={
+					large=GFX_portrait_BRA_mascarenhas_de_morais_1
+					small=GFX_portrait_BRA_mascarenhas_de_morais_1_small
+				}
+			}
+			country_leader={
+				ideology=oligarchism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

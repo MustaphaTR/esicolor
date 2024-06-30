@@ -1,0 +1,39 @@
+characters={
+	# This is the default leader of Argentina, as such has a portrait without ToA, but gets a different one with the DLC.
+	ZFB_agustin_pedro_justo = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=ARG_agustin_pedro_justo
+			portraits={
+				civilian={
+					large=GFX_portrait_ARG_augustin_pedro_justo
+				}
+			}
+			country_leader={
+				traits={ ARG_fraudulent_industrialist }
+				ideology=moderatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=ARG_agustin_pedro_justo
+			portraits={
+				civilian={
+					large=GFX_portrait_Agustin_Pedro_Justo
+				}
+			}
+			country_leader={
+				traits={ ARG_fraudulent_industrialist }
+				ideology=moderatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

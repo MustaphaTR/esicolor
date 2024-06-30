@@ -1,0 +1,41 @@
+characters={
+	# She has a proper portrait without ToA as well, but gets a different one with the DLC.
+	YSB_fanny_edelman = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=ARG_fanny_edelman
+			portraits={
+				civilian={
+					large=GFX_portrait_ARG_fanny_edelman_02
+				}
+			}
+			country_leader={
+				traits={ ARG_feminist_revolutionary }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			gender = female
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=ARG_fanny_edelman
+			portraits={
+				civilian={
+					large=GFX_portrait_Fanny_Edelman
+				}
+			}
+			country_leader={
+				traits={ ARG_feminist_revolutionary }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			gender = female
+		}
+	}
+}
