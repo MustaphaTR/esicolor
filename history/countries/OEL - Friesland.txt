@@ -10,14 +10,26 @@ set_convoys = 5
 set_popularities = {
 	democratic = 25
 	fascism = 25
-	communism = 25
-	neutrality = 25
+	communism = 5
+	neutrality = 45
 }
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1935.10.10"
 	election_frequency = 36
 	elections_allowed = no
+}
+
+# No generic female portraits, so recruting a male character without DLC.
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	recruit_character = OEL_wilhelmina
+
+	else = {
+		recruit_character = OEL_willem_schermerhorn
+	}
 }
 
 set_rule = {
