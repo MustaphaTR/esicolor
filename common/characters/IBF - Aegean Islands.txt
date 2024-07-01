@@ -1,0 +1,36 @@
+characters={
+	IBF_georgios_kosmidis = {
+		instance = {
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+			}
+			name=GRE_georgios_kosmidis
+			portraits={
+				civilian={
+					large=GFX_portrait_gre_georgios_kosmidis
+				}
+			}
+			country_leader={
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Battle for the Bosporus" }
+			}
+			name=GRE_georgios_kosmidis
+			portraits={
+				civilian={
+					large="gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+				}
+			}
+			country_leader={
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
