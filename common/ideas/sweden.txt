@@ -1,5 +1,35 @@
 ideas = {
-	tank_manufacturer = { 
+	country = {
+		# This is checked in generic decisions file, which i don't want to override. So keeping it here.
+		SWE_hungershield = {
+			allowed = {
+				original_tag = SWE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				OR = {
+					num_of_civilian_factories > 45
+					has_built = {
+					    type = industrial_complex
+					    value > 14
+					}
+				}
+			}
+
+			on_remove = {
+				add_political_power = 120
+			}
+			removal_cost = -1
+
+			picture = SWE_hungershield
+		}
+	}
+
+	tank_manufacturer = {
 		designer = yes
 
 		IAI_armored_car_manufacturer = {

@@ -1,4 +1,5 @@
 version="2.0"
+replace_path="common/ai_strategy_plans"
 replace_path="common/bookmarks"
 replace_path="common/characters"
 replace_path="common/countries"

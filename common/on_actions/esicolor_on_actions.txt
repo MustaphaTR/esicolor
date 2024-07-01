@@ -22,19 +22,19 @@ on_actions = {
 			log = "[GetDateText] MustaphaTR's Every State Independent main on_state_control_changed begin"
 
 			if = {
-				limit = { state = 195 }
+				limit = { FROM.FROM = { state = 195 } }
 				adjust_state_name_195 = yes
 			}
 			else_if = {
-				limit = { state = 217 }
+				limit = { FROM.FROM = { state = 217 } }
 				adjust_state_name_217 = yes
 			}
 			else_if = {
-				limit = { state = 227 }
+				limit = { FROM.FROM = { state = 227 } }
 				adjust_state_name_227 = yes
 			}
 			else_if = {
-				limit = { state = 742 }
+				limit = { FROM.FROM = { state = 742 } }
 				adjust_state_name_742 = yes
 			}
 		}

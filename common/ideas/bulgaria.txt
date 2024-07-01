@@ -1,4 +1,50 @@
 ideas = {
+	country = {
+		# These are checked in equipment files, which i don't want to override. So keeping them here.
+		BUL_army_restrictions = {
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				tag = BUL
+			}
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+				custom_modifier_tooltip = BUL_army_restrictions_mobilization_law_tt
+			}
+		}
+
+		BUL_army_restrictions_aat = {
+			name = BUL_army_restrictions
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				tag = BUL
+			}
+			removal_cost = -1
+
+			rule = {
+				can_access_market = no
+			}
+
+			modifier = {
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+				custom_modifier_tooltip = BUL_army_restrictions_mobilization_law_tt
+			}
+		}
+	}
+
 	aircraft_manufacturer = {
 		designer = yes
 
