@@ -1,0 +1,155 @@
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+ZFY_task_force_ship_organization = {
+	name = CHL_arsenales_de_marina_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_CHL_asmar
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = ZFY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 279
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				279 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZFY_refurbishment_repair_organization = {
+	name = CHL_csav_organization
+	include = esicolor_generic_refurbishment_repair_organization
+	icon = GFX_idea_CHL_csav
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = repair_and_refurbishment_plant_disabled }
+			OR = {
+				original_tag = ZFY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 279
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				279 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+ZFY_light_aircraft_organization = {
+	name = CHL_enaer_organization
+	include = esicolor_generic_light_aircraft_organization # generic_general_aircraft_organization, we don't use this one in ESI, No-AAT version is Light Aircraft Manufacturer, use that one.
+	# icon = GFX_idea_generic_air_manufacturer_2
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ZFY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 279
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				279 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+# FANAERO was established in '53, excluding it.
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+ZFY_infantry_equipment_organization = {
+	name = CHL_famae_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_CHL_famae
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZFY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 279
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				279 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

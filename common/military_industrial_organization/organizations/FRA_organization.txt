@@ -1,0 +1,487 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+OIL_infantry_tank_organization = {
+	name = FRA_renault_organization
+	include = esicolor_generic_infantry_tank_organization
+	icon = GFX_idea_renault
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OIL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 16
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				16 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+FRA_hotchkiss_organization = {
+	name = FRA_hotchkiss_organization
+	include = esicolor_generic_mobile_tank_organization
+	# icon = GFX_idea_generic_tank_manufacturer_3
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OIL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 16
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				16 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+FRA_apx_organization = {
+	name = FRA_apx_organization
+	include = esicolor_generic_medium_tank_organization
+	icon = GFX_idea_FRA_atelier_puteaux
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OIL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 16
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				16 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+# Types do not match between AAT, and No-AAT, and both are located in Ile de France, so excluding for AAT.
+#FRA_amx_organization = {
+#	name = FRA_amx_organization
+#	include = esicolor_generic_mobile_tank_organization
+#	# icon = GFX_idea_generic_tank_manufacturer_2
+#}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+# Couldn't find info.
+#FRA_task_force_ship_organization = {
+#	name = FRA_aeb_organization
+#	include = esicolor_generic_task_force_ship_organization
+#	icon = GFX_idea_FRA_aeb
+#}
+
+OEO_battle_line_ship_organization = {
+	name = FRA_acl_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_FRA_acl
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OEO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 30
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				30 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+BSI_escort_ship_organization = {
+	name = FRA_fcm_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_fcm
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = BSI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 851
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				851 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OZY_generic_raider_ship_organization = {
+	name = FRA_acf_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_FRA_acf
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OZY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 29
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				29 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OIL_light_aircraft_organization = {
+	name = FRA_morane_saulnier_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_morane_saulnier
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OIL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 16
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				16 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OIL_medium_aircraft_organization = {
+	name = FRA_bloch_organization
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_bloch
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OIL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 16
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				16 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OIS_heavy_aircraft_organization = {
+	name = FRA_amiot_organization
+	include = esicolor_generic_heavy_aircraft_organization
+	icon = GFX_idea_amiot
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OIS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 15
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				15 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OIL_naval_aircraft_organization = {
+	name = FRA_levasseur_organization
+	include = esicolor_generic_naval_aircraft_organization
+	icon = GFX_idea_levasseur
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OIL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 16
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				16 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+OZO_infantry_equipment_organization = {
+	name = FRA_mas_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_mas
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OZO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 20
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				20 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OIL_artillery_organization = {
+	name = FRA_schneider_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_schneider
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = OIL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 16
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				16 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OIL_motorized_mechanized_organization = {
+	name = FRA_somua_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_somua
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OIL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 16
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				16 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OIL_armored_car_organization = {
+	name = FRA_panhard_organization
+	include = esicolor_generic_armored_car_organization
+	icon = GFX_idea_FRA_panhard
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = armored_car_manufacturer_disabled }
+			OR = {
+				original_tag = OIL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 16
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				16 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

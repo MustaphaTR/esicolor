@@ -1,0 +1,218 @@
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+OOF_battle_line_ship_organization = {
+	name = HOL_wilton_fijenoord_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_wilton_fijenoord
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OOF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 7
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				7 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OOF_raider_ship_organization = {
+	name = HOL_nsm_amsterdam_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_nsm_amsterdam
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OOF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 7
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				7 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OOF_light_aircraft_organization = {
+	name = HOL_fokker_organization
+	include = esicolor_generic_light_aircraft_organization # generic_general_aircraft_organization, we don't use this one in ESI, No-AAT version is Light Aircraft Manufacturer, use that one.
+	icon = GFX_idea_fokker
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OOF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 7
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				7 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OOF_medium_aircraft_organization = {
+	name = HOL_koolhoven_organization
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_koolhoven
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OOF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 7
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				7 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+OOF_infantry_equipment_organization = {
+	name = HOL_artillerie_inrichtingen_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_artillerie_inrichtingen
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OOF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 7
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				7 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+# HIH Siderius went bankrupt in '34, excluding it.
+
+OES_motorized_mechanized_organization = {
+	name = HOL_daf_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_HOL_daf
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OES
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 35
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				35 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

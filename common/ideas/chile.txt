@@ -1,0 +1,266 @@
+ideas = {
+	naval_manufacturer = { 
+		designer = yes
+
+		ZFY_coastal_defence_naval_manufacturer = {
+			name = CHL_arsenales_de_marina
+			picture = CHL_asmar
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = coastal_defence_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ZFY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 279
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					279 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { coastal_defence_naval_manufacturer }
+		}
+
+		ZFY_convoy_escort_naval_manufacturer = {
+			name = CHL_csav
+			picture = CHL_csav
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ZFY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 279
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					279 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		# Santiago
+		ZFY_light_aircraft_manufacturer = {
+			name = CHL_enaer
+			picture = generic_air_manufacturer_1 # generic_air_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ZFY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 279
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					279 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		# FANAERO was established in '53, excluding it.
+	}
+
+	materiel_manufacturer = {
+		ZFY_infantry_equipment_manufacturer = {
+			name = CHL_fabricas_maestranzas_ejercito
+			picture = CHL_famae
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZFY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 279
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					279 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		YSO_industrial_concern = {
+			name = CHL_compania_electro_industrial_valdivia
+			picture = CHL_cesiv
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = YSO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 950
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					950 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		ZFY_electronics_concern = {
+			name = CHL_compania_general_electricidad
+			picture = CHL_cge
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = ZFY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 279
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					279 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
+		ZFY_forestry_company = {
+			name = CHL_compania_manufacura_cartones
+			picture = CHL_cmpc
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = forestry_company_disabled }
+				OR = {
+					original_tag = ZFY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 279
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					279 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+			}
+			traits = { forestry_company }
+		}
+
+		# Corporación de Fomento de la Producción de Chile was established in '39, excluding it.
+
+		ZFY_railway_company = {
+			name = CHL_empresa_ferrocarries_del_estado
+			picture = CHL_efe
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = ZFY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 279
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					279 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
+		}
+	}
+}
