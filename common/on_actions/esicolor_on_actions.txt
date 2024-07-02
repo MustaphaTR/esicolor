@@ -34,8 +34,16 @@ on_actions = {
 				adjust_state_name_227 = yes
 			}
 			else_if = {
+				limit = { FROM.FROM = { state = 545 } }
+				adjust_state_name_545 = yes
+			}
+			else_if = {
 				limit = { FROM.FROM = { state = 742 } }
 				adjust_state_name_742 = yes
+			}
+			else_if = {
+				limit = { FROM.FROM = { state = 778 } }
+				adjust_state_name_778 = yes
 			}
 		}
 	}
@@ -45,20 +53,28 @@ on_actions = {
 			log = "[GetDateText] MustaphaTR's Every State Independent main on_ruling_party_change begin"
 
 			if = {
-				limit = { original_tag = IYS }
+				limit = { owns_state = 195 }
 				adjust_state_name_195 = yes
 			}
 			else_if = {
-				limit = { original_tag = ZIF }
+				limit = { owns_state = 217 }
 				adjust_state_name_217 = yes
 			}
 			else_if = {
-				limit = { original_tag = ZZF }
+				limit = { owns_state = 227 }
 				adjust_state_name_227 = yes
 			}
 			else_if = {
-				limit = { original_tag = FAZ }
+				limit = { owns_state = 545 }
+				adjust_state_name_545 = yes
+			}
+			else_if = {
+				limit = { owns_state = 742 }
 				adjust_state_name_742 = yes
+			}
+			else_if = {
+				limit = { owns_state = 778 }
+				adjust_state_name_778 = yes
 			}
 
 			if = {

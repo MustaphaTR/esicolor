@@ -64,6 +64,17 @@ adjust_state_name_227 = {
 	}
 }
 
+adjust_state_name_545 = {
+	if = {
+		limit = { 545 = { owner = { has_government = fascism } } }
+
+		545 = { set_state_name = STATE_545 }
+	}
+	else = {
+		545 = { set_state_name = ZIM }
+	}
+}
+
 adjust_state_name_742 = {
 	if = {
 		limit = { 742 = { owner = { has_government = communism } } }
@@ -80,5 +91,16 @@ adjust_state_name_742 = {
 			name = SOV_Dushanbe
 		}
 		742 = { set_state_name = SOV_Dushanbe }
+	}
+}
+
+adjust_state_name_778 = {
+	if = {
+		limit = { 778 = { owner = { has_government = democratic } } }
+
+		778 = { set_state_name = FFB_democratic }
+	}
+	else = {
+		778 = { set_state_name = STATE_778 }
 	}
 }
