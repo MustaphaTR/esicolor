@@ -866,13 +866,6 @@ clear_resources = {
 			type = chromium
 			amount = chromiumhere
 		}
-		set_temp_variable = { crystalshere = resource@crystals }
-		divide_temp_variable = { crystalshere = infrahere }
-		multiply_temp_variable = { crystalshere = -1 }
-		add_resource = {
-			type = crystals
-			amount = crystalshere
-		}
 	}
 }
 
@@ -3427,10 +3420,6 @@ setup_equal_resources = {
 			type = chromium
 			amount = 2
 		}
-		add_resource = {
-			type = crystals
-			amount = 2
-		}
 	}
 }
 
@@ -3535,23 +3524,6 @@ randomise_resources = {
 
 				add_resource = {
 					type = chromium
-					amount = resourcetoadd
-				}
-			}
-		}
-		5 = {
-			custom_effect_tooltip = esicolor.8.e_tt7
-			hidden_effect = {
-				set_temp_variable = { resourcetoadd = 10 }
-				randomize_temp_variable = {
-					var = resourcetoadd
-					distribution = uniform
-					min = 5
-					max = 20
-				}
-
-				add_resource = {
-					type = crystals
 					amount = resourcetoadd
 				}
 			}
