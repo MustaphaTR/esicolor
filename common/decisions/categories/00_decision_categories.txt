@@ -223,14 +223,14 @@ lar_local_recruitment = {
 				has_country_flag = asia_recruitment_unlocked
 				capital_scope = { is_on_continent = asia }
 			}
-			#NOT = {
-			#	tag = RAJ
-			#	tag = PAK
-			#	tag = BAN
-			#	tag = NEP
-			#	tag = BHU
-			#	tag = SRL
-			#}
+			NOT = {
+				state_originally_from_RAJ = yes
+				state_originally_from_PAK = yes
+				state_originally_from_BAN = yes
+				state_originally_from_NEP = yes
+				state_originally_from_BHU = yes
+				state_originally_from_SRL = yes
+			}
 		}
 	}
 
@@ -247,23 +247,23 @@ lar_local_recruitment = {
 		}
 	}
 
-	#on_map_area = {
-	#	state = 439
-	#	name = LAR_recruitment_india
-	#	zoom = 850
-	#
-	#	target_root_trigger = {
-	#		OR = {
-	#			has_country_flag = india_recruitment_unlocked
-	#			tag = RAJ
-	#			tag = PAK
-	#			tag = BAN
-	#			tag = NEP
-	#			tag = BHU
-	#			tag = SRL
-	#		}
-	#	}
-	#}
+	on_map_area = {
+		state = 439
+		name = LAR_recruitment_india
+		zoom = 850
+	
+		target_root_trigger = {
+			OR = {
+				has_country_flag = india_recruitment_unlocked
+				state_originally_from_RAJ = yes
+				state_originally_from_PAK = yes
+				state_originally_from_BAN = yes
+				state_originally_from_NEP = yes
+				state_originally_from_BHU = yes
+				state_originally_from_SRL = yes
+			}
+		}
+	}
 
 	on_map_area = {
 		state = 656
