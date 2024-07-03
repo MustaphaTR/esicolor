@@ -1,0 +1,35 @@
+on_actions = {
+	#Not run on a specific country.
+	on_startup = {
+		#SET UP MIO SIZE IN 1939 BOOKMARK
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+					date > 1939.01.01 #1939 Bookmark
+				}
+				every_country = {
+					every_military_industrial_organization = {
+						add_mio_size = 3
+					}
+				}
+			}
+		}
+	}
+
+	#	ROOT is new controller, FROM is old controller, FROM.FROM is state ID.
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = {
+						state = 101
+					}
+				}
+				ROOT = {
+    				set_province_controller = 13058
+  				}
+			}
+		}
+	}
+}

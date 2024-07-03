@@ -1,0 +1,38 @@
+on_actions = {
+	#FROM is war target
+	on_declare_war = {
+		effect = {
+			#Remove fascist sympaty trait if neutral Horthy at war with fascists
+			if = {
+				limit = {
+					original_tag = OAE
+					FROM = { original_tag = OAE }
+					OR = {
+						has_government = fascism
+						FROM = { has_government = fascism }
+					}
+				}
+
+				#Neutral Horthy no longer likes fascist if a civil war breaks out because of them
+				if = {
+					limit = {
+						has_government = neutrality
+						has_country_leader = { character = OAE_miklos_horthy ruling_only = yes }
+						has_country_leader_with_trait = fascist_sympathies
+					}
+					remove_country_leader_trait = fascist_sympathies
+				}
+				FROM = {
+					if = {
+						limit = {
+							has_government = neutrality
+							has_country_leader = { character = OAE_miklos_horthy ruling_only = yes }
+							has_country_leader_with_trait = fascist_sympathies
+						}
+						remove_country_leader_trait = fascist_sympathies
+					}					
+				}
+			}
+		}
+	}
+}
