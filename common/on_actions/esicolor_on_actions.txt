@@ -205,26 +205,27 @@ on_actions = {
 						}
 
 						if = {
-							limit = { has_global_flag = claiming_give_war_goals }
+							limit = {
+								OR = {
+									has_global_flag = claiming_give_war_goals
+									has_global_flag = claiming_declare_war
+								}
+							}
 
 							create_wargoal = {
-								type = take_state_focus
+								type = annex_everything
 								target = state_owner
 								#generator = { v.id }
 							}
 						}
-						else_if = {
-							limit = { has_global_flag = claiming_declare_war }
-
-							hidden_effect = {
-								create_wargoal = {
-									type = take_state_focus
-									target = state_owner
-									#generator = { v.id }
-								}
+						if = {
+							limit = {
+								has_global_flag = claiming_declare_war
+								NOT = { has_war_with = state_owner }
 							}
+
 							declare_war_on = {
-								type = take_state_focus
+								type = annex_everything
 								target = state_owner
 								#generator = { v.id }
 							}
