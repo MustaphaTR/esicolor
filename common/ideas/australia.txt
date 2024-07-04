@@ -1,0 +1,237 @@
+ideas = {
+	tank_manufacturer = {
+		ZBS_fast_tank_manufacturer = {
+			name = marmon_herrington
+			picture = marmon_herrington
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+				OR = {
+					original_tag = ZBS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 285
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					285 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { fast_tank_manufacturer }
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		# Original had a custom trait, but MIO version uses Task Force, which is counterpart to Pacific Fleet Naval Manufacturer.
+		SZI_pacific_fleet_naval_manufacturer = {
+			name = evans_deakin_co
+			picture = evans_deakin_co
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = SZI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 521
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					521 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+
+		# Original had a custom trait, but MIO version uses Raiding Fleet.
+		ZBS_raiding_fleet_naval_manufacturer = {
+			name = Cockatoo_doe
+			picture = Cockatoo_doe
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ZBS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 285
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					285 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { raiding_fleet_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		# Original had a custom effects with no trait, but MIO version uses Light Aircraft.
+		SIF_light_aircraft_manufacturer = {
+			name = AST_commonwealth_aircraft_corporation
+			picture = com_aircraft_corporation
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = SIF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 517
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					517 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		ZBS_infantry_equipment_manufacturer = {
+			name = lithgow_saf
+			picture = lithgow_saf
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZBS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 285
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					285 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		ZBS_support_equipment_manufacturer = {
+			name = lysaghts_works
+			picture = lysaghts_works
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZBS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 285
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					285 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		ZBS_industrial_concern = {
+			name = bhp_steel
+			picture = bhp_steel
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = ZBS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 285
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					285 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+	}
+}

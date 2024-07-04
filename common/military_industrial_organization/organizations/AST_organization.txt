@@ -1,0 +1,226 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+ZBS_mobile_tank_organization = {
+	name = AST_new_south_wales_rc_organization
+	include = esicolor_generic_mobile_tank_organization
+	icon = GFX_idea_new_south_wales_rc
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			OR = {
+				original_tag = ZBS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 285
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				285 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+SZI_task_force_ship_organization = {
+	name = AST_evans_deakin_co_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_evans_deakin_co
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = SZI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 521
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				521 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZBS_raider_ship_organization = {
+	name = AST_cockatoo_doe_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_Cockatoo_doe
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = ZBS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 285
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				285 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+SIF_light_aircraft_organization = {
+	name = AST_com_aircraft_corporation_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_com_aircraft_corporation
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = SIF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 517
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				517 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+ZBS_infantry_equipment_organization = {
+	name = AST_lithgow_saf_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_lithgow_saf
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZBS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 285
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				285 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZBS_support_equipment_organization = {
+	name = AST_lysaghts_works_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_lysaghts_works
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZBS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 285
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				285 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
