@@ -1,0 +1,201 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+# Couldn't find info.
+#FIN_infantry_tank_organization = {
+#	name = FIN_valtion_panssaritehdas_organization
+#	include = esicolor_generic_infantry_tank_organization
+#	icon = GFX_idea_FIN_valtion_panssaritehdas
+#}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+YZL_raider_ship_organization = {
+	name = FIN_crichton_vulcan_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_FIN_crichton_vulcan
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = YZL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 926
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				926 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+III_light_aircraft_organization = {
+	name = FIN_valtion_lentokonetehdas_organization
+	include = esicolor_generic_light_aircraft_organization # generic_general_aircraft_organization, we don't use this one in ESI, No-AAT version is Light Aircraft Manufacturer, use that one.
+	icon = GFX_idea_FIN_valtion_lentokonetehdas
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = III
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 111
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				111 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+IAY_infantry_equipment_organization = {
+	name = FIN_valtion_kivaaritehdas_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_FIN_valtion_kivaaritehdas
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = IAY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 149
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				149 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IAY_artillery_organization = {
+	name = FIN_valtion_tykkitehdas_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_FIN_valtion_tykkitehdas
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = IAY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 149
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				149 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+III_motorized_mechanized_organization = {
+	name = FIN_sisu_auto_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_FIN_sisu_auto
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = III
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 111
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				111 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

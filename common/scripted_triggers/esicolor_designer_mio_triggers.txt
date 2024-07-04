@@ -143,6 +143,7 @@ has_custom_raiding_fleet_naval_manufacturer = {
 		original_tag = ISF
 		original_tag = IYS
 		original_tag = ZBS
+		original_tag = YZL
 		AND = {
 			NOT = { has_dlc = "Arms Against Tyranny" }
 			original_tag = ESF
@@ -181,6 +182,7 @@ has_custom_light_aircraft_manufacturer = {
 		original_tag = OAS
 		original_tag = OAB
 		original_tag = OBA
+		original_tag = III
 		original_tag = IAO
 		original_tag = ISY
 		original_tag = ZIY
@@ -264,6 +266,7 @@ has_custom_infantry_equipment_manufacturer = {
 		original_tag = OBA
 		original_tag = IOF
 		original_tag = IEY
+		original_tag = IAY
 		original_tag = ISY
 		original_tag = ZZE
 		original_tag = ZFL
@@ -290,6 +293,7 @@ has_custom_artillery_manufacturer = {
 		original_tag = OIL
 		original_tag = OYY
 		original_tag = IAI
+		original_tag = IAY
 		original_tag = ISY
 		original_tag = ZSZ
 		original_tag = EYS
@@ -302,6 +306,7 @@ has_custom_motorized_equipment_manufacturer = {
 		original_tag = OOY
 		original_tag = OIL
 		original_tag = OES
+		original_tag = III
 		original_tag = IAO
 		original_tag = ISY
 		original_tag = ZSZ
@@ -332,6 +337,7 @@ has_custom_industrial_concern = {
 		original_tag = ZBS
 		original_tag = EYE
 		original_tag = BES
+		original_tag = YZF
 		original_tag = YSO
 	}
 }
@@ -347,6 +353,7 @@ has_custom_electronics_concern = {
 		original_tag = ZFY
 		original_tag = ESB
 		original_tag = BMC # ALB
+		original_tag = YZF
 	}
 }
 
@@ -381,12 +388,15 @@ has_custom_construction_company = {
 }
 
 has_custom_mining_company = {
-	always = no
+	OR = {
+		original_tag = ISO
+	}
 }
 
 has_custom_railway_company = {
 	OR = {
 		original_tag = OOZ
+		original_tag = III
 		original_tag = ZLB
 		original_tag = ZFL
 		original_tag = ZFY
