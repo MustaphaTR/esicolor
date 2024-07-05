@@ -1,0 +1,277 @@
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+IFI_battle_line_ship_organization = {
+	name = SPR_secn_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_SPR_sociedad_espanola_de_construccion_naval
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = IFI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 171
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				171 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+FYZ_raider_ship_organization = {
+	name = SPR_euskalduna_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_SPR_euskalduna
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = FYZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 792
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				792 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+ILY_light_aircraft_organization = {
+	name = SPR_hispano_aviacion_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_SPR_hispano_aviacion
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ILY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 169
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				169 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ILF_medium_aircraft_organization = {
+	name = SPR_casa_organization
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_SPR_casa
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ILF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 167
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				167 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+FYZ_infantry_equipment_organization = {
+	name = SPR_star_bonifacio_echeverria_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_SPR_star_bonifacio_echeverria
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = FYZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 792
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				792 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+FYZ_support_equipment_organization = {
+	name = SPR_llama_gabilondo_y_cia_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_SPR_llama_gabilondo_y_cia_sa
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = FYZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 792
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				792 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+FYZ_artillery_organization = {
+	name = SPR_esperanza_y_cia_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_SPR_esperanza_y_cia
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = FYZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 792
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				792 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ILS_motorized_mechanized_organization = {
+	name = SPR_hispano_suiza_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_SPR_hispano_suiza
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ILS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 165
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				165 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

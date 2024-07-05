@@ -1,0 +1,327 @@
+ideas = {
+	naval_manufacturer = { 
+		designer = yes
+
+		LIE_coastal_defence_naval_manufacturer = {
+			name = jiangnan_shipyard_group
+			picture = sasebo_naval_arsenal # generic_naval_manufacturer_3
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = coastal_defence_naval_manufacturer_disabled }
+				OR = {
+					original_tag = LIE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 613
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					613 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { coastal_defence_naval_manufacturer }
+		}
+
+		LOB_raiding_fleet_naval_manufacturer = {
+			name = dagu_shipyard
+			picture = generic_naval_manufacturer_1 # generic_naval_manufacturer_3
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = LOB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 608
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					608 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { raiding_fleet_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes		
+
+		SYL_medium_aircraft_manufacturer = {
+			name = CHI_camco_1
+			picture = CHI_camco
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = SYL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 596
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					596 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = { 
+		designer = yes
+
+		LSO_infantry_equipment_manufacturer = {
+			name = CHI_hanyan_arsenal
+			picture = generic_infantry_equipment_manufacturer_3 # generic_infantry_equipment_manufacturer_1
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = LZO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 620
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					620 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		FIL_infantry_equipment_manufacturer = {
+			name = CHI_mukden_arsenal
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = FIL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 716
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					716 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		LIS_artillery_manufacturer = {
+			name = CHI_taiyuan_arsenal
+			picture = generic_artillery_manufacturer_1
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = LIS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 615
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					615 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		FIS_motorized_equipment_manufacturer = {
+			name = CHI_liaoning_arsenal
+			picture = generic_motorized_equipment_manufacturer_1
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = FIS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 715
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					715 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		FIL_industrial_concern = {
+			name = MAN_showa_steel_works
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = FIL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 716
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					716 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		LIE_electronics_concern = {
+			name = shanghai_electronics
+			picture = generic_electronics_concern_1
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = LIE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 613
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					613 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
+		FIL_refinery_concern = {
+			name = MAN_western_refinery
+			picture = generic_refining_concern_1
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = refinery_concern_disabled }
+				OR = {
+					original_tag = FIL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 716
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					716 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+	}
+}

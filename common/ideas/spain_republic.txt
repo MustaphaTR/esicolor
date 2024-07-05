@@ -1,0 +1,424 @@
+ideas = {
+	economy = {
+		law = yes
+
+		SPR_collectivized_society = {
+			picture = SPR_collectivized_society		
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				resistance_target = -0.2
+				consumer_goods_expected_value = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.3
+				conversion_cost_civ_to_mil_factor= -0.3
+				conversion_cost_mil_to_civ_factor = -0.3
+				global_building_slots_factor = 0.1
+				industrial_capacity_factory = 0.7
+				industrial_capacity_dockyard = 0.7
+				research_speed_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.2
+				production_factory_max_efficiency_factor = -0.2
+				line_change_production_efficiency_factor = 0.1
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+
+	naval_manufacturer = { 			
+		designer = yes
+
+		IFI_atlantic_fleet_naval_manufacturer = {
+			name = secn
+			picture = SPR_sociedad_espanola_de_construccion_naval
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = IFI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 171
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					171 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { atlantic_fleet_naval_manufacturer }
+		}
+
+		FYZ_raiding_fleet_naval_manufacturer = {
+			name = SPR_euskalduna
+			picture = SPR_euskalduna
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = FYZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 792
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					792 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { raiding_fleet_naval_manufacturer }
+		}
+	}
+	
+	aircraft_manufacturer = { 		
+		designer = yes
+
+		ILY_light_aircraft_manufacturer = {
+			name = SPR_hispano_aviacion
+			picture = SPR_hispano_aviacion
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ILY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 169
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					169 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		ILF_medium_aircraft_manufacturer = {
+			name = casa
+			picture = SPR_casa
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ILF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 167
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					167 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		FYZ_infantry_equipment_manufacturer = {
+			name = SPR_star_bonifacio_echeverria
+			picture = SPR_star_bonifacio_echeverria
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = FYZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 792
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					792 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		FYZ_support_equipment_manufacturer = {
+			name = SPR_llama_gabilondo_y_cia
+			picture = SPR_llama_gabilondo_y_cia_sa
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = FYZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 792
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					792 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
+		}
+
+		FYZ_artillery_manufacturer = {
+			name = SPR_esperanza_y_cia
+			picture = SPR_esperanza_y_cia
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = FYZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 792
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					792 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		ILS_motorized_equipment_manufacturer = {
+			name = SPR_hispano_suiza
+			picture = SPR_hispano_suiza
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ILS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 165
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					165 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		FYZ_industrial_concern = {
+			name = SPR_altos_hornos_de_vizcaya
+			picture = SPR_altos_hornos_de_vizcaya
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = FYZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 792
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					792 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		OAI_electronics_concern = {
+			name = SPR_compania_telefonica_nacional
+			picture = SPR_compania_telefonica_nacional
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = OAI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 41
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					41 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
+		OAI_refinery_concern = {
+			name = SPR_campsa
+			picture = SPR_campsa
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = refinery_concern_disabled }
+				OR = {
+					original_tag = OAI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 41
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					41 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+
+		ILS_construction_company = {
+			name = SPR_industria_de_guerra_de_cataluna
+			picture = SPR_industrias_de_guerra_de_cataluna
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = construction_company_disabled }
+				OR = {
+					original_tag = ILS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 165
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					165 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+			}
+			traits = { construction_company }
+		}
+	}
+}

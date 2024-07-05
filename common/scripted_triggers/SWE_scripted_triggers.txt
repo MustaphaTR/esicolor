@@ -1,0 +1,35 @@
+is_sami_land = {
+		OR = {
+			state = 666
+			state = 918
+			state = 923
+			state = 144
+			state = 924
+			state = 925
+			state = 148
+			state = 722
+			state = 213
+			state = 929
+			state = 147
+		}
+}
+
+SWE_rapid_mob_manpower_law_trigger = {
+	always = no
+}
+
+SWE_as_the_barometer_falls_trigger = {
+	OR = {
+		has_war_support > 0.35
+		#threat > 0.80
+		arms_factory > 16
+	}
+}
+
+SWE_the_old_enemy_stirs_trigger = {
+	OR = {
+		has_war_support > 0.25
+		threat > 0.25
+		arms_factory > 11
+	}
+}

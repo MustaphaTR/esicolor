@@ -1,0 +1,262 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+OOE_heavy_tank_organization = {
+	name = SWI_eidgenossische_KW
+	include = esicolor_generic_heavy_tank_organization
+	icon = GFX_idea_SWI_eidgenossische_KW
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OOE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 3
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				3 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+OOE_escort_ship_organization = {
+	name = SWI_werner_risch
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_SWI_werner_risch
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OOE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 3
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				3 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OOE_light_aircraft_organization = {
+	name = SWI_eidgenossische_FW
+	include = esicolor_generic_light_aircraft_organization # generic_general_aircraft_organization, we don't use this one in ESI, No-AAT version is Light Aircraft Manufacturer, use that one.
+	icon = GFX_idea_SWI_eidgenossische_FW
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OOE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 3
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				3 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ###
+
+###################################
+
+OOE_infantry_equipment_organization = {
+	name = SWI_sig
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_SWI_sig
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OOE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 3
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				3 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+# These two are both located in the same state, first in Zurich, second in Bern. Select one randomly at the game start.
+OOE_artillery_organization = {
+	name = SWI_oerlikon
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_SWI_oerlikon
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = {
+				has_country_flag = artillery_manufacturer_disabled
+				has_global_flag = OOE_arty_EWF
+			}
+			OR = {
+				original_tag = OOE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 3
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				3 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OOE_artillery_organization_2 = {
+	name = SWI_eidgenossische_WF
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_SWI_eidgenossische_WF
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			has_global_flag = OOE_arty_EWF
+			OR = {
+				original_tag = OOE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 3
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				3 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+CBT_motorized_mechanized_organization = {
+	name = SWI_berna
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_SWI_berna
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = CBT # BAS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 845
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				845 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

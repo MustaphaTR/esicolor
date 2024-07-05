@@ -25,6 +25,10 @@ has_custom_medium_tank_manufacturer = {
 		original_tag = ZFS
 		original_tag = EYE
 		AND = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+			original_tag = OOE
+		}
+		AND = {
 			has_dlc = "Arms Against Tyranny"
 			original_tag = ELZ
 		}
@@ -40,6 +44,10 @@ has_custom_heavy_tank_manufacturer = {
 				original_tag = OIL
 				original_tag = ELZ
 			}
+		}
+		AND = {
+			has_dlc = "Arms Against Tyranny"
+			original_tag = OOE
 		}
 	}
 }
@@ -59,7 +67,10 @@ has_custom_pacific_fleet_naval_manufacturer = {
 		original_tag = SZI
 		AND = {
 			has_dlc = "Arms Against Tyranny"
-			original_tag = ZFY
+			OR = {
+				original_tag = ZFY
+				original_tag = LIE
+			}
 		}
 	}
 }
@@ -70,6 +81,7 @@ has_custom_atlantic_fleet_naval_manufacturer = {
 		original_tag = OEO
 		original_tag = IIO
 		original_tag = IAO
+		original_tag = IFI
 		original_tag = ESB
 		AND = {
 			has_dlc = "Arms Against Tyranny"
@@ -121,6 +133,7 @@ has_custom_coastal_defence_naval_manufacturer = {
 	OR = {
 		original_tag = ZFY
 		original_tag = ELZ
+		original_tag = LIE
 	}
 }
 
@@ -143,6 +156,8 @@ has_custom_raiding_fleet_naval_manufacturer = {
 		original_tag = ISF
 		original_tag = IYS
 		original_tag = ZBS
+		original_tag = LOB
+		original_tag = FYZ
 		original_tag = YZL
 		AND = {
 			NOT = { has_dlc = "Arms Against Tyranny" }
@@ -153,6 +168,7 @@ has_custom_raiding_fleet_naval_manufacturer = {
 
 has_custom_convoy_escort_naval_manufacturer = {
 	OR = {
+		original_tag = OOE
 		original_tag = IIO
 		original_tag = ALA
 		AND = {
@@ -176,6 +192,7 @@ has_custom_convoy_escort_naval_manufacturer = {
 ### Aircraft
 has_custom_light_aircraft_manufacturer = {
 	OR = {
+		original_tag = OOE
 		original_tag = OOF
 		original_tag = OOY
 		original_tag = OIL
@@ -185,6 +202,7 @@ has_custom_light_aircraft_manufacturer = {
 		original_tag = III
 		original_tag = IAO
 		original_tag = ISY
+		original_tag = ILY
 		original_tag = ZIY
 		original_tag = ZFY
 		original_tag = ESB
@@ -211,9 +229,11 @@ has_custom_medium_aircraft_manufacturer = {
 		original_tag = OIL
 		original_tag = IOF
 		original_tag = IIF
+		original_tag = ILF
 		original_tag = ZIY
 		original_tag = ZFL
 		original_tag = EFB
+		original_tag = SYL
 	}
 }
 
@@ -259,6 +279,7 @@ has_custom_naval_aircraft_manufacturer = {
 ### Materiel
 has_custom_infantry_equipment_manufacturer = {
 	OR = {
+		original_tag = OOE
 		original_tag = OOF
 		original_tag = OZO
 		original_tag = OEF
@@ -273,6 +294,9 @@ has_custom_infantry_equipment_manufacturer = {
 		original_tag = ZFY
 		original_tag = ZBS
 		original_tag = ESF
+		original_tag = LZO
+		original_tag = FIL
+		original_tag = FYZ
 		original_tag = BAZ
 		original_tag = YZI
 	}
@@ -285,11 +309,13 @@ has_custom_support_equipment_manufacturer = {
 		original_tag = ZFI
 		original_tag = ZFL
 		original_tag = ZBS
+		original_tag = FYZ
 	}
 }
 
 has_custom_artillery_manufacturer = {
 	OR = {
+		original_tag = OOE
 		original_tag = OIL
 		original_tag = OYY
 		original_tag = IAI
@@ -297,6 +323,8 @@ has_custom_artillery_manufacturer = {
 		original_tag = ISY
 		original_tag = ZSZ
 		original_tag = EYS
+		original_tag = LIS
+		original_tag = FYZ
 		original_tag = YZO
 	}
 }
@@ -309,8 +337,11 @@ has_custom_motorized_equipment_manufacturer = {
 		original_tag = III
 		original_tag = IAO
 		original_tag = ISY
+		original_tag = ILS
 		original_tag = ZSZ
 		original_tag = EYE
+		original_tag = FIS
+		original_tag = CBT # BAS
 		original_tag = YII
 	}
 }
@@ -326,6 +357,7 @@ has_custom_armored_car_manufacturer = {
 ### Industrial
 has_custom_industrial_concern = {
 	OR = {
+		original_tag = OOE
 		original_tag = OOF
 		original_tag = OOY
 		original_tag = OZO
@@ -336,6 +368,8 @@ has_custom_industrial_concern = {
 		original_tag = ZIF
 		original_tag = ZBS
 		original_tag = EYE
+		original_tag = FIL
+		original_tag = FYZ
 		original_tag = BES
 		original_tag = YZF
 		original_tag = YSO
@@ -346,6 +380,7 @@ has_custom_electronics_concern = {
 	OR = {
 		original_tag = OOY
 		original_tag = OES
+		original_tag = OAI
 		original_tag = IIO
 		original_tag = ILI
 		original_tag = IYS
@@ -353,15 +388,18 @@ has_custom_electronics_concern = {
 		original_tag = ZFY
 		original_tag = ESB
 		original_tag = BMC # ALB
+		original_tag = LIE
 		original_tag = YZF
 	}
 }
 
 has_custom_refinery_concern = {
 	OR = {
+		original_tag = OAI
 		original_tag = OAB
 		original_tag = ZFL
 		original_tag = EFB
+		original_tag = FIL
 		original_tag = BSZ
 		original_tag = YZI
 	}
@@ -384,6 +422,7 @@ has_custom_construction_company = {
 		original_tag = OOZ
 		original_tag = OYY
 		original_tag = ISB
+		original_tag = ILS
 	}
 }
 

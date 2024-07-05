@@ -1,0 +1,246 @@
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+LIE_task_force_ship_organization = {
+	name = CHI_jiangnan_shipyard_group_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_harland_wolff # GFX_idea_generic_naval_manufacturer_3
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = LIE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 613
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				613 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+LOB_raider_ship_organization = {
+	name = CHI_dagu_shipyard_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_1 # GFX_idea_generic_naval_manufacturer_3
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = LOB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 608
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				608 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+SYL_medium_aircraft_organization = {
+	name = CHI_camco_organization
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_CHI_camco
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = SYL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 596
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				596 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+LZO_infantry_equipment_organization = {
+	name = CHI_hanyan_arsenal_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_3 # GFX_idea_generic_infantry_equipment_manufacturer_1
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = LZO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 620
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				620 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+FIL_infantry_equipment_organization = {
+	name = CHI_mukden_arsenal_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = FIL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 716
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				716 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+LIS_artillery_organization = {
+	name = CHI_taiyuan_arsenal_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_generic_artillery_manufacturer_1
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = LIS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 615
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				615 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+FIS_motorized_mechanized_organization = {
+	name = CHI_liaoning_arsenal_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_generic_motorized_equipment_manufacturer_1
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = FIS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 715
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				715 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

@@ -1,0 +1,64 @@
+# These 4 are checked by the Army/Navy/Air Spirit stuff, so keeping them.
+has_military_academy = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+has_naval_academy = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+has_air_academy = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+has_air_force_command = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+
+controls_all_ethiopian_core_states = {
+	custom_trigger_tooltip = {
+		tooltip = controls_ethiopian_cores_tt 
+		controls_state = 271 
+		controls_state = 835 
+		controls_state = 836 
+		controls_state = 837
+		controls_state = 838
+		controls_state = 839 
+		controls_state = 840
+		controls_state = 841 
+		controls_state = 842 
+		controls_state = 843 
+	}
+}
+
+# East African Colony state ? 
+is_east_african_colony_state = {
+	custom_trigger_tooltip = {
+		tooltip = is_east_african_state_tt 
+		#TODO_TA update when air zone rework is in
+		OR = {
+			region = 17 # Ethiopian Highlands
+			region = 273 # Danakil 
+			region = 274 # Ogaden 
+			region = 217 # Lake Victoria
+			region = 216 # Upper Nile
+		}
+		NOT = { is_core_of = THIS.owner }
+	}
+}
+
+# Checked for Music.
+ETH_is_horn_of_africa_original_tag = {
+	OR = {
+		state_originally_from_ETH = yes
+		state_originally_from_SOM = yes
+		state_originally_from_ERI = yes
+		state_originally_from_DJI = yes
+		state_originally_from_AFA = yes
+	}
+}

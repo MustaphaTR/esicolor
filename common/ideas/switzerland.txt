@@ -1,0 +1,272 @@
+ideas = {
+	tank_manufacturer = {
+		designer = yes
+
+		OOE_medium_tank_manufacturer = {
+			name = SWI_eidgenossische_KW
+			picture = SWI_eidgenossische_KW
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+				OR = {
+					original_tag = OOE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 3
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					3 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { medium_tank_manufacturer }
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		OOE_convoy_escort_naval_manufacturer = {
+			name = SWI_werner_risch
+			picture = SWI_werner_risch
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = OOE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 3
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					3 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes 
+
+		OOE_light_aircraft_manufacturer = {
+			name = SWI_eidgenossische_FW
+			picture = SWI_eidgenossische_FW
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OOE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 3
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					3 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes 
+
+		OOE_infantry_equipment_manufacturer = {
+			name = SWI_sig
+			picture = SWI_sig
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = OOE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 3
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					3 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		OOE_artillery_manufacturer = {
+			name = SWI_oerlikon
+			picture = SWI_oerlikon
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = {
+					has_country_flag = artillery_manufacturer_disabled
+					has_global_flag = OOE_arty_EWF
+				}
+				OR = {
+					original_tag = OOE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 3
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					3 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		OOE_artillery_manufacturer_2 = {
+			name = SWI_eidgenossische_WF
+			picture = SWI_eidgenossische_WF
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				has_global_flag = OOE_arty_EWF
+				OR = {
+					original_tag = OOE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 3
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					3 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		CBT_motorized_equipment_manufacturer = {
+			name = SWI_berna
+			picture = SWI_berna
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = CBT # BAS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 845
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					845 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		OOE_industrial_concern = {
+			name = SWI_saurer
+			picture = SWI_saurer
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = OOE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 3
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					3 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+	}
+}

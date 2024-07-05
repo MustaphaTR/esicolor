@@ -1,0 +1,49 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		exampel_trigger = yes
+#	}
+# 
+
+# Checked in Elections event file.
+DEN_aat = { # Trigger to check if playing as Denmark while having AAT
+	always = no
+}
+
+# Checked in Manpower idea file.
+DEN_aat_is_subject = { # Trigger to check if playing as Denmark while having AAT and is a subject
+	always = no
+}
+
+DEN_designer_can_be_improved = { #Only meant to be used for tooltip purposes
+	custom_trigger_tooltip = {
+		tooltip = DEN_designer_can_be_improved_tt
+		hidden_trigger = {
+			always = yes	
+		}
+	}
+}
+
+DEN_improved_designer = { #Only meant to be used for tooltip purposes
+	custom_trigger_tooltip = {
+		tooltip = DEN_improved_designer_tt
+		hidden_trigger = {
+			always = yes	
+		}
+	}
+}
+
+DEN_allied_weapons_seller_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = subsidy_allied_nation_tt
+		FROM = { is_in_faction_with = ROOT }
+	}
+}

@@ -14,6 +14,13 @@ on_actions = {
 
 				setup_generic_advisor_portraits = yes
 			}
+
+			# Artillery designer for Swiss Plateau. There are two available, so select one to use.
+			random_list = {
+				seed = random
+				50 = { set_global_flag = OOE_arty_EWF }
+				50 = { }
+			}
 		}
 	}
 
