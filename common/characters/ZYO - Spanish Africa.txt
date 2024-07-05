@@ -1,0 +1,39 @@
+characters={
+	ZYO_abd_el_krim = {
+		instance = {
+			allowed = {
+				has_dlc = "By Blood Alone"
+			}
+			name=RIF_abd_el_krim
+			portraits={
+				civilian={
+					large=GFX_portrait_RIF_abd_el_kri
+					small=GFX_portrait_RIF_abd_el_kri_small
+				}
+			}
+			country_leader={
+				traits={ freedom_fighter }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "By Blood Alone" }
+			}
+			name=RIF_abd_el_krim
+			portraits={
+				civilian={
+					large=GFX_Portrait_Arabia_Generic_land_2
+				}
+			}
+			country_leader={
+				traits={ freedom_fighter }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
