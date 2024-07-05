@@ -1,13 +1,20 @@
 setup_generic_advisor_portraits = {
 	if = {
 		limit = {
-			capital_scope = {
-				OR = {
-					is_on_continent = europe
-					is_on_continent = australia
-					is_on_continent = north_america
+			OR = {
+				capital_scope = {
+					OR = {
+						is_on_continent = europe
+						is_on_continent = australia
+						is_on_continent = north_america
+					}
 				}
+				state_originally_from_SPR = yes
+				state_originally_from_POR = yes
+				state_originally_from_GEO = yes
+				original_tag = ZFS
 			}
+			state_originally_from_MEX = no
 		}
 
 		every_character = {
@@ -65,6 +72,34 @@ setup_generic_advisor_portraits = {
 				}
 				1 = {
 					set_portraits = {
+						civilian = { small = "GFX_Portrait_Europe_Generic_3_small" }
+						army = { small = "GFX_Portrait_Europe_Generic_3_small" }
+						navy = { small = "GFX_Portrait_Europe_Generic_3_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Europe_Generic_4_small" }
+						army = { small = "GFX_Portrait_Europe_Generic_4_small" }
+						navy = { small = "GFX_Portrait_Europe_Generic_4_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Europe_Generic_5_small" }
+						army = { small = "GFX_Portrait_Europe_Generic_5_small" }
+						navy = { small = "GFX_Portrait_Europe_Generic_5_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Europe_Generic_6_small" }
+						army = { small = "GFX_Portrait_Europe_Generic_6_small" }
+						navy = { small = "GFX_Portrait_Europe_Generic_6_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
 						civilian = { small = "GFX_idea_generic_fascist_demagogue_western_european_2d" }
 						army = { small = "GFX_idea_generic_fascist_demagogue_western_european_2d" }
 						navy = { small = "GFX_idea_generic_fascist_demagogue_western_european_2d" }
@@ -78,6 +113,10 @@ setup_generic_advisor_portraits = {
 			capital_scope = {
 				is_on_continent = asia
 			}
+			state_originally_from_AFG = no
+			state_originally_from_RAJ = no
+			state_originally_from_PAK = no
+			state_originally_from_BAN = no
 		}
 
 		every_character = {
@@ -114,6 +153,20 @@ setup_generic_advisor_portraits = {
 				}
 				1 = {
 					set_portraits = {
+						civilian = { small = "GFX_Portrait_Asia_Generic_3_small" }
+						army = { small = "GFX_Portrait_Asia_Generic_3_small" }
+						navy = { small = "GFX_Portrait_Asia_Generic_3_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Asia_Generic_fascism_small" }
+						army = { small = "GFX_Portrait_Asia_Generic_fascism_small" }
+						navy = { small = "GFX_Portrait_Asia_Generic_fascism_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
 						civilian = { small = "GFX_idea_generic_fascist_demagogue_asian_2d" }
 						army = { small = "GFX_idea_generic_fascist_demagogue_asian_2d" }
 						navy = { small = "GFX_idea_generic_fascist_demagogue_asian_2d" }
@@ -124,9 +177,63 @@ setup_generic_advisor_portraits = {
 	}
 	else_if = {
 		limit = {
-			capital_scope = {
-				is_on_continent = africa
+			OR = {
+				state_originally_from_RAJ = yes
+				state_originally_from_PAK = yes
+				state_originally_from_BAN = yes
 			}
+		}
+
+		every_character = {
+			limit = {
+				NOT = {
+					has_army_ledger = yes
+					has_navy_ledger = yes
+					has_air_ledger = yes
+				}
+			}
+
+			random_list = {
+				seed = random
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_The_Raj_Political_Leader_Generic_small" }
+						army = { small = "GFX_Portrait_The_Raj_Political_Leader_Generic_small" }
+						navy = { small = "GFX_Portrait_The_Raj_Political_Leader_Generic_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_The_Raj_Political_Leader_Generic_2_small" }
+						army = { small = "GFX_Portrait_The_Raj_Political_Leader_Generic_2_small" }
+						navy = { small = "GFX_Portrait_The_Raj_Political_Leader_Generic_2_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_asia_3" }
+						army = { small = "GFX_idea_generic_political_advisor_asia_3" }
+						navy = { small = "GFX_idea_generic_political_advisor_asia_3" }
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				capital_scope = {
+					is_on_continent = africa
+				}
+				state_originally_from_BAH = yes
+			}
+			state_originally_from_MOR = no
+			state_originally_from_ALG = no
+			state_originally_from_TUN = no
+			state_originally_from_LBA = no
+			state_originally_from_EGY = no
+			state_originally_from_YEM = no
+			NOT = { original_tag = ZFS }
 		}
 
 		every_character = {
@@ -163,6 +270,13 @@ setup_generic_advisor_portraits = {
 				}
 				1 = {
 					set_portraits = {
+						civilian = { small = "GFX_Portrait_Africa_Generic_3_small" }
+						army = { small = "GFX_Portrait_Africa_Generic_3_small" }
+						navy = { small = "GFX_Portrait_Africa_Generic_3_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
 						civilian = { small = "GFX_idea_generic_fascist_demagogue_african_2d" }
 						army = { small = "GFX_idea_generic_fascist_demagogue_african_2d" }
 						navy = { small = "GFX_idea_generic_fascist_demagogue_african_2d" }
@@ -173,9 +287,19 @@ setup_generic_advisor_portraits = {
 	}
 	else_if = {
 		limit = {
-			capital_scope = {
-				is_on_continent = middle_east
+			OR = {
+				capital_scope = {
+					is_on_continent = middle_east
+				}
+				state_originally_from_MOR = yes
+				state_originally_from_ALG = yes
+				state_originally_from_TUN = yes
+				state_originally_from_LBA = yes
+				state_originally_from_EGY = yes
+				state_originally_from_YEM = yes
+				state_originally_from_AFG = yes
 			}
+			state_originally_from_TUR = no
 		}
 
 		every_character = {
@@ -212,6 +336,13 @@ setup_generic_advisor_portraits = {
 				}
 				1 = {
 					set_portraits = {
+						civilian = { small = "GFX_Portrait_Arabia_Generic_3_small" }
+						army = { small = "GFX_Portrait_Arabia_Generic_3_small" }
+						navy = { small = "GFX_Portrait_Arabia_Generic_3_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
 						civilian = { small = "GFX_idea_generic_fascist_demagogue_middle_eastern_2d" }
 						army = { small = "GFX_idea_generic_fascist_demagogue_middle_eastern_2d" }
 						navy = { small = "GFX_idea_generic_fascist_demagogue_middle_eastern_2d" }
@@ -222,8 +353,12 @@ setup_generic_advisor_portraits = {
 	}
 	else_if = {
 		limit = {
-			capital_scope = {
-				is_on_continent = south_america
+			OR = {
+				capital_scope = {
+					is_on_continent = south_america
+				}
+				state_originally_from_TUR = yes
+				state_originally_from_MEX = yes
 			}
 		}
 
@@ -257,6 +392,20 @@ setup_generic_advisor_portraits = {
 						civilian = { small = "GFX_idea_generic_political_advisor_south_america_3" }
 						army = { small = "GFX_idea_generic_political_advisor_south_america_3" }
 						navy = { small = "GFX_idea_generic_political_advisor_south_america_3" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_South_America_Generic_3_small" }
+						army = { small = "GFX_Portrait_South_America_Generic_3_small" }
+						navy = { small = "GFX_Portrait_South_America_Generic_3_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_South_America_Generic_6_small" }
+						army = { small = "GFX_Portrait_South_America_Generic_6_small" }
+						navy = { small = "GFX_Portrait_South_America_Generic_6_small" }
 					}
 				}
 				1 = {
