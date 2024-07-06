@@ -23,6 +23,7 @@ has_custom_medium_tank_manufacturer = {
 	OR = {
 		original_tag = OIL
 		original_tag = OFA
+		original_tag = IZL
 		original_tag = ZFS
 		original_tag = EYE
 		AND = {
@@ -63,6 +64,7 @@ has_custom_tank_refurbishment_plant = {
 has_custom_pacific_fleet_naval_manufacturer = {
 	OR = {
 		original_tag = OEF
+		original_tag = IIY
 		original_tag = ZFL
 		original_tag = ELZ
 		original_tag = SZI
@@ -82,6 +84,7 @@ has_custom_atlantic_fleet_naval_manufacturer = {
 		original_tag = OOF
 		original_tag = OEO
 		original_tag = IIO
+		original_tag = IEZ
 		original_tag = IAO
 		original_tag = IFI
 		original_tag = ESB
@@ -135,6 +138,7 @@ has_custom_repair_and_refurbishment_plant = {
 # Only available without AAT.
 has_custom_coastal_defence_naval_manufacturer = {
 	OR = {
+		original_tag = IEE
 		original_tag = ZFY
 		original_tag = EAF
 		original_tag = ELZ
@@ -168,6 +172,10 @@ has_custom_raiding_fleet_naval_manufacturer = {
 			NOT = { has_dlc = "Arms Against Tyranny" }
 			original_tag = ESF
 		}
+		AND = {
+			has_dlc = "Arms Against Tyranny"
+			original_tag = IEE
+		}
 	}
 }
 
@@ -175,6 +183,7 @@ has_custom_convoy_escort_naval_manufacturer = {
 	OR = {
 		original_tag = OOE
 		original_tag = IIO
+		original_tag = IEE
 		original_tag = ALA
 		AND = {
 			NOT = { has_dlc = "Arms Against Tyranny" }
@@ -216,13 +225,17 @@ has_custom_light_aircraft_manufacturer = {
 		original_tag = SIF
 		AND = {
 			NOT = { has_dlc = "Arms Against Tyranny" }
-			original_tag = EFB
+			OR = {
+				original_tag = IZF
+				original_tag = EFB
+			}
 		}
 	}
 }
 
 has_custom_CAS_manufacturer = {
 	OR = {
+		original_tag = IZL
 		original_tag = ISY
 		original_tag = EFB
 		original_tag = FYF
@@ -236,6 +249,7 @@ has_custom_medium_aircraft_manufacturer = {
 		original_tag = OIL
 		original_tag = IOF
 		original_tag = IIF
+		original_tag = IZL
 		original_tag = ILF
 		original_tag = ZIY
 		original_tag = ZFL
@@ -257,7 +271,12 @@ has_custom_fuel_efficient_aircraft_manufacturer = {
 }
 
 has_custom_agility_focused_aircraft_manufacturer = {
-	always = no
+	OR = {
+		AND = {
+			has_dlc = "Arms Against Tyranny"
+			original_tag = IZF
+		}
+	}
 }
 
 has_custom_heavy_aircraft_manufacturer = {
@@ -265,6 +284,7 @@ has_custom_heavy_aircraft_manufacturer = {
 		original_tag = OOY
 		original_tag = OIS
 		original_tag = IOF
+		original_tag = IEZ
 		original_tag = ISB
 		original_tag = ZIY
 		original_tag = ESB
@@ -278,6 +298,7 @@ has_custom_naval_aircraft_manufacturer = {
 		original_tag = OEF
 		original_tag = OAL
 		original_tag = IIO
+		original_tag = IZL
 		original_tag = ZIY
 		original_tag = ESB
 		original_tag = BMC # ALB
@@ -295,6 +316,7 @@ has_custom_infantry_equipment_manufacturer = {
 		original_tag = OFS
 		original_tag = OBA
 		original_tag = IOF
+		original_tag = IZL
 		original_tag = IEY
 		original_tag = IAY
 		original_tag = ISY
@@ -327,6 +349,7 @@ has_custom_artillery_manufacturer = {
 		original_tag = OOE
 		original_tag = OIL
 		original_tag = OYY
+		original_tag = IZL
 		original_tag = IAI
 		original_tag = IAY
 		original_tag = ISY
@@ -345,6 +368,7 @@ has_custom_motorized_equipment_manufacturer = {
 		original_tag = OIL
 		original_tag = OES
 		original_tag = III
+		original_tag = IZS
 		original_tag = IAO
 		original_tag = ISY
 		original_tag = ILS
@@ -377,6 +401,7 @@ has_custom_industrial_concern = {
 		original_tag = ILO
 		original_tag = ILZ
 		original_tag = ZIF
+		original_tag = ZLL
 		original_tag = ZBS
 		original_tag = EYE
 		original_tag = FIL
@@ -393,6 +418,7 @@ has_custom_electronics_concern = {
 		original_tag = OES
 		original_tag = OAI
 		original_tag = IIO
+		original_tag = IZL
 		original_tag = ILI
 		original_tag = IYS
 		original_tag = ZFI

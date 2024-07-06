@@ -1,0 +1,485 @@
+ideas = {
+	tank_manufacturer = {
+		IZL_medium_tank_manufacturer = {
+			name = vickers_armstrong_eng
+			picture = vickers_armstrong_eng
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+				OR = {
+					original_tag = IZL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 126
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					126 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { medium_tank_manufacturer }
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		IIY_pacific_fleet_naval_manufacturer = {
+			name = harland_wolff
+			picture = harland_wolff
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = IIY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 119
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					119 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+
+		IEZ_atlantic_fleet_naval_manufacturer = {
+			name = cammell_laird
+			picture = cammell_laird
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = IEZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 132
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					132 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { atlantic_fleet_naval_manufacturer }
+		}
+
+		IEE_coastal_defence_naval_manufacturer = {
+			name = john_brown_company
+			picture = john_brown_company
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = coastal_defence_naval_manufacturer_disabled }
+				OR = {
+					original_tag = IEE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 133
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					133 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { coastal_defence_naval_manufacturer }
+		}
+
+		IEE_convoy_escort_naval_manufacturer = {
+			name = yarrow_shipbuilders
+			picture = yarrow_shipbuilders
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = IEE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 133
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					133 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+	
+	aircraft_manufacturer = {
+		designer = yes
+
+		IZF_light_aircraft_manufacturer = {
+			name = supermarine
+			picture = supermarine
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = IZF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 127
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					127 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		IZL_CAS_manufacturer = {
+			name = hawker
+			picture = hawker
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = CAS_manufacturer_disabled }
+				OR = {
+					original_tag = IZL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 126
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					126 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { CAS_manufacturer }
+		}
+
+		IZL_medium_aircraft_manufacturer = {
+			name = de_havilland
+			picture = de_havilland
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = IZL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 126
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					126 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+
+		IEZ_heavy_aircraft_manufacturer = {
+			name = avro
+			picture = avro
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = IEZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 132
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					132 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { heavy_aircraft_manufacturer }
+		}
+
+		IZL_naval_aircraft_manufacturer = {
+			name = fairey_aviation
+			picture = fairey_aviation
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = IZL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 126
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					126 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { naval_aircraft_manufacturer }
+		}
+	}
+	
+	materiel_manufacturer = {
+		designer = yes
+
+		IZL_infantry_equipment_manufacturer = {
+			name = rsaf_enfield
+			picture = rsaf_enfield
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = IZL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 126
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					126 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		IZL_artillery_manufacturer = {
+			name = royal_arsenal
+			picture = royal_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = IZL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 126
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					126 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		IZS_motorized_equipment_manufacturer = {
+			name = vauxhall
+			picture = vauxhall
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = IZS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 125
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					125 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		# Anglo-Iranian Oil Company's HQ was in Tehran, not in the UK and the refineries were in Southern Iran.
+		# Why is this an Industrial Concern and not a Refining Concern anyway?
+		ZLL_industrial_concern = {
+			name = aioc
+			picture = aioc
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = ZLL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 266
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					266 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		IZL_electronics_concern = {
+			name = english_electric
+			picture = english_electric
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = IZL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 126
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					126 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+	}
+}

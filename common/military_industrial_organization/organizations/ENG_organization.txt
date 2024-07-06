@@ -1,0 +1,442 @@
+########    ###    ##    ## ##    ##  ######  
+   ##      ## ##   ###   ## ##   ##  ##    ## 
+   ##     ##   ##  ####  ## ##  ##   ##       
+   ##    ##     ## ## ## ## #####     ######  
+   ##    ######### ##  #### ##  ##         ## 
+   ##    ##     ## ##   ### ##   ##  ##    ## 
+   ##    ##     ## ##    ## ##    ##  ######  
+
+# Vauxhall is available as Motorised MIO as well, and Tank version only exist as MIO, so excluding it.
+#IZS_infantry_tank_organization = {
+#	name = ENG_vauxhall_organization
+#	include = esicolor_generic_infantry_tank_organization
+#	icon = GFX_idea_vauxhall
+#}
+
+IZL_medium_tank_organization = {
+	name = ENG_vickers_armstrong_eng_organization
+	include = esicolor_generic_medium_tank_organization
+	icon = GFX_idea_vickers_armstrong_eng
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+			OR = {
+				original_tag = IZL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 126
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				126 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+
+ ######  ##     ## #### ########   ######  
+##    ## ##     ##  ##  ##     ## ##    ## 
+##       ##     ##  ##  ##     ## ##       
+ ######  #########  ##  ########   ######  
+      ## ##     ##  ##  ##              ## 
+##    ## ##     ##  ##  ##        ##    ## 
+ ######  ##     ## #### ##         ######  
+
+IIY_task_force_ship_organization = {
+	name = ENG_harland_wolff_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_harland_wolff
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = IIY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 119
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				119 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IEZ_battle_line_ship_organization = {
+	name = ENG_cammell_laird_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_cammell_laird
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = IEZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 132
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				132 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IEE_raider_ship_organization = {
+	name = ENG_john_brown_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_john_brown_company
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = IEE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 133
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				133 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IEE_generic_escort_ship_organization = {
+	name = ENG_yarrow_shipbuilders_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_yarrow_shipbuilders
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = IEE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 133
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				133 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+########  ##          ###    ##    ## ########  ######  
+##     ## ##         ## ##   ###   ## ##       ##    ## 
+##     ## ##        ##   ##  ####  ## ##       ##       
+########  ##       ##     ## ## ## ## ######    ######  
+##        ##       ######### ##  #### ##             ## 
+##        ##       ##     ## ##   ### ##       ##    ## 
+##        ######## ##     ## ##    ## ########  ######  
+
+IZF_high_agility_fighter_aircraft_organization = {
+	name = ENG_supermarine_organization
+	include = esicolor_generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_supermarine
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = agility_focused_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = IZF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 127
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				127 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IZL_cas_aircraft_organization = {
+	name = ENG_hawker_organization
+	include = esicolor_generic_cas_aircraft_organization
+	icon = GFX_idea_hawker
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = CAS_manufacturer_disabled }
+			OR = {
+				original_tag = IZL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 126
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				126 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IZL_medium_aircraft_organization = {
+	name = ENG_de_havilland_organization
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_de_havilland
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = IZL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 126
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				126 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IEZ_avro_organization = {
+	name = ENG_avro_organization
+	include = esicolor_generic_heavy_aircraft_organization
+	icon = GFX_idea_avro
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = IEZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 132
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				132 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IZL_naval_aircraft_organization = {
+	name = ENG_fairey_aviation_organization
+	include = esicolor_generic_naval_aircraft_organization
+	icon = GFX_idea_fairey_aviation
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = IZL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 126
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				126 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+##     ##    ###    ######## ######## ########  #### ######## ##       
+###   ###   ## ##      ##    ##       ##     ##  ##  ##       ##       
+#### ####  ##   ##     ##    ##       ##     ##  ##  ##       ##       
+## ### ## ##     ##    ##    ######   ########   ##  ######   ##       
+##     ## #########    ##    ##       ##   ##    ##  ##       ##       
+##     ## ##     ##    ##    ##       ##    ##   ##  ##       ##       
+##     ## ##     ##    ##    ######## ##     ## #### ######## ######## 
+
+IZL_infantry_equipment_organization = {
+	name = ENG_rsaf_enfield_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_rsaf_enfield
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = IZL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 126
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				126 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IZL_artillery_organization = {
+	name = ENG_royal_arsenal_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_royal_arsenal
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = IZL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 126
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				126 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+IZS_motorized_mechanized_organization = {
+	name = ENG_vauxhall_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_vauxhall
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = IZS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 125
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				125 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
