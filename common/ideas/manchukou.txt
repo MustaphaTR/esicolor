@@ -1,0 +1,70 @@
+ideas = {
+	aircraft_manufacturer = {
+		designer = yes
+
+		# Established in '38.
+		FIA_light_aircraft_manufacturer = {
+			name = MAN_manshu
+			picture = generic_air_manufacturer_1
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = FIA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 714
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					714 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		EZB_construction_company = {
+			name = MAN_south_manchuria_railway_company
+			picture = generic_electronics_concern_2 # generic_industrial_concern_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = construction_company_disabled }
+				OR = {
+					original_tag = EZB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 328
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					328 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+			}
+			traits = { construction_company }
+		}
+	}
+}

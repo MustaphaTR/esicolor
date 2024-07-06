@@ -1,0 +1,117 @@
+﻿add_namespace = bba_africa_news
+add_namespace = bba_italian_formables_news
+
+news_event = {
+	id = bba_africa_news.1
+	title = bba_africa_news.1.t
+	desc = bba_africa_news.1.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	option = { #Us
+		name = bba_africa_news.1.a
+		trigger = {
+			tag = ROOT
+		}
+	}
+	option = { #Them
+		name = bba_africa_news.1.b
+		trigger = {
+			NOT = { tag = ROOT }
+		}
+	}
+}
+
+#The Horn of Africa has been unified
+news_event = {
+	id = bba_africa_news.2
+	title = bba_africa_news.2.t
+	desc = bba_africa_news.2.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = { #Us
+		name = bba_africa_news.2.a
+		trigger = {
+			tag = ROOT
+		}
+	}
+	option = { #Them
+		name = bba_africa_news.2.b
+		trigger = {
+			NOT = { tag = ROOT }
+		}
+	}
+
+}
+
+#Org of African Unity
+news_event = {
+	id = bba_africa_news.3
+	title = bba_africa_news.3.t
+	desc = bba_africa_news.3.desc
+	picture = GFX_news_event_generic_african_unity
+
+	is_triggered_only = yes
+	
+	option = { #Us
+		name = bba_africa_news.3.a
+		trigger = {
+			capital_scope = { is_on_continent = africa}
+		}
+	}
+	option = { #Them
+		name = bba_africa_news.3.b
+		trigger = {
+			capital_scope = { NOT = { is_on_continent = africa} }
+		}
+	}
+}
+
+news_event = {
+	id = bba_africa_news.4
+	title = bba_africa_news.4.t
+	desc = bba_africa_news.4.desc
+	picture = GFX_news_event_generic_african_unity
+
+	is_triggered_only = yes
+	
+	option = { #Us
+		name = bba_africa_news.4.a
+		trigger = {
+			capital_scope = { is_on_continent = africa}
+		}
+	}
+	option = { #Them
+		name = bba_africa_news.4.b
+		trigger = {
+			capital_scope = { NOT = { is_on_continent = africa} }
+		}
+	}
+}
+
+#Greater Italy Proclaimed
+news_event = {
+	id = bba_italian_formables_news.1
+	title = bba_italian_formables_news.1.t
+	desc = bba_italian_formables_news.1.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	option = { #Us
+		name = bba_italian_formables_news.1.a
+		trigger = {
+			tag = ROOT
+		}
+	}
+	option = { #Them
+		name = bba_italian_formables_news.1.b
+		trigger = {
+			NOT = { tag = ROOT }
+		}
+	}
+
+}

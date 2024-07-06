@@ -1,0 +1,785 @@
+#### This tree contains focuses with names from the basegame that are used in some places that i would rather not copy and edit on ESI. Not that not having them would break anything, but i would like a cleaner error.log.
+
+focus_tree = {
+	id = dummy_focus
+
+	country = {
+		factor = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	# Toolpack Checks for this, since i always use it, i'm including that.
+	focus = {
+		id = MAN_assertiveness
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 1
+		cost = 8
+
+		completion_reward = { }
+	}
+
+	# Occupation Laws
+	focus = {
+		id = TUR_a_common_destiny_for_all_of_turkey
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = MAN_assertiveness
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = TUR_permit_regional_elections
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = TUR_a_common_destiny_for_all_of_turkey
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_albanian_fascist_militia
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = TUR_permit_regional_elections
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_ministry_of_italian_africa
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_albanian_fascist_militia
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_regional_development
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_ministry_of_italian_africa
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_polizia_dell_africa_italiana
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_regional_development
+
+		completion_reward = { }
+	}
+
+	# Army Abilities
+	focus = {
+		id = SWE_winter_drill
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_polizia_dell_africa_italiana
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = SPA_cultivate_fanaticism
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SWE_winter_drill
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = JAP_warrior_spirit
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SPA_cultivate_fanaticism
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_dare_to_die_corps
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = JAP_warrior_spirit
+
+		completion_reward = { }
+	}
+
+	# Laws and War Support Scrpited Triggers
+	focus = {
+		id = SWE_totalforsvar
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_dare_to_die_corps
+
+		completion_reward = { }
+	}
+
+	# Base Scrpited Triggers
+	focus = {
+		id = SOV_the_left_opposition
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SWE_totalforsvar
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = SPR_the_popular_front
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SOV_the_left_opposition
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = SPA_supremacy_of_the_communion
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SPR_the_popular_front
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = SPA_the_phalanx_ascendant
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SPA_supremacy_of_the_communion
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = SAF_south_africa_first
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SPA_the_phalanx_ascendant
+
+		completion_reward = { }
+	}
+	
+	# NSB Armor Techonologies
+	focus = {
+		id = ITA_italian_tankettes
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SAF_south_africa_first
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_end_fiat_ansaldo_duopoly
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_italian_tankettes
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_modernize_ansaldo_facilities
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_end_fiat_ansaldo_duopoly
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_modernize_ansaldo_facilities
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_end_fiat_ansaldo_duopoly
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_ferrea_mole_ferreo_cuore
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_modernize_ansaldo_facilities
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_capo_supremo
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_ferrea_mole_ferreo_cuore
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_modern_musculus
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_capo_supremo
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_a_time_for_war
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_modern_musculus
+
+		completion_reward = { }
+	}
+
+	# Industry Techonologies
+	focus = {
+		id = FIN_tire_factory_at_nokia
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_a_time_for_war
+
+		completion_reward = { }
+	}
+
+	# Economic Ideas
+	focus = {
+		id = USA_limited_intervention
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = FIN_tire_factory_at_nokia
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = HUN_secret_rearmament
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = USA_limited_intervention
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GUAY_coup_detat
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = HUN_secret_rearmament
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = POL_integrate_gdansk_industries
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GUAY_coup_detat
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = POL_expand_gdynia_seaport
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = POL_integrate_gdansk_industries
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = SPR_all_must_bear_the_torch
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = POL_expand_gdynia_seaport
+
+		completion_reward = { }
+	}
+
+	# Manpower Ideas
+	focus = {
+		id = AST_citizen_military_forces
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SPR_all_must_bear_the_torch
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CAN_commit_to_the_war
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = AST_citizen_military_forces
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ENG_concessions_to_the_trade_unions
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CAN_commit_to_the_war
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = AST_fight_work_or_perish
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ENG_concessions_to_the_trade_unions
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CAN_if_day
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = AST_fight_work_or_perish
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CAN_compromise_with_quebec
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CAN_if_day
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CAN_forced_quebec_conscription
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CAN_compromise_with_quebec
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = FIN_militarized_society
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CAN_forced_quebec_conscription
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = SWI_professionalize_militias
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = FIN_militarized_society
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = SWI_join_the_allies
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SWI_professionalize_militias
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = SWI_join_france
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SWI_join_the_allies
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = SWI_jump_into_action
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SWI_join_france
+
+		completion_reward = { }
+	}
+
+	# Unit Leader Traits
+	focus = {
+		id = ITA_comandante_diavolo
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SWI_jump_into_action
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_proclaim_the_italian_empire
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_comandante_diavolo
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_strengthen_ascari_corps
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_proclaim_the_italian_empire
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_novus_ordo
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_strengthen_ascari_corps
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_strengthen_the_blackshirts
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_novus_ordo
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_divino_duce
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_strengthen_the_blackshirts
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_a_greater_purpose
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_divino_duce
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = BUL_overthrow_the_tsar
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_a_greater_purpose
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = BUL_abolish_the_monarchy
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = BUL_overthrow_the_tsar
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = BUL_depose_the_tsar
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = BUL_abolish_the_monarchy
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = BUL_plot_against_boris
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = BUL_depose_the_tsar
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = BUL_the_return_of_ferdinand_i
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = BUL_plot_against_boris
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = BUL_crush_the_communists
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = BUL_the_return_of_ferdinand_i
+
+		completion_reward = { }
+	}
+
+	# Generic Events
+	focus = {
+		id = uk_china_focus
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = BUL_crush_the_communists
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = NOR_join_the_comintern
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = uk_china_focus
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = LAT_alignment_with_germany
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = NOR_join_the_comintern
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = POL_morges_pact
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = LAT_alignment_with_germany
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_pool_technical_know_how
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = POL_morges_pact
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = SOV_covert_support_for_spanish_poum
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_pool_technical_know_how
+
+		completion_reward = { }
+	}
+
+	# Generic News Events
+	focus = {
+		id = GER_demand_memel
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SOV_covert_support_for_spanish_poum
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_poland_friend
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_demand_memel
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_rhineland
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_poland_friend
+
+		completion_reward = { }
+	}
+
+	# Generic Political Events
+	focus = {
+		id = EST_national_pride_in_finland
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_rhineland
+
+		completion_reward = { }
+	}
+
+	# War Justification Events
+	focus = {
+		id = ENG_enforce_the_naval_treaties
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = EST_national_pride_in_finland
+
+		completion_reward = { }
+	}
+
+	# Stability Events
+	focus = {
+		id = DEN_side_with_unions
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ENG_enforce_the_naval_treaties
+
+		completion_reward = { }
+	}
+}

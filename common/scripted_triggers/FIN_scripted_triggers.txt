@@ -50,6 +50,10 @@ FIN_state_is_valid_for_motti_tactics = {
 	}
 }
 
+FIN_is_lone_wolf_finland = {
+	always = no
+}
+
 FIN_country_can_be_invited_into_faction_socialist = {
 	exists = yes
 	is_subject = no
@@ -159,4 +163,18 @@ FIN_is_valid_occupier_country = {
 		NOT = { original_tag = PREV.PREV }
 		NOT = { is_in_faction_with = ROOT }
 	}
+}
+
+   ###    ####    ########  ##          ###    ##    ##  ######  
+  ## ##    ##     ##     ## ##         ## ##   ###   ## ##    ## 
+ ##   ##   ##     ##     ## ##        ##   ##  ####  ## ##       
+##     ##  ##     ########  ##       ##     ## ## ## ##  ######  
+#########  ##     ##        ##       ######### ##  ####       ## 
+##     ##  ##     ##        ##       ##     ## ##   ### ##    ## 
+##     ## ####    ##        ######## ##     ## ##    ##  ######  
+
+
+
+FIN_is_historical_ai = {
+	is_historical_focus_on = yes
 }

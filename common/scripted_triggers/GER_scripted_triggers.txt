@@ -1,0 +1,23 @@
+GER_naval_interest_trigger = {
+	AND = {
+		NOT = {
+			any_enemy_country = {
+				OR = {
+					state_originally_from_RUS = yes
+					state_originally_from_UKR = yes
+					state_originally_from_BLR = yes
+				}
+			}
+		}
+		any_enemy_country = {
+			OR = {
+				state_originally_from_ENG = yes
+				state_originally_from_SCO = yes
+				state_originally_from_WLS = yes
+				state_originally_from_NIR = yes
+				state_originally_from_USA = yes
+				state_originally_from_JAP = yes
+			}
+		}
+	}
+}

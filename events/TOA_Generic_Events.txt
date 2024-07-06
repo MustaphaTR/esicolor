@@ -1,0 +1,160 @@
+###########################
+# News Events
+###########################
+
+add_namespace = south_american_news
+add_namespace = south_american_events
+
+# The Peru-Bolivian Confederation reuinified
+news_event = {
+	id = south_american_news.5
+	title = south_american_news.5.t
+	desc = south_american_news.5.d
+	picture = GFX_news_event_journalists_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = south_american_news.5.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = south_american_news.5.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+} 
+
+# Hispaniola United
+news_event = {
+	id = south_american_news.6
+	title = south_american_news.6.t
+	desc = south_american_news.6.d
+	picture = GFX_news_event_journalists_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = south_american_news.6.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = south_american_news.6.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+} 
+
+# The Guianas United
+news_event = {
+	id = south_american_news.7
+	title = south_american_news.7.t
+	desc = south_american_news.7.d
+	picture = GFX_news_event_journalists_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = south_american_news.7.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = south_american_news.7.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+}
+
+# The 1939 Chillán earthquake (Usually Chile)
+country_event = {
+	id = south_american_events.13
+	title = south_american_events.13.t
+	desc = south_american_events.13.d
+	picture = GFX_report_event_CHL_chillan_earthquake
+
+	trigger = {
+		controls_state = 279
+		date > 1939.1.18
+	}
+
+	mean_time_to_happen = { days = 2 }
+
+	hidden = no
+
+	fire_only_once = yes 
+
+	option = {
+		name = south_american_events.13.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_stability = -0.05
+		add_manpower = -4000
+
+		add_timed_idea = {
+			idea = CHL_relief_efforts_idea
+			days = 360
+		}
+		custom_effect_tooltip = CHL_relief_efforts_idea_tt
+
+		news_event = { 
+			id = south_american_news.13 
+			days = 3
+			random_days = 6
+		}
+	}
+
+	option = {
+		name = south_american_events.13.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 100
+				is_historical_focus_on = no
+			}
+			
+		}
+
+		add_stability = -0.15
+		add_manpower = -4000
+		add_command_power = 25
+
+		news_event = { 
+			id = south_american_news.13 
+			days = 3
+			random_days = 6
+		}
+	}
+}
+
+# Aftermath of the Chillan Earthquake
+news_event = {
+	id = south_american_news.13
+	title = south_american_news.13.t
+	desc = south_american_news.13.d
+	picture = GFX_news_event_CHL_chillan_earthquake
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = south_american_news.13.a
+	}
+}

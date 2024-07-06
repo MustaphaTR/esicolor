@@ -1,4 +1,27 @@
 ideas = {
+	country = {
+		# Used by the event about Chiléan Earthquake which i decided to keep around.
+		CHL_relief_efforts_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SPA_recovering_from_the_civil_war
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_weekly = 0.005
+				communism_drift = 0.02
+				democratic_drift = 0.02
+			}
+		}
+	}
+
 	naval_manufacturer = { 
 		designer = yes
 
