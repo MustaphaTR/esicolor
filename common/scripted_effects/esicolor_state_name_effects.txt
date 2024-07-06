@@ -1,3 +1,13 @@
+adjust_state_names = {
+	adjust_state_name_195 = yes
+	adjust_state_name_217 = yes
+	adjust_state_name_227 = yes
+	adjust_state_name_545 = yes
+	adjust_state_name_742 = yes
+	adjust_state_name_778 = yes
+	adjust_state_name_828 = yes
+}
+
 adjust_state_name_195 = {
 	if = {
 		limit = { 195 = { owner = { has_government = communism } } }
@@ -102,5 +112,22 @@ adjust_state_name_778 = {
 	}
 	else = {
 		778 = { set_state_name = STATE_778 }
+	}
+}
+
+adjust_state_name_828 = {
+	if = {
+		limit = { 828 = { owner = { has_government = communism } } }
+
+		set_province_name = {
+			id = 9628
+			name = VICTORY_POINTS_9628
+		}
+	}
+	else = {
+		set_province_name = {
+			id = 9628
+			name = SOV_Vladikavkaz
+		}
 	}
 }

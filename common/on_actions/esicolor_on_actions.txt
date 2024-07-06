@@ -24,6 +24,14 @@ on_actions = {
 		}
 	}
 
+	on_peaceconference_ended = {
+		effect = {
+			log = "[GetDateText] MustaphaTR's Every State Independent main on_peaceconference_ended begin"
+
+			adjust_state_names = yes
+		}
+	}
+
 	on_state_control_changed = {
 		effect = {
 			log = "[GetDateText] MustaphaTR's Every State Independent main on_state_control_changed begin"
@@ -51,6 +59,10 @@ on_actions = {
 			else_if = {
 				limit = { FROM.FROM = { state = 778 } }
 				adjust_state_name_778 = yes
+			}
+			else_if = {
+				limit = { FROM.FROM = { state = 828 } }
+				adjust_state_name_828 = yes
 			}
 		}
 	}
@@ -82,6 +94,10 @@ on_actions = {
 			else_if = {
 				limit = { owns_state = 778 }
 				adjust_state_name_778 = yes
+			}
+			else_if = {
+				limit = { owns_state = 828 }
+				adjust_state_name_828 = yes
 			}
 
 			if = {
