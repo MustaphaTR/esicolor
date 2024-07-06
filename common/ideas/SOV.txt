@@ -1,5 +1,51 @@
 ideas = {
 	country = {
+		# These are checked in generic news events file, which i don't want to override. So keeping them here.
+		trotskyite_plot_nsb = {
+			name = trotskyite_plot
+
+			removal_cost = -1
+
+			picture = trotskyite_plot_nsb_ccp_sov_compatibility
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					SOV_is_right_opposition = yes
+					has_country_leader = {
+						character = ZIF_iosif_stalin
+						ruling_only = yes
+					}
+				}
+			}
+
+			modifier = {
+				stability_factor = -0.2
+				political_power_factor = -0.15
+			}
+		}
+
+		trotskyite_plot_purged = {
+			name = trotskyite_plot
+			picture = trotskyite_plot_purged_nsb_ccp_sov_compatibility
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+
 		# These are checked in unit leader trait files, which i don't want to override. So keeping them here.
 		SOV_purged_junior_army_officers_3 = {
 			name = SOV_purged_junior_army_officers_1

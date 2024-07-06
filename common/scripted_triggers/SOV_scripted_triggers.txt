@@ -13,6 +13,58 @@
 #	}
 # 
 
+SOV_is_left_opposition = {
+	#custom_trigger_tooltip = {
+		#tooltip = SOV_is_left_opposition_tt
+		original_tag = IYS
+	#}
+}
+
+SOV_is_right_opposition = {
+	#custom_trigger_tooltip = {
+		#tooltip = SOV_is_right_opposition_tt
+		always = no
+	#}
+}
+
+SOV_is_exiles = {
+	#custom_trigger_tooltip = {
+		#tooltip = SOV_is_exiles_tt
+		original_tag = SLI
+	#}
+}
+
+SOV_is_opposition = {
+	custom_trigger_tooltip = {
+		tooltip = SOV_is_opposition_tt
+		OR = {
+			SOV_is_left_opposition = yes 
+			SOV_is_right_opposition = yes 
+			SOV_is_exiles = yes 
+		}
+	}
+}
+
+SOV_is_opposition_state = {
+	custom_trigger_tooltip = {
+		tooltip = SOV_is_opposition_state_tt
+		OR = {
+			AND = {
+				has_state_flag = SOV_left_opposition_state
+				SOV_is_left_opposition = yes
+			}
+			AND = {
+				has_state_flag = SOV_right_opposition_state
+				SOV_is_right_opposition = yes
+			}
+			AND = {
+				has_state_flag = SOV_exiles_state
+				SOV_is_exiles = yes
+			}
+		}
+	}
+}
+
 SOV_is_military_offensive_main_objective = {
 	OR = {
 		#HISTORICAL NAME

@@ -1,0 +1,66 @@
+#scripted triggers for Division Medals feature
+
+should_have_german_medals_trigger = {
+	state_originally_from_GER = yes
+}
+
+should_have_usa_medals_trigger = {
+	state_originally_from_USA = yes
+}
+
+should_have_soviet_medals_trigger = {
+	state_originally_from_SOV = yes
+}
+
+should_have_english_medals_trigger = {
+	state_originally_from_UKD = yes
+}
+
+should_have_french_medals_trigger = {
+	state_originally_from_FRA = yes
+}
+
+should_have_italian_medals_trigger = {
+	state_originally_from_ITA = yes
+}
+
+should_have_japanese_medals_trigger = {
+	state_originally_from_JAP = yes
+}
+
+should_have_ethiopian_medals_trigger = {
+	state_originally_from_ETH = yes
+}
+
+should_have_finnish_medals_trigger = {
+	state_originally_from_FIN = yes
+}
+
+should_have_norwegian_medals_trigger = {
+	state_originally_from_NOR = yes
+}
+
+should_have_danish_medals_trigger = {
+	state_originally_from_DEN = yes
+}
+
+should_have_chilean_medals_trigger = {
+	state_originally_from_CHL = yes
+}
+
+should_have_any_unique_medals_trigger = {
+	OR = {
+		should_have_german_medals_trigger = yes
+		should_have_usa_medals_trigger = yes
+		should_have_soviet_medals_trigger = yes
+		should_have_english_medals_trigger = yes
+		should_have_french_medals_trigger = yes
+		should_have_italian_medals_trigger = yes
+		should_have_japanese_medals_trigger = yes
+		should_have_ethiopian_medals_trigger = yes
+		should_have_finnish_medals_trigger = yes
+		should_have_norwegian_medals_trigger = yes 
+		should_have_danish_medals_trigger = yes
+		should_have_chilean_medals_trigger = yes 
+	}
+}
