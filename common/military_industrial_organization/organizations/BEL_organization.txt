@@ -1,0 +1,154 @@
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+OEA_escort_ship_organization = {
+	name = cockerill
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_maizuru_naval_arsenal # GFX_idea_generic_naval_manufacturer_1
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OEA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 34
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				34 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OEA_light_aircraft_organization = {
+	name = avions_fairey
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OEA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 34
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				34 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OOL_medium_aircraft_organization = {
+	name = renard
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_3 # GFX_idea_generic_air_manufacturer_2
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OOL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 6
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				6 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+OEA_fn_herstol_organization = {
+	name = fn_herstol
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OEA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 34
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				34 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

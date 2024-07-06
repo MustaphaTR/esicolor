@@ -1,0 +1,138 @@
+ideas = {
+	naval_manufacturer = { 
+		designer = yes
+
+		# Original is generic naval_manufacturer, but MIO version is Escort, so using that one here.
+		OEA_convoy_escort_naval_manufacturer = {
+			name = cockerill
+			picture = maizuru_naval_arsenal # generic_naval_manufacturer_1
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = OEA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 34
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					34 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		OEA_light_aircraft_manufacturer = {
+			name = avions_fairey
+			picture = generic_air_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OEA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 34
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					34 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		OOL_medium_aircraft_manufacturer = {
+			name = renard
+			picture = generic_air_manufacturer_3 # generic_air_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OOL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 6
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					6 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		OEA_infantry_equipment_manufacturer = {
+			name = fn_herstol
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = OEA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 34
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					34 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+}
