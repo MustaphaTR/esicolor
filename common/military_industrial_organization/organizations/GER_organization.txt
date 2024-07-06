@@ -1,0 +1,444 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+OSS_mobile_tank_organization = {
+	name = GER_henschel_organization
+	include = esicolor_generic_mobile_tank_organization
+	icon = GFX_idea_henschel
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OSS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 55
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				55 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OSZ_medium_tank_organization = {
+	name = GER_man_organization
+	include = esicolor_generic_medium_tank_organization
+	icon = GFX_idea_GER_MAN
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OSZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 52
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				52 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OSO_heavy_tank_organization = {
+	name = GER_porsche_organization
+	include = esicolor_generic_heavy_tank_organization
+	icon = GFX_idea_porsche
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OSO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 50
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				50 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+# Daimler-Benz is excluded, Generic Tank MIO type that ESI doesn't use, no Designer version, plus generic icon.
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+OSB_battle_line_ship_organization = {
+	name = GER_germaniawerft_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_germaniawerft
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OSB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 58
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				58 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OSB_raider_ship_organization = {
+	name = GER_blohm_und_voss_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_blohm_und_voss
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OSB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 58
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				58 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OSZ_light_aircraft_organization = {
+	name = GER_messerschmitt_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_messerschmitt
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OSZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 52
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				52 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OLA_cas_aircraft_organization = {
+	name = GER_junkers_organization
+	include = esicolor_generic_cas_aircraft_organization
+	icon = GFX_idea_junkers
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = CAS_manufacturer_disabled }
+			OR = {
+				original_tag = OLA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 64
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				64 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OSY_medium_aircraft_organization = {
+	name = GER_focke_wulf_organization
+	include = esicolor_generic_medium_aircraft_organization # esicolor_generic_multi_role_aircraft_organization, this org type isn't used in ESI, so change this and Heinkel to use matching org type to their Designer versions.
+	icon = GFX_idea_focke_wulf
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OSY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 59
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				59 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OLI_heavy_aircraft_organization = {
+	name = GER_heinkel_organization
+	include = esicolor_generic_heavy_aircraft_organization # esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_heinkel
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OLI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 61
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				61 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OSO_naval_aircraft_organization = {
+	name = GER_dornier_organization
+	include = esicolor_generic_naval_aircraft_organization
+	icon = GFX_idea_dornier
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OSO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 50
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				50 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+OSO_infantry_equipment_organization = {
+	name = GER_mauser_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_mauser
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OSO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 50
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				50 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OSI_artillery_organization = {
+	name = GER_rheinmetall_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_rheinmetall
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = OSI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 51
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				51 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OSS_motorized_mechanized_organization = {
+	name = GER_opel_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_opel
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OSS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 55
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				55 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
