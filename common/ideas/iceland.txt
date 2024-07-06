@@ -1,0 +1,97 @@
+ideas = {
+	industrial_concern = {
+		# Formed in '65, doesn't have an icon anyway.
+		#IOO_electronics_concern = {
+		#	name = ICE_landsvirkjun
+		#	picture = generic_electronics_concern_3
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = electronics_concern_disabled }
+		#		OR = {
+		#			original_tag = IOO
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 100
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			100 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		electronics = 0.15
+		#	}
+		#	traits = { electronics_concern }
+		#}
+
+		# American company, not Icelandic.
+		ESY_refinery_concern = {
+			name = ICE_esso
+			picture = ICE_esso
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = refinery_concern_disabled }
+				OR = {
+					original_tag = ESY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 359
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					359 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+
+		# Reykjavík, but not a trait ESI uses.
+		#ICE_eimskip = {
+		#	allowed = {
+		#		original_tag = ICE
+		#		has_dlc = "Arms Against Tyranny"
+		#	}
+		#	available = {
+		#		has_completed_focus = ICE_develop_icelandic_shipping
+		#	}
+		#
+		#	equipment_bonus = {
+		#		convoy = {
+		#			build_cost_ic = -0.05
+		#			instant = yes
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		#industry = 0.05
+		#	}
+		#	
+		#	traits = { ICE_shipping_concern }
+		#	
+		#	modifier = {
+		#		repair_speed_factor = 0.1
+		#		production_speed_dockyard_factor = 0.1
+		#	}
+		#}
+	}
+}
