@@ -53,6 +53,53 @@ handle_special_generals = {
 			}
 		}
 	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = EAI_halife_abdulmecid_efendi ruling_only = yes }
+
+				NOT = { has_global_flag = refet_pasha_created }
+			}
+		}
+
+		set_global_flag = refet_pasha_created
+		set_character_name = TUR_refet_pasha
+
+		if = {
+			limit = { has_dlc = "Battle for the Bosporus" }
+
+			set_portraits = {
+				civilian = {
+					large=GFX_portrait_tur_refe_pasha
+					small=GFX_portrait_TUR_refet_pasha_small
+				}
+				army = {
+					large=GFX_portrait_tur_refe_pasha
+					small=GFX_portrait_TUR_refet_pasha_small
+				}
+				navy = {
+					large=GFX_portrait_tur_refe_pasha
+					small=GFX_portrait_TUR_refet_pasha_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large=GFX_Portrait_South_America_Generic_land_5
+					small=GFX_Portrait_South_America_Generic_land_5_small
+				}
+				army = {
+					large=GFX_Portrait_South_America_Generic_land_5
+					small=GFX_Portrait_South_America_Generic_land_5_small
+				}
+				navy = {
+					large=GFX_Portrait_South_America_Generic_land_5
+					small=GFX_Portrait_South_America_Generic_land_5_small
+				}
+			}
+		}
+	}
 }
 
 handle_special_admirals = {

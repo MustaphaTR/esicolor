@@ -1,0 +1,38 @@
+characters={
+	EAE_mehmet_recep_peker = {
+		instance = {
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+			}
+			name=TUR_mehmet_recep_peker
+			portraits={
+				civilian={
+					large=GFX_portrait_tur_recep_peker
+				}
+			}
+			country_leader={
+				traits={ the_statist }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Battle for the Bosporus" }
+			}
+			name=TUR_mehmet_recep_peker
+			portraits={
+				civilian={
+					large=GFX_portrait_europe_generic_8
+				}
+			}
+			country_leader={
+				traits={ the_statist }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+characters={
+	EAS_kazim_orbay = {
+		instance = {
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+			}
+			name=TUR_kazim_orbay
+			portraits={
+				civilian={
+					large=GFX_portrait_TUR_kazim_orbay
+				}
+			}
+			country_leader={
+				traits={ celebrity_junta_leader }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Battle for the Bosporus" }
+			}
+			name=TUR_kazim_orbay
+			portraits={
+				civilian={
+					large=GFX_Portrait_Europe_Generic_land_4
+				}
+			}
+			country_leader={
+				traits={ celebrity_junta_leader }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

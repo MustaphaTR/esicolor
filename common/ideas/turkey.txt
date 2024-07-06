@@ -1,0 +1,429 @@
+ideas = {
+	tank_manufacturer = { 
+		designer = yes
+
+		# Same company has 3 roles, i'll keep the materiel one, so commening out this one.
+		#FYF_infantry_tank_manufacturer = {
+		#	name = koc_ticaret_as_armor
+		#	picture = tur_koc_ticaret_as
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+		#		OR = {
+		#			original_tag = FYF
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 797
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			797 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		armor = 0.15
+		#	}
+		#	traits = { infantry_tank_manufacturer }
+		#}
+
+		OAY_fast_tank_manufacturer = {
+			name = tulomsas
+			picture = tur_tulomsas
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+				OR = {
+					original_tag = OAY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 49
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					49 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { fast_tank_manufacturer }
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		# French Company, not Turkish. So putting it in France.
+		OIS_battlefleet_designer = {
+			name = cgt
+			picture = tur_cgt
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = battlefleet_designer_disabled }
+				OR = {
+					original_tag = OIS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 15
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					15 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { battlefleet_designer }
+		}
+
+		EAF_coastal_defence_naval_manufacturer = {
+			name = golcuk_nsy
+			picture = tur_golcuk_naval_base
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = coastal_defence_naval_manufacturer_disabled }
+				OR = {
+					original_tag = EAF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 347
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					347 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { coastal_defence_naval_manufacturer }
+		}
+
+		# Same company has 3 roles, i'll keep the materiel one, so commening out this one.
+		#FYF_mediterranean_naval_manufacturer = {
+		#	name = koc_ticaret_as_shipyard
+		#	picture = tur_koc_ticaret_as
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = mediterranean_naval_manufacturer_disabled }
+		#		OR = {
+		#			original_tag = FYF
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 797
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			797 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		naval_equipment = 0.15
+		#	}
+		#	traits = { mediterranean_naval_manufacturer }
+		#}
+	}
+
+	aircraft_manufacturer = { 
+		designer = yes
+
+		OAY_light_aircraft_manufacturer = {
+			name = thk_bftb
+			picture = man_five_year_plan_air
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OAY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 49
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					49 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		FYF_CAS_manufacturer = {
+			name = nud
+			picture = tur_nud
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = CAS_manufacturer_disabled }
+				OR = {
+					original_tag = FYF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 797
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					797 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { CAS_manufacturer }
+		}
+
+		EAB_medium_aircraft_manufacturer = {
+			name = tomtasch
+			picture = tur_tomtasch
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = EAB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 348
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					348 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+
+		FYF_fuel_efficient_aircraft_manufacturer = {
+			name = gok_okulu
+			picture = tur_gok_okulu
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = fuel_efficient_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = FYF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 797
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					797 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { fuel_efficient_aircraft_manufacturer }
+		}
+	}
+	
+	materiel_manufacturer = {
+		designer = yes
+
+		FYF_artillery_manufacturer = {
+			name = killigil_endustrileri
+			picture = tur_killigil_endustrileri
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = FYF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 797
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					797 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		FYF_motorized_equipment_manufacturer = {
+			name = koc_ticaret_as_defense_industry
+			picture = tur_koc_ticaret_as
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = FYF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 797
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					797 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		# Formed in '41.
+		FYF_refinery_concern = {
+			name = petrol_ofisi
+			picture = tur_petrol_ofisi
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = refinery_concern_disabled }
+				OR = {
+					original_tag = FYF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 797
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					797 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+
+		# Had custom trait in basegame, but using Railway Company here. That's what it is.
+		OAY_railway_company = {
+			name = tcdd
+			picture = tur_tcdd
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = OAY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 49
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					49 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
+		}
+	}
+}

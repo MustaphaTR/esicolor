@@ -1,0 +1,50 @@
+characters={
+	EAL_adnan_menderes = {
+		instance = {
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+			}
+			name=TUR_adnan_menderes
+			portraits={
+				civilian={
+					large=GFX_portrait_tur_adnan_menderes
+				}
+			}
+			country_leader={
+				traits={ man_of_the_nation }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ man_of_the_nation }
+				ideology=centrism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Battle for the Bosporus" }
+			}
+			name=TUR_adnan_menderes
+			portraits={
+				civilian={
+					large=GFX_portrait_europe_generic_5
+				}
+			}
+			country_leader={
+				traits={ man_of_the_nation }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ man_of_the_nation }
+				ideology=centrism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

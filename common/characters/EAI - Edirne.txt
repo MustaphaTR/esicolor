@@ -1,0 +1,38 @@
+characters={
+	EAI_halife_abdulmecid_efendi = {
+		instance = {
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+			}
+			name=TUR_halife_abdulmecid_efendi
+			portraits={
+				civilian={
+					large=GFX_portrait_tur_abdulmejid_ii
+				}
+			}
+			country_leader={
+				traits={ gentle_scholar }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Battle for the Bosporus" }
+			}
+			name=TUR_halife_abdulmecid_efendi
+			portraits={
+				civilian={
+					large=GFX_portrait_south_america_generic_9
+				}
+			}
+			country_leader={
+				traits={ gentle_scholar }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

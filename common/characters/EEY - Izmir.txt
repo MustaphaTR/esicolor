@@ -1,0 +1,38 @@
+characters={
+	EEY_sukru_okan = {
+		instance = {
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+			}
+			name=TUR_sukru_okan
+			portraits={
+				civilian={
+					large=GFX_portrait_tur_sukru_okan
+				}
+			}
+			country_leader={
+				traits={ navy_chief_maneuver_2 }
+				ideology=oligarchism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Battle for the Bosporus" }
+			}
+			name=TUR_sukru_okan
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_America_Generic_navy_3
+				}
+			}
+			country_leader={
+				traits={ navy_chief_maneuver_2 }
+				ideology=oligarchism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
