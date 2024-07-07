@@ -1,0 +1,140 @@
+ideas = {
+	naval_manufacturer = {
+		designer = yes
+
+		# Original is generic naval_manufacturer, but MIO version is Task Force, so using Pacific one here.
+		OAE_pacific_fleet_naval_manufacturer = {
+			name = HUN_ganz_danubius
+			picture = HUN_ganz_danubius
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = OAE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 43
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					43 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		OAE_light_aircraft_manufacturer = {
+			name = mw_aircraft
+			picture = mw_aircraft
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OAE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 43
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					43 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		OAE_infantry_equipment_manufacturer = {
+			name = HUN_femaru_fegyver_es_gepgyar
+			picture = HUN_femaru_fegyver_es_gepgyar
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = OAE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 43
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					43 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		OAE_industrial_concern = {
+			name = HUN_mavag
+			picture = HUN_mavag
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = OAE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 43
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					43 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+	}
+}
