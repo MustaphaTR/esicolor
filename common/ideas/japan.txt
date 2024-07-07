@@ -1,0 +1,458 @@
+ideas = {
+	tank_manufacturer = {
+		designer = yes
+
+		# Osaka Army Arsenal is a generic tank designer, plus is also an Artillery Designer, so excluding it.
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		ZBZ_pacific_fleet_naval_manufacturer = {
+			name = yokosuka_naval_arsenal
+			picture = yokosuka_naval_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ZBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 282
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					282 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+
+		SZY_battlefleet_designer = {
+			name = kure_naval_arsenal
+			picture = kure_naval_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = battlefleet_designer_disabled }
+				OR = {
+					original_tag = SZY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 529
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					529 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { battlefleet_designer }
+		}
+
+		SZB_coastal_defence_naval_manufacturer = {
+			name = sasebo_naval_arsenal
+			picture = sasebo_naval_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = coastal_defence_naval_manufacturer_disabled }
+				OR = {
+					original_tag = SZB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 528
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					528 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { coastal_defence_naval_manufacturer }
+		}
+
+		SEI_convoy_escort_naval_manufacturer = {
+			name = maizuru_naval_arsenal
+			picture = maizuru_naval_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = SEI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 531
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					531 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+	
+	aircraft_manufacturer = {
+		designer = yes
+
+		SEZ_fuel_efficient_aircraft_manufacturer = {
+			name = aichi
+			picture = aichi
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = fuel_efficient_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = SEZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 532
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					532 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { fuel_efficient_aircraft_manufacturer }
+		}
+
+		ZBZ_agility_focused_aircraft_manufacturer = {
+			name = mitsubishi
+			picture = mitsubishi
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = agility_focused_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ZBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 282
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					282 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { agility_focused_aircraft_manufacturer }
+		}
+
+		ZBZ_heavy_aircraft_manufacturer = {
+			name = nakajima
+			picture = nakajima
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ZBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 282
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					282 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { heavy_aircraft_manufacturer }
+		}
+
+		ZBZ_naval_aircraft_manufacturer = {
+			name = yokosuka
+			picture = yokosuka
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ZBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 282
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					282 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { naval_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		ZBZ_infantry_equipment_manufacturer = {
+			name = tokyo_arsenal
+			picture = tokyo_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 282
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					282 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		# Only exists as a MIO in basegame, but adding this here as well.
+		SEI_artillery_manufacturer = {
+			name = JAP_osaka_army_arsenal_artillery_organization
+			picture = osaka_army_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = SEI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 531
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					531 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		ZBZ_motorized_equipment_manufacturer = {
+			name = nissan
+			picture = nissan
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 282
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					282 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		ZBZ_industrial_concern = {
+			name = kawasaki
+			picture = kawasaki
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = ZBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 282
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					282 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		SEI_electronics_concern = {
+			name = sumitomo
+			picture = sumitomo
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = SEI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 531
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					531 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
+		SZB_refinery_concern = {
+			name = JAP_idemitsu_kosan
+			picture = generic_refining_concern_1 # generic_industrial_concern_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = refinery_concern_disabled }
+				OR = {
+					original_tag = SZB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 528
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					528 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+	}
+}

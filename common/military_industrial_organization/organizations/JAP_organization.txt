@@ -1,0 +1,382 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+# Osaka Army Arsenal is a generic tank designer, plus is also an Artillery Designer, so excluding it.
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+ZBZ_task_force_ship_organization = {
+	name = JAP_yokosuka_naval_arsenal_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_yokosuka_naval_arsenal
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = ZBZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 282
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				282 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+SZY_battle_line_ship_organization = {
+	name = JAP_kure_naval_arsenal_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_kure_naval_arsenal
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = SZY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 529
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				529 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+SZB_raider_ship_organization = {
+	name = JAP_sasebo_naval_arsenal_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_sasebo_naval_arsenal
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = SZB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 528
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				528 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+SEI_escort_ship_organization = {
+	name = JAP_maizuru_naval_arsenal_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_maizuru_naval_arsenal
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = SEI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 531
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				531 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+SEZ_range_focused_aircraft_organization = {
+	name = JAP_aichi_organization
+	include = esicolor_generic_range_focused_aircraft_organization
+	icon = GFX_idea_aichi
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fuel_efficient_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = SEZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 532
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				532 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZBZ_high_agility_fighter_aircraft_organization = {
+	name = JAP_mitsubishi_organization
+	include = esicolor_generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_mitsubishi
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = agility_focused_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ZBZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 282
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				282 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZBZ_heavy_aircraft_organization = {
+	name = JAP_nakajima_organization
+	include = esicolor_generic_heavy_aircraft_organization
+	icon = GFX_idea_nakajima
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ZBZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 282
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				282 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZBZ_naval_aircraft_organization  = {
+	name = JAP_yokosuka_organization 
+	include = esicolor_generic_naval_aircraft_organization 
+	icon = GFX_idea_yokosuka
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ZBZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 282
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				282 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+ZBZ_infantry_equipment_organization = {
+	name = JAP_tokyo_arsenal_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_tokyo_arsenal
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZBZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 282
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				282 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+SEI_artillery_organization = {
+	name = JAP_osaka_army_arsenal_artillery_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_osaka_army_arsenal
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = SEI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 531
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				531 = { state_designer_availabile = yes }
+			}
+		}
+	}
+} 
+
+ZBZ_motorized_mechanized_organization  = {
+	name = JAP_nissan_organization 
+	include = esicolor_generic_motorized_mechanized_organization 
+	icon = GFX_idea_nissan
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZBZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 282
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				282 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
