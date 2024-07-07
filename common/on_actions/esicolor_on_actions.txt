@@ -545,7 +545,7 @@ on_actions = {
 							}
 						}
 						check_variable = { ROOT.states_being_claimed^num < 1 }
-						num_divisions > 1
+						num_divisions > 0
 
 						has_political_power > global.claiming_cost_minus_one?19
 						political_power_daily > 0.1

@@ -34,6 +34,28 @@ ideas = {
 		}
 	}
 
+	country = {
+		# Used by some decision files, keeping it.
+		SPR_political_violence = {
+
+			picture = SPR_political_violence
+
+			allowed = {
+				original_tag = SPR
+				NOT = { has_global_flag = spanish_civil_war }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.15
+				disabled_ideas = 1
+			}
+		}
+	}
+
 	naval_manufacturer = { 			
 		designer = yes
 
