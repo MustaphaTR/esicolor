@@ -113,6 +113,10 @@ has_custom_atlantic_fleet_naval_manufacturer = {
 				original_tag = FEL
 			}
 		}
+		AND = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+			original_tag = ZFB
+		}
 	}
 }
 
@@ -149,6 +153,7 @@ has_custom_repair_and_refurbishment_plant = {
 			OR = {
 				original_tag = IIF
 				original_tag = ZFY
+				original_tag = ZFB
 			}
 		}
 	}
@@ -212,6 +217,7 @@ has_custom_convoy_escort_naval_manufacturer = {
 		original_tag = OAF
 		original_tag = IIO
 		original_tag = IEE
+		original_tag = ZFB
 		original_tag = ALA
 		original_tag = SOO
 		original_tag = SEI
@@ -262,6 +268,7 @@ has_custom_light_aircraft_manufacturer = {
 		original_tag = SOI
 		original_tag = SIF
 		original_tag = BOB
+		original_tag = YSB
 		AND = {
 			NOT = { has_dlc = "Arms Against Tyranny" }
 			OR = {
@@ -379,6 +386,7 @@ has_custom_infantry_equipment_manufacturer = {
 		original_tag = ISY
 		original_tag = ZZE
 		original_tag = ZFL
+		original_tag = ZFB
 		original_tag = ZFY
 		original_tag = ZBZ
 		original_tag = ZBS
@@ -441,6 +449,7 @@ has_custom_motorized_equipment_manufacturer = {
 		original_tag = ISY
 		original_tag = ILS
 		original_tag = ZSZ
+		original_tag = ZFB
 		original_tag = ZBZ
 		original_tag = EYE
 		original_tag = SOO
@@ -478,6 +487,7 @@ has_custom_industrial_concern = {
 		original_tag = ZIF
 		original_tag = ZLL
 		original_tag = ZFF
+		original_tag = ZFB
 		original_tag = ZBZ
 		original_tag = ZBS
 		original_tag = EYE
@@ -504,6 +514,7 @@ has_custom_electronics_concern = {
 		original_tag = IYS
 		original_tag = ZFI
 		original_tag = ZFF
+		original_tag = ZFB
 		original_tag = ZFY
 		original_tag = ESB
 		original_tag = BMC # ALB
@@ -520,6 +531,7 @@ has_custom_refinery_concern = {
 		original_tag = OSS
 		original_tag = ZFL
 		original_tag = ZFF
+		original_tag = ZFB
 		original_tag = ESY
 		original_tag = EFB
 		original_tag = SZB
@@ -567,7 +579,9 @@ has_custom_railway_company = {
 		original_tag = III
 		original_tag = ZLB
 		original_tag = ZFL
+		original_tag = ZFB
 		original_tag = ZFY
+		original_tag = EOO
 		original_tag = EOI
 		original_tag = SOO
 	}

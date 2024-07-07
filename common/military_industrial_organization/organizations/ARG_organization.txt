@@ -1,0 +1,206 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+ 
+#ZFB_infantry_tank_organization = {
+# 	name = ARG_fabricaciones_militares_epartamento_de_tanques_del_ejercito_organization
+# 	include = esicolor_generic_infantry_tank_organization
+# 	icon = GFX_idea_ARG_fabricaciones_militares
+#}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+ZFB_refurbishment_repair_organization = {
+	name = ARG_astarsa_organization
+	include = esicolor_generic_refurbishment_repair_organization
+	icon = GFX_idea_ARG_astarsa
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = repair_and_refurbishment_plant_disabled }
+			OR = {
+				original_tag = ZFB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 278
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				278 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZFB_escort_ship_organization = {
+	name = ARG_arsenales_de_marina_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_ARG_arsenal_naval_buenos_aires
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = ZFB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 278
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				278 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+YSB_light_aircraft_organization = {
+	name = ARG_fma_organization
+	include = esicolor_generic_light_aircraft_organization # generic_general_aircraft_organization, we don't use this one in ESI, No-AAT version is Light Aircraft Manufacturer, use that one.
+	icon = GFX_idea_ARG_fma
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = YSB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 958
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				958 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+ZFB_infantry_equipment_organization = {
+	name = ARG_fabricaciones_militares_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_ARG_fabricaciones_militares
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZFB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 278
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				278 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#ZFB_artillery_organization = {
+# 	name = ARG_fabricaciones_militares_art_organization
+# 	include = esicolor_generic_artillery_organization
+# 	icon = GFX_idea_ARG_fabricaciones_militares
+#}
+
+ZFB_motorized_mechanized_organization = {
+ 	name = ARG_hispano_argentina_organization
+ 	include = esicolor_generic_motorized_mechanized_organization
+ 	icon = GFX_idea_ARG_hispano_argentina
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZFB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 278
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				278 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

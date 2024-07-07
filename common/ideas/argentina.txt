@@ -1,0 +1,362 @@
+ideas = {
+	tank_manufacturer = {
+		designer = yes
+
+		#ZFB_medium_tank_manufacturer = {
+		#	name = ARG_fabricaciones_militares_epartamento_de_tanques_del_ejercito_manufacturer
+		#	picture = ARG_fabricaciones_militares
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+		#		OR = {
+		#			original_tag = ZFB
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 278
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			278 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		armor = 0.15
+		#	}
+		#	traits = { medium_tank_manufacturer }
+		#}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		ZFB_atlantic_fleet_naval_manufacturer = {
+			name = ARG_astarsa_manufacturer
+			picture = ARG_astarsa
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ZFB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 278
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					278 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { atlantic_fleet_naval_manufacturer }
+		}
+
+		ZFB_convoy_escort_naval_manufacturer = {
+			name = ARG_arsenales_de_marina_manufacturer
+			picture = ARG_arsenal_naval_buenos_aires
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ZFB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 278
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					278 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		YSB_light_aircraft_manufacturer = {
+			name = ARG_fma_manufacturer
+			picture = ARG_fma
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = YSB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 958
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					958 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+	}
+	
+	materiel_manufacturer = {
+		designer = yes
+
+		ZFB_infantry_equipment_manufacturer = {
+			name = ARG_fabricaciones_militares
+			picture = ARG_fabricaciones_militares
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZFB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 278
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					278 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		#ZFB_artillery_manufacturer = {
+		#	name = ARG_fabricaciones_militares_art_organization
+		#	picture = ARG_fabricaciones_militares
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = artillery_manufacturer_disabled }
+		#		OR = {
+		#			original_tag = ZFB
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 278
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			278 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		artillery = 0.15
+		#	}
+		#	traits = { artillery_manufacturer }
+		#}
+
+		ZFB_motorized_equipment_manufacturer = {
+			name = ARG_hispano_argentina_organization
+			picture = ARG_hispano_argentina
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZFB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 278
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					278 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		ZFB_industrial_concern = {
+			name = ARG_siam_di_tella
+			picture = ARG_siam_di_tella
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = ZFB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 278
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					278 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		ZFB_electronics_concern = {
+			name = ARG_chade_cade
+			picture = ARG_chade_cade
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = ZFB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 278
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					278 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
+		ZFB_refinery_concern = {
+			name = ARG_yacimientos_petroliferos_fiscales
+			picture = ARG_yacimientos_petroliferos_fiscales
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = refinery_concern_disabled }
+				OR = {
+					original_tag = ZFB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 278
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					278 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+
+		ZFB_railway_company = {
+			name = ARG_ferrocarriles_argentinos
+			picture = ARG_ferrocarriles_argentinos
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = ZFB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 278
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					278 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
+		}
+	}
+}

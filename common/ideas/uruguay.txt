@@ -1,0 +1,34 @@
+ideas = {
+	industrial_concern = {
+		EOO_railway_company = {
+			name = URG_administracion_de_ferrocarriles_del_estado
+			picture = URG_administracion_de_ferrocarriles_del_estado
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = EOO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 300
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					300 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
+		}
+	}
+}
