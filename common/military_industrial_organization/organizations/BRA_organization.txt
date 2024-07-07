@@ -1,0 +1,233 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+SOI_medium_tank_organization = {
+	name = BRA_bernadini_organization
+	include = esicolor_generic_medium_tank_organization
+	icon = GFX_idea_BRA_bernardini
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+			OR = {
+				original_tag = SOI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 501
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				501 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+SOO_escort_ship_organization = {
+	name = BRA_amrj_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_BRA_arsenal_de_marinha
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = SOO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 500
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				500 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+SOI_light_aircraft_organization = {
+	name = BRA_embraer_organization
+	include = esicolor_generic_light_aircraft_organization # generic_general_aircraft_organization, we don't use this one in ESI, No-AAT version is Light Aircraft Manufacturer, use that one.
+	icon = GFX_idea_BRA_embraer
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = SOI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 501
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				501 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+SOZ_infantry_equipment_organization = {
+	name = BRA_rossi_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_BRA_rossi
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = SOZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 502
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				502 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+SOI_support_equipment_organization = {
+	name = BRA_cbc_organization
+	include = esicolor_generic_support_equipment_organization
+	#icon = GFX_idea_generic_infantry_equipment_manufacturer_1
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = SOI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 501
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				501 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+# Couldn't find info.
+#BRA_artillery_organization = {
+#	name = BRA_ddam_organization
+#	include = esicolor_generic_artillery_organization
+#	#icon = GFX_idea_generic_infantry_equipment_manufacturer_1
+#}
+
+SOO_motorized_mechanized_organization = {
+	name = BRA_fnm_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_BRA_fnm
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = SOO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 500
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				500 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
