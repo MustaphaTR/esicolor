@@ -1,0 +1,200 @@
+ideas = {
+	tank_manufacturer = {
+		ZBA_fast_tank_manufacturer = {
+			name = NZL_nz_railways
+			picture = NZL_nz_railways
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+				OR = {
+					original_tag = ZBA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 284
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					284 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { fast_tank_manufacturer }
+		}
+
+		FZE_heavy_tank_manufacturer = {
+			name = NZL_christchurch_workshops
+			picture = NZL_christchurch_workshops
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = heavy_tank_manufacturer_disabled }
+				OR = {
+					original_tag = FZE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 723
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					723 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { heavy_tank_manufacturer }
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		FZE_pacific_fleet_naval_manufacturer = {
+			name = NZL_port_chalmers_shipbuilding
+			picture = NZL_port_chalmers_shipbuilding
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = FZE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 723
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					723 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+
+		ZBA_convoy_escort_naval_manufacturer = {
+			name = NZL_st_mary_bay_ship
+			picture = NZL_st_mary_bay_ship
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ZBA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 284
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					284 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		ZBA_motorized_equipment_manufacturer = {
+			name = NZL_charlton_mw
+			picture = NZL_charlton_mw
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZBA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 284
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					284 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		ZBA_industrial_concern = {
+			name = NZL_wairarapa_ranches
+			picture = NZL_wairarapa_ranches
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = ZBA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 284
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					284 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+	}
+}

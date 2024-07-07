@@ -1,0 +1,199 @@
+ideas = {
+	naval_manufacturer = {
+		designer = yes
+
+		AEI_pacific_fleet_naval_manufacturer = {
+			name = garden_reach_shipbuilders
+			picture = garden_reach_shipbuilders
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = AEI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 431
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					431 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+
+		AZL_atlantic_fleet_naval_manufacturer = {
+			name = scindia_shipyard
+			picture = scindia_shipyard
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = AZL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 426
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					426 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { atlantic_fleet_naval_manufacturer }
+		}
+
+		AZY_convoy_escort_naval_manufacturer = {
+			name = mazagon_dock_limited
+			picture = mazagon_dock_limited
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = AZY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 429
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					429 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		AZS_light_aircraft_manufacturer = {
+			name = hindustan_aircraft
+			picture = hindustan_aircraft
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = AZS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 425
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					425 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		AEI_infantry_equipment_manufacturer = {
+			name = ishapore_rifle_factory
+			picture = ishapore_rifle_factory
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = AEI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 431
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					431 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+	
+		AEI_artillery_manufacturer = {
+			name = ordnance_factories_board
+			picture = ordnance_factories_board
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = AEI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 431
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					431 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+	}
+}

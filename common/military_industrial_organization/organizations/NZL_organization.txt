@@ -1,0 +1,184 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+ZBA_mobile_tank_organization = {
+	name = NZL_nz_railways_organization
+	include = esicolor_generic_mobile_tank_organization
+	icon = GFX_idea_NZL_nz_railways
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			OR = {
+				original_tag = ZBA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 284
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				284 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+FZE_heavy_tank_organization = {
+	name = NZL_christchurch_workshops_organization
+	include = esicolor_generic_heavy_tank_organization
+	icon = GFX_idea_NZL_christchurch_workshops
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_tank_manufacturer_disabled }
+			OR = {
+				original_tag = FZE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 723
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				723 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+FZE_task_force_ship_organization = {
+	name = NZL_port_chalmers_shipbuilding
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_NZL_port_chalmers_shipbuilding
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = FZE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 723
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				723 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZBA_escort_ship_organization = {
+	name = NZL_st_mary_bay_ship_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_NZL_st_mary_bay_ship
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = ZBA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 284
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				284 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+ZBA_motorized_mechanized_organization = {
+	name = NZL_charlton_mw_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_NZL_charlton_mw
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZBA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 284
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				284 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

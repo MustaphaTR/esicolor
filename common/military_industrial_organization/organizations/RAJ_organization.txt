@@ -1,0 +1,216 @@
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+AEI_task_force_ship_organization = {
+	name = RAJ_garden_reach_shipbuilders_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_garden_reach_shipbuilders
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = AEI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 431
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				431 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+AZL_battle_line_ship_organization = {
+	name = RAJ_scindia_shipyard_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_scindia_shipyard
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = AZL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 426
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				426 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+AZY_escort_ship_organization = {
+	name = RAJ_mazagon_dock_limited_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_mazagon_dock_limited
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = AZY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 429
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				429 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+AZS_light_aircraft_organization = {
+	name = RAJ_hindustan_aircraft_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_hindustan_aircraft
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = AZS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 425
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				425 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+AEI_infantry_equipment_organization = {
+	name = RAJ_ishapore_rifle_factory_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_ishapore_rifle_factory
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = AEI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 431
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				431 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+AEI_artillery_organization = {
+	name = RAJ_ordnance_factories_board_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_ordnance_factories_board
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = AEI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 431
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				431 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
