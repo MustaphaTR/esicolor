@@ -1,0 +1,294 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+OAF_mobile_tank_organization = {
+	name = GRE_biamax_organization
+	include = esicolor_generic_mobile_tank_organization
+	icon = GFX_idea_gre_biamax
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OAF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 47
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				47 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+OAF_battle_line_ship_organization = {
+	name = OAF_battle_line_ship_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_gre_royal_hellenic_naval_shipyard
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OAF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 47
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				47 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OAF_raider_ship_organization = {
+	name = GRE_basileiades_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_gre_basileiades
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OAF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 47
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				47 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OAF_escort_ship_organization = {
+	name = GRE_astilleros_onassis_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_gre_astilleros_onassis
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OAF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 47
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				47 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+# Couldn't find info.
+#GRE_light_aircraft_organization = {
+#	name = GRE_gnaf_organization
+#	include = esicolor_generic_light_aircraft_organization
+#	icon = GFX_idea_generic_air_manufacturer_1 # GFX_idea_generic_air_manufacturer_3
+#}
+
+OAF_cas_aircraft_organization = {
+	name = GRE_phaliron_aircraft_organization
+	include = esicolor_generic_cas_aircraft_organization
+	icon = GFX_idea_gre_phaliron_aircraft
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = CAS_manufacturer_disabled }
+			OR = {
+				original_tag = OAF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 47
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				47 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OAF_medium_aircraft_organization = {
+	name = GRE_aekkea_organization
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_gre_phaliron_aekka
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OAF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 47
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				47 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+OAF_infantry_equipment_organization = {
+	name = GRE_pyrkal_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_gre_pyrkal
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OAF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 47
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				47 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+FEI_motorized_mechanized_organization = {
+	name = GRE_petropoulos_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_gre_petropoulos
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = FEI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 731
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				731 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

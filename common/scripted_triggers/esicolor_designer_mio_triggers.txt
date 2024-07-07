@@ -11,6 +11,7 @@ has_custom_fast_tank_manufacturer = {
 	OR = {
 		original_tag = OOY
 		original_tag = OIL
+		original_tag = OAF
 		original_tag = OAY
 		original_tag = OSS
 		original_tag = IEB
@@ -97,6 +98,7 @@ has_custom_atlantic_fleet_naval_manufacturer = {
 			has_dlc = "Arms Against Tyranny"
 			OR = {
 				original_tag = OIS
+				original_tag = OAF
 				original_tag = IYS
 				original_tag = FEL
 			}
@@ -107,6 +109,7 @@ has_custom_atlantic_fleet_naval_manufacturer = {
 # Only available without AAT.
 has_custom_mediterranean_naval_manufacturer = {
 	OR = {
+		original_tag = OAF
 		original_tag = ISB
 		original_tag = BSI
 	}
@@ -143,6 +146,7 @@ has_custom_repair_and_refurbishment_plant = {
 # Only available without AAT.
 has_custom_coastal_defence_naval_manufacturer = {
 	OR = {
+		original_tag = OAF
 		original_tag = IEE
 		original_tag = ZFY
 		original_tag = EAF
@@ -180,7 +184,10 @@ has_custom_raiding_fleet_naval_manufacturer = {
 		}
 		AND = {
 			has_dlc = "Arms Against Tyranny"
-			original_tag = IEE
+			OR = {
+				original_tag = OAF
+				original_tag = IEE
+			}
 		}
 	}
 }
@@ -189,6 +196,7 @@ has_custom_convoy_escort_naval_manufacturer = {
 	OR = {
 		original_tag = OOE
 		original_tag = OEA
+		original_tag = OAF
 		original_tag = IIO
 		original_tag = IEE
 		original_tag = ALA
@@ -245,6 +253,7 @@ has_custom_light_aircraft_manufacturer = {
 
 has_custom_CAS_manufacturer = {
 	OR = {
+		original_tag = OAF
 		original_tag = OLA
 		original_tag = IZL
 		original_tag = ISY
@@ -259,6 +268,7 @@ has_custom_medium_aircraft_manufacturer = {
 		original_tag = OOF
 		original_tag = OOY
 		original_tag = OIL
+		original_tag = OAF
 		original_tag = OSY
 		original_tag = IOF
 		original_tag = IIF
@@ -329,6 +339,7 @@ has_custom_infantry_equipment_manufacturer = {
 		original_tag = OZO
 		original_tag = OEA
 		original_tag = OEF
+		original_tag = OAF
 		original_tag = OSO
 		original_tag = OFS
 		original_tag = OBA
@@ -397,6 +408,7 @@ has_custom_motorized_equipment_manufacturer = {
 		original_tag = ZSZ
 		original_tag = EYE
 		original_tag = FIS
+		original_tag = FEI
 		original_tag = FYF
 		original_tag = CBT # BAS
 		original_tag = YII
@@ -441,6 +453,7 @@ has_custom_electronics_concern = {
 		original_tag = OOY
 		original_tag = OES
 		original_tag = OAI
+		original_tag = OAF
 		original_tag = OSZ
 		original_tag = IIO
 		original_tag = IZL
@@ -472,6 +485,7 @@ has_custom_refinery_concern = {
 
 has_custom_telephone_company = {
 	OR = {
+		original_tag = OAF
 		original_tag = IAI
 	}
 }
@@ -488,6 +502,7 @@ has_custom_construction_company = {
 		original_tag = OYY
 		original_tag = ISB
 		original_tag = ILS
+		original_tag = IBF
 		original_tag = EZB
 	}
 }
