@@ -1,0 +1,36 @@
+ideas = {
+	aircraft_manufacturer = { 		
+		designer = yes
+
+		OII_light_aircraft_manufacturer = {
+			name = vef
+			picture = generic_air_manufacturer_1 # generic_air_manufacturer_3
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OII
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 11
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					11 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+	}
+}

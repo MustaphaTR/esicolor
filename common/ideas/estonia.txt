@@ -1,0 +1,72 @@
+ideas = {
+	naval_manufacturer = { 
+		designer = yes
+
+		# Original is generic naval_manufacturer, but MIO version is Task Force, so using that one here.
+		BIZ_pacific_fleet_naval_manufacturer = {
+			name = paldiski_port
+			picture = harland_wolff # generic_naval_manufacturer_3
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = BIZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 812
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					812 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		BIZ_infantry_equipment_manufacturer = {
+			name = arsenal
+			picture = generic_infantry_equipment_manufacturer_3
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = BIZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 812
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					812 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+}

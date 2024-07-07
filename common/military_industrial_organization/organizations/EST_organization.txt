@@ -1,0 +1,81 @@
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+BIZ_task_force_ship_organization = {
+	name = EST_paldiski_port_organization
+	include = esicolor_generic_task_force_ship_organization
+	# icon = GFX_idea_generic_naval_manufacturer_3
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = BIZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 812
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				812 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+BIZ_infantry_equipment_organization = {
+	name = EST_arsenal_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_3
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = BIZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 812
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				812 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

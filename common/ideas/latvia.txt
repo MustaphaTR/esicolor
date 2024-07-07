@@ -1,0 +1,72 @@
+ideas = {
+	naval_manufacturer = {
+		designer = yes
+
+		# Original is generic naval_manufacturer, but MIO version is Task Force, so using that one here.
+		IYO_pacific_fleet_naval_manufacturer = {
+			name = lkod
+			picture = harland_wolff # generic_naval_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = IYO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 190
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					190 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		BOB_light_aircraft_manufacturer = {
+			name = vef
+			picture = generic_air_manufacturer_1 # generic_naval_manufacturer_1
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = BOB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 808
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					808 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+	}
+}

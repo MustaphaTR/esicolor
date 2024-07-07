@@ -1,0 +1,81 @@
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+IYO_task_force_ship_organization = {
+	name = LAT_lkod_organization
+	include = esicolor_generic_task_force_ship_organization
+	# icon = GFX_idea_generic_naval_manufacturer_3
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = IYO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 190
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				190 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+BOB_light_aircraft_organization = {
+	name = LAT_vef_organization
+	include = esicolor_generic_light_aircraft_organization
+	#icon = GFX_idea_generic_naval_manufacturer_3
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = BOB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 808
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				808 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

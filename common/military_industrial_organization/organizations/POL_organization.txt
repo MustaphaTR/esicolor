@@ -1,0 +1,256 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+OIO_infantry_tank_organization = {
+	name = POL_pzinz_organization
+	include = esicolor_generic_infantry_tank_organization
+	icon = GFX_idea_POL_pzinz
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OIO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 10
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				10 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+BOF_task_force_ship_organization = {
+	name = POL_stocznia_gdynia_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_POL_stocznia_gdynia
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = BOF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 807
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				807 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OYZ_light_aircraft_organization = {
+	name = POL_pws_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_POL_pws
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OYZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 92
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				92 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OBB_medium_aircraft_organization = {
+	name = POL_pzl_organization
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_POL_pzl
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OBB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 88
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				88 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+OYO_infantry_equipment_organization = {
+	name = POL_fb_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_POL_fb
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OYO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 90
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				90 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OIO_artillery_organization = {
+	name = OIO_artillery_manufacturer # POL_smpa_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_POL_smpa
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = OIO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 10
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				10 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OIO_motorized_mechanized_organization = {
+	name = POL_lrl_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_POL_lrl
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OIO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 10
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				10 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

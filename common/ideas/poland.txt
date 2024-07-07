@@ -1,0 +1,301 @@
+ideas = {
+	tank_manufacturer = {
+		designer = yes
+
+		# Original is generic tank_manufacturer, but MIO version is Infantry Tanks, so using that one here.
+		OIO_infantry_tank_manufacturer = {
+			name = POL_pzinz_organization
+			picture = POL_pzinz
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+				OR = {
+					original_tag = OIO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 10
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					10 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { infantry_tank_manufacturer }
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		# Original is generic naval_manufacturer, but MIO version is Task Force, so using that one here.
+		BOF_pacific_fleet_naval_manufacturer = {
+			name = POL_stocznia_gdynia
+			picture = POL_stocznia_gdynia
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = BOF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 807
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					807 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		OYZ_light_aircraft_manufacturer = {
+			name = POL_pws_organization
+			picture = POL_pws
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OYZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 92
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					92 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+
+		OBB_medium_aircraft_manufacturer = {
+			name = POL_pzl_organization
+			picture = POL_pzl
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OBB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 88
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					88 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		OYO_infantry_equipment_manufacturer = {
+			name = POL_fb_organization
+			picture = POL_fb
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = OYO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 90
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					90 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+	
+		OIO_artillery_manufacturer = {
+			# name = POL_smpa
+			picture = POL_smpa
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = OIO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 10
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					10 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		OIO_motorized_equipment_manufacturer = {
+			name = POL_lrl_organization
+			picture = POL_lrl
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = OIO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 10
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					10 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		OIO_industrial_concern = {
+			name = POL_pkp
+			picture = POL_pkp
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = OIO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 10
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					10 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		OIO_electronics_concern = {
+			name = POL_ava
+			picture = POL_ava
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = OIO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 10
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					10 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+	}
+}

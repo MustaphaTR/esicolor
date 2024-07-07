@@ -1,0 +1,40 @@
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OII_light_aircraft_organization = {
+	name = LIT_anbo_organization
+	include = generic_light_aircraft_organization
+	#icon = GFX_idea_generic_air_manufacturer_3
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OII
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 11
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				11 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
