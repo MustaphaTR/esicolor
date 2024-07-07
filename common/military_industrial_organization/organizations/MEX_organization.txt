@@ -1,0 +1,152 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+# Couldn't find info, plus gneeric trait.
+#MEX_tank_organization = {
+#	name = MEX_tga_organization
+#	include = esicolor_generic_tank_organization
+#	icon = GFX_idea_MEX_tga
+#}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+AFY_battle_line_ship_organization = {
+	name = MEX_astimar_gulf_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_MEX_astimar_gulf
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = AFY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 479
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				479 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ABS_task_force_ship_organization = {
+	name = MEX_astimar_pacific_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_MEX_astimar_pacific
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = ABS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 485
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				485 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+ZFF_light_aircraft_organization = {
+	name = MEX_tnca_organization
+	include = esicolor_generic_light_aircraft_organization # generic_general_aircraft_organization, we don't use this one in ESI, No-AAT version is Light Aircraft Manufacturer, use that one.
+	icon = GFX_idea_MEX_tnca
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ZFF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 277
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				277 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+# Couldn't find info on either.
+#MEX_infantry_equipment_organization = {
+#	name = MEX_fabrica_nacional_armas_organization
+#	include = esicolor_generic_infantry_equipment_organization
+#	icon = GFX_idea_generic_infantry_equipment_manufacturer_3
+#}
+#
+#MEX_artillery_organization = {
+#	name = comesa_organization
+#	include = esicolor_generic_artillery_organization
+#	icon = GFX_idea_generic_artillery_manufacturer_1
+#}

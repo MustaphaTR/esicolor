@@ -1,0 +1,289 @@
+ideas = {
+	tank_manufacturer = { 
+		designer = yes
+
+		# Couldn't find info, plus gneeric trait.
+		#MEX_tga = {
+		#	cost = 75
+		#	
+		#	allowed = {
+		#		original_tag = MEX
+		#		has_dlc = "Man the Guns"
+		#	}
+		#	
+		#	available = {
+		#		has_completed_focus = MEX_focus_tank_workshops
+		#	}
+		#	
+		#	research_bonus = {
+		#		armor = 0.15
+		#	}
+		#	
+		#	traits = { tank_manufacturer }
+		#}
+	}
+
+	naval_manufacturer = { 
+		designer = yes
+
+		AFY_atlantic_fleet_naval_manufacturer = {
+			name = MEX_astimar_gulf
+			picture = MEX_astimar_gulf
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = AFY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 479
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					479 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { atlantic_fleet_naval_manufacturer }
+		}
+
+		ABS_pacific_fleet_naval_manufacturer = {
+			name = MEX_astimar_pacific
+			picture = MEX_astimar_pacific
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ABS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 485
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					485 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+	}
+	
+	aircraft_manufacturer = {
+		designer = yes
+
+		ZFF_light_aircraft_manufacturer = {
+			name = MEX_tnca
+			picture = MEX_tnca
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ZFF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 277
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					277 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		# Couldn't find info on either.
+		#MEX_infantry_equipment_manufacturer = {
+		#	name = fabrica_nacional_armas
+		#	picture = generic_infantry_equipment_manufacturer_3
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+		#		OR = {
+		#			original_tag = ZFF
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 277
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			277 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		infantry_weapons = 0.15
+		#	}
+		#	traits = { infantry_equipment_manufacturer }
+		#}
+		#
+		#MEX_artillery_manufacturer = {
+		#	name = comesa
+		#	picture = generic_artillery_manufacturer_1
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = artillery_manufacturer_disabled }
+		#		OR = {
+		#			original_tag = ZFF
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 277
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			277 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		artillery = 0.15
+		#	}
+		#	traits = { artillery_manufacturer }
+		#}
+	}
+
+	industrial_concern = {
+		ZFF_industrial_concern = {
+			name = MEX_banco_de_mexico
+			picture = MEX_banco_de_mexico
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = ZFF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 277
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					277 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		ZFF_electronics_concern = {
+			name = MEX_escuela_de_ingeneria_electrica
+			picture = MEX_escuela_de_ingeneria_electrica
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = ZFF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 277
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					277 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
+		ZFF_refinery_concern = {
+			name = MEX_pemex
+			picture = MEX_pemex
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = refinery_concern_disabled }
+				OR = {
+					original_tag = ZFF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 277
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					277 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+	}
+}
