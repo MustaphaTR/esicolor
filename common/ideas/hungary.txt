@@ -1,4 +1,43 @@
 ideas = {
+	country = {
+		# These are checked in manpower and economic idea files, which i don't want to override. So keeping them here.
+		HUN_treaty_of_triannon = {
+			allowed = {
+				original_tag = HUN
+				always = no
+			}
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.5
+			}
+		}
+
+		HUN_treaty_of_triannon_aat = {
+			name = HUN_treaty_of_triannon
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = HUN
+				always = no
+			}
+			available = {
+				has_war = no
+			}
+
+			rule = {
+  				can_access_market = no
+  			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.5
+			}
+		}
+	}
+
 	naval_manufacturer = {
 		designer = yes
 
