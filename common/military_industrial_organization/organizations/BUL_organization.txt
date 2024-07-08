@@ -1,3 +1,44 @@
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+ZII_task_force_ship_organization = {
+	name = BUL_varna_naval_dockyard_organization
+	include = esicolor_generic_task_force_ship_organization
+	# icon = GFX_idea_generic_naval_manufacturer_2
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = ZII
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 211
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				211 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
 ###########################
 
 ###  #    ##  #  # ###  ## 

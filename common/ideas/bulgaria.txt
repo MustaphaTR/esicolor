@@ -45,6 +45,41 @@ ideas = {
 		}
 	}
 
+	naval_manufacturer = { 
+		designer = yes
+
+		ZII_coastal_defence_naval_manufacturer = {
+			name = BUL_varna_naval_dockyard
+			picture = sasebo_naval_arsenal # generic_naval_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = coastal_defence_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ZII
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 211
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					211 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { coastal_defence_naval_manufacturer }
+		}
+	}
+
 	aircraft_manufacturer = {
 		designer = yes
 

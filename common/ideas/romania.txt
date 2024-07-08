@@ -1,4 +1,102 @@
 ideas = {
+	naval_manufacturer = {
+		designer = yes
+
+		# These all use generic naval_manufacturer traits in basegame, and while MIO versions have proper traits, i used different ones here that i saw more fitting.
+		OAL_battlefleet_designer = {
+			name = constanta_shipyard
+			picture = kure_naval_arsenal # generic_naval_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = battlefleet_designer_disabled }
+				OR = {
+					original_tag = OAL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 46
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					46 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { battlefleet_designer }
+		}
+
+		OFY_coastal_defence_naval_manufacturer = {
+			name = ROM_coastal_defense_navy_designer
+			picture = generic_coastal_navy
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = coastal_defence_naval_manufacturer_disabled }
+				OR = {
+					original_tag = OFY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 79
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					79 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { coastal_defence_naval_manufacturer }
+		}
+
+		OAL_black_sea_naval_manufacturer = {
+			name = ROM_black_sea_dominance_designer
+			picture = generic_sea_focused_navy
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = black_sea_naval_manufacturer_disabled }
+				OR = {
+					original_tag = OAL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 46
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					46 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { black_sea_naval_manufacturer }
+		}
+	}
+
 	aircraft_manufacturer = {
 		designer = yes
 

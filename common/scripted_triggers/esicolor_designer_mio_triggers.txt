@@ -88,6 +88,8 @@ has_custom_pacific_fleet_naval_manufacturer = {
 		AND = {
 			has_dlc = "Arms Against Tyranny"
 			OR = {
+				original_tag = OAL
+				original_tag = ZII
 				original_tag = ZFY
 				original_tag = EAF
 				original_tag = LIE
@@ -109,18 +111,19 @@ has_custom_atlantic_fleet_naval_manufacturer = {
 		original_tag = AZL
 		original_tag = AFY
 		AND = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+			original_tag = ZFB
+		}
+		AND = {
 			has_dlc = "Arms Against Tyranny"
 			OR = {
 				original_tag = OIS
+				original_tag = OAL
 				original_tag = OAF
 				original_tag = IYS
 				original_tag = SZY
 				original_tag = FEL
 			}
-		}
-		AND = {
-			NOT = { has_dlc = "Arms Against Tyranny" }
-			original_tag = ZFB
 		}
 	}
 }
@@ -137,6 +140,10 @@ has_custom_mediterranean_naval_manufacturer = {
 has_custom_black_sea_naval_manufacturer = {
 	OR = {
 		original_tag = IYF
+		AND = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+			original_tag = OAL
+		}
 	}
 }
 
@@ -144,6 +151,7 @@ has_custom_black_sea_naval_manufacturer = {
 has_custom_battlefleet_designer = {
 	OR = {
 		original_tag = OIS
+		original_tag = OAL
 		original_tag = IYS
 		original_tag = SZY
 		original_tag = FEL
@@ -168,7 +176,9 @@ has_custom_repair_and_refurbishment_plant = {
 has_custom_coastal_defence_naval_manufacturer = {
 	OR = {
 		original_tag = OAF
+		original_tag = OFY
 		original_tag = IEE
+		original_tag = ZII
 		original_tag = ZFY
 		original_tag = EAF
 		original_tag = ELZ
@@ -208,6 +218,7 @@ has_custom_raiding_fleet_naval_manufacturer = {
 			has_dlc = "Arms Against Tyranny"
 			OR = {
 				original_tag = OAF
+				original_tag = OFY
 				original_tag = IEE
 				original_tag = SZB
 			}

@@ -70,6 +70,109 @@ OAL_naval_aircraft_organization = {
 	}
 }
 
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+OAL_task_force_ship_organization = {
+	name = ROM_constanta_shipyard_organization
+	include = esicolor_generic_task_force_ship_organization
+	# icon = GFX_idea_generic_naval_manufacturer_2
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OAL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 46
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				46 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OAL_battle_line_ship_organization = {
+	name = ROM_Braila_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_generic_sea_focused_navy
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OAL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 46
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				46 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OFY_raider_ship_organization = {
+	name = ROM_galati_shipyard_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_generic_coastal_navy
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OFY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 79
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				79 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
 ################################### 
 
 #   #  ##  ### ### ###  ### ### #   
