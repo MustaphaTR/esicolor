@@ -49,16 +49,24 @@ on_actions = {
 				adjust_state_name_227 = yes
 			}
 			else_if = {
+				limit = { FROM.FROM = { state = 268 } }
+				adjust_state_name_268 = yes
+			}
+			else_if = {
+				limit = { FROM.FROM = { state = 296 } }
+				adjust_state_name_296 = yes
+			}
+			else_if = {
 				limit = { FROM.FROM = { state = 545 } }
 				adjust_state_name_545 = yes
 			}
 			else_if = {
-				limit = { FROM.FROM = { state = 742 } }
-				adjust_state_name_742 = yes
+				limit = { FROM.FROM = { state = 732 } }
+				adjust_state_name_732 = yes
 			}
 			else_if = {
-				limit = { FROM.FROM = { state = 778 } }
-				adjust_state_name_778 = yes
+				limit = { FROM.FROM = { state = 742 } }
+				adjust_state_name_742 = yes
 			}
 			else_if = {
 				limit = { FROM.FROM = { state = 828 } }
@@ -84,16 +92,24 @@ on_actions = {
 				adjust_state_name_227 = yes
 			}
 			else_if = {
+				limit = { owns_state = 268 }
+				adjust_state_name_268 = yes
+			}
+			else_if = {
+				limit = { owns_state = 296 }
+				adjust_state_name_296 = yes
+			}
+			else_if = {
 				limit = { owns_state = 545 }
 				adjust_state_name_545 = yes
 			}
 			else_if = {
-				limit = { owns_state = 742 }
-				adjust_state_name_742 = yes
+				limit = { owns_state = 732 }
+				adjust_state_name_732 = yes
 			}
 			else_if = {
-				limit = { owns_state = 778 }
-				adjust_state_name_778 = yes
+				limit = { owns_state = 742 }
+				adjust_state_name_742 = yes
 			}
 			else_if = {
 				limit = { owns_state = 828 }

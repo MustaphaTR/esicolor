@@ -1,0 +1,38 @@
+characters={
+	ESO_ihsan_nuri = {
+		instance = {
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+			}
+			name=ESO_ihsan_nuri
+			portraits={
+				civilian={
+					large=GFX_portrait_kur_ihsan_nuri
+				}
+			}
+			country_leader={
+				traits={ experienced_insurgent }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Battle for the Bosporus" }
+			}
+			name=ESO_ihsan_nuri
+			portraits={
+				civilian={
+					large=GFX_Portrait_Europe_Generic_land_5
+				}
+			}
+			country_leader={
+				traits={ experienced_insurgent }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

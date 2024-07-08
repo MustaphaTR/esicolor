@@ -2,9 +2,11 @@ adjust_state_names = {
 	adjust_state_name_195 = yes
 	adjust_state_name_217 = yes
 	adjust_state_name_227 = yes
+	adjust_state_name_268 = yes
+	adjust_state_name_296 = yes
 	adjust_state_name_545 = yes
+	adjust_state_name_732 = yes
 	adjust_state_name_742 = yes
-	adjust_state_name_778 = yes
 	adjust_state_name_828 = yes
 }
 
@@ -74,6 +76,28 @@ adjust_state_name_227 = {
 	}
 }
 
+adjust_state_name_268 = {
+	if = {
+		limit = { 268 = { owner = { has_government = democratic } } }
+
+		268 = { set_state_name = STATE_268 }
+	}
+	else = {
+		268 = { set_state_name = ZLB }
+	}
+}
+
+adjust_state_name_296 = {
+	if = {
+		limit = { 296 = { owner = { has_government = neutrality } } }
+
+		296 = { set_state_name = STATE_296 }
+	}
+	else = {
+		296 = { set_state_name = ZYL }
+	}
+}
+
 adjust_state_name_545 = {
 	if = {
 		limit = { 545 = { owner = { has_government = fascism } } }
@@ -81,7 +105,24 @@ adjust_state_name_545 = {
 		545 = { set_state_name = STATE_545 }
 	}
 	else = {
-		545 = { set_state_name = ZIM }
+		545 = { set_state_name = SAS }
+	}
+}
+
+adjust_state_name_732 = {
+	if = {
+		limit = { 732 = { owner = { has_government = communism } } }
+
+		set_province_name = {
+			id = 12583
+			name = VICTORY_POINTS_12583
+		}
+	}
+	else = {
+		set_province_name = {
+			id = 12583
+			name = SOV_Bishkek
+		}
 	}
 }
 
@@ -101,17 +142,6 @@ adjust_state_name_742 = {
 			name = SOV_Dushanbe
 		}
 		742 = { set_state_name = SOV_Dushanbe }
-	}
-}
-
-adjust_state_name_778 = {
-	if = {
-		limit = { 778 = { owner = { has_government = democratic } } }
-
-		778 = { set_state_name = FFB_democratic }
-	}
-	else = {
-		778 = { set_state_name = STATE_778 }
 	}
 }
 

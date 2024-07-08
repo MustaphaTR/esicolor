@@ -1,0 +1,38 @@
+characters={
+	IBZ_george_mercouris = {
+		instance = {
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+			}
+			name=GRE_george_mercouris
+			portraits={
+				civilian={
+					large=GFX_portrait_gre_george_mercouris
+				}
+			}
+			country_leader={
+				traits={ polemarch likes_turkey }
+				ideology=gen_nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Battle for the Bosporus" }
+			}
+			name=GRE_george_mercouris
+			portraits={
+				civilian={
+					large=GFX_Portrait_Europe_Generic_4
+				}
+			}
+			country_leader={
+				traits={ polemarch likes_turkey }
+				ideology=gen_nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
