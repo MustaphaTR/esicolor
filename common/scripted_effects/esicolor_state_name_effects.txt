@@ -2,13 +2,16 @@ adjust_state_names = {
 	adjust_state_name_195 = yes
 	adjust_state_name_217 = yes
 	adjust_state_name_227 = yes
+	adjust_state_name_228 = yes
 	adjust_state_name_268 = yes
 	adjust_state_name_296 = yes
+	adjust_state_name_329 = yes
 	adjust_state_name_545 = yes
 	adjust_state_name_732 = yes
 	adjust_state_name_742 = yes
 	adjust_state_name_828 = yes
 	adjust_state_name_829 = yes
+	adjust_state_name_833 = yes
 }
 
 adjust_state_names_on_state_core_changed = {
@@ -25,12 +28,20 @@ adjust_state_names_on_state_core_changed = {
 		adjust_state_name_227 = yes
 	}
 	else_if = {
+		limit = { FROM.FROM = { state = 228 } }
+		adjust_state_name_228 = yes
+	}
+	else_if = {
 		limit = { FROM.FROM = { state = 268 } }
 		adjust_state_name_268 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 296 } }
 		adjust_state_name_296 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 329 } }
+		adjust_state_name_329 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 545 } }
@@ -52,6 +63,10 @@ adjust_state_names_on_state_core_changed = {
 		limit = { FROM.FROM = { state = 829 } }
 		adjust_state_name_828 = yes
 	}
+	else_if = {
+		limit = { FROM.FROM = { state = 833 } }
+		adjust_state_name_833 = yes
+	}
 }
 
 adjust_state_names_on_ruling_party_change = {
@@ -68,12 +83,20 @@ adjust_state_names_on_ruling_party_change = {
 		adjust_state_name_227 = yes
 	}
 	else_if = {
+		limit = { owns_state = 228 }
+		adjust_state_name_228 = yes
+	}
+	else_if = {
 		limit = { owns_state = 268 }
 		adjust_state_name_268 = yes
 	}
 	else_if = {
 		limit = { owns_state = 296 }
 		adjust_state_name_296 = yes
+	}
+	else_if = {
+		limit = { owns_state = 329 }
+		adjust_state_name_329 = yes
 	}
 	else_if = {
 		limit = { owns_state = 545 }
@@ -94,6 +117,10 @@ adjust_state_names_on_ruling_party_change = {
 	else_if = {
 		limit = { owns_state = 829 }
 		adjust_state_name_829 = yes
+	}
+	else_if = {
+		limit = { owns_state = 833 }
+		adjust_state_name_833 = yes
 	}
 }
 
@@ -163,6 +190,25 @@ adjust_state_name_227 = {
 	}
 }
 
+adjust_state_name_228 = {
+	if = {
+		limit = { 228 = { owner = { has_government = communism } } }
+
+		set_province_name = {
+			id = 9461
+			name = VICTORY_POINTS_9461
+		}
+		228 = { set_state_name = STATE_228 }
+	}
+	else = {
+		set_province_name = {
+			id = 9461
+			name = SOV_Luhansk
+		}
+		228 = { set_state_name = SOV_Luhansk }
+	}
+}
+
 adjust_state_name_268 = {
 	if = {
 		limit = { 268 = { owner = { has_government = democratic } } }
@@ -182,6 +228,32 @@ adjust_state_name_296 = {
 	}
 	else = {
 		296 = { set_state_name = ZYL }
+	}
+}
+
+adjust_state_name_329 = {
+	if = {
+		limit = {
+			329 = {
+				owner = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 10627
+			name = VICTORY_POINTS_10627
+		}
+	}
+	else = {
+		set_province_name = {
+			id = 10627
+			name = SOV_Khem-Beldir
+		}
 	}
 }
 
@@ -282,5 +354,31 @@ adjust_state_name_829 = {
 			name = SOV_Yekaterinograd
 		}
 		829 = { set_state_name = SOV_Yekaterinograd }
+	}
+}
+
+adjust_state_name_833 = {
+	if = {
+		limit = {
+			833 = {
+				owner = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 9402
+			name = VICTORY_POINTS_9402
+		}
+	}
+	else = {
+		set_province_name = {
+			id = 9402
+			name = SOV_Krasnokokshaysk
+		}
 	}
 }
