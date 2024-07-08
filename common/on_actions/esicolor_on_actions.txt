@@ -36,42 +36,7 @@ on_actions = {
 		effect = {
 			log = "[GetDateText] MustaphaTR's Every State Independent main on_state_control_changed begin"
 
-			if = {
-				limit = { FROM.FROM = { state = 195 } }
-				adjust_state_name_195 = yes
-			}
-			else_if = {
-				limit = { FROM.FROM = { state = 217 } }
-				adjust_state_name_217 = yes
-			}
-			else_if = {
-				limit = { FROM.FROM = { state = 227 } }
-				adjust_state_name_227 = yes
-			}
-			else_if = {
-				limit = { FROM.FROM = { state = 268 } }
-				adjust_state_name_268 = yes
-			}
-			else_if = {
-				limit = { FROM.FROM = { state = 296 } }
-				adjust_state_name_296 = yes
-			}
-			else_if = {
-				limit = { FROM.FROM = { state = 545 } }
-				adjust_state_name_545 = yes
-			}
-			else_if = {
-				limit = { FROM.FROM = { state = 732 } }
-				adjust_state_name_732 = yes
-			}
-			else_if = {
-				limit = { FROM.FROM = { state = 742 } }
-				adjust_state_name_742 = yes
-			}
-			else_if = {
-				limit = { FROM.FROM = { state = 828 } }
-				adjust_state_name_828 = yes
-			}
+			adjust_state_names_on_state_core_changed = yes
 		}
 	}
 
@@ -79,42 +44,7 @@ on_actions = {
 		effect = {
 			log = "[GetDateText] MustaphaTR's Every State Independent main on_ruling_party_change begin"
 
-			if = {
-				limit = { owns_state = 195 }
-				adjust_state_name_195 = yes
-			}
-			else_if = {
-				limit = { owns_state = 217 }
-				adjust_state_name_217 = yes
-			}
-			else_if = {
-				limit = { owns_state = 227 }
-				adjust_state_name_227 = yes
-			}
-			else_if = {
-				limit = { owns_state = 268 }
-				adjust_state_name_268 = yes
-			}
-			else_if = {
-				limit = { owns_state = 296 }
-				adjust_state_name_296 = yes
-			}
-			else_if = {
-				limit = { owns_state = 545 }
-				adjust_state_name_545 = yes
-			}
-			else_if = {
-				limit = { owns_state = 732 }
-				adjust_state_name_732 = yes
-			}
-			else_if = {
-				limit = { owns_state = 742 }
-				adjust_state_name_742 = yes
-			}
-			else_if = {
-				limit = { owns_state = 828 }
-				adjust_state_name_828 = yes
-			}
+			adjust_state_names_on_ruling_party_change = yes
 
 			if = {
 				limit = { has_global_flag = leader_traits_disabled }

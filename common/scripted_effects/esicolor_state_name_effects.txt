@@ -8,6 +8,93 @@ adjust_state_names = {
 	adjust_state_name_732 = yes
 	adjust_state_name_742 = yes
 	adjust_state_name_828 = yes
+	adjust_state_name_829 = yes
+}
+
+adjust_state_names_on_state_core_changed = {
+	if = {
+		limit = { FROM.FROM = { state = 195 } }
+		adjust_state_name_195 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 217 } }
+		adjust_state_name_217 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 227 } }
+		adjust_state_name_227 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 268 } }
+		adjust_state_name_268 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 296 } }
+		adjust_state_name_296 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 545 } }
+		adjust_state_name_545 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 732 } }
+		adjust_state_name_732 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 742 } }
+		adjust_state_name_742 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 828 } }
+		adjust_state_name_828 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 829 } }
+		adjust_state_name_828 = yes
+	}
+}
+
+adjust_state_names_on_ruling_party_change = {
+	if = {
+		limit = { owns_state = 195 }
+		adjust_state_name_195 = yes
+	}
+	else_if = {
+		limit = { owns_state = 217 }
+		adjust_state_name_217 = yes
+	}
+	else_if = {
+		limit = { owns_state = 227 }
+		adjust_state_name_227 = yes
+	}
+	else_if = {
+		limit = { owns_state = 268 }
+		adjust_state_name_268 = yes
+	}
+	else_if = {
+		limit = { owns_state = 296 }
+		adjust_state_name_296 = yes
+	}
+	else_if = {
+		limit = { owns_state = 545 }
+		adjust_state_name_545 = yes
+	}
+	else_if = {
+		limit = { owns_state = 732 }
+		adjust_state_name_732 = yes
+	}
+	else_if = {
+		limit = { owns_state = 742 }
+		adjust_state_name_742 = yes
+	}
+	else_if = {
+		limit = { owns_state = 828 }
+		adjust_state_name_828 = yes
+	}
+	else_if = {
+		limit = { owns_state = 829 }
+		adjust_state_name_829 = yes
+	}
 }
 
 adjust_state_name_195 = {
@@ -159,5 +246,41 @@ adjust_state_name_828 = {
 			id = 9628
 			name = SOV_Vladikavkaz
 		}
+	}
+}
+
+adjust_state_name_829 = {
+	if = {
+		limit = {
+			829 = {
+				owner = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 11523
+			name = VICTORY_POINTS_11523
+		}
+		set_province_name = {
+			id = 9432
+			name = VICTORY_POINTS_9432
+		}
+		829 = { set_state_name = STATE_829 }
+	}
+	else = {
+		set_province_name = {
+			id = 11523
+			name = SOV_Kosakenstadt
+		}
+		set_province_name = {
+			id = 9432
+			name = SOV_Yekaterinograd
+		}
+		829 = { set_state_name = SOV_Yekaterinograd }
 	}
 }
