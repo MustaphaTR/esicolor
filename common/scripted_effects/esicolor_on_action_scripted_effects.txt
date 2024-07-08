@@ -100,6 +100,53 @@ handle_special_generals = {
 			}
 		}
 	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = FEI_themistoklis_sofoulis ruling_only = yes }
+
+				NOT = { has_global_flag = zervas_created }
+			}
+		}
+
+		set_global_flag = zervas_created
+		set_character_name = GRE_napoleon_zervas
+
+		if = {
+			limit = { has_dlc = "Battle for the Bosporus" }
+
+			set_portraits = {
+				civilian = {
+					large=GFX_portrait_GRE_napoleon_zervas
+					small=GFX_idea_gre_napoleon_zervas
+				}
+				army = {
+					large=GFX_portrait_GRE_napoleon_zervas
+					small=GFX_idea_gre_napoleon_zervas
+				}
+				navy = {
+					large=GFX_portrait_GRE_napoleon_zervas
+					small=GFX_idea_gre_napoleon_zervas
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large=GFX_Portrait_South_America_Generic_land_9
+					small=GFX_Portrait_South_America_Generic_land_9_small
+				}
+				army = {
+					large=GFX_Portrait_South_America_Generic_land_9
+					small=GFX_Portrait_South_America_Generic_land_9_small
+				}
+				navy = {
+					large=GFX_Portrait_South_America_Generic_land_9
+					small=GFX_Portrait_South_America_Generic_land_9_small
+				}
+			}
+		}
+	}
 }
 
 handle_special_admirals = {
