@@ -531,6 +531,38 @@ randomise_synthetic_refineries = {
 				instant_build = yes
 			}
 		}
+		
+		if = {
+			limit = { date > 1939.1.1 }
+
+			random_state = {
+				limit = { synthetic_refinery < 1 }
+
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { synthetic_refinery < 1 }
+
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = { synthetic_refinery < 1 }
+
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 }
 

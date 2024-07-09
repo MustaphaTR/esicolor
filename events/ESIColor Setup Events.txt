@@ -914,7 +914,14 @@ country_event = {
 			clear_synthetic_refineries = yes
 		}
 
-		custom_effect_tooltip = esicolor.16.c_tt
+		if = {
+			limit = { date > 1939.1.1 }
+
+			custom_effect_tooltip = esicolor.16.c_tt
+		}
+		else = {
+			custom_effect_tooltip = esicolor.16.c_tt2
+		}
 		randomise_synthetic_refineries = yes
 	}
 }
