@@ -1,12 +1,21 @@
 adjust_state_names = {
 	adjust_state_name_195 = yes
 	adjust_state_name_217 = yes
+	adjust_state_name_226 = yes
 	adjust_state_name_227 = yes
 	adjust_state_name_228 = yes
+	adjust_state_name_234 = yes
+	adjust_state_name_247 = yes
+	adjust_state_name_250 = yes
+	adjust_state_name_251 = yes
+	adjust_state_name_252 = yes
 	adjust_state_name_268 = yes
 	adjust_state_name_296 = yes
 	adjust_state_name_329 = yes
+	adjust_state_name_330 = yes
+	adjust_state_name_400 = yes
 	adjust_state_name_545 = yes
+	adjust_state_name_653 = yes
 	adjust_state_name_732 = yes
 	adjust_state_name_742 = yes
 	adjust_state_name_828 = yes
@@ -24,12 +33,36 @@ adjust_state_names_on_state_core_changed = {
 		adjust_state_name_217 = yes
 	}
 	else_if = {
+		limit = { FROM.FROM = { state = 226 } }
+		adjust_state_name_226 = yes
+	}
+	else_if = {
 		limit = { FROM.FROM = { state = 227 } }
 		adjust_state_name_227 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 228 } }
 		adjust_state_name_228 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 234 } }
+		adjust_state_name_234 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 247 } }
+		adjust_state_name_247 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 250 } }
+		adjust_state_name_250 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 252 } }
+		adjust_state_name_252 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 251 } }
+		adjust_state_name_251 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 268 } }
@@ -44,8 +77,20 @@ adjust_state_names_on_state_core_changed = {
 		adjust_state_name_329 = yes
 	}
 	else_if = {
+		limit = { FROM.FROM = { state = 330 } }
+		adjust_state_name_330 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 400 } }
+		adjust_state_name_400 = yes
+	}
+	else_if = {
 		limit = { FROM.FROM = { state = 545 } }
 		adjust_state_name_545 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 653 } }
+		adjust_state_name_653 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 732 } }
@@ -79,12 +124,36 @@ adjust_state_names_on_ruling_party_change = {
 		adjust_state_name_217 = yes
 	}
 	else_if = {
+		limit = { owns_state = 226 }
+		adjust_state_name_226 = yes
+	}
+	else_if = {
 		limit = { owns_state = 227 }
 		adjust_state_name_227 = yes
 	}
 	else_if = {
 		limit = { owns_state = 228 }
 		adjust_state_name_228 = yes
+	}
+	else_if = {
+		limit = { owns_state = 234 }
+		adjust_state_name_234 = yes
+	}
+	else_if = {
+		limit = { owns_state = 247 }
+		adjust_state_name_247 = yes
+	}
+	else_if = {
+		limit = { owns_state = 250 }
+		adjust_state_name_250 = yes
+	}
+	else_if = {
+		limit = { owns_state = 251 }
+		adjust_state_name_251 = yes
+	}
+	else_if = {
+		limit = { owns_state = 252 }
+		adjust_state_name_252 = yes
 	}
 	else_if = {
 		limit = { owns_state = 268 }
@@ -99,8 +168,20 @@ adjust_state_names_on_ruling_party_change = {
 		adjust_state_name_329 = yes
 	}
 	else_if = {
+		limit = { owns_state = 330 }
+		adjust_state_name_330 = yes
+	}
+	else_if = {
+		limit = { owns_state = 400 }
+		adjust_state_name_400 = yes
+	}
+	else_if = {
 		limit = { owns_state = 545 }
 		adjust_state_name_545 = yes
+	}
+	else_if = {
+		limit = { owns_state = 653 }
+		adjust_state_name_653 = yes
 	}
 	else_if = {
 		limit = { owns_state = 732 }
@@ -171,6 +252,25 @@ adjust_state_name_217 = {
 	}
 }
 
+adjust_state_name_226 = {
+	if = {
+		limit = { 226 = { owner = { has_government = communism } } }
+
+		set_province_name = {
+			id = 11437
+			name = VICTORY_POINTS_11437
+		}
+		226 = { set_state_name = STATE_226 }
+	}
+	else = {
+		set_province_name = {
+			id = 11437
+			name = SOV_Dnipro
+		}
+		226 = { set_state_name = SOV_Dnipro }
+	}
+}
+
 adjust_state_name_227 = {
 	if = {
 		limit = { 227 = { owner = { has_government = communism } } }
@@ -206,6 +306,119 @@ adjust_state_name_228 = {
 			name = SOV_Luhansk
 		}
 		228 = { set_state_name = SOV_Luhansk }
+	}
+}
+
+adjust_state_name_234 = {
+	if = {
+		limit = {
+			234 = {
+				owner = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 3734
+			name = VICTORY_POINTS_3734
+		}
+		234 = { set_state_name = STATE_234 }
+	}
+	else = {
+		set_province_name = {
+			id = 3734
+			name = SOV_Yekaterinodar
+		}
+		234 = { set_state_name = SOV_Yekaterinodar }
+	}
+}
+
+adjust_state_name_247 = {
+	if = {
+		limit = { 247 = { owner = { has_government = communism } } }
+
+		set_province_name = {
+			id = 6245
+			name = VICTORY_POINTS_6245
+		}
+		247 = { set_state_name = STATE_247 }
+	}
+	else = {
+		set_province_name = {
+			id = 6245
+			name = SOV_Tver
+		}
+		247 = { set_state_name = SOV_Tver }
+	}
+}
+
+adjust_state_name_250 = {
+	if = {
+		limit = {
+			250 = {
+				owner = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 392
+			name = VICTORY_POINTS_392
+		}
+		250 = { set_state_name = STATE_250 }
+	}
+	else = {
+		set_province_name = {
+			id = 392
+			name = SOV_Simbirsk
+		}
+		250 = { set_state_name = SOV_Simbirsk }
+	}
+}
+
+adjust_state_name_251 = {
+	if = {
+		limit = { 251 = { owner = { has_government = communism } } }
+
+		set_province_name = {
+			id = 11225
+			name = VICTORY_POINTS_11225
+		}
+		251 = { set_state_name = STATE_251 }
+	}
+	else = {
+		set_province_name = {
+			id = 11225
+			name = SOV_Samara
+		}
+		251 = { set_state_name = SOV_Samara }
+	}
+}
+
+adjust_state_name_252 = {
+	if = {
+		limit = { 252 = { owner = { has_government = communism } } }
+
+		set_province_name = {
+			id = 11375
+			name = VICTORY_POINTS_11375
+		}
+		252 = { set_state_name = STATE_252 }
+	}
+	else = {
+		set_province_name = {
+			id = 11375
+			name = SOV_Nizhny_Novgorod
+		}
+		252 = { set_state_name = SOV_Nizhny_Novgorod }
 	}
 }
 
@@ -257,6 +470,62 @@ adjust_state_name_329 = {
 	}
 }
 
+adjust_state_name_330 = {
+	if = {
+		limit = {
+			330 = {
+				owner = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 4801
+			name = VICTORY_POINTS_4801
+		}
+		330 = { set_state_name = STATE_330 }
+	}
+	else = {
+		set_province_name = {
+			id = 4801
+			name = EEO_neutrality
+		}
+		330 = { set_state_name = EEO_neutrality }
+	}
+}
+
+adjust_state_name_400 = {
+	if = {
+		limit = {
+			400 = {
+				owner = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 6124
+			name = VICTORY_POINTS_6124
+		}
+		400 = { set_state_name = STATE_400 }
+	}
+	else = {
+		set_province_name = {
+			id = 6124
+			name = SOV_Vyatka
+		}
+		400 = { set_state_name = SOV_Vyatka }
+	}
+}
+
 adjust_state_name_545 = {
 	if = {
 		limit = { 545 = { owner = { has_government = fascism } } }
@@ -265,6 +534,25 @@ adjust_state_name_545 = {
 	}
 	else = {
 		545 = { set_state_name = SAS }
+	}
+}
+
+adjust_state_name_653 = {
+	if = {
+		limit = { 653 = { owner = { has_government = communism } } }
+
+		set_province_name = {
+			id = 1821
+			name = VICTORY_POINTS_1821
+		}
+		653 = { set_state_name = STATE_653 }
+	}
+	else = {
+		set_province_name = {
+			id = 1821
+			name = SOV_Yekaterinburg
+		}
+		653 = { set_state_name = SOV_Yekaterinburg }
 	}
 }
 
