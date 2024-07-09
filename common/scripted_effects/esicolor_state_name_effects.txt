@@ -226,7 +226,7 @@ adjust_state_name_195 = {
 
 adjust_state_name_217 = {
 	if = {
-		limit = { 217 = { owner = { has_government = communism } } }
+		limit = { 217 = { owner = { has_country_leader_ideology = stalinism } } }
 
 		set_province_name = {
 			id = 3529
@@ -235,7 +235,16 @@ adjust_state_name_217 = {
 		217 = { set_state_name = STATE_217 }
 	}
 	else_if = {
-		limit = { 217 = { owner = { has_government = democratic } } }
+		limit = {
+			217 = {
+				owner = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+					}
+				}
+			}
+		}
 
 		set_province_name = {
 			id = 3529
@@ -273,7 +282,7 @@ adjust_state_name_226 = {
 
 adjust_state_name_227 = {
 	if = {
-		limit = { 227 = { owner = { has_government = communism } } }
+		limit = { 227 = { owner = { has_country_leader_ideology = stalinism } } }
 
 		set_province_name = {
 			id = 6474
@@ -575,13 +584,22 @@ adjust_state_name_732 = {
 
 adjust_state_name_742 = {
 	if = {
-		limit = { 742 = { owner = { has_government = communism } } }
+		limit = { 742 = { owner = { has_country_leader_ideology = stalinism } } }
 
 		set_province_name = {
 			id = 1384
 			name = VICTORY_POINTS_1384
 		}
 		742 = { set_state_name = STATE_742 }
+	}
+	else_if = {
+		limit = { 742 = { owner = { has_government = communism } } }
+
+		set_province_name = {
+			id = 1384
+			name = SOV_Smirnovabad
+		}
+		742 = { set_state_name = SOV_Smirnovabad }
 	}
 	else = {
 		set_province_name = {
