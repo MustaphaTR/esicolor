@@ -19,21 +19,6 @@ make_default_ais_choose_path = {
 	}
 }
 
-randomise_default_ais = {
-	hidden_effect = {
-		every_country = {
-			limit = {
-				democratic < 0.26
-				fascism < 0.26
-				communism < 0.26
-				neutrality < 0.26
-			}
-
-			randomise_ideology_and_popularity = yes
-		}
-	}
-}
-
 set_ideologies_to_neutrality = {
 	set_politics = {
 		ruling_party = neutrality

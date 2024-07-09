@@ -13,9 +13,18 @@ on_actions = {
 				add_ideas = aggressive_ai
 
 				setup_generic_advisor_portraits = yes
-			}
+				
+				if = {
+					limit = {
+						democratic < 0.26
+						fascism < 0.26
+						communism < 0.26
+						neutrality < 0.26
+					}
 
-			randomise_default_ais = yes
+					randomise_ideology_and_popularity = yes
+				}
+			}
 
 			# Artillery designer for Swiss Plateau. There are two available, so select one to use.
 			random_list = {
