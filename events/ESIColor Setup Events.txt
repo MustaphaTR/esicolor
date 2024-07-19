@@ -1341,26 +1341,23 @@ country_event = {
 				limit = { has_dlc = "La Resistance" }
 
 				custom_effect_tooltip = esicolor.23.c_tt8
-
-				else = {
-					custom_effect_tooltip = esicolor.23.c_tt7
-				}
 			}
-
 			else = {
-				if = {
-					limit = { has_dlc = "La Resistance" }
-
-					custom_effect_tooltip = esicolor.23.c_tt2
-
-					else = {
-						custom_effect_tooltip = esicolor.23.c_tt1
-					}
-				}
-
-				custom_effect_tooltip = esicolor.23.c_tt4
-				custom_effect_tooltip = esicolor.23.c_tt6
+				custom_effect_tooltip = esicolor.23.c_tt7
 			}
+		}
+		else = {
+			if = {
+				limit = { has_dlc = "La Resistance" }
+
+				custom_effect_tooltip = esicolor.23.c_tt2
+			}
+			else = {
+				custom_effect_tooltip = esicolor.23.c_tt1
+			}
+
+			custom_effect_tooltip = esicolor.23.c_tt4
+			custom_effect_tooltip = esicolor.23.c_tt6
 		}
 		custom_effect_tooltip = esicolor.23.c_tt9
 		hidden_effect = {
@@ -1381,26 +1378,23 @@ country_event = {
 				limit = { has_dlc = "La Resistance" }
 
 				custom_effect_tooltip = esicolor.23.e_tt8
-
-				else = {
-					custom_effect_tooltip = esicolor.23.e_tt7
-				}
 			}
-
 			else = {
-				if = {
-					limit = { has_dlc = "La Resistance" }
-
-					custom_effect_tooltip = esicolor.23.e_tt2
-
-					else = {
-						custom_effect_tooltip = esicolor.23.e_tt1
-					}
-				}
-
-				custom_effect_tooltip = esicolor.23.e_tt4
-				custom_effect_tooltip = esicolor.23.e_tt6
+				custom_effect_tooltip = esicolor.23.e_tt7
 			}
+		}
+		else = {
+			if = {
+				limit = { has_dlc = "La Resistance" }
+
+				custom_effect_tooltip = esicolor.23.e_tt2
+			}
+			else = {
+				custom_effect_tooltip = esicolor.23.e_tt1
+			}
+
+			custom_effect_tooltip = esicolor.23.e_tt4
+			custom_effect_tooltip = esicolor.23.e_tt6
 		}
 		custom_effect_tooltip = esicolor.23.e_tt9
 		hidden_effect = {
