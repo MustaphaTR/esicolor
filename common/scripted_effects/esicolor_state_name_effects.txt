@@ -14,6 +14,7 @@ adjust_state_names = {
 	adjust_state_name_329 = yes
 	adjust_state_name_330 = yes
 	adjust_state_name_400 = yes
+	adjust_state_name_422 = yes
 	adjust_state_name_545 = yes
 	adjust_state_name_653 = yes
 	adjust_state_name_732 = yes
@@ -83,6 +84,10 @@ adjust_state_names_on_state_core_changed = {
 	else_if = {
 		limit = { FROM.FROM = { state = 400 } }
 		adjust_state_name_400 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 422 } }
+		adjust_state_name_422 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 545 } }
@@ -174,6 +179,10 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 400 }
 		adjust_state_name_400 = yes
+	}
+	if = {
+		limit = { owns_state = 422 }
+		adjust_state_name_422 = yes
 	}
 	if = {
 		limit = { owns_state = 545 }
@@ -532,6 +541,17 @@ adjust_state_name_400 = {
 			name = SOV_Vyatka
 		}
 		400 = { set_state_name = SOV_Vyatka }
+	}
+}
+
+adjust_state_name_422 = {
+	if = {
+		limit = { 422 = { owner = { has_government = neutrality } } }
+
+		422 = { set_state_name = STATE_422 }
+	}
+	else = {
+		422 = { set_state_name = AZZ }
 	}
 }
 
