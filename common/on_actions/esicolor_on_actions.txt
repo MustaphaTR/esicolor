@@ -7,12 +7,32 @@ on_actions = {
 				if = {
 					limit = { is_ai = no }
 
-					country_event = esicolor.1
+					randomised_preset_effects = yes # set min_max values to match the randomised preset so events work fine as well
+					default_preset_effects = yes
+					setup_other_setup_variables = yes
+					get_total_manpower = yes
+					set_variable = { global.og_per_state_pop = global.per_state_pop }
+					set_variable = { global.og_per_state_pop_half = global.per_state_pop }
+					divide_variable = { global.og_per_state_pop_half = 2 }
+					
+					if = {
+						limit = { NOT = { original_tag = OOO } }
+
+						set_variable = { esicolor_welcome_screen = 1 }
+						set_variable = { esicolor_setup_screen = 0 }
+					}
 				}
 
+				set_variable = { THIS.dynamic_pp_gain_modifier = 0 }
+				set_variable = { THIS.dynamic_civ_factory_use = 0 }
+
 				add_ideas = aggressive_ai
+				add_dynamic_modifier = {
+					modifier = esicolor_state_management_modifier
+				}
 
 				setup_generic_advisor_portraits = yes
+				recalculate_recruitment_costs = yes # It will be 0, but just in case i add starting generals anywhere.
 				
 				if = {
 					limit = {
@@ -24,6 +44,9 @@ on_actions = {
 
 					randomise_ideology_and_popularity = yes
 				}
+
+				set_variable = { THIS.original_capital = THIS.capital_scope }
+				set_variable = { THIS.original_ideology = THIS.current_party_ideology_group }
 			}
 
 			# Artillery designer for Swiss Plateau. There are two available, so select one to use.
@@ -31,6 +54,10 @@ on_actions = {
 				seed = random
 				50 = { set_global_flag = OOE_arty_EWF }
 				50 = { }
+			}
+
+			every_state = {
+				set_variable = { THIS.original_owner = THIS.owner }
 			}
 		}
 	}

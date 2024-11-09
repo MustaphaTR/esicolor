@@ -1,0 +1,4075 @@
+scripted_gui = {
+	esicolor_welcome_screen_toggle = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "esicolor_welcome_screen_toggle_container"
+
+		visible = {
+			is_ai = no
+		}
+
+		effects = {
+			open_welcome_screen_click = {
+				if = {
+					limit = { NOT = { has_variable = esicolor_welcome_screen } }
+
+					set_variable = { esicolor_welcome_screen = 1 }
+					set_variable = { esicolor_setup_screen = 0 }
+				}
+			}
+		}
+	}
+
+	esicolor_welcome_screen = {
+		context_type = player_context
+
+		window_name = "esicolor_welcome_screen_container"
+
+		visible = {
+			is_ai = no
+			has_variable = esicolor_welcome_screen
+		}
+
+		triggers = {
+			tab_1_on_visible = {
+				check_variable = { esicolor_welcome_screen = 1 }
+			}
+
+			tab_1_off_visible = {
+				NOT = { check_variable = { esicolor_welcome_screen = 1 } }
+			}
+
+			tab_2_on_visible = {
+				check_variable = { esicolor_welcome_screen = 2 }
+			}
+
+			tab_2_off_visible = {
+				NOT = { check_variable = { esicolor_welcome_screen = 2 } }
+			}
+
+			tab_3_on_visible = {
+				check_variable = { esicolor_welcome_screen = 3 }
+			}
+
+			tab_3_off_visible = {
+				NOT = { check_variable = { esicolor_welcome_screen = 3 } }
+			}
+
+			tab_4_on_visible = {
+				check_variable = { esicolor_welcome_screen = 4 }
+			}
+
+			tab_4_off_visible = {
+				NOT = { check_variable = { esicolor_welcome_screen = 4 } }
+			}
+
+			tab_5_on_visible = {
+				check_variable = { esicolor_welcome_screen = 5 }
+			}
+
+			tab_5_off_visible = {
+				NOT = { check_variable = { esicolor_welcome_screen = 5 } }
+			}
+
+			tab_1_page_1_header_visible = {
+				check_variable = { esicolor_welcome_screen = 1 }
+				check_variable = { esicolor_setup_screen = 0 }
+			}
+
+			tab_1_page_2_header_visible = {
+				check_variable = { esicolor_welcome_screen = 1 }
+				check_variable = { esicolor_setup_screen = 1 }
+			}
+
+			tab_1_page_3_header_visible = {
+				check_variable = { esicolor_welcome_screen = 1 }
+				check_variable = { esicolor_setup_screen = 2 }
+			}
+
+			tab_1_page_4_header_visible = {
+				check_variable = { esicolor_welcome_screen = 1 }
+				check_variable = { esicolor_setup_screen = 3 }
+			}
+
+			tab_1_page_5_header_visible = {
+				check_variable = { esicolor_welcome_screen = 1 }
+				check_variable = { esicolor_setup_screen = 4 }
+			}
+
+			tab_1_page_6_header_visible = {
+				check_variable = { esicolor_welcome_screen = 1 }
+				check_variable = { esicolor_setup_screen = 5 }
+			}
+
+			tab_1_page_7_header_visible = {
+				check_variable = { esicolor_welcome_screen = 1 }
+				check_variable = { esicolor_setup_screen = 6 }
+			}
+
+			tab_2_header_visible = {
+				check_variable = { esicolor_welcome_screen = 2 }
+			}
+
+			tab_3_header_visible = {
+				check_variable = { esicolor_welcome_screen = 3 }
+			}
+
+			tab_4_header_visible = {
+				check_variable = { esicolor_welcome_screen = 4 }
+			}
+
+			tab_5_header_visible = {
+				check_variable = { esicolor_welcome_screen = 5 }
+			}
+		}
+
+		effects = {
+			start_button_click = {
+				close_welcome_screen = yes
+
+				if = {
+					limit = { NOT = { has_global_flag = esicolor_setup_complete } }
+
+					setup_gui_start_general = yes
+				}
+			}
+
+			tab_1_off_click = {
+				set_variable = { esicolor_welcome_screen = 1 }
+			}
+
+			tab_2_off_click = {
+				set_variable = { esicolor_welcome_screen = 2 }
+			}
+
+			tab_3_off_click = {
+				set_variable = { esicolor_welcome_screen = 3 }
+			}
+
+			tab_4_off_click = {
+				set_variable = { esicolor_welcome_screen = 4 }
+			}
+
+			tab_5_off_click = {
+				set_variable = { esicolor_welcome_screen = 5 }
+			}
+		}
+	}
+
+	esicolor_welcome_screen_tab_1_content = {
+		context_type = player_context
+
+		window_name = "esicolor_welcome_screen_tab_1_slider"
+		parent_window_name = "esicolor_welcome_screen_container"
+
+		visible = {
+			is_ai = no
+			check_variable = { esicolor_welcome_screen = 1 }
+		}
+
+		effects = {
+			esicolor_setup_button_previous_click = {
+				randomise_seed = yes
+
+				if = {
+					limit = { check_variable = { esicolor_setup_screen = 0 } }
+
+					set_variable = { esicolor_setup_screen = 6 }
+				}
+				else = {
+					subtract_from_variable = { esicolor_setup_screen = 1 }
+				}
+			}
+
+			esicolor_setup_button_next_click = {
+				randomise_seed = yes
+
+				if = {
+					limit = { check_variable = { esicolor_setup_screen = 6 } }
+
+					set_variable = { esicolor_setup_screen = 0 }
+				}
+				else = {
+					add_to_variable = { esicolor_setup_screen = 1 }
+				}
+			}
+		}
+	}
+
+	esicolor_welcome_screen_tab_1_page_1_content = {
+		context_type = player_context
+
+		window_name = "esicolor_welcome_screen_tab_1_page_1_slider"
+		parent_window_name = "esicolor_welcome_screen_container"
+
+		visible = {
+			is_ai = no
+			check_variable = { esicolor_welcome_screen = 1 }
+			check_variable = { esicolor_setup_screen = 0 }
+		}
+
+		triggers = {
+			preset_button_1_visible = {
+				default_preset_selected = no
+			}
+
+			preset_button_1_selected_visible = {
+				default_preset_selected = yes
+			}
+
+			preset_button_2_visible = {
+				randomised_preset_selected = no
+			}
+
+			preset_button_2_selected_visible = {
+				randomised_preset_selected = yes
+			}
+
+			preset_button_3_visible = {
+				equalised_preset_selected = no
+			}
+
+			preset_button_3_selected_visible = {
+				equalised_preset_selected = yes
+			}
+
+			preset_button_4_visible = {
+				developer_preset_selected = no
+			}
+
+			preset_button_4_selected_visible = {
+				developer_preset_selected = yes
+			}
+
+			esicolor_welcome_screen_tab_1_page_1_blocker_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+		}
+
+		effects = {
+			preset_button_1_click = {
+				default_preset_effects = yes
+			}
+			preset_button_1_selected_click = {
+				randomise_seed = yes
+			}
+
+			preset_button_2_click = {
+				randomised_preset_effects = yes
+			}
+			preset_button_2_selected_click = {
+				randomise_seed = yes
+			}
+
+			preset_button_3_click = {
+				equalised_preset_effects = yes
+			}
+			preset_button_3_selected_click = {
+				randomise_seed = yes
+			}
+
+			preset_button_4_click = {
+				developer_preset_effects = yes
+			}
+			preset_button_4_selected_click = {
+				randomise_seed = yes
+			}
+		}
+	}
+
+	esicolor_welcome_screen_tab_1_page_2_content = {
+		context_type = player_context
+
+		window_name = "esicolor_welcome_screen_tab_1_page_2_slider"
+		parent_window_name = "esicolor_welcome_screen_container"
+
+		visible = {
+			is_ai = no
+			check_variable = { esicolor_welcome_screen = 1 }
+			check_variable = { esicolor_setup_screen = 1 }
+		}
+
+		triggers = {
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_1_selected_visible = {
+				check_variable = { global.setup_infrastructure = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_2_selected_visible = {
+				check_variable = { global.setup_air_bases = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_3_selected_visible = {
+				check_variable = { global.setup_anti_air = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_5_selected_visible = {
+				check_variable = { global.setup_civilian_factories = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_6_selected_visible = {
+				check_variable = { global.setup_military_factories = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_7_selected_visible = {
+				check_variable = { global.setup_dockyards = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_8_selected_visible = {
+				check_variable = { global.setup_synthetic_refineries = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_9_selected_visible = {
+				check_variable = { global.setup_fuel_silos = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_10_selected_visible = {
+				check_variable = { global.setup_forts = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_blocker_1_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+			esicolor_welcome_screen_tab_1_page_2_blocker_2_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+		}
+
+		effects = {
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_1_click = {
+				set_variable = { global.setup_infrastructure = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_1_selected_click = {
+				set_variable = { global.setup_infrastructure = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_minus_1_click = {
+				set_variable = { global.setup_infrastructure = 1 }
+				if = {
+					limit = { check_variable = { global.setup_infrastructure_min > 0 } }
+
+					subtract_from_variable = { global.setup_infrastructure_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_plus_1_click = {
+				set_variable = { global.setup_infrastructure = 1 }
+				if = {
+					limit = { check_variable = { global.setup_infrastructure_min < global.setup_infrastructure_max } }
+
+					add_to_variable = { global.setup_infrastructure_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_1_click = {
+				set_variable = { global.setup_infrastructure = 1 }
+				if = {
+					limit = { check_variable = { global.setup_infrastructure_max > global.setup_infrastructure_min } }
+
+					subtract_from_variable = { global.setup_infrastructure_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_1_click = {
+				set_variable = { global.setup_infrastructure = 1 }
+				if = {
+					limit = { check_variable = { global.setup_infrastructure_max < 5 } }
+
+					add_to_variable = { global.setup_infrastructure_max = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_2_click = {
+				set_variable = { global.setup_air_bases = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_2_selected_click = {
+				set_variable = { global.setup_air_bases = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_minus_2_click = {
+				set_variable = { global.setup_air_bases = 1 }
+				if = {
+					limit = { check_variable = { global.setup_air_bases_min > 0 } }
+
+					subtract_from_variable = { global.setup_air_bases_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_plus_2_click = {
+				set_variable = { global.setup_air_bases = 1 }
+				if = {
+					limit = { check_variable = { global.setup_air_bases_min < global.setup_air_bases_max } }
+
+					add_to_variable = { global.setup_air_bases_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_2_click = {
+				set_variable = { global.setup_air_bases = 1 }
+				if = {
+					limit = { check_variable = { global.setup_air_bases_max > global.setup_air_bases_min } }
+
+					subtract_from_variable = { global.setup_air_bases_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_2_click = {
+				set_variable = { global.setup_air_bases = 1 }
+				if = {
+					limit = { check_variable = { global.setup_air_bases_max < 10 } }
+
+					add_to_variable = { global.setup_air_bases_max = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_3_click = {
+				set_variable = { global.setup_anti_air = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_3_selected_click = {
+				set_variable = { global.setup_anti_air = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_minus_3_click = {
+				set_variable = { global.setup_anti_air = 1 }
+				if = {
+					limit = { check_variable = { global.setup_anti_air_min > 0 } }
+
+					subtract_from_variable = { global.setup_anti_air_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_plus_3_click = {
+				set_variable = { global.setup_anti_air = 1 }
+				if = {
+					limit = { check_variable = { global.setup_anti_air_min < global.setup_anti_air_max } }
+
+					add_to_variable = { global.setup_anti_air_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_3_click = {
+				set_variable = { global.setup_anti_air = 1 }
+				if = {
+					limit = { check_variable = { global.setup_anti_air_max > global.setup_anti_air_min } }
+
+					subtract_from_variable = { global.setup_anti_air_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_3_click = {
+				set_variable = { global.setup_anti_air = 1 }
+				if = {
+					limit = { check_variable = { global.setup_anti_air_max < 5 } }
+
+					add_to_variable = { global.setup_anti_air_max = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_max_minus_4_click = {
+				if = {
+					limit = { check_variable = { global.setup_radar_stations > 0 } }
+
+					subtract_from_variable = { global.setup_radar_stations = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_4_click = {
+				if = {
+					limit = { check_variable = { global.setup_radar_stations < 100 } }
+
+					add_to_variable = { global.setup_radar_stations = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_4_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_radar_stations > 0 } }
+
+					subtract_from_variable = { global.setup_radar_stations = 5 }
+					clamp_variable = {
+						var = global.setup_radar_stations
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_4_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_radar_stations < 100 } }
+
+					add_to_variable = { global.setup_radar_stations = 5 }
+					clamp_variable = {
+						var = global.setup_radar_stations
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_4_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_radar_stations > 0 } }
+
+					subtract_from_variable = { global.setup_radar_stations = 10 }
+					clamp_variable = {
+						var = global.setup_radar_stations
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_4_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_radar_stations < 100 } }
+
+					add_to_variable = { global.setup_radar_stations = 10 }
+					clamp_variable = {
+						var = global.setup_radar_stations
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_5_click = {
+				set_variable = { global.setup_civilian_factories = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_5_selected_click = {
+				set_variable = { global.setup_civilian_factories = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_minus_5_click = {
+				set_variable = { global.setup_civilian_factories = 1 }
+				if = {
+					limit = { check_variable = { global.setup_civilian_factories_min > 0 } }
+
+					subtract_from_variable = { global.setup_civilian_factories_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_plus_5_click = {
+				set_variable = { global.setup_civilian_factories = 1 }
+				if = {
+					limit = { check_variable = { global.setup_civilian_factories_min < global.setup_civilian_factories_max } }
+
+					add_to_variable = { global.setup_civilian_factories_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_5_click = {
+				set_variable = { global.setup_civilian_factories = 1 }
+				if = {
+					limit = { check_variable = { global.setup_civilian_factories_max > global.setup_civilian_factories_min } }
+
+					subtract_from_variable = { global.setup_civilian_factories_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_5_click = {
+				set_variable = { global.setup_civilian_factories = 1 }
+				if = {
+					limit = { check_variable = { global.setup_civilian_factories_max < 7 } }
+
+					add_to_variable = { global.setup_civilian_factories_max = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_6_click = {
+				set_variable = { global.setup_military_factories = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_6_selected_click = {
+				set_variable = { global.setup_military_factories = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_minus_6_click = {
+				set_variable = { global.setup_military_factories = 1 }
+				if = {
+					limit = { check_variable = { global.setup_military_factories_min > 0 } }
+
+					subtract_from_variable = { global.setup_military_factories_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_plus_6_click = {
+				set_variable = { global.setup_military_factories = 1 }
+				if = {
+					limit = { check_variable = { global.setup_military_factories_min < global.setup_military_factories_max } }
+
+					add_to_variable = { global.setup_military_factories_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_6_click = {
+				set_variable = { global.setup_military_factories = 1 }
+				if = {
+					limit = { check_variable = { global.setup_military_factories_max > global.setup_military_factories_min } }
+
+					subtract_from_variable = { global.setup_military_factories_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_6_click = {
+				set_variable = { global.setup_military_factories = 1 }
+				if = {
+					limit = { check_variable = { global.setup_military_factories_max < 7 } }
+
+					add_to_variable = { global.setup_military_factories_max = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_7_click = {
+				set_variable = { global.setup_dockyards = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_7_selected_click = {
+				set_variable = { global.setup_dockyards = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_minus_7_click = {
+				set_variable = { global.setup_dockyards = 1 }
+				if = {
+					limit = { check_variable = { global.setup_dockyards_min > 0 } }
+
+					subtract_from_variable = { global.setup_dockyards_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_plus_7_click = {
+				set_variable = { global.setup_dockyards = 1 }
+				if = {
+					limit = { check_variable = { global.setup_dockyards_min < global.setup_dockyards_max } }
+
+					add_to_variable = { global.setup_dockyards_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_7_click = {
+				set_variable = { global.setup_dockyards = 1 }
+				if = {
+					limit = { check_variable = { global.setup_dockyards_max > global.setup_dockyards_min } }
+
+					subtract_from_variable = { global.setup_dockyards_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_7_click = {
+				set_variable = { global.setup_dockyards = 1 }
+				if = {
+					limit = { check_variable = { global.setup_dockyards_max < 7 } }
+
+					add_to_variable = { global.setup_dockyards_max = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_8_click = {
+				set_variable = { global.setup_synthetic_refineries = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_8_selected_click = {
+				set_variable = { global.setup_synthetic_refineries = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_minus_8_click = {
+				set_variable = { global.setup_synthetic_refineries = 1 }
+				if = {
+					limit = { check_variable = { global.setup_synthetic_refineries_min > 0 } }
+
+					subtract_from_variable = { global.setup_synthetic_refineries_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_plus_8_click = {
+				set_variable = { global.setup_synthetic_refineries = 1 }
+				if = {
+					limit = { check_variable = { global.setup_synthetic_refineries_min < global.setup_synthetic_refineries_max } }
+
+					add_to_variable = { global.setup_synthetic_refineries_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_minus_8_control_click = {
+				set_variable = { global.setup_synthetic_refineries = 1 }
+				if = {
+					limit = { check_variable = { global.setup_synthetic_refineries_min > 0 } }
+
+					subtract_from_variable = { global.setup_synthetic_refineries_min = 5 }
+					clamp_variable = {
+						var = global.setup_synthetic_refineries_min
+						min = 0
+						max = global.setup_synthetic_refineries_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_plus_8_control_click = {
+				set_variable = { global.setup_synthetic_refineries = 1 }
+				if = {
+					limit = { check_variable = { global.setup_synthetic_refineries_min < global.setup_synthetic_refineries_max } }
+
+					add_to_variable = { global.setup_synthetic_refineries_min = 5 }
+					clamp_variable = {
+						var = global.setup_synthetic_refineries_min
+						min = 0
+						max = global.setup_synthetic_refineries_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_minus_8_shift_click = {
+				set_variable = { global.setup_synthetic_refineries = 1 }
+				if = {
+					limit = { check_variable = { global.setup_synthetic_refineries_min > 0 } }
+
+					subtract_from_variable = { global.setup_synthetic_refineries_min = 10 }
+					clamp_variable = {
+						var = global.setup_synthetic_refineries_min
+						min = 0
+						max = global.setup_synthetic_refineries_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_min_plus_8_shift_click = {
+				set_variable = { global.setup_synthetic_refineries = 1 }
+				if = {
+					limit = { check_variable = { global.setup_synthetic_refineries_min < global.setup_synthetic_refineries_max } }
+
+					add_to_variable = { global.setup_synthetic_refineries_min = 10 }
+					clamp_variable = {
+						var = global.setup_synthetic_refineries_min
+						min = 0
+						max = global.setup_synthetic_refineries_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_8_click = {
+				set_variable = { global.setup_synthetic_refineries = 1 }
+				if = {
+					limit = { check_variable = { global.setup_synthetic_refineries_max > global.setup_synthetic_refineries_min } }
+
+					subtract_from_variable = { global.setup_synthetic_refineries_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_8_click = {
+				set_variable = { global.setup_synthetic_refineries = 1 }
+				if = {
+					limit = { check_variable = { global.setup_synthetic_refineries_max < 1208 } }
+
+					add_to_variable = { global.setup_synthetic_refineries_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_8_control_click = {
+				set_variable = { global.setup_synthetic_refineries = 1 }
+				if = {
+					limit = { check_variable = { global.setup_synthetic_refineries_max > global.setup_synthetic_refineries_min } }
+
+					subtract_from_variable = { global.setup_synthetic_refineries_max = 5 }
+					clamp_variable = {
+						var = global.setup_synthetic_refineries_max
+						min = global.setup_synthetic_refineries_min
+						max = 1208
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_8_control_click = {
+				set_variable = { global.setup_synthetic_refineries = 1 }
+				if = {
+					limit = { check_variable = { global.setup_synthetic_refineries_max < 1208 } }
+
+					add_to_variable = { global.setup_synthetic_refineries_max = 5 }
+					clamp_variable = {
+						var = global.setup_synthetic_refineries_max
+						min = global.setup_synthetic_refineries_min
+						max = 1208
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_8_shift_click = {
+				set_variable = { global.setup_synthetic_refineries = 1 }
+				if = {
+					limit = { check_variable = { global.setup_synthetic_refineries_max > global.setup_synthetic_refineries_min } }
+
+					subtract_from_variable = { global.setup_synthetic_refineries_max = 10 }
+					clamp_variable = {
+						var = global.setup_synthetic_refineries_max
+						min = global.setup_synthetic_refineries_min
+						max = 1208
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_8_shift_click = {
+				set_variable = { global.setup_synthetic_refineries = 1 }
+				if = {
+					limit = { check_variable = { global.setup_synthetic_refineries_max < 1208 } }
+
+					add_to_variable = { global.setup_synthetic_refineries_max = 10 }
+					clamp_variable = {
+						var = global.setup_synthetic_refineries_max
+						min = global.setup_synthetic_refineries_min
+						max = 1208
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_9_click = {
+				set_variable = { global.setup_fuel_silos = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_9_selected_click = {
+				set_variable = { global.setup_fuel_silos = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_9_click = {
+				set_variable = { global.setup_fuel_silos = 1 }
+				if = {
+					limit = { check_variable = { global.setup_fuel_silos_chance > 0 } }
+
+					subtract_from_variable = { global.setup_fuel_silos_chance = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_9_click = {
+				set_variable = { global.setup_fuel_silos = 1 }
+				if = {
+					limit = { check_variable = { global.setup_fuel_silos_chance < 100 } }
+
+					add_to_variable = { global.setup_fuel_silos_chance = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_9_control_click = {
+				set_variable = { global.setup_fuel_silos = 1 }
+				if = {
+					limit = { check_variable = { global.setup_fuel_silos_chance > 0 } }
+
+					subtract_from_variable = { global.setup_fuel_silos_chance = 5 }
+					clamp_variable = {
+						var = global.setup_fuel_silos_chance
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_9_control_click = {
+				set_variable = { global.setup_fuel_silos = 1 }
+				if = {
+					limit = { check_variable = { global.setup_fuel_silos_chance < 100 } }
+
+					add_to_variable = { global.setup_fuel_silos_chance = 5 }
+					clamp_variable = {
+						var = global.setup_fuel_silos_chance
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_minus_9_shift_click = {
+				set_variable = { global.setup_fuel_silos = 1 }
+				if = {
+					limit = { check_variable = { global.setup_fuel_silos_chance > 0 } }
+
+					subtract_from_variable = { global.setup_fuel_silos_chance = 10 }
+					clamp_variable = {
+						var = global.setup_fuel_silos_chance
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_2_max_plus_9_shift_click = {
+				set_variable = { global.setup_fuel_silos = 1 }
+				if = {
+					limit = { check_variable = { global.setup_fuel_silos_chance < 100 } }
+
+					add_to_variable = { global.setup_fuel_silos_chance = 10 }
+					clamp_variable = {
+						var = global.setup_fuel_silos_chance
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_10_click = {
+				set_variable = { global.setup_forts = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_10_selected_click = {
+				set_variable = { global.setup_forts = 0 }
+			}
+		}
+	}
+
+	esicolor_welcome_screen_tab_1_page_3_content = {
+		context_type = player_context
+
+		window_name = "esicolor_welcome_screen_tab_1_page_3_slider"
+		parent_window_name = "esicolor_welcome_screen_container"
+
+		visible = {
+			is_ai = no
+			check_variable = { esicolor_welcome_screen = 1 }
+			check_variable = { esicolor_setup_screen = 2 }
+		}
+
+		triggers = {
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_1_selected_visible = {
+				check_variable = { global.setup_state_category = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_2_selected_visible = {
+				check_variable = { global.setup_province_modifiers = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_3_selected_visible = {
+				check_variable = { global.setup_population = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_3_shuffle_visible = {
+				check_variable = { global.setup_population = -2 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_4_selected_visible = {
+				check_variable = { global.setup_resource_types = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_blocker_1_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+			esicolor_welcome_screen_tab_1_page_3_blocker_2_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+			esicolor_welcome_screen_tab_1_page_3_blocker_3_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+		}
+
+		effects = {
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_1_click = {
+				set_variable = { global.setup_state_category = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_1_selected_click = {
+				set_variable = { global.setup_state_category = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_1_click = {
+				set_variable = { global.setup_state_category = 1 }
+				if = {
+					limit = { check_variable = { global.setup_state_category_min > 0 } }
+
+					subtract_from_variable = { global.setup_state_category_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_1_click = {
+				set_variable = { global.setup_state_category = 1 }
+				if = {
+					limit = { check_variable = { global.setup_state_category_min < global.setup_state_category_max } }
+
+					add_to_variable = { global.setup_state_category_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_1_click = {
+				set_variable = { global.setup_state_category = 1 }
+				if = {
+					limit = { check_variable = { global.setup_state_category_max > global.setup_state_category_min } }
+
+					subtract_from_variable = { global.setup_state_category_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_1_click = {
+				set_variable = { global.setup_state_category = 1 }
+				if = {
+					limit = { check_variable = { global.setup_state_category_max < 8 } }
+
+					add_to_variable = { global.setup_state_category_max = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_2_click = {
+				set_variable = { global.setup_province_modifiers = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_2_selected_click = {
+				set_variable = { global.setup_province_modifiers = 0 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_3_click = {
+				set_variable = { global.setup_population = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_3_selected_click = {
+				set_variable = { global.setup_population = -2 }
+			}
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_3_shuffle_click = {
+				set_variable = { global.setup_population = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_3_alt_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_min_k > 0 } }
+
+					subtract_from_variable = { global.setup_population_min = 0.5 }
+					subtract_from_variable = { global.setup_population_min_k = 0.001 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_3_alt_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_min_k < global.setup_population_max_k } }
+
+					add_to_variable = { global.setup_population_min = 0.5 }
+					add_to_variable = { global.setup_population_min_k = 0.001 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_3_alt_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_max_k > global.setup_population_min_k } }
+
+					subtract_from_variable = { global.setup_population_max = 0.5 }
+					subtract_from_variable = { global.setup_population_max_k = 0.001 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_3_alt_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_max_k < 3000 } }
+
+					add_to_variable = { global.setup_population_max = 0.5 }
+					add_to_variable = { global.setup_population_max_k = 0.001 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_3_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_min_k > 0 } }
+
+					subtract_from_variable = { global.setup_population_min = 5 }
+					subtract_from_variable = { global.setup_population_min_k = 0.1 }
+					clamp_variable = {
+						var = global.setup_population_min
+						min = 0
+						max = global.setup_population_max
+					}
+					clamp_variable = {
+						var = global.setup_population_min_k
+						min = 0
+						max = global.setup_population_max_k
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_3_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_min_k < global.setup_population_max_k } }
+
+					add_to_variable = { global.setup_population_min = 5 }
+					add_to_variable = { global.setup_population_min_k = 0.1 }
+					clamp_variable = {
+						var = global.setup_population_min
+						min = 0
+						max = global.setup_population_max
+					}
+					clamp_variable = {
+						var = global.setup_population_min_k
+						min = 0
+						max = global.setup_population_max_k
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_3_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_max_k > global.setup_population_min_k } }
+
+					subtract_from_variable = { global.setup_population_max = 5 }
+					subtract_from_variable = { global.setup_population_max_k = 0.1 }
+					clamp_variable = {
+						var = global.setup_population_max
+						min = global.setup_population_min
+						max = 1500000
+					}
+					clamp_variable = {
+						var = global.setup_population_max_k
+						min = global.setup_population_min_k
+						max = 3000
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_3_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_max_k < 3000 } }
+
+					add_to_variable = { global.setup_population_max = 5 }
+					add_to_variable = { global.setup_population_max_k = 0.1 }
+					clamp_variable = {
+						var = global.setup_population_max
+						min = global.setup_population_min
+						max = 1500000
+					}
+					clamp_variable = {
+						var = global.setup_population_max_k
+						min = global.setup_population_min_k
+						max = 3000
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_3_control_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_min_k > 0 } }
+
+					subtract_from_variable = { global.setup_population_min = 50 }
+					subtract_from_variable = { global.setup_population_min_k = 1 }
+					clamp_variable = {
+						var = global.setup_population_min
+						min = 0
+						max = global.setup_population_max
+					}
+					clamp_variable = {
+						var = global.setup_population_min_k
+						min = 0
+						max = global.setup_population_max_k
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_3_control_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_min_k < global.setup_population_max_k } }
+
+					add_to_variable = { global.setup_population_min = 50 }
+					add_to_variable = { global.setup_population_min_k = 1 }
+					clamp_variable = {
+						var = global.setup_population_min
+						min = 0
+						max = global.setup_population_max
+					}
+					clamp_variable = {
+						var = global.setup_population_min_k
+						min = 0
+						max = global.setup_population_max_k
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_3_control_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_max_k > global.setup_population_min_k } }
+
+					subtract_from_variable = { global.setup_population_max = 50 }
+					subtract_from_variable = { global.setup_population_max_k = 1 }
+					clamp_variable = {
+						var = global.setup_population_max
+						min = global.setup_population_min
+						max = 1500000
+					}
+					clamp_variable = {
+						var = global.setup_population_max_k
+						min = global.setup_population_min_k
+						max = 3000
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_3_control_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_max_k < 3000 } }
+
+					add_to_variable = { global.setup_population_max = 50 }
+					add_to_variable = { global.setup_population_max_k = 1 }
+					clamp_variable = {
+						var = global.setup_population_max
+						min = global.setup_population_min
+						max = 1500000
+					}
+					clamp_variable = {
+						var = global.setup_population_max_k
+						min = global.setup_population_min_k
+						max = 3000
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_3_shift_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_min_k > 0 } }
+
+					subtract_from_variable = { global.setup_population_min = 500 }
+					subtract_from_variable = { global.setup_population_min_k = 10 }
+					clamp_variable = {
+						var = global.setup_population_min
+						min = 0
+						max = global.setup_population_max
+					}
+					clamp_variable = {
+						var = global.setup_population_min_k
+						min = 0
+						max = global.setup_population_max_k
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_3_shift_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_min_k < global.setup_population_max_k } }
+
+					add_to_variable = { global.setup_population_min = 500 }
+					add_to_variable = { global.setup_population_min_k = 10 }
+					clamp_variable = {
+						var = global.setup_population_min
+						min = 0
+						max = global.setup_population_max
+					}
+					clamp_variable = {
+						var = global.setup_population_min_k
+						min = 0
+						max = global.setup_population_max_k
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_3_shift_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_max_k > global.setup_population_min_k } }
+
+					subtract_from_variable = { global.setup_population_max = 500 }
+					subtract_from_variable = { global.setup_population_max_k = 10 }
+					clamp_variable = {
+						var = global.setup_population_max
+						min = global.setup_population_min
+						max = 1500000
+					}
+					clamp_variable = {
+						var = global.setup_population_max_k
+						min = global.setup_population_min_k
+						max = 3000
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_3_shift_click = {
+				set_variable = { global.setup_population = 1 }
+				if = {
+					limit = { check_variable = { global.setup_population_max_k < 3000 } }
+
+					add_to_variable = { global.setup_population_max = 500 }
+					add_to_variable = { global.setup_population_max_k = 10 }
+					clamp_variable = {
+						var = global.setup_population_max
+						min = global.setup_population_min
+						max = 1500000
+					}
+					clamp_variable = {
+						var = global.setup_population_max_k
+						min = global.setup_population_min_k
+						max = 3000
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_4_click = {
+				set_variable = { global.setup_resource_types = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_3_eaw_data_4_selected_click = {
+				set_variable = { global.setup_resource_types = 1 }
+			}
+	
+			esicolor_welcome_screen_tab_1_page_3_min_minus_5_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_types_min > 0 } }
+
+					subtract_from_variable = { global.setup_resource_types_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_5_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_types_min < global.setup_resource_types_max } }
+
+					add_to_variable = { global.setup_resource_types_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_5_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = {
+						check_variable = { global.setup_resource_types_max > global.setup_resource_types_min }
+						check_variable = { global.setup_resource_types_max > 1 } # No outright disabling the resources.
+					}
+
+					subtract_from_variable = { global.setup_resource_types_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_5_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_types_max < 7 } }
+
+					add_to_variable = { global.setup_resource_types_max = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_min_minus_6_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_oil_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_oil_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_6_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_oil_min < global.setup_resource_oil_max } }
+
+					add_to_variable = { global.setup_resource_oil_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_6_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_oil_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_oil_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_oil_min
+						min = 1
+						max = global.setup_resource_oil_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_6_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_oil_min < global.setup_resource_oil_max } }
+
+					add_to_variable = { global.setup_resource_oil_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_oil_min
+						min = 1
+						max = global.setup_resource_oil_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_6_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_oil_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_oil_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_oil_min
+						min = 1
+						max = global.setup_resource_oil_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_6_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_oil_min < global.setup_resource_oil_max } }
+
+					add_to_variable = { global.setup_resource_oil_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_oil_min
+						min = 1
+						max = global.setup_resource_oil_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_6_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_oil_max > global.setup_resource_oil_min } }
+
+					subtract_from_variable = { global.setup_resource_oil_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_6_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_oil_max < 250 } }
+
+					add_to_variable = { global.setup_resource_oil_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_6_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_oil_max > global.setup_resource_oil_min } }
+
+					subtract_from_variable = { global.setup_resource_oil_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_oil_max
+						min = global.setup_resource_oil_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_6_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_oil_max < 250 } }
+
+					add_to_variable = { global.setup_resource_oil_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_oil_max
+						min = global.setup_resource_oil_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_6_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_oil_max > global.setup_resource_oil_min } }
+
+					subtract_from_variable = { global.setup_resource_oil_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_oil_max
+						min = global.setup_resource_oil_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_6_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_oil_max < 250 } }
+
+					add_to_variable = { global.setup_resource_oil_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_oil_max
+						min = global.setup_resource_oil_min
+						max = 250
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_min_minus_7_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_rubber_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_rubber_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_7_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_rubber_min < global.setup_resource_rubber_max } }
+
+					add_to_variable = { global.setup_resource_rubber_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_7_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_rubber_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_rubber_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_rubber_min
+						min = 1
+						max = global.setup_resource_rubber_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_7_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_rubber_min < global.setup_resource_rubber_max } }
+
+					add_to_variable = { global.setup_resource_rubber_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_rubber_min
+						min = 1
+						max = global.setup_resource_rubber_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_7_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_rubber_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_rubber_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_rubber_min
+						min = 1
+						max = global.setup_resource_rubber_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_7_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_rubber_min < global.setup_resource_rubber_max } }
+
+					add_to_variable = { global.setup_resource_rubber_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_rubber_min
+						min = 1
+						max = global.setup_resource_rubber_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_7_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_rubber_max > global.setup_resource_rubber_min } }
+
+					subtract_from_variable = { global.setup_resource_rubber_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_7_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_rubber_max < 250 } }
+
+					add_to_variable = { global.setup_resource_rubber_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_7_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_rubber_max > global.setup_resource_rubber_min } }
+
+					subtract_from_variable = { global.setup_resource_rubber_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_rubber_max
+						min = global.setup_resource_rubber_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_7_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_rubber_max < 250 } }
+
+					add_to_variable = { global.setup_resource_rubber_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_rubber_max
+						min = global.setup_resource_rubber_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_7_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_rubber_max > global.setup_resource_rubber_min } }
+
+					subtract_from_variable = { global.setup_resource_rubber_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_rubber_max
+						min = global.setup_resource_rubber_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_7_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_rubber_max < 250 } }
+
+					add_to_variable = { global.setup_resource_rubber_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_rubber_max
+						min = global.setup_resource_rubber_min
+						max = 250
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_min_minus_8_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_steel_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_steel_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_8_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_steel_min < global.setup_resource_steel_max } }
+
+					add_to_variable = { global.setup_resource_steel_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_8_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_steel_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_steel_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_steel_min
+						min = 1
+						max = global.setup_resource_steel_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_8_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_steel_min < global.setup_resource_steel_max } }
+
+					add_to_variable = { global.setup_resource_steel_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_steel_min
+						min = 1
+						max = global.setup_resource_steel_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_8_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_steel_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_steel_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_steel_min
+						min = 1
+						max = global.setup_resource_steel_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_8_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_steel_min < global.setup_resource_steel_max } }
+
+					add_to_variable = { global.setup_resource_steel_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_steel_min
+						min = 1
+						max = global.setup_resource_steel_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_8_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_steel_max > global.setup_resource_steel_min } }
+
+					subtract_from_variable = { global.setup_resource_steel_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_8_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_steel_max < 250 } }
+
+					add_to_variable = { global.setup_resource_steel_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_8_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_steel_max > global.setup_resource_steel_min } }
+
+					subtract_from_variable = { global.setup_resource_steel_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_steel_max
+						min = global.setup_resource_steel_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_8_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_steel_max < 250 } }
+
+					add_to_variable = { global.setup_resource_steel_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_steel_max
+						min = global.setup_resource_steel_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_8_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_steel_max > global.setup_resource_steel_min } }
+
+					subtract_from_variable = { global.setup_resource_steel_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_steel_max
+						min = global.setup_resource_steel_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_8_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_steel_max < 250 } }
+
+					add_to_variable = { global.setup_resource_steel_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_steel_max
+						min = global.setup_resource_steel_min
+						max = 250
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_min_minus_9_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_aluminium_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_aluminium_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_9_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_aluminium_min < global.setup_resource_aluminium_max } }
+
+					add_to_variable = { global.setup_resource_aluminium_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_9_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_aluminium_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_aluminium_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_aluminium_min
+						min = 1
+						max = global.setup_resource_aluminium_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_9_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_aluminium_min < global.setup_resource_aluminium_max } }
+
+					add_to_variable = { global.setup_resource_aluminium_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_aluminium_min
+						min = 1
+						max = global.setup_resource_aluminium_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_9_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_aluminium_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_aluminium_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_aluminium_min
+						min = 1
+						max = global.setup_resource_aluminium_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_9_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_aluminium_min < global.setup_resource_aluminium_max } }
+
+					add_to_variable = { global.setup_resource_aluminium_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_aluminium_min
+						min = 1
+						max = global.setup_resource_aluminium_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_9_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_aluminium_max > global.setup_resource_aluminium_min } }
+
+					subtract_from_variable = { global.setup_resource_aluminium_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_9_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_aluminium_max < 250 } }
+
+					add_to_variable = { global.setup_resource_aluminium_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_9_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_aluminium_max > global.setup_resource_aluminium_min } }
+
+					subtract_from_variable = { global.setup_resource_aluminium_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_aluminium_max
+						min = global.setup_resource_aluminium_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_9_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_aluminium_max < 250 } }
+
+					add_to_variable = { global.setup_resource_aluminium_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_aluminium_max
+						min = global.setup_resource_aluminium_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_9_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_aluminium_max > global.setup_resource_aluminium_min } }
+
+					subtract_from_variable = { global.setup_resource_aluminium_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_aluminium_max
+						min = global.setup_resource_aluminium_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_9_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_aluminium_max < 250 } }
+
+					add_to_variable = { global.setup_resource_aluminium_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_aluminium_max
+						min = global.setup_resource_aluminium_min
+						max = 250
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_min_minus_10_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_tungsten_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_tungsten_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_10_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_tungsten_min < global.setup_resource_tungsten_max } }
+
+					add_to_variable = { global.setup_resource_tungsten_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_10_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_tungsten_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_tungsten_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_tungsten_min
+						min = 1
+						max = global.setup_resource_tungsten_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_10_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_tungsten_min < global.setup_resource_tungsten_max } }
+
+					add_to_variable = { global.setup_resource_tungsten_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_tungsten_min
+						min = 1
+						max = global.setup_resource_tungsten_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_10_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_tungsten_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_tungsten_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_tungsten_min
+						min = 1
+						max = global.setup_resource_tungsten_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_10_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_tungsten_min < global.setup_resource_tungsten_max } }
+
+					add_to_variable = { global.setup_resource_tungsten_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_tungsten_min
+						min = 1
+						max = global.setup_resource_tungsten_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_10_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_tungsten_max > global.setup_resource_tungsten_min } }
+
+					subtract_from_variable = { global.setup_resource_tungsten_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_10_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_tungsten_max < 250 } }
+
+					add_to_variable = { global.setup_resource_tungsten_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_10_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_tungsten_max > global.setup_resource_tungsten_min } }
+
+					subtract_from_variable = { global.setup_resource_tungsten_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_tungsten_max
+						min = global.setup_resource_tungsten_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_10_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_tungsten_max < 250 } }
+
+					add_to_variable = { global.setup_resource_tungsten_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_tungsten_max
+						min = global.setup_resource_tungsten_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_10_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_tungsten_max > global.setup_resource_tungsten_min } }
+
+					subtract_from_variable = { global.setup_resource_tungsten_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_tungsten_max
+						min = global.setup_resource_tungsten_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_10_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_tungsten_max < 250 } }
+
+					add_to_variable = { global.setup_resource_tungsten_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_tungsten_max
+						min = global.setup_resource_tungsten_min
+						max = 250
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_min_minus_11_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_chromium_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_chromium_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_11_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_chromium_min < global.setup_resource_chromium_max } }
+
+					add_to_variable = { global.setup_resource_chromium_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_11_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_chromium_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_chromium_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_chromium_min
+						min = 1
+						max = global.setup_resource_chromium_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_11_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_chromium_min < global.setup_resource_chromium_max } }
+
+					add_to_variable = { global.setup_resource_chromium_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_chromium_min
+						min = 1
+						max = global.setup_resource_chromium_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_11_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_chromium_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_chromium_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_chromium_min
+						min = 1
+						max = global.setup_resource_chromium_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_11_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_chromium_min < global.setup_resource_chromium_max } }
+
+					add_to_variable = { global.setup_resource_chromium_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_chromium_min
+						min = 1
+						max = global.setup_resource_chromium_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_11_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_chromium_max > global.setup_resource_chromium_min } }
+
+					subtract_from_variable = { global.setup_resource_chromium_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_11_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_chromium_max < 250 } }
+
+					add_to_variable = { global.setup_resource_chromium_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_11_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_chromium_max > global.setup_resource_chromium_min } }
+
+					subtract_from_variable = { global.setup_resource_chromium_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_chromium_max
+						min = global.setup_resource_chromium_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_11_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_chromium_max < 250 } }
+
+					add_to_variable = { global.setup_resource_chromium_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_chromium_max
+						min = global.setup_resource_chromium_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_11_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_chromium_max > global.setup_resource_chromium_min } }
+
+					subtract_from_variable = { global.setup_resource_chromium_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_chromium_max
+						min = global.setup_resource_chromium_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_11_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_chromium_max < 250 } }
+
+					add_to_variable = { global.setup_resource_chromium_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_chromium_max
+						min = global.setup_resource_chromium_min
+						max = 250
+					}
+				}
+			}
+		}
+	}
+
+	esicolor_welcome_screen_tab_1_page_4_content = {
+		context_type = player_context
+
+		window_name = "esicolor_welcome_screen_tab_1_page_4_slider"
+		parent_window_name = "esicolor_welcome_screen_container"
+
+		visible = {
+			is_ai = no
+			check_variable = { esicolor_welcome_screen = 1 }
+			check_variable = { esicolor_setup_screen = 3 }
+		}
+
+		triggers = {
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_2_selected_visible = {
+				check_variable = { global.setup_party_popularity = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_2_random_visible = {
+				check_variable = { global.setup_party_popularity = -2 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_3_selected_visible = {
+				check_variable = { global.setup_ai_change_ideology = 1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_7_selected_visible = {
+				check_variable = { global.setup_leader_traits = 1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_locked_8_visible = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_8_visible = {
+				has_dlc = "La Resistance"
+			}
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_8_selected_visible = {
+				has_dlc = "La Resistance"
+				check_variable = { global.setup_intelligence_agency = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_4_blocker_1_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+			esicolor_welcome_screen_tab_1_page_4_blocker_2_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+		}
+
+		effects = {
+			esicolor_welcome_screen_tab_1_page_4_max_minus_1_click = {
+				if = {
+					limit = { check_variable = { global.setup_ideology > -2 } }
+
+					subtract_from_variable = { global.setup_ideology = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_plus_1_click = {
+				if = {
+					limit = { check_variable = { global.setup_ideology < 3 } }
+
+					add_to_variable = { global.setup_ideology = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_2_click = {
+				set_variable = { global.setup_party_popularity = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_2_selected_click = {
+				set_variable = { global.setup_party_popularity = -2 }
+			}
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_2_random_click = {
+				set_variable = { global.setup_party_popularity = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_minus_2_click = {
+				set_variable = { global.setup_party_popularity = 1 }
+				if = {
+					limit = { check_variable = { global.setup_party_popularity_ruling > 1 } }
+
+					subtract_from_variable = { global.setup_party_popularity_ruling = 3 }
+					add_to_variable = { global.setup_party_popularity_other = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_plus_2_click = {
+				set_variable = { global.setup_party_popularity = 1 }
+				if = {
+					limit = { check_variable = { global.setup_party_popularity_ruling < 100 } }
+
+
+					add_to_variable = { global.setup_party_popularity_ruling = 3 }
+					subtract_from_variable = { global.setup_party_popularity_other = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_3_click = {
+				set_variable = { global.setup_ai_change_ideology = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_3_selected_click = {
+				set_variable = { global.setup_ai_change_ideology = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_4_min_minus_5_click = {
+				set_variable = { global.setup_stability = 1 }
+				if = {
+					limit = { check_variable = { global.setup_stability_min > 0 } }
+
+					subtract_from_variable = { global.setup_stability_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_min_plus_5_click = {
+				set_variable = { global.setup_stability = 1 }
+				if = {
+					limit = { check_variable = { global.setup_stability_min < global.setup_stability_max } }
+
+					add_to_variable = { global.setup_stability_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_min_minus_5_control_click = {
+				set_variable = { global.setup_stability = 1 }
+				if = {
+					limit = { check_variable = { global.setup_stability_min > 0 } }
+
+					subtract_from_variable = { global.setup_stability_min = 5 }
+					clamp_variable = {
+						var = global.setup_stability_min
+						min = 0
+						max = global.setup_stability_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_min_plus_5_control_click = {
+				set_variable = { global.setup_stability = 1 }
+				if = {
+					limit = { check_variable = { global.setup_stability_min < global.setup_stability_max } }
+
+					add_to_variable = { global.setup_stability_min = 5 }
+					clamp_variable = {
+						var = global.setup_stability_min
+						min = 0
+						max = global.setup_stability_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_min_minus_5_shift_click = {
+				set_variable = { global.setup_stability = 1 }
+				if = {
+					limit = { check_variable = { global.setup_stability_min > 0 } }
+
+					subtract_from_variable = { global.setup_stability_min = 10 }
+					clamp_variable = {
+						var = global.setup_stability_min
+						min = 0
+						max = global.setup_stability_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_min_plus_5_shift_click = {
+				set_variable = { global.setup_stability = 1 }
+				if = {
+					limit = { check_variable = { global.setup_stability_min < global.setup_stability_max } }
+
+					add_to_variable = { global.setup_stability_min = 10 }
+					clamp_variable = {
+						var = global.setup_stability_min
+						min = 0
+						max = global.setup_stability_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_minus_5_click = {
+				set_variable = { global.setup_stability = 1 }
+				if = {
+					limit = { check_variable = { global.setup_stability_max > global.setup_stability_min } }
+
+					subtract_from_variable = { global.setup_stability_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_plus_5_click = {
+				set_variable = { global.setup_stability = 1 }
+				if = {
+					limit = { check_variable = { global.setup_stability_max < 100 } }
+
+					add_to_variable = { global.setup_stability_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_minus_5_control_click = {
+				set_variable = { global.setup_stability = 1 }
+				if = {
+					limit = { check_variable = { global.setup_stability_max > global.setup_stability_min } }
+
+					subtract_from_variable = { global.setup_stability_max = 5 }
+					clamp_variable = {
+						var = global.setup_stability_max
+						min = global.setup_stability_min
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_plus_5_control_click = {
+				set_variable = { global.setup_stability = 1 }
+				if = {
+					limit = { check_variable = { global.setup_stability_max < 100 } }
+
+					add_to_variable = { global.setup_stability_max = 5 }
+					clamp_variable = {
+						var = global.setup_stability_max
+						min = global.setup_stability_min
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_minus_5_shift_click = {
+				set_variable = { global.setup_stability = 1 }
+				if = {
+					limit = { check_variable = { global.setup_stability_max > global.setup_stability_min } }
+
+					subtract_from_variable = { global.setup_stability_max = 10 }
+					clamp_variable = {
+						var = global.setup_stability_max
+						min = global.setup_stability_min
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_plus_5_shift_click = {
+				set_variable = { global.setup_stability = 1 }
+				if = {
+					limit = { check_variable = { global.setup_stability_max < 100 } }
+
+					add_to_variable = { global.setup_stability_max = 10 }
+					clamp_variable = {
+						var = global.setup_stability_max
+						min = global.setup_stability_min
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_4_min_minus_6_click = {
+				set_variable = { global.setup_war_support = 1 }
+				if = {
+					limit = { check_variable = { global.setup_war_support_min > 0 } }
+
+					subtract_from_variable = { global.setup_war_support_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_min_plus_6_click = {
+				set_variable = { global.setup_war_support = 1 }
+				if = {
+					limit = { check_variable = { global.setup_war_support_min < global.setup_war_support_max } }
+
+					add_to_variable = { global.setup_war_support_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_min_minus_6_control_click = {
+				set_variable = { global.setup_war_support = 1 }
+				if = {
+					limit = { check_variable = { global.setup_war_support_min > 0 } }
+
+					subtract_from_variable = { global.setup_war_support_min = 5 }
+					clamp_variable = {
+						var = global.setup_war_support_min
+						min = 0
+						max = global.setup_war_support_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_min_plus_6_control_click = {
+				set_variable = { global.setup_war_support = 1 }
+				if = {
+					limit = { check_variable = { global.setup_war_support_min < global.setup_war_support_max } }
+
+					add_to_variable = { global.setup_war_support_min = 5 }
+					clamp_variable = {
+						var = global.setup_war_support_min
+						min = 0
+						max = global.setup_war_support_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_min_minus_6_shift_click = {
+				set_variable = { global.setup_war_support = 1 }
+				if = {
+					limit = { check_variable = { global.setup_war_support_min > 0 } }
+
+					subtract_from_variable = { global.setup_war_support_min = 10 }
+					clamp_variable = {
+						var = global.setup_war_support_min
+						min = 0
+						max = global.setup_war_support_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_min_plus_6_shift_click = {
+				set_variable = { global.setup_war_support = 1 }
+				if = {
+					limit = { check_variable = { global.setup_war_support_min < global.setup_war_support_max } }
+
+					add_to_variable = { global.setup_war_support_min = 10 }
+					clamp_variable = {
+						var = global.setup_war_support_min
+						min = 0
+						max = global.setup_war_support_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_minus_6_click = {
+				set_variable = { global.setup_war_support = 1 }
+				if = {
+					limit = { check_variable = { global.setup_war_support_max > global.setup_war_support_min } }
+
+					subtract_from_variable = { global.setup_war_support_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_plus_6_click = {
+				set_variable = { global.setup_war_support = 1 }
+				if = {
+					limit = { check_variable = { global.setup_war_support_max < 100 } }
+
+					add_to_variable = { global.setup_war_support_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_minus_6_control_click = {
+				set_variable = { global.setup_war_support = 1 }
+				if = {
+					limit = { check_variable = { global.setup_war_support_max > global.setup_war_support_min } }
+
+					subtract_from_variable = { global.setup_war_support_max = 5 }
+					clamp_variable = {
+						var = global.setup_war_support_max
+						min = global.setup_war_support_min
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_plus_6_control_click = {
+				set_variable = { global.setup_war_support = 1 }
+				if = {
+					limit = { check_variable = { global.setup_war_support_max < 100 } }
+
+					add_to_variable = { global.setup_war_support_max = 5 }
+					clamp_variable = {
+						var = global.setup_war_support_max
+						min = global.setup_war_support_min
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_minus_6_shift_click = {
+				set_variable = { global.setup_war_support = 1 }
+				if = {
+					limit = { check_variable = { global.setup_war_support_max > global.setup_war_support_min } }
+
+					subtract_from_variable = { global.setup_war_support_max = 10 }
+					clamp_variable = {
+						var = global.setup_war_support_max
+						min = global.setup_war_support_min
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_plus_6_shift_click = {
+				set_variable = { global.setup_war_support = 1 }
+				if = {
+					limit = { check_variable = { global.setup_war_support_max < 100 } }
+
+					add_to_variable = { global.setup_war_support_max = 10 }
+					clamp_variable = {
+						var = global.setup_war_support_max
+						min = global.setup_war_support_min
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_7_click = {
+				set_variable = { global.setup_leader_traits = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_7_selected_click = {
+				set_variable = { global.setup_leader_traits = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_8_click = {
+				set_variable = { global.setup_intelligence_agency = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_8_selected_click = {
+				set_variable = { global.setup_intelligence_agency = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_minus_8_click = {
+				set_variable = { global.setup_intelligence_agency = 1 }
+				if = {
+					limit = { check_variable = { global.setup_intelligence_agency_chance > 0 } }
+
+					subtract_from_variable = { global.setup_intelligence_agency_chance = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_plus_8_click = {
+				set_variable = { global.setup_intelligence_agency = 1 }
+				if = {
+					limit = { check_variable = { global.setup_intelligence_agency_chance < 1208 } }
+
+					add_to_variable = { global.setup_intelligence_agency_chance = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_minus_8_control_click = {
+				set_variable = { global.setup_intelligence_agency = 1 }
+				if = {
+					limit = { check_variable = { global.setup_intelligence_agency_chance > 0 } }
+
+					subtract_from_variable = { global.setup_intelligence_agency_chance = 5 }
+					clamp_variable = {
+						var = global.setup_intelligence_agency_chance
+						min = 0
+						max = 1208
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_plus_8_control_click = {
+				set_variable = { global.setup_intelligence_agency = 1 }
+				if = {
+					limit = { check_variable = { global.setup_intelligence_agency_chance < 1208 } }
+
+					add_to_variable = { global.setup_intelligence_agency_chance = 5 }
+					clamp_variable = {
+						var = global.setup_intelligence_agency_chance
+						min = 0
+						max = 1208
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_minus_8_shift_click = {
+				set_variable = { global.setup_intelligence_agency = 1 }
+				if = {
+					limit = { check_variable = { global.setup_intelligence_agency_chance > 0 } }
+
+					subtract_from_variable = { global.setup_intelligence_agency_chance = 10 }
+					clamp_variable = {
+						var = global.setup_intelligence_agency_chance
+						min = 0
+						max = 1208
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_plus_8_shift_click = {
+				set_variable = { global.setup_intelligence_agency = 1 }
+				if = {
+					limit = { check_variable = { global.setup_intelligence_agency_chance < 1208 } }
+
+					add_to_variable = { global.setup_intelligence_agency_chance = 10 }
+					clamp_variable = {
+						var = global.setup_intelligence_agency_chance
+						min = 0
+						max = 1208
+					}
+				}
+			}
+		}
+	}
+
+	esicolor_welcome_screen_tab_1_page_5_content = {
+		context_type = player_context
+
+		window_name = "esicolor_welcome_screen_tab_1_page_5_slider"
+		parent_window_name = "esicolor_welcome_screen_container"
+
+		visible = {
+			is_ai = no
+			check_variable = { esicolor_welcome_screen = 1 }
+			check_variable = { esicolor_setup_screen = 4 }
+		}
+
+		triggers = {
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_1_selected_visible = {
+				check_variable = { global.setup_conscription_law = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_2_selected_visible = {
+				check_variable = { global.setup_trade_law = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_3_selected_visible = {
+				check_variable = { global.setup_economic_law = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_5_blocker_1_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+			esicolor_welcome_screen_tab_1_page_5_blocker_2_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+		}
+
+		effects = {
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_1_click = {
+				set_variable = { global.setup_conscription_law = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_1_selected_click = {
+				set_variable = { global.setup_conscription_law = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_5_min_minus_1_click = {
+				set_variable = { global.setup_conscription_law = 1 }
+				if = {
+					limit = { check_variable = { global.setup_conscription_law_min > 0 } }
+
+					subtract_from_variable = { global.setup_conscription_law_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_min_plus_1_click = {
+				set_variable = { global.setup_conscription_law = 1 }
+				if = {
+					limit = { check_variable = { global.setup_conscription_law_min < global.setup_conscription_law_max } }
+
+					add_to_variable = { global.setup_conscription_law_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_max_minus_1_click = {
+				set_variable = { global.setup_conscription_law = 1 }
+				if = {
+					limit = { check_variable = { global.setup_conscription_law_max > global.setup_conscription_law_min } }
+
+					subtract_from_variable = { global.setup_conscription_law_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_max_plus_1_click = {
+				set_variable = { global.setup_conscription_law = 1 }
+				if = {
+					limit = { check_variable = { global.setup_conscription_law_max < 6 } }
+
+					add_to_variable = { global.setup_conscription_law_max = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_2_click = {
+				set_variable = { global.setup_trade_law = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_2_selected_click = {
+				set_variable = { global.setup_trade_law = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_5_min_minus_2_click = {
+				set_variable = { global.setup_trade_law = 1 }
+				if = {
+					limit = { check_variable = { global.setup_trade_law_min > 0 } }
+
+					subtract_from_variable = { global.setup_trade_law_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_min_plus_2_click = {
+				set_variable = { global.setup_trade_law = 1 }
+				if = {
+					limit = { check_variable = { global.setup_trade_law_min < global.setup_trade_law_max } }
+
+					add_to_variable = { global.setup_trade_law_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_max_minus_2_click = {
+				set_variable = { global.setup_trade_law = 1 }
+				if = {
+					limit = { check_variable = { global.setup_trade_law_max > global.setup_trade_law_min } }
+
+					subtract_from_variable = { global.setup_trade_law_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_max_plus_2_click = {
+				set_variable = { global.setup_trade_law = 1 }
+				if = {
+					limit = { check_variable = { global.setup_trade_law_max < 3 } }
+
+					add_to_variable = { global.setup_trade_law_max = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_3_click = {
+				set_variable = { global.setup_economic_law = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_3_selected_click = {
+				set_variable = { global.setup_economic_law = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_5_min_minus_3_click = {
+				set_variable = { global.setup_economic_law = 1 }
+				if = {
+					limit = { check_variable = { global.setup_economic_law_min > 0 } }
+
+					subtract_from_variable = { global.setup_economic_law_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_min_plus_3_click = {
+				set_variable = { global.setup_economic_law = 1 }
+				if = {
+					limit = { check_variable = { global.setup_economic_law_min < global.setup_economic_law_max } }
+
+					add_to_variable = { global.setup_economic_law_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_max_minus_3_click = {
+				set_variable = { global.setup_economic_law = 1 }
+				if = {
+					limit = { check_variable = { global.setup_economic_law_max > global.setup_economic_law_min } }
+
+					subtract_from_variable = { global.setup_economic_law_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_max_plus_3_click = {
+				set_variable = { global.setup_economic_law = 1 }
+				if = {
+					limit = { check_variable = { global.setup_economic_law_max < 9 } }
+
+					add_to_variable = { global.setup_economic_law_max = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_5_max_minus_4_click = {
+				if = {
+					limit = { check_variable = { global.setup_advisors > -3 } }
+
+					subtract_from_variable = { global.setup_advisors = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_max_plus_4_click = {
+				if = {
+					limit = { check_variable = { global.setup_advisors < 0 } }
+
+					add_to_variable = { global.setup_advisors = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_5_max_minus_5_click = {
+				if = {
+					limit = { check_variable = { global.setup_mio_concern > -3 } }
+
+					subtract_from_variable = { global.setup_mio_concern = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_max_plus_5_click = {
+				if = {
+					limit = { check_variable = { global.setup_mio_concern < 2 } }
+
+					add_to_variable = { global.setup_mio_concern = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_5_max_minus_6_click = {
+				if = {
+					limit = { check_variable = { global.setup_military_advisors > -2 } }
+
+					subtract_from_variable = { global.setup_military_advisors = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_max_plus_6_click = {
+				if = {
+					limit = { check_variable = { global.setup_military_advisors < 2 } }
+
+					add_to_variable = { global.setup_military_advisors = 1 }
+				}
+			}
+		}
+	}
+
+	esicolor_welcome_screen_tab_1_page_6_content = {
+		context_type = player_context
+
+		window_name = "esicolor_welcome_screen_tab_1_page_6_slider"
+		parent_window_name = "esicolor_welcome_screen_container"
+
+		visible = {
+			is_ai = no
+			check_variable = { esicolor_welcome_screen = 1 }
+			check_variable = { esicolor_setup_screen = 5 }
+		}
+
+		triggers = {
+			esicolor_welcome_screen_tab_1_page_6_eaw_data_1_selected_visible = {
+				check_variable = { global.setup_research_slots = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_blocker_1_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+			esicolor_welcome_screen_tab_1_page_6_blocker_2_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+			esicolor_welcome_screen_tab_1_page_6_blocker_3_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+		}
+
+		effects = {
+			esicolor_welcome_screen_tab_1_page_6_eaw_data_1_click = {
+				set_variable = { global.setup_research_slots = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_6_eaw_data_1_selected_click = {
+				set_variable = { global.setup_research_slots = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_6_min_minus_1_click = {
+				set_variable = { global.setup_research_slots = 1 }
+				if = {
+					limit = { check_variable = { global.setup_research_slots_min > 1 } }
+
+					subtract_from_variable = { global.setup_research_slots_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_min_plus_1_click = {
+				set_variable = { global.setup_research_slots = 1 }
+				if = {
+					limit = { check_variable = { global.setup_research_slots_min < global.setup_research_slots_max } }
+
+					add_to_variable = { global.setup_research_slots_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_1_click = {
+				set_variable = { global.setup_research_slots = 1 }
+				if = {
+					limit = { check_variable = { global.setup_research_slots_max > global.setup_research_slots_min } }
+
+					subtract_from_variable = { global.setup_research_slots_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_1_click = {
+				set_variable = { global.setup_research_slots = 1 }
+				if = {
+					limit = { check_variable = { global.setup_research_slots_max < 5 } }
+
+					add_to_variable = { global.setup_research_slots_max = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_2_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_melee_weapons1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_melee_weapons1 = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_2_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_melee_weapons1 < 100 } }
+
+					add_to_variable = { global.setup_technology_melee_weapons1 = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_2_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_melee_weapons1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_melee_weapons1 = 5 }
+					clamp_variable = {
+						var = global.setup_technology_melee_weapons1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_2_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_melee_weapons1 < 100 } }
+
+					add_to_variable = { global.setup_technology_melee_weapons1 = 5 }
+					clamp_variable = {
+						var = global.setup_technology_melee_weapons1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_2_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_melee_weapons1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_melee_weapons1 = 10 }
+					clamp_variable = {
+						var = global.setup_technology_melee_weapons1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_2_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_melee_weapons1 < 100 } }
+
+					add_to_variable = { global.setup_technology_melee_weapons1 = 10 }
+					clamp_variable = {
+						var = global.setup_technology_melee_weapons1
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_3_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_basic_machine_tools > 0 } }
+
+					subtract_from_variable = { global.setup_technology_basic_machine_tools = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_3_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_basic_machine_tools < 100 } }
+
+					add_to_variable = { global.setup_technology_basic_machine_tools = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_3_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_basic_machine_tools > 0 } }
+
+					subtract_from_variable = { global.setup_technology_basic_machine_tools = 5 }
+					clamp_variable = {
+						var = global.setup_technology_basic_machine_tools
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_3_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_basic_machine_tools < 100 } }
+
+					add_to_variable = { global.setup_technology_basic_machine_tools = 5 }
+					clamp_variable = {
+						var = global.setup_technology_basic_machine_tools
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_3_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_basic_machine_tools > 0 } }
+
+					subtract_from_variable = { global.setup_technology_basic_machine_tools = 10 }
+					clamp_variable = {
+						var = global.setup_technology_basic_machine_tools
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_3_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_basic_machine_tools < 100 } }
+
+					add_to_variable = { global.setup_technology_basic_machine_tools = 10 }
+					clamp_variable = {
+						var = global.setup_technology_basic_machine_tools
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_4_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_transport_1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_transport_1 = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_4_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_transport_1 < 100 } }
+
+					add_to_variable = { global.setup_technology_transport_1 = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_4_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_transport_1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_transport_1 = 5 }
+					clamp_variable = {
+						var = global.setup_technology_transport_1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_4_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_transport_1 < 100 } }
+
+					add_to_variable = { global.setup_technology_transport_1 = 5 }
+					clamp_variable = {
+						var = global.setup_technology_transport_1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_4_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_transport_1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_transport_1 = 10 }
+					clamp_variable = {
+						var = global.setup_technology_transport_1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_4_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_transport_1 < 100 } }
+
+					add_to_variable = { global.setup_technology_transport_1 = 10 }
+					clamp_variable = {
+						var = global.setup_technology_transport_1
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_5_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_destroyer_1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_destroyer_1 = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_5_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_destroyer_1 < 100 } }
+
+					add_to_variable = { global.setup_technology_destroyer_1 = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_5_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_destroyer_1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_destroyer_1 = 5 }
+					clamp_variable = {
+						var = global.setup_technology_destroyer_1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_5_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_destroyer_1 < 100 } }
+
+					add_to_variable = { global.setup_technology_destroyer_1 = 5 }
+					clamp_variable = {
+						var = global.setup_technology_destroyer_1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_5_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_destroyer_1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_destroyer_1 = 10 }
+					clamp_variable = {
+						var = global.setup_technology_destroyer_1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_5_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_destroyer_1 < 100 } }
+
+					add_to_variable = { global.setup_technology_destroyer_1 = 10 }
+					clamp_variable = {
+						var = global.setup_technology_destroyer_1
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_6_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_support > 0 } }
+
+					subtract_from_variable = { global.setup_technology_tech_support = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_6_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_support < 100 } }
+
+					add_to_variable = { global.setup_technology_tech_support = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_6_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_support > 0 } }
+
+					subtract_from_variable = { global.setup_technology_tech_support = 5 }
+					clamp_variable = {
+						var = global.setup_technology_tech_support
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_6_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_support < 100 } }
+
+					add_to_variable = { global.setup_technology_tech_support = 5 }
+					clamp_variable = {
+						var = global.setup_technology_tech_support
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_6_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_support > 0 } }
+
+					subtract_from_variable = { global.setup_technology_tech_support = 10 }
+					clamp_variable = {
+						var = global.setup_technology_tech_support
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_6_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_support < 100 } }
+
+					add_to_variable = { global.setup_technology_tech_support = 10 }
+					clamp_variable = {
+						var = global.setup_technology_tech_support
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_7_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_engineer_recon > 0 } }
+
+					subtract_from_variable = { global.setup_technology_tech_engineer_recon = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_7_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_engineer_recon < 100 } }
+
+					add_to_variable = { global.setup_technology_tech_engineer_recon = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_7_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_engineer_recon > 0 } }
+
+					subtract_from_variable = { global.setup_technology_tech_engineer_recon = 5 }
+					clamp_variable = {
+						var = global.setup_technology_tech_engineer_recon
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_7_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_engineer_recon < 100 } }
+
+					add_to_variable = { global.setup_technology_tech_engineer_recon = 5 }
+					clamp_variable = {
+						var = global.setup_technology_tech_engineer_recon
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_7_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_engineer_recon > 0 } }
+
+					subtract_from_variable = { global.setup_technology_tech_engineer_recon = 10 }
+					clamp_variable = {
+						var = global.setup_technology_tech_engineer_recon
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_7_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_engineer_recon < 100 } }
+
+					add_to_variable = { global.setup_technology_tech_engineer_recon = 10 }
+					clamp_variable = {
+						var = global.setup_technology_tech_engineer_recon
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_8_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_pre_gw_artillery > 0 } }
+
+					subtract_from_variable = { global.setup_technology_pre_gw_artillery = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_8_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_pre_gw_artillery < 100 } }
+
+					add_to_variable = { global.setup_technology_pre_gw_artillery = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_8_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_pre_gw_artillery > 0 } }
+
+					subtract_from_variable = { global.setup_technology_pre_gw_artillery = 5 }
+					clamp_variable = {
+						var = global.setup_technology_pre_gw_artillery
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_8_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_pre_gw_artillery < 100 } }
+
+					add_to_variable = { global.setup_technology_pre_gw_artillery = 5 }
+					clamp_variable = {
+						var = global.setup_technology_pre_gw_artillery
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_8_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_pre_gw_artillery > 0 } }
+
+					subtract_from_variable = { global.setup_technology_pre_gw_artillery = 10 }
+					clamp_variable = {
+						var = global.setup_technology_pre_gw_artillery
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_8_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_pre_gw_artillery < 100 } }
+
+					add_to_variable = { global.setup_technology_pre_gw_artillery = 10 }
+					clamp_variable = {
+						var = global.setup_technology_pre_gw_artillery
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_9_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_airships > 0 } }
+
+					subtract_from_variable = { global.setup_technology_airships = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_9_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_airships < 100 } }
+
+					add_to_variable = { global.setup_technology_airships = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_9_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_airships > 0 } }
+
+					subtract_from_variable = { global.setup_technology_airships = 5 }
+					clamp_variable = {
+						var = global.setup_technology_airships
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_9_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_airships < 100 } }
+
+					add_to_variable = { global.setup_technology_airships = 5 }
+					clamp_variable = {
+						var = global.setup_technology_airships
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_9_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_airships > 0 } }
+
+					subtract_from_variable = { global.setup_technology_airships = 10 }
+					clamp_variable = {
+						var = global.setup_technology_airships
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_9_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_airships < 100 } }
+
+					add_to_variable = { global.setup_technology_airships = 10 }
+					clamp_variable = {
+						var = global.setup_technology_airships
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_10_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_infantry_weapons > 0 } }
+
+					subtract_from_variable = { global.setup_technology_infantry_weapons = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_10_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_infantry_weapons < 100 } }
+
+					add_to_variable = { global.setup_technology_infantry_weapons = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_10_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_infantry_weapons > 0 } }
+
+					subtract_from_variable = { global.setup_technology_infantry_weapons = 5 }
+					clamp_variable = {
+						var = global.setup_technology_infantry_weapons
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_10_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_infantry_weapons < 100 } }
+
+					add_to_variable = { global.setup_technology_infantry_weapons = 5 }
+					clamp_variable = {
+						var = global.setup_technology_infantry_weapons
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_10_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_infantry_weapons > 0 } }
+
+					subtract_from_variable = { global.setup_technology_infantry_weapons = 10 }
+					clamp_variable = {
+						var = global.setup_technology_infantry_weapons
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_10_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_infantry_weapons < 100 } }
+
+					add_to_variable = { global.setup_technology_infantry_weapons = 10 }
+					clamp_variable = {
+						var = global.setup_technology_infantry_weapons
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_11_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank > 0 } }
+
+					subtract_from_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_11_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank < 100 } }
+
+					add_to_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_11_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank > 0 } }
+
+					subtract_from_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank = 5 }
+					clamp_variable = {
+						var = global.setup_technology_trucks_train_gw_artillery_gwtank
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_11_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank < 100 } }
+
+					add_to_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank = 5 }
+					clamp_variable = {
+						var = global.setup_technology_trucks_train_gw_artillery_gwtank
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_11_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank > 0 } }
+
+					subtract_from_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank = 10 }
+					clamp_variable = {
+						var = global.setup_technology_trucks_train_gw_artillery_gwtank
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_11_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank < 100 } }
+
+					add_to_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank = 10 }
+					clamp_variable = {
+						var = global.setup_technology_trucks_train_gw_artillery_gwtank
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_12_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_electronic_mechanical_engineering > 0 } }
+
+					subtract_from_variable = { global.setup_technology_electronic_mechanical_engineering = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_12_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_electronic_mechanical_engineering < 100 } }
+
+					add_to_variable = { global.setup_technology_electronic_mechanical_engineering = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_12_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_electronic_mechanical_engineering > 0 } }
+
+					subtract_from_variable = { global.setup_technology_electronic_mechanical_engineering = 5 }
+					clamp_variable = {
+						var = global.setup_technology_electronic_mechanical_engineering
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_12_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_electronic_mechanical_engineering < 100 } }
+
+					add_to_variable = { global.setup_technology_electronic_mechanical_engineering = 5 }
+					clamp_variable = {
+						var = global.setup_technology_electronic_mechanical_engineering
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_12_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_electronic_mechanical_engineering > 0 } }
+
+					subtract_from_variable = { global.setup_technology_electronic_mechanical_engineering = 10 }
+					clamp_variable = {
+						var = global.setup_technology_electronic_mechanical_engineering
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_12_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_electronic_mechanical_engineering < 100 } }
+
+					add_to_variable = { global.setup_technology_electronic_mechanical_engineering = 10 }
+					clamp_variable = {
+						var = global.setup_technology_electronic_mechanical_engineering
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_13_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_construction1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_construction1 = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_13_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_construction1 < 100 } }
+
+					add_to_variable = { global.setup_technology_construction1 = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_13_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_construction1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_construction1 = 5 }
+					clamp_variable = {
+						var = global.setup_technology_construction1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_13_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_construction1 < 100 } }
+
+					add_to_variable = { global.setup_technology_construction1 = 5 }
+					clamp_variable = {
+						var = global.setup_technology_construction1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_13_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_construction1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_construction1 = 10 }
+					clamp_variable = {
+						var = global.setup_technology_construction1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_13_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_construction1 < 100 } }
+
+					add_to_variable = { global.setup_technology_construction1 = 10 }
+					clamp_variable = {
+						var = global.setup_technology_construction1
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_14_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_fuel_silos > 0 } }
+
+					subtract_from_variable = { global.setup_technology_fuel_silos = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_14_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_fuel_silos < 100 } }
+
+					add_to_variable = { global.setup_technology_fuel_silos = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_14_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_fuel_silos > 0 } }
+
+					subtract_from_variable = { global.setup_technology_fuel_silos = 5 }
+					clamp_variable = {
+						var = global.setup_technology_fuel_silos
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_14_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_fuel_silos < 100 } }
+
+					add_to_variable = { global.setup_technology_fuel_silos = 5 }
+					clamp_variable = {
+						var = global.setup_technology_fuel_silos
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_14_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_fuel_silos > 0 } }
+
+					subtract_from_variable = { global.setup_technology_fuel_silos = 10 }
+					clamp_variable = {
+						var = global.setup_technology_fuel_silos
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_14_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_fuel_silos < 100 } }
+
+					add_to_variable = { global.setup_technology_fuel_silos = 10 }
+					clamp_variable = {
+						var = global.setup_technology_fuel_silos
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_15_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_submarine1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_submarine1 = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_15_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_submarine1 < 100 } }
+
+					add_to_variable = { global.setup_technology_submarine1 = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_15_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_submarine1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_submarine1 = 5 }
+					clamp_variable = {
+						var = global.setup_technology_submarine1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_15_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_submarine1 < 100 } }
+
+					add_to_variable = { global.setup_technology_submarine1 = 5 }
+					clamp_variable = {
+						var = global.setup_technology_submarine1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_15_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_submarine1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_submarine1 = 10 }
+					clamp_variable = {
+						var = global.setup_technology_submarine1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_15_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_submarine1 < 100 } }
+
+					add_to_variable = { global.setup_technology_submarine1 = 10 }
+					clamp_variable = {
+						var = global.setup_technology_submarine1
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_16_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_early_fighter > 0 } }
+
+					subtract_from_variable = { global.setup_technology_early_fighter = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_16_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_early_fighter < 100 } }
+
+					add_to_variable = { global.setup_technology_early_fighter = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_16_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_early_fighter > 0 } }
+
+					subtract_from_variable = { global.setup_technology_early_fighter = 5 }
+					clamp_variable = {
+						var = global.setup_technology_early_fighter
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_16_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_early_fighter < 100 } }
+
+					add_to_variable = { global.setup_technology_early_fighter = 5 }
+					clamp_variable = {
+						var = global.setup_technology_early_fighter
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_16_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_early_fighter > 0 } }
+
+					subtract_from_variable = { global.setup_technology_early_fighter = 10 }
+					clamp_variable = {
+						var = global.setup_technology_early_fighter
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_16_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_early_fighter < 100 } }
+
+					add_to_variable = { global.setup_technology_early_fighter = 10 }
+					clamp_variable = {
+						var = global.setup_technology_early_fighter
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_17_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_early_bomber > 0 } }
+
+					subtract_from_variable = { global.setup_technology_early_bomber = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_17_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_early_bomber < 100 } }
+
+					add_to_variable = { global.setup_technology_early_bomber = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_17_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_early_bomber > 0 } }
+
+					subtract_from_variable = { global.setup_technology_early_bomber = 5 }
+					clamp_variable = {
+						var = global.setup_technology_early_bomber
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_17_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_early_bomber < 100 } }
+
+					add_to_variable = { global.setup_technology_early_bomber = 5 }
+					clamp_variable = {
+						var = global.setup_technology_early_bomber
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_17_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_early_bomber > 0 } }
+
+					subtract_from_variable = { global.setup_technology_early_bomber = 10 }
+					clamp_variable = {
+						var = global.setup_technology_early_bomber
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_17_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_early_bomber < 100 } }
+
+					add_to_variable = { global.setup_technology_early_bomber = 10 }
+					clamp_variable = {
+						var = global.setup_technology_early_bomber
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_18_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_racial_tech > 0 } }
+
+					subtract_from_variable = { global.setup_technology_racial_tech = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_18_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_racial_tech < 100 } }
+
+					add_to_variable = { global.setup_technology_racial_tech = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_18_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_racial_tech > 0 } }
+
+					subtract_from_variable = { global.setup_technology_racial_tech = 5 }
+					clamp_variable = {
+						var = global.setup_technology_racial_tech
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_18_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_racial_tech < 100 } }
+
+					add_to_variable = { global.setup_technology_racial_tech = 5 }
+					clamp_variable = {
+						var = global.setup_technology_racial_tech
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_18_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_racial_tech > 0 } }
+
+					subtract_from_variable = { global.setup_technology_racial_tech = 10 }
+					clamp_variable = {
+						var = global.setup_technology_racial_tech
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_18_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_racial_tech < 100 } }
+
+					add_to_variable = { global.setup_technology_racial_tech = 10 }
+					clamp_variable = {
+						var = global.setup_technology_racial_tech
+						min = 0
+						max = 100
+					}
+				}
+			}
+		}
+	}
+
+	esicolor_welcome_screen_tab_1_page_7_content = {
+		context_type = player_context
+
+		window_name = "esicolor_welcome_screen_tab_1_page_7_slider"
+		parent_window_name = "esicolor_welcome_screen_container"
+
+		visible = {
+			is_ai = no
+			check_variable = { esicolor_welcome_screen = 1 }
+			check_variable = { esicolor_setup_screen = 6 }
+		}
+
+		triggers = {
+			esicolor_welcome_screen_tab_1_page_7_eaw_data_4_selected_visible = {
+				check_variable = { global.setup_resource_prospecting = 1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_7_eaw_data_5_selected_visible = {
+				check_variable = { global.setup_foreign_generals = 1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_7_eaw_data_6_selected_visible = {
+				check_variable = { global.setup_state_management = 1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_7_blocker_1_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+			esicolor_welcome_screen_tab_1_page_7_blocker_2_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+		}
+
+		effects = {
+			esicolor_welcome_screen_tab_1_page_7_max_minus_1_click = {
+				if = {
+					limit = { check_variable = { global.setup_starting_regions > 0 } }
+
+					subtract_from_variable = { global.setup_starting_regions = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_7_max_plus_1_click = {
+				if = {
+					limit = { check_variable = { global.setup_starting_regions < 1 } }
+
+					add_to_variable = { global.setup_starting_regions = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_7_max_minus_2_click = {
+				if = {
+					limit = { check_variable = { global.setup_islands > 0 } }
+
+					subtract_from_variable = { global.setup_islands = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_7_max_plus_2_click = {
+				if = {
+					limit = { check_variable = { global.setup_islands < 3 } }
+
+					add_to_variable = { global.setup_islands = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_7_max_minus_3_click = {
+				if = {
+					limit = { check_variable = { global.setup_formables > 0 } }
+
+					subtract_from_variable = { global.setup_formables = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_7_max_plus_3_click = {
+				if = {
+					limit = { check_variable = { global.setup_formables < 3 } }
+
+					add_to_variable = { global.setup_formables = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_7_eaw_data_4_click = {
+				set_variable = { global.setup_resource_prospecting = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_7_eaw_data_4_selected_click = {
+				set_variable = { global.setup_resource_prospecting = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_7_eaw_data_5_click = {
+				set_variable = { global.setup_foreign_generals = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_7_eaw_data_5_selected_click = {
+				set_variable = { global.setup_foreign_generals = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_7_eaw_data_6_click = {
+				set_variable = { global.setup_state_management = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_7_eaw_data_6_selected_click = {
+				set_variable = { global.setup_state_management = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_7_max_minus_7_click = {
+				if = {
+					limit = { check_variable = { global.setup_claim_decision > 0 } }
+
+					subtract_from_variable = { global.setup_claim_decision = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_7_max_plus_7_click = {
+				if = {
+					limit = { check_variable = { global.setup_claim_decision < 2 } }
+
+					add_to_variable = { global.setup_claim_decision = 1 }
+				}
+			}
+		}
+	}
+
+	esicolor_welcome_screen_tab_2_content = {
+		context_type = player_context
+
+		window_name = "esicolor_welcome_screen_tab_2_slider"
+		parent_window_name = "esicolor_welcome_screen_container"
+
+		visible = {
+			is_ai = no
+			check_variable = { esicolor_welcome_screen = 2 }
+		}
+	}
+
+	esicolor_welcome_screen_tab_3_content = {
+		context_type = player_context
+
+		window_name = "esicolor_welcome_screen_tab_3_slider"
+		parent_window_name = "esicolor_welcome_screen_container"
+
+		visible = {
+			is_ai = no
+			check_variable = { esicolor_welcome_screen = 3 }
+		}
+	}
+
+	esicolor_welcome_screen_tab_4_content = {
+		context_type = player_context
+
+		window_name = "esicolor_welcome_screen_tab_4_slider"
+		parent_window_name = "esicolor_welcome_screen_container"
+
+		visible = {
+			is_ai = no
+			check_variable = { esicolor_welcome_screen = 4 }
+		}
+	}
+
+	esicolor_welcome_screen_tab_5_content = {
+		context_type = player_context
+
+		window_name = "esicolor_welcome_screen_tab_5_slider"
+		parent_window_name = "esicolor_welcome_screen_container"
+
+		visible = {
+			is_ai = no
+			check_variable = { esicolor_welcome_screen = 5 }
+		}
+		
+		triggers = {
+			esicolor_welcome_screen_tab_5_eaw_data_1_selected_visible = {
+				has_country_flag = esicolor_credits_show_eaw
+			}
+
+			tab_5_text_esicolor_visible = {
+				NOT = { has_country_flag = esicolor_credits_show_eaw }
+			}
+			tab_5_text_eaw_visible = {
+				has_country_flag = esicolor_credits_show_eaw
+			}
+		}
+		
+		effects = {
+			esicolor_welcome_screen_tab_5_eaw_data_1_click = {
+				set_country_flag = esicolor_credits_show_eaw
+			}
+			esicolor_welcome_screen_tab_5_eaw_data_1_selected_click = {
+				clr_country_flag = esicolor_credits_show_eaw
+			}
+		}
+	}
+}

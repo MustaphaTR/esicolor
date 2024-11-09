@@ -1,0 +1,4375 @@
+guiTypes = {
+	containerWindowType = {
+		name = "esicolor_welcome_screen_toggle_container"
+		position = { x = 0 y = 0 }
+
+		buttonType = {
+			name = "open_welcome_screen"
+			quadTextureSprite = "GFX_esicolor_welcome_screen_btn"
+			pdx_tooltip = "esicolor_welcome_screen_open"
+			position = { x = 420 y = 3 }
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_welcome_screen_tab_1_slider"
+		position = { x=33 y=205 }
+		size = { width=1388 height=443 }
+		verticalScrollbar = "right_vertical_slider"
+		margin = { top = 4 bottom = 4 }
+		smooth_scrolling = yes
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_blank"
+		}
+
+		buttonType = {
+			name = "esicolor_setup_button_previous"
+			position = { x = -572 y = 368 }
+			quadTextureSprite = "GFX_browser_back"
+			pdx_tooltip = "esicolor_welcome_screen_setup_previous"
+			Orientation = center_up
+		}
+		buttonType = {
+			name = "esicolor_setup_button_next"
+			position = { x = 519 y = 368 }
+			quadTextureSprite = "GFX_browser_forward"
+			pdx_tooltip = "esicolor_welcome_screen_setup_next"
+			Orientation = center_up
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_welcome_screen_tab_1_page_1_slider"
+		position = { x=33 y=205 }
+		size = { width=1388 height=357 }
+		margin = { top = 4 bottom = 4 }
+		clipping = no
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_blank"
+		}
+
+		instantTextboxType = {
+			name = "tab_1_text"
+			position = { x=0 y=0 }
+			font = "hoi_20bs"
+			text = "esicolor_welcome_screen_tab_1_text"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+			scrollbartype = "standardtext_slider"
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "setup_overview_column_1"
+			position = { x=0 y=80 }
+			font = "hoi_20bs"
+			text = "esicolor_welcome_screen_tab_1_overview_column_1"
+			maxWidth = 275
+			maxHeight = 432
+			#fixedsize = yes
+			scrollbartype = "standardtext_slider"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "setup_overview_column_2"
+			position = { x=275 y=80 }
+			font = "hoi_20bs"
+			text = "esicolor_welcome_screen_tab_1_overview_column_2"
+			maxWidth = 275
+			maxHeight = 432
+			#fixedsize = yes
+			scrollbartype = "standardtext_slider"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "setup_overview_column_3"
+			position = { x=550 y=80 }
+			font = "hoi_20bs"
+			text = "esicolor_welcome_screen_tab_1_overview_column_3"
+			maxWidth = 275
+			maxHeight = 432
+			#fixedsize = yes
+			scrollbartype = "standardtext_slider"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "setup_overview_column_4"
+			position = { x=815 y=80 }
+			font = "hoi_20bs"
+			text = "esicolor_welcome_screen_tab_1_overview_column_4"
+			maxWidth = 285
+			maxHeight = 432
+			#fixedsize = yes
+			scrollbartype = "standardtext_slider"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "setup_overview_column_5"
+			position = { x=1100 y=80 }
+			font = "hoi_20bs"
+			text = "esicolor_welcome_screen_tab_1_overview_column_5"
+			maxWidth = 275
+			maxHeight = 432
+			#fixedsize = yes
+			scrollbartype = "standardtext_slider"
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "preset_button_1"
+			position = { x = -510 y = 360 }
+			quadTextureSprite = "GFX_esicolor_setup_preset_button"
+			text = "esicolor_welcome_screen_preset_1"
+			font = "hoi_20bs"
+			Orientation = center_up
+		}
+		buttonType = {
+			name = "preset_button_1_selected"
+			position = { x = -510 y = 360 }
+			quadTextureSprite = "GFX_esicolor_setup_preset_button"
+			frame = 2
+			text = "esicolor_welcome_screen_preset_1"
+			font = "hoi_20bs"
+			Orientation = center_up
+		}
+
+		buttonType = {
+			name = "preset_button_2"
+			position = { x = -254 y = 360 }
+			quadTextureSprite = "GFX_esicolor_setup_preset_button"
+			text = "esicolor_welcome_screen_preset_2"
+			font = "hoi_20bs"
+			Orientation = center_up
+		}
+		buttonType = {
+			name = "preset_button_2_selected"
+			position = { x = -254 y = 360 }
+			quadTextureSprite = "GFX_esicolor_setup_preset_button"
+			frame = 2
+			text = "esicolor_welcome_screen_preset_2"
+			font = "hoi_20bs"
+			Orientation = center_up
+		}
+
+		buttonType = {
+			name = "preset_button_3"
+			position = { x = 2 y = 360 }
+			quadTextureSprite = "GFX_esicolor_setup_preset_button"
+			text = "esicolor_welcome_screen_preset_3"
+			font = "hoi_20bs"
+			Orientation = center_up
+		}
+		buttonType = {
+			name = "preset_button_3_selected"
+			position = { x = 2 y = 360 }
+			quadTextureSprite = "GFX_esicolor_setup_preset_button"
+			frame = 2
+			text = "esicolor_welcome_screen_preset_3"
+			font = "hoi_20bs"
+			Orientation = center_up
+		}
+
+		buttonType = {
+			name = "preset_button_4"
+			position = { x = 254 y = 360 }
+			quadTextureSprite = "GFX_esicolor_setup_preset_button"
+			text = "esicolor_welcome_screen_preset_4"
+			font = "hoi_20bs"
+			Orientation = center_up
+		}
+		buttonType = {
+			name = "preset_button_4_selected"
+			position = { x = 254 y = 360 }
+			quadTextureSprite = "GFX_esicolor_setup_preset_button"
+			frame = 2
+			text = "esicolor_welcome_screen_preset_4"
+			font = "hoi_20bs"
+			Orientation = center_up
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_1_blocker"
+			position = { x=-520 y=328 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_2"
+			Orientation = center_up
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_welcome_screen_tab_1_page_2_slider"
+		position = { x=33 y=205 }
+		size = { width=1388 height=357 }
+		margin = { top = 4 bottom = 4 }
+		clipping = no
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_blank"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_icon_1"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_buildings_strip"
+			frame = 3
+			pdx_tooltip = "esicolor_setup_infrastructure_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_name_1"
+			position = { x=50 y=11 }
+			font = "hoi_24header"
+			text = "infrastructure"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_1"
+			position = { x = 320 y = 1 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_1_selected"
+			position = { x = 320 y = 1 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_text_1"
+			position = { x=371 y=11 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_bg_1"
+			position = { x = 434 y = 6 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_num_1"
+			position = { x=434 y=11 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_infrastructure_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_minus_1"
+			position = { x = 411 y = 7 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_plus_1"
+			position = { x = 482 y = 7 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_text_1"
+			position = { x=523 y=11 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_bg_1"
+			position = { x = 586 y = 6 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_num_1"
+			position = { x=586 y=11 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_infrastructure_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_minus_1"
+			position = { x = 563 y = 7 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_plus_1"
+			position = { x = 634 y = 7 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_icon_2"
+			position = { x = 694 y = 0 }
+			quadTextureSprite = "GFX_buildings_strip"
+			frame = 5
+			pdx_tooltip = "esicolor_setup_air_base_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_name_2"
+			position = { x=744 y=11 }
+			font = "hoi_24header"
+			text = "air_base_plural"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_2"
+			position = { x = 1014 y = 1 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_2_selected"
+			position = { x = 1014 y = 1 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_text_2"
+			position = { x=1065 y=11 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_bg_2"
+			position = { x = 1128 y = 6 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_num_2"
+			position = { x=1128 y=11 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_air_bases_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_minus_2"
+			position = { x = 1105 y = 7 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_plus_2"
+			position = { x = 1176 y = 7 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_text_2"
+			position = { x=1217 y=11 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_bg_2"
+			position = { x = 1280 y = 6 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_num_2"
+			position = { x=1280 y=11 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_air_bases_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_minus_2"
+			position = { x = 1257 y = 7 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_plus_2"
+			position = { x = 1328 y = 7 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_icon_3"
+			position = { x = 0 y = 70 }
+			quadTextureSprite = "GFX_buildings_strip"
+			frame = 9
+			pdx_tooltip = "esicolor_setup_anti_air_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_name_3"
+			position = { x=50 y=81 }
+			font = "hoi_24header"
+			text = "anti_air_building"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_3"
+			position = { x = 320 y = 71 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_3_selected"
+			position = { x = 320 y = 71 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_text_3"
+			position = { x=371 y=81 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_bg_3"
+			position = { x = 434 y = 76 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_num_3"
+			position = { x=434 y=81 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_anti_air_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_minus_3"
+			position = { x = 411 y = 77 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_plus_3"
+			position = { x = 482 y = 77 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_text_3"
+			position = { x=523 y=81 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_bg_3"
+			position = { x = 586 y = 76 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_num_3"
+			position = { x=586 y=81 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_anti_air_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_minus_3"
+			position = { x = 563 y = 77 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_plus_3"
+			position = { x = 634 y = 77 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_icon_4"
+			position = { x = 694 y = 70 }
+			quadTextureSprite = "GFX_buildings_strip"
+			frame = 11
+			pdx_tooltip = "esicolor_setup_radar_stations_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_name_4"
+			position = { x=744 y=81 }
+			font = "hoi_24header"
+			text = "radar_station"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_text_4"
+			position = { x=1198 y=81 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_chance"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_bg_4"
+			position = { x = 1280 y = 76 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_num_4"
+			position = { x=1280 y=81 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_radar_stations_chance"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_minus_4"
+			position = { x = 1257 y = 77 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable_percentage"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_plus_4"
+			position = { x = 1328 y = 77 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable_percentage"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_icon_5"
+			position = { x = 0 y = 140 }
+			quadTextureSprite = "GFX_buildings_strip"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_civilian_factories_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_name_5"
+			position = { x=50 y=151 }
+			font = "hoi_24header"
+			text = "industrial_complex_plural"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_5"
+			position = { x = 320 y = 141 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_5_selected"
+			position = { x = 320 y = 141 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_text_5"
+			position = { x=371 y=151 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_bg_5"
+			position = { x = 434 y = 146 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_num_5"
+			position = { x=434 y=151 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_civilian_factories_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_minus_5"
+			position = { x = 411 y = 147 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_plus_5"
+			position = { x = 482 y = 147 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_text_5"
+			position = { x=523 y=151 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_bg_5"
+			position = { x = 586 y = 146 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_num_5"
+			position = { x=586 y=151 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_civilian_factories_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_minus_5"
+			position = { x = 563 y = 147 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_plus_5"
+			position = { x = 634 y = 147 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_icon_6"
+			position = { x = 694 y = 140 }
+			quadTextureSprite = "GFX_buildings_strip"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_military_factories_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_name_6"
+			position = { x=744 y=151 }
+			font = "hoi_24header"
+			text = "arms_factory_plural"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_6"
+			position = { x = 1014 y = 141 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_6_selected"
+			position = { x = 1014 y = 141 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_text_6"
+			position = { x=1065 y=151 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_bg_6"
+			position = { x = 1128 y = 146 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_num_6"
+			position = { x=1128 y=151 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_military_factories_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_minus_6"
+			position = { x = 1105 y = 147 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_plus_6"
+			position = { x = 1176 y = 147 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_text_6"
+			position = { x=1217 y=151 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_bg_6"
+			position = { x = 1280 y = 146 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_num_6"
+			position = { x=1280 y=151 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_military_factories_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_minus_6"
+			position = { x = 1257 y = 147 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_plus_6"
+			position = { x = 1328 y = 147 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_icon_7"
+			position = { x = 0 y = 210 }
+			quadTextureSprite = "GFX_buildings_strip"
+			frame = 4
+			pdx_tooltip = "esicolor_setup_dockyards_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_name_7"
+			position = { x=50 y=221 }
+			font = "hoi_24header"
+			text = "dockyard_plural"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_7"
+			position = { x = 320 y = 211 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_7_selected"
+			position = { x = 320 y = 211 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_text_7"
+			position = { x=371 y=221 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_bg_7"
+			position = { x = 434 y = 216 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_num_7"
+			position = { x=434 y=221 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_dockyards_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_minus_7"
+			position = { x = 411 y = 217 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_plus_7"
+			position = { x = 482 y = 217 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_text_7"
+			position = { x=523 y=221 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_bg_7"
+			position = { x = 586 y = 216 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_num_7"
+			position = { x=586 y=221 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_dockyards_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_minus_7"
+			position = { x = 563 y = 217 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_plus_7"
+			position = { x = 634 y = 217 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_icon_8"
+			position = { x = 694 y = 210 }
+			quadTextureSprite = "GFX_buildings_strip"
+			frame = 10
+			pdx_tooltip = "esicolor_setup_synthetic_refineries_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_name_8"
+			position = { x=744 y=221 }
+			font = "hoi_24header"
+			text = "synthetic_refinery"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_8"
+			position = { x = 1014 y = 211 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_8_selected"
+			position = { x = 1014 y = 211 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_text_8"
+			position = { x=1065 y=221 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_bg_8"
+			position = { x = 1128 y = 216 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_num_8"
+			position = { x=1128 y=221 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_synthetic_refineries_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_minus_8"
+			position = { x = 1105 y = 217 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_min_plus_8"
+			position = { x = 1176 y = 217 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_text_8"
+			position = { x=1217 y=221 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_bg_8"
+			position = { x = 1280 y = 216 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_num_8"
+			position = { x=1280 y=221 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_synthetic_refineries_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_minus_8"
+			position = { x = 1257 y = 217 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_plus_8"
+			position = { x = 1328 y = 217 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_icon_9"
+			position = { x = 0 y = 280 }
+			quadTextureSprite = "GFX_buildings_strip"
+			frame = 14
+			pdx_tooltip = "esicolor_setup_fuel_silos_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_name_9"
+			position = { x=50 y=291 }
+			font = "hoi_24header"
+			text = "fuel_silo"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_9"
+			position = { x = 320 y = 281 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_9_selected"
+			position = { x = 320 y = 281 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_text_9"
+			position = { x=502 y=291 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_chance"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_bg_9"
+			position = { x = 586 y = 286 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_num_9"
+			position = { x=586 y=291 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_fuel_silos_chance_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_minus_9"
+			position = { x = 563 y = 287 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable_percentage"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_max_plus_9"
+			position = { x = 634 y = 287 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable_percentage"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_icon_10"
+			position = { x = 694 y = 280 }
+			quadTextureSprite = "GFX_buildings_strip"
+			frame = 7
+			pdx_tooltip = "esicolor_setup_forts_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_name_10"
+			position = { x=744 y=291 }
+			font = "hoi_24header"
+			text = "esicolor_setup_forts"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_10"
+			position = { x = 1014 y = 281 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 3
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_disabled_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_eaw_data_10_selected"
+			position = { x = 1014 y = 281 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_disabled_tt"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_blocker_1"
+			position = { x=70 y=0 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_1"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_2_blocker_2"
+			position = { x=764 y=0 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_1"
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_welcome_screen_tab_1_page_3_slider"
+		position = { x=33 y=205 }
+		size = { width=1388 height=357 }
+		margin = { top = 4 bottom = 4 }
+		clipping = no
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_blank"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_icon_1"
+			position = { x = 0 y = 9 }
+			quadTextureSprite = "GFX_esicolor_setup_building_bg_icons"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_state_category_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_name_1"
+			position = { x=50 y=18 }
+			font = "hoi_24header"
+			text = "esicolor_setup_state_category"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_eaw_data_1"
+			position = { x = 320 y = 11 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_eaw_data_1_selected"
+			position = { x = 320 y = 11 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_text_1"
+			position = { x=1087 y=6 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_bg_1"
+			position = { x = 1150 y = 1 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_num_1"
+			position = { x=1150 y=6 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_state_category_min_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_minus_1"
+			position = { x = 1127 y = 2 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_text"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_plus_1"
+			position = { x = 1328 y = 2 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_text"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_text_1"
+			position = { x=1087 y=34 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_bg_1"
+			position = { x = 1150 y = 29 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_num_1"
+			position = { x=1150 y=34 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_state_category_max_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_minus_1"
+			position = { x = 1127 y = 30 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_text"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_plus_1"
+			position = { x = 1328 y = 30 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_text"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_icon_2"
+			position = { x = 0 y = 79 }
+			quadTextureSprite = "GFX_esicolor_setup_building_bg_icons"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_province_modifiers_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_name_2"
+			position = { x=50 y=88 }
+			font = "hoi_24header"
+			text = "esicolor_setup_province_modifiers"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_eaw_data_2"
+			position = { x = 320 y = 81 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 3
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_disabled_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_eaw_data_2_selected"
+			position = { x = 320 y = 81 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_disabled_tt"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_icon_3"
+			position = { x = 694 y = 79 }
+			quadTextureSprite = "GFX_esicolor_setup_building_bg_icons"
+			frame = 3
+			pdx_tooltip = "esicolor_setup_population_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_name_3"
+			position = { x=744 y=88 }
+			font = "hoi_24header"
+			text = "esicolor_setup_population"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_eaw_data_3"
+			position = { x = 1014 y = 81 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_eaw_data_3_selected"
+			position = { x = 1014 y = 81 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_shuffle_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_eaw_data_3_shuffle"
+			position = { x = 1014 y = 81 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 4
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_shuffle_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_text_3"
+			position = { x=1087 y=76 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_bg_3"
+			position = { x = 1150 y = 71 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_num_3"
+			position = { x=1150 y=76 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_population_min_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_minus_3"
+			position = { x = 1127 y = 72 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable_population"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_plus_3"
+			position = { x = 1328 y = 72 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable_population"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_text_3"
+			position = { x=1087 y=104 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_bg_3"
+			position = { x = 1150 y = 99 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_num_3"
+			position = { x=1150 y=104 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_population_max_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_minus_3"
+			position = { x = 1127 y = 100 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable_population"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_plus_3"
+			position = { x = 1328 y = 100 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable_population"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_icon_4"
+			position = { x = 0 y = 149 }
+			quadTextureSprite = "GFX_esicolor_setup_building_bg_icons"
+			frame = 4
+			pdx_tooltip = "esicolor_setup_resources_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_name_4"
+			position = { x=50 y=158 }
+			font = "hoi_24header"
+			text = "esicolor_setup_resources"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_eaw_data_4"
+			position = { x = 320 y = 151 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_eaw_data_4_selected"
+			position = { x = 320 y = 151 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_name_5"
+			position = { x=744 y=158 }
+			font = "hoi_24header"
+			text = "esicolor_setup_resource_types"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_text_5"
+			position = { x=1065 y=160 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_bg_5"
+			position = { x = 1128 y = 155 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_num_5"
+			position = { x=1128 y=160 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_types_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_minus_5"
+			position = { x = 1105 y = 156 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_plus_5"
+			position = { x = 1176 y = 156 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_text_5"
+			position = { x=1217 y=160 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_bg_5"
+			position = { x = 1280 y = 155 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_num_5"
+			position = { x=1280 y=160 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_types_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_minus_5"
+			position = { x = 1257 y = 156 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_plus_5"
+			position = { x = 1328 y = 156 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_icon_6"
+			position = { x = 129 y = 200 }
+			quadTextureSprite = "GFX_resources_strip"
+			frame = 1
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_name_6"
+			position = { x=116 y=225 }
+			font = "hoi_24header"
+			text = "state_resource_oil"
+			format = center
+			maxWidth = 50
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_text_6"
+			position = { x=116 y=250 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+			format = center
+			maxWidth = 50
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_bg_6"
+			position = { x = 114 y = 270 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_num_6"
+			position = { x=114 y=275 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_oil_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_minus_6"
+			position = { x = 91 y = 271 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_plus_6"
+			position = { x = 162 y = 271 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_text_6"
+			position = { x=116 y=301 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+			format = center
+			maxWidth = 50
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_bg_6"
+			position = { x = 114 y = 321 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_num_6"
+			position = { x=114 y=326 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_oil_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_minus_6"
+			position = { x = 91 y = 322 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_plus_6"
+			position = { x = 162 y = 322 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_icon_7"
+			position = { x = 311 y = 200 }
+			quadTextureSprite = "GFX_resources_strip"
+			frame = 3
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_name_7"
+			position = { x=278 y=225 }
+			font = "hoi_24header"
+			text = "state_resource_rubber"
+			format = center
+			maxWidth = 90
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_text_7"
+			position = { x=298 y=250 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+			format = center
+			maxWidth = 50
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_bg_7"
+			position = { x = 296 y = 270 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_num_7"
+			position = { x=296 y=275 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_rubber_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_minus_7"
+			position = { x = 273 y = 271 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_plus_7"
+			position = { x = 344 y = 271 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_text_7"
+			position = { x=298 y=301 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+			format = center
+			maxWidth = 50
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_bg_7"
+			position = { x = 296 y = 321 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_num_7"
+			position = { x=296 y=326 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_rubber_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_minus_7"
+			position = { x = 273 y = 322 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_plus_7"
+			position = { x = 344 y = 322 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_icon_8"
+			position = { x = 492 y = 200 }
+			quadTextureSprite = "GFX_resources_strip"
+			frame = 5
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_name_8"
+			position = { x=459 y=225 }
+			font = "hoi_24header"
+			text = "state_resource_steel"
+			format = center
+			maxWidth = 90
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_text_8"
+			position = { x=479 y=250 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+			format = center
+			maxWidth = 50
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_bg_8"
+			position = { x = 477 y = 270 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_num_8"
+			position = { x=477 y=275 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_steel_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_minus_8"
+			position = { x = 454 y = 271 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_plus_8"
+			position = { x = 525 y = 271 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_text_8"
+			position = { x=479 y=301 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+			format = center
+			maxWidth = 50
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_bg_8"
+			position = { x = 477 y = 321 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_num_8"
+			position = { x=477 y=326 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_steel_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_minus_8"
+			position = { x = 454 y = 322 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_plus_8"
+			position = { x = 525 y = 322 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_icon_9"
+			position = { x = 674 y = 200 }
+			quadTextureSprite = "GFX_resources_strip"
+			frame = 2
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_name_9"
+			position = { x=641 y=225 }
+			font = "hoi_24header"
+			text = "state_resource_aluminium"
+			format = center
+			maxWidth = 90
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_text_9"
+			position = { x=661 y=250 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+			format = center
+			maxWidth = 50
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_bg_9"
+			position = { x = 659 y = 270 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_num_9"
+			position = { x=659 y=275 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_aluminium_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_minus_9"
+			position = { x = 636 y = 271 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_plus_9"
+			position = { x = 707 y = 271 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_text_9"
+			position = { x=661 y=301 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+			format = center
+			maxWidth = 50
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_bg_9"
+			position = { x = 659 y = 321 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_num_9"
+			position = { x=659 y=326 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_aluminium_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_minus_9"
+			position = { x = 636 y = 322 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_plus_9"
+			position = { x = 707 y = 322 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_icon_10"
+			position = { x = 856 y = 200 }
+			quadTextureSprite = "GFX_resources_strip"
+			frame = 4
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_name_10"
+			position = { x=823 y=225 }
+			font = "hoi_24header"
+			text = "state_resource_tungsten"
+			format = center
+			maxWidth = 90
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_text_10"
+			position = { x=843 y=250 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+			format = center
+			maxWidth = 50
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_bg_10"
+			position = { x = 841 y = 270 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_num_10"
+			position = { x=841 y=275 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_tungsten_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_minus_10"
+			position = { x = 818 y = 271 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_plus_10"
+			position = { x = 889 y = 271 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_text_10"
+			position = { x=843 y=301 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+			format = center
+			maxWidth = 50
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_bg_10"
+			position = { x = 841 y = 321 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_num_10"
+			position = { x=841 y=326 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_tungsten_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_minus_10"
+			position = { x = 818 y = 322 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_plus_10"
+			position = { x = 889 y = 322 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_icon_11"
+			position = { x = 1037 y = 200 }
+			quadTextureSprite = "GFX_resources_strip"
+			frame = 6
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_name_11"
+			position = { x=1004 y=225 }
+			font = "hoi_24header"
+			text = "state_resource_chromium"
+			format = center
+			maxWidth = 90
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_text_11"
+			position = { x=1024 y=250 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+			format = center
+			maxWidth = 50
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_bg_11"
+			position = { x = 1022 y = 270 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_num_11"
+			position = { x=1022 y=275 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_chromium_min_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_minus_11"
+			position = { x = 999 y = 271 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_min_plus_11"
+			position = { x = 1070 y = 271 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_text_11"
+			position = { x=1024 y=301 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+			format = center
+			maxWidth = 50
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_bg_11"
+			position = { x = 1022 y = 321 }
+			quadTextureSprite = "GFX_esicolor_setup_number_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_num_11"
+			position = { x=1022 y=326 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_resource_chromium_max_loc"
+			format = center
+			maxWidth = 54
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_minus_11"
+			position = { x = 999 y = 322 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_max_plus_11"
+			position = { x = 1070 y = 322 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_blocker_1"
+			position = { x=70 y=0 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_1"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_blocker_2"
+			position = { x=764 y=0 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_1"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_3_blocker_3"
+			position = { x=0 y=200 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_3"
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_welcome_screen_tab_1_page_4_slider"
+		position = { x=33 y=205 }
+		size = { width=1388 height=357 }
+		margin = { top = 4 bottom = 4 }
+		clipping = no
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_blank"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_icon_1"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_esicolor_setup_ideologies_icon"
+			pdx_tooltip = "esicolor_setup_ideology_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_name_1"
+			position = { x=64 y=18 }
+			font = "hoi_24header"
+			text = "esicolor_setup_ideology"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_bg_1"
+			position = { x = 456 y = 15 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_num_1"
+			position = { x=456 y=20 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_ideology_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_minus_1"
+			position = { x = 433 y = 16 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "<"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_no_order"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_plus_1"
+			position = { x = 634 y = 16 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = ">"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_no_order"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_icon_2"
+			position = { x = 694 y = 0 }
+			quadTextureSprite = "GFX_esicolor_setup_popularity_icon"
+			pdx_tooltip = "esicolor_setup_party_popularity_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_name_2"
+			position = { x=758 y=18 }
+			font = "hoi_24header"
+			text = "esicolor_setup_party_popularity"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_eaw_data_2"
+			position = { x = 1014 y = 11 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 5
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_esicolor_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_eaw_data_2_selected"
+			position = { x = 1014 y = 11 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 6
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_random_esicolor_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_eaw_data_2_random"
+			position = { x = 1014 y = 11 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 4
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_random_tt"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_bg_2"
+			position = { x = 1150 y = 15 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_num_2"
+			position = { x=1150 y=20 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_party_popularity_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_minus_2"
+			position = { x = 1127 y = 16 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_party"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_plus_2"
+			position = { x = 1328 y = 16 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_party"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_icon_3"
+			position = { x = 2 y = 68 }
+			quadTextureSprite = "GFX_idea_generic_flexible_foreign_policy2"
+			pdx_tooltip = "esicolor_setup_ai_ideology_change_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_name_3"
+			position = { x=64 y=88 }
+			font = "hoi_24header"
+			text = "esicolor_setup_ai_ideology_change"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_eaw_data_3"
+			position = { x = 320 y = 81 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 3
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_enabled_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_eaw_data_3_selected"
+			position = { x = 320 y = 81 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 7
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_enabled_tt"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_icon_5"
+			position = { x = 2 y = 138 }
+			quadTextureSprite = "GFX_idea_generic_neutrality_drift_bonus"
+			pdx_tooltip = "esicolor_setup_stability_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_name_5"
+			position = { x=64 y=158 }
+			font = "hoi_24header"
+			text = "STABILITY"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_min_text_5"
+			position = { x=393 y=146 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_min_bg_5"
+			position = { x = 456 y = 141 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_min_num_5"
+			position = { x=456 y=146 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_stability_min_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_min_minus_5"
+			position = { x = 433 y = 142 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable_percentage"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_min_plus_5"
+			position = { x = 634 y = 142 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable_percentage"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_text_5"
+			position = { x=393 y=174 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_bg_5"
+			position = { x = 456 y = 169 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_num_5"
+			position = { x=456 y=174 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_stability_max_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_minus_5"
+			position = { x = 433 y = 170 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable_percentage"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_plus_5"
+			position = { x = 634 y = 170 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable_percentage"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_icon_6"
+			position = { x = 696 y = 138 }
+			quadTextureSprite = "GFX_idea_generic_war_preparation"
+			pdx_tooltip = "esicolor_setup_war_support_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_name_6"
+			position = { x=758 y=158 }
+			font = "hoi_24header"
+			text = "WAR_SUPPORT"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_min_text_6"
+			position = { x=1087 y=146 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_min_bg_6"
+			position = { x = 1150 y = 141 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_min_num_6"
+			position = { x=1150 y=146 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_war_support_min_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_min_minus_6"
+			position = { x = 1127 y = 142 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable_percentage"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_min_plus_6"
+			position = { x = 1328 y = 142 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable_percentage"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_text_6"
+			position = { x=1087 y=174 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_bg_6"
+			position = { x = 1150 y = 169 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_num_6"
+			position = { x=1150 y=174 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_war_support_max_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_minus_6"
+			position = { x = 1127 y = 170 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable_percentage"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_plus_6"
+			position = { x = 1328 y = 170 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable_percentage"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_icon_7"
+			position = { x = 0 y = 210 }
+			quadTextureSprite = "GFX_select_advisor_with_icons"
+			frame = 3
+			pdx_tooltip = "esicolor_setup_leader_traits_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_name_7"
+			position = { x=64 y=228 }
+			font = "hoi_24header"
+			text = "esicolor_setup_leader_traits"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_eaw_data_7"
+			position = { x = 320 y = 221 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 3
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_enabled_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_eaw_data_7_selected"
+			position = { x = 320 y = 221 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 7
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_enabled_tt"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_icon_8"
+			position = { x = 696 y = 208 }
+			quadTextureSprite = "GFX_idea_generic_secret_police"
+			pdx_tooltip = "esicolor_setup_intelligence_agency_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_name_8"
+			position = { x=758 y=228 }
+			font = "hoi_24header"
+			text = "INTELLIGENCEAGENCYVIEW_TITLE"
+			maxWidth = 250
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_eaw_data_locked_8"
+			position = { x = 1014 y = 221 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 3
+			pdx_tooltip = "esicolor_setup_intelligence_agency_requires_lar"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_eaw_data_8"
+			position = { x = 1014 y = 221 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 5
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_esicolor_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_eaw_data_8_selected"
+			position = { x = 1014 y = 221 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 6
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_esicolor_tt"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_bg_8"
+			position = { x = 1150 y = 225 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_num_8"
+			position = { x=1150 y=230 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_intelligence_agency_chance_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_minus_8"
+			position = { x = 1127 y = 226 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_max_plus_8"
+			position = { x = 1328 y = 226 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_blocker_1"
+			position = { x=70 y=0 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_1"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_4_blocker_2"
+			position = { x=764 y=0 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_1"
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_welcome_screen_tab_1_page_5_slider"
+		position = { x=33 y=205 }
+		size = { width=1388 height=357 }
+		margin = { top = 4 bottom = 4 }
+		clipping = no
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_blank"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_icon_1"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_idea_volunteer_only"
+			pdx_tooltip = "esicolor_setup_conscription_laws_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_name_1"
+			position = { x=64 y=18 }
+			font = "hoi_24header"
+			text = "idea_group_mobilization_laws"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_eaw_data_1"
+			position = { x = 320 y = 11 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_eaw_data_1_selected"
+			position = { x = 320 y = 11 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_text_1"
+			position = { x=393 y=6 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_bg_1"
+			position = { x = 456 y = 1 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_num_1"
+			position = { x=456 y=6 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_conscription_law_min_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_minus_1"
+			position = { x = 433 y = 2 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_text"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_plus_1"
+			position = { x = 634 y = 2 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_text"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_text_1"
+			position = { x=393 y=34 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_bg_1"
+			position = { x = 456 y = 29 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_num_1"
+			position = { x=456 y=34 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_conscription_law_max_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_minus_1"
+			position = { x = 433 y = 30 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_text"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_plus_1"
+			position = { x = 634 y = 30 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_text"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_icon_2"
+			position = { x = 694 y = 0 }
+			quadTextureSprite = "GFX_idea_export_focus"
+			pdx_tooltip = "esicolor_setup_trade_laws_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_name_2"
+			position = { x=758 y=18 }
+			font = "hoi_24header"
+			text = "idea_group_trade_laws"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_eaw_data_2"
+			position = { x = 1014 y = 11 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_eaw_data_2_selected"
+			position = { x = 1014 y = 11 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_text_2"
+			position = { x=1087 y=6 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_bg_2"
+			position = { x = 1150 y = 1 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_num_2"
+			position = { x=1150 y=6 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_trade_law_min_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_minus_2"
+			position = { x = 1127 y = 2 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_text"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_plus_2"
+			position = { x = 1328 y = 2 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_text"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_text_2"
+			position = { x=1087 y=34 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_bg_2"
+			position = { x = 1150 y = 29 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_num_2"
+			position = { x=1150 y=34 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_trade_law_max_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_minus_2"
+			position = { x = 1127 y = 30 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_text"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_plus_2"
+			position = { x = 1328 y = 30 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_text"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_icon_3"
+			position = { x = 0 y = 70 }
+			quadTextureSprite = "GFX_idea_civilian_economy"
+			pdx_tooltip = "esicolor_setup_economic_laws_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_name_3"
+			position = { x=64 y=88 }
+			font = "hoi_24header"
+			text = "idea_group_economy"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_eaw_data_3"
+			position = { x = 320 y = 81 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_eaw_data_3_selected"
+			position = { x = 320 y = 81 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_text_3"
+			position = { x=393 y=76 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_bg_3"
+			position = { x = 456 y = 71 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_num_3"
+			position = { x=456 y=76 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_economic_law_min_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_minus_3"
+			position = { x = 433 y = 72 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_text"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_min_plus_3"
+			position = { x = 634 y = 72 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_text"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_text_3"
+			position = { x=393 y=104 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_bg_3"
+			position = { x = 456 y = 99 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_num_3"
+			position = { x=456 y=104 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_economic_law_max_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_minus_3"
+			position = { x = 433 y = 100 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_text"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_plus_3"
+			position = { x = 634 y = 100 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_text"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_icon_4"
+			position = { x = 694 y = 70 }
+			quadTextureSprite = "GFX_select_advisor_with_icons"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_advisors_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_name_4"
+			position = { x=758 y=88 }
+			font = "hoi_24header"
+			text = "esicolor_setup_advisors"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_bg_4"
+			position = { x = 1150 y = 85 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_num_4"
+			position = { x=1150 y=90 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_advisors_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_minus_4"
+			position = { x = 1127 y = 86 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "<"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_no_order"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_plus_4"
+			position = { x = 1328 y = 86 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = ">"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_no_order"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_icon_5"
+			position = { x = 0 y = 140 }
+			quadTextureSprite = "GFX_idea_slot_industrial_concern"
+			pdx_tooltip = "esicolor_setup_mio_concern_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_name_5"
+			position = { x=64 y=158 }
+			font = "hoi_24header"
+			text = "esicolor_setup_mio_concern"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_bg_5"
+			position = { x = 456 y = 155 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_num_5"
+			position = { x=456 y=160 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_mio_concern_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_minus_5"
+			position = { x = 433 y = 156 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "<"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_no_order"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_plus_5"
+			position = { x = 634 y = 156 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = ">"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_no_order"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_icon_6"
+			position = { x = 694 y = 140 }
+			quadTextureSprite = "GFX_select_advisor_with_icons"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_military_advisors_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_name_6"
+			position = { x=758 y=158 }
+			font = "hoi_24header"
+			text = "esicolor_setup_military_advisors"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_bg_6"
+			position = { x = 1150 y = 155 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_num_6"
+			position = { x=1150 y=160 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_military_advisors_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_minus_6"
+			position = { x = 1127 y = 156 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "<"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_no_order"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_max_plus_6"
+			position = { x = 1328 y = 156 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = ">"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_no_order"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_blocker_1"
+			position = { x=70 y=0 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_1"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_5_blocker_2"
+			position = { x=764 y=0 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_1"
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_welcome_screen_tab_1_page_6_slider"
+		position = { x=33 y=205 }
+		size = { width=1388 height=357 }
+		margin = { top = 4 bottom = 4 }
+		clipping = no
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_blank"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_1"
+			position = { x = 2 y = -2 }
+			quadTextureSprite = "GFX_idea_generic_research_bonus"
+			pdx_tooltip = "esicolor_setup_research_slots_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_name_1"
+			position = { x=64 y=18 }
+			font = "hoi_24header"
+			text = "esicolor_setup_research_slots"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_eaw_data_1"
+			position = { x = 320 y = 11 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_eaw_data_1_selected"
+			position = { x = 320 y = 11 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_tt"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_min_text_1"
+			position = { x=1087 y=6 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_min"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_min_bg_1"
+			position = { x = 1150 y = 1 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_min_num_1"
+			position = { x=1150 y=6 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_research_slots_min_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_min_minus_1"
+			position = { x = 1127 y = 2 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_min_plus_1"
+			position = { x = 1328 y = 2 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_text_1"
+			position = { x=1087 y=34 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_max"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_1"
+			position = { x = 1150 y = 29 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_1"
+			position = { x=1150 y=34 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_research_slots_max_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_1"
+			position = { x = 1127 y = 30 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "-"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_1"
+			position = { x = 1328 y = 30 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "+"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_generic_bg"
+			position = { x = 25 y = 70 }
+			quadTextureSprite = "GFX_esicolor_setup_tech_connections"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_2"
+			position = { x = 75 y = 70 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_2"
+			position = { x = 25 y = 70 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_melee_weapons1_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_2"
+			position = { x = 25 y = 88 }
+			quadTextureSprite = "GFX_esicolor_setup_tech_melee_weapons1"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_2"
+			position = { x=95 y=94 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_melee_weapons1_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_2"
+			position = { x = 107 y = 115 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_2"
+			position = { x = 107 y = 70 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_3"
+			position = { x = 225 y = 170 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_3"
+			position = { x = 175 y = 170 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_basic_machine_tools_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_3"
+			position = { x = 181 y = 178 }
+			quadTextureSprite = "GFX_basic_machine_tools_medium"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_3"
+			position = { x=245 y=194 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_basic_machine_tools_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_3"
+			position = { x = 257 y = 215 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_3"
+			position = { x = 257 y = 170 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_4"
+			position = { x = 75 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_4"
+			position = { x = 25 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_transport_1_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_4"
+			position = { x = 28 y = 273 }
+			quadTextureSprite = "GFX_transport_medium"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_4"
+			position = { x=95 y=294 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_transport_1_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_4"
+			position = { x = 107 y = 315 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_4"
+			position = { x = 107 y = 270 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_5"
+			position = { x = 225 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_5"
+			position = { x = 175 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_destroyer_1_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_5"
+			position = { x = 175 y = 295 }
+			quadTextureSprite = "GFX_esicolor_setup_tech_destroyer_1"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_5"
+			position = { x=245 y=294 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_destroyer_1_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_5"
+			position = { x = 257 y = 315 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_5"
+			position = { x = 257 y = 270 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_6"
+			position = { x = 375 y = 170 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_6"
+			position = { x = 325 y = 170 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_tech_support_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_6"
+			position = { x = 325 y = 188 }
+			quadTextureSprite = "GFX_esicolor_setup_tech_tech_support"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_6"
+			position = { x=395 y=194 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_tech_support_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_6"
+			position = { x = 407 y = 215 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_6"
+			position = { x = 407 y = 170 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_7"
+			position = { x = 375 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_7"
+			position = { x = 325 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_tech_engineer_recon_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_7"
+			position = { x = 328 y = 273 }
+			quadTextureSprite = "GFX_esicolor_setup_tech_tech_engineer_recon"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_7"
+			position = { x=395 y=294 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_tech_engineer_recon_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_7"
+			position = { x = 407 y = 315 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_7"
+			position = { x = 407 y = 270 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_8"
+			position = { x = 525 y = 70 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_8"
+			position = { x = 475 y = 70 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_pre_gw_artillery_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_8"
+			position = { x = 475 y = 85 }
+			quadTextureSprite = "GFX_esicolor_setup_tech_pre_gw_artillery"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_8"
+			position = { x=545 y=94 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_pre_gw_artillery_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_8"
+			position = { x = 557 y = 115 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_8"
+			position = { x = 557 y = 70 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_9"
+			position = { x = 525 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_9"
+			position = { x = 475 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_airships_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_9"
+			position = { x = 475 y = 285 }
+			quadTextureSprite = "GFX_esicolor_setup_tech_airships"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_9"
+			position = { x=545 y=294 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_airships_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_9"
+			position = { x = 557 y = 315 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_9"
+			position = { x = 557 y = 270 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_10"
+			position = { x = 675 y = 170 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_10"
+			position = { x = 625 y = 170 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_infantry_weapons_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_10"
+			position = { x = 625 y = 195 }
+			quadTextureSprite = "GFX_esicolor_setup_tech_infantry_weapons"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_10"
+			position = { x=695 y=194 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_infantry_weapons_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_10"
+			position = { x = 707 y = 215 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_10"
+			position = { x = 707 y = 170 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_11"
+			position = { x = 825 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_11"
+			position = { x = 775 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_trucks_train_gw_artillery_gwtank_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_11"
+			position = { x = 775 y = 292 }
+			quadTextureSprite = "GFX_esicolor_setup_tech_trucks_train_gw_artillery_gwtank"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_11"
+			position = { x=845 y=294 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_trucks_train_gw_artillery_gwtank_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_11"
+			position = { x = 857 y = 315 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_11"
+			position = { x = 857 y = 270 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_12"
+			position = { x = 825 y = 70 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_12"
+			position = { x = 775 y = 70 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_electronic_mechanical_engineering_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_12"
+			position = { x = 778 y = 73 }
+			quadTextureSprite = "GFX_electronic_mechanical_engineering_medium"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_12"
+			position = { x=845 y=94 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_electronic_mechanical_engineering_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_12"
+			position = { x = 857 y = 115 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_12"
+			position = { x = 857 y = 70 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_13"
+			position = { x = 975 y = 70 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_13"
+			position = { x = 925 y = 70 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_construction1_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_13"
+			position = { x = 929 y = 78 }
+			quadTextureSprite = "GFX_construction1_medium"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_13"
+			position = { x=995 y=94 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_construction1_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_13"
+			position = { x = 1007 y = 115 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_13"
+			position = { x = 1007 y = 70 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_14"
+			position = { x = 1125 y = 70 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_14"
+			position = { x = 1075 y = 70 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_fuel_silos_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_14"
+			position = { x = 1078 y = 73 }
+			quadTextureSprite = "GFX_fuel_silos_medium"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_14"
+			position = { x=1145 y=94 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_fuel_silos_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_14"
+			position = { x = 1157 y = 115 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_14"
+			position = { x = 1157 y = 70 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_15"
+			position = { x = 975 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_15"
+			position = { x = 925 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_submarine1_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_15"
+			position = { x = 925 y = 294 }
+			quadTextureSprite = "GFX_esicolor_setup_tech_submarine1"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_15"
+			position = { x=995 y=294 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_submarine1_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_15"
+			position = { x = 1007 y = 315 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_15"
+			position = { x = 1007 y = 270 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_16"
+			position = { x = 1125 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_16"
+			position = { x = 1075 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_early_fighter_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_16"
+			position = { x = 1075 y = 288 }
+			quadTextureSprite = "GFX_esicolor_setup_tech_early_fighter"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_16"
+			position = { x=1145 y=294 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_early_fighter_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_16"
+			position = { x = 1157 y = 315 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_16"
+			position = { x = 1157 y = 270 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_17"
+			position = { x = 1275 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_17"
+			position = { x = 1225 y = 270 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_early_bomber_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_17"
+			position = { x = 1225 y = 292 }
+			quadTextureSprite = "GFX_esicolor_setup_tech_early_bomber"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_17"
+			position = { x=1295 y=294 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_early_bomber_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_17"
+			position = { x = 1307 y = 315 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_17"
+			position = { x = 1307 y = 270 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_18"
+			position = { x = 1275 y = 70 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_18"
+			position = { x = 1225 y = 70 }
+			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
+			pdx_tooltip = "esicolor_setup_technology_racial_tech_desc"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_icon_18"
+			position = { x = 1232 y = 77 }
+			quadTextureSprite = "GFX_pony_race_medium"
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_num_18"
+			position = { x=1295 y=94 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_technology_racial_tech_loc"
+			format = center
+			maxWidth = 50
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_18"
+			position = { x = 1307 y = 115 }
+			quadTextureSprite = "GFX_subtract_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_18"
+			position = { x = 1307 y = 70 }
+			quadTextureSprite = "GFX_add_one"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_blocker_1"
+			position = { x=70 y=0 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_1"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_blocker_2"
+			position = { x=764 y=0 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_1"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_blocker_3"
+			position = { x=0 y=70 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_4"
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_welcome_screen_tab_1_page_7_slider"
+		position = { x=33 y=205 }
+		size = { width=1388 height=357 }
+		margin = { top = 4 bottom = 4 }
+		clipping = no
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_blank"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_icon_1"
+			position = { x = 2 y = -2 }
+			quadTextureSprite = "GFX_idea_CZE_planning_bonus"
+			pdx_tooltip = "esicolor_setup_starting_regions_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_name_1"
+			position = { x=64 y=18 }
+			font = "hoi_24header"
+			text = "esicolor_setup_starting_regions"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_bg_1"
+			position = { x = 456 y = 15 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_num_1"
+			position = { x=456 y=20 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_starting_regions_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_minus_1"
+			position = { x = 433 y = 16 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "<"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_text"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_plus_1"
+			position = { x = 634 y = 16 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = ">"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_text"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_icon_2"
+			position = { x = 694 y = 0 }
+			quadTextureSprite = "GFX_idea_undisturbed_isolation"
+			pdx_tooltip = "esicolor_setup_islands_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_name_2"
+			position = { x=758 y=18 }
+			font = "hoi_24header"
+			text = "esicolor_setup_islands"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_bg_2"
+			position = { x = 1150 y = 15 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_num_2"
+			position = { x=1150 y=20 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_islands_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_minus_2"
+			position = { x = 1127 y = 16 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "<"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_no_order"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_plus_2"
+			position = { x = 1328 y = 16 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = ">"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_no_order"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_icon_3"
+			position = { x = 2 y = 68 }
+			quadTextureSprite = "GFX_idea_generic_morale_bonus"
+			pdx_tooltip = "esicolor_setup_formables_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_name_3"
+			position = { x=64 y=88 }
+			font = "hoi_24header"
+			text = "esicolor_setup_formables"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_bg_3"
+			position = { x = 456 y = 85 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_num_3"
+			position = { x=456 y=90 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_formables_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_minus_3"
+			position = { x = 433 y = 86 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "<"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_no_order"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_plus_3"
+			position = { x = 634 y = 86 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = ">"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_no_order"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_icon_4"
+			position = { x = 2 y = 138 }
+			quadTextureSprite = "GFX_idea_ast_all_in"
+			pdx_tooltip = "esicolor_setup_resource_prospecting_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_name_4"
+			position = { x=64 y=158 }
+			font = "hoi_24header"
+			text = "esicolor_setup_resource_prospecting"
+			maxWidth = 250
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_eaw_data_4"
+			position = { x = 320 y = 151 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 3
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_enabled_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_eaw_data_4_selected"
+			position = { x = 320 y = 151 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 7
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_enabled_tt"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_icon_5"
+			position = { x = 697 y = 140 }
+			quadTextureSprite = "GFX_idea_general_staff"
+			pdx_tooltip = "esicolor_setup_foreign_generals_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_name_5"
+			position = { x=758 y=158 }
+			font = "hoi_24header"
+			text = "esicolor_setup_foreign_generals"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_eaw_data_5"
+			position = { x = 1014 y = 151 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 3
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_enabled_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_eaw_data_5_selected"
+			position = { x = 1014 y = 151 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 7
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_enabled_tt"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_icon_6"
+			position = { x = -2 y = 212 }
+			quadTextureSprite = "GFX_esicolor_core_button"
+			pdx_tooltip = "esicolor_setup_state_management_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_name_6"
+			position = { x=64 y=228 }
+			font = "hoi_24header"
+			text = "esicolor_setup_state_management"
+			maxWidth = 250
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_eaw_data_6"
+			position = { x = 320 y = 221 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 3
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_enabled_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_eaw_data_6_selected"
+			position = { x = 320 y = 221 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 7
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_enabled_tt"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_icon_7"
+			position = { x = 692 y = 212 }
+			quadTextureSprite = "GFX_esicolor_claim_button"
+			pdx_tooltip = "esicolor_setup_claim_decision_desc"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_name_7"
+			position = { x=758 y=228 }
+			font = "hoi_24header"
+			text = "esicolor_setup_claim_decision"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_bg_7"
+			position = { x = 1150 y = 225 }
+			quadTextureSprite = "GFX_esicolor_setup_text_2_bg"
+		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_num_7"
+			position = { x=1150 y=230 }
+			font = "hoi_20bs"
+			text = "esicolor_setup_claim_decision_loc"
+			format = center
+			maxWidth = 184
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_minus_7"
+			position = { x = 1127 y = 226 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = "<"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_no_order"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_max_plus_7"
+			position = { x = 1328 y = 226 }
+			quadTextureSprite = "GFX_empty_small_button"
+			text = ">"
+			font = "hoi_24header"
+			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_no_order"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_blocker_1"
+			position = { x=70 y=0 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_1"
+		}
+		iconType = {
+			name = "esicolor_welcome_screen_tab_1_page_7_blocker_2"
+			position = { x=764 y=0 }
+			quadTextureSprite = "GFX_esicolor_setup_blocker_1"
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_welcome_screen_tab_2_slider"
+		position = { x=33 y=205 }
+		size = { width=1388 height=443 }
+		verticalScrollbar = "right_vertical_slider"
+		margin = { top = 4 bottom = 4 }
+		smooth_scrolling = yes
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_blank"
+		}
+
+		instantTextboxType = {
+			name = "tab_2_text"
+			position = { x=0 y=0 }
+			font = "hoi_20bs"
+			text = "esicolor_welcome_screen_tab_2_text"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_welcome_screen_tab_3_slider"
+		position = { x=33 y=205 }
+		size = { width=1388 height=443 }
+		verticalScrollbar = "right_vertical_slider"
+		margin = { top = 4 bottom = 4 }
+		smooth_scrolling = yes
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_blank"
+		}
+
+		instantTextboxType = {
+			name = "tab_3_text"
+			position = { x=0 y=0 }
+			font = "hoi_20bs"
+			text = "EAW_WS_TAB_3_TXT"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "tab_3_text_header_1"
+			position = { x=0 y=0 }
+			font = "hoi_24header"
+			text = "EAW_WS_TAB_3_TXT_HEADER_1"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "tab_3_text_header_2"
+			position = { x=0 y=280 }
+			font = "hoi_24header"
+			text = "EAW_WS_TAB_3_TXT_HEADER_2"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "tab_3_text_header_3"
+			position = { x=0 y=620 }
+			font = "hoi_24header"
+			text = "EAW_WS_TAB_3_TXT_HEADER_3"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "tab_3_text_header_4"
+			position = { x=0 y=790 }
+			font = "hoi_24header"
+			text = "EAW_WS_TAB_3_TXT_HEADER_4"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+
+	}
+
+	
+	containerWindowType = {
+		name = "esicolor_welcome_screen_tab_4_slider"
+		position = { x=33 y=205 }
+		size = { width=1388 height=443 }
+		verticalScrollbar = "right_vertical_slider"
+		margin = { top = 4 bottom = 4 }
+		smooth_scrolling = yes
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_blank"
+		}
+
+		instantTextboxType = {
+			name = "tab_4_text"
+			position = { x=0 y=0 }
+			font = "hoi_20bs"
+			text = "EAW_WS_TAB_4_TXT"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "tab_4_text_header_1"
+			position = { x=0 y=0 }
+			font = "hoi_24header"
+			text = "EAW_WS_TAB_4_TXT_HEADER_1"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "tab_4_text_header_2"
+			position = { x=0 y=145 }
+			font = "hoi_24header"
+			text = "EAW_WS_TAB_4_TXT_HEADER_2"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "tab_4_text_header_3"
+			position = { x=0 y=265 }
+			font = "hoi_24header"
+			text = "EAW_WS_TAB_4_TXT_HEADER_3"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "tab_4_text_header_4"
+			position = { x=0 y=370 }
+			font = "hoi_24header"
+			text = "EAW_WS_TAB_4_TXT_HEADER_4"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+		buttonType = {
+			name = "eaw_wiki_Changes"
+			quadTextureSprite ="eaw_wiki"
+			position = { x= 653 y = 475 }
+			scale = 2
+			pdx_tooltip = "EAW_WIKI_OPEN"
+			web_link = "https://equestriaatwar.wiki.gg/wiki/Changes_from_Vanilla_HOI4"
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_welcome_screen_tab_5_slider"
+		position = { x=33 y=205 }
+		size = { width=1388 height=443 }
+		verticalScrollbar = "right_vertical_slider"
+		margin = { top = 4 bottom = 4 }
+		smooth_scrolling = yes
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_blank"
+		}
+
+		iconType = {
+			name = "esicolor_welcome_screen_tab_5_eaw_data_1_bg"
+			position = { x = 667 y = 0 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_5_eaw_data_1"
+			position = { x = 667 y = 0 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 6
+			pdx_tooltip = "esicolor_welcome_screen_tab_5_to_eaw_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_5_eaw_data_1_selected"
+			position = { x = 667 y = 0 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_welcome_screen_tab_5_from_eaw_tt"
+		}
+
+		instantTextboxType = {
+			name = "tab_5_text_esicolor"
+			position = { x=0 y=40 }
+			font = "hoi_20bs"
+			text = "esicolor_changelog_text_1"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+		instantTextboxType = {
+			name = "tab_5_text_eaw"
+			position = { x=0 y=40 }
+			font = "hoi_20bs"
+			text = "EAW_WS_TAB_5_TXT"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "tab_5_text_header_1"
+			position = { x=0 y=40 }
+			font = "hoi_24header"
+			text = "esicolor_welcome_screen_tab_5_text_header_1"
+			maxWidth = 1363
+			maxHeight = 432
+			#fixedsize = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "esicolor_welcome_screen_container"
+		size = { width = 1440 height = 675 }
+		position = { x=-720 y=-297 }
+		Orientation = center
+		moveable = yes
+		clipping = no
+		show_sound = menu_open_window
+		hide_sound = menu_close_window
+
+		Background = {
+			name = "eaw_welcome_screen_bg"
+			quadTextureSprite = "GFX_tiled_esicolor_welcome_screen_bg"
+		}
+
+		instantTextboxType = {
+			name = "header_desc"
+			position = { x = -267 y = 23 }
+			font = "hoi_24header"
+			text = "esicolor_welcome_screen_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 530
+			maxHeight = 30
+		}
+
+		buttonType = {
+			name = "tab_1_on"
+			position = { x = 58 y = 104 }
+			quadTextureSprite ="GFX_esicolor_welcome_screen_tab_on"
+			font = "hoi_18mbs"
+			#buttonText = "esicolor_welcome_screen_tab_1"
+			pdx_tooltip = "esicolor_welcome_screen_tab_1_tt"
+		}
+
+		buttonType = {
+			name = "tab_2_on"
+			position = { x = 331 y = 104 }
+			quadTextureSprite ="GFX_esicolor_welcome_screen_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "esicolor_welcome_screen_tab_2"
+			pdx_tooltip = "esicolor_welcome_screen_tab_2_tt"
+		}
+
+		buttonType = {
+			name = "tab_3_on"
+			position = { x = 596 y = 104 }
+			quadTextureSprite ="GFX_esicolor_welcome_screen_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "EAW_WS_TAB_3"
+			pdx_tooltip = "EAW_WS_TAB_3_TT"
+		}
+
+		buttonType = {
+			name = "tab_4_on"
+			position = { x = 869 y = 104 }
+			quadTextureSprite ="GFX_esicolor_welcome_screen_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "EAW_WS_TAB_4"
+			pdx_tooltip = "EAW_WS_TAB_4_TT"
+		}
+
+		buttonType = {
+			name = "tab_5_on"
+			position = { x = 1143 y = 104 }
+			quadTextureSprite ="GFX_esicolor_welcome_screen_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "esicolor_welcome_screen_tab_5"
+			pdx_tooltip = "esicolor_welcome_screen_tab_5_tt"
+		}
+
+		buttonType = {
+			name = "tab_1_off"
+			position = { x = 58 y = 104 }
+			quadTextureSprite ="GFX_esicolor_welcome_screen_tab_off"
+			font = "hoi_18mbs"
+			#buttonText = "esicolor_welcome_screen_tab_1"
+			pdx_tooltip = "esicolor_welcome_screen_tab_1_tt"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "tab_2_off"
+			position = { x = 331 y = 104 }
+			quadTextureSprite ="GFX_esicolor_welcome_screen_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "esicolor_welcome_screen_tab_2"
+			pdx_tooltip = "esicolor_welcome_screen_tab_2_tt"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "tab_3_off"
+			position = { x = 596 y = 104 }
+			quadTextureSprite ="GFX_esicolor_welcome_screen_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "EAW_WS_TAB_3"
+			pdx_tooltip = "EAW_WS_TAB_3_TT"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "tab_4_off"
+			position = { x = 869 y = 104 }
+			quadTextureSprite ="GFX_esicolor_welcome_screen_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "EAW_WS_TAB_4"
+			pdx_tooltip = "EAW_WS_TAB_4_TT"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "tab_5_off"
+			position = { x = 1143 y = 104 }
+			quadTextureSprite ="GFX_esicolor_welcome_screen_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "esicolor_welcome_screen_tab_5"
+			pdx_tooltip = "esicolor_welcome_screen_tab_5_tt"
+			clicksound = click_default
+		}
+
+		instantTextboxType = {
+			name = "tab_1_btn_text"
+			position = { x = -641 y = 125 }
+			font = "hoi_18mbs"
+			text = "esicolor_welcome_screen_tab_1"
+			pdx_tooltip = "esicolor_welcome_screen_tab_1_tt"
+			maxWidth = 200
+			maxHeight = 18
+			fixedsize = yes
+		    Orientation = center_up
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "tab_1_page_1_header"
+			position = { x = -686 y = 160 }
+			font = "hoi_24header"
+			text = "esicolor_welcome_screen_tab_1_page_1_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1373
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_1_page_2_header"
+			position = { x = -686 y = 160 }
+			font = "hoi_24header"
+			text = "esicolor_welcome_screen_tab_1_page_2_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1373
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_1_page_3_header"
+			position = { x = -686 y = 160 }
+			font = "hoi_24header"
+			text = "esicolor_welcome_screen_tab_1_page_3_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1373
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_1_page_4_header"
+			position = { x = -686 y = 160 }
+			font = "hoi_24header"
+			text = "esicolor_welcome_screen_tab_1_page_4_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1373
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_1_page_5_header"
+			position = { x = -686 y = 160 }
+			font = "hoi_24header"
+			text = "esicolor_welcome_screen_tab_1_page_5_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1373
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_1_page_6_header"
+			position = { x = -686 y = 160 }
+			font = "hoi_24header"
+			text = "esicolor_welcome_screen_tab_1_page_6_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1373
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_1_page_7_header"
+			position = { x = -686 y = 160 }
+			font = "hoi_24header"
+			text = "esicolor_welcome_screen_tab_1_page_7_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1373
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_2_header"
+			position = { x = -686 y = 160 }
+			font = "hoi_24header"
+			text = "esicolor_welcome_screen_tab_2_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1373
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_3_header"
+			position = { x = -686 y = 160 }
+			font = "hoi_24header"
+			text = "EAW_WS_TAB_3_HEADER"
+			Orientation = center_up
+			format = center
+			maxWidth = 1373
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_4_header"
+			position = { x = -686 y = 160 }
+			font = "hoi_24header"
+			text = "EAW_WS_TAB_4_HEADER"
+			Orientation = center_up
+			format = center
+			maxWidth = 1373
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_5_header"
+			position = { x = -686 y = 160 }
+			font = "hoi_24header"
+			text = "esicolor_welcome_screen_tab_5_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1373
+			maxHeight = 30
+		}
+
+		buttonType = {
+			name = "start_button"
+			position = { x = -120 y = -32 }
+			quadTextureSprite = "GFX_play_button"
+			shortcut = "RETURN"
+			text = "esicolor_setup_start_continue"
+			font = "hoi_30header"
+			Orientation = center_down
+			clicksound = click_close
+		}
+	}
+}
