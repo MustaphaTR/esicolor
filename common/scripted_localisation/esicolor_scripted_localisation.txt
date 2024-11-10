@@ -82,6 +82,45 @@ defined_text = { # Country
 	}
 }
 
+defined_text = {
+	name = GetDecisionCostCPMarshalRecruitment
+	text = {
+		trigger = {
+			command_power > ROOT.marshal_recruitment_cost
+		}
+		localization_key = decision_cost_CP_marshal_recruitment
+	}
+	text = {
+		localization_key = decision_cost_CP_marshal_recruitment_blocked
+	}
+}
+
+defined_text = {
+	name = GetDecisionCostCPGeneralRecruitment
+	text = {
+		trigger = {
+			command_power > ROOT.general_recruitment_cost
+		}
+		localization_key = decision_cost_CP_general_recruitment
+	}
+	text = {
+		localization_key = decision_cost_CP_general_recruitment_blocked
+	}
+}
+
+defined_text = {
+	name = GetDecisionCostCPAdmiralRecruitment
+	text = {
+		trigger = {
+			command_power > ROOT.admiral_recruitment_cost
+		}
+		localization_key = decision_cost_CP_admiral_recruitment
+	}
+	text = {
+		localization_key = decision_cost_CP_admiral_recruitment_blocked
+	}
+}
+
 ## Scripted GUI localization
 defined_text = { # Country
 	name = esicolor_claim_button_tt_delayed_option_check

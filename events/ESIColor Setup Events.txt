@@ -23,7 +23,7 @@ country_event = {
 				setup_default_companies = yes
 			}
 
-			place_starting_airfields = yes
+			place_starting_air_bases = yes
 			setup_default_resources = yes
 			set_global_flag = claiming_give_war_goals
 			set_variable = { global.claiming_cost = 40 }
@@ -49,7 +49,7 @@ country_event = {
 			}
 
 			every_state = {
-				clear_manpower = yes
+				clear_population = yes
 				add_manpower = global.per_state_pop
 
 				set_building_level = {
@@ -73,7 +73,7 @@ country_event = {
 				clear_dockyards = yes
 				clear_synthetic_refineries = yes
 				clear_fuel_silos = yes
-				clear_bunkers = yes
+				clear_forts = yes
 				clear_anti_air = yes
 				clear_radar_stations = yes
 
@@ -101,7 +101,8 @@ country_event = {
 			every_country = {
 				randomise_ideology_and_popularity = yes
 				randomise_techonology = yes
-				randomise_stability_and_war_support = yes
+				randomise_stability = yes
+				randomise_war_support = yes
 				randomise_advisors = yes
 				randomise_military_advisor_levels = yes
 				randomise_designers = yes
@@ -117,7 +118,7 @@ country_event = {
 			}
 
 			every_state = {
-				randomise_state_pop_from_existing_values = yes
+				shuffle_population = yes
 				randomise_infrastructure = yes
 
 				clear_factories = yes
@@ -135,7 +136,7 @@ country_event = {
 				clear_fuel_silos = yes
 				randomise_fuel_silos = yes
 
-				randomise_airbases = yes
+				randomise_air_bases = yes
 				randomise_anti_air = yes
 				randomise_radar_stations = yes
 				randomise_state_category = yes
@@ -259,7 +260,7 @@ country_event = {
 			custom_effect_tooltip = esicolor.3.b_tt
 
 			hidden_effect = {
-				clear_manpower = yes
+				clear_population = yes
 				add_manpower = global.per_state_pop
 			}
 		}
@@ -270,7 +271,7 @@ country_event = {
 		every_state = {
 			custom_effect_tooltip = esicolor.3.c_tt
 
-			randomise_state_pop_from_existing_values = yes
+			shuffle_population = yes
 		}
 	}
 	option = {
@@ -388,7 +389,7 @@ country_event = {
 		name = esicolor.6.a
 		country_event = esicolor.18
 		hidden_effect = {
-			place_starting_airfields = yes
+			place_starting_air_bases = yes
 		}
 	}
 	option = {
@@ -406,7 +407,7 @@ country_event = {
 		name = esicolor.6.c
 		country_event = esicolor.18
 		every_state = {
-			randomise_airbases = yes
+			randomise_air_bases = yes
 		}
 	}
 }
@@ -700,7 +701,8 @@ country_event = {
 			custom_effect_tooltip = esicolor.13.b_tt1
 			custom_effect_tooltip = esicolor.13.b_tt2
 
-			randomise_stability_and_war_support = yes
+			randomise_stability = yes
+			randomise_war_support = yes
 		}
 	}
 }
@@ -732,70 +734,7 @@ country_event = {
 		hidden_effect = {
 			every_country = {
 				clear_advisor_disabled_flags = yes
-
-				set_country_flag = popular_figurehead_disabled
-				set_country_flag = propaganda_expert_disabled
-				set_country_flag = silent_workhorse_disabled
-				set_country_flag = prince_of_terror_disabled
-				set_country_flag = backroom_backstabber_disabled
-				set_country_flag = editor_disabled
-				set_country_flag = ideological_crusader_disabled
-				set_country_flag = compassionate_gentleman_disabled
-				set_country_flag = smooth_talking_charmer_disabled
-				set_country_flag = financial_expert_disabled
-				set_country_flag = economist_disabled
-				set_country_flag = quartermaster_general_disabled
-				set_country_flag = armaments_organizer_disabled
-
-				set_country_flag = code_breaker_disabled
-				set_country_flag = encryption_expert_disabled
-
-				set_country_flag = nuclear_scientist_disabled
-				set_country_flag = rocket_scientist_disabled
-
-				set_country_flag = army_chief_maneuver_disabled
-				set_country_flag = army_chief_drill_disabled
-				set_country_flag = army_chief_planning_disabled
-				set_country_flag = army_chief_morale_disabled
-				set_country_flag = army_chief_organizational_disabled
-				set_country_flag = army_chief_entrenchment_disabled
-				set_country_flag = army_chief_reform_disabled
-				set_country_flag = army_chief_old_guard_disabled
-
-				set_country_flag = navy_chief_maneuver_disabled
-				set_country_flag = navy_chief_naval_aviation_disabled
-				set_country_flag = navy_chief_reform_disabled
-				set_country_flag = navy_chief_old_guard_disabled
-
-				set_country_flag = air_chief_night_operations_disabled
-				set_country_flag = air_chief_safety_disabled
-				set_country_flag = air_chief_reform_disabled
-				set_country_flag = air_chief_old_guard_disabled
-
-				set_country_flag = army_infantry_disabled
-				set_country_flag = army_cavalry_disabled
-				set_country_flag = army_armored_disabled
-				set_country_flag = army_commando_disabled
-				set_country_flag = army_entrenchment_disabled
-				set_country_flag = army_regrouping_disabled
-				set_country_flag = army_concealment_disabled
-				set_country_flag = army_radio_intelligence_disabled
-				set_country_flag = army_jungle_warfare_disabled
-
-				set_country_flag = navy_amphibious_assault_disabled
-				set_country_flag = navy_naval_air_defense_disabled
-				set_country_flag = navy_anti_submarine_disabled
-				set_country_flag = navy_submarine_disabled
-				set_country_flag = navy_capital_ship_disabled
-				set_country_flag = navy_screen_disabled
-				set_country_flag = navy_carrier_disabled
-
-				set_country_flag = air_air_superiority_disabled
-				set_country_flag = air_bomber_interception_disabled
-				set_country_flag = air_close_air_support_disabled
-				set_country_flag = air_naval_strike_disabled
-				set_country_flag = air_strategic_bombing_disabled
-				set_country_flag = air_airborne_disabled
+				setup_basegame_advisors = yes
 			}
 		}
 	}
@@ -1220,7 +1159,7 @@ country_event = {
 	option = {
 		name = esicolor.21.b
 		country_event = esicolor.7
-		clear_bunkers = yes
+		clear_forts = yes
 	}
 }
 
@@ -1299,35 +1238,7 @@ country_event = {
 		hidden_effect = {
 			every_country = {
 				clear_company_disabled_flags = yes
-
-				set_country_flag = armored_car_manufacturer_disabled
-				set_country_flag = infantry_tank_manufacturer_disabled
-				set_country_flag = fast_tank_manufacturer_disabled
-				set_country_flag = heavy_tank_manufacturer_disabled
-				set_country_flag = tank_refurbishment_plant_disabled
-
-				set_country_flag = pacific_fleet_naval_manufacturer_disabled
-				set_country_flag = atlantic_fleet_naval_manufacturer_disabled
-				set_country_flag = mediterranean_fleet_naval_manufacturer_disabled
-				set_country_flag = black_sea_fleet_naval_manufacturer_disabled
-				set_country_flag = battlefleet_designer_disabled
-				set_country_flag = repair_and_refurbishment_plant_disabled
-				set_country_flag = coastal_defence_naval_manufacturer_disabled
-				set_country_flag = submarine_manufacturer_disabled
-				set_country_flag = raiding_fleet_naval_manufacturer_disabled
-
-				set_country_flag = CAS_manufacturer_disabled
-				set_country_flag = fuel_efficient_aircraft_manufacturer_disabled
-				set_country_flag = agility_focused_aircraft_manufacturer_disabled
-
-				set_country_flag = refinery_concern_disabled
-				set_country_flag = telephoone_company_disabled
-				set_country_flag = forestry_company_disabled
-				set_country_flag = construction_company_disabled
-				set_country_flag = mining_company_disabled
-				set_country_flag = railway_company_disabled
-
-				set_country_flag = support_equipment_manufacturer_disabled
+				setup_basegame_companies = yes
 			}
 		}
 	}
@@ -1633,7 +1544,7 @@ country_event = {
 		every_state = {
 			custom_effect_tooltip = esicolor.27.a_tt
 			hidden_effect = {
-				clear_manpower = yes
+				clear_population = yes
 				add_manpower = 1000000
 			}
 		}
@@ -1644,7 +1555,7 @@ country_event = {
 		every_state = {
 			custom_effect_tooltip = esicolor.27.b_tt
 			hidden_effect = {
-				clear_manpower = yes
+				clear_population = yes
 				add_manpower = 2000000
 			}
 		}
@@ -1663,7 +1574,7 @@ country_event = {
 					max = 1250000
 				}
 
-				clear_manpower = yes
+				clear_population = yes
 				add_manpower = manpowertoadd
 				add_manpower = manpowertoadd
 			}

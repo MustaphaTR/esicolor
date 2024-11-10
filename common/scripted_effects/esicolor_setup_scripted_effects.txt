@@ -1,3 +1,33 @@
+randomise_ai_ideology_path = {
+	random_list = {
+		seed = random
+		25 = {
+			set_country_flag = ai_go_democratic
+			clr_country_flag = ai_go_fascism
+			clr_country_flag = ai_go_communism
+			clr_country_flag = ai_go_neutrality
+		}
+		25 = {
+			clr_country_flag = ai_go_democratic
+			set_country_flag = ai_go_fascism
+			clr_country_flag = ai_go_communism
+			clr_country_flag = ai_go_neutrality
+		}
+		25 = {
+			clr_country_flag = ai_go_democratic
+			clr_country_flag = ai_go_fascism
+			set_country_flag = ai_go_communism
+			clr_country_flag = ai_go_neutrality
+		}
+		25 = {
+			clr_country_flag = ai_go_democratic
+			clr_country_flag = ai_go_fascism
+			clr_country_flag = ai_go_communism
+			set_country_flag = ai_go_neutrality
+		}
+	}
+}
+
 make_default_ais_choose_path = {
 	hidden_effect = {
 		every_country = {
@@ -8,13 +38,7 @@ make_default_ais_choose_path = {
 				neutrality < 0.26
 			}
 
-			random_list = {
-				seed = random
-				25 = { set_country_flag = ai_go_neutrality }
-				25 = { set_country_flag = ai_go_democratic }
-				25 = { set_country_flag = ai_go_fascism }
-				25 = { set_country_flag = ai_go_communism }
-			}
+			randomise_ai_ideology_path = yes
 		}
 	}
 }
@@ -32,12 +56,32 @@ set_ideologies_to_neutrality = {
 			neutrality = 25
 		}
 
-		random_list = {
-			seed = random
-			25 = { set_country_flag = ai_go_neutrality }
-			25 = { set_country_flag = ai_go_democratic }
-			25 = { set_country_flag = ai_go_fascism }
-			25 = { set_country_flag = ai_go_communism }
+		randomise_ai_ideology_path = yes
+	}
+}
+
+randomise_ideology = {
+	random_list = {
+		seed = random
+		25 = {
+			set_politics = {
+				ruling_party = democratic
+			}
+		}
+		25 = {
+			set_politics = {
+				ruling_party = fascism
+			}
+		}
+		25 = {
+			set_politics = {
+				ruling_party = communism
+			}
+		}
+		25 = {
+			set_politics = {
+				ruling_party = neutrality
+			}
 		}
 	}
 }
@@ -73,6 +117,29 @@ randomise_ideology_and_popularity = {
 
 			randomise_popularity_neutrality = yes
 		}
+	}
+}
+
+randomise_popularity_for_current_party = {
+	if = {
+		limit = { has_government = democratic }
+
+		randomise_popularity_democratic = yes
+	}
+	else_if = {
+		limit = { has_government = fascism }
+
+		randomise_popularity_fascism = yes
+	}
+	else_if = {
+		limit = { has_government = communism }
+
+		randomise_popularity_communism = yes
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+
+		randomise_popularity_neutrality = yes
 	}
 }
 
@@ -336,7 +403,165 @@ randomise_popularity_neutrality = {
 	}
 }
 
-clear_manpower = {
+equalise_popularity_for_current_party = {
+	if = {
+		limit = { has_government = democratic }
+
+		set_popularities = {
+			democratic = global.setup_party_popularity_ruling
+			fascism = global.setup_party_popularity_other
+			communism = global.setup_party_popularity_other
+			neutrality = global.setup_party_popularity_other
+		}
+	}
+	else_if = {
+		limit = { has_government = fascism }
+
+		set_popularities = {
+			democratic = global.setup_party_popularity_other
+			fascism = global.setup_party_popularity_ruling
+			communism = global.setup_party_popularity_other
+			neutrality = global.setup_party_popularity_other
+		}
+	}
+	else_if = {
+		limit = { has_government = communism }
+
+		set_popularities = {
+			democratic = global.setup_party_popularity_other
+			fascism = global.setup_party_popularity_other
+			communism = global.setup_party_popularity_ruling
+			neutrality = global.setup_party_popularity_other
+		}
+	}
+	else_if = {
+		limit = { has_government = neutrality }
+
+		set_popularities = {
+			democratic = global.setup_party_popularity_other
+			fascism = global.setup_party_popularity_other
+			communism = global.setup_party_popularity_other
+			neutrality = global.setup_party_popularity_ruling
+		}
+	}
+}
+
+switch_popularity_for_current_party = {
+	if = {
+		limit = { check_variable = { THIS.old_ideology = token:democratic } }
+
+		if = {
+			limit = { check_variable = { THIS.new_ideology = token:fascism } }
+			switch_popularities_democratic_fascism = yes
+		}
+		else_if = {
+			limit = { check_variable = { THIS.new_ideology = token:communism } }
+			switch_popularities_democratic_communism = yes
+		}
+		else_if = {
+			limit = { check_variable = { THIS.new_ideology = token:neutrality } }
+			switch_popularities_democratic_neutrality = yes
+		}
+	}
+	else_if = {
+		limit = { check_variable = { THIS.old_ideology = token:fascism } }
+
+		if = {
+			limit = { check_variable = { THIS.new_ideology = token:democratic } }
+			switch_popularities_democratic_fascism = yes
+		}
+		else_if = {
+			limit = { check_variable = { THIS.new_ideology = token:communism } }
+			switch_popularities_fascism_communism = yes
+		}
+		else_if = {
+			limit = { check_variable = { THIS.new_ideology = token:neutrality } }
+			switch_popularities_fascism_neutrality = yes
+		}
+	}
+	else_if = {
+		limit = { check_variable = { THIS.old_ideology = token:communism } }
+
+		if = {
+			limit = { check_variable = { THIS.new_ideology = token:democratic } }
+			switch_popularities_democratic_communism = yes
+		}
+		else_if = {
+			limit = { check_variable = { THIS.new_ideology = token:fascism } }
+			switch_popularities_fascism_communism = yes
+		}
+		else_if = {
+			limit = { check_variable = { THIS.new_ideology = token:neutrality } }
+			switch_popularities_communism_neutrality = yes
+		}
+	}
+	else_if = {
+		limit = { check_variable = { THIS.old_ideology = token:neutrality } }
+
+		if = {
+			limit = { check_variable = { THIS.new_ideology = token:democratic } }
+			switch_popularities_democratic_neutrality = yes
+		}
+		else_if = {
+			limit = { check_variable = { THIS.new_ideology = token:fascism } }
+			switch_popularities_fascism_neutrality = yes
+		}
+		else_if = {
+			limit = { check_variable = { THIS.new_ideology = token:communism } }
+			switch_popularities_communism_neutrality = yes
+		}
+	}
+}
+switch_popularities_democratic_fascism = {
+	set_popularities = {
+		democratic = party_popularity_100@fascism
+		fascism = party_popularity_100@democratic
+		communism = party_popularity_100@communism
+		neutrality = party_popularity_100@neutrality
+	}
+}
+switch_popularities_democratic_communism = {
+	set_popularities = {
+		democratic = party_popularity_100@communism
+		fascism = party_popularity_100@fascism
+		communism = party_popularity_100@democratic
+		neutrality = party_popularity_100@neutrality
+	}
+}
+switch_popularities_democratic_neutrality = {
+	set_popularities = {
+		democratic = party_popularity_100@neutrality
+		fascism = party_popularity_100@fascism
+		communism = party_popularity_100@communism
+		neutrality = party_popularity_100@democratic
+	}
+}
+switch_popularities_fascism_neutrality = {
+	set_popularities = {
+		democratic = party_popularity_100@democratic
+		fascism = party_popularity_100@neutrality
+		communism = party_popularity_100@communism
+		neutrality = party_popularity_100@fascism
+	}
+}
+switch_popularities_fascism_communism = {
+	set_popularities = {
+		democratic = party_popularity_100@democratic
+		fascism = party_popularity_100@communism
+		communism = party_popularity_100@fascism
+		neutrality = party_popularity_100@neutrality
+	}
+}
+switch_popularities_communism_neutrality = {
+	set_popularities = {
+		democratic = party_popularity_100@democratic
+		fascism = party_popularity_100@fascism
+		communism = party_popularity_100@neutrality
+		neutrality = party_popularity_100@communism
+	}
+}
+
+clear_population = {
 	add_manpower = -2000000
 	add_manpower = -2000000
 	add_manpower = -2000000
@@ -358,7 +583,23 @@ get_total_manpower = {
 	round_variable = global.per_state_pop
 }
 
-randomise_state_pop_from_existing_values = {
+randomise_population = {
+	hidden_effect = {
+		set_temp_variable = { manpowertoadd = 500000 }
+		randomize_temp_variable = {
+			var = manpowertoadd
+			distribution = uniform
+			min = global.setup_population_min
+			max = global.setup_population_max
+		}
+
+		clear_population = yes
+		add_manpower = manpowertoadd
+		add_manpower = manpowertoadd
+	}
+}
+
+shuffle_population = {
 	set_temp_variable = { random_index = 0 }
 	set_temp_variable = { highest_index = global.populations^num }
 	subtract_from_temp_variable = { highest_index = 1 }
@@ -376,7 +617,7 @@ randomise_state_pop_from_existing_values = {
 		if = {
 			limit = { check_variable = { random_index = i } }
 
-			clear_manpower = yes
+			clear_population = yes
 
 			multiply_temp_variable = { v = 100 }
 
@@ -403,8 +644,8 @@ randomise_infrastructure = {
 		randomize_temp_variable = {
 			var = infrastructuretoadd
 			distribution = uniform
-			min = 0
-			max = 5
+			min = global.setup_infrastructure_min
+			max = global.setup_infrastructure_max
 		}
 
 		set_building_level = {
@@ -418,11 +659,12 @@ randomise_infrastructure = {
 clear_factories = {
 	custom_effect_tooltip = esicolor.5.b_tt1
 	custom_effect_tooltip = esicolor.5.b_tt2
+	clear_civilian_factories = yes
+	clear_military_factories = yes
+}
+
+clear_civilian_factories = {
 	hidden_effect = {
-		remove_building = {
-			type = arms_factory
-			level = 25
-		}
 		remove_building = {
 			type = industrial_complex
 			level = 25
@@ -430,31 +672,51 @@ clear_factories = {
 	}
 }
 
+clear_military_factories = {
+	hidden_effect = {
+		remove_building = {
+			type = arms_factory
+			level = 25
+		}
+	}
+}
+
 randomise_factories = {
+	randomise_civilian_factories = yes
+	randomise_military_factories = yes
+}
+
+randomise_civilian_factories = {
 	hidden_effect = {
 		set_temp_variable = { civstoadd = 1 }
 		randomize_temp_variable = {
 			var = civstoadd
 			distribution = uniform
-			min = 0
-			max = 3
+			min = global.setup_civilian_factories_min
+			max = global.setup_civilian_factories_max
 		}
+
+		add_building_construction = {
+			type = industrial_complex
+			level = civstoadd
+			instant_build = yes
+		}
+	}
+}
+
+randomise_military_factories = {
+	hidden_effect = {
 		set_temp_variable = { milstoadd = 1 }
 		randomize_temp_variable = {
 			var = milstoadd
 			distribution = uniform
-			min = 0
-			max = 3
+			min = global.setup_military_factories_min
+			max = global.setup_military_factories_max
 		}
 
 		add_building_construction = {
 			type = arms_factory
 			level = milstoadd
-			instant_build = yes
-		}
-		add_building_construction = {
-			type = industrial_complex
-			level = civstoadd
 			instant_build = yes
 		}
 	}
@@ -476,8 +738,8 @@ randomise_dockyards = {
 		randomize_temp_variable = {
 			var = dyardstoadd
 			distribution = uniform
-			min = 0
-			max = 2
+			min = global.setup_dockyards_min
+			max = global.setup_dockyards_max
 		}
 
 		add_building_construction = {
@@ -491,34 +753,27 @@ randomise_dockyards = {
 clear_synthetic_refineries = {
 	custom_effect_tooltip = esicolor.16.b_tt
 	hidden_effect = {
-		remove_building = {
-			type = synthetic_refinery
-			level = 25
+		every_state = {
+			remove_building = {
+				type = synthetic_refinery
+				level = 25
+			}
 		}
 	}
 }
 
 randomise_synthetic_refineries = {
 	hidden_effect = {
-		random_state = {
-			add_building_construction = {
-				type = synthetic_refinery
-				level = 1
-				instant_build = yes
-			}
+		set_temp_variable = { refineriestoadd = 5 }
+		randomize_temp_variable = {
+			var = refineriestoadd
+			distribution = uniform
+			min = global.setup_synthetic_refineries_min
+			max = global.setup_synthetic_refineries_max
 		}
-		random_state = {
-			limit = { synthetic_refinery < 1 }
 
-			add_building_construction = {
-				type = synthetic_refinery
-				level = 1
-				instant_build = yes
-			}
-		}
-		
-		if = {
-			limit = { date > 1939.1.1 }
+		while_loop_effect  = {
+			limit = { check_variable = { refineriestoadd > 0 } }
 
 			random_state = {
 				limit = { synthetic_refinery < 1 }
@@ -529,24 +784,8 @@ randomise_synthetic_refineries = {
 					instant_build = yes
 				}
 			}
-			random_state = {
-				limit = { synthetic_refinery < 1 }
 
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = { synthetic_refinery < 1 }
-
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 1
-					instant_build = yes
-				}
-			}
+			subtract_from_temp_variable = { refineriestoadd = 1 }
 		}
 	}
 }
@@ -631,35 +870,7 @@ randomise_anti_air = {
 	}
 }
 
-clear_radar_stations = {
-	set_building_level = {
-		type = radar_station
-		level = 0
-		instant_build = yes
-	}
-}
-
-randomise_radar_stations = {
-	random_list = {
-		seed = random
-		4 = {
-			set_building_level = {
-				type = radar_station
-				level = 1
-				instant_build = yes
-			}
-		}
-		962 = {
-			set_building_level = {
-				type = radar_station
-				level = 0
-				instant_build = yes
-			}
-		}
-	}
-}
-
-place_starting_airfields = {
+place_starting_air_bases = {
 	# if list instead of else_if because some states appear twice for 1939 setup.
 	every_state = {
 		if = {
@@ -737,7 +948,7 @@ place_starting_airfields = {
 	}
 }
 
-randomise_airbases = {
+randomise_air_bases = {
 	random_list = {
 		seed = random
 		651 = {
@@ -813,28 +1024,145 @@ randomise_airbases = {
 	}
 }
 
-randomise_state_category = {
+clear_radar_stations = {
+	set_building_level = {
+		type = radar_station
+		level = 0
+		instant_build = yes
+	}
+}
+
+randomise_radar_stations = {
+	set_temp_variable = { radar_stations_minus = 100 }
+	subtract_from_temp_variable = { radar_stations_minus = global.setup_radar_stations }
 	random_list = {
 		seed = random
-		20 = {
-			set_state_category = pastoral
+		global.setup_radar_stations = {
+			set_building_level = {
+				type = radar_station
+				level = 1
+				instant_build = yes
+			}
 		}
-		20 = {
-			set_state_category = rural
-		}
-		20 = {
-			set_state_category = town
-		}
-		20 = {
-			set_state_category = large_town
-		}
-		20 = {
-			set_state_category = city
+		radar_stations_minus = {
+			set_building_level = {
+				type = radar_station
+				level = 0
+				instant_build = yes
+			}
 		}
 	}
 }
 
-clear_bunkers = {
+randomise_state_category = {
+	random_list = {
+		seed = random
+		10 = {
+			modifier = {
+				factor = 0
+
+				check_variable = { global.setup_state_category_min > 0 }
+			}
+
+			set_state_category = wasteland
+		}
+		10 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_state_category_min > 1 }
+					check_variable = { global.setup_state_category_max < 1 }
+				}
+			}
+
+			set_state_category = pastoral
+		}
+		10 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_state_category_min > 2 }
+					check_variable = { global.setup_state_category_max < 2 }
+				}
+			}
+
+			set_state_category = rural
+		}
+		10 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_state_category_min > 3 }
+					check_variable = { global.setup_state_category_max < 3 }
+				}
+			}
+
+			set_state_category = town
+		}
+		10 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_state_category_min > 4 }
+					check_variable = { global.setup_state_category_max < 4 }
+				}
+			}
+
+			set_state_category = large_town
+		}
+		10 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_state_category_min > 5 }
+					check_variable = { global.setup_state_category_max < 5 }
+				}
+			}
+
+			set_state_category = city
+		}
+		10 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_state_category_min > 6 }
+					check_variable = { global.setup_state_category_max < 6 }
+				}
+			}
+
+			set_state_category = large_city
+		}
+		10 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_state_category_min > 7 }
+					check_variable = { global.setup_state_category_max < 7 }
+				}
+			}
+
+			set_state_category = metropolis
+		}
+		10 = {
+			modifier = {
+				factor = 0
+
+				check_variable = { global.setup_state_category_max < 8 }
+			}
+
+			set_state_category = megalopolis
+		}
+	}
+}
+
+clear_forts = {
 	every_state = {
 		set_building_level = {
 			type = bunker
@@ -3459,14 +3787,19 @@ randomise_resources = {
 	random_list = {
 		seed = random
 		15 = {
+			modifier = {
+				factor = 0
+
+				oil > 0
+			}
 			custom_effect_tooltip = esicolor.8.e_tt1
 			hidden_effect = {
 				set_temp_variable = { resourcetoadd = 10 }
 				randomize_temp_variable = {
 					var = resourcetoadd
 					distribution = uniform
-					min = 5
-					max = 15
+					min = global.setup_resource_oil_min
+					max = global.setup_resource_oil_max
 				}
 
 				add_resource = {
@@ -3476,14 +3809,19 @@ randomise_resources = {
 			}
 		}
 		15 = {
+			modifier = {
+				factor = 0
+
+				rubber > 0
+			}
 			custom_effect_tooltip = esicolor.8.e_tt2
 			hidden_effect = {
 				set_temp_variable = { resourcetoadd = 3 }
 				randomize_temp_variable = {
 					var = resourcetoadd
 					distribution = uniform
-					min = 2
-					max = 6
+					min = global.setup_resource_rubber_min
+					max = global.setup_resource_rubber_max
 				}
 
 				add_resource = {
@@ -3493,14 +3831,19 @@ randomise_resources = {
 			}
 		}
 		15 = {
+			modifier = {
+				factor = 0
+
+				steel > 0
+			}
 			custom_effect_tooltip = esicolor.8.e_tt3
 			hidden_effect = {
 				set_temp_variable = { resourcetoadd = 15 }
 				randomize_temp_variable = {
 					var = resourcetoadd
 					distribution = uniform
-					min = 8
-					max = 30
+					min = global.setup_resource_steel_min
+					max = global.setup_resource_steel_max
 				}
 
 				add_resource = {
@@ -3510,14 +3853,19 @@ randomise_resources = {
 			}
 		}
 		15 = {
+			modifier = {
+				factor = 0
+
+				aluminium > 0
+			}
 			custom_effect_tooltip = esicolor.8.e_tt4
 			hidden_effect = {
 				set_temp_variable = { resourcetoadd = 5 }
 				randomize_temp_variable = {
 					var = resourcetoadd
 					distribution = uniform
-					min = 3
-					max = 10
+					min = global.setup_resource_aluminium_min
+					max = global.setup_resource_aluminium_max
 				}
 
 				add_resource = {
@@ -3527,14 +3875,19 @@ randomise_resources = {
 			}
 		}
 		15 = {
+			modifier = {
+				factor = 0
+
+				tungsten > 0
+			}
 			custom_effect_tooltip = esicolor.8.e_tt5
 			hidden_effect = {
 				set_temp_variable = { resourcetoadd = 5 }
 				randomize_temp_variable = {
 					var = resourcetoadd
 					distribution = uniform
-					min = 3
-					max = 10
+					min = global.setup_resource_tungsten_min
+					max = global.setup_resource_tungsten_max
 				}
 
 				add_resource = {
@@ -3544,14 +3897,19 @@ randomise_resources = {
 			}
 		}
 		15 = {
+			modifier = {
+				factor = 0
+
+				chromium > 0
+			}
 			custom_effect_tooltip = esicolor.8.e_tt6
 			hidden_effect = {
 				set_temp_variable = { resourcetoadd = 2 }
 				randomize_temp_variable = {
 					var = resourcetoadd
 					distribution = uniform
-					min = 1
-					max = 4
+					min = global.setup_resource_chromium_min
+					max = global.setup_resource_chromium_max
 				}
 
 				add_resource = {
@@ -4192,24 +4550,28 @@ randomise_techonology = {
 	}
 }
 
-randomise_stability_and_war_support = {
+randomise_stability = {
 	hidden_effect = {
 		set_temp_variable = { stabtoset = 50 }
 		randomize_temp_variable = {
 			var = stabtoset
 			distribution = uniform
-			min = 10
-			max = 90
+			min = global.setup_stability_min
+			max = global.setup_stability_max
 		}
 		divide_temp_variable = { stabtoset = 100 }
 		set_stability = stabtoset
+	}
+}
 
+randomise_war_support = {
+	hidden_effect = {
 		set_temp_variable = { wstoset = 50 }
 		randomize_temp_variable = {
 			var = wstoset
 			distribution = uniform
-			min = 10
-			max = 90
+			min = global.setup_war_support_min
+			max = global.setup_war_support_max
 		}
 		divide_temp_variable = { wstoset = 100 }
 		set_war_support = wstoset
@@ -10771,6 +11133,72 @@ setup_default_advisors = {
 	set_country_flag = air_strategic_bombing_disabled
 }
 
+setup_basegame_advisors = {
+	set_country_flag = popular_figurehead_disabled
+	set_country_flag = propaganda_expert_disabled
+	set_country_flag = silent_workhorse_disabled
+	set_country_flag = prince_of_terror_disabled
+	set_country_flag = backroom_backstabber_disabled
+	set_country_flag = editor_disabled
+	set_country_flag = ideological_crusader_disabled
+	set_country_flag = compassionate_gentleman_disabled
+	set_country_flag = smooth_talking_charmer_disabled
+	set_country_flag = financial_expert_disabled
+	set_country_flag = economist_disabled
+	set_country_flag = quartermaster_general_disabled
+	set_country_flag = armaments_organizer_disabled
+
+	set_country_flag = code_breaker_disabled
+	set_country_flag = encryption_expert_disabled
+
+	set_country_flag = nuclear_scientist_disabled
+	set_country_flag = rocket_scientist_disabled
+
+	set_country_flag = army_chief_maneuver_disabled
+	set_country_flag = army_chief_drill_disabled
+	set_country_flag = army_chief_planning_disabled
+	set_country_flag = army_chief_morale_disabled
+	set_country_flag = army_chief_organizational_disabled
+	set_country_flag = army_chief_entrenchment_disabled
+	set_country_flag = army_chief_reform_disabled
+	set_country_flag = army_chief_old_guard_disabled
+
+	set_country_flag = navy_chief_maneuver_disabled
+	set_country_flag = navy_chief_naval_aviation_disabled
+	set_country_flag = navy_chief_reform_disabled
+	set_country_flag = navy_chief_old_guard_disabled
+
+	set_country_flag = air_chief_night_operations_disabled
+	set_country_flag = air_chief_safety_disabled
+	set_country_flag = air_chief_reform_disabled
+	set_country_flag = air_chief_old_guard_disabled
+
+	set_country_flag = army_infantry_disabled
+	set_country_flag = army_cavalry_disabled
+	set_country_flag = army_armored_disabled
+	set_country_flag = army_commando_disabled
+	set_country_flag = army_entrenchment_disabled
+	set_country_flag = army_regrouping_disabled
+	set_country_flag = army_concealment_disabled
+	set_country_flag = army_radio_intelligence_disabled
+	set_country_flag = army_jungle_warfare_disabled
+
+	set_country_flag = navy_amphibious_assault_disabled
+	set_country_flag = navy_naval_air_defense_disabled
+	set_country_flag = navy_anti_submarine_disabled
+	set_country_flag = navy_submarine_disabled
+	set_country_flag = navy_capital_ship_disabled
+	set_country_flag = navy_screen_disabled
+	set_country_flag = navy_carrier_disabled
+
+	set_country_flag = air_air_superiority_disabled
+	set_country_flag = air_bomber_interception_disabled
+	set_country_flag = air_close_air_support_disabled
+	set_country_flag = air_naval_strike_disabled
+	set_country_flag = air_strategic_bombing_disabled
+	set_country_flag = air_airborne_disabled
+}
+
 setup_default_companies = {
 	set_country_flag = infantry_tank_manufacturer_disabled
 	set_country_flag = tank_refurbishment_plant_disabled
@@ -10794,6 +11222,37 @@ setup_default_companies = {
 	set_country_flag = construction_company_disabled
 	set_country_flag = mining_company_disabled
 	set_country_flag = railway_company_disabled
+}
+
+setup_basegame_companies = {
+	set_country_flag = armored_car_manufacturer_disabled
+	set_country_flag = infantry_tank_manufacturer_disabled
+	set_country_flag = fast_tank_manufacturer_disabled
+	set_country_flag = heavy_tank_manufacturer_disabled
+	set_country_flag = tank_refurbishment_plant_disabled
+
+	set_country_flag = pacific_fleet_naval_manufacturer_disabled
+	set_country_flag = atlantic_fleet_naval_manufacturer_disabled
+	set_country_flag = mediterranean_fleet_naval_manufacturer_disabled
+	set_country_flag = black_sea_fleet_naval_manufacturer_disabled
+	set_country_flag = battlefleet_designer_disabled
+	set_country_flag = repair_and_refurbishment_plant_disabled
+	set_country_flag = coastal_defence_naval_manufacturer_disabled
+	set_country_flag = submarine_manufacturer_disabled
+	set_country_flag = raiding_fleet_naval_manufacturer_disabled
+
+	set_country_flag = CAS_manufacturer_disabled
+	set_country_flag = fuel_efficient_aircraft_manufacturer_disabled
+	set_country_flag = agility_focused_aircraft_manufacturer_disabled
+
+	set_country_flag = refinery_concern_disabled
+	set_country_flag = telephoone_company_disabled
+	set_country_flag = forestry_company_disabled
+	set_country_flag = construction_company_disabled
+	set_country_flag = mining_company_disabled
+	set_country_flag = railway_company_disabled
+
+	set_country_flag = support_equipment_manufacturer_disabled
 }
 
 clear_advisor_disabled_flags = {
@@ -11230,6374 +11689,356 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = air_airborne_3 } remove_country_leader_trait = air_airborne_3 }
 }
 
+clear_province_modifiers = {
+	remove_province_modifier = { 
+		static_modifiers = { dense_rural_infrastructure }
+
+		province = { all_provinces = yes }
+	}
+}
+
+add_province_modifiers = {
+	600 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Jiangxi
+	749 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Huangshan
+	606 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Anhui
+	607 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Henan
+	620 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Hubei
+	602 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Hunan
+	750 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Changde
+	744 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Xian
+	605 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Sichuan
+	748 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Zunyi
+	603 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Guizhu
+	615 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Shanxi
+	622 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Shaanxi
+	325 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Yunnan
+	325 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Dali
+}
+
 setup_strat_regions_game = {
-	# set_variable = { global.current_region = 1 }
-	#
-	# while_loop_effect = {
-	#	limit = { check_variable = { global.current_region < 234 } }
-	#	add_to_array = { global.regions = global.current_region
-	#
-	#	random_state = {
-	#		limit = {
-	#			THIS.owner = {
-	#				OR = {
-	#					has_global_flag = region_setup_players_checked
-	#					is_ai = no
-	#				}
-	#				NOT = { original_tag = OOO }
-	#			}
-	#			region = var:global.current_region
-	#		}
-	#		every_state = {
-	#			limit = {
-	#				NOT = { state = PREV }
-	#				region = var:global.current_region
-	#			}
-	#
-	#			PREV.owner = { transfer_state = PREV }
-	#			add_core_of = PREV.owner
-	#		}
-	#	}
-	#
-	#	add_to_variable = { global.current_region = 1 }
-	# }
-	# This fucker doesn't work because `region =` does not allow variables.
+	for_loop_effect = {
+		start = 1
+		end = 288
+		value = i
 
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 1
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 1
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_001 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
+		meta_effect = {
+			text = {
+				random_state = {
+					limit = {
+						THIS.owner = {
+							OR = {
+								has_global_flag = region_setup_players_checked
+								is_ai = no
+							}
+							NOT = { original_tag = OOO }
+						}
+						region = [REGION]
+					}
+					every_state = {
+						limit = {
+							NOT = { state = PREV }
+							region = [REGION]
+						}
+			
+						PREV.owner = { transfer_state = PREV }
+						add_core_of = PREV.owner
+					}
+					THIS.owner = { set_cosmetic_tag = region_[REGION] }
 				}
-				NOT = { original_tag = OOO }
-			}
-			region = 2
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 2
 			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
+			REGION = "[?i]"
 		}
-		THIS.owner = { set_cosmetic_tag = region_002 }
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 3
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 3
-			}
+}
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_003 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 4
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 4
-			}
+clear_formable_flags = {
+	clr_global_flag = formables_disabled
+	clr_global_flag = formables_visual
+	clr_global_flag = formables_give_core
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_004 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 5
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 5
-			}
+	set_variable = { global.formables_cost_25 = 25 }
+	set_variable = { global.formables_cost_50 = 50 }
+	set_variable = { global.formables_cost_100 = 100 }
+}
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_005 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 6
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 6
-			}
+give_original_conscription_law = {
+	if = {
+		limit = { original_country_has_disarmed_nation = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_006 }
+		add_ideas = disarmed_nation
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 7
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 7
-			}
+	else_if = {
+		limit = { original_country_has_volunteer_only = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_007 }
+		add_ideas = volunteer_only
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 8
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 8
-			}
+	else_if = {
+		limit = { original_country_has_limited_conscription = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_008 }
+		add_ideas = limited_conscription
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 9
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 9
-			}
+	else_if = {
+		limit = { original_country_has_service_by_requirement = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_009 }
+		add_ideas = service_by_requirement
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 10
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 10
-			}
+}
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_010 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 11
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 11
-			}
+give_random_conscription_law = {
+	random_list = {
+		seed = random
+		3 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_011 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
+				check_variable = { global.setup_conscription_law_min > 0 }
 			}
-			region = 12
+			add_ideas = disarmed_nation
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 12
-			}
+		127 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_012 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
 				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
+					check_variable = { global.setup_conscription_law_min > 1 }
+					check_variable = { global.setup_conscription_law_max < 1 }
 				}
-				NOT = { original_tag = OOO }
 			}
-			region = 13
+			add_ideas = volunteer_only
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 13
-			}
+		28 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_013 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
 				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
+					check_variable = { global.setup_conscription_law_min > 2 }
+					check_variable = { global.setup_conscription_law_max < 2 }
 				}
-				NOT = { original_tag = OOO }
 			}
-			region = 14
+			add_ideas = limited_conscription
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 14
-			}
+		3 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_014 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
 				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
+					check_variable = { global.setup_conscription_law_min > 3 }
+					check_variable = { global.setup_conscription_law_max < 3 }
 				}
-				NOT = { original_tag = OOO }
 			}
-			region = 15
+			add_ideas = extensive_conscription
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 15
-			}
+		0 = {
+			modifier = {
+				add = 2
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_015 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
+				check_variable = { global.setup_conscription_law_min < 5 }
+				check_variable = { global.setup_conscription_law_max > 3 }
 			}
-			region = 16
+			add_ideas = service_by_requirement
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 16
-			}
+		0 = {
+			modifier = {
+				add = 1
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_016 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
+				check_variable = { global.setup_conscription_law_min < 6 }
+				check_variable = { global.setup_conscription_law_max > 4 }
 			}
-			region = 17
+			add_ideas = all_adults_serve
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 17
-			}
+		0 = {
+			modifier = {
+				add = 1
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_017 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 18
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 18
+				check_variable = { global.setup_conscription_law_max > 5 }
 			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
+			add_ideas = scrapping_the_barrel
 		}
-		THIS.owner = { set_cosmetic_tag = region_018 }
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 19
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 19
-			}
+}
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_019 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 20
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 20
-			}
+give_original_trade_law = {
+	if = {
+		limit = { original_country_has_closed_economy = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_020 }
+		add_ideas = closed_economy
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 21
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 21
-			}
+	else_if = {
+		limit = { original_country_has_limited_exports = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_021 }
+		add_ideas = limited_exports
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 22
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 22
-			}
+	else_if = {
+		limit = { original_country_has_export_focus = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_022 }
+		add_ideas = export_focus
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 23
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 23
-			}
+	else_if = {
+		limit = { original_country_has_free_trade = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_023 }
+		add_ideas = free_trade
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 24
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 24
-			}
+}
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_024 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 25
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 25
-			}
+give_random_trade_law = {
+	random_list = {
+		seed = random
+		11 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_025 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
+				check_variable = { global.setup_trade_law_min > 0 }
 			}
-			region = 26
+			add_ideas = closed_economy
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 26
-			}
+		8 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_026 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
 				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
+					check_variable = { global.setup_trade_law_min > 1 }
+					check_variable = { global.setup_trade_law_max < 1 }
 				}
-				NOT = { original_tag = OOO }
 			}
-			region = 27
+			add_ideas = limited_exports
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 27
-			}
+		137 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_027 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
 				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
+					check_variable = { global.setup_trade_law_min > 2 }
+					check_variable = { global.setup_trade_law_max < 2 }
 				}
-				NOT = { original_tag = OOO }
 			}
-			region = 28
+			add_ideas = export_focus
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 28
-			}
+		5 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_028 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 29
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 29
+				check_variable = { global.setup_trade_law_max < 3 }
 			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
+			add_ideas = free_trade
 		}
-		THIS.owner = { set_cosmetic_tag = region_029 }
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 30
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 30
-			}
+}
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_030 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 31
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 31
-			}
+give_original_economic_law = {
+	if = {
+		limit = { original_country_has_undisturbed_isolation = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_031 }
+		add_ideas = undisturbed_isolation
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 32
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 32
-			}
+	else_if = {
+		limit = { original_country_has_civilian_economy = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_032 }
+		add_ideas = civilian_economy
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 33
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 33
-			}
+	else_if = {
+		limit = { original_country_has_partial_mobilization = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_033 }
+		add_ideas = partial_economic_mobilisation
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 34
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 34
-			}
+}
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_034 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 35
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 35
-			}
+give_random_economic_law = {
+	random_list = {
+		seed = random
+		2 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_035 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
+				check_variable = { global.setup_economic_law_min > 0 }
 			}
-			region = 36
+			add_ideas = undisturbed_isolation
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 36
-			}
+		2 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_036 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
 				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
+					check_variable = { global.setup_economic_law_min > 1 }
+					check_variable = { global.setup_economic_law_max < 1 }
 				}
-				NOT = { original_tag = OOO }
 			}
-			region = 37
+			add_ideas = isolation
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 37
-			}
+		100 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_037 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
 				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
+					check_variable = { global.setup_economic_law_min > 4 }
+					check_variable = { global.setup_economic_law_max < 4 }
 				}
-				NOT = { original_tag = OOO }
 			}
-			region = 38
+			add_ideas = civilian_economy
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 38
-			}
+		7 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_038 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
 				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
+					check_variable = { global.setup_economic_law_min > 5 }
+					check_variable = { global.setup_economic_law_max < 5 }
 				}
-				NOT = { original_tag = OOO }
 			}
-			region = 39
+			add_ideas = low_economic_mobilisation
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 39
-			}
+		10 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_039 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
 				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
+					check_variable = { global.setup_economic_law_min > 6 }
+					check_variable = { global.setup_economic_law_max < 6 }
 				}
-				NOT = { original_tag = OOO }
 			}
-			region = 40
+			add_ideas = partial_economic_mobilisation
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 40
-			}
+		1 = {
+			modifier = {
+				factor = 0
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_040 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
 				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
+					check_variable = { global.setup_economic_law_min > 8 }
+					check_variable = { global.setup_economic_law_max < 8 }
 				}
-				NOT = { original_tag = OOO }
 			}
-			region = 41
+			add_ideas = war_economy
 		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 41
-			}
+		0 = {
+			modifier = {
+				add = 1
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_041 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 42
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 42
+				check_variable = { global.setup_economic_law_max > 8 }
 			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
+			add_ideas = tot_economic_mobilisation
 		}
-		THIS.owner = { set_cosmetic_tag = region_042 }
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 43
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 43
-			}
+}
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_043 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 44
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 44
-			}
+give_original_research_slots = {
+	if = {
+		limit = { original_country_has_one_research_slot = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_044 }
+		set_research_slots = 1
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 45
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 45
-			}
+	else_if = {
+		limit = { original_country_has_two_research_slot = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_045 }
+		set_research_slots = 2
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 46
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 46
-			}
+	else_if = {
+		limit = { original_country_has_three_research_slot = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_046 }
+		set_research_slots = 3
 	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 47
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 47
-			}
+	else_if = {
+		limit = { original_country_has_four_research_slot = yes }
 
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_047 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 48
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 48
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_048 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 49
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 49
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_049 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 50
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 50
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_050 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 51
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 51
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_051 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 52
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 52
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_052 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 53
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 53
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_053 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 54
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 54
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_054 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 55
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 55
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_055 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 56
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 56
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_056 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 57
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 57
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_057 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 58
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 58
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_058 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 59
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 59
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_059 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 60
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 60
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_060 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 61
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 61
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_061 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 62
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 62
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_062 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 63
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 63
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_063 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 64
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 64
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_064 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 65
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 65
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_065 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 66
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 66
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_066 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 67
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 67
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_067 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 68
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 68
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_068 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 69
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 69
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_069 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 70
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 70
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_070 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 71
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 71
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_071 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 72
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 72
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_072 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 73
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 73
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_073 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 74
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 74
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_074 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 75
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 75
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_075 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 76
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 76
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_076 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 77
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 77
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_077 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 78
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 78
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_078 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 79
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 79
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_079 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 80
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 80
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_080 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 81
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 81
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_081 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 82
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 82
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_082 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 83
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 83
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_083 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 84
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 84
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_084 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 85
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 85
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_085 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 86
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 86
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_086 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 87
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 87
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_087 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 88
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 88
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_088 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 89
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 89
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_089 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 90
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 90
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_090 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 91
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 91
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_091 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 92
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 92
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_092 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 93
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 93
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_093 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 94
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 94
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_094 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 95
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 95
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_095 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 96
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 96
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_096 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 97
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 97
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_097 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 98
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 98
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_098 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 99
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 99
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_099 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 100
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 100
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_100 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 101
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 101
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_101 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 102
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 102
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_102 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 103
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 103
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_103 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 104
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 104
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_104 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 105
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 105
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_105 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 106
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 106
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_106 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 107
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 107
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_107 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 108
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 108
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_108 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 109
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 109
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_109 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 110
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 110
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_110 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 111
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 111
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_111 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 112
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 112
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_112 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 113
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 113
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_113 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 114
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 114
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_114 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 115
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 115
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_115 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 116
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 116
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_116 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 117
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 117
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_117 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 118
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 118
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_118 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 119
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 119
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_119 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 120
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 120
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_120 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 121
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 121
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_121 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 122
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 122
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_122 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 123
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 123
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_123 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 124
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 124
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_124 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 125
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 125
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_125 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 126
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 126
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_126 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 127
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 127
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_127 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 128
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 128
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_128 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 129
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 129
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_129 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 130
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 130
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_130 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 131
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 131
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_131 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 132
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 132
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_132 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 133
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 133
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_133 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 134
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 134
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_134 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 135
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 135
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_135 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 136
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 136
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_136 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 137
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 137
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_137 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 138
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 138
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_138 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 139
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 139
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_139 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 140
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 140
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_140 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 141
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 141
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_141 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 142
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 142
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_142 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 143
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 143
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_143 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 144
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 144
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_144 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 145
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 145
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_145 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 146
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 146
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_146 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 147
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 147
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_147 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 148
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 148
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_148 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 149
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 149
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_149 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 150
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 150
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_150 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 151
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 151
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_151 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 152
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 152
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_152 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 153
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 153
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_153 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 154
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 154
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_154 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 155
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 155
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_155 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 156
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 156
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_156 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 157
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 157
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_157 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 158
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 158
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_158 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 159
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 159
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_159 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 160
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 160
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_160 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 161
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 161
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_161 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 162
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 162
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_162 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 163
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 163
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_163 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 164
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 164
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_164 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 165
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 165
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_165 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 166
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 166
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_166 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 167
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 167
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_167 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 168
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 168
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_168 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 169
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 169
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_169 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 170
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 170
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_170 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 171
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 171
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_171 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 172
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 172
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_172 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 173
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 173
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_173 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 174
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 174
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_174 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 175
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 175
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_175 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 176
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 176
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_176 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 177
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 177
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_177 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 178
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 178
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_178 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 179
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 179
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_179 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 180
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 180
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_180 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 181
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 181
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_181 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 182
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 182
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_182 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 183
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 183
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_183 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 184
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 184
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_184 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 185
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 185
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_185 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 186
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 186
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_186 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 187
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 187
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_187 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 188
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 188
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_188 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 189
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 189
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_189 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 190
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 190
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_190 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 191
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 191
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_191 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 192
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 192
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_192 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 193
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 193
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_193 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 194
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 194
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_194 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 195
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 195
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_195 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 196
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 196
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_196 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 197
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 197
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_197 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 198
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 198
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_198 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 199
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 199
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_199 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 200
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 200
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_200 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 201
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 201
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_201 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 202
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 202
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_202 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 203
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 203
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_203 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 204
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 204
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_204 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 205
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 205
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_205 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 206
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 206
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_206 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 207
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 207
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_207 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 208
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 208
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_208 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 209
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 209
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_209 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 210
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 210
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_210 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 211
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 211
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_211 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 212
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 212
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_212 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 213
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 213
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_213 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 214
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 214
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_214 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 215
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 215
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_215 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 216
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 216
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_216 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 217
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 217
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_217 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 218
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 218
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_218 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 219
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 219
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_219 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 220
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 220
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_220 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 221
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 221
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_221 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 222
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 222
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_222 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 223
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 223
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_223 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 224
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 224
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_224 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 225
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 225
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_225 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 226
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 226
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_226 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 227
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 227
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_227 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 228
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 228
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_228 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 229
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 229
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_229 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 230
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 230
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_230 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 231
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 231
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_231 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 232
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 232
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_232 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 233
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 233
-			}
-
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_233 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 234
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 234
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_234 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 235
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 235
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_235 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 236
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 236
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_236 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 237
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 237
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_237 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 238
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 238
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_238 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 239
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 239
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_239 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 240
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 240
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_240 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 241
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 241
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_241 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 242
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 242
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_242 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 243
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 243
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_243 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 244
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 244
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_244 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 245
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 245
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_245 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 246
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 246
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_246 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 247
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 247
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_247 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 248
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 248
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_248 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 249
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 249
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_249 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 250
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 250
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_250 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 251
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 251
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_251 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 252
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 252
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_252 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 253
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 253
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_253 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 254
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 254
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_254 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 255
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 255
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_255 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 256
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 256
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_256 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 257
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 257
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_257 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 258
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 258
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_258 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 259
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 259
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_259 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 260
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 260
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_260 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 261
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 261
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_261 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 262
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 262
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_262 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 263
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 263
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_263 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 264
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 264
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_264 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 265
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 265
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_265 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 266
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 266
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_266 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 267
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 267
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_267 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 268
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 268
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_268 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 269
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 269
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_269 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 270
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 270
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_270 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 271
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 271
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_271 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 272
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 272
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_272 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 273
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 273
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_273 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 274
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 274
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_274 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 275
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 275
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_275 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 276
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 276
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_276 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 277
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 277
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_277 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 278
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 278
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_278 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 279
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 279
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_279 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 280
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 280
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_280 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 281
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 281
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_281 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 282
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 282
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_282 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 283
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 283
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_283 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 284
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 284
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_284 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 285
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 285
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_285 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 286
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 286
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_286 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 287
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 287
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_287 }
-	}
-	random_state = {
-		limit = {
-			THIS.owner = {
-				OR = {
-					has_global_flag = region_setup_players_checked
-					is_ai = no
-				}
-				NOT = { original_tag = OOO }
-			}
-			region = 288
-		}
-		every_state = {
-			limit = {
-				NOT = { state = PREV }
-				region = 288
-			}
-	
-			PREV.owner = { transfer_state = PREV }
-			add_core_of = PREV.owner
-		}
-		THIS.owner = { set_cosmetic_tag = region_288 }
+		set_research_slots = 4
 	}
 }
 

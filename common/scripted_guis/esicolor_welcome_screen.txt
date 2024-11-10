@@ -302,6 +302,10 @@ scripted_gui = {
 				check_variable = { global.setup_anti_air = -1 }
 			}
 
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_4_selected_visible = {
+				check_variable = { global.setup_radar_stations = -1 }
+			}
+
 			esicolor_welcome_screen_tab_1_page_2_eaw_data_5_selected_visible = {
 				check_variable = { global.setup_civilian_factories = -1 }
 			}
@@ -452,63 +456,75 @@ scripted_gui = {
 				}
 			}
 
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_4_click = {
+				set_variable = { global.setup_radar_stations = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_4_selected_click = {
+				set_variable = { global.setup_radar_stations = 1 }
+			}
 			esicolor_welcome_screen_tab_1_page_2_max_minus_4_click = {
+				set_variable = { global.setup_radar_stations = 1 }
 				if = {
-					limit = { check_variable = { global.setup_radar_stations > 0 } }
+					limit = { check_variable = { global.setup_radar_stations_chance > 0 } }
 
-					subtract_from_variable = { global.setup_radar_stations = 1 }
+					subtract_from_variable = { global.setup_radar_stations_chance = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_2_max_plus_4_click = {
+				set_variable = { global.setup_radar_stations = 1 }
 				if = {
-					limit = { check_variable = { global.setup_radar_stations < 100 } }
+					limit = { check_variable = { global.setup_radar_stations_chance < 100 } }
 
-					add_to_variable = { global.setup_radar_stations = 1 }
+					add_to_variable = { global.setup_radar_stations_chance = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_2_max_minus_4_control_click = {
+				set_variable = { global.setup_radar_stations = 1 }
 				if = {
-					limit = { check_variable = { global.setup_radar_stations > 0 } }
+					limit = { check_variable = { global.setup_radar_stations_chance > 0 } }
 
-					subtract_from_variable = { global.setup_radar_stations = 5 }
+					subtract_from_variable = { global.setup_radar_stations_chance = 5 }
 					clamp_variable = {
-						var = global.setup_radar_stations
+						var = global.setup_radar_stations_chance
 						min = 0
 						max = 100
 					}
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_2_max_plus_4_control_click = {
+				set_variable = { global.setup_radar_stations = 1 }
 				if = {
-					limit = { check_variable = { global.setup_radar_stations < 100 } }
+					limit = { check_variable = { global.setup_radar_stations_chance < 100 } }
 
-					add_to_variable = { global.setup_radar_stations = 5 }
+					add_to_variable = { global.setup_radar_stations_chance = 5 }
 					clamp_variable = {
-						var = global.setup_radar_stations
+						var = global.setup_radar_stations_chance
 						min = 0
 						max = 100
 					}
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_2_max_minus_4_shift_click = {
+				set_variable = { global.setup_radar_stations = 1 }
 				if = {
-					limit = { check_variable = { global.setup_radar_stations > 0 } }
+					limit = { check_variable = { global.setup_radar_stations_chance > 0 } }
 
-					subtract_from_variable = { global.setup_radar_stations = 10 }
+					subtract_from_variable = { global.setup_radar_stations_chance = 10 }
 					clamp_variable = {
-						var = global.setup_radar_stations
+						var = global.setup_radar_stations_chance
 						min = 0
 						max = 100
 					}
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_2_max_plus_4_shift_click = {
+				set_variable = { global.setup_radar_stations = 1 }
 				if = {
-					limit = { check_variable = { global.setup_radar_stations < 100 } }
+					limit = { check_variable = { global.setup_fuel_silos_chance < 100 } }
 
-					add_to_variable = { global.setup_radar_stations = 10 }
+					add_to_variable = { global.setup_fuel_silos_chance = 10 }
 					clamp_variable = {
-						var = global.setup_radar_stations
+						var = global.setup_fuel_silos_chance
 						min = 0
 						max = 100
 					}
@@ -717,7 +733,7 @@ scripted_gui = {
 			esicolor_welcome_screen_tab_1_page_2_max_plus_8_click = {
 				set_variable = { global.setup_synthetic_refineries = 1 }
 				if = {
-					limit = { check_variable = { global.setup_synthetic_refineries_max < 1208 } }
+					limit = { check_variable = { global.setup_synthetic_refineries_max < 969 } }
 
 					add_to_variable = { global.setup_synthetic_refineries_max = 1 }
 				}
@@ -731,20 +747,20 @@ scripted_gui = {
 					clamp_variable = {
 						var = global.setup_synthetic_refineries_max
 						min = global.setup_synthetic_refineries_min
-						max = 1208
+						max = 969
 					}
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_2_max_plus_8_control_click = {
 				set_variable = { global.setup_synthetic_refineries = 1 }
 				if = {
-					limit = { check_variable = { global.setup_synthetic_refineries_max < 1208 } }
+					limit = { check_variable = { global.setup_synthetic_refineries_max < 969 } }
 
 					add_to_variable = { global.setup_synthetic_refineries_max = 5 }
 					clamp_variable = {
 						var = global.setup_synthetic_refineries_max
 						min = global.setup_synthetic_refineries_min
-						max = 1208
+						max = 969
 					}
 				}
 			}
@@ -757,20 +773,20 @@ scripted_gui = {
 					clamp_variable = {
 						var = global.setup_synthetic_refineries_max
 						min = global.setup_synthetic_refineries_min
-						max = 1208
+						max = 969
 					}
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_2_max_plus_8_shift_click = {
 				set_variable = { global.setup_synthetic_refineries = 1 }
 				if = {
-					limit = { check_variable = { global.setup_synthetic_refineries_max < 1208 } }
+					limit = { check_variable = { global.setup_synthetic_refineries_max < 969 } }
 
 					add_to_variable = { global.setup_synthetic_refineries_max = 10 }
 					clamp_variable = {
 						var = global.setup_synthetic_refineries_max
 						min = global.setup_synthetic_refineries_min
-						max = 1208
+						max = 969
 					}
 				}
 			}
@@ -2487,7 +2503,7 @@ scripted_gui = {
 			esicolor_welcome_screen_tab_1_page_4_max_plus_8_click = {
 				set_variable = { global.setup_intelligence_agency = 1 }
 				if = {
-					limit = { check_variable = { global.setup_intelligence_agency_chance < 1208 } }
+					limit = { check_variable = { global.setup_intelligence_agency_chance < 969 } }
 
 					add_to_variable = { global.setup_intelligence_agency_chance = 1 }
 				}
@@ -2501,20 +2517,20 @@ scripted_gui = {
 					clamp_variable = {
 						var = global.setup_intelligence_agency_chance
 						min = 0
-						max = 1208
+						max = 969
 					}
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_4_max_plus_8_control_click = {
 				set_variable = { global.setup_intelligence_agency = 1 }
 				if = {
-					limit = { check_variable = { global.setup_intelligence_agency_chance < 1208 } }
+					limit = { check_variable = { global.setup_intelligence_agency_chance < 969 } }
 
 					add_to_variable = { global.setup_intelligence_agency_chance = 5 }
 					clamp_variable = {
 						var = global.setup_intelligence_agency_chance
 						min = 0
-						max = 1208
+						max = 969
 					}
 				}
 			}
@@ -2527,20 +2543,20 @@ scripted_gui = {
 					clamp_variable = {
 						var = global.setup_intelligence_agency_chance
 						min = 0
-						max = 1208
+						max = 969
 					}
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_4_max_plus_8_shift_click = {
 				set_variable = { global.setup_intelligence_agency = 1 }
 				if = {
-					limit = { check_variable = { global.setup_intelligence_agency_chance < 1208 } }
+					limit = { check_variable = { global.setup_intelligence_agency_chance < 969 } }
 
 					add_to_variable = { global.setup_intelligence_agency_chance = 10 }
 					clamp_variable = {
 						var = global.setup_intelligence_agency_chance
 						min = 0
-						max = 1208
+						max = 969
 					}
 				}
 			}
@@ -4048,28 +4064,6 @@ scripted_gui = {
 		visible = {
 			is_ai = no
 			check_variable = { esicolor_welcome_screen = 5 }
-		}
-		
-		triggers = {
-			esicolor_welcome_screen_tab_5_eaw_data_1_selected_visible = {
-				has_country_flag = esicolor_credits_show_eaw
-			}
-
-			tab_5_text_esicolor_visible = {
-				NOT = { has_country_flag = esicolor_credits_show_eaw }
-			}
-			tab_5_text_eaw_visible = {
-				has_country_flag = esicolor_credits_show_eaw
-			}
-		}
-		
-		effects = {
-			esicolor_welcome_screen_tab_5_eaw_data_1_click = {
-				set_country_flag = esicolor_credits_show_eaw
-			}
-			esicolor_welcome_screen_tab_5_eaw_data_1_selected_click = {
-				clr_country_flag = esicolor_credits_show_eaw
-			}
 		}
 	}
 }

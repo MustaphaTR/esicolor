@@ -755,3 +755,161 @@ has_level_10_air_base = {
 		state = 378
 	}
 }
+
+original_country_has_disarmed_nation = {
+	OR = {
+		state_originally_from_HUN = yes
+		state_originally_from_DEN = yes
+		state_originally_from_ICE = yes
+		state_originally_from_USA = yes
+		state_originally_from_ETH = yes # Actually has their own thing, but the Recruitable Population modifier is closest to this one.
+	}
+}
+
+original_country_has_volunteer_only = {
+	NOT = {
+		original_country_has_disarmed_nation = yes
+		original_country_has_limited_conscription = yes
+		original_country_has_service_by_requirement = yes
+	}
+}
+
+original_country_has_limited_conscription = {
+	OR = {
+		state_originally_from_GER = yes
+		state_originally_from_FRA = yes
+		state_originally_from_ITA = yes
+		state_originally_from_NOR = yes
+		state_originally_from_FIN = yes
+		state_originally_from_EST = yes
+		state_originally_from_LAT = yes
+		state_originally_from_LIT = yes
+		state_originally_from_GRE = yes
+		state_originally_from_TUR = yes
+		state_originally_from_KUR = yes
+		state_originally_from_MON = yes
+		state_originally_from_TAN = yes
+	}
+}
+
+original_country_has_service_by_requirement = {
+	OR = {
+		state_originally_from_PRC = yes
+		state_originally_from_SWI = yes # Actually has their own thing, but the Recruitable Population modifier matches this one.
+	}
+}
+
+original_country_has_closed_economy = {
+	OR = {
+		state_originally_from_PRC = yes
+	}
+}
+
+original_country_has_limited_exports = {
+	OR = {
+		state_originally_from_GER = yes
+		state_originally_from_POL = yes # Actually has their own thing, but the Resources to Market modifier matches this one.
+		state_originally_from_ITA = yes
+		state_originally_from_JAP = yes
+	}
+}
+
+original_country_has_export_focus = {
+	NOT = {
+		original_country_has_free_trade = yes
+		original_country_has_limited_exports = yes
+		original_country_has_closed_economy = yes
+	}
+}
+
+original_country_has_free_trade = {
+	OR = {
+		state_originally_from_USA = yes
+		state_originally_from_CHI = yes
+	}
+}
+
+original_country_has_undisturbed_isolation = {
+	OR = {
+		state_originally_from_USA = yes
+	}
+}
+
+original_country_has_civilian_economy = {
+	NOT = {
+		original_country_has_undisturbed_isolation = yes
+		original_country_has_partial_mobilization = yes
+	}
+}
+
+original_country_has_partial_mobilization = {
+	OR = {
+		state_originally_from_GER = yes
+		state_originally_from_JAP = yes
+		state_originally_from_PRC = yes
+	}
+}
+
+original_country_has_two_research_slot = {
+	NOT = {
+		original_country_has_three_research_slot = yes
+		original_country_has_four_research_slot = yes
+	}
+}
+
+original_country_has_three_research_slot = {
+	OR = {
+		state_originally_from_IRE = yes
+		state_originally_from_NIR = yes
+		state_originally_from_FRA = yes
+		state_originally_from_SPR = yes
+		state_originally_from_BEL = yes
+		state_originally_from_NOR = yes
+		state_originally_from_SWI = yes
+		state_originally_from_AUS = yes
+		state_originally_from_HUN = yes
+		state_originally_from_CZE = yes
+		state_originally_from_SLV = yes
+		state_originally_from_BOS = yes
+		state_originally_from_MNT = yes
+		state_originally_from_SER = yes
+		state_originally_from_KOS = yes
+		state_originally_from_MAC = yes
+		state_originally_from_BUL = yes
+		state_originally_from_ROM = yes
+		state_originally_from_TRA = yes
+		state_originally_from_POL = yes
+		state_originally_from_LIT = yes
+		state_originally_from_LAT = yes
+		state_originally_from_EST = yes
+		state_originally_from_GRE = yes
+		state_originally_from_TUR = yes
+		state_originally_from_DEN = yes
+		state_originally_from_NOR = yes
+		state_originally_from_SWE = yes
+		state_originally_from_FIN = yes
+		state_originally_from_CAN = yes
+		state_originally_from_QUE = yes
+		state_originally_from_MAL = yes
+		state_originally_from_VIN = yes
+		state_originally_from_LAO = yes
+		state_originally_from_CAM = yes
+		state_originally_from_RUS = yes
+		state_originally_from_UKR = yes
+		state_originally_from_BLR = yes
+		state_originally_from_GEO = yes
+		state_originally_from_ARM = yes
+		state_originally_from_AZR = yes
+		state_originally_from_KAZ = yes
+	}
+}
+
+original_country_has_four_research_slot = {
+	OR = {
+		state_originally_from_USA = yes
+		state_originally_from_ENG = yes
+		state_originally_from_GER = yes
+		state_originally_from_ITA = yes
+		state_originally_from_JAP = yes
+	}
+}

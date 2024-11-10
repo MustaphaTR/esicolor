@@ -1,0 +1,2554 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = {
+	name = esicolor_setup_infrastructure_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_infrastructure < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_infrastructure_min = global.setup_infrastructure_max }
+		}
+		localization_key = esicolor_setup_infrastructure_number
+	}
+	text = {
+		localization_key = esicolor_setup_infrastructure_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_infrastructure_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_infrastructure < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_air_bases_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_air_bases < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_air_bases_min = global.setup_air_bases_max }
+		}
+		localization_key = esicolor_setup_air_bases_number
+	}
+	text = {
+		localization_key = esicolor_setup_air_bases_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_air_bases_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_air_bases < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_anti_air_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_anti_air < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_anti_air_min = global.setup_anti_air_max }
+		}
+		localization_key = esicolor_setup_anti_air_number
+	}
+	text = {
+		localization_key = esicolor_setup_anti_air_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_anti_air_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_anti_air < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_radar_stations_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_radar_stations = -1 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		localization_key = esicolor_setup_radar_stations_chance
+	}
+}
+defined_text = {
+	name = esicolor_setup_radar_stations_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_radar_stations < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_civilian_factories_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_civilian_factories < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_civilian_factories_min = global.setup_civilian_factories_max }
+		}
+		localization_key = esicolor_setup_civilian_factories_number
+	}
+	text = {
+		localization_key = esicolor_setup_civilian_factories_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_civilian_factories_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_civilian_factories < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_military_factories_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_military_factories < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_military_factories_min = global.setup_military_factories_max }
+		}
+		localization_key = esicolor_setup_military_factories_number
+	}
+	text = {
+		localization_key = esicolor_setup_military_factories_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_military_factories_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_military_factories < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_dockyards_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_dockyards < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_dockyards_min = global.setup_dockyards_max }
+		}
+		localization_key = esicolor_setup_dockyards_number
+	}
+	text = {
+		localization_key = esicolor_setup_dockyards_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_dockyards_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_dockyards < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_synthetic_refineries_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_synthetic_refineries < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_synthetic_refineries_min = global.setup_synthetic_refineries_max }
+		}
+		localization_key = esicolor_setup_synthetic_refineries_number
+	}
+	text = {
+		localization_key = esicolor_setup_synthetic_refineries_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_synthetic_refineries_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_synthetic_refineries < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_fuel_silos_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_fuel_silos = -1 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		localization_key = esicolor_setup_fuel_silos_chance
+	}
+}
+defined_text = {
+	name = esicolor_setup_fuel_silos_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_fuel_silos < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_forts_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_forts = -1 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		localization_key = esicolor_setup_forts_number
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_state_category_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_min = global.setup_state_category_max }
+		}
+		localization_key = esicolor_setup_state_category_number
+	}
+	text = {
+		localization_key = esicolor_setup_state_category_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_state_category_min_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_min = 0 }
+		}
+		localization_key = esicolor_setup_wasteland
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_min = 1 }
+		}
+		localization_key = esicolor_setup_pastoral
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_min = 2 }
+		}
+		localization_key = esicolor_setup_rural
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_min = 3 }
+		}
+		localization_key = esicolor_setup_town
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_min = 4 }
+		}
+		localization_key = esicolor_setup_large_town
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_min = 5 }
+		}
+		localization_key = esicolor_setup_city
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_min = 6 }
+		}
+		localization_key = esicolor_setup_large_city
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_min = 7 }
+		}
+		localization_key = esicolor_setup_metropolis
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_min > 7 }
+		}
+		localization_key = esicolor_setup_megalopolis
+	}
+	text = {
+		localization_key = "[?global.setup_state_category_min]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_state_category_max_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_max = 0 }
+		}
+		localization_key = esicolor_setup_wasteland
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_max = 1 }
+		}
+		localization_key = esicolor_setup_pastoral
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_max = 2 }
+		}
+		localization_key = esicolor_setup_rural
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_max = 3 }
+		}
+		localization_key = esicolor_setup_town
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_max = 4 }
+		}
+		localization_key = esicolor_setup_large_town
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_max = 5 }
+		}
+		localization_key = esicolor_setup_city
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_max = 6 }
+		}
+		localization_key = esicolor_setup_large_city
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_max = 7 }
+		}
+		localization_key = esicolor_setup_metropolis
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category_max > 7 }
+		}
+		localization_key = esicolor_setup_megalopolis
+	}
+	text = {
+		localization_key = "[?global.setup_state_category_max]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_state_category_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_category < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_province_modifiers_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_province_modifiers > -1 }
+		}
+		localization_key = esicolor_setup_none
+	}
+	text = {
+		localization_key = esicolor_setup_eaw_data
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_population_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_population = -1 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_population < -1 }
+		}
+		localization_key = esicolor_setup_shuffle
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_population_min = global.setup_population_max }
+		}
+		localization_key = esicolor_setup_population_number
+	}
+	text = {
+		localization_key = esicolor_setup_population_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_population_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_population < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_resource_types_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_resource_types < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_resource_types_min = global.setup_resource_types_max }
+		}
+		localization_key = esicolor_setup_resource_types_number
+	}
+	text = {
+		localization_key = esicolor_setup_resource_types_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_resources_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_resource_types < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_resource_oil_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_resource_oil_min = global.setup_resource_oil_max }
+		}
+		localization_key = esicolor_setup_resource_oil_number
+	}
+	text = {
+		localization_key = esicolor_setup_resource_oil_range
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_resource_rubber_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_resource_rubber_min = global.setup_resource_rubber_max }
+		}
+		localization_key = esicolor_setup_resource_rubber_number
+	}
+	text = {
+		localization_key = esicolor_setup_resource_rubber_range
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_resource_steel_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_resource_steel_min = global.setup_resource_steel_max }
+		}
+		localization_key = esicolor_setup_resource_steel_number
+	}
+	text = {
+		localization_key = esicolor_setup_resource_steel_range
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_resource_aluminium_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_resource_aluminium_min = global.setup_resource_aluminium_max }
+		}
+		localization_key = esicolor_setup_resource_aluminium_number
+	}
+	text = {
+		localization_key = esicolor_setup_resource_aluminium_range
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_resource_tungsten_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_resource_tungsten_min = global.setup_resource_tungsten_max }
+		}
+		localization_key = esicolor_setup_resource_tungsten_number
+	}
+	text = {
+		localization_key = esicolor_setup_resource_tungsten_range
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_resource_chromium_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_resource_chromium_min = global.setup_resource_chromium_max }
+		}
+		localization_key = esicolor_setup_resource_chromium_number
+	}
+	text = {
+		localization_key = esicolor_setup_resource_chromium_range
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_resource_crystals_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_resource_crystals_min = global.setup_resource_crystals_max }
+		}
+		localization_key = esicolor_setup_resource_crystals_number
+	}
+	text = {
+		localization_key = esicolor_setup_resource_crystals_range
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_ideology_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_ideology = -1 }
+		}
+		localization_key = esicolor_setup_default
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_ideology < -1 }
+		}
+		localization_key = esicolor_setup_random
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_ideology = 0 }
+		}
+		localization_key = democratic
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_ideology = 1 }
+		}
+		localization_key = communism
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_ideology = 2 }
+		}
+		localization_key = fascism
+	}
+	text = {
+		localization_key = neutrality
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_party_popularity_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_party_popularity = -1 }
+		}
+		localization_key = esicolor_setup_default
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_party_popularity < -1 }
+		}
+		localization_key = esicolor_setup_random
+	}
+	text = {
+		localization_key = esicolor_setup_party_popularity_numbers_short
+	}
+}
+defined_text = {
+	name = esicolor_setup_party_popularity_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_party_popularity < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_ai_change_ideology_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_ai_change_ideology > 0 }
+		}
+		localization_key = esicolor_setup_yes
+	}
+	text = {
+		localization_key = esicolor_setup_no
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_focus_tree_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_focus_tree = -1 }
+		}
+		localization_key = esicolor_setup_default
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_focus_tree < -1 }
+		}
+		localization_key = esicolor_setup_random
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_focus_tree = 0 }
+		}
+		localization_key = esicolor_setup_focus_tree_equus
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_focus_tree = 1 }
+		}
+		localization_key = esicolor_setup_focus_tree_griffonia
+	}
+	text = {
+		localization_key = esicolor_setup_focus_tree_zebrica
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_stability_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_stability_min = global.setup_stability_max }
+		}
+		localization_key = esicolor_setup_stability_number
+	}
+	text = {
+		localization_key = esicolor_setup_stability_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_stability_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_stability < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_war_support_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_war_support_min = global.setup_war_support_max }
+		}
+		localization_key = esicolor_setup_war_support_number
+	}
+	text = {
+		localization_key = esicolor_setup_war_support_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_war_support_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_war_support < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_intelligence_agency_loc
+	text = {
+		trigger = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+		localization_key = esicolor_setup_intelligence_agency_requires_lar
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_intelligence_agency < 0 }
+		}
+		localization_key = esicolor_setup_intelligence_agency_to_agents
+	}
+	text = {
+		localization_key = esicolor_setup_intelligence_agency_chance
+	}
+}
+defined_text = {
+	name = esicolor_setup_intelligence_agency_color
+	text = {
+		trigger = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+		localization_key = "esicolor_setup_color_red"
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_intelligence_agency < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_research_slots_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_research_slots < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_research_slots_min = global.setup_research_slots_max }
+		}
+		localization_key = esicolor_setup_research_slots_number
+	}
+	text = {
+		localization_key = esicolor_setup_research_slots_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_research_slots_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_research_slots < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_technology_loc
+	text = {
+		trigger = {
+			technology_option_none = yes
+		}
+		localization_key = infantry_equipment_0_short
+	}
+	text = {
+		trigger = {
+			technology_option_improved = yes
+		}
+		localization_key = esicolor_setup_improved
+	}
+	text = {
+		trigger = {
+			technology_option_default_random = yes
+		}
+		localization_key = esicolor_setup_default_random
+	}
+	text = {
+		localization_key = esicolor_setup_custom
+	}
+}
+defined_text = { # PDX tooltips for some reason can't use inline loc, so scrpited loc it is.
+	name = esicolor_setup_technology_desc_shared_part_1
+	text = { localization_key = esicolor_setup_technology_desc_part_1 }
+}
+defined_text = {
+	name = esicolor_setup_technology_desc_shared_part_1_plural
+	text = { localization_key = esicolor_setup_technology_desc_part_1_plural }
+}
+defined_text = {
+	name = esicolor_setup_technology_desc_shared_part_2
+	text = { localization_key = esicolor_setup_technology_desc_part_2 }
+}
+defined_text = {
+	name = esicolor_setup_technology_melee_weapons1_get_name
+	text = { localization_key = melee_equipment_1 }
+}
+defined_text = {
+	name = esicolor_setup_technology_basic_machine_tools_get_name
+	text = { localization_key = basic_machine_tools }
+}
+defined_text = {
+	name = esicolor_setup_technology_transport_1_get_name
+	text = { localization_key = transport }
+}
+defined_text = {
+	name = esicolor_setup_technology_destroyer_1_get_name
+	text = { localization_key = destroyer_1 }
+}
+defined_text = {
+	name = esicolor_setup_technology_ship_hull_light_1_get_name
+	text = { localization_key = ship_hull_light_1 }
+}
+defined_text = {
+	name = esicolor_setup_technology_basic_battery_get_name
+	text = { localization_key = basic_battery }
+}
+defined_text = {
+	name = esicolor_setup_technology_tech_support_get_name
+	text = { localization_key = tech_support }
+}
+defined_text = {
+	name = esicolor_setup_technology_tech_engineers_get_name
+	text = { localization_key = tech_engineers }
+}
+defined_text = {
+	name = esicolor_setup_technology_tech_recon_get_name
+	text = { localization_key = tech_recon }
+}
+defined_text = {
+	name = esicolor_setup_technology_pre_gw_artillery_get_name
+	text = { localization_key = pre_gw_artillery }
+}
+defined_text = {
+	name = esicolor_setup_technology_airships_get_name
+	text = { localization_key = airships1 }
+}
+defined_text = {
+	name = esicolor_setup_technology_airship_airframes_get_name
+	text = { localization_key = airship_airframes }
+}
+defined_text = {
+	name = esicolor_setup_technology_early_bombs_get_name
+	text = { localization_key = early_bombs }
+}
+defined_text = {
+	name = esicolor_setup_technology_aa_lmg_get_name
+	text = { localization_key = aa_lmg }
+}
+defined_text = {
+	name = esicolor_setup_technology_engines_1_get_name
+	text = { localization_key = engines_1 }
+}
+defined_text = {
+	name = esicolor_setup_technology_infantry_weapons_get_name
+	text = { localization_key = infantry_equipment_0 }
+}
+defined_text = {
+	name = esicolor_setup_technology_tech_trucks_get_name
+	text = { localization_key = motorized_equipment_0 }
+}
+defined_text = {
+	name = esicolor_setup_technology_basic_train_get_name
+	text = { localization_key = basic_train }
+}
+defined_text = {
+	name = esicolor_setup_technology_gw_artillery_get_name
+	text = { localization_key = artillery_equipment_1 }
+}
+defined_text = {
+	name = esicolor_setup_technology_gwtank_get_name
+	text = { localization_key = gwtank }
+}
+defined_text = {
+	name = esicolor_setup_technology_gwtank_chassis_get_name
+	text = { localization_key = gwtank_chassis }
+}
+defined_text = {
+	name = esicolor_setup_technology_electronic_mechanical_engineering_get_name
+	text = { localization_key = electronic_mechanical_engineering }
+}
+defined_text = {
+	name = esicolor_setup_technology_construction1_get_name
+	text = { localization_key = construction1 }
+}
+defined_text = {
+	name = esicolor_setup_technology_fuel_silos_get_name
+	text = { localization_key = fuel_silos }
+}
+defined_text = {
+	name = esicolor_setup_technology_submarine1_get_name
+	text = { localization_key = submarine_1 }
+}
+defined_text = {
+	name = esicolor_setup_technology_ship_hull_submarine_1_get_name
+	text = { localization_key = ship_hull_submarine_1 }
+}
+defined_text = {
+	name = esicolor_setup_technology_basic_torpedo_get_name
+	text = { localization_key = basic_torpedo }
+}
+defined_text = {
+	name = esicolor_setup_technology_early_fighter_get_name
+	text = { localization_key = early_fighter }
+}
+defined_text = {
+	name = esicolor_setup_technology_iw_small_airframe_get_name
+	text = { localization_key = iw_small_airframe }
+}
+defined_text = {
+	name = esicolor_setup_technology_early_bomber_get_name
+	text = { localization_key = early_bomber }
+}
+defined_text = {
+	name = esicolor_setup_technology_iw_medium_airframe_get_name
+	text = { localization_key = iw_medium_airframe }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_earth_pony_get_name
+	text = { localization_key = tech_earth_pony }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_pegasi_get_name
+	text = { localization_key = tech_pegasi }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_unicorn_get_name
+	text = { localization_key = tech_unicorn }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_earth_horse_get_name
+	text = { localization_key = tech_earth_horse }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_horse_unicorn_get_name
+	text = { localization_key = tech_horse_unicorn }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_jager_get_name
+	text = { localization_key = tech_jager }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_changeling_a_get_name
+	text = { localization_key = tech_changeling_a }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_changeling_b_get_name
+	text = { localization_key = tech_changeling_b }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_changeling_c_get_name
+	text = { localization_key = tech_changeling_c }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_infiltrators_get_name
+	text = { localization_key = tech_infiltrators }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_deer_misc_get_name
+	text = { localization_key = tech_deer_misc }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_deer_naval_get_name
+	text = { localization_key = tech_deer_naval }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_deer_seer_get_name
+	text = { localization_key = tech_deer_seer }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_knights_get_name
+	text = { localization_key = tech_knights }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_griffon_misc_get_name
+	text = { localization_key = tech_griffon_misc }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_griffon_army_get_name
+	text = { localization_key = tech_griffon_army }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_griffon_airnavy_get_name
+	text = { localization_key = tech_griffon_airnavy }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_ironpaws_get_name
+	text = { localization_key = tech_ironpaws }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_diamond_dog_misc_get_name
+	text = { localization_key = tech_diamond_dog_misc }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_diamond_dog_army_get_name
+	text = { localization_key = tech_diamond_dog_army }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_seaponies_get_name
+	text = { localization_key = tech_seaponies }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_hippogriff_engineering_get_name
+	text = { localization_key = tech_hippogriff_engineering }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_hippogriff_recon_get_name
+	text = { localization_key = tech_hippogriff_recon }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_hippogriff_combined_get_name
+	text = { localization_key = tech_hippogriff_combined }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_hippogriff_endurance_get_name
+	text = { localization_key = tech_hippogriff_endurance }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_spirit_warriors_get_name
+	text = { localization_key = tech_spirit_warriors }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_zebra_climate_get_name
+	text = { localization_key = tech_zebra_climate }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_zebra_alchemy_get_name
+	text = { localization_key = tech_zebra_alchemy }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_zebra_crafting_get_name
+	text = { localization_key = tech_zebra_crafting }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_zebra_war_canoes_get_name
+	text = { localization_key = tech_zebra_war_canoes }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_magi_scribes_get_name
+	text = { localization_key = tech_magi_scribes }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_polar_berserkers_get_name
+	text = { localization_key = tech_polar_berserkers }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_panzerbar_get_name
+	text = { localization_key = tech_panzerbar }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_yak_winter_training_get_name
+	text = { localization_key = tech_yak_winter_training }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_yak_industry_1_get_name
+	text = { localization_key = tech_yak_industry_1 }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_kirin_vanguard_get_name
+	text = { localization_key = tech_kirin_vanguard }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_kirin_brave_get_name
+	text = { localization_key = tech_kirin_brave }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_kirin_military_get_name
+	text = { localization_key = tech_kirin_military }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_kirin_numerology_get_name
+	text = { localization_key = tech_kirin_numerology }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_kirin_geomancy_get_name
+	text = { localization_key = tech_kirin_geomancy }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_kirin_astrology_get_name
+	text = { localization_key = tech_kirin_astrology }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_kirin_nirik_get_name
+	text = { localization_key = tech_kirin_nirik }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_bar_ancient_knowledge_get_name
+	text = { localization_key = tech_bar_ancient_knowledge }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_generic_misc_get_name
+	text = { localization_key = tech_generic_misc }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_generic_l_get_name
+	text = { localization_key = tech_generic_l }
+}
+defined_text = {
+	name = eaw_setup_technology_tech_generic_r_get_name
+	text = { localization_key = tech_generic_r }
+}
+
+defined_text = {
+	name = esicolor_setup_technology_destroyer_1_get_desc
+	text = {
+		trigger = {
+			has_dlc = "Man the Guns"
+		}
+		localization_key = esicolor_setup_technology_destroyer_1_mtg_desc
+	}
+	text = {
+		localization_key = esicolor_setup_technology_destroyer_1_no_mtg_desc
+	}
+}
+defined_text = {
+	name = esicolor_setup_technology_airships_get_desc
+	text = {
+		trigger = {
+			has_dlc = "By Blood Alone"
+		}
+		localization_key = esicolor_setup_technology_airships_bba_desc
+	}
+	text = {
+		localization_key = esicolor_setup_technology_airships_no_bba_desc
+	}
+}
+defined_text = {
+	name = esicolor_setup_technology_trucks_train_gw_artillery_gwtank_get_desc
+	text = {
+		trigger = {
+			has_dlc = "No Step Back"
+		}
+		localization_key = esicolor_setup_technology_trucks_train_gw_artillery_gwtank_nsb_desc
+	}
+	text = {
+		localization_key = esicolor_setup_technology_trucks_train_gw_artillery_gwtank_no_nsb_desc
+	}
+}
+defined_text = {
+	name = esicolor_setup_technology_submarine1_get_desc
+	text = {
+		trigger = {
+			has_dlc = "Man the Guns"
+		}
+		localization_key = esicolor_setup_technology_submarine1_mtg_desc
+	}
+	text = {
+		localization_key = esicolor_setup_technology_submarine1_no_mtg_desc
+	}
+}
+defined_text = {
+	name = esicolor_setup_technology_early_fighter_get_desc
+	text = {
+		trigger = {
+			has_dlc = "By Blood Alone"
+		}
+		localization_key = esicolor_setup_technology_early_fighter_bba_desc
+	}
+	text = {
+		localization_key = esicolor_setup_technology_early_fighter_no_bba_desc
+	}
+}
+defined_text = {
+	name = esicolor_setup_technology_early_bomber_get_desc
+	text = {
+		trigger = {
+			has_dlc = "By Blood Alone"
+		}
+		localization_key = esicolor_setup_technology_early_bomber_bba_desc
+	}
+	text = {
+		localization_key = esicolor_setup_technology_early_bomber_no_bba_desc
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_leader_traits_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_leader_traits < 1 }
+		}
+		localization_key = esicolor_setup_disabled
+	}
+	text = {
+		localization_key = esicolor_setup_enabled
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_conscription_law_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_min = global.setup_conscription_law_max }
+		}
+		localization_key = esicolor_setup_conscription_law_number
+	}
+	text = {
+		localization_key = esicolor_setup_conscription_law_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_conscription_law_min_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_min = 0 }
+		}
+		localization_key = disarmed_nation
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_min = 1 }
+		}
+		localization_key = volunteer_only
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_min = 2 }
+		}
+		localization_key = limited_conscription
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_min = 3 }
+		}
+		localization_key = extensive_conscription
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_min = 4 }
+		}
+		localization_key = service_by_requirement
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_min = 5 }
+		}
+		localization_key = all_adults_serve
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_min > 5 }
+		}
+		localization_key = scraping_the_barrel
+	}
+	text = {
+		localization_key = "[?global.setup_conscription_law_min]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_conscription_law_max_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_max = 0 }
+		}
+		localization_key = disarmed_nation
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_max = 1 }
+		}
+		localization_key = volunteer_only
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_max = 2 }
+		}
+		localization_key = limited_conscription
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_max = 3 }
+		}
+		localization_key = extensive_conscription
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_max = 4 }
+		}
+		localization_key = service_by_requirement
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_max = 5 }
+		}
+		localization_key = all_adults_serve
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law_max > 5 }
+		}
+		localization_key = scraping_the_barrel
+	}
+	text = {
+		localization_key = "[?global.setup_conscription_law_max]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_conscription_law_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_conscription_law < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_trade_law_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_trade_law < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_trade_law_min = global.setup_trade_law_max }
+		}
+		localization_key = esicolor_setup_trade_law_number
+	}
+	text = {
+		localization_key = esicolor_setup_trade_law_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_trade_law_min_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_trade_law_min = 0 }
+		}
+		localization_key = closed_economy
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_trade_law_min = 1 }
+		}
+		localization_key = limited_exports
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_trade_law_min = 2 }
+		}
+		localization_key = export_focus
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_trade_law_min > 2 }
+		}
+		localization_key = free_trade
+	}
+	text = {
+		localization_key = "[?global.setup_trade_law_min]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_trade_law_max_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_trade_law_max = 0 }
+		}
+		localization_key = closed_economy
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_trade_law_max = 1 }
+		}
+		localization_key = limited_exports
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_trade_law_max = 2 }
+		}
+		localization_key = export_focus
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_trade_law_max > 2 }
+		}
+		localization_key = free_trade
+	}
+	text = {
+		localization_key = "[?global.setup_trade_law_max]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_trade_law_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_trade_law < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_economic_law_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_min = global.setup_economic_law_max }
+		}
+		localization_key = esicolor_setup_economic_law_number
+	}
+	text = {
+		localization_key = esicolor_setup_economic_law_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_economic_law_min_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_min = 0 }
+		}
+		localization_key = undisturbed_isolation
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_min = 1 }
+		}
+		localization_key = isolation
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_min = 2 }
+		}
+		localization_key = primitive_economy
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_min = 3 }
+		}
+		localization_key = slavery_economy
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_min = 4 }
+		}
+		localization_key = civilian_economy
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_min = 5 }
+		}
+		localization_key = low_economic_mobilisation
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_min = 6 }
+		}
+		localization_key = partial_economic_mobilisation
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_min = 7 }
+		}
+		localization_key = outlaw_economy
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_min = 8 }
+		}
+		localization_key = war_economy
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_min > 8 }
+		}
+		localization_key = tot_economic_mobilisation
+	}
+	text = {
+		localization_key = "[?global.setup_economic_law_min]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_economic_law_max_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_max = 0 }
+		}
+		localization_key = undisturbed_isolation
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_max = 1 }
+		}
+		localization_key = isolation
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_max = 2 }
+		}
+		localization_key = primitive_economy
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_max = 3 }
+		}
+		localization_key = slavery_economy
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_max = 4 }
+		}
+		localization_key = civilian_economy
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_max = 5 }
+		}
+		localization_key = low_economic_mobilisation
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_max = 6 }
+		}
+		localization_key = partial_economic_mobilisation
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_max = 7 }
+		}
+		localization_key = outlaw_economy
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_max = 8 }
+		}
+		localization_key = war_economy
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law_max > 8 }
+		}
+		localization_key = tot_economic_mobilisation
+	}
+	text = {
+		localization_key = "[?global.setup_economic_law_max]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_economic_law_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_economic_law < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_advisors_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_advisors = -2 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_advisors < -2 }
+		}
+		localization_key = esicolor_setup_random
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_advisors = -1 }
+		}
+		localization_key = esicolor_setup_default
+	}
+	text = {
+		localization_key = esicolor_setup_all
+	}
+}
+defined_text = {
+	name = esicolor_setup_advisors_current_set
+	text = {
+		trigger = {
+			check_variable = { global.setup_advisors = -2 }
+		}
+		localization_key = esicolor_setup_advisors_list_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_advisors < -2 }
+		}
+		localization_key = esicolor_setup_advisors_list_random
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_advisors = -1 }
+		}
+		localization_key = esicolor_setup_advisors_list_default
+	}
+	text = {
+		localization_key = esicolor_setup_advisors_list_all
+	}
+}
+defined_text = {
+	name = esicolor_setup_advisors_get_head_of_intelligence
+	text = {
+		trigger = {
+			has_dlc = "La Resistance"
+		}
+		localization_key = esicolor_setup_advisors_list_head_of_intelligence
+	}
+}
+defined_text = {
+	name = esicolor_setup_advisors_get_all_intelligence
+	text = {
+		trigger = {
+			has_dlc = "La Resistance"
+		}
+		localization_key = esicolor_setup_advisors_list_all_intelligence
+	}
+}
+defined_text = {
+	name = esicolor_setup_advisors_get_random_intelligence
+	text = {
+		trigger = {
+			has_dlc = "La Resistance"
+		}
+		localization_key = esicolor_setup_advisors_list_random_intelligence
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_military_advisors_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_military_advisors = -1 }
+		}
+		localization_key = esicolor_setup_default
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_military_advisors < -1 }
+		}
+		localization_key = esicolor_setup_random
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_military_advisors = 0 }
+		}
+		localization_key = esicolor_setup_military_advisors_specialist
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_military_advisors = 1 }
+		}
+		localization_key = esicolor_setup_military_advisors_expert
+	}
+	text = {
+		localization_key = esicolor_setup_military_advisors_genius
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_mio_concern_title
+	text = {
+		trigger = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		localization_key = esicolor_setup_mio_concern_title_aat
+	}
+	text = {
+		localization_key = esicolor_setup_mio_concern_title_no_aat
+	}
+}
+defined_text = {
+	name = esicolor_setup_mio_concern_title_long
+	text = {
+		trigger = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		localization_key = esicolor_setup_mio_concern_title_aat_long
+	}
+	text = {
+		localization_key = esicolor_setup_mio_concern_title_no_aat
+	}
+}
+defined_text = {
+	name = esicolor_setup_mio_concern_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_mio_concern = -2 }
+		}
+		localization_key = esicolor_setup_mio_concern_generic_eaw
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_mio_concern < -2 }
+		}
+		localization_key = esicolor_setup_mio_concern_generic_random
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_mio_concern = -1 }
+		}
+		localization_key = esicolor_setup_mio_concern_generic_default
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_mio_concern = 0 }
+		}
+		localization_key = esicolor_setup_mio_concern_generic_all
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_mio_concern = 1 }
+		}
+		localization_key = esicolor_setup_mio_concern_named_ownership
+	}
+	text = {
+		localization_key = esicolor_setup_mio_concern_named_core
+	}
+}
+defined_text = {
+	name = esicolor_setup_mio_concern_current_set
+	text = {
+		trigger = {
+			check_variable = { global.setup_mio_concern = -2 }
+		}
+		localization_key = esicolor_setup_mio_concern_list_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_mio_concern < -2 }
+		}
+		localization_key = esicolor_setup_mio_concern_list_random
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_mio_concern = -1 }
+		}
+		localization_key = esicolor_setup_mio_concern_list_default
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_mio_concern = 0 }
+		}
+		localization_key = esicolor_setup_mio_concern_list_all
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_mio_concern = 1 }
+		}
+		localization_key = esicolor_setup_mio_concern_list_ownership
+	}
+	text = {
+		localization_key = esicolor_setup_mio_concern_list_core
+	}
+}
+defined_text = {
+	name = esicolor_setup_mio_concern_list_get_mio_or_concern_random
+	text = {
+		trigger = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		localization_key = esicolor_setup_mio_concern_list_random_mio
+	}
+	text = {
+		localization_key = esicolor_setup_mio_concern_list_random_concern
+	}
+}
+defined_text = {
+	name = esicolor_setup_mio_concern_list_get_mio_or_concern_eaw_data
+	text = {
+		trigger = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		localization_key = esicolor_setup_mio_concern_list_eaw_data_mio
+	}
+	text = {
+		localization_key = esicolor_setup_mio_concern_list_eaw_data_concern
+	}
+}
+defined_text = {
+	name = esicolor_setup_mio_concern_list_get_mio_or_concern_default
+	text = {
+		trigger = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		localization_key = esicolor_setup_mio_concern_list_default_mio
+	}
+	text = {
+		localization_key = esicolor_setup_mio_concern_list_default_concern
+	}
+}
+defined_text = {
+	name = esicolor_setup_mio_concern_list_get_mio_or_concern_all
+	text = {
+		trigger = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		localization_key = esicolor_setup_mio_concern_list_all_mio
+	}
+	text = {
+		localization_key = esicolor_setup_mio_concern_list_all_concern
+	}
+}
+defined_text = {
+	name = esicolor_setup_advisors_get_armored_car
+	text = {
+		trigger = {
+			has_dlc = "La Resistance"
+			has_dlc = "Arms Against Tyranny"
+		}
+		localization_key = esicolor_setup_advisors_list_armored_car_mio
+	}
+	text = {
+		trigger = {
+			has_dlc = "La Resistance"
+			NOT = { has_dlc = "Arms Against Tyranny" }
+		}
+		localization_key = esicolor_setup_advisors_list_armored_car_concern
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_science_base_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_science_base < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_science_base_min = global.setup_science_base_max }
+		}
+		localization_key = esicolor_setup_science_base_number
+	}
+	text = {
+		localization_key = esicolor_setup_science_base_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_science_base_min_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_science_base_min = 0 }
+		}
+		localization_key = esicolor_setup_poor
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_science_base_min = 1 }
+		}
+		localization_key = esicolor_setup_small
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_science_base_min = 2 }
+		}
+		localization_key = esicolor_setup_substantial
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_science_base_min > 2 }
+		}
+		localization_key = esicolor_setup_developed
+	}
+	text = {
+		localization_key = "[?global.setup_science_base_min]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_science_base_max_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_science_base_max = 0 }
+		}
+		localization_key = esicolor_setup_poor
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_science_base_max = 1 }
+		}
+		localization_key = esicolor_setup_small
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_science_base_max = 2 }
+		}
+		localization_key = esicolor_setup_substantial
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_science_base_max > 2 }
+		}
+		localization_key = esicolor_setup_developed
+	}
+	text = {
+		localization_key = "[?global.setup_science_base_max]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_science_base_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_science_base < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_society_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_society < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_min = global.setup_society_max }
+		}
+		localization_key = esicolor_setup_society_number
+	}
+	text = {
+		localization_key = esicolor_setup_society_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_society_min_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_min = 0 }
+		}
+		localization_key = esicolor_setup_detached
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_min = 1 }
+		}
+		localization_key = esicolor_setup_communal
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_min = 2 }
+		}
+		localization_key = esicolor_setup_primitive
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_min = 3 }
+		}
+		localization_key = esicolor_setup_agrarian
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_min = 4 }
+		}
+		localization_key = esicolor_setup_industrialising
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_min = 5 }
+		}
+		localization_key = esicolor_setup_newly_industrialised
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_min > 5 }
+		}
+		localization_key = esicolor_setup_modern
+	}
+	text = {
+		localization_key = "[?global.setup_society_min]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_society_max_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_max = 0 }
+		}
+		localization_key = esicolor_setup_detached
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_max = 1 }
+		}
+		localization_key = esicolor_setup_communal
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_max = 2 }
+		}
+		localization_key = esicolor_setup_primitive
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_max = 3 }
+		}
+		localization_key = esicolor_setup_agrarian
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_max = 4 }
+		}
+		localization_key = esicolor_setup_industrialising
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_max = 5 }
+		}
+		localization_key = esicolor_setup_newly_industrialised
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_society_max > 5 }
+		}
+		localization_key = esicolor_setup_modern
+	}
+	text = {
+		localization_key = "[?global.setup_society_max]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_society_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_society < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_illiteracy_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_illiteracy < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_illiteracy_min = global.setup_illiteracy_max }
+		}
+		localization_key = esicolor_setup_illiteracy_number
+	}
+	text = {
+		localization_key = esicolor_setup_illiteracy_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_illiteracy_min_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_illiteracy_min = 0 }
+		}
+		localization_key = esicolor_setup_negligible
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_illiteracy_min = 1 }
+		}
+		localization_key = esicolor_setup_limited
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_illiteracy_min = 2 }
+		}
+		localization_key = esicolor_setup_modest
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_illiteracy_min = 3 }
+		}
+		localization_key = esicolor_setup_broad
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_illiteracy_min > 3 }
+		}
+		localization_key = esicolor_setup_mass
+	}
+	text = {
+		localization_key = "[?global.setup_illiteracy_min]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_illiteracy_max_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_illiteracy_max = 0 }
+		}
+		localization_key = esicolor_setup_negligible
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_illiteracy_max = 1 }
+		}
+		localization_key = esicolor_setup_limited
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_illiteracy_max = 2 }
+		}
+		localization_key = esicolor_setup_modest
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_illiteracy_max = 3 }
+		}
+		localization_key = esicolor_setup_broad
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_illiteracy_max > 3 }
+		}
+		localization_key = esicolor_setup_mass
+	}
+	text = {
+		localization_key = "[?global.setup_illiteracy_max]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_illiteracy_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_illiteracy < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_poverty_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_min = global.setup_poverty_max }
+		}
+		localization_key = esicolor_setup_poverty_number
+	}
+	text = {
+		localization_key = esicolor_setup_poverty_range
+	}
+}
+defined_text = {
+	name = esicolor_setup_poverty_min_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_min = 0 }
+		}
+		localization_key = esicolor_setup_negligible
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_min = 1 }
+		}
+		localization_key = esicolor_setup_mild
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_min = 2 }
+		}
+		localization_key = esicolor_setup_low
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_min = 3 }
+		}
+		localization_key = esicolor_setup_moderate
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_min = 4 }
+		}
+		localization_key = esicolor_setup_high
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_min = 5 }
+		}
+		localization_key = esicolor_setup_severe
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_min > 5 }
+		}
+		localization_key = esicolor_setup_extreme
+	}
+	text = {
+		localization_key = "[?global.setup_poverty_min]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_poverty_max_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_max = 0 }
+		}
+		localization_key = esicolor_setup_negligible
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_max = 1 }
+		}
+		localization_key = esicolor_setup_mild
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_max = 2 }
+		}
+		localization_key = esicolor_setup_low
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_max = 3 }
+		}
+		localization_key = esicolor_setup_moderate
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_max = 4 }
+		}
+		localization_key = esicolor_setup_high
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_max = 5 }
+		}
+		localization_key = esicolor_setup_severe
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty_max > 5 }
+		}
+		localization_key = esicolor_setup_extreme
+	}
+	text = {
+		localization_key = "[?global.setup_poverty_max]"
+	}
+}
+defined_text = {
+	name = esicolor_setup_poverty_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_poverty < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_starting_regions_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_starting_regions < 1 }
+		}
+		localization_key = esicolor_setup_starting_regions_state
+	}
+	text = {
+		localization_key = esicolor_setup_starting_regions_strat
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_islands_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_islands < 1 }
+		}
+		localization_key = esicolor_setup_islands_keep
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_islands = 1 }
+		}
+		localization_key = esicolor_setup_islands_remove_single
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_islands = 2 }
+		}
+		localization_key = esicolor_setup_islands_remove_disconnected
+	}
+	text = {
+		localization_key = esicolor_setup_islands_remove_all
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_formables_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_formables < 1 }
+		}
+		localization_key = esicolor_setup_disabled
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_formables = 1 }
+		}
+		localization_key = esicolor_setup_formables_visual
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_formables = 2 }
+		}
+		localization_key = esicolor_setup_default
+	}
+	text = {
+		localization_key = esicolor_setup_formables_core
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_resource_prospecting_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_resource_prospecting < 1 }
+		}
+		localization_key = esicolor_setup_disabled
+	}
+	text = {
+		localization_key = esicolor_setup_available
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_foreign_generals_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_foreign_generals < 1 }
+		}
+		localization_key = esicolor_setup_disabled
+	}
+	text = {
+		localization_key = esicolor_setup_available
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_state_management_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_management < 1 }
+		}
+		localization_key = esicolor_setup_disabled
+	}
+	text = {
+		localization_key = esicolor_setup_state_management_available
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_claim_decision_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_claim_decision < 1 }
+		}
+		localization_key = esicolor_setup_claim_decision_claim
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_claim_decision = 1 }
+		}
+		localization_key = esicolor_setup_claim_decision_war_goal
+	}
+	text = {
+		localization_key = esicolor_setup_claim_decision_war_declaration
+	}
+}
+defined_text = {
+	name = esicolor_setup_claim_decision_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_state_management < 1 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_start_continue_get_name
+	text = {
+		trigger = {
+			has_global_flag = esicolor_setup_complete
+		}
+		localization_key = "FE_CONTINUE"
+	}
+	text = {
+		localization_key = "FE_START"
+	}
+}
+
+defined_text = {
+	name = esicolor_welcome_screen_tab_5_header_get_text
+	text = {
+		trigger = {
+			has_country_flag = esicolor_credits_show_eaw
+		}
+		localization_key = "EAW_WS_TAB_5_HEADER"
+	}
+	text = {
+		localization_key = "esicolor_changelog_header_1"
+	}
+}
+defined_text = {
+	name = esicolor_welcome_screen_tab_5_text_header_1_get_text
+	text = {
+		trigger = {
+			has_country_flag = esicolor_credits_show_eaw
+		}
+		localization_key = "EAW_WS_TAB_5_TXT_HEADER_1"
+	}
+	text = {
+		localization_key = "esicolor_changelog_header_1"
+	}
+}
+defined_text = {
+	name = esicolor_welcome_screen_tab_5_text_1_get_text
+	text = {
+		trigger = {
+			has_country_flag = esicolor_credits_show_eaw
+		}
+		localization_key = "EAW_WS_TAB_5_TXT"
+	}
+	text = {
+		localization_key = "esicolor_changelog_text_1"
+	}
+}
