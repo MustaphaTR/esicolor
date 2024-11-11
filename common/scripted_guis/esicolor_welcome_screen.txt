@@ -1276,7 +1276,7 @@ scripted_gui = {
 			esicolor_welcome_screen_tab_1_page_3_max_plus_5_click = {
 				set_variable = { global.setup_resource_types = 1 }
 				if = {
-					limit = { check_variable = { global.setup_resource_types_max < 7 } }
+					limit = { check_variable = { global.setup_resource_types_max < 6 } }
 
 					add_to_variable = { global.setup_resource_types_max = 1 }
 				}

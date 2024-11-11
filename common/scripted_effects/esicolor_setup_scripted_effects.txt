@@ -4155,7 +4155,15 @@ setup_technology_option_1 = {
 	give_transport_1 = yes
 }
 
-randomise_techonology = {
+randomise_technology = {
+	random = {
+		chance =  global.setup_technology_infantry_weapons1
+
+		set_technology = { infantry_weapons1 = 1 }
+	}
+}
+
+randomise_technology_legacy = {
 	random_list = {
 		seed = random
 		30 = {
@@ -4177,7 +4185,7 @@ randomise_techonology = {
 						support_weapons = 1
 					}
 				}
-				30 = { }
+				40 = { }
 			}
 
 			random_list = {
@@ -4575,6 +4583,22 @@ randomise_war_support = {
 		}
 		divide_temp_variable = { wstoset = 100 }
 		set_war_support = wstoset
+	}
+}
+
+randomise_intelligence_agency = {
+	set_temp_variable = { intelligence_agency_minus = global.setup_intelligence_agency_chance }
+	multiply_temp_variable = { intelligence_agency_minus = -1 }
+	random_list = {
+		seed = random
+		0 = {
+			modifier = { add = global.setup_intelligence_agency_chance }
+
+			create_intelligence_agency = yes
+		}
+		969 = {
+			modifier = { add = intelligence_agency_minus }
+		}
 	}
 }
 
@@ -12021,11 +12045,6 @@ give_random_economic_law = {
 
 give_original_research_slots = {
 	if = {
-		limit = { original_country_has_one_research_slot = yes }
-
-		set_research_slots = 1
-	}
-	else_if = {
 		limit = { original_country_has_two_research_slot = yes }
 
 		set_research_slots = 2
