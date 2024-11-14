@@ -2831,25 +2831,25 @@ scripted_gui = {
 
 			esicolor_welcome_screen_tab_1_page_6_max_minus_2_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_melee_weapons1 > 0 } }
+					limit = { check_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines > 0 } }
 
-					subtract_from_variable = { global.setup_technology_melee_weapons1 = 1 }
+					subtract_from_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_2_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_melee_weapons1 < 100 } }
+					limit = { check_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines < 100 } }
 
-					add_to_variable = { global.setup_technology_melee_weapons1 = 1 }
+					add_to_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_2_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_melee_weapons1 > 0 } }
+					limit = { check_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines > 0 } }
 
-					subtract_from_variable = { global.setup_technology_melee_weapons1 = 5 }
+					subtract_from_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines = 5 }
 					clamp_variable = {
-						var = global.setup_technology_melee_weapons1
+						var = global.setup_technology_tech_mountaineers_paratroopers_marines
 						min = 0
 						max = 100
 					}
@@ -2857,11 +2857,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_2_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_melee_weapons1 < 100 } }
+					limit = { check_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines < 100 } }
 
-					add_to_variable = { global.setup_technology_melee_weapons1 = 5 }
+					add_to_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines = 5 }
 					clamp_variable = {
-						var = global.setup_technology_melee_weapons1
+						var = global.setup_technology_tech_mountaineers_paratroopers_marines
 						min = 0
 						max = 100
 					}
@@ -2869,11 +2869,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_2_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_melee_weapons1 > 0 } }
+					limit = { check_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines > 0 } }
 
-					subtract_from_variable = { global.setup_technology_melee_weapons1 = 10 }
+					subtract_from_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines = 10 }
 					clamp_variable = {
-						var = global.setup_technology_melee_weapons1
+						var = global.setup_technology_tech_mountaineers_paratroopers_marines
 						min = 0
 						max = 100
 					}
@@ -2881,11 +2881,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_2_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_melee_weapons1 < 100 } }
+					limit = { check_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines < 100 } }
 
-					add_to_variable = { global.setup_technology_melee_weapons1 = 10 }
+					add_to_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines = 10 }
 					clamp_variable = {
-						var = global.setup_technology_melee_weapons1
+						var = global.setup_technology_tech_mountaineers_paratroopers_marines
 						min = 0
 						max = 100
 					}
@@ -3146,25 +3146,25 @@ scripted_gui = {
 
 			esicolor_welcome_screen_tab_1_page_6_max_minus_7_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_tech_engineer_recon > 0 } }
+					limit = { check_variable = { global.setup_technology_tech_engineer_recon_mp > 0 } }
 
-					subtract_from_variable = { global.setup_technology_tech_engineer_recon = 1 }
+					subtract_from_variable = { global.setup_technology_tech_engineer_recon_mp = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_7_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_tech_engineer_recon < 100 } }
+					limit = { check_variable = { global.setup_technology_tech_engineer_recon_mp < 100 } }
 
-					add_to_variable = { global.setup_technology_tech_engineer_recon = 1 }
+					add_to_variable = { global.setup_technology_tech_engineer_recon_mp = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_7_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_tech_engineer_recon > 0 } }
+					limit = { check_variable = { global.setup_technology_tech_engineer_recon_mp > 0 } }
 
-					subtract_from_variable = { global.setup_technology_tech_engineer_recon = 5 }
+					subtract_from_variable = { global.setup_technology_tech_engineer_recon_mp = 5 }
 					clamp_variable = {
-						var = global.setup_technology_tech_engineer_recon
+						var = global.setup_technology_tech_engineer_recon_mp
 						min = 0
 						max = 100
 					}
@@ -3172,11 +3172,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_7_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_tech_engineer_recon < 100 } }
+					limit = { check_variable = { global.setup_technology_tech_engineer_recon_mp < 100 } }
 
-					add_to_variable = { global.setup_technology_tech_engineer_recon = 5 }
+					add_to_variable = { global.setup_technology_tech_engineer_recon_mp = 5 }
 					clamp_variable = {
-						var = global.setup_technology_tech_engineer_recon
+						var = global.setup_technology_tech_engineer_recon_mp
 						min = 0
 						max = 100
 					}
@@ -3184,11 +3184,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_7_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_tech_engineer_recon > 0 } }
+					limit = { check_variable = { global.setup_technology_tech_engineer_recon_mp > 0 } }
 
-					subtract_from_variable = { global.setup_technology_tech_engineer_recon = 10 }
+					subtract_from_variable = { global.setup_technology_tech_engineer_recon_mp = 10 }
 					clamp_variable = {
-						var = global.setup_technology_tech_engineer_recon
+						var = global.setup_technology_tech_engineer_recon_mp
 						min = 0
 						max = 100
 					}
@@ -3196,11 +3196,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_7_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_tech_engineer_recon < 100 } }
+					limit = { check_variable = { global.setup_technology_tech_engineer_recon_mp < 100 } }
 
-					add_to_variable = { global.setup_technology_tech_engineer_recon = 10 }
+					add_to_variable = { global.setup_technology_tech_engineer_recon_mp = 10 }
 					clamp_variable = {
-						var = global.setup_technology_tech_engineer_recon
+						var = global.setup_technology_tech_engineer_recon_mp
 						min = 0
 						max = 100
 					}
@@ -3209,25 +3209,25 @@ scripted_gui = {
 
 			esicolor_welcome_screen_tab_1_page_6_max_minus_8_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_pre_gw_artillery > 0 } }
+					limit = { check_variable = { global.setup_technology_gw_artillery > 0 } }
 
-					subtract_from_variable = { global.setup_technology_pre_gw_artillery = 1 }
+					subtract_from_variable = { global.setup_technology_gw_artillery = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_8_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_pre_gw_artillery < 100 } }
+					limit = { check_variable = { global.setup_technology_gw_artillery < 100 } }
 
-					add_to_variable = { global.setup_technology_pre_gw_artillery = 1 }
+					add_to_variable = { global.setup_technology_gw_artillery = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_8_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_pre_gw_artillery > 0 } }
+					limit = { check_variable = { global.setup_technology_gw_artillery > 0 } }
 
-					subtract_from_variable = { global.setup_technology_pre_gw_artillery = 5 }
+					subtract_from_variable = { global.setup_technology_gw_artillery = 5 }
 					clamp_variable = {
-						var = global.setup_technology_pre_gw_artillery
+						var = global.setup_technology_gw_artillery
 						min = 0
 						max = 100
 					}
@@ -3235,11 +3235,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_8_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_pre_gw_artillery < 100 } }
+					limit = { check_variable = { global.setup_technology_gw_artillery < 100 } }
 
-					add_to_variable = { global.setup_technology_pre_gw_artillery = 5 }
+					add_to_variable = { global.setup_technology_gw_artillery = 5 }
 					clamp_variable = {
-						var = global.setup_technology_pre_gw_artillery
+						var = global.setup_technology_gw_artillery
 						min = 0
 						max = 100
 					}
@@ -3247,11 +3247,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_8_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_pre_gw_artillery > 0 } }
+					limit = { check_variable = { global.setup_technology_gw_artillery > 0 } }
 
-					subtract_from_variable = { global.setup_technology_pre_gw_artillery = 10 }
+					subtract_from_variable = { global.setup_technology_gw_artillery = 10 }
 					clamp_variable = {
-						var = global.setup_technology_pre_gw_artillery
+						var = global.setup_technology_gw_artillery
 						min = 0
 						max = 100
 					}
@@ -3259,11 +3259,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_8_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_pre_gw_artillery < 100 } }
+					limit = { check_variable = { global.setup_technology_gw_artillery < 100 } }
 
-					add_to_variable = { global.setup_technology_pre_gw_artillery = 10 }
+					add_to_variable = { global.setup_technology_gw_artillery = 10 }
 					clamp_variable = {
-						var = global.setup_technology_pre_gw_artillery
+						var = global.setup_technology_gw_artillery
 						min = 0
 						max = 100
 					}
@@ -3272,25 +3272,25 @@ scripted_gui = {
 
 			esicolor_welcome_screen_tab_1_page_6_max_minus_9_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_airships > 0 } }
+					limit = { check_variable = { global.setup_technology_support_weapons > 0 } }
 
-					subtract_from_variable = { global.setup_technology_airships = 1 }
+					subtract_from_variable = { global.setup_technology_support_weapons = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_9_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_airships < 100 } }
+					limit = { check_variable = { global.setup_technology_support_weapons < 100 } }
 
-					add_to_variable = { global.setup_technology_airships = 1 }
+					add_to_variable = { global.setup_technology_support_weapons = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_9_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_airships > 0 } }
+					limit = { check_variable = { global.setup_technology_support_weapons > 0 } }
 
-					subtract_from_variable = { global.setup_technology_airships = 5 }
+					subtract_from_variable = { global.setup_technology_support_weapons = 5 }
 					clamp_variable = {
-						var = global.setup_technology_airships
+						var = global.setup_technology_support_weapons
 						min = 0
 						max = 100
 					}
@@ -3298,11 +3298,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_9_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_airships < 100 } }
+					limit = { check_variable = { global.setup_technology_support_weapons < 100 } }
 
-					add_to_variable = { global.setup_technology_airships = 5 }
+					add_to_variable = { global.setup_technology_support_weapons = 5 }
 					clamp_variable = {
-						var = global.setup_technology_airships
+						var = global.setup_technology_support_weapons
 						min = 0
 						max = 100
 					}
@@ -3310,11 +3310,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_9_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_airships > 0 } }
+					limit = { check_variable = { global.setup_technology_support_weapons > 0 } }
 
-					subtract_from_variable = { global.setup_technology_airships = 10 }
+					subtract_from_variable = { global.setup_technology_support_weapons = 10 }
 					clamp_variable = {
-						var = global.setup_technology_airships
+						var = global.setup_technology_support_weapons
 						min = 0
 						max = 100
 					}
@@ -3322,11 +3322,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_9_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_airships < 100 } }
+					limit = { check_variable = { global.setup_technology_support_weapons < 100 } }
 
-					add_to_variable = { global.setup_technology_airships = 10 }
+					add_to_variable = { global.setup_technology_support_weapons = 10 }
 					clamp_variable = {
-						var = global.setup_technology_airships
+						var = global.setup_technology_support_weapons
 						min = 0
 						max = 100
 					}
@@ -3335,25 +3335,25 @@ scripted_gui = {
 
 			esicolor_welcome_screen_tab_1_page_6_max_minus_10_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_infantry_weapons > 0 } }
+					limit = { check_variable = { global.setup_technology_infantry_weapons1 > 0 } }
 
-					subtract_from_variable = { global.setup_technology_infantry_weapons = 1 }
+					subtract_from_variable = { global.setup_technology_infantry_weapons1 = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_10_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_infantry_weapons < 100 } }
+					limit = { check_variable = { global.setup_technology_infantry_weapons1 < 100 } }
 
-					add_to_variable = { global.setup_technology_infantry_weapons = 1 }
+					add_to_variable = { global.setup_technology_infantry_weapons1 = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_10_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_infantry_weapons > 0 } }
+					limit = { check_variable = { global.setup_technology_infantry_weapons1 > 0 } }
 
-					subtract_from_variable = { global.setup_technology_infantry_weapons = 5 }
+					subtract_from_variable = { global.setup_technology_infantry_weapons1 = 5 }
 					clamp_variable = {
-						var = global.setup_technology_infantry_weapons
+						var = global.setup_technology_infantry_weapons1
 						min = 0
 						max = 100
 					}
@@ -3361,11 +3361,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_10_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_infantry_weapons < 100 } }
+					limit = { check_variable = { global.setup_technology_infantry_weapons1 < 100 } }
 
-					add_to_variable = { global.setup_technology_infantry_weapons = 5 }
+					add_to_variable = { global.setup_technology_infantry_weapons1 = 5 }
 					clamp_variable = {
-						var = global.setup_technology_infantry_weapons
+						var = global.setup_technology_infantry_weapons1
 						min = 0
 						max = 100
 					}
@@ -3373,11 +3373,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_10_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_infantry_weapons > 0 } }
+					limit = { check_variable = { global.setup_technology_infantry_weapons1 > 0 } }
 
-					subtract_from_variable = { global.setup_technology_infantry_weapons = 10 }
+					subtract_from_variable = { global.setup_technology_infantry_weapons1 = 10 }
 					clamp_variable = {
-						var = global.setup_technology_infantry_weapons
+						var = global.setup_technology_infantry_weapons1
 						min = 0
 						max = 100
 					}
@@ -3385,11 +3385,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_10_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_infantry_weapons < 100 } }
+					limit = { check_variable = { global.setup_technology_infantry_weapons1 < 100 } }
 
-					add_to_variable = { global.setup_technology_infantry_weapons = 10 }
+					add_to_variable = { global.setup_technology_infantry_weapons1 = 10 }
 					clamp_variable = {
-						var = global.setup_technology_infantry_weapons
+						var = global.setup_technology_infantry_weapons1
 						min = 0
 						max = 100
 					}
@@ -3398,25 +3398,25 @@ scripted_gui = {
 
 			esicolor_welcome_screen_tab_1_page_6_max_minus_11_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank > 0 } }
+					limit = { check_variable = { global.setup_technology_gwtank_antiair_antitank > 0 } }
 
-					subtract_from_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank = 1 }
+					subtract_from_variable = { global.setup_technology_gwtank_antiair_antitank = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_11_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank < 100 } }
+					limit = { check_variable = { global.setup_technology_gwtank_antiair_antitank < 100 } }
 
-					add_to_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank = 1 }
+					add_to_variable = { global.setup_technology_gwtank_antiair_antitank = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_11_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank > 0 } }
+					limit = { check_variable = { global.setup_technology_gwtank_antiair_antitank > 0 } }
 
-					subtract_from_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank = 5 }
+					subtract_from_variable = { global.setup_technology_gwtank_antiair_antitank = 5 }
 					clamp_variable = {
-						var = global.setup_technology_trucks_train_gw_artillery_gwtank
+						var = global.setup_technology_gwtank_antiair_antitank
 						min = 0
 						max = 100
 					}
@@ -3424,11 +3424,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_11_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank < 100 } }
+					limit = { check_variable = { global.setup_technology_gwtank_antiair_antitank < 100 } }
 
-					add_to_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank = 5 }
+					add_to_variable = { global.setup_technology_gwtank_antiair_antitank = 5 }
 					clamp_variable = {
-						var = global.setup_technology_trucks_train_gw_artillery_gwtank
+						var = global.setup_technology_gwtank_antiair_antitank
 						min = 0
 						max = 100
 					}
@@ -3436,11 +3436,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_11_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank > 0 } }
+					limit = { check_variable = { global.setup_technology_gwtank_antiair_antitank > 0 } }
 
-					subtract_from_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank = 10 }
+					subtract_from_variable = { global.setup_technology_gwtank_antiair_antitank = 10 }
 					clamp_variable = {
-						var = global.setup_technology_trucks_train_gw_artillery_gwtank
+						var = global.setup_technology_gwtank_antiair_antitank
 						min = 0
 						max = 100
 					}
@@ -3448,11 +3448,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_11_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank < 100 } }
+					limit = { check_variable = { global.setup_technology_gwtank_antiair_antitank < 100 } }
 
-					add_to_variable = { global.setup_technology_trucks_train_gw_artillery_gwtank = 10 }
+					add_to_variable = { global.setup_technology_gwtank_antiair_antitank = 10 }
 					clamp_variable = {
-						var = global.setup_technology_trucks_train_gw_artillery_gwtank
+						var = global.setup_technology_gwtank_antiair_antitank
 						min = 0
 						max = 100
 					}
@@ -3650,25 +3650,25 @@ scripted_gui = {
 
 			esicolor_welcome_screen_tab_1_page_6_max_minus_15_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_submarine1 > 0 } }
+					limit = { check_variable = { global.setup_technology_submarine_1 > 0 } }
 
-					subtract_from_variable = { global.setup_technology_submarine1 = 1 }
+					subtract_from_variable = { global.setup_technology_submarine_1 = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_15_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_submarine1 < 100 } }
+					limit = { check_variable = { global.setup_technology_submarine_1 < 100 } }
 
-					add_to_variable = { global.setup_technology_submarine1 = 1 }
+					add_to_variable = { global.setup_technology_submarine_1 = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_15_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_submarine1 > 0 } }
+					limit = { check_variable = { global.setup_technology_submarine_1 > 0 } }
 
-					subtract_from_variable = { global.setup_technology_submarine1 = 5 }
+					subtract_from_variable = { global.setup_technology_submarine_1 = 5 }
 					clamp_variable = {
-						var = global.setup_technology_submarine1
+						var = global.setup_technology_submarine_1
 						min = 0
 						max = 100
 					}
@@ -3676,11 +3676,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_15_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_submarine1 < 100 } }
+					limit = { check_variable = { global.setup_technology_submarine_1 < 100 } }
 
-					add_to_variable = { global.setup_technology_submarine1 = 5 }
+					add_to_variable = { global.setup_technology_submarine_1 = 5 }
 					clamp_variable = {
-						var = global.setup_technology_submarine1
+						var = global.setup_technology_submarine_1
 						min = 0
 						max = 100
 					}
@@ -3688,11 +3688,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_15_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_submarine1 > 0 } }
+					limit = { check_variable = { global.setup_technology_submarine_1 > 0 } }
 
-					subtract_from_variable = { global.setup_technology_submarine1 = 10 }
+					subtract_from_variable = { global.setup_technology_submarine_1 = 10 }
 					clamp_variable = {
-						var = global.setup_technology_submarine1
+						var = global.setup_technology_submarine_1
 						min = 0
 						max = 100
 					}
@@ -3700,11 +3700,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_15_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_submarine1 < 100 } }
+					limit = { check_variable = { global.setup_technology_submarine_1 < 100 } }
 
-					add_to_variable = { global.setup_technology_submarine1 = 10 }
+					add_to_variable = { global.setup_technology_submarine_1 = 10 }
 					clamp_variable = {
-						var = global.setup_technology_submarine1
+						var = global.setup_technology_submarine_1
 						min = 0
 						max = 100
 					}
@@ -3839,25 +3839,25 @@ scripted_gui = {
 
 			esicolor_welcome_screen_tab_1_page_6_max_minus_18_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_racial_tech > 0 } }
+					limit = { check_variable = { global.setup_technology_basic_cas_nav > 0 } }
 
-					subtract_from_variable = { global.setup_technology_racial_tech = 1 }
+					subtract_from_variable = { global.setup_technology_basic_cas_nav = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_18_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_racial_tech < 100 } }
+					limit = { check_variable = { global.setup_technology_basic_cas_nav < 100 } }
 
-					add_to_variable = { global.setup_technology_racial_tech = 1 }
+					add_to_variable = { global.setup_technology_basic_cas_nav = 1 }
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_18_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_racial_tech > 0 } }
+					limit = { check_variable = { global.setup_technology_basic_cas_nav > 0 } }
 
-					subtract_from_variable = { global.setup_technology_racial_tech = 5 }
+					subtract_from_variable = { global.setup_technology_basic_cas_nav = 5 }
 					clamp_variable = {
-						var = global.setup_technology_racial_tech
+						var = global.setup_technology_basic_cas_nav
 						min = 0
 						max = 100
 					}
@@ -3865,11 +3865,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_18_control_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_racial_tech < 100 } }
+					limit = { check_variable = { global.setup_technology_basic_cas_nav < 100 } }
 
-					add_to_variable = { global.setup_technology_racial_tech = 5 }
+					add_to_variable = { global.setup_technology_basic_cas_nav = 5 }
 					clamp_variable = {
-						var = global.setup_technology_racial_tech
+						var = global.setup_technology_basic_cas_nav
 						min = 0
 						max = 100
 					}
@@ -3877,11 +3877,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_minus_18_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_racial_tech > 0 } }
+					limit = { check_variable = { global.setup_technology_basic_cas_nav > 0 } }
 
-					subtract_from_variable = { global.setup_technology_racial_tech = 10 }
+					subtract_from_variable = { global.setup_technology_basic_cas_nav = 10 }
 					clamp_variable = {
-						var = global.setup_technology_racial_tech
+						var = global.setup_technology_basic_cas_nav
 						min = 0
 						max = 100
 					}
@@ -3889,11 +3889,11 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_6_max_plus_18_shift_click = {
 				if = {
-					limit = { check_variable = { global.setup_technology_racial_tech < 100 } }
+					limit = { check_variable = { global.setup_technology_basic_cas_nav < 100 } }
 
-					add_to_variable = { global.setup_technology_racial_tech = 10 }
+					add_to_variable = { global.setup_technology_basic_cas_nav = 10 }
 					clamp_variable = {
-						var = global.setup_technology_racial_tech
+						var = global.setup_technology_basic_cas_nav
 						min = 0
 						max = 100
 					}
@@ -4028,30 +4028,6 @@ scripted_gui = {
 		visible = {
 			is_ai = no
 			check_variable = { esicolor_welcome_screen = 2 }
-		}
-	}
-
-	esicolor_welcome_screen_tab_3_content = {
-		context_type = player_context
-
-		window_name = "esicolor_welcome_screen_tab_3_slider"
-		parent_window_name = "esicolor_welcome_screen_container"
-
-		visible = {
-			is_ai = no
-			check_variable = { esicolor_welcome_screen = 3 }
-		}
-	}
-
-	esicolor_welcome_screen_tab_4_content = {
-		context_type = player_context
-
-		window_name = "esicolor_welcome_screen_tab_4_slider"
-		parent_window_name = "esicolor_welcome_screen_container"
-
-		visible = {
-			is_ai = no
-			check_variable = { esicolor_welcome_screen = 4 }
 		}
 	}
 
