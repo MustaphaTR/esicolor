@@ -1,0 +1,39 @@
+characters={
+	FLB_mutara_rudahigwa = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=RWA_mutara_rudahigwa
+			portraits={
+				civilian={
+					large = GFX_portrait_RWA_mutara_rudahigwa
+					small = GFX_portrait_RWA_mutara_rudahigwa_small
+				}
+			}
+			country_leader={
+				traits = { trait_ummwami }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=RWA_mutara_rudahigwa
+			portraits={
+				civilian={
+					large = "GFX_Portrait_South_Africa_Political_Leader_Generic"
+				}
+			}
+			country_leader={
+				traits = { trait_ummwami }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

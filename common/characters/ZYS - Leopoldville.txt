@@ -1,0 +1,39 @@
+characters={
+	ZYS_pierre_ryckmans = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=COG_pierre_ryckmans
+			portraits={
+				civilian={
+					large = GFX_portrait_COG_pierre_ryckmans
+					small = GFX_portrait_COG_pierre_ryckmans_small
+				}
+			}
+			country_leader={
+				traits = { pro_allied_governor_general }
+				ideology=centrism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=COG_pierre_ryckmans
+			portraits={
+				civilian={
+					large = "GFX_Portrait_Europe_Generic_3"
+				}
+			}
+			country_leader={
+				traits = { pro_allied_governor_general }
+				ideology=centrism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

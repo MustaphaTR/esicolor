@@ -10,6 +10,7 @@ adjust_state_names = {
 	adjust_state_name_251 = yes
 	adjust_state_name_252 = yes
 	adjust_state_name_268 = yes
+	adjust_state_name_295 = yes
 	adjust_state_name_296 = yes
 	adjust_state_name_329 = yes
 	adjust_state_name_330 = yes
@@ -68,6 +69,10 @@ adjust_state_names_on_state_core_changed = {
 	else_if = {
 		limit = { FROM.FROM = { state = 268 } }
 		adjust_state_name_268 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 295 } }
+		adjust_state_name_295 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 296 } }
@@ -163,6 +168,10 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 268 }
 		adjust_state_name_268 = yes
+	}
+	if = {
+		limit = { owns_state = 295 }
+		adjust_state_name_295 = yes
 	}
 	if = {
 		limit = { owns_state = 296 }
@@ -448,6 +457,25 @@ adjust_state_name_268 = {
 	}
 	else = {
 		268 = { set_state_name = ZLB }
+	}
+}
+
+adjust_state_name_295 = {
+	if = {
+		limit = { 295 = { owner = { has_government = neutrality } } }
+
+		set_province_name = {
+			id = 5117
+			name = VICTORY_POINTS_5117
+		}
+		295 = { set_state_name = STATE_295 }
+	}
+	else = {
+		set_province_name = {
+			id = 5117
+			name = 5117_autenticite_name
+		}
+		295 = { set_state_name = 295_autenticite_name }
 	}
 }
 

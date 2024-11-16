@@ -1359,6 +1359,12 @@ setup_default_resources = {
 				amount = 30
 			}
 		}
+		34 = {
+			add_resource = {
+				type = steel
+				amount = 22
+			}
+		}
 		39 = {
 			add_resource = {
 				type = aluminium
@@ -11686,6 +11692,7 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = ARG_university_rector } remove_country_leader_trait = ARG_university_rector }
 	if = { limit = { has_country_leader_with_trait = ARG_fraudulent_industrialist } remove_country_leader_trait = ARG_fraudulent_industrialist }
 	if = { limit = { has_country_leader_with_trait = ARG_feminist_revolutionary } remove_country_leader_trait = ARG_feminist_revolutionary }
+	if = { limit = { has_country_leader_with_trait = ARG_prominent_centrist } remove_country_leader_trait = ARG_prominent_centrist }
 	if = { limit = { has_country_leader_with_trait = batllista_traditionalist } remove_country_leader_trait = batllista_traditionalist }
 	if = { limit = { has_country_leader_with_trait = pro_allied_politician } remove_country_leader_trait = pro_allied_politician }
 	if = { limit = { has_country_leader_with_trait = the_german_connection } remove_country_leader_trait = the_german_connection }
@@ -11700,6 +11707,18 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = BEL_belgian_inquisitor } remove_country_leader_trait = BEL_belgian_inquisitor }
 	if = { limit = { has_country_leader_with_trait = BEL_determined_prime_minister } remove_country_leader_trait = BEL_determined_prime_minister }
 	if = { limit = { has_country_leader_with_trait = BEL_corrupt_old_guard } remove_country_leader_trait = BEL_corrupt_old_guard }
+	if = { limit = { has_country_leader_with_trait = pro_allied_governor_general } remove_country_leader_trait = pro_allied_governor_general }
+	if = { limit = { has_country_leader_with_trait = sultan_of_sokoto } remove_country_leader_trait = sultan_of_sokoto }
+	if = { limit = { has_country_leader_with_trait = trait_mwami } remove_country_leader_trait = trait_mwami }
+	if = { limit = { has_country_leader_with_trait = trait_ummwami } remove_country_leader_trait = trait_ummwami }
+	if = { limit = { has_country_leader_with_trait = COG_trade_unionist } remove_country_leader_trait = COG_trade_unionist }
+	if = { limit = { has_country_leader_with_trait = HUN_the_regent } remove_country_leader_trait = HUN_the_regent }
+	if = { limit = { has_country_leader_with_trait = HUN_the_habsburg_prince } remove_country_leader_trait = HUN_the_habsburg_prince }
+	if = { limit = { has_country_leader_with_trait = HUN_socialist_bulwark } remove_country_leader_trait = HUN_socialist_bulwark }
+	if = { limit = { has_country_leader_with_trait = HUN_the_hungarian_lenin } remove_country_leader_trait = HUN_the_hungarian_lenin }
+	if = { limit = { has_country_leader_with_trait = HUN_ardent_stalinist } remove_country_leader_trait = HUN_ardent_stalinist }
+	if = { limit = { has_country_leader_with_trait = nazi_sympathizer } remove_country_leader_trait = nazi_sympathizer }
+	if = { limit = { has_country_leader_with_trait = volksgruppenfurher_der_volksbund } remove_country_leader_trait = volksgruppenfurher_der_volksbund }
 
 	if = { limit = { has_country_leader_with_trait = popular_figurehead } remove_country_leader_trait = popular_figurehead }
 	if = { limit = { has_country_leader_with_trait = popular_figurehead2 } remove_country_leader_trait = popular_figurehead2 }

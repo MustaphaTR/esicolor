@@ -10,6 +10,7 @@ handle_special_generals = {
 
 		set_global_flag = umberto_created
 		set_character_name = ITA_prince_umberto
+		set_character_flag = special_general
 
 		set_portraits = {
 			civilian = {
@@ -37,6 +38,7 @@ handle_special_generals = {
 
 		set_global_flag = gosnjak_created
 		set_character_name = YUG_ivan_gosnjak
+		set_character_flag = special_general
 
 		set_portraits = {
 			civilian = {
@@ -64,6 +66,7 @@ handle_special_generals = {
 
 		set_global_flag = refet_pasha_created
 		set_character_name = TUR_refet_pasha
+		set_character_flag = special_general
 
 		if = {
 			limit = { has_dlc = "Battle for the Bosporus" }
@@ -111,6 +114,7 @@ handle_special_generals = {
 
 		set_global_flag = zervas_created
 		set_character_name = GRE_napoleon_zervas
+		set_character_flag = special_general
 
 		if = {
 			limit = { has_dlc = "Battle for the Bosporus" }
@@ -151,6 +155,41 @@ handle_special_generals = {
 
 handle_special_admirals = {
 
+}
+
+handle_special_advisors = {
+	if = {
+		limit = { original_tag = OAE }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = war_industrialist
+			}
+
+			set_character_name = HUN_istvan_horthy
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_HUN_istvan_horthy
+						small = GFX_portrait_HUN_istvan_horthy_small
+					}
+					army = {
+						large = GFX_portrait_HUN_istvan_horthy
+						small = GFX_portrait_HUN_istvan_horthy_small
+					}
+					navy = {
+						large = GFX_portrait_HUN_istvan_horthy
+						small = GFX_portrait_HUN_istvan_horthy_small
+					}
+				}
+			}
+		}
+	}
 }
 
 recalculate_recruitment_costs = {

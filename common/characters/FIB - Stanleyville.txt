@@ -1,0 +1,39 @@
+characters={
+	FIB_cyrille_adoula = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=COG_cyrille_adoula
+			portraits={
+				civilian={
+					large = GFX_portrait_COG_cyrille_adoula
+					small = GFX_portrait_COG_cyrille_adoula_small
+				}
+			}
+			country_leader={
+				traits = { COG_trade_unionist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=COG_cyrille_adoula
+			portraits={
+				civilian={
+					large = "GFX_Portrait_Europe_Generic_3"
+				}
+			}
+			country_leader={
+				traits = { COG_trade_unionist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

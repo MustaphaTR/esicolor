@@ -1,0 +1,39 @@
+characters={
+	FLY_mwambutsa_iv = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=BRD_mwambutsa_iv
+			portraits={
+				civilian={
+					large = GFX_portrait_BRD_mwambutsa_iv
+					small = GFX_portrait_BRD_mwambutsa_iv_small
+				}
+			}
+			country_leader={
+				traits = { trait_mwami }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=BRD_mwambutsa_iv
+			portraits={
+				civilian={
+					large = "GFX_Portrait_Africa_Generic_3"
+				}
+			}
+			country_leader={
+				traits = { trait_mwami }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

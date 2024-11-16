@@ -1,0 +1,39 @@
+characters={
+	YOZ_siddiq_abubakar = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=SOK_siddiq_abubakar
+			portraits={
+				civilian={
+					large = GFX_portrait_RWA_mutara_rudahigwa
+					small = GFX_portrait_RWA_mutara_rudahigwa_small
+				}
+			}
+			country_leader={
+				traits = { sultan_of_sokoto }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=SOK_siddiq_abubakar
+			portraits={
+				civilian={
+					large = "GFX_Portrait_The_Raj_Political_Leader_Generic"
+				}
+			}
+			country_leader={
+				traits = { sultan_of_sokoto }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
