@@ -4,7 +4,7 @@ import shutil
 ooo_flag = r'C:\Users\musta\Documents\Paradox Interactive\Hearts of Iron IV\mod\esicolor\gfx\flags\OOO.tga'
 folder = r'C:\Users\musta\Documents\Paradox Interactive\Hearts of Iron IV\mod\esicolor\gfx\flags\\'
 i = 1
-while i < 970:
+while i < 981:
     name = str(i)
     if i < 10:
         name = "00" + name
