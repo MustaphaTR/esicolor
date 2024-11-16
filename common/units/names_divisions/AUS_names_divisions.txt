@@ -1,4 +1,4 @@
-﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
 # If we run out of all historical names, the names will be assigned in the old way.
 #
 # Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
@@ -34,7 +34,7 @@ AUS_INF_01 =
 {
 	name = "Infantry Division"
 
-	for_countries = { OOA ISZ ISE BAB }
+	for_countries = { OOA ISZ ISE BAB YFS YFL }
 
 	can_use = { always = yes }
 
@@ -76,7 +76,7 @@ AUS_CAV_01 =
 {
 	name = "Cavalry Division"
 
-	for_countries = { OOA ISZ ISE BAB }
+	for_countries = { OOA ISZ ISE BAB YFS YFL }
 
 	can_use = { always = yes }
 
@@ -108,7 +108,7 @@ AUS_MOT_01 =
 {
 	name = "Motorized Division"
 
-	for_countries = { OOA ISZ ISE BAB }
+	for_countries = { OOA ISZ ISE BAB YFS YFL }
 
 	can_use = { always = yes }
 
@@ -140,7 +140,7 @@ AUS_MEC_01 =
 {
 	name = "Mechanized Division"
 
-	for_countries = { OOA ISZ ISE BAB }
+	for_countries = { OOA ISZ ISE BAB YFS YFL }
 
 	can_use = { always = yes }
 
@@ -172,7 +172,7 @@ AUS_ARM_01 =
 {
 	name = "Armored Division"
 
-	for_countries = { OOA ISZ ISE BAB }
+	for_countries = { OOA ISZ ISE BAB YFS YFL }
 
 	can_use = { always = yes }
 
@@ -204,7 +204,7 @@ AUS_PAR_01 =
 {
 	name = "Paratrooper Division"
 
-	for_countries = { OOA ISZ ISE BAB }
+	for_countries = { OOA ISZ ISE BAB YFS YFL }
 
 	can_use = { always = yes }
 
@@ -236,7 +236,7 @@ AUS_MAR_01 =
 {
 	name = "Marine Division"
 
-	for_countries = { OOA ISZ ISE BAB }
+	for_countries = { OOA ISZ ISE BAB YFS YFL }
 
 	can_use = { always = yes }
 
@@ -268,7 +268,7 @@ AUS_MNT_01 =
 {
 	name = "Mountain Division"
 
-	for_countries = { OOA ISZ ISE BAB }
+	for_countries = { OOA ISZ ISE BAB YFS YFL }
 
 	can_use = { always = yes }
 
@@ -300,7 +300,7 @@ AUS_GAR_01 =
 {
 	name = "Garrison Division"
 
-	for_countries = { OOA ISZ ISE BAB }
+	for_countries = { OOA ISZ ISE BAB YFS YFL }
 
 	can_use = { always = yes }
 
@@ -334,6 +334,87 @@ AUS_GAR_01 =
 		8 = { "%d. Sicherungs-Division" }
 		9 = { "%d. Sicherungs-Division" }
 		10 = { "%d. Sicherungs-Division" }		
+	}
+}
+
+AUS_INF_02 = {
+	
+	name = "Schutzbund Division"
+
+	for_countries = { OOA ISZ ISE BAB YFS YFL }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Schutzbund Division"
+
+	ordered =
+	{
+		1 = { "%d. Schutzbund Division" }
+		2 = { "%d. Schutzbund Division" }
+		3 = { "%d. Schutzbund Division" }
+		4 = { "%d. Schutzbund Division" }
+		5 = { "%d. Schutzbund Division" }
+		6 = { "%d. Schutzbund Division" }
+		7 = { "%d. Schutzbund Division" }
+		8 = { "%d. Schutzbund Division" }
+		9 = { "%d. Schutzbund Division" }
+		10 = { "%d. Schutzbund Division" }
+	}
+}
+
+AUS_INF_03 = {
+	
+	name = "Sturmscharen Division"
+
+	for_countries = { OOA ISZ ISE BAB YFS YFL }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Sturmscharen Division"
+
+	ordered =
+	{
+		1 = { "%d. Sturmscharen Division" }
+		2 = { "%d. Sturmscharen Division" }
+		3 = { "%d. Sturmscharen Division" }
+		4 = { "%d. Sturmscharen Division" }
+		5 = { "%d. Sturmscharen Division" }
+		6 = { "%d. Sturmscharen Division" }
+		7 = { "%d. Sturmscharen Division" }
+		8 = { "%d. Sturmscharen Division" }
+		9 = { "%d. Sturmscharen Division" }
+		10 = { "%d. Sturmscharen Division" }
+	}
+}
+
+AUS_INF_04 = {
+	
+	name = "Heimwehr Division"
+
+	for_countries = { OOA ISZ ISE BAB YFS YFL }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Heimwehr Division"
+
+	ordered =
+	{
+		1 = { "%d. Heimwehr Division" }
+		2 = { "%d. Heimwehr Division" }
+		3 = { "%d. Heimwehr Division" }
+		4 = { "%d. Heimwehr Division" }
+		5 = { "%d. Heimwehr Division" }
+		6 = { "%d. Heimwehr Division" }
+		7 = { "%d. Heimwehr Division" }
+		8 = { "%d. Heimwehr Division" }
+		9 = { "%d. Heimwehr Division" }
+		10 = { "%d. Heimwehr Division" }
 	}
 }
 
