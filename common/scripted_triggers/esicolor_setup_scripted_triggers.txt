@@ -359,6 +359,7 @@ has_level_1_air_base = {
 		state = 140
 		state = 142
 		state = 144
+		state = 155
 		state = 164
 		state = 177
 		state = 183
@@ -408,6 +409,7 @@ has_level_1_air_base = {
 		state = 566
 		state = 570
 		state = 574
+		state = 596
 		state = 640
 		state = 641
 		state = 645
@@ -432,6 +434,15 @@ has_level_1_air_base = {
 		state = 944
 		state = 951
 		state = 956
+		state = 977
+		state = 978
+		state = 979
+		AND = {
+			date < 1939.1.1
+			OR = {
+				state = 620
+			}
+		}
 		AND = {
 			date > 1939.1.1
 			OR = {
@@ -449,11 +460,13 @@ has_level_1_air_base = {
 
 has_level_2_air_base = {
 	OR = {
+		state = 6
 		state = 13
 		state = 22
 		state = 27
 		state = 30
 		state = 31
+		state = 50
 		state = 78
 		state = 79
 		state = 99
@@ -504,6 +517,7 @@ has_level_2_air_base = {
 		state = 807
 		state = 913
 		state = 926
+		state = 974
 		AND = {
 			date > 1939.1.1
 			OR = {
@@ -517,7 +531,6 @@ has_level_2_air_base = {
 
 has_level_3_air_base = {
 	OR = {
-		state = 6
 		state = 12
 		state = 19
 		state = 38
@@ -525,7 +538,6 @@ has_level_3_air_base = {
 		state = 46
 		state = 48
 		state = 49
-		state = 50
 		state = 51
 		state = 56
 		state = 57
@@ -544,7 +556,6 @@ has_level_3_air_base = {
 		state = 133
 		state = 137
 		state = 153
-		state = 155
 		state = 160
 		state = 166
 		state = 167
