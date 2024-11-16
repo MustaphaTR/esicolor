@@ -20,7 +20,16 @@ set_politics = {
 	elections_allowed = yes
 }
 
-recruit_character = OOL_hubert_pierlot
+if = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+	recruit_character = OOL_paul_van_zeeland
+
+	else = {
+		recruit_character = OOL_hubert_pierlot
+	}
+}
 
 set_rule = {
 	can_generate_female_aces = yes
