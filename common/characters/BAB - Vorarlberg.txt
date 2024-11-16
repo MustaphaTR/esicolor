@@ -1,15 +1,39 @@
 characters={
-	BAB_karl_renner={
-		name=AUS_karl_renner
-		portraits={
-			civilian={
-				large=GFX_portrait_AUS_karl_renner
+	BAB_alois_of_liechtenstein = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=AUS_alois_of_liechtenstein
+			portraits={
+				civilian={
+					large = "GFX_portrait_AUS_alois_of_liechtenstein" 
+					small = "GFX_portrait_AUS_alois_of_liechtenstein_small"
+				}
+			}
+			country_leader={
+				traits = { AUS_king_of_liechtenstein }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=AUS_alois_of_liechtenstein
+			portraits={
+				civilian={
+					large = "GFX_Portrait_Europe_Generic_6"
+				}
+			}
+			country_leader={
+				traits = { AUS_king_of_liechtenstein }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }
