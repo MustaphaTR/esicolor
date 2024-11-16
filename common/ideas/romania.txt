@@ -3,7 +3,7 @@ ideas = {
 		designer = yes
 
 		# These all use generic naval_manufacturer traits in basegame, and while MIO versions have proper traits, i used different ones here that i saw more fitting.
-		OAL_battlefleet_designer = {
+		YFI_battlefleet_designer = {
 			name = constanta_shipyard
 			picture = kure_naval_arsenal # generic_naval_manufacturer_2
 
@@ -13,10 +13,10 @@ ideas = {
 			visible = {
 				NOT = { has_country_flag = battlefleet_designer_disabled }
 				OR = {
-					original_tag = OAL
+					original_tag = YFI
 					AND = {
 						has_global_flag = custom_designers_only
-						owns_state = 46
+						owns_state = 971
 					}
 				}
 			}
@@ -24,7 +24,7 @@ ideas = {
 				if = {
 					limit = { has_global_flag = custom_designers_only }
 
-					46 = { state_designer_availabile = yes }
+					971 = { state_designer_availabile = yes }
 				}
 			}
 

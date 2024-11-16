@@ -80,7 +80,7 @@ OAL_naval_aircraft_organization = {
  
 #####################
 
-OAL_task_force_ship_organization = {
+YFI_task_force_ship_organization = {
 	name = ROM_constanta_shipyard_organization
 	include = esicolor_generic_task_force_ship_organization
 	# icon = GFX_idea_generic_naval_manufacturer_2
@@ -92,10 +92,10 @@ OAL_task_force_ship_organization = {
 		owner = {
 			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
 			OR = {
-				original_tag = OAL
+				original_tag = YFI
 				AND = {
 					has_global_flag = custom_designers_only
-					owns_state = 46
+					owns_state = 971
 				}
 			}
 		}
@@ -105,7 +105,7 @@ OAL_task_force_ship_organization = {
 			limit = { has_global_flag = custom_designers_only }
 
 			owner = {
-				46 = { state_designer_availabile = yes }
+				971 = { state_designer_availabile = yes }
 			}
 		}
 	}
