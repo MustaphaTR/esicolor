@@ -1,0 +1,40 @@
+characters={
+	OSI_joseph_goebbels = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name=GER_joseph_goebbels
+			portraits={
+				civilian={
+					large = GFX_portrait_GER_joseph_goebbels
+					small = GFX_portrait_GER_joseph_goebbels_small
+				}
+			}
+			country_leader={
+				traits={ GER_goebbels_fuhrer }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name=GER_joseph_goebbels
+			portraits={
+				civilian={
+					large = GFX_portrait_GER_joseph_goebbels
+					small = GFX_portrait_GER_joseph_goebbels_small
+				}
+			}
+			country_leader={
+				traits={ GER_goebbels_fuhrer_no_lar }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

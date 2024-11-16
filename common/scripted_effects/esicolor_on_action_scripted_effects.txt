@@ -190,6 +190,35 @@ handle_special_advisors = {
 			}
 		}
 	}
+	else_if = {
+		limit = { original_tag = OLY }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = fascist_demagogue
+			}
+
+			set_character_name = CZE_konrad_henlein
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_CZE_konrad_henlein
+					}
+					army = {
+						small = GFX_idea_CZE_konrad_henlein
+					}
+					navy = {
+						small = GFX_idea_CZE_konrad_henlein
+					}
+				}
+			}
+		}
+	}
 }
 
 recalculate_recruitment_costs = {

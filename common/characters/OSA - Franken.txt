@@ -1,0 +1,39 @@
+﻿characters={
+	OSA_otto_strasser = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=GER_otto_strasser
+			portraits={
+				civilian={
+					large = GFX_portrait_GER_otto_strasser
+					small = GFX_portrait_GER_otto_strasser_small
+				}
+			}
+			country_leader={
+				traits={ GER_revolutionary_nationalist }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=GER_otto_strasser
+			portraits={
+				civilian={
+					large = GFX_portrait_Portrait_South_America_Generic_land_4
+				}
+			}
+			country_leader={
+				traits={ GER_revolutionary_nationalist }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
