@@ -1,6 +1,14 @@
-@tier1 = 30
-@tier2 = 20
-@tier3 = 10
+@tier1_cp_cap_increase = 10
+@tier2_cp_cap_increase = 20
+@tier3_cp_cap_increase = 30
+
+@experience_gain_low = 0.03
+@experience_gain_medium = 0.06
+@experience_gain_high = 0.08
+
+@army_command_factor_1 = 0.42
+@army_command_factor_2 = 0.64
+@army_command_factor_3 = 0.86
 
 leader_traits = {
 	code_breaker = {
@@ -26,12 +34,13 @@ leader_traits = {
 		army_morale_factor = 0.015
 		heat_attrition_factor = -0.05
 		out_of_supply_factor = -0.015
-		#experience_gain_army = 0.06
+		#experience_gain_army = @experience_gain_low
 
-		command_cap = @tier1
+		command_cap_increase = @tier1_cp_cap_increase
+		command_power = @tier1_cp_cost
 
 		ai_will_do = {
-			factor = 1
+			factor = @army_command_factor_1
 		}
 	}
 
@@ -42,12 +51,13 @@ leader_traits = {
 		army_morale_factor = 0.025
 		heat_attrition_factor = -0.1
 		out_of_supply_factor = -0.03
-		#experience_gain_army = 0.09
+		#experience_gain_army = @experience_gain_medium
 
-		command_cap = @tier2
+		command_cap_increase = @tier2_cp_cap_increase
+		command_power = @tier2_cp_cost
 
 		ai_will_do = {
-			factor = 1
+			factor = @army_command_factor_2
 		}
 	}
 
@@ -58,12 +68,13 @@ leader_traits = {
 		army_morale_factor = 0.035
 		heat_attrition_factor = -0.15
 		out_of_supply_factor = -0.045
-		#experience_gain_army = 0.12
+		#experience_gain_army = @experience_gain_high
 
-		command_cap = @tier3
+		command_cap_increase = @tier3_cp_cap_increase
+		command_power = @tier3_cp_cost
 
 		ai_will_do = {
-			factor = 1
+			factor = @army_command_factor_3
 		}
 	}
 
