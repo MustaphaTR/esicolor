@@ -1,5 +1,46 @@
 #####################
 
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+OAE_medium_tank_organization = {
+	name = HUN_hti_turan_organization
+	include = esicolor_generic_medium_tank_organization
+	icon = GFX_idea_HUN_hti_turan
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OAE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 43
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				43 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#####################
+
  ## #  # ### ###   ## 
 #   #  #  #  #  # #   
  #  ####  #  ###   #  
@@ -19,6 +60,37 @@ OAE_task_force_ship_organization = {
 	visible = {
 		owner = {
 			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OAE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 43
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				43 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OAE_refurbishment_repair_organization = {
+	name = HUN_obudai_hajogyar_organization
+	include = esicolor_generic_refurbishment_repair_organization
+	icon = GFX_idea_HUN_obudai_hajogyar
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = repair_and_refurbishment_plant_disabled }
 			OR = {
 				original_tag = OAE
 				AND = {
@@ -80,6 +152,37 @@ OAE_light_aircraft_organization = {
 	}
 }
 
+OAE_multi_role_aircraft_organization = {
+	name = HUN_mrt_aircraft_organization
+	include = esicolor_generic_multi_role_aircraft_organization
+	icon = GFX_idea_HUN_mrt_aircraft
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OAE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 43
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				43 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
 ################################### 
 
 #   #  ##  ### ### ###  ### ### #   
@@ -117,6 +220,68 @@ OAE_infantry_equipment_organization = {
 
 			owner = {
 				43 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OAE_support_equipment_organization = {
+	name = HUN_danuvia_inf_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_HUN_dunai_gepgyar
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OAE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 43
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				43 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ISS_motorized_mechanized_organization = {
+	name = HUN_mwg_raba_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_HUN_mwg_raba
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ISS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 155
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				155 = { state_designer_availabile = yes }
 			}
 		}
 	}

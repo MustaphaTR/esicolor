@@ -440,3 +440,34 @@ IZS_motorized_mechanized_organization = {
 		}
 	}
 }
+
+IEZ_armored_car_organization = {
+	name = ENG_crossley_motors_organization
+	include = esicolor_generic_armored_car_organization
+	icon = GFX_idea_ENG_crossley_motors
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = armored_car_manufacturer_disabled }
+			OR = {
+				original_tag = IEZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 132
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				132 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

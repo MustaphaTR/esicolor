@@ -38,6 +38,41 @@ ideas = {
 		}
 	}
 
+	tank_manufacturer = {
+		designer = yes
+
+		OAE_medium_tank_manufacturer = {
+			name = HUN_hti_turan
+			picture = HUN_hti_turan
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+				OR = {
+					original_tag = OAE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 43
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					43 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { medium_tank_manufacturer }
+		}
+	}
+
 	naval_manufacturer = {
 		designer = yes
 
@@ -71,6 +106,37 @@ ideas = {
 				naval_equipment = 0.15
 			}
 			traits = { pacific_fleet_naval_manufacturer }
+		}
+
+		OAE_repair_and_refurbishment_plant = {
+			name = HUN_obudai_hajogyar
+			picture = HUN_obudai_hajogyar
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = repair_and_refurbishment_plant_disabled }
+				OR = {
+					original_tag = OAE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 43
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					43 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { repair_and_refurbishment_plant_esicolor }
 		}
 	}
 
@@ -107,6 +173,38 @@ ideas = {
 			}
 			traits = { light_aircraft_manufacturer }
 		}
+
+		# Has a custom trait in basegame, but MIO version uses "generic_multi_role_aircraft_organization".
+		OAE_multi_role_aircraft_manufacturer = {
+			name = HUN_mrt_aircraft
+			picture = HUN_mrt_aircraft
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OAE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 43
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					43 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { multi_role_aircraft_manufacturer }
+		}
 	}
 
 	materiel_manufacturer = {
@@ -142,6 +240,69 @@ ideas = {
 			}
 			traits = { infantry_equipment_manufacturer }
 		}
+
+		OAE_support_equipment_manufacturer = {
+			name = HUN_danuvia_inf
+			picture = HUN_dunai_gepgyar
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = OAE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 43
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					43 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
+		}
+
+		ISS_motorized_equipment_manufacturer = {
+			name = HUN_mwg_raba
+			picture = HUN_mwg_raba
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ISS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 155
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					155 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
 	}
 
 	industrial_concern = {
@@ -174,6 +335,68 @@ ideas = {
 				industry = 0.15
 			}
 			traits = { industrial_concern }
+		}
+
+		OAE_electronics_concern = {
+			name = HUN_orion
+			picture = HUN_orion
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = OAE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 43
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					43 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
+		OAE_railway_company = {
+			name = HUN_mav
+			picture = HUN_mav
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = OAE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 43
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					43 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
 		}
 	}
 }

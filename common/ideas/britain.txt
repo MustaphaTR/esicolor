@@ -1,5 +1,37 @@
 ideas = {
 	tank_manufacturer = {
+		# Originally from Hungary's file.
+		IEZ_armored_car_manufacturer = {
+			name = ENG_crossley_motors_organization
+			picture = ENG_crossley_motors
+
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			visible = {
+				NOT = { has_country_flag = armored_car_manufacturer_disabled }
+				OR = {
+					original_tag = IEZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 132
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					132 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { armored_car_manufacturer }
+		}
+
 		IZL_medium_tank_manufacturer = {
 			name = vickers_armstrong_eng
 			picture = vickers_armstrong_eng
