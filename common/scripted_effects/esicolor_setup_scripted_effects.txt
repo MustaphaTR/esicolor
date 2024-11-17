@@ -4277,7 +4277,192 @@ randomise_technology = {
 		chance =  global.setup_technology_infantry_weapons1
 
 		set_technology = { infantry_weapons1 = 1 }
+
+		random = {
+			chance = global.setup_technology_tech_support
+
+			set_technology = { tech_support = 1 }
+
+			set_temp_variable = { tech_engineer_recon_mp_minus = 100 }
+			set_temp_variable = { tech_engineer_recon_mp_fifth = global.setup_technology_tech_engineer_recon_mp }
+			subtract_from_temp_variable = { tech_engineer_recon_mp_minus = global.setup_technology_tech_engineer_recon_mp }
+			divide_temp_variable = { tech_engineer_recon_mp_fifth = 5 }
+			set_temp_variable = { tech_engineer_recon_mp_two_fifths = tech_engineer_recon_mp_fifth }
+			multiply_temp_variable = { tech_engineer_recon_mp_two_fifths = 2 }
+			random_list = {
+				seed = random
+				tech_engineer_recon_mp_two_fifths = {
+					set_technology = { tech_recon = 1 }
+				}
+				tech_engineer_recon_mp_two_fifths = {
+					set_technology = { tech_engineers = 1 }
+				}
+				tech_engineer_recon_mp_fifth = {
+					set_technology = { tech_engineers = 1 }
+				}
+				tech_engineer_recon_mp_minus = { }
+			}
+
+			set_temp_variable = { submarine_1_minus = 100 }
+			subtract_from_temp_variable = { submarine_1_minus = global.setup_technology_submarine_1 }
+			random_list = {
+				seed = random
+				global.setup_technology_submarine_1 = {
+					modifier = {
+						factor = 3
+						any_owned_state = { is_coastal = yes }
+					}
+
+					give_submarine_1 = yes
+				}
+				submarine_1_minus = { }
+			}
+
+			random = {
+				chance = global.setup_technology_construction1
+
+				set_technology = { construction1 = 1 }
+
+				random = {
+					chance = global.setup_technology_excavation1
+
+					set_technology = { excavation1 = 1 }
+				}
+			}
+			random = {
+				chance = global.setup_technology_fuel_silos
+
+				set_technology = { fuel_silos = 1 }
+
+				set_temp_variable = { synth_oil_experiments_fuel_refining_minus = 100 }
+				set_temp_variable = { synth_oil_experiments_fuel_refining_fifth = global.setup_technology_synth_oil_experiments_fuel_refining }
+				subtract_from_temp_variable = { synth_oil_experiments_fuel_refining_minus = global.setup_technology_synth_oil_experiments_fuel_refining }
+				divide_temp_variable = { synth_oil_experiments_fuel_refining_fifth = 5 }
+				set_temp_variable = { synth_oil_experiments_fuel_refining_four_fifths = synth_oil_experiments_fuel_refining_fifth }
+				multiply_temp_variable = { synth_oil_experiments_fuel_refining_four_fifths = 4 }
+				random_list = {
+					seed = random
+					synth_oil_experiments_fuel_refining_fifth = {
+						set_technology = { synth_oil_experiments = 1 }
+					}
+					synth_oil_experiments_fuel_refining_four_fifths = {
+						set_technology = { fuel_refining = 1 }
+					}
+					synth_oil_experiments_fuel_refining_minus = { }
+				}
+			}
+
+			random = {
+				chance = global.setup_technology_tech_trucks
+
+				set_technology = { tech_trucks = 1 }
+
+				set_temp_variable = { motorised_infantry_basic_train_minus = 100 }
+				set_temp_variable = { motorised_infantry_basic_train_half = global.setup_technology_motorised_infantry_basic_train }
+				subtract_from_temp_variable = { motorised_infantry_basic_train_minus = global.setup_technology_motorised_infantry_basic_train }
+				divide_temp_variable = { motorised_infantry_basic_train_half = 2 }
+				random_list = {
+					seed = random
+					motorised_infantry_basic_train_half = {
+						set_technology = { motorised_infantry = 1 }
+					}
+					motorised_infantry_basic_train_half = {
+						set_technology = { basic_train = 1 }
+					}
+					motorised_infantry_basic_train_minus = { }
+				}
+			}
+
+			random = {
+				chance = global.setup_technology_gw_artillery
+
+				set_technology = { gw_artillery = 1 }
+
+				set_temp_variable = { gwtank_antiair_antitank_minus = 100 }
+				set_temp_variable = { gwtank_antiair_antitank_third = global.setup_technology_gwtank_antiair_antitank }
+				subtract_from_temp_variable = { gwtank_antiair_antitank_minus = global.setup_technology_gwtank_antiair_antitank }
+				divide_temp_variable = { gwtank_antiair_antitank_third = 3 }
+				random_list = {
+					seed = random
+					gwtank_antiair_antitank_third = {
+						set_technology = { interwar_antiair = 1 }
+					}
+					gwtank_antiair_antitank_third = {
+						set_technology = { interwar_antitank = 1 }
+					}
+					gwtank_antiair_antitank_third = {
+						give_gwtank = yes
+					}
+					gwtank_antiair_antitank_minus = { }
+				}
+			}
+
+			random = {
+				chance = global.setup_technology_electronic_mechanical_engineering
+
+				set_technology = { electronic_mechanical_engineering = 1 }
+
+				random = {
+					chance = global.setup_technology_radio
+
+					set_technology = { radio = 1 }
+
+					random = {
+						chance = global.setup_technology_radio_detection
+
+						complete_special_project = { project = sp:sp_air_radar }
+					}
+				}
+			}
+
+			random = {
+				chance = global.setup_technology_early_fighter
+
+				give_early_fighter = yes
+
+				set_temp_variable = { basic_cas_nav_minus = 100 }
+				set_temp_variable = { basic_cas_nav_half = global.setup_technology_basic_cas_nav }
+				subtract_from_temp_variable = { basic_cas_nav_minus = global.setup_technology_basic_cas_nav }
+				divide_temp_variable = { basic_cas_nav_half = 2 }
+				random_list = {
+					seed = random
+					basic_cas_nav_half = {
+						modifier = {
+							factor = 0.5
+							any_owned_state = {
+								is_coastal = yes
+							}
+						}
+
+						give_basic_cas = yes
+					}
+					basic_cas_nav_half = {
+						modifier = {
+							factor = 2
+							any_owned_state = {
+								is_coastal = yes
+							}
+						}
+
+						give_basic_naval_bomber = yes
+					}
+					basic_cas_nav_minus = { }
+				}
+
+				random = {
+					chance = global.setup_technology_basic_cas_nav
+
+					give_early_fighter = yes
+				}
+			}
+			random = {
+				chance = global.setup_technology_early_bomber
+
+				give_early_bomber = yes
+			}
+		}
 	}
+
 	random = {
 		chance =  global.setup_technology_support_weapons
 
@@ -4547,8 +4732,8 @@ randomise_technology_legacy = {
 							random_list = {
 								seed = random
 								10 = {
-									set_technology = {
-										radio_detection = 1
+									complete_special_project = {
+										project = sp:sp_air_radar
 									}
 								}
 								90 = { }
@@ -11933,10 +12118,70 @@ clear_province_modifiers = {
 	#}
 	remove_dynamic_modifier = { modifier = FRA_maginot_line_dynamic_modifier }
 	remove_dynamic_modifier = { modifier = ETH_state_development_dynamic_modifier }
+	remove_dynamic_modifier = { modifier = ETH_state_decentralization_dynamic_modifier }
 	remove_dynamic_modifier = { modifier = dense_rural_infrastructure }
 }
 
 add_province_modifiers = {
+	28 = { add_dynamic_modifier = { modifier = FRA_maginot_line_dynamic_modifier } } #Alsase-Lorainne
+
+	every_state = {
+		limit = {
+			var:original_owner = {
+				OR = {
+					state_originally_from_ETH = yes
+					state_originally_from_AFA = yes
+				}
+			}
+		}
+
+		add_dynamic_modifier = { modifier = ETH_state_development_dynamic_modifier }
+	}
+
+	every_state = {
+		limit = {
+			var:original_owner = {
+				state_originally_from_BRA = yes
+			}
+			OR = {
+				has_state_category = wasteland
+				has_state_category = pastoral
+				has_state_category = rural
+				#TODO_JUNO: Check states below are correct after map changes implemented
+				state = 498
+				state = 499
+			}
+			NOT = {
+				state = 961
+				state = 962
+				state = 963
+				state = 964
+				state = 965
+				state = 966
+				state = 967
+				state = 968
+				state = 496
+			}
+		}
+
+		# Neglected State Modifier
+		set_variable = { BRA_state_development_production_speed = -0.4 }
+		set_variable = { BRA_state_development_local_building_slots_factor = -0.4 }
+		set_variable = { BRA_state_development_local_factories = -0.4 }
+		set_variable = { BRA_state_development_state_resources_factor = -0.4 }
+
+		add_dynamic_modifier = {
+			modifier = BRA_neglected_state_dynamic_modifier
+		}
+	}
+
+	640 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Mandalay
+	432 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Assam
+	427 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Hyderabad
+	436 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Jabalpur
+	437 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Indore
+	433 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Rajahsthan
+
 	600 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Jiangxi
 	749 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Huangshan
 	606 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Anhui

@@ -3899,6 +3899,384 @@ scripted_gui = {
 					}
 				}
 			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_19_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_excavation1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_excavation1 = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_19_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_excavation1 < 100 } }
+
+					add_to_variable = { global.setup_technology_excavation1 = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_19_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_excavation1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_excavation1 = 5 }
+					clamp_variable = {
+						var = global.setup_technology_excavation1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_19_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_excavation1 < 100 } }
+
+					add_to_variable = { global.setup_technology_excavation1 = 5 }
+					clamp_variable = {
+						var = global.setup_technology_excavation1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_19_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_excavation1 > 0 } }
+
+					subtract_from_variable = { global.setup_technology_excavation1 = 10 }
+					clamp_variable = {
+						var = global.setup_technology_excavation1
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_19_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_excavation1 < 100 } }
+
+					add_to_variable = { global.setup_technology_excavation1 = 10 }
+					clamp_variable = {
+						var = global.setup_technology_excavation1
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_20_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_synth_oil_experiments_fuel_refining > 0 } }
+
+					subtract_from_variable = { global.setup_technology_synth_oil_experiments_fuel_refining = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_20_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_synth_oil_experiments_fuel_refining < 100 } }
+
+					add_to_variable = { global.setup_technology_synth_oil_experiments_fuel_refining = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_20_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_synth_oil_experiments_fuel_refining > 0 } }
+
+					subtract_from_variable = { global.setup_technology_synth_oil_experiments_fuel_refining = 5 }
+					clamp_variable = {
+						var = global.setup_technology_synth_oil_experiments_fuel_refining
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_20_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_synth_oil_experiments_fuel_refining < 100 } }
+
+					add_to_variable = { global.setup_technology_synth_oil_experiments_fuel_refining = 5 }
+					clamp_variable = {
+						var = global.setup_technology_synth_oil_experiments_fuel_refining
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_20_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_synth_oil_experiments_fuel_refining > 0 } }
+
+					subtract_from_variable = { global.setup_technology_synth_oil_experiments_fuel_refining = 10 }
+					clamp_variable = {
+						var = global.setup_technology_synth_oil_experiments_fuel_refining
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_20_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_synth_oil_experiments_fuel_refining < 100 } }
+
+					add_to_variable = { global.setup_technology_synth_oil_experiments_fuel_refining = 10 }
+					clamp_variable = {
+						var = global.setup_technology_synth_oil_experiments_fuel_refining
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_21_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_trucks > 0 } }
+
+					subtract_from_variable = { global.setup_technology_tech_trucks = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_21_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_trucks < 100 } }
+
+					add_to_variable = { global.setup_technology_tech_trucks = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_21_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_trucks > 0 } }
+
+					subtract_from_variable = { global.setup_technology_tech_trucks = 5 }
+					clamp_variable = {
+						var = global.setup_technology_tech_trucks
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_21_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_trucks < 100 } }
+
+					add_to_variable = { global.setup_technology_tech_trucks = 5 }
+					clamp_variable = {
+						var = global.setup_technology_tech_trucks
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_21_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_trucks > 0 } }
+
+					subtract_from_variable = { global.setup_technology_tech_trucks = 10 }
+					clamp_variable = {
+						var = global.setup_technology_tech_trucks
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_21_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_tech_trucks < 100 } }
+
+					add_to_variable = { global.setup_technology_tech_trucks = 10 }
+					clamp_variable = {
+						var = global.setup_technology_tech_trucks
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_22_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_motorised_infantry_basic_train > 0 } }
+
+					subtract_from_variable = { global.setup_technology_motorised_infantry_basic_train = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_22_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_motorised_infantry_basic_train < 100 } }
+
+					add_to_variable = { global.setup_technology_motorised_infantry_basic_train = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_22_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_motorised_infantry_basic_train > 0 } }
+
+					subtract_from_variable = { global.setup_technology_motorised_infantry_basic_train = 5 }
+					clamp_variable = {
+						var = global.setup_technology_motorised_infantry_basic_train
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_22_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_motorised_infantry_basic_train < 100 } }
+
+					add_to_variable = { global.setup_technology_motorised_infantry_basic_train = 5 }
+					clamp_variable = {
+						var = global.setup_technology_motorised_infantry_basic_train
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_22_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_motorised_infantry_basic_train > 0 } }
+
+					subtract_from_variable = { global.setup_technology_motorised_infantry_basic_train = 10 }
+					clamp_variable = {
+						var = global.setup_technology_motorised_infantry_basic_train
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_22_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_motorised_infantry_basic_train < 100 } }
+
+					add_to_variable = { global.setup_technology_motorised_infantry_basic_train = 10 }
+					clamp_variable = {
+						var = global.setup_technology_motorised_infantry_basic_train
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_23_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_radio > 0 } }
+
+					subtract_from_variable = { global.setup_technology_radio = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_23_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_radio < 100 } }
+
+					add_to_variable = { global.setup_technology_radio = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_23_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_radio > 0 } }
+
+					subtract_from_variable = { global.setup_technology_radio = 5 }
+					clamp_variable = {
+						var = global.setup_technology_radio
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_23_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_radio < 100 } }
+
+					add_to_variable = { global.setup_technology_radio = 5 }
+					clamp_variable = {
+						var = global.setup_technology_radio
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_23_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_radio > 0 } }
+
+					subtract_from_variable = { global.setup_technology_radio = 10 }
+					clamp_variable = {
+						var = global.setup_technology_radio
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_23_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_radio < 100 } }
+
+					add_to_variable = { global.setup_technology_radio = 10 }
+					clamp_variable = {
+						var = global.setup_technology_radio
+						min = 0
+						max = 100
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_max_minus_24_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_radio_detection > 0 } }
+
+					subtract_from_variable = { global.setup_technology_radio_detection = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_24_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_radio_detection < 100 } }
+
+					add_to_variable = { global.setup_technology_radio_detection = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_24_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_radio_detection > 0 } }
+
+					subtract_from_variable = { global.setup_technology_radio_detection = 5 }
+					clamp_variable = {
+						var = global.setup_technology_radio_detection
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_24_control_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_radio_detection < 100 } }
+
+					add_to_variable = { global.setup_technology_radio_detection = 5 }
+					clamp_variable = {
+						var = global.setup_technology_radio_detection
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_minus_24_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_radio_detection > 0 } }
+
+					subtract_from_variable = { global.setup_technology_radio_detection = 10 }
+					clamp_variable = {
+						var = global.setup_technology_radio_detection
+						min = 0
+						max = 100
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_6_max_plus_24_shift_click = {
+				if = {
+					limit = { check_variable = { global.setup_technology_radio_detection < 100 } }
+
+					add_to_variable = { global.setup_technology_radio_detection = 10 }
+					clamp_variable = {
+						var = global.setup_technology_radio_detection
+						min = 0
+						max = 100
+					}
+				}
+			}
 		}
 	}
 
