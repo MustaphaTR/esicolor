@@ -3,9 +3,9 @@ ideas = {
 		designer = yes
 
 		# Original is generic naval_manufacturer, but MIO version is Escort, so using that one here.
-		OEA_convoy_escort_naval_manufacturer = {
-			name = cockerill
-			picture = maizuru_naval_arsenal # generic_naval_manufacturer_1
+		YFF_convoy_escort_naval_manufacturer = {
+			name = cockerill_shipyards
+			picture = BEL_cockerill_shipyards_organization
 
 			allowed = {
 				always = yes
@@ -13,10 +13,10 @@ ideas = {
 			visible = {
 				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
 				OR = {
-					original_tag = OEA
+					original_tag = YFF
 					AND = {
 						has_global_flag = custom_designers_only
-						owns_state = 34
+						owns_state = 977
 					}
 				}
 			}
@@ -24,7 +24,7 @@ ideas = {
 				if = {
 					limit = { has_global_flag = custom_designers_only }
 
-					34 = { state_designer_availabile = yes }
+					977 = { state_designer_availabile = yes }
 				}
 			}
 
@@ -38,46 +38,15 @@ ideas = {
 	aircraft_manufacturer = {
 		designer = yes
 
-		OEA_light_aircraft_manufacturer = {
-			name = avions_fairey
-			picture = generic_air_manufacturer_2
+		OOL_light_aircraft_manufacturer = {
+			name = BEL_renard_organization
+			picture = renard
 
 			allowed = {
 				always = yes
 			}
 			visible = {
 				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
-				OR = {
-					original_tag = OEA
-					AND = {
-						has_global_flag = custom_designers_only
-						owns_state = 34
-					}
-				}
-			}
-			available = {
-				if = {
-					limit = { has_global_flag = custom_designers_only }
-
-					34 = { state_designer_availabile = yes }
-				}
-			}
-
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			traits = { light_aircraft_manufacturer }
-		}
-
-		OOL_medium_aircraft_manufacturer = {
-			name = renard
-			picture = generic_air_manufacturer_3 # generic_air_manufacturer_2
-
-			allowed = {
-				always = yes
-			}
-			visible = {
-				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
 				OR = {
 					original_tag = OOL
 					AND = {
@@ -97,7 +66,7 @@ ideas = {
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			traits = { medium_aircraft_manufacturer }
+			traits = { light_aircraft_manufacturer }
 		}
 	}
 
@@ -105,8 +74,8 @@ ideas = {
 		designer = yes
 
 		OEA_infantry_equipment_manufacturer = {
-			name = fn_herstol
-			picture = generic_infantry_equipment_manufacturer_2
+			name = fn_herstal
+			picture = BEL_fn_herstal_organization
 
 			allowed = {
 				always = yes
@@ -133,6 +102,133 @@ ideas = {
 				infantry_weapons = 0.15
 			}
 			traits = { infantry_equipment_manufacturer }
+		}
+
+		OEA_artillery_manufacturer = {
+			name = fonderie_royale_de_canons_liege
+			picture = BEL_fonderie_royale_de_canons_liege
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = OEA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 34
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					34 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		YFF_motorized_equipment_manufacturer = {
+			name = minerva_imperia_motorized
+			picture = BEL_minerva_imperia_motorized_organization
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = YFF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 977
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					977 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		YBO_industrial_concern = {
+			name = BEL_cockerill_industrial
+			picture = BEL_cockerill_industrial
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = YBO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 980
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					980 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		OOL_electronics_concern = {
+			name = BEL_distrigaz
+			picture = BEL_distrigaz
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = OOL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 6
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					6 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
 		}
 	}
 }

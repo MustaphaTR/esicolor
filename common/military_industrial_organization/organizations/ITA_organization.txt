@@ -312,7 +312,36 @@ ISB_range_focused_aircraft_organization = {
 	}
 }
 
-### Savoia-Marchetti is a multi-role aircraft designer, which is not used in ESI for now, so excluding it.
+ISY_multi_role_aircraft_organization = {
+	name = ITA_savoia_marchetti_organization
+	include = esicolor_generic_multi_role_aircraft_organization
+	icon = GFX_idea_savoia_marchetti
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ISY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 159
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				159 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
 
 ISB_heavy_aircraft_organization = {
 	name = ITA_piaggio_organization

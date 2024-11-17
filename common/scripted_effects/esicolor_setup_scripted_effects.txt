@@ -10775,7 +10775,7 @@ randomise_military_advisor_levels = {
 remove_tank_designer = {
 	random_list = {
 		seed = random
-		16 = {
+		15 = {
 			set_country_flag = armored_car_manufacturer_disabled
 
 			modifier = {
@@ -10788,7 +10788,7 @@ remove_tank_designer = {
 				}
 			}
 		}
-		16 = {
+		15 = {
 			set_country_flag = infantry_tank_manufacturer_disabled
 
 			modifier = {
@@ -10797,7 +10797,16 @@ remove_tank_designer = {
 				has_country_flag = infantry_tank_manufacturer_disabled
 			}
 		}
-		16 = {
+		20 = {
+			set_country_flag = assault_gun_manufacturer_disabled
+
+			modifier = {
+				factor = 0
+				
+				has_country_flag = assault_gun_manufacturer_disabled
+			}
+		}
+		20 = {
 			set_country_flag = fast_tank_manufacturer_disabled
 
 			modifier = {
@@ -10806,7 +10815,7 @@ remove_tank_designer = {
 				has_country_flag = fast_tank_manufacturer_disabled
 			}
 		}
-		16 = {
+		15 = {
 			set_country_flag = medium_tank_manufacturer_disabled
 
 			modifier = {
@@ -10815,7 +10824,7 @@ remove_tank_designer = {
 				has_country_flag = medium_tank_manufacturer_disabled
 			}
 		}
-		16 = {
+		15 = {
 			set_country_flag = heavy_tank_manufacturer_disabled
 
 			modifier = {
@@ -10986,6 +10995,15 @@ remove_aircraft_designer = {
 			}
 		}
 		15 = {
+			set_country_flag = agility_focused_aircraft_manufacturer_disabled
+
+			modifier = {
+				factor = 0
+
+				has_country_flag = agility_focused_aircraft_manufacturer_disabled
+			}
+		}
+		15 = {
 			set_country_flag = CAS_manufacturer_disabled
 
 			modifier = {
@@ -11013,12 +11031,12 @@ remove_aircraft_designer = {
 			}
 		}
 		15 = {
-			set_country_flag = agility_focused_aircraft_manufacturer_disabled
+			set_country_flag = multi_role_aircraft_manufacturer_disabled
 
 			modifier = {
 				factor = 0
 
-				has_country_flag = agility_focused_aircraft_manufacturer_disabled
+				has_country_flag = multi_role_aircraft_manufacturer_disabled
 			}
 		}
 		15 = {
@@ -11094,6 +11112,19 @@ remove_materiel_designer = {
 				}
 			}
 		}
+		50 = {
+			set_country_flag = helicopter_manufacturer_disabled
+
+			modifier = {
+				factor = 0
+
+				OR = {
+					NOT = { has_dlc = "Gotterdammerung" }
+					NOT = { has_dlc = "Arms Against Tyranny" }
+					has_country_flag = helicopter_manufacturer_disabled
+				}
+			}
+		}
 	}
 }
 
@@ -11124,7 +11155,7 @@ remove_industrial_concern = {
 				}
 			}
 		}
-		25 = {
+		20 = {
 			set_country_flag = refinery_concern_disabled
 
 			modifier = {
@@ -11133,7 +11164,7 @@ remove_industrial_concern = {
 				has_country_flag = refinery_concern_disabled
 			}
 		}
-		25 = {
+		20 = {
 			set_country_flag = telephone_company_disabled
 
 			modifier = {
@@ -11142,7 +11173,7 @@ remove_industrial_concern = {
 				has_country_flag = telephone_company_disabled
 			}
 		}
-		25 = {
+		20 = {
 			set_country_flag = forestry_company_disabled
 
 			modifier = {
@@ -11151,7 +11182,7 @@ remove_industrial_concern = {
 				has_country_flag = forestry_company_disabled
 			}
 		}
-		30 = {
+		20 = {
 			set_country_flag = construction_company_disabled
 
 			modifier = {
@@ -11160,7 +11191,7 @@ remove_industrial_concern = {
 				has_country_flag = construction_company_disabled
 			}
 		}
-		30 = {
+		20 = {
 			set_country_flag = mining_company_disabled
 
 			modifier = {
@@ -11169,7 +11200,7 @@ remove_industrial_concern = {
 				has_country_flag = mining_company_disabled
 			}
 		}
-		30 = {
+		20 = {
 			set_country_flag = railway_company_disabled
 
 			modifier = {
@@ -11178,13 +11209,14 @@ remove_industrial_concern = {
 				has_country_flag = railway_company_disabled
 			}
 		}
-		5 = { }
+		20 = { }
 	}
 }
 
 randomise_designers = {
 	clear_company_disabled_flags = yes
 
+	remove_tank_designer = yes
 	remove_tank_designer = yes
 	remove_tank_designer = yes
 	if = {
@@ -11212,11 +11244,20 @@ randomise_designers = {
 	remove_aircraft_designer = yes
 	remove_aircraft_designer = yes
 	remove_aircraft_designer = yes
+	remove_aircraft_designer = yes
 
 	remove_materiel_designer = yes
 	if = {
 		limit = {
 			has_dlc = "La Resistance"
+			has_dlc = "Arms Against Tyranny"
+		}
+
+		remove_materiel_designer = yes
+	}
+	if = {
+		limit = {
+			has_dlc = "Gotterdammerung"
 			has_dlc = "Arms Against Tyranny"
 		}
 
@@ -11352,6 +11393,7 @@ setup_basegame_advisors = {
 
 setup_default_companies = {
 	set_country_flag = infantry_tank_manufacturer_disabled
+	set_country_flag = assault_gun_manufacturer_disabled
 	set_country_flag = tank_refurbishment_plant_disabled
 
 	set_country_flag = black_sea_fleet_naval_manufacturer_disabled
@@ -11361,12 +11403,13 @@ setup_default_companies = {
 	set_country_flag = submarine_manufacturer_disabled
 	set_country_flag = raiding_fleet_naval_manufacturer_disabled
 
+	set_country_flag = agility_focused_aircraft_manufacturer_disabled
 	set_country_flag = CAS_manufacturer_disabled
 	set_country_flag = fuel_efficient_aircraft_manufacturer_disabled
-	set_country_flag = agility_focused_aircraft_manufacturer_disabled
+	set_country_flag = multi_role_aircraft_manufacturer_disabled
 
 	set_country_flag = armored_car_manufacturer_disabled
-	set_country_flag = magical_equipment_manufacturer_disabled
+	set_country_flag = helicopter_manufacturer_disabled
 
 	set_country_flag = telephone_company_disabled
 	set_country_flag = forestry_company_disabled
@@ -11376,8 +11419,8 @@ setup_default_companies = {
 }
 
 setup_basegame_companies = {
-	set_country_flag = armored_car_manufacturer_disabled
 	set_country_flag = infantry_tank_manufacturer_disabled
+	set_country_flag = assault_gun_manufacturer_disabled
 	set_country_flag = fast_tank_manufacturer_disabled
 	set_country_flag = heavy_tank_manufacturer_disabled
 	set_country_flag = tank_refurbishment_plant_disabled
@@ -11392,9 +11435,14 @@ setup_basegame_companies = {
 	set_country_flag = submarine_manufacturer_disabled
 	set_country_flag = raiding_fleet_naval_manufacturer_disabled
 
+	set_country_flag = agility_focused_aircraft_manufacturer_disabled
 	set_country_flag = CAS_manufacturer_disabled
 	set_country_flag = fuel_efficient_aircraft_manufacturer_disabled
-	set_country_flag = agility_focused_aircraft_manufacturer_disabled
+	set_country_flag = multi_role_aircraft_manufacturer_disabled
+
+	set_country_flag = support_equipment_manufacturer_disabled
+	set_country_flag = armored_car_manufacturer_disabled
+	set_country_flag = helicopter_manufacturer_disabled
 
 	set_country_flag = refinery_concern_disabled
 	set_country_flag = telephoone_company_disabled
@@ -11402,8 +11450,6 @@ setup_basegame_companies = {
 	set_country_flag = construction_company_disabled
 	set_country_flag = mining_company_disabled
 	set_country_flag = railway_company_disabled
-
-	set_country_flag = support_equipment_manufacturer_disabled
 }
 
 clear_advisor_disabled_flags = {
@@ -11506,8 +11552,8 @@ clear_advisor_disabled_flags = {
 }
 
 clear_company_disabled_flags = {
-	clr_country_flag = armored_car_manufacturer_disabled
 	clr_country_flag = infantry_tank_manufacturer_disabled
+	clr_country_flag = assault_gun_manufacturer_disabled
 	clr_country_flag = fast_tank_manufacturer_disabled
 	clr_country_flag = medium_tank_manufacturer_disabled
 	clr_country_flag = heavy_tank_manufacturer_disabled
@@ -11525,10 +11571,11 @@ clear_company_disabled_flags = {
 	clr_country_flag = convoy_escort_naval_manufacturer_disabled
 
 	clr_country_flag = light_aircraft_manufacturer_disabled
+	clr_country_flag = agility_focused_aircraft_manufacturer_disabled
 	clr_country_flag = CAS_manufacturer_disabled
 	clr_country_flag = medium_aircraft_manufacturer_disabled
 	clr_country_flag = fuel_efficient_aircraft_manufacturer_disabled
-	clr_country_flag = agility_focused_aircraft_manufacturer_disabled
+	clr_country_flag = multi_role_aircraft_manufacturer_disabled
 	clr_country_flag = heavy_aircraft_manufacturer_disabled
 	clr_country_flag = naval_aircraft_manufacturer_disabled
 
@@ -11545,6 +11592,8 @@ clear_company_disabled_flags = {
 	clr_country_flag = support_equipment_manufacturer_disabled
 	clr_country_flag = artillery_manufacturer_disabled
 	clr_country_flag = motorized_equipment_manufacturer_disabled
+	clr_country_flag = armored_car_manufacturer_disabled
+	clr_country_flag = helicopter_manufacturer_disabled
 }
 
 clear_leader_traits = {

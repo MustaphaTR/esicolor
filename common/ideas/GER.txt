@@ -3,6 +3,68 @@ ideas = {
 	tank_manufacturer = { 
 		designer = yes
 
+		OLS_armored_car_manufacturer = {
+			name = GER_auto_union
+			picture = GER_auto_union
+
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			visible = {
+				NOT = { has_country_flag = armored_car_manufacturer_disabled }
+				OR = {
+					original_tag = OLS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 65
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					65 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { armored_car_manufacturer }
+		}
+
+		OLA_assault_gun_manufacturer = {
+			name = GER_alkett
+			picture = GER_alkett
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = assault_gun_manufacturer_disabled }
+				OR = {
+					original_tag = OLA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 64
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					64 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { assault_gun_manufacturer }
+		}
+
 		OSS_fast_tank_manufacturer = {
 			name = henschel
 			picture = henschel
@@ -131,6 +193,99 @@ ideas = {
 			traits = { atlantic_fleet_naval_manufacturer }
 		}
 
+		OSL_repair_and_refurbishment_plant = {
+			name = SOV_sevastopol_marine_plant
+			picture = SOV_sevastopol_marine_plant
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = repair_and_refurbishment_plant_disabled }
+				OR = {
+					original_tag = OSL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 56
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					56 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { repair_and_refurbishment_plant_esicolor }
+		}
+
+		OSB_coastal_defence_naval_manufacturer = {
+			name = GER_deutsche_werke
+			picture = GER_deutsche_werke
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = coastal_defence_naval_manufacturer_disabled }
+				OR = {
+					original_tag = OSB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 58
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					58 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { coastal_defence_naval_manufacturer }
+		}
+
+		OSB_submarine_manufacturer = {
+			name = GER_hdw
+			picture = GER_hdw
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = submarine_manufacturer_disabled }
+				OR = {
+					original_tag = OSB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 58
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					58 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { submarine_manufacturer }
+		}
+
 		OSB_raiding_fleet_naval_manufacturer = {
 			name = blohm_und_voss
 			picture = blohm_und_voss
@@ -160,6 +315,37 @@ ideas = {
 				naval_equipment = 0.15
 			}
 			traits = { raiding_fleet_naval_manufacturer }
+		}
+
+		OSY_convoy_escort_naval_manufacturer = {
+			name = GER_deschimag
+			picture = GER_deschimag
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = OSY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 59
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					59 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
 		}
 	}
 	
@@ -228,7 +414,38 @@ ideas = {
 			traits = { CAS_manufacturer }
 		}
 
-		OSY_medium_aircraft_manufacturer = {
+		OSO_medium_aircraft_manufacturer = {
+			name = dornier
+			picture = dornier
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OSO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 50
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					50 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+
+		OSY_fuel_efficient_aircraft_manufacturer = {
 			name = focke_wulf
 			picture = focke_wulf
 
@@ -236,7 +453,7 @@ ideas = {
 				always = yes
 			}
 			visible = {
-				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				NOT = { has_country_flag = fuel_efficient_aircraft_manufacturer_disabled }
 				OR = {
 					original_tag = OSY
 					AND = {
@@ -256,7 +473,38 @@ ideas = {
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			traits = { medium_aircraft_manufacturer }
+			traits = { fuel_efficient_aircraft_manufacturer }
+		}
+
+		OLI_multi_role_aircraft_manufacturer = {
+			name = GER_arado_flugzeugwerke
+			picture = GER_arado_flugzeugwerke
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OLI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 61
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					61 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { multi_role_aircraft_manufacturer }
 		}
 
 		OLI_heavy_aircraft_manufacturer = {
@@ -290,9 +538,9 @@ ideas = {
 			traits = { heavy_aircraft_manufacturer }
 		}
 
-		OSO_naval_aircraft_manufacturer = {
-			name = dornier
-			picture = dornier
+		OSS_naval_aircraft_manufacturer = {
+			name = GER_fieseler
+			picture = GER_fieseler
 
 			allowed = {
 				always = yes
@@ -300,10 +548,10 @@ ideas = {
 			visible = {
 				NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
 				OR = {
-					original_tag = OSO
+					original_tag = OSS
 					AND = {
 						has_global_flag = custom_designers_only
-						owns_state = 50
+						owns_state = 55
 					}
 				}
 			}
@@ -311,7 +559,7 @@ ideas = {
 				if = {
 					limit = { has_global_flag = custom_designers_only }
 
-					50 = { state_designer_availabile = yes }
+					55 = { state_designer_availabile = yes }
 				}
 			}
 
@@ -354,6 +602,37 @@ ideas = {
 				infantry_weapons = 0.15
 			}
 			traits = { infantry_equipment_manufacturer }
+		}
+
+		OLO_support_equipment_manufacturer = {
+			name = GER_carl_walther
+			picture = GER_carl_walther
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = OLO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 60
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					60 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
 		}
 
 		OSI_artillery_manufacturer = {
@@ -513,6 +792,99 @@ ideas = {
 				synth_resources = 0.15
 			}
 			traits = { refinery_concern }
+		}
+
+		OSS_construction_company = {
+			name = GER_philipp_holzmann
+			picture = GER_philipp_holzmann
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = construction_company_disabled }
+				OR = {
+					original_tag = OSS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 55
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					55 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+			}
+			traits = { construction_company }
+		}
+
+		OSI_mining_company = {
+			name = GER_vereinigte_stahlwerke
+			picture = GER_vereinigte_stahlwerke
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = mining_company_disabled }
+				OR = {
+					original_tag = OSI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 61
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					61 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+			}
+			traits = { mining_company }
+		}
+
+		OLA_railway_company = {
+			name = GER_deutsche_reichsbahn
+			picture = GER_deutsche_reichsbahn
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = OLA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 64
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					64 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
 		}
 	}
 }

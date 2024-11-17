@@ -294,7 +294,36 @@ ideas = {
 			traits = { fuel_efficient_aircraft_manufacturer }
 		}
 
-		### Savoia-Marchetti is a multi-role aircraft designer, which is not used in ESI for now, so excluding it.
+		ISY_multi_role_aircraft_manufacturer = {
+			name = ITA_savoia_marchetti_organization
+			picture = savoia_marchetti
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ISY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 159
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					159 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { multi_role_aircraft_manufacturer }
+		}
 
 		ISB_heavy_aircraft_manufacturer = {
 			name = ITA_piaggio_organization

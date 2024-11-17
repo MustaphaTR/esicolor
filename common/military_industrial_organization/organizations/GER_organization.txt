@@ -8,6 +8,37 @@
 
 #####################
 
+OLA_assault_guns_organization = {
+	name = GER_alkett_organization
+	include = esicolor_generic_assault_guns_organization
+	icon = GFX_idea_GER_alkett
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = assault_gun_manufacturer_disabled }
+			OR = {
+				original_tag = OLA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 64
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				64 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
 OSS_mobile_tank_organization = {
 	name = GER_henschel_organization
 	include = esicolor_generic_mobile_tank_organization
@@ -101,7 +132,7 @@ OSO_heavy_tank_organization = {
 	}
 }
 
-# Daimler-Benz is excluded, Generic Tank MIO type that ESI doesn't use, no Designer version, plus generic icon.
+# Daimler-Benz is excluded, Generic Tank MIO type that ESI doesn't use.
 
 #####################
 
@@ -112,6 +143,37 @@ OSO_heavy_tank_organization = {
 ##  #  # ### #    ##  
  
 #####################
+
+OSB_task_force_ship_organization = {
+	name = GER_deutsche_werke_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_GER_deutsche_werke
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OSB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 58
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				58 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
 
 OSB_battle_line_ship_organization = {
 	name = GER_germaniawerft_organization
@@ -124,6 +186,68 @@ OSB_battle_line_ship_organization = {
 	visible = {
 		owner = {
 			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OSB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 58
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				58 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OSL_refurbishment_repair_organization = {
+	name = GER_kriegsmarinewerft_wilhelmshaven_organization
+	include = esicolor_generic_refurbishment_repair_organization
+	icon = GFX_idea_GER_kriegsmarinewerft_wilhelmshaven
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = repair_and_refurbishment_plant_disabled }
+			OR = {
+				original_tag = OSL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 56
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				56 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OSB_generic_submarine_organization = {
+	name = GER_hdw_organization
+	include = esicolor_generic_submarine_organization
+	icon = GFX_idea_GER_hdw
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = submarine_manufacturer_disabled }
 			OR = {
 				original_tag = OSB
 				AND = {
@@ -170,6 +294,37 @@ OSB_raider_ship_organization = {
 
 			owner = {
 				58 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OSY_escort_ship_organization = {
+	name = GER_deschimag_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_GER_deschimag
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OSY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 59
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				59 = { state_designer_availabile = yes }
 			}
 		}
 	}
@@ -247,10 +402,10 @@ OLA_cas_aircraft_organization = {
 	}
 }
 
-OSY_medium_aircraft_organization = {
-	name = GER_focke_wulf_organization
-	include = esicolor_generic_medium_aircraft_organization # esicolor_generic_multi_role_aircraft_organization, this org type isn't used in ESI, so change this and Heinkel to use matching org type to their Designer versions.
-	icon = GFX_idea_focke_wulf
+OSO_medium_aircraft_organization = {
+	name = GER_dornier_organization
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_dornier
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -258,6 +413,37 @@ OSY_medium_aircraft_organization = {
 	visible = {
 		owner = {
 			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OSO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 50
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				50 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OSY_range_focused_aircraft_organization = {
+	name = GER_focke_wulf_organization
+	include = esicolor_generic_range_focused_aircraft_organization
+	icon = GFX_idea_focke_wulf
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fuel_efficient_aircraft_manufacturer_disabled }
 			OR = {
 				original_tag = OSY
 				AND = {
@@ -273,6 +459,37 @@ OSY_medium_aircraft_organization = {
 
 			owner = {
 				59 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OLI_multi_role_aircraft_organization = {
+	name = GER_arado_flugzeugwerke_organization
+	include = esicolor_generic_multi_role_aircraft_organization
+	icon = GFX_idea_GER_arado_flugzeugwerke
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OLI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 61
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				61 = { state_designer_availabile = yes }
 			}
 		}
 	}
@@ -309,10 +526,10 @@ OLI_heavy_aircraft_organization = {
 	}
 }
 
-OSO_naval_aircraft_organization = {
-	name = GER_dornier_organization
+OSS_naval_aircraft_organization = {
+	name = GER_fieseler_organization
 	include = esicolor_generic_naval_aircraft_organization
-	icon = GFX_idea_dornier
+	icon = GFX_idea_GER_fieseler
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -321,10 +538,10 @@ OSO_naval_aircraft_organization = {
 		owner = {
 			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
 			OR = {
-				original_tag = OSO
+				original_tag = OSS
 				AND = {
 					has_global_flag = custom_designers_only
-					owns_state = 50
+					owns_state = 55
 				}
 			}
 		}
@@ -334,7 +551,7 @@ OSO_naval_aircraft_organization = {
 			limit = { has_global_flag = custom_designers_only }
 
 			owner = {
-				50 = { state_designer_availabile = yes }
+				55 = { state_designer_availabile = yes }
 			}
 		}
 	}
@@ -376,6 +593,37 @@ OSO_infantry_equipment_organization = {
 
 			owner = {
 				50 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OLO_support_equipment_organization = {
+	name = GER_carl_walther_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_GER_carl_walther
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OLO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 60
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				60 = { state_designer_availabile = yes }
 			}
 		}
 	}
@@ -438,6 +686,37 @@ OSS_motorized_mechanized_organization = {
 
 			owner = {
 				55 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OLS_armored_car_organization = {
+	name = GER_auto_union_organization
+	include = esicolor_generic_armored_car_organization
+	icon = GFX_idea_GER_auto_union
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = armored_car_manufacturer_disabled }
+			OR = {
+				original_tag = OLS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 65
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				65 = { state_designer_availabile = yes }
 			}
 		}
 	}

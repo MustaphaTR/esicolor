@@ -8,10 +8,10 @@
  
 #####################
 
-OEA_escort_ship_organization = {
-	name = cockerill
+YFF_escort_ship_organization = {
+	name = cockerill_shipyards
 	include = esicolor_generic_escort_ship_organization
-	icon = GFX_idea_maizuru_naval_arsenal # GFX_idea_generic_naval_manufacturer_1
+	icon = GFX_idea_BEL_cockerill_shipyards_organization
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -20,10 +20,10 @@ OEA_escort_ship_organization = {
 		owner = {
 			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
 			OR = {
-				original_tag = OEA
+				original_tag = YFF
 				AND = {
 					has_global_flag = custom_designers_only
-					owns_state = 34
+					owns_state = 977
 				}
 			}
 		}
@@ -33,7 +33,7 @@ OEA_escort_ship_organization = {
 			limit = { has_global_flag = custom_designers_only }
 
 			owner = {
-				34 = { state_designer_availabile = yes }
+				977 = { state_designer_availabile = yes }
 			}
 		}
 	}
@@ -49,10 +49,10 @@ OEA_escort_ship_organization = {
 
 ###########################
 
-OEA_light_aircraft_organization = {
-	name = avions_fairey
+OOL_light_aircraft_organization = {
+	name = renard
 	include = esicolor_generic_light_aircraft_organization
-	icon = GFX_idea_generic_air_manufacturer_1
+	icon = GFX_idea_BEL_renard_organization
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -60,37 +60,6 @@ OEA_light_aircraft_organization = {
 	visible = {
 		owner = {
 			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
-			OR = {
-				original_tag = OEA
-				AND = {
-					has_global_flag = custom_designers_only
-					owns_state = 34
-				}
-			}
-		}
-	}
-	available = {
-		if = {
-			limit = { has_global_flag = custom_designers_only }
-
-			owner = {
-				34 = { state_designer_availabile = yes }
-			}
-		}
-	}
-}
-
-OOL_medium_aircraft_organization = {
-	name = renard
-	include = esicolor_generic_medium_aircraft_organization
-	icon = GFX_idea_generic_air_manufacturer_3 # GFX_idea_generic_air_manufacturer_2
-
-	allowed = {
-		has_dlc = "Arms Against Tyranny"
-	}
-	visible = {
-		owner = {
-			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
 			OR = {
 				original_tag = OOL
 				AND = {
@@ -119,13 +88,12 @@ OOL_medium_aircraft_organization = {
 #   # #  #  #  #   #  #  #  #   #   
 #   # #  #  #  ### #  # ### ### ### 
 
-
 ###################################
 
-OEA_fn_herstol_organization = {
-	name = fn_herstol
-	include = generic_infantry_equipment_organization
-	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+OEA_infantry_equipment_organization = {
+	name = BEL_fn_herstal_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_BEL_fn_herstal_organization
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -148,6 +116,100 @@ OEA_fn_herstol_organization = {
 
 			owner = {
 				34 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OEA_artillery_organization = {
+	name = BEL_fonderie_royale_de_canons_liege_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_BEL_fonderie_royale_de_canons_liege
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = OEA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 34
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				34 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+YFF_motorized_mechanized_organization = {
+	name = BEL_minerva_imperia_motorized_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_BEL_minerva_imperia_motorized_organization
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = YFF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 977
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				977 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OOL_generic_helicopter_organization = {
+	name = BEL_laboratoire_aerotechnique_de_belgique_organization
+	include = esicolor_generic_helicopter_organization
+	icon = GFX_idea_generic_helicopter_1
+
+	allowed = {
+		has_dlc = "Gotterdammerung"
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = helicopter_manufacturer_disabled }
+			OR = {
+				original_tag = OOL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 6
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				6 = { state_designer_availabile = yes }
 			}
 		}
 	}
