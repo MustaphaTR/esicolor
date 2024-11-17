@@ -1,0 +1,71 @@
+ideas = {
+	# Not sure about placements but Africa really needs designers so i'm placing what i can.
+
+	materiel_manufacturer = {
+		designer = yes
+
+		ZYS_support_equipment_manufacturer = {
+			name = COG_explosifs_congo
+			picture = societe_africain_de_explosifes
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZYS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 295
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					295 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		FIB_construction_company = {
+			name = COG_rawji_group
+			picture = COG_rawji_group
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = construction_company_disabled }
+				OR = {
+					original_tag = FIB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 918
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					918 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+			}
+			traits = { construction_company }
+		}
+	}
+}

@@ -30,7 +30,10 @@ FEL_battle_line_ship_organization = {
 	}
 	visible = {
 		owner = {
-			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer }
+			NOT = {
+				has_country_flag = atlantic_fleet_naval_manufacturer
+				has_global_flag = FEL_battlefleet_STT
+			}
 			OR = {
 				original_tag = FEL
 				AND = {
@@ -380,7 +383,6 @@ FEL_naval_aircraft_organization = {
 # # # ####  #  ##  ###   #  ##  #   
 #   # #  #  #  #   #  #  #  #   #   
 #   # #  #  #  ### #  # ### ### ### 
-
 
 ###################################
 

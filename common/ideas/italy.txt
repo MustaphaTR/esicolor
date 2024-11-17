@@ -16,7 +16,10 @@ ideas = {
 				always = yes
 			}
 			visible = {
-				NOT = { has_country_flag = battlefleet_designer_disabled }
+				NOT = {
+					has_country_flag = battlefleet_designer_disabled
+					has_global_flag = FEL_battlefleet_STT
+				}
 				OR = {
 					original_tag = FEL
 					AND = {

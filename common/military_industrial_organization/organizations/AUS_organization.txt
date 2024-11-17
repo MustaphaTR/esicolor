@@ -1,0 +1,292 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+ISB_infantry_tank_organization = {
+	name = AUS_ansaldo_organization
+    include = esicolor_generic_infantry_tank_organization # MIO version is "generic_tank_organization" but using "infantry_tank_organization" because idea version uses "infantry_tank_manufacturer".
+    icon = GFX_idea_AUS_ansaldo
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+			OR = {
+				original_tag = ISB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 158
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				158 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+FEL_battle_line_ship_organization_2 = {
+	name = AUS_stabilimento_tecnico_triestino_organization
+    include = esicolor_generic_battle_line_ship_organization
+    icon = GFX_idea_AUS_stabilimento_tecnico_triestino
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			has_global_flag = FEL_battlefleet_STT
+			OR = {
+				original_tag = FEL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 736
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				736 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+YFL_generic_submarine_organization = {
+	name = AUS_ELIN_organization
+	include = esicolor_generic_submarine_organization
+	icon = GFX_idea_AUS_elin
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = submarine_manufacturer_disabled }
+			OR = {
+				original_tag = YFL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 976
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				976 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OOA_light_aircraft_organization = {
+	name = AUS_phonix_fleugzeugwerke_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_AUS_phonix_fleugzeugwerke
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OOA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 4
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				4 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+ISZ_infantry_equipment_organization = {
+	name = AUS_steyr_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_AUS_steyr
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ISZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 152
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				152 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OOA_artillery_organization = {
+	name = AUS_hirtenberger_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_generic_artillery_manufacturer_2
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = OOA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 4
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				4 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OOA_motorized_mechanized_organization = {
+	name = AUS_graf_and_stift_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_AUS_graf_and_stift
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = {
+				has_country_flag = motorized_equipment_manufacturer_disabled
+				has_global_flag = OOA_motor_OSW
+			}
+			OR = {
+				original_tag = OOA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 4
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				4 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OOA_motorized_mechanized_organization_2 = {
+	name = AUS_osterreichische_saurerwerke_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_AUS_saurer
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			has_global_flag = OOA_motor_OSW
+			OR = {
+				original_tag = OOA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 4
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				4 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

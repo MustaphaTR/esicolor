@@ -1,0 +1,40 @@
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+ZYS_support_equipment_organization = {
+	name = COG_explosifs_congo_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_societe_africain_de_explosifes
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZYS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 295
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				295 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

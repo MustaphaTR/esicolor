@@ -55,6 +55,18 @@ on_actions = {
 				50 = { set_global_flag = OOE_arty_EWF }
 				50 = { }
 			}
+			# Motorised designer for Lower Austria. There are two available, so select one to use.
+			random_list = {
+				seed = random
+				50 = { set_global_flag = OOA_motor_OSW }
+				50 = { }
+			}
+			# Battlefleet designer for Litorale. There are two available, so select one to use.
+			random_list = {
+				seed = random
+				50 = { set_global_flag = FEL_battlefleet_STT }
+				50 = { }
+			}
 
 			every_state = {
 				set_variable = { THIS.original_owner = THIS.owner }

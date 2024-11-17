@@ -1,0 +1,152 @@
+on_actions = {
+	# ROOT is the nation being puppeted, FROM is the overlord. 	OBS: Trigger the following commands whenever a country is puppeted in a peace conference only.
+	on_puppet = {
+		effect = { # Fixing a weird issue with control of Greenland
+			IF = {
+				limit = {
+					ROOT = {
+						original_tag = IOI
+					}
+				}
+				101 = {
+					set_state_controller_to = IOI
+				}
+			}
+		}
+	}
+
+	on_liberate = { # ROOT is the nation being liberated, FROM is the leader of the liberators.
+		effect = { # Fixing a weird issue with control of Greenland
+			IF = {
+				limit = {
+					ROOT = {
+						original_tag = IOI
+					}
+				}
+				101 = {
+					set_state_controller_to = IOI
+				}
+			}
+		}
+
+		effect = {
+			# European States Array
+			if = {
+				limit = {
+					ROOT = { #Countries Germany can seize gold reserves from and use Operational Planning against
+						capital_scope = { is_on_continent = europe }
+					}
+				}
+				add_to_array = { 
+					array = GER.GER_european_targets_array 
+					value = THIS
+				}
+			}
+		}
+	}
+
+	# ROOT is the nation being released, FROM is the overlord. Trigger the following commands whenever puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory).
+	on_release_as_puppet = {
+		effect = {
+			# European States Array
+			if = {
+				limit = {
+					ROOT = { #Countries Germany can seize gold reserves from and use Operational Planning against
+						capital_scope = { is_on_continent = europe }
+					}
+				}
+				add_to_array = { 
+					array = GER.GER_european_targets_array 
+					value = THIS
+				}
+			}
+		}
+
+		effect = { # Fixing a weird issue with control of Greenland
+			IF = {
+				limit = {
+					ROOT = {
+						original_tag = IOI
+					}
+				}
+				101 = {
+					set_state_controller_to = IOI
+				}
+			}
+		}
+	}
+
+	on_release_as_free = { #ROOT is free nation FROM is releaser.
+		effect = {
+			# European States Array
+			if = {
+				limit = {
+					ROOT = { #Countries Germany can seize gold reserves from and use Operational Planning against
+						capital_scope = { is_on_continent = europe }
+					}
+				}
+				add_to_array = { 
+					array = GER.GER_european_targets_array 
+					value = THIS
+				}
+			}
+		}
+
+		effect = { # Fixing a weird issue with control of Greenland
+			IF = {
+				limit = {
+					ROOT = {
+						original_tag = IOI
+					}
+				}
+				101 = {
+					set_state_controller_to = IOI
+				}
+			}
+		}
+	}
+
+	on_startup = {
+		effect = {
+			# European States Array
+			every_country = { #Countries Germany can seize gold reserves from
+				limit = {
+					capital_scope = { is_on_continent = europe }
+				}
+				add_to_array = { 
+					array = GER.GER_european_targets_array 
+					value = THIS
+				}
+			}  
+		}
+	}
+
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	#on_state_control_changed = {
+	#	effect = { # Trigger the generic fall fo Budapest event 
+	#		IF = {
+	#			limit = {
+	#				FROM.FROM = {
+	#					state = 43 #Budapest/Northern Hungary
+	#					is_owned_by = HUN
+	#				}
+	#				ROOT = {
+	#					has_war_with = HUN 
+	#					NOT = { # SOV as their own specific one, also shouldn't be triggered during a civil war
+	#						OR = {
+	#							original_tag = SOV
+	#							original_tag = HUN
+	#						}
+	#					}
+	#				}
+	#				NOT = { has_global_flag = fall_of_budapest_generic_flag }
+	#			}
+	#			news_event = {
+	#				id = news.400
+	#				hours = 12
+	#				random_hours = 24
+	#			}	
+	#		}
+	#	}
+	#}
+}

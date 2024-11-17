@@ -1,0 +1,305 @@
+ideas = {
+	tank_manufacturer = {
+		designer = yes
+
+		ISB_infantry_tank_manufacturer = {
+			name = AUS_ansaldo
+			picture = AUS_ansaldo
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+				OR = {
+					original_tag = ISB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 158
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					158 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { infantry_tank_manufacturer }
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		FEL_battlefleet_designer_2 = {
+			name = AUS_stabilimento_tecnico_triestino
+			picture = AUS_stabilimento_tecnico_triestino
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = battlefleet_designer_disabled }
+				has_global_flag = FEL_battlefleet_STT
+				OR = {
+					original_tag = FEL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 736
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					736 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { battlefleet_designer }
+		}
+
+		YFL_submarine_manufacturer = {
+			name = AUS_ELIN
+			picture = AUS_elin
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = submarine_manufacturer_disabled }
+				OR = {
+					original_tag = YFL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 976
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					976 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { submarine_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		OOA_light_aircraft_manufacturer = {
+			name = AUS_phonix_fleugzeugwerke
+			picture = AUS_phonix_fleugzeugwerke
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OOA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 4
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					4 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { light_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		ISZ_infantry_equipment_manufacturer = {
+			name = AUS_steyr_arms
+			picture = AUS_steyr
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ISZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 152
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					152 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		OOA_artillery_manufacturer = {
+			name = AUS_hirtenberger_wuw
+			picture = generic_artillery_manufacturer_3
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = OOA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 4
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					4 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		OOA_motorized_equipment_manufacturer = {
+			name = AUS_graf_und_stift
+			picture = AUS_graf_and_stift
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = {
+					has_country_flag = motorized_equipment_manufacturer_disabled
+					has_global_flag = OOA_motor_OSW
+				}
+				OR = {
+					original_tag = OOA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 4
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					4 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+
+		OOA_motorized_equipment_manufacturer_2 = {
+			name = AUS_osterreichische_sauerwerke
+			picture = AUS_saurer
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				has_global_flag = OOA_motor_OSW
+				OR = {
+					original_tag = OOA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 4
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					4 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		OOA_railway_company = {
+			name = AUS_bbo
+			picture = AUS_bbo
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = OOA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 4
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					4 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
+		}
+	}
+}

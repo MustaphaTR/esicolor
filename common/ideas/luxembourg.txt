@@ -1,0 +1,35 @@
+ideas = {
+	industrial_concern = {
+		# Trait has basegame one's name, but mining company's effect.
+		OOB_mining_company = {
+			name = LUX_arbed
+			picture = generic_industrial_concern_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = mining_company_disabled }
+				OR = {
+					original_tag = OOB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 8
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					8 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+			}
+			traits = { industrial_steel_mills_esicolor }
+		}
+	}
+}
