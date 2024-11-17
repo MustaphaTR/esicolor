@@ -14,16 +14,72 @@ handle_special_generals = {
 
 		set_portraits = {
 			civilian = {
-				large=GFX_portrait_ITA_prince_umberto
-				small=GFX_portrait_ITA_prince_umberto_small
+				large = GFX_portrait_ITA_prince_umberto
+				small = GFX_portrait_ITA_prince_umberto_small
 			}
 			army = {
-				large=GFX_portrait_ITA_prince_umberto
-				small=GFX_portrait_ITA_prince_umberto_small
+				large = GFX_portrait_ITA_prince_umberto
+				small = GFX_portrait_ITA_prince_umberto_small
 			}
 			navy = {
-				large=GFX_portrait_ITA_prince_umberto
-				small=GFX_portrait_ITA_prince_umberto_small
+				large = GFX_portrait_ITA_prince_umberto
+				small = GFX_portrait_ITA_prince_umberto_small
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = OES_lou_de_visser ruling_only = yes }
+
+				NOT = { has_global_flag = schoonheyt_created }
+			}
+		}
+
+		set_global_flag = schoonheyt_created
+		set_character_name = HOL_fanny_schoonheyt
+		set_character_flag = special_general
+
+		set_portraits = {
+			civilian = {
+				large = GFX_HOL_fanny_schoonheyt
+				small = GFX_HOL_fanny_schoonheyt_small
+			}
+			army = {
+				large = GFX_HOL_fanny_schoonheyt
+				small = GFX_HOL_fanny_schoonheyt_small
+			}
+			navy = {
+				large = GFX_HOL_fanny_schoonheyt
+				small = GFX_HOL_fanny_schoonheyt_small
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = OEL_wilhelmina ruling_only = yes }
+
+				NOT = { has_global_flag = prince_bernhard_created }
+			}
+		}
+
+		set_global_flag = prince_bernhard_created
+		set_character_name = HOL_prince_bernhard
+		set_character_flag = special_general
+
+		set_portraits = {
+			civilian = {
+				large = GFX_portrait_hol_prins_bernhard
+				small = GFX_idea_HOL_prince_bernhard
+			}
+			army = {
+				large = GFX_portrait_hol_prins_bernhard
+				small = GFX_idea_HOL_prince_bernhard
+			}
+			navy = {
+				large = GFX_portrait_hol_prins_bernhard
+				small = GFX_idea_HOL_prince_bernhard
 			}
 		}
 	}
@@ -42,16 +98,16 @@ handle_special_generals = {
 
 		set_portraits = {
 			civilian = {
-				large=GFX_Portrait_yugoslavia_ivan_gosnjak
-				small=GFX_portrait_YUG_ivan_gosnjak_small
+				large = GFX_Portrait_yugoslavia_ivan_gosnjak
+				small = GFX_portrait_YUG_ivan_gosnjak_small
 			}
 			army = {
-				large=GFX_Portrait_yugoslavia_ivan_gosnjak
-				small=GFX_portrait_YUG_ivan_gosnjak_small
+				large = GFX_Portrait_yugoslavia_ivan_gosnjak
+				small = GFX_portrait_YUG_ivan_gosnjak_small
 			}
 			navy = {
-				large=GFX_Portrait_yugoslavia_ivan_gosnjak
-				small=GFX_portrait_YUG_ivan_gosnjak_small
+				large = GFX_Portrait_yugoslavia_ivan_gosnjak
+				small = GFX_portrait_YUG_ivan_gosnjak_small
 			}
 		}
 	}
@@ -73,32 +129,32 @@ handle_special_generals = {
 
 			set_portraits = {
 				civilian = {
-					large=GFX_portrait_tur_refe_pasha
-					small=GFX_portrait_TUR_refet_pasha_small
+					large = GFX_portrait_tur_refe_pasha
+					small = GFX_portrait_TUR_refet_pasha_small
 				}
 				army = {
-					large=GFX_portrait_tur_refe_pasha
-					small=GFX_portrait_TUR_refet_pasha_small
+					large = GFX_portrait_tur_refe_pasha
+					small = GFX_portrait_TUR_refet_pasha_small
 				}
 				navy = {
-					large=GFX_portrait_tur_refe_pasha
-					small=GFX_portrait_TUR_refet_pasha_small
+					large = GFX_portrait_tur_refe_pasha
+					small = GFX_portrait_TUR_refet_pasha_small
 				}
 			}
 		}
 		else = {
 			set_portraits = {
 				civilian = {
-					large=GFX_Portrait_South_America_Generic_land_5
-					small=GFX_Portrait_South_America_Generic_land_5_small
+					large = GFX_Portrait_South_America_Generic_land_5
+					small = GFX_Portrait_South_America_Generic_land_5_small
 				}
 				army = {
-					large=GFX_Portrait_South_America_Generic_land_5
-					small=GFX_Portrait_South_America_Generic_land_5_small
+					large = GFX_Portrait_South_America_Generic_land_5
+					small = GFX_Portrait_South_America_Generic_land_5_small
 				}
 				navy = {
-					large=GFX_Portrait_South_America_Generic_land_5
-					small=GFX_Portrait_South_America_Generic_land_5_small
+					large = GFX_Portrait_South_America_Generic_land_5
+					small = GFX_Portrait_South_America_Generic_land_5_small
 				}
 			}
 		}
@@ -121,32 +177,32 @@ handle_special_generals = {
 
 			set_portraits = {
 				civilian = {
-					large=GFX_portrait_GRE_napoleon_zervas
-					small=GFX_idea_gre_napoleon_zervas
+					large = GFX_portrait_GRE_napoleon_zervas
+					small = GFX_idea_gre_napoleon_zervas
 				}
 				army = {
-					large=GFX_portrait_GRE_napoleon_zervas
-					small=GFX_idea_gre_napoleon_zervas
+					large = GFX_portrait_GRE_napoleon_zervas
+					small = GFX_idea_gre_napoleon_zervas
 				}
 				navy = {
-					large=GFX_portrait_GRE_napoleon_zervas
-					small=GFX_idea_gre_napoleon_zervas
+					large = GFX_portrait_GRE_napoleon_zervas
+					small = GFX_idea_gre_napoleon_zervas
 				}
 			}
 		}
 		else = {
 			set_portraits = {
 				civilian = {
-					large=GFX_Portrait_South_America_Generic_land_9
-					small=GFX_Portrait_South_America_Generic_land_9_small
+					large = GFX_Portrait_South_America_Generic_land_9
+					small = GFX_Portrait_South_America_Generic_land_9_small
 				}
 				army = {
-					large=GFX_Portrait_South_America_Generic_land_9
-					small=GFX_Portrait_South_America_Generic_land_9_small
+					large = GFX_Portrait_South_America_Generic_land_9
+					small = GFX_Portrait_South_America_Generic_land_9_small
 				}
 				navy = {
-					large=GFX_Portrait_South_America_Generic_land_9
-					small=GFX_Portrait_South_America_Generic_land_9_small
+					large = GFX_Portrait_South_America_Generic_land_9
+					small = GFX_Portrait_South_America_Generic_land_9_small
 				}
 			}
 		}
@@ -159,6 +215,54 @@ handle_special_admirals = {
 
 handle_special_advisors = {
 	if = {
+		limit = { original_tag = OOB }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = silent_workhorse
+			}
+
+			set_character_name = LUX_pierre_dupong
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_LUX_pierre_dupong
+						small = GFX_portrait_LUX_pierre_dupong_small
+					}
+					army = {
+						large = GFX_portrait_LUX_pierre_dupong
+						small = GFX_portrait_LUX_pierre_dupong_small
+					}
+					navy = {
+						large = GFX_portrait_LUX_pierre_dupong
+						small = GFX_portrait_LUX_pierre_dupong_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_Europe_Generic_2
+						small = GFX_idea_generic_political_advisor_europe_2
+					}
+					army = {
+						large = GFX_portrait_Europe_Generic_2
+						small = GFX_idea_generic_political_advisor_europe_2
+					}
+					navy = {
+						large = GFX_portrait_Europe_Generic_2
+						small = GFX_idea_generic_political_advisor_europe_2
+					}
+				}
+			}
+		}
+	}
+	else_if = {
 		limit = { original_tag = OAE }
 
 		random_character = {

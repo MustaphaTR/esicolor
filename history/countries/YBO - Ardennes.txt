@@ -8,16 +8,28 @@ set_technology = {
 
 set_convoys = 5
 set_popularities = {
-	democratic = 25
-	fascism = 25
-	communism = 25
-	neutrality = 25
+	democratic = 20
+	fascism = 10
+	communism = 10
+	neutrality = 60
 }
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1935.10.10"
 	election_frequency = 36
 	elections_allowed = no
+}
+
+# Charlotte of Luxembourg has a portrait in basegame, so let's use her if user do not have Götterdämmerung.
+if = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+	recruit_character = YBO_king_leopold_iii
+
+	else = {
+		recruit_character = YBO_charlotte
+	}
 }
 
 set_rule = {
