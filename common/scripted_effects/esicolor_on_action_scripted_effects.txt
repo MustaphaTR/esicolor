@@ -210,7 +210,54 @@ handle_special_generals = {
 }
 
 handle_special_admirals = {
+	if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = BAB_alois_of_liechtenstein ruling_only = yes }
 
+				NOT = { has_global_flag = johannes_of_liechtenstein_created }
+			}
+		}
+
+		set_global_flag = johannes_of_liechtenstein_created
+		set_character_name = AUS_johannes_of_liechtenstein
+		set_character_flag = special_admiral
+
+		if = {
+			limit = { has_dlc = "Gotterdammerung" }
+
+			set_portraits = {
+				civilian = {
+					large = "GFX_portrait_AUS_johannes_von_liechtenstein"
+					small = "GFX_portrait_AUS_johannes_von_liechtenstein_small"
+				}
+				army = {
+					large = "GFX_portrait_AUS_johannes_von_liechtenstein"
+					small = "GFX_portrait_AUS_johannes_von_liechtenstein_small"
+				}
+				navy = {
+					large = "GFX_portrait_AUS_johannes_von_liechtenstein"
+					small = "GFX_portrait_AUS_johannes_von_liechtenstein_small"
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large = GFX_Portrait_Europe_Generic_navy_1
+					small = GFX_Portrait_Europe_Generic_navy_1_small
+				}
+				army = {
+					large = GFX_Portrait_Europe_Generic_navy_1
+					small = GFX_Portrait_Europe_Generic_navy_1_small
+				}
+				navy = {
+					large = GFX_Portrait_Europe_Generic_navy_1
+					small = GFX_Portrait_Europe_Generic_navy_1_small
+				}
+			}
+		}
+	}
 }
 
 handle_special_advisors = {
