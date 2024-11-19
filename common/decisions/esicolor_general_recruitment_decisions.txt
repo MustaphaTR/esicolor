@@ -1,0 +1,393 @@
+esicolor_general_recruitment = {
+	recruit_local_marshal = {
+		icon = generic_army_support
+
+		allowed = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = recruit_local_marshal_tt
+				any_owned_state = {
+					var:original_owner = {
+						NOT = { tag = ROOT }
+						exists = no
+
+						any_army_leader = {
+							is_field_marshal = yes
+							commander_unavailable_for_leader = no
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+
+		priority = 5
+
+		custom_cost_trigger = {
+			command_power > ROOT.marshal_recruitment_cost
+		}
+		custom_cost_text = decision_cost_CP_marshal_recruitment
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision recruit_local_marshal"
+
+			hidden_effect = {
+				add_command_power = ROOT.marshal_recruitment_cost_minus
+
+				set_variable = { ROOT.marshal_to_recruit = 0 }
+				every_owned_state = {
+					limit = {
+						var:original_owner = {
+							NOT = { tag = ROOT }
+							exists = no
+						}
+					}
+
+					var:original_owner = {
+						# Workaround for the bug preventing AI from getting special generals and racial traits.
+						if = {
+							limit = { has_dlc = "No Step Back" }
+
+							for_each_scope_loop = {
+								array = THIS.army_leaders
+
+								if = {
+									limit = {
+										NOT = {
+											has_character_flag = special_general
+											has_character_flag = NSB_general_workaround_applied
+										}
+									}
+
+									owner = { set_temp_variable = { creator = THIS } }
+									handle_generated_unit_leader_non_operative = yes
+									handle_special_generals = yes
+									set_character_flag = NSB_general_workaround_applied
+								}
+							}
+						}
+
+						for_each_scope_loop = {
+							array = THIS.army_leaders
+
+							if = {
+								limit = {
+									is_field_marshal = yes
+									commander_unavailable_for_leader = no
+									OR = {
+										check_variable = { ROOT.marshal_to_recruit = 0 }
+										AND = {
+											has_character_flag = special_general
+											ROOT = { var:marshal_to_recruit = { NOT = { has_character_flag = special_general } } }
+										}
+										AND = {
+											has_character_flag = special_general
+											ROOT = {
+												var:marshal_to_recruit = {
+													has_character_flag = special_general
+													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
+												}
+											}
+										}
+										AND = {
+											NOT = { has_character_flag = special_general }
+											ROOT = {
+												var:marshal_to_recruit = {
+													NOT = { has_character_flag = special_general }
+													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
+												}
+											}
+										}
+									}
+								}
+
+								set_variable = { ROOT.marshal_to_recruit = THIS }
+							}
+						}
+					}
+				}
+				if = {
+					limit = { NOT = { check_variable = { ROOT.marshal_to_recruit = 0 } } }
+
+					var:marshal_to_recruit = {
+						ROOT = {
+							set_variable = { last_marshal_skill = PREV.skill_level }
+							set_variable = { last_marshal_attack = PREV.attack_level }
+							set_variable = { last_marshal_defense = PREV.defense_level }
+							set_variable = { last_marshal_planning = PREV.planning_level }
+							set_variable = { last_marshal_logistics = PREV.logistics_level }
+						}
+						set_nationality = ROOT
+						unit_leader_event = { id = esicolor_leader.1 }
+					}
+				}
+			}
+			effect_tooltip = { country_event = { id = esicolor_leader.1 } }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove recruit_local_general"
+		}
+	}
+
+	recruit_local_general = {
+		icon = generic_army_support
+
+		allowed = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = recruit_local_general_tt
+				any_owned_state = {
+					var:original_owner = {
+						NOT = { tag = ROOT }
+						exists = no
+
+						any_army_leader = {
+							is_corps_commander = yes
+							commander_unavailable_for_leader = no
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+
+		priority = 5
+
+		custom_cost_trigger = {
+			command_power > ROOT.general_recruitment_cost
+		}
+		custom_cost_text = decision_cost_CP_general_recruitment
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision recruit_local_general"
+
+			hidden_effect = {
+				add_command_power = ROOT.general_recruitment_cost_minus
+
+				set_variable = { ROOT.general_to_recruit = 0 }
+				every_owned_state = {
+					limit = {
+						var:original_owner = {
+							NOT = { tag = ROOT }
+							exists = no
+						}
+					}
+
+					var:original_owner = {
+						# Workaround for the bug preventing AI from getting special generals and racial traits.
+						if = {
+							limit = { has_dlc = "No Step Back" }
+
+							for_each_scope_loop = {
+								array = THIS.army_leaders
+
+								if = {
+									limit = {
+										NOT = {
+											has_character_flag = special_general
+											has_character_flag = NSB_general_workaround_applied
+										}
+									}
+
+									owner = { set_temp_variable = { creator = THIS } }
+									handle_generated_unit_leader_non_operative = yes
+									handle_special_generals = yes
+									set_character_flag = NSB_general_workaround_applied
+								}
+							}
+						}
+
+						for_each_scope_loop = {
+							array = THIS.army_leaders
+
+							if = {
+								limit = {
+									is_corps_commander = yes
+									commander_unavailable_for_leader = no
+									OR = {
+										check_variable = { ROOT.general_to_recruit = 0 }
+										AND = {
+											has_character_flag = special_general
+											ROOT = { var:general_to_recruit = { NOT = { has_character_flag = special_general } } }
+										}
+										AND = {
+											has_character_flag = special_general
+											ROOT = {
+												var:general_to_recruit = {
+													has_character_flag = special_general
+													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
+												}
+											}
+										}
+										AND = {
+											NOT = { has_character_flag = special_general }
+											ROOT = {
+												var:general_to_recruit = {
+													NOT = { has_character_flag = special_general }
+													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
+												}
+											}
+										}
+									}
+								}
+
+								set_variable = { ROOT.general_to_recruit = THIS }
+							}
+						}
+					}
+				}
+				if = {
+					limit = { NOT = { check_variable = { ROOT.general_to_recruit = 0 } } }
+
+					var:general_to_recruit = {
+						ROOT = {
+							set_variable = { last_general_skill = PREV.skill_level }
+							set_variable = { last_general_attack = PREV.attack_level }
+							set_variable = { last_general_defense = PREV.defense_level }
+							set_variable = { last_general_planning = PREV.planning_level }
+							set_variable = { last_general_logistics = PREV.logistics_level }
+						}
+						set_nationality = ROOT
+						unit_leader_event = { id = esicolor_leader.2 }
+					}
+				}
+			}
+			effect_tooltip = { country_event = { id = esicolor_leader.2 } }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove recruit_local_general"
+		}
+	}
+
+	recruit_local_admiral = {
+		icon = generic_naval
+
+		allowed = {
+			always = yes
+		}
+		visible = {
+			always = yes
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = recruit_local_admiral_tt
+				any_owned_state = {
+					var:original_owner = {
+						NOT = { tag = ROOT }
+						exists = no
+
+						any_navy_leader = {
+							commander_unavailable_for_leader = no
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		priority = 5
+
+		custom_cost_trigger = {
+			command_power > ROOT.admiral_recruitment_cost
+		}
+		custom_cost_text = decision_cost_CP_admiral_recruitment
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision recruit_local_admiral"
+
+			hidden_effect = {
+				add_command_power = ROOT.admiral_recruitment_cost_minus
+
+				set_variable = { ROOT.admiral_to_recruit = 0 }
+				every_owned_state = {
+					limit = {
+						var:original_owner = {
+							NOT = { tag = ROOT }
+							exists = no
+						}
+					}
+
+					var:original_owner = {
+						for_each_scope_loop = {
+							array = THIS.navy_leaders
+
+							if = {
+								limit = {
+									commander_unavailable_for_leader = no
+									OR = {
+										check_variable = { ROOT.admiral_to_recruit = 0 }
+										AND = {
+											has_character_flag = special_admiral
+											ROOT = { var:admiral_to_recruit = { NOT = { has_character_flag = special_admiral } } }
+										}
+										AND = {
+											has_character_flag = special_admiral
+											ROOT = {
+												var:admiral_to_recruit = {
+													has_character_flag = special_admiral
+													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
+												}
+											}
+										}
+										AND = {
+											NOT = { has_character_flag = special_admiral }
+											ROOT = {
+												var:admiral_to_recruit = {
+													NOT = { has_character_flag = special_admiral }
+													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
+												}
+											}
+										}
+									}
+								}
+
+								set_variable = { ROOT.admiral_to_recruit = THIS }
+							}
+						}
+					}
+				}
+				if = {
+					limit = { NOT = { check_variable = { ROOT.admiral_to_recruit = 0 } } }
+
+					var:admiral_to_recruit = {
+						ROOT = {
+							set_variable = { last_admiral_skill = PREV.skill_level }
+							set_variable = { last_admiral_attack = PREV.attack_level }
+							set_variable = { last_admiral_defense = PREV.defense_level }
+							set_variable = { last_admiral_maneuvering = PREV.maneuvering_level }
+							set_variable = { last_admiral_coordination = PREV.coordination_level }
+						}
+						set_nationality = ROOT
+						unit_leader_event = { id = esicolor_leader.3 }
+					}
+				}
+			}
+			effect_tooltip = { country_event = { id = esicolor_leader.3 } }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove recruit_local_admiral"
+		}
+	}
+}

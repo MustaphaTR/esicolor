@@ -10,6 +10,30 @@
 #	}
 #}
 
+esicolor_general_recruitment = {
+	icon = army_reform
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		NOT = { has_global_flag = general_recruitment_disabled }
+	}
+}
+
+esicolor_formables = {
+	icon = generic_formable_nations
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		NOT = { has_global_flag = formables_disabled }
+	}
+}
+
 neutrality_on_the_rise = {
 	icon = generic_neutrality
 
