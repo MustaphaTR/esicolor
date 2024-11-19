@@ -1,16 +1,39 @@
 ﻿characters={
-	OSE_wilhelm_pieck={
-		name=GER_wilhelm_pieck
-		portraits={
-			civilian={
-				large=GFX_portrait_GER_wilhelm_pieck
+	OSE_heinrich_brandler = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=GER_heinrich_brandler
+			portraits={
+				civilian={
+					large = GFX_portrait_GER_heinrich_brandler
+					small = GFX_portrait_GER_heinrich_brandler_small
+				}
+			}
+			country_leader={
+				traits = { GER_pragmatic_trade_unionist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			traits = { staunch_stalinist }
-			ideology=stalinism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=GER_heinrich_brandler
+			portraits={
+				civilian={
+					large = "GFX_Portrait_Germany_Generic_1"
+				}
+			}
+			country_leader={
+				traits = { GER_pragmatic_trade_unionist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }

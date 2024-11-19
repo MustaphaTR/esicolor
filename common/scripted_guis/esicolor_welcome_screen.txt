@@ -330,10 +330,32 @@ scripted_gui = {
 				check_variable = { global.setup_forts = -1 }
 			}
 
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_11_selected_visible = {
+				check_variable = { global.setup_dams = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_12_selected_visible = {
+				check_variable = { global.setup_facilities = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_13_locked_visible = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_13_visible = {
+				has_dlc = "Gotterdammerung"
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_13_selected_visible = {
+				has_dlc = "Gotterdammerung"
+				check_variable = { global.setup_landmarks = -1 }
+			}
+
 			esicolor_welcome_screen_tab_1_page_2_blocker_1_visible = {
 				has_global_flag = esicolor_setup_complete
 			}
 			esicolor_welcome_screen_tab_1_page_2_blocker_2_visible = {
+				has_global_flag = esicolor_setup_complete
+			}
+			esicolor_welcome_screen_tab_1_page_2_blocker_3_visible = {
 				has_global_flag = esicolor_setup_complete
 			}
 		}
@@ -871,6 +893,27 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_2_eaw_data_10_selected_click = {
 				set_variable = { global.setup_forts = 0 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_11_click = {
+				set_variable = { global.setup_dams = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_11_selected_click = {
+				set_variable = { global.setup_dams = 0 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_12_click = {
+				set_variable = { global.setup_facilities = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_12_selected_click = {
+				set_variable = { global.setup_facilities = 0 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_13_click = {
+				set_variable = { global.setup_landmarks = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_13_selected_click = {
+				set_variable = { global.setup_landmarks = 0 }
 			}
 		}
 	}
@@ -2134,7 +2177,7 @@ scripted_gui = {
 				check_variable = { global.setup_leader_traits = 1 }
 			}
 
-			esicolor_welcome_screen_tab_1_page_4_eaw_data_locked_8_visible = {
+			esicolor_welcome_screen_tab_1_page_4_eaw_data_8_locked_visible = {
 				NOT = { has_dlc = "La Resistance" }
 			}
 			esicolor_welcome_screen_tab_1_page_4_eaw_data_8_visible = {

@@ -1,0 +1,40 @@
+﻿characters={
+	OLL_rudolf_hess = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name=GER_rudolf_hess
+			portraits={
+				civilian={
+					large = GFX_portrait_GER_rudolf_hess
+					small = GFX_portrait_GER_rudolf_hess_small
+				}
+			}
+			country_leader={
+				traits = { GER_hess_fuhrer }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name=GER_rudolf_hess
+			portraits={
+				civilian={
+					large = GFX_portrait_GER_rudolf_hess
+					small = GFX_portrait_GER_rudolf_hess_small
+				}
+			}
+			country_leader={
+				traits = { GER_hess_fuhrer_no_aat }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

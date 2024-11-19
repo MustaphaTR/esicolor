@@ -289,6 +289,51 @@ defined_text = {
 }
 
 defined_text = {
+	name = esicolor_setup_dams_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_dams = -1 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		localization_key = esicolor_setup_disabled
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_facilities_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_facilities = -1 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		localization_key = esicolor_setup_disabled
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_landmarks_loc
+	text = {
+		trigger = {
+			NOT = { has_dlc = "Gotterdammerung" }
+		}
+		localization_key = esicolor_setup_requires_wow
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_landmarks = -1 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		localization_key = esicolor_setup_disabled
+	}
+}
+
+defined_text = {
 	name = esicolor_setup_state_category_loc
 	text = {
 		trigger = {
@@ -779,7 +824,7 @@ defined_text = {
 		trigger = {
 			NOT = { has_dlc = "La Resistance" }
 		}
-		localization_key = esicolor_setup_intelligence_agency_requires_lar
+		localization_key = esicolor_setup_requires_lar
 	}
 	text = {
 		trigger = {
@@ -2308,26 +2353,29 @@ defined_text = {
 defined_text = {
 	name = esicolor_setup_formables_get_name
 	text = {
-		trigger = {
-			check_variable = { global.setup_formables < 1 }
-		}
-		localization_key = esicolor_setup_disabled
+		localization_key = esicolor_setup_not_applicable
 	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_formables = 1 }
-		}
-		localization_key = esicolor_setup_formables_visual
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_formables = 2 }
-		}
-		localization_key = esicolor_setup_default
-	}
-	text = {
-		localization_key = esicolor_setup_formables_core
-	}
+	#text = {
+	#	trigger = {
+	#		check_variable = { global.setup_formables < 1 }
+	#	}
+	#	localization_key = esicolor_setup_disabled
+	#}
+	#text = {
+	#	trigger = {
+	#		check_variable = { global.setup_formables = 1 }
+	#	}
+	#	localization_key = esicolor_setup_formables_visual
+	#}
+	#text = {
+	#	trigger = {
+	#		check_variable = { global.setup_formables = 2 }
+	#	}
+	#	localization_key = esicolor_setup_default
+	#}
+	#text = {
+	#	localization_key = esicolor_setup_formables_core
+	#}
 }
 
 defined_text = {

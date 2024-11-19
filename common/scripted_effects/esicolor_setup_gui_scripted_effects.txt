@@ -29,6 +29,9 @@ default_preset_effects = {
 	set_variable = { global.setup_fuel_silos = -1 }
 
 	set_variable = { global.setup_forts = -1 }
+	set_variable = { global.setup_dams = -1 }
+	set_variable = { global.setup_facilities = -1 }
+	set_variable = { global.setup_landmarks = -1 }
 
 	set_variable = { global.setup_state_category = -1 }
 	set_variable = { global.setup_province_modifiers = -1 }
@@ -138,7 +141,11 @@ randomised_preset_effects = {
 	}
 	set_variable = { global.setup_fuel_silos = 1 }
 	set_variable = { global.setup_fuel_silos_chance = 2 }
+
 	set_variable = { global.setup_forts = -1 }
+	set_variable = { global.setup_dams = -1 }
+	set_variable = { global.setup_facilities = -1 }
+	set_variable = { global.setup_landmarks = -1 }
 
 	set_variable = { global.setup_state_category = 1 }
 	set_variable = { global.setup_state_category_min = 1 } # Pastoral
@@ -266,6 +273,9 @@ equalised_preset_effects = {
 	set_variable = { global.setup_fuel_silos_chance = 0 }
 
 	set_variable = { global.setup_forts = 0 }
+	set_variable = { global.setup_dams = 0 }
+	set_variable = { global.setup_facilities = 0 }
+	set_variable = { global.setup_landmarks = 0 }
 
 	set_variable = { global.setup_state_category = 1 }
 	set_variable = { global.setup_state_category_min = 3 } # Town
@@ -384,6 +394,9 @@ developer_preset_effects = {
 	set_variable = { global.setup_fuel_silos = -1 }
 
 	set_variable = { global.setup_forts = -1 }
+	set_variable = { global.setup_dams = -1 }
+	set_variable = { global.setup_facilities = -1 }
+	set_variable = { global.setup_landmarks = -1 }
 
 	set_variable = { global.setup_state_category = -1 }
 	set_variable = { global.setup_province_modifiers = -1 }
@@ -477,6 +490,9 @@ setup_gui_start_general = {
 		setup_gui_start_fuel_silo = yes
 
 		setup_gui_start_forts = yes
+		setup_gui_start_dams = yes
+		setup_gui_start_facilities = yes
+		setup_gui_start_landmarks = yes
 
 		setup_gui_start_state_category = yes
 		setup_gui_start_province_modifiers = yes
@@ -634,6 +650,30 @@ setup_gui_start_forts = {
 			province = { all_provinces = yes limit_to_victory_point = yes }
 			instant_build = yes
 		}
+	}
+}
+
+setup_gui_start_dams = {
+	if = {
+		limit = { check_variable = { global.setup_dams > -1 } }
+
+		clear_dams = yes
+	}
+}
+
+setup_gui_start_facilities = {
+	if = {
+		limit = { check_variable = { global.setup_facilities > -1 } }
+
+		clear_facilities = yes
+	}
+}
+
+setup_gui_start_landmarks = {
+	if = {
+		limit = { check_variable = { global.setup_landmarks > -1 } }
+
+		clear_landmarks = yes
 	}
 }
 

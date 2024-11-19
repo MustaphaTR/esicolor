@@ -342,6 +342,51 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = OLO }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = GER_ernst_thalmann
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_GER_ernst_thalmann
+						small = GFX_portrait_GER_ernst_thalmann_small
+					}
+					army = {
+						large = GFX_portrait_GER_ernst_thalmann
+						small = GFX_portrait_GER_ernst_thalmann_small
+					}
+					navy = {
+						large = GFX_portrait_GER_ernst_thalmann
+						small = GFX_portrait_GER_ernst_thalmann_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_ernst_thalmann
+					}
+					army = {
+						small = GFX_idea_ernst_thalmann
+					}
+					navy = {
+						small = GFX_idea_ernst_thalmann
+					}
+				}
+			}
+		}
+	}
+	else_if = {
 		limit = { original_tag = OLY }
 
 		random_character = {
@@ -353,19 +398,15 @@ handle_special_advisors = {
 			set_character_name = CZE_konrad_henlein
 			set_character_flag = special_advisor
 
-			if = {
-				limit = { has_dlc = "Gotterdammerung" }
-
-				set_portraits = {
-					civilian = {
-						small = GFX_idea_CZE_konrad_henlein
-					}
-					army = {
-						small = GFX_idea_CZE_konrad_henlein
-					}
-					navy = {
-						small = GFX_idea_CZE_konrad_henlein
-					}
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_konrad_henlein
+				}
+				army = {
+					small = GFX_idea_CZE_konrad_henlein
+				}
+				navy = {
+					small = GFX_idea_CZE_konrad_henlein
 				}
 			}
 		}

@@ -1179,6 +1179,111 @@ clear_forts = {
 	}
 }
 
+clear_dams = {
+	every_state = {
+		set_building_level = {
+			type = dam
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = dam_mountain
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+	}
+}
+
+clear_facilities = {
+	every_state = {
+		set_building_level = {
+			type = naval_facility
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = nuclear_facility
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = air_facility
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = land_facility
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+	}
+}
+
+clear_landmarks = {
+	every_state = {
+		set_building_level = {
+			type = landmark_big_ben
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_colosseum
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_cristo_redentor
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_eiffel_tower
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_statue_of_liberty
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_kremlin
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_hofburg_palace
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_berlin_reichstag
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_berlin_volkshalle
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+	}
+}
+
 clear_resources = {
 	hidden_effect = {
 		set_temp_variable = { infrahere = building_level@infrastructure }
@@ -11970,7 +12075,14 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = GER_goebbels_fuhrer } remove_country_leader_trait = GER_goebbels_fuhrer }
 	if = { limit = { has_country_leader_with_trait = GER_goebbels_fuhrer_no_lar } remove_country_leader_trait = GER_goebbels_fuhrer_no_lar }
 	if = { limit = { has_country_leader_with_trait = GER_goring_fuhrer } remove_country_leader_trait = GER_goring_fuhrer }
+	if = { limit = { has_country_leader_with_trait = GER_hess_fuhrer } remove_country_leader_trait = GER_hess_fuhrer }
+	if = { limit = { has_country_leader_with_trait = GER_hess_fuhrer_no_aat } remove_country_leader_trait = GER_hess_fuhrer_no_aat }
+	if = { limit = { has_country_leader_with_trait = GER_todt_fuhrer } remove_country_leader_trait = GER_todt_fuhrer }
+	if = { limit = { has_country_leader_with_trait = GER_bormann_fuhrer } remove_country_leader_trait = GER_bormann_fuhrer }
+	if = { limit = { has_country_leader_with_trait = GER_himmler_fuhrer_ss } remove_country_leader_trait = GER_himmler_fuhrer_ss }
 	if = { limit = { has_country_leader_with_trait = GER_revolutionary_nationalist } remove_country_leader_trait = GER_revolutionary_nationalist }
+	if = { limit = { has_country_leader_with_trait = GER_pragmatic_trade_unionist } remove_country_leader_trait = GER_pragmatic_trade_unionist }
+	if = { limit = { has_country_leader_with_trait = SIL_prince_of_pless_trait } remove_country_leader_trait = SIL_prince_of_pless_trait }
 
 	if = { limit = { has_country_leader_with_trait = popular_figurehead } remove_country_leader_trait = popular_figurehead }
 	if = { limit = { has_country_leader_with_trait = popular_figurehead2 } remove_country_leader_trait = popular_figurehead2 }
