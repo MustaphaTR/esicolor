@@ -88,6 +88,28 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = CONGO_force_publique
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_polizia_dell_africa_italiana
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = BEL_secretaries_general
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CONGO_force_publique
+
+		completion_reward = { }
+	}
+
 	# Army Abilities
 	focus = {
 		id = SWE_winter_drill
@@ -95,7 +117,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = ITA_polizia_dell_africa_italiana
+		relative_position_id = BEL_secretaries_general
 
 		completion_reward = { }
 	}
@@ -279,6 +301,61 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = wuw_HUN_the_toldi
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_a_time_for_war
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_advanced_panzer_research
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = wuw_HUN_the_toldi
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = wuw_HUN_the_turan
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_advanced_panzer_research
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = wuw_HUN_assault_gun_focus
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = wuw_HUN_the_turan
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_expand_kummersdorfs_capacity
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = wuw_HUN_assault_gun_focus
+
+		completion_reward = { }
+	}
+
 	# Industry Techonologies
 	focus = {
 		id = FIN_tire_factory_at_nokia
@@ -286,7 +363,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = ITA_a_time_for_war
+		relative_position_id = GER_expand_kummersdorfs_capacity
 
 		completion_reward = { }
 	}
@@ -358,6 +435,50 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = wuw_HUN_secret_rearmament
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SPR_all_must_bear_the_torch
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_totaler_krieg
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = wuw_HUN_secret_rearmament
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_autarky_efforts
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_totaler_krieg
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_autarky_achieved
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_autarky_efforts
+
+		completion_reward = { }
+	}
+
 	# Manpower Ideas
 	focus = {
 		id = AST_citizen_military_forces
@@ -365,7 +486,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = SPR_all_must_bear_the_torch
+		relative_position_id = GER_autarky_achieved
 
 		completion_reward = { }
 	}
@@ -862,6 +983,127 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = CONGO_republic_of_congo
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_cripps_mission
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CONGO_dominion_of_congo
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CONGO_republic_of_congo
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CONGO_overseas_department_of_belgium
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CONGO_dominion_of_congo
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CONGO_congo_free_state
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CONGO_overseas_department_of_belgium
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = AUS_demand_hungarian_submission
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CONGO_congo_free_state
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = AUS_bring_hungary_back_into_the_fold
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = AUS_demand_hungarian_submission
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = wuw_HUN_the_lands_of_the_crown_of_saint_stephen
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = AUS_bring_hungary_back_into_the_fold
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = BEL_european_community
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = wuw_HUN_the_lands_of_the_crown_of_saint_stephen
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = BEL_the_council_of_europe
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = BEL_european_community
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = AUS_via_danube_to_europe
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = BEL_the_council_of_europe
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_establish_volkskommissariats
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = AUS_via_danube_to_europe
+
+		completion_reward = { }
+	}
+
 	# Intelligence Operations
 	focus = {
 		id = SPR_regional_defense_council_of_aragon
@@ -869,7 +1111,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = RAJ_cripps_mission
+		relative_position_id = GER_establish_volkskommissariats
 
 		completion_reward = { }
 	}
@@ -919,6 +1161,39 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = wuw_HUN_end_the_white_terror
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = YUG_medal_for_extreme_bravery
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = wuw_HUN_end_the_regency
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = wuw_HUN_end_the_white_terror
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = wuw_HUN_reinstate_the_pragmatic_sanction
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = wuw_HUN_end_the_regency
+
+		completion_reward = { }
+	}
+
 	# Generic Decisions
 	focus = {
 		id = ICE_not_our_king
@@ -926,7 +1201,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = YUG_medal_for_extreme_bravery
+		relative_position_id = wuw_HUN_reinstate_the_pragmatic_sanction
 
 		completion_reward = { }
 	}
@@ -964,6 +1239,50 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = GER_oppose_hitler_ww
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = BRA_radio_nacional
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_the_peoples_victory
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_oppose_hitler_ww
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_monarchist_sentiment
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_the_peoples_victory
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_womens_rights_and_equality
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_monarchist_sentiment
+
+		completion_reward = { }
+	}
+
 	# Foreign Influence Decisions
 	focus = {
 		id = ENG_organize_the_blackshirts
@@ -971,7 +1290,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = BRA_radio_nacional
+		relative_position_id = GER_womens_rights_and_equality
 
 		completion_reward = { }
 	}
@@ -1032,6 +1351,61 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = GER_expatriate_the_communists_ww
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = TUR_privatize_the_anadolu_agency
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = AUS_reinstate_the_imperial_council
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_expatriate_the_communists_ww
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = AUS_clamp_down_on_dnsap
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = AUS_reinstate_the_imperial_council
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = AUS_ban_dnsap
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = AUS_clamp_down_on_dnsap
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = AUS_rebuild_democratic_systems
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = AUS_ban_dnsap
+
+		completion_reward = { }
+	}
+
 	# Resource Prospecting Decisions
 	focus = {
 		id = ITA_oil_in_tripoli
@@ -1039,7 +1413,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = TUR_privatize_the_anadolu_agency
+		relative_position_id = AUS_rebuild_democratic_systems
 
 		completion_reward = { }
 	}
@@ -1088,6 +1462,39 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = CONGO_heat_resistant_cobalt
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GUAY_exploit_mineral_wealth
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = wuw_HUN_expand_the_lignite_industry
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CONGO_heat_resistant_cobalt
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = wuw_HUN_tap_newfound_oil_deposits
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = wuw_HUN_expand_the_lignite_industry
+
+		completion_reward = { }
+	}
+
 	# Stability and War Support Decisions
 	focus = {
 		id = GRE_request_communist_support
@@ -1095,7 +1502,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = GUAY_exploit_mineral_wealth
+		relative_position_id = wuw_HUN_tap_newfound_oil_deposits
 
 		completion_reward = { }
 	}
@@ -2423,6 +2830,51 @@ focus_tree = {
 		y = 1
 		cost = 8
 		relative_position_id = NOR_norwegian_engineering
+
+		completion_reward = { }
+	}
+
+	# Götterdämmerung Dynamic Modifiers
+	focus = {
+		id = AUS_revolution
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = NOR_officers_academy
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = COG_the_pro_german_mwami_focus
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = AUS_revolution
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = COG_the_umwami_of_rwanda_focus
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = COG_the_pro_german_mwami_focus
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = COG_the_mwami_of_burundi_focus
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = COG_the_umwami_of_rwanda_focus
 
 		completion_reward = { }
 	}

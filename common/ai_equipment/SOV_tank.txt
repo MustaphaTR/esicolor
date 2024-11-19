@@ -739,6 +739,10 @@ SOV_medium_tanks = {
 	basic_medium_tank_default = { #T28
 		priority = {
 			factor = 10
+			modifier = {
+				NOT = { has_tech = basic_medium_tank_chassis }
+				factor = 0  # literally unknown technology
+			}
 			modifier = { 
 				has_tech = improved_medium_tank_chassis
 				factor = 0 #let's not waste XP here
@@ -791,6 +795,10 @@ SOV_medium_tanks = {
 	improved_medium_tank_default = {
 		priority = {
 			factor = 350
+			modifier = {
+				NOT = { has_tech = improved_medium_tank_chassis }
+				factor = 0  # literally unknown technology
+			}
 			modifier = { 
 				has_tech = advanced_medium_tank_chassis 
 				factor = 0 #let's not waste XP here
@@ -852,6 +860,14 @@ SOV_medium_tanks = {
 				has_war_with = GER
 				factor = 3
 			}
+			modifier = {
+				NOT = { has_tech = improved_medium_tank_chassis }
+				factor = 0  # literally unknown technology
+			}
+			modifier = {
+				has_tech = advanced_medium_tank_chassis
+				factor = 0 #let's not waste XP here
+			}
 		}
 
 		target_variant = { #T34/85
@@ -902,6 +918,10 @@ SOV_medium_tanks = {
 	advanced_medium_tank_default = { #
 		priority = {
 			factor = 400
+			modifier = {
+				NOT = { has_tech = advanced_medium_tank_chassis }
+				factor = 0  # literally unknown technology
+			}
 			modifier = {
 				is_historical_focus_on = yes
 				has_war_with = GER #wait a bit before building more modern tanks
