@@ -1,0 +1,37 @@
+characters={
+	YOO_akenzua_ii = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=BIA_akenzua_ii
+			portraits={
+				civilian={
+					large = GFX_portrait_BIA_akenzua_ii
+					small = GFX_portrait_BIA_akenzua_ii_small
+				}
+			}
+			country_leader={
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=BIA_akenzua_ii
+			portraits={
+				civilian={
+					large=GFX_Portrait_Africa_Generic_3
+				}
+			}
+			country_leader={
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

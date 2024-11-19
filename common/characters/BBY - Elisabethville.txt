@@ -1,0 +1,37 @@
+characters={
+	BBY_moise_tshombe = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=KAT_moise_tshombe
+			portraits={
+				civilian={
+					large = GFX_portrait_KAT_moise_tshombe
+					small = GFX_portrait_KAT_moise_tshombe_small
+				}
+			}
+			country_leader={
+				ideology=centrism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=KAT_moise_tshombe
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_Africa_Army_Generic_2
+				}
+			}
+			country_leader={
+				ideology=centrism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

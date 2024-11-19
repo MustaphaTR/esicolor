@@ -1,39 +1,17 @@
 ﻿characters={
-	ISI_robert_tobler = {
-		instance = {
-			allowed = {
-				has_dlc = "By Blood Alone"
-			}
-			name=SWI_robert_tobler
-			portraits={
-				civilian={
-					large=GFX_portrait_SWI_robert_tobler
-					small=GFX_portrait_SWI_robert_tobler_small
-				}
-			}
-			country_leader={
-				traits={ SWI_fascist_recruiter }
-				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=-1
+	ISI_robert_tobler={
+		name=SWI_robert_tobler
+		portraits={
+			civilian={
+				large=GFX_portrait_SWI_robert_tobler
+				small=GFX_portrait_SWI_robert_tobler_small
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "By Blood Alone" }
-			}
-			name=SWI_robert_tobler
-			portraits={
-				civilian={
-					large=GFX_portrait_europe_generic_land_13
-				}
-			}
-			country_leader={
-				traits={ SWI_fascist_recruiter }
-				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			traits={ SWI_fascist_recruiter }
+			ideology=fascism_ideology
+			expire="1965.1.1"
+			id=-1
 		}
 	}
 }
