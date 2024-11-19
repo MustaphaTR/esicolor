@@ -1459,47 +1459,29 @@ defined_text = {
 		trigger = {
 			check_variable = { global.setup_economic_law_min = 2 }
 		}
-		localization_key = primitive_economy
+		localization_key = civilian_economy
 	}
 	text = {
 		trigger = {
 			check_variable = { global.setup_economic_law_min = 3 }
 		}
-		localization_key = slavery_economy
+		localization_key = low_economic_mobilisation
 	}
 	text = {
 		trigger = {
 			check_variable = { global.setup_economic_law_min = 4 }
 		}
-		localization_key = civilian_economy
+		localization_key = partial_economic_mobilisation
 	}
 	text = {
 		trigger = {
 			check_variable = { global.setup_economic_law_min = 5 }
 		}
-		localization_key = low_economic_mobilisation
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_economic_law_min = 6 }
-		}
-		localization_key = partial_economic_mobilisation
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_economic_law_min = 7 }
-		}
-		localization_key = outlaw_economy
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_economic_law_min = 8 }
-		}
 		localization_key = war_economy
 	}
 	text = {
 		trigger = {
-			check_variable = { global.setup_economic_law_min > 8 }
+			check_variable = { global.setup_economic_law_min > 5 }
 		}
 		localization_key = tot_economic_mobilisation
 	}
@@ -1525,47 +1507,29 @@ defined_text = {
 		trigger = {
 			check_variable = { global.setup_economic_law_max = 2 }
 		}
-		localization_key = primitive_economy
+		localization_key = civilian_economy
 	}
 	text = {
 		trigger = {
 			check_variable = { global.setup_economic_law_max = 3 }
 		}
-		localization_key = slavery_economy
+		localization_key = low_economic_mobilisation
 	}
 	text = {
 		trigger = {
 			check_variable = { global.setup_economic_law_max = 4 }
 		}
-		localization_key = civilian_economy
+		localization_key = partial_economic_mobilisation
 	}
 	text = {
 		trigger = {
 			check_variable = { global.setup_economic_law_max = 5 }
 		}
-		localization_key = low_economic_mobilisation
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_economic_law_max = 6 }
-		}
-		localization_key = partial_economic_mobilisation
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_economic_law_max = 7 }
-		}
-		localization_key = outlaw_economy
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_economic_law_max = 8 }
-		}
 		localization_key = war_economy
 	}
 	text = {
 		trigger = {
-			check_variable = { global.setup_economic_law_max > 8 }
+			check_variable = { global.setup_economic_law_max > 5 }
 		}
 		localization_key = tot_economic_mobilisation
 	}

@@ -835,6 +835,17 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = wuw_HUN_join_the_comintern
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SOV_covert_support_for_spanish_poum
+
+		completion_reward = { }
+	}
+
 	# Generic News Events
 	focus = {
 		id = GER_demand_memel
@@ -842,7 +853,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = SOV_covert_support_for_spanish_poum
+		relative_position_id = wuw_HUN_join_the_comintern
 
 		completion_reward = { }
 	}
@@ -869,6 +880,50 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = GER_rally_the_industrialists
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_rhineland
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_reassert_eastern_claims
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_rally_the_industrialists
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_befriend_poland
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_reassert_eastern_claims
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_remilitarize_the_rhineland
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_befriend_poland
+
+		completion_reward = { }
+	}
+
 	# Generic Political Events
 	focus = {
 		id = EST_national_pride_in_finland
@@ -876,7 +931,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = GER_rhineland
+		relative_position_id = GER_remilitarize_the_rhineland
 
 		completion_reward = { }
 	}

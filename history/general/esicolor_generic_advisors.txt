@@ -1868,6 +1868,33 @@ every_possible_country = {
 	if = {
 		limit = {
 			NOT = {
+				has_allowed_idea_with_traits = { idea = army_CombinedArms_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_CombinedArms_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_CombinedArms_3 characters = yes }
+			}
+		}
+
+		generate_character = {
+			token_base = generic_army_combined_arms
+			advisor = {
+				slot = high_command
+				ledger = army
+				cost = 50
+				traits = { army_CombinedArms_1 }
+
+				visible = {
+					NOT = { has_country_flag = army_combined_arms_disabled }
+				}
+				available = {
+					hidden_trigger = { NOT = { has_country_flag = army_combined_arms_disabled } }
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
 				has_allowed_idea_with_traits = { idea = army_armored_1 characters = yes }
 				has_allowed_idea_with_traits = { idea = army_armored_2 characters = yes }
 				has_allowed_idea_with_traits = { idea = army_armored_3 characters = yes }

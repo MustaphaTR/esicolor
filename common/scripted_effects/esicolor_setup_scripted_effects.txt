@@ -801,16 +801,14 @@ clear_fuel_silos = {
 }
 
 randomise_fuel_silos = {
-	random_list = {
-		seed = random
-		2 = {
-			add_building_construction = {
-				type = fuel_silo
-				level = 1
-				instant_build = yes
-			}
+	random = {
+		chance = global.setup_fuel_silos_chance
+
+		add_building_construction = {
+			type = fuel_silo
+			level = 1
+			instant_build = yes
 		}
-		98 = { }
 	}
 }
 
@@ -825,42 +823,99 @@ clear_anti_air = {
 randomise_anti_air = {
 	random_list = {
 		seed = random
-		1330 = {
+		967 = {
+			modifier = {
+				add = -2
+
+				has_start_date > 1939.1.1
+			}
+			modifier = {
+				factor = 0
+
+				check_variable = { global.setup_anti_air_min > 0 }
+			}
 			set_building_level = {
 				type = anti_air_building
 				level = 0
 				instant_build = yes
 			}
 		}
-		20 = {
+		2 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_anti_air_min > 1 }
+					check_variable = { global.setup_anti_air_max < 1 }
+				}
+			}
 			set_building_level = {
 				type = anti_air_building
 				level = 1
 				instant_build = yes
 			}
 		}
-		1 = {
+		8 = {
+			modifier = {
+				add = -2
+
+				has_start_date > 1939.1.1
+			}
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_anti_air_min > 2 }
+					check_variable = { global.setup_anti_air_max < 2 }
+				}
+			}
 			set_building_level = {
 				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}
 		}
-		10 = {
+		1 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_anti_air_min > 3 }
+					check_variable = { global.setup_anti_air_max < 3 }
+				}
+			}
 			set_building_level = {
 				type = anti_air_building
 				level = 3
 				instant_build = yes
 			}
 		}
-		1 = {
+		0 = {
+			modifier = {
+				add = 1
+
+				OR = {
+					check_variable = { global.setup_anti_air_min = 4 }
+					check_variable = { global.setup_anti_air_max = 4 }
+				}
+			}
 			set_building_level = {
 				type = anti_air_building
 				level = 4
 				instant_build = yes
 			}
 		}
-		2 = {
+		3 = {
+			modifier = {
+				add = 4
+
+				has_start_date > 1939.1.1
+			}
+			modifier = {
+				factor = 0
+
+				check_variable = { global.setup_anti_air_max < 5 }
+			}
 			set_building_level = {
 				type = anti_air_building
 				level = 5
@@ -951,28 +1006,72 @@ place_starting_air_bases = {
 randomise_air_bases = {
 	random_list = {
 		seed = random
-		651 = {
+		658 = {
+			modifier = {
+				add = -13
+
+				has_start_date > 1939.1.1
+			}
+			modifier = {
+				factor = 0
+
+				check_variable = { global.setup_air_bases_min > 0 }
+			}
 			set_building_level = {
 				type = air_base
 				level = 0
 				instant_build = yes
 			}
 		}
-		81 = {
+		86 = {
+			modifier = {
+				add = 3
+
+				has_start_date > 1939.1.1
+			}
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_air_bases_min > 1 }
+					check_variable = { global.setup_air_bases_max < 1 }
+				}
+			}
 			set_building_level = {
 				type = air_base
 				level = 1
 				instant_build = yes
 			}
 		}
-		55 = {
+		58 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_air_bases_min > 2 }
+					check_variable = { global.setup_air_bases_max < 2 }
+				}
+			}
 			set_building_level = {
 				type = air_base
 				level = 2
 				instant_build = yes
 			}
 		}
-		80 = {
+		77 = {
+			modifier = {
+				add = 7
+
+				has_start_date > 1939.1.1
+			}
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_air_bases_min > 3 }
+					check_variable = { global.setup_air_bases_max < 3 }
+				}
+			}
 			set_building_level = {
 				type = air_base
 				level = 3
@@ -980,6 +1079,14 @@ randomise_air_bases = {
 			}
 		}
 		26 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_air_bases_min > 4 }
+					check_variable = { global.setup_air_bases_max < 4 }
+				}
+			}
 			set_building_level = {
 				type = air_base
 				level = 4
@@ -987,6 +1094,14 @@ randomise_air_bases = {
 			}
 		}
 		29 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_air_bases_min > 5 }
+					check_variable = { global.setup_air_bases_max < 5 }
+				}
+			}
 			set_building_level = {
 				type = air_base
 				level = 5
@@ -994,6 +1109,19 @@ randomise_air_bases = {
 			}
 		}
 		25 = {
+			modifier = {
+				add = -1
+
+				has_start_date > 1939.1.1
+			}
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_air_bases_min > 6 }
+					check_variable = { global.setup_air_bases_max < 6 }
+				}
+			}
 			set_building_level = {
 				type = air_base
 				level = 6
@@ -1001,6 +1129,14 @@ randomise_air_bases = {
 			}
 		}
 		1 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_air_bases_min > 7 }
+					check_variable = { global.setup_air_bases_max < 7 }
+				}
+			}
 			set_building_level = {
 				type = air_base
 				level = 7
@@ -1008,13 +1144,51 @@ randomise_air_bases = {
 			}
 		}
 		7 = {
+			modifier = {
+				add = 1
+
+				has_start_date > 1939.1.1
+			}
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_air_bases_min > 8 }
+					check_variable = { global.setup_air_bases_max < 8 }
+				}
+			}
 			set_building_level = {
 				type = air_base
 				level = 8
 				instant_build = yes
 			}
 		}
+		0 = {
+			modifier = {
+				add = 1
+
+				OR = {
+					check_variable = { global.setup_air_bases_min = 9 }
+					check_variable = { global.setup_air_bases_max = 9 }
+				}
+			}
+			set_building_level = {
+				type = air_base
+				level = 9
+				instant_build = yes
+			}
+		}
 		14 = {
+			modifier = {
+				add = 2
+
+				has_start_date > 1939.1.1
+			}
+			modifier = {
+				factor = 0
+
+				check_variable = { global.setup_air_bases_max < 10 }
+			}
 			set_building_level = {
 				type = air_base
 				level = 10
@@ -7746,6 +7920,15 @@ remove_high_command_army_specific = {
 			}
 		}
 		20 = {
+			set_country_flag = army_combined_arms_disabled
+
+			modifier = {
+				factor = 0
+				
+				has_country_flag = army_combined_arms_disabled
+			}
+		}
+		20 = {
 			set_country_flag = army_armored_disabled
 
 			modifier = {
@@ -8097,6 +8280,119 @@ randomise_army_cavalry_levels = {
 							#}
 							#available = {
 							#	hidden_trigger = { NOT = { has_country_flag = army_cavalry_disabled } }
+							#}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+randomise_army_combined_arms_levels = {
+	every_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_CombinedArms_1
+				has_trait = army_CombinedArms_2
+				has_trait = army_CombinedArms_3
+			}
+		}
+
+		random_list = {
+			seed = random
+			40 = {
+				modifier = {
+					factor = 0
+
+					OR = {
+						has_global_flag = military_advisor_levels_2
+						has_global_flag = military_advisor_levels_3
+					}
+				}
+
+				if = {
+					limit = { NOT = { has_trait = army_CombinedArms_1 } }
+
+					remove_advisor_role = { slot = high_command }
+					add_advisor_role = {
+						advisor = {
+							slot = high_command
+							idea_token = generic_army_combined_arms
+							ledger = army
+							cost = 50
+							traits = { army_CombinedArms_1 }
+
+							#visible = {
+							#	NOT = { has_country_flag = army_combined_arms_disabled }
+							#}
+							#available = {
+							#	hidden_trigger = { NOT = { has_country_flag = army_combined_arms_disabled } }
+							#}
+						}
+					}
+				}
+			}
+			30 = {
+				modifier = {
+					factor = 0
+
+					OR = {
+						has_global_flag = military_advisor_levels_1
+						has_global_flag = military_advisor_levels_3
+					}
+				}
+
+				if = {
+					limit = { NOT = { has_trait = army_CombinedArms_2 } }
+
+					remove_advisor_role = { slot = high_command }
+					add_advisor_role = {
+						advisor = {
+							slot = high_command
+							idea_token = generic_army_combined_arms
+							ledger = army
+							cost = 100
+							traits = { army_CombinedArms_2 }
+
+							#visible = {
+							#	NOT = { has_country_flag = army_combined_arms_disabled }
+							#}
+							#available = {
+							#	hidden_trigger = { NOT = { has_country_flag = army_combined_arms_disabled } }
+							#}
+						}
+					}
+				}
+			}
+			20 = {
+				modifier = {
+					factor = 0
+
+					OR = {
+						has_global_flag = military_advisor_levels_1
+						has_global_flag = military_advisor_levels_2
+					}
+				}
+
+				if = {
+					limit = { NOT = { has_trait = army_CombinedArms_3 } }
+
+					remove_advisor_role = { slot = high_command }
+					add_advisor_role = {
+						advisor = {
+							slot = high_command
+							idea_token = generic_army_combined_arms
+							ledger = army
+							cost = 200
+							traits = { army_CombinedArms_3 }
+
+							#visible = {
+							#	NOT = { has_country_flag = army_combined_arms_disabled }
+							#}
+							#available = {
+							#	hidden_trigger = { NOT = { has_country_flag = army_combined_arms_disabled } }
 							#}
 						}
 					}
@@ -10988,6 +11284,7 @@ randomise_advisors = {
 	remove_high_command_army_specific = yes
 	remove_high_command_army_specific = yes
 	remove_high_command_army_specific = yes
+	remove_high_command_army_specific = yes
 
 	remove_high_command_army_generic = yes
 	remove_high_command_army_generic = yes
@@ -11034,6 +11331,7 @@ randomise_military_advisor_levels = {
 	if = { limit = { NOT = { has_country_flag = army_infantry_disabled } } randomise_army_infantry_levels = yes }
 	if = { limit = { NOT = { has_country_flag = army_artillery_disabled } } randomise_army_artillery_levels = yes }
 	if = { limit = { NOT = { has_country_flag = army_cavalry_disabled } } randomise_army_cavalry_levels = yes }
+	if = { limit = { NOT = { has_country_flag = army_combined_arms_disabled } } randomise_army_combined_arms_levels = yes }
 	if = { limit = { NOT = { has_country_flag = army_armored_disabled } } randomise_army_armored_levels = yes }
 	if = { limit = { NOT = { has_country_flag = army_commando_disabled } } randomise_army_commando_levels = yes }
 
@@ -11594,6 +11892,7 @@ setup_default_advisors = {
 	set_country_flag = air_chief_reform_disabled
 
 	set_country_flag = army_cavalry_disabled
+	set_country_flag = army_combined_arms_disabled
 	set_country_flag = army_armored_disabled
 	set_country_flag = army_commando_disabled
 	set_country_flag = army_regrouping_disabled
@@ -11657,6 +11956,7 @@ setup_basegame_advisors = {
 
 	set_country_flag = army_infantry_disabled
 	set_country_flag = army_cavalry_disabled
+	set_country_flag = army_combined_arms_disabled
 	set_country_flag = army_armored_disabled
 	set_country_flag = army_commando_disabled
 	set_country_flag = army_entrenchment_disabled
@@ -11814,6 +12114,7 @@ clear_advisor_disabled_flags = {
 	clr_country_flag = army_infantry_disabled
 	clr_country_flag = army_artillery_disabled
 	clr_country_flag = army_cavalry_disabled
+	clr_country_flag = army_combined_arms_disabled
 	clr_country_flag = army_armored_disabled
 	clr_country_flag = army_commando_disabled
 	clr_country_flag = army_entrenchment_disabled
@@ -12383,7 +12684,7 @@ give_original_conscription_law = {
 give_random_conscription_law = {
 	random_list = {
 		seed = random
-		3 = {
+		5 = {
 			modifier = {
 				factor = 0
 
@@ -12391,7 +12692,7 @@ give_random_conscription_law = {
 			}
 			add_ideas = disarmed_nation
 		}
-		127 = {
+		67 = {
 			modifier = {
 				factor = 0
 
@@ -12402,7 +12703,7 @@ give_random_conscription_law = {
 			}
 			add_ideas = volunteer_only
 		}
-		28 = {
+		12 = {
 			modifier = {
 				factor = 0
 
@@ -12413,7 +12714,7 @@ give_random_conscription_law = {
 			}
 			add_ideas = limited_conscription
 		}
-		3 = {
+		2 = {
 			modifier = {
 				factor = 0
 
@@ -12479,7 +12780,7 @@ give_original_trade_law = {
 give_random_trade_law = {
 	random_list = {
 		seed = random
-		11 = {
+		1 = {
 			modifier = {
 				factor = 0
 
@@ -12487,7 +12788,7 @@ give_random_trade_law = {
 			}
 			add_ideas = closed_economy
 		}
-		8 = {
+		4 = {
 			modifier = {
 				factor = 0
 
@@ -12498,7 +12799,7 @@ give_random_trade_law = {
 			}
 			add_ideas = limited_exports
 		}
-		137 = {
+		79 = {
 			modifier = {
 				factor = 0
 
@@ -12509,7 +12810,7 @@ give_random_trade_law = {
 			}
 			add_ideas = export_focus
 		}
-		5 = {
+		2 = {
 			modifier = {
 				factor = 0
 
@@ -12549,13 +12850,13 @@ give_random_economic_law = {
 			}
 			add_ideas = undisturbed_isolation
 		}
-		2 = {
+		0 = {
 			modifier = {
-				factor = 0
+				add = 1
 
 				OR = {
-					check_variable = { global.setup_economic_law_min > 1 }
-					check_variable = { global.setup_economic_law_max < 1 }
+					check_variable = { global.setup_economic_law_min = 1 }
+					check_variable = { global.setup_economic_law_max = 1 }
 				}
 			}
 			add_ideas = isolation
@@ -12565,8 +12866,8 @@ give_random_economic_law = {
 				factor = 0
 
 				OR = {
-					check_variable = { global.setup_economic_law_min > 4 }
-					check_variable = { global.setup_economic_law_max < 4 }
+					check_variable = { global.setup_economic_law_min > 2 }
+					check_variable = { global.setup_economic_law_max < 2 }
 				}
 			}
 			add_ideas = civilian_economy
@@ -12576,8 +12877,8 @@ give_random_economic_law = {
 				factor = 0
 
 				OR = {
-					check_variable = { global.setup_economic_law_min > 5 }
-					check_variable = { global.setup_economic_law_max < 5 }
+					check_variable = { global.setup_economic_law_min > 3 }
+					check_variable = { global.setup_economic_law_max < 3 }
 				}
 			}
 			add_ideas = low_economic_mobilisation
@@ -12587,8 +12888,8 @@ give_random_economic_law = {
 				factor = 0
 
 				OR = {
-					check_variable = { global.setup_economic_law_min > 6 }
-					check_variable = { global.setup_economic_law_max < 6 }
+					check_variable = { global.setup_economic_law_min > 4 }
+					check_variable = { global.setup_economic_law_max < 4 }
 				}
 			}
 			add_ideas = partial_economic_mobilisation
@@ -12598,8 +12899,8 @@ give_random_economic_law = {
 				factor = 0
 
 				OR = {
-					check_variable = { global.setup_economic_law_min > 8 }
-					check_variable = { global.setup_economic_law_max < 8 }
+					check_variable = { global.setup_economic_law_min > 5 }
+					check_variable = { global.setup_economic_law_max < 5 }
 				}
 			}
 			add_ideas = war_economy
@@ -12608,7 +12909,7 @@ give_random_economic_law = {
 			modifier = {
 				add = 1
 
-				check_variable = { global.setup_economic_law_max > 8 }
+				check_variable = { global.setup_economic_law_max > 6 }
 			}
 			add_ideas = tot_economic_mobilisation
 		}
@@ -12636,17 +12937,54 @@ give_original_research_slots = {
 randomise_research_slots = {
 	random_list = {
 		seed = random
-		12 = {
+		0 = {
+			modifier = {
+				add = 1
+
+				check_variable = { global.setup_research_slots_min < 2 }
+			}
 			set_research_slots = 1
 		}
-		58 = {
+		56 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_research_slots_min > 2 }
+					check_variable = { global.setup_research_slots_max < 2 }
+				}
+			}
 			set_research_slots = 2
 		}
-		84 = {
+		25 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_research_slots_min > 3 }
+					check_variable = { global.setup_research_slots_max < 3 }
+				}
+			}
 			set_research_slots = 3
 		}
-		2 = {
+		5 = {
+			modifier = {
+				factor = 0
+
+				OR = {
+					check_variable = { global.setup_research_slots_min > 4 }
+					check_variable = { global.setup_research_slots_max < 4 }
+				}
+			}
 			set_research_slots = 4
+		}
+		0 = {
+			modifier = {
+				add = 1
+
+				check_variable = { global.setup_research_slots_max > 4 }
+			}
+			set_research_slots = 5
 		}
 	}
 }
