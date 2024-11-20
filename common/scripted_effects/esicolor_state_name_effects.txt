@@ -233,6 +233,15 @@ adjust_state_name_195 = {
 		}
 		195 = { set_state_name = STATE_195 }
 	}
+	else_if = {
+		limit = { 195 = { owner = { state_originally_from_FIN = yes } } }
+
+		set_province_name = {
+			id = 3151
+			name = FIN_VICTORY_POINTS_3151
+		}
+		195 = { set_state_name = FIN_STATE_195 }
+	}
 	else = {
 		set_province_name = {
 			id = 3151
