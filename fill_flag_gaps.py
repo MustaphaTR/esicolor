@@ -39,6 +39,7 @@ while i < 981:
     if name.endswith("LBA"): name = name.replace("LBA", "MCB")
     if name.endswith("BOS"): name = name.replace("BOS", "CPT")
     if name.endswith("BOL"): name = name.replace("BOL", "CPM")
+    if name.endswith("BIA"): name = name.replace("BIA", "CJB")
     if name.endswith("BEL"): name = name.replace("BEL", "CFM")
     if name.endswith("BAS"): name = name.replace("BAS", "CBT")
     if name.endswith("BAY"): name = name.replace("BAY", "CBZ")
