@@ -1,4 +1,34 @@
 ideas = {
+	country = {
+		# This is checked in political decisions file, which i don't want to override. So keeping it here.
+		NOR_anti_communist_sentiment_ns = {
+			picture = NOR_anti_communist_sentiment 
+			allowed = {
+				original_tag = NOR
+			}	
+
+
+			allowed_civil_war = {
+				has_government = fascism			
+			}
+			available = {
+				NOT = {
+					any_enemy_country = {
+						is_major = yes 
+						has_government = fascism
+					}
+				}
+				
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.015
+			} 
+		}
+	}
+
 	tank_manufacturer = {
 		designer = yes
 

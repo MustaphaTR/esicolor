@@ -4,7 +4,6 @@ ideas = {
 		HUN_treaty_of_triannon = {
 			allowed = {
 				original_tag = HUN
-				always = no
 			}
 			available = {
 				has_war = no
@@ -15,13 +14,11 @@ ideas = {
 				production_speed_arms_factory_factor = -0.5
 			}
 		}
-
 		HUN_treaty_of_triannon_aat = {
 			name = HUN_treaty_of_triannon
 			picture = HUN_treaty_of_triannon
 			allowed = {
 				original_tag = HUN
-				always = no
 			}
 			available = {
 				has_war = no
@@ -34,6 +31,198 @@ ideas = {
 			modifier = {
 				conscription = -0.005
 				production_speed_arms_factory_factor = -0.5
+			}
+		}
+		HUN_treaty_of_triannon_wuw = {
+			name = HUN_treaty_of_triannon
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = HUN
+			}
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.5
+				industrial_capacity_factory = -0.1
+				experience_gain_army_factor = -0.15
+				experience_gain_air_factor = -0.25
+			}
+		}
+		HUN_treaty_of_triannon_aat_wuw = {
+			name = HUN_treaty_of_triannon
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = HUN
+			}
+			available = {
+				has_war = no
+			}
+
+			rule = {
+  				can_access_market = no
+  			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.5
+				industrial_capacity_factory = -0.1
+				military_industrial_organization_funds_gain = -0.1
+				military_industrial_organization_research_bonus = -0.1
+				experience_gain_army_factor = -0.15
+				experience_gain_air_factor = -0.25
+			}
+		}
+		HUN_treaty_of_triannon_2 = {
+			allowed = {
+				original_tag = HUN
+			}
+			picture = HUN_treaty_of_triannon
+
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				production_speed_arms_factory_factor = -0.15	
+			}
+		}
+
+		HUN_treaty_of_triannon_3 = {
+			allowed = {
+				original_tag = HUN
+			}
+			picture = HUN_treaty_of_triannon
+
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				
+			}
+		}
+
+		HUN_treaty_of_triannon_wuw_no_army_exp_debuff = {
+			name = HUN_treaty_of_triannon
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = HUN
+			}
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.5
+				industrial_capacity_factory = -0.1
+				experience_gain_air_factor = -0.25
+			}
+		}
+		HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff = {
+			name = HUN_treaty_of_triannon
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = HUN
+			}
+			available = {
+				has_war = no
+			}
+
+			rule = {
+  				can_access_market = no
+  			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.5
+				industrial_capacity_factory = -0.1
+				military_industrial_organization_funds_gain = -0.1
+				military_industrial_organization_research_bonus = -0.1
+				experience_gain_air_factor = -0.25
+			}
+		}
+
+		HUN_treaty_of_triannon_wuw_no_air_debuff = {
+			name = HUN_treaty_of_triannon
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = HUN
+			}
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.5
+				industrial_capacity_factory = -0.1
+				experience_gain_army_factor = -0.15
+			}
+		}
+		HUN_treaty_of_triannon_aat_wuw_no_air_debuff = {
+			name = HUN_treaty_of_triannon
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = HUN
+			}
+			available = {
+				has_war = no
+			}
+
+			rule = {
+  				can_access_market = no
+  			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.5
+				industrial_capacity_factory = -0.1
+				military_industrial_organization_funds_gain = -0.1
+				military_industrial_organization_research_bonus = -0.1
+				experience_gain_army_factor = -0.15
+			}
+		}
+
+		HUN_treaty_of_triannon_wuw_no_air_or_army_debuff = {
+			name = HUN_treaty_of_triannon
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = HUN
+			}
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.5
+				industrial_capacity_factory = -0.1
+			}
+		}
+		HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff = {
+			name = HUN_treaty_of_triannon
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = HUN
+			}
+			available = {
+				has_war = no
+			}
+
+			rule = {
+  				can_access_market = no
+  			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.5
+				industrial_capacity_factory = -0.1
+				military_industrial_organization_funds_gain = -0.1
+				military_industrial_organization_research_bonus = -0.1
 			}
 		}
 	}

@@ -1,5 +1,24 @@
 ideas = {
 	country = {
+		# This is checked in Soviet events file, which i don't want to override. So keeping it here.
+		comintern_influence = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				communism_drift = 0.05
+			}
+		}
+
 		# These are checked in generic news events file, which i don't want to override. So keeping them here.
 		trotskyite_plot_nsb = {
 			name = trotskyite_plot
