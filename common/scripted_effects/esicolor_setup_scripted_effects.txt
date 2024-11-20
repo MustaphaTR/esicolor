@@ -12530,10 +12530,10 @@ clear_province_modifiers = {
 	#
 	#	province = { all_provinces = yes }
 	#}
-	if = { limit = { has_dynamic_modifier = FRA_maginot_line_dynamic_modifier } remove_dynamic_modifier = FRA_maginot_line_dynamic_modifier }
-	if = { limit = { has_dynamic_modifier = ETH_state_development_dynamic_modifier } remove_dynamic_modifier = ETH_state_development_dynamic_modifier }
-	if = { limit = { has_dynamic_modifier = ETH_state_decentralization_dynamic_modifier } remove_dynamic_modifier = ETH_state_decentralization_dynamic_modifier }
-	if = { limit = { has_dynamic_modifier = dense_rural_infrastructure } remove_dynamic_modifier = dense_rural_infrastructure }
+	if = { limit = { has_dynamic_modifier = { modifier = FRA_maginot_line_dynamic_modifier } } remove_dynamic_modifier = { modifier = FRA_maginot_line_dynamic_modifier } }
+	if = { limit = { has_dynamic_modifier = { modifier = ETH_state_development_dynamic_modifier } } remove_dynamic_modifier = { modifier = ETH_state_development_dynamic_modifier } }
+	if = { limit = { has_dynamic_modifier = { modifier = ETH_state_decentralization_dynamic_modifier } } remove_dynamic_modifier = { modifier = ETH_state_decentralization_dynamic_modifier } }
+	if = { limit = { has_dynamic_modifier = { modifier = dense_rural_infrastructure } } remove_dynamic_modifier = { modifier = dense_rural_infrastructure } }
 }
 
 add_province_modifiers = {

@@ -97,6 +97,13 @@ default_preset_effects = {
 
 	set_variable = { global.setup_starting_regions = 0 }
 	set_variable = { global.setup_islands = 0 }
+	set_variable = { global.setup_continents_europe = 1 }
+	set_variable = { global.setup_continents_north_america = 1 }
+	set_variable = { global.setup_continents_south_america = 1 }
+	set_variable = { global.setup_continents_australia = 1 }
+	set_variable = { global.setup_continents_asia = 1 }
+	set_variable = { global.setup_continents_africa = 1 }
+	set_variable = { global.setup_continents_middle_east = 1 }
 
 	set_variable = { global.setup_formables = 2 }
 	set_variable = { global.setup_resource_prospecting = 1 }
@@ -233,6 +240,13 @@ randomised_preset_effects = {
 
 	set_variable = { global.setup_starting_regions = 0 }
 	set_variable = { global.setup_islands = 0 }
+	set_variable = { global.setup_continents_europe = 1 }
+	set_variable = { global.setup_continents_north_america = 1 }
+	set_variable = { global.setup_continents_south_america = 1 }
+	set_variable = { global.setup_continents_australia = 1 }
+	set_variable = { global.setup_continents_asia = 1 }
+	set_variable = { global.setup_continents_africa = 1 }
+	set_variable = { global.setup_continents_middle_east = 1 }
 
 	set_variable = { global.setup_formables = 2 }
 	set_variable = { global.setup_resource_prospecting = 1 }
@@ -370,6 +384,13 @@ equalised_preset_effects = {
 
 	set_variable = { global.setup_starting_regions = 0 }
 	set_variable = { global.setup_islands = 0 }
+	set_variable = { global.setup_continents_europe = 1 }
+	set_variable = { global.setup_continents_north_america = 1 }
+	set_variable = { global.setup_continents_south_america = 1 }
+	set_variable = { global.setup_continents_australia = 1 }
+	set_variable = { global.setup_continents_asia = 1 }
+	set_variable = { global.setup_continents_africa = 1 }
+	set_variable = { global.setup_continents_middle_east = 1 }
 
 	set_variable = { global.setup_formables = 1 }
 	set_variable = { global.setup_resource_prospecting = 0 }
@@ -462,6 +483,13 @@ developer_preset_effects = {
 
 	set_variable = { global.setup_starting_regions = 0 }
 	set_variable = { global.setup_islands = 0 }
+	set_variable = { global.setup_continents_europe = 1 }
+	set_variable = { global.setup_continents_north_america = 1 }
+	set_variable = { global.setup_continents_south_america = 1 }
+	set_variable = { global.setup_continents_australia = 1 }
+	set_variable = { global.setup_continents_asia = 1 }
+	set_variable = { global.setup_continents_africa = 1 }
+	set_variable = { global.setup_continents_middle_east = 1 }
 
 	set_variable = { global.setup_formables = 2 }
 	set_variable = { global.setup_resource_prospecting = 1 }
@@ -531,6 +559,7 @@ setup_gui_start_general = {
 
 	setup_gui_start_starting_regions = yes
 	setup_gui_start_islands = yes
+	setup_gui_start_continents = yes
 
 	setup_gui_start_formables = yes
 	setup_gui_start_resource_prospecting = yes
@@ -1012,7 +1041,6 @@ setup_gui_start_islands = {
 			OOO = {
 				transfer_state = PREV
 			}
-			remove_from_array = { global.states_ingame = THIS }
 		}
 		set_global_flag = islands_removed_seperate
 	}
@@ -1024,7 +1052,6 @@ setup_gui_start_islands = {
 			OOO = {
 				transfer_state = PREV
 			}
-			remove_from_array = { global.states_ingame = THIS }
 		}
 		set_global_flag = islands_removed_unconnected
 	}
@@ -1036,9 +1063,88 @@ setup_gui_start_islands = {
 			OOO = {
 				transfer_state = PREV
 			}
-			remove_from_array = { global.states_ingame = THIS }
 		}
 		set_global_flag = islands_removed_all
+	}
+}
+
+setup_gui_start_continents = {
+	if = {
+		limit = { check_variable = { global.setup_continents_europe < 1 } }
+
+		every_state = {
+			limit = { is_on_continent = europe }
+			OOO = {
+				transfer_state = PREV
+			}
+		}
+		set_global_flag = europe_removed
+	}
+	if = {
+		limit = { check_variable = { global.setup_continents_north_america < 1 } }
+
+		every_state = {
+			limit = { is_on_continent = north_america }
+			OOO = {
+				transfer_state = PREV
+			}
+		}
+		set_global_flag = north_america_removed
+	}
+	if = {
+		limit = { check_variable = { global.setup_continents_south_america < 1 } }
+
+		every_state = {
+			limit = { is_on_continent = south_america }
+			OOO = {
+				transfer_state = PREV
+			}
+		}
+		set_global_flag = south_america_removed
+	}
+	if = {
+		limit = { check_variable = { global.setup_continents_australia < 1 } }
+
+		every_state = {
+			limit = { is_on_continent = australia }
+			OOO = {
+				transfer_state = PREV
+			}
+		}
+		set_global_flag = australia_removed
+	}
+	if = {
+		limit = { check_variable = { global.setup_continents_asia < 1 } }
+
+		every_state = {
+			limit = { is_on_continent = asia }
+			OOO = {
+				transfer_state = PREV
+			}
+		}
+		set_global_flag = asia_removed
+	}
+	if = {
+		limit = { check_variable = { global.setup_continents_africa < 1 } }
+
+		every_state = {
+			limit = { is_on_continent = africa }
+			OOO = {
+				transfer_state = PREV
+			}
+		}
+		set_global_flag = africa_removed
+	}
+	if = {
+		limit = { check_variable = { global.setup_continents_middle_east < 1 } }
+
+		every_state = {
+			limit = { is_on_continent = middle_east }
+			OOO = {
+				transfer_state = PREV
+			}
+		}
+		set_global_flag = middle_east_removed
 	}
 }
 

@@ -1829,454 +1829,6 @@ defined_text = {
 }
 
 defined_text = {
-	name = esicolor_setup_science_base_loc
-	text = {
-		trigger = {
-			check_variable = { global.setup_science_base < 0 }
-		}
-		localization_key = esicolor_setup_eaw_data
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_science_base_min = global.setup_science_base_max }
-		}
-		localization_key = esicolor_setup_science_base_number
-	}
-	text = {
-		localization_key = esicolor_setup_science_base_range
-	}
-}
-defined_text = {
-	name = esicolor_setup_science_base_min_get_name
-	text = {
-		trigger = {
-			check_variable = { global.setup_science_base_min = 0 }
-		}
-		localization_key = esicolor_setup_poor
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_science_base_min = 1 }
-		}
-		localization_key = esicolor_setup_small
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_science_base_min = 2 }
-		}
-		localization_key = esicolor_setup_substantial
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_science_base_min > 2 }
-		}
-		localization_key = esicolor_setup_developed
-	}
-	text = {
-		localization_key = "[?global.setup_science_base_min]"
-	}
-}
-defined_text = {
-	name = esicolor_setup_science_base_max_get_name
-	text = {
-		trigger = {
-			check_variable = { global.setup_science_base_max = 0 }
-		}
-		localization_key = esicolor_setup_poor
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_science_base_max = 1 }
-		}
-		localization_key = esicolor_setup_small
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_science_base_max = 2 }
-		}
-		localization_key = esicolor_setup_substantial
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_science_base_max > 2 }
-		}
-		localization_key = esicolor_setup_developed
-	}
-	text = {
-		localization_key = "[?global.setup_science_base_max]"
-	}
-}
-defined_text = {
-	name = esicolor_setup_science_base_color
-	text = {
-		trigger = {
-			check_variable = { global.setup_science_base < 0 }
-		}
-		localization_key = "esicolor_setup_color_gray"
-	}
-	text = {
-		localization_key = "esicolor_setup_color_white"
-	}
-}
-
-defined_text = {
-	name = esicolor_setup_society_loc
-	text = {
-		trigger = {
-			check_variable = { global.setup_society < 0 }
-		}
-		localization_key = esicolor_setup_eaw_data
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_min = global.setup_society_max }
-		}
-		localization_key = esicolor_setup_society_number
-	}
-	text = {
-		localization_key = esicolor_setup_society_range
-	}
-}
-defined_text = {
-	name = esicolor_setup_society_min_get_name
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_min = 0 }
-		}
-		localization_key = esicolor_setup_detached
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_min = 1 }
-		}
-		localization_key = esicolor_setup_communal
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_min = 2 }
-		}
-		localization_key = esicolor_setup_primitive
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_min = 3 }
-		}
-		localization_key = esicolor_setup_agrarian
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_min = 4 }
-		}
-		localization_key = esicolor_setup_industrialising
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_min = 5 }
-		}
-		localization_key = esicolor_setup_newly_industrialised
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_min > 5 }
-		}
-		localization_key = esicolor_setup_modern
-	}
-	text = {
-		localization_key = "[?global.setup_society_min]"
-	}
-}
-defined_text = {
-	name = esicolor_setup_society_max_get_name
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_max = 0 }
-		}
-		localization_key = esicolor_setup_detached
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_max = 1 }
-		}
-		localization_key = esicolor_setup_communal
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_max = 2 }
-		}
-		localization_key = esicolor_setup_primitive
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_max = 3 }
-		}
-		localization_key = esicolor_setup_agrarian
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_max = 4 }
-		}
-		localization_key = esicolor_setup_industrialising
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_max = 5 }
-		}
-		localization_key = esicolor_setup_newly_industrialised
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_society_max > 5 }
-		}
-		localization_key = esicolor_setup_modern
-	}
-	text = {
-		localization_key = "[?global.setup_society_max]"
-	}
-}
-defined_text = {
-	name = esicolor_setup_society_color
-	text = {
-		trigger = {
-			check_variable = { global.setup_society < 0 }
-		}
-		localization_key = "esicolor_setup_color_gray"
-	}
-	text = {
-		localization_key = "esicolor_setup_color_white"
-	}
-}
-
-defined_text = {
-	name = esicolor_setup_illiteracy_loc
-	text = {
-		trigger = {
-			check_variable = { global.setup_illiteracy < 0 }
-		}
-		localization_key = esicolor_setup_eaw_data
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_illiteracy_min = global.setup_illiteracy_max }
-		}
-		localization_key = esicolor_setup_illiteracy_number
-	}
-	text = {
-		localization_key = esicolor_setup_illiteracy_range
-	}
-}
-defined_text = {
-	name = esicolor_setup_illiteracy_min_get_name
-	text = {
-		trigger = {
-			check_variable = { global.setup_illiteracy_min = 0 }
-		}
-		localization_key = esicolor_setup_negligible
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_illiteracy_min = 1 }
-		}
-		localization_key = esicolor_setup_limited
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_illiteracy_min = 2 }
-		}
-		localization_key = esicolor_setup_modest
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_illiteracy_min = 3 }
-		}
-		localization_key = esicolor_setup_broad
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_illiteracy_min > 3 }
-		}
-		localization_key = esicolor_setup_mass
-	}
-	text = {
-		localization_key = "[?global.setup_illiteracy_min]"
-	}
-}
-defined_text = {
-	name = esicolor_setup_illiteracy_max_get_name
-	text = {
-		trigger = {
-			check_variable = { global.setup_illiteracy_max = 0 }
-		}
-		localization_key = esicolor_setup_negligible
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_illiteracy_max = 1 }
-		}
-		localization_key = esicolor_setup_limited
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_illiteracy_max = 2 }
-		}
-		localization_key = esicolor_setup_modest
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_illiteracy_max = 3 }
-		}
-		localization_key = esicolor_setup_broad
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_illiteracy_max > 3 }
-		}
-		localization_key = esicolor_setup_mass
-	}
-	text = {
-		localization_key = "[?global.setup_illiteracy_max]"
-	}
-}
-defined_text = {
-	name = esicolor_setup_illiteracy_color
-	text = {
-		trigger = {
-			check_variable = { global.setup_illiteracy < 0 }
-		}
-		localization_key = "esicolor_setup_color_gray"
-	}
-	text = {
-		localization_key = "esicolor_setup_color_white"
-	}
-}
-
-defined_text = {
-	name = esicolor_setup_poverty_loc
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty < 0 }
-		}
-		localization_key = esicolor_setup_eaw_data
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_min = global.setup_poverty_max }
-		}
-		localization_key = esicolor_setup_poverty_number
-	}
-	text = {
-		localization_key = esicolor_setup_poverty_range
-	}
-}
-defined_text = {
-	name = esicolor_setup_poverty_min_get_name
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_min = 0 }
-		}
-		localization_key = esicolor_setup_negligible
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_min = 1 }
-		}
-		localization_key = esicolor_setup_mild
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_min = 2 }
-		}
-		localization_key = esicolor_setup_low
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_min = 3 }
-		}
-		localization_key = esicolor_setup_moderate
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_min = 4 }
-		}
-		localization_key = esicolor_setup_high
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_min = 5 }
-		}
-		localization_key = esicolor_setup_severe
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_min > 5 }
-		}
-		localization_key = esicolor_setup_extreme
-	}
-	text = {
-		localization_key = "[?global.setup_poverty_min]"
-	}
-}
-defined_text = {
-	name = esicolor_setup_poverty_max_get_name
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_max = 0 }
-		}
-		localization_key = esicolor_setup_negligible
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_max = 1 }
-		}
-		localization_key = esicolor_setup_mild
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_max = 2 }
-		}
-		localization_key = esicolor_setup_low
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_max = 3 }
-		}
-		localization_key = esicolor_setup_moderate
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_max = 4 }
-		}
-		localization_key = esicolor_setup_high
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_max = 5 }
-		}
-		localization_key = esicolor_setup_severe
-	}
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty_max > 5 }
-		}
-		localization_key = esicolor_setup_extreme
-	}
-	text = {
-		localization_key = "[?global.setup_poverty_max]"
-	}
-}
-defined_text = {
-	name = esicolor_setup_poverty_color
-	text = {
-		trigger = {
-			check_variable = { global.setup_poverty < 0 }
-		}
-		localization_key = "esicolor_setup_color_gray"
-	}
-	text = {
-		localization_key = "esicolor_setup_color_white"
-	}
-}
-
-defined_text = {
 	name = esicolor_setup_starting_regions_get_name
 	text = {
 		trigger = {
@@ -2311,6 +1863,109 @@ defined_text = {
 	}
 	text = {
 		localization_key = esicolor_setup_islands_remove_all
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_continents_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_continents_europe = 1 }
+			check_variable = { global.setup_continents_north_america = 1 }
+			check_variable = { global.setup_continents_south_america = 1 }
+			check_variable = { global.setup_continents_australia = 1 }
+			check_variable = { global.setup_continents_asia = 1 }
+			check_variable = { global.setup_continents_africa = 1 }
+			check_variable = { global.setup_continents_middle_east = 1 }
+		}
+		localization_key = esicolor_setup_all
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_continents_europe = 1 }
+			check_variable = { global.setup_continents_north_america = -1 }
+			check_variable = { global.setup_continents_south_america = -1 }
+			check_variable = { global.setup_continents_australia = -1 }
+			check_variable = { global.setup_continents_asia = -1 }
+			check_variable = { global.setup_continents_africa = -1 }
+			check_variable = { global.setup_continents_middle_east = -1 }
+		}
+		localization_key = europe
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_continents_europe = -1 }
+			check_variable = { global.setup_continents_north_america = 1 }
+			check_variable = { global.setup_continents_south_america = -1 }
+			check_variable = { global.setup_continents_australia = -1 }
+			check_variable = { global.setup_continents_asia = -1 }
+			check_variable = { global.setup_continents_africa = -1 }
+			check_variable = { global.setup_continents_middle_east = -1 }
+		}
+		localization_key = north_america
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_continents_europe = -1 }
+			check_variable = { global.setup_continents_north_america = -1 }
+			check_variable = { global.setup_continents_south_america = 1 }
+			check_variable = { global.setup_continents_australia = -1 }
+			check_variable = { global.setup_continents_asia = -1 }
+			check_variable = { global.setup_continents_africa = -1 }
+			check_variable = { global.setup_continents_middle_east = -1 }
+		}
+		localization_key = south_america
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_continents_europe = -1 }
+			check_variable = { global.setup_continents_north_america = -1 }
+			check_variable = { global.setup_continents_south_america = -1 }
+			check_variable = { global.setup_continents_australia = 1 }
+			check_variable = { global.setup_continents_asia = -1 }
+			check_variable = { global.setup_continents_africa = -1 }
+			check_variable = { global.setup_continents_middle_east = -1 }
+		}
+		localization_key = australia
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_continents_europe = -1 }
+			check_variable = { global.setup_continents_north_america = -1 }
+			check_variable = { global.setup_continents_south_america = -1 }
+			check_variable = { global.setup_continents_australia = -1 }
+			check_variable = { global.setup_continents_asia = 1 }
+			check_variable = { global.setup_continents_africa = -1 }
+			check_variable = { global.setup_continents_middle_east = -1 }
+		}
+		localization_key = asia
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_continents_europe = -1 }
+			check_variable = { global.setup_continents_north_america = -1 }
+			check_variable = { global.setup_continents_south_america = -1 }
+			check_variable = { global.setup_continents_australia = -1 }
+			check_variable = { global.setup_continents_asia = -1 }
+			check_variable = { global.setup_continents_africa = 1 }
+			check_variable = { global.setup_continents_middle_east = -1 }
+		}
+		localization_key = africa
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_continents_europe = -1 }
+			check_variable = { global.setup_continents_north_america = -1 }
+			check_variable = { global.setup_continents_south_america = -1 }
+			check_variable = { global.setup_continents_australia = -1 }
+			check_variable = { global.setup_continents_asia = -1 }
+			check_variable = { global.setup_continents_africa = -1 }
+			check_variable = { global.setup_continents_middle_east = 1 }
+		}
+		localization_key = middle_east
+	}
+	text = {
+		localization_key = esicolor_setup_limited
 	}
 }
 
