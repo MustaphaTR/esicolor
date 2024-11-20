@@ -1,17 +1,40 @@
 characters={
-	ISZ_arthur_seyss_inquart={
-		name=AUS_arthur_seyss-inquart
-		portraits={
-			civilian={
-				large=GFX_portrait_AUS_arthur_seyss-inquart
-				small=GFX_portrait_AUS_arthur_seyss-inquart_small
+	ISZ_arthur_seyss_inquart = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=AUS_arthur_seyss-inquart
+			portraits={
+				civilian={
+					large = "GFX_portrait_AUS_arthur_seyss_inquart"
+					small = "GFX_portrait_AUS_arthur_seyss_inquart_small"
+				}
+			}
+			country_leader={
+				traits={ nazi_sympathizer }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			traits = { nazi_sympathizer }
-			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=AUS_arthur_seyss-inquart
+			portraits={
+				civilian={
+					large = GFX_portrait_AUS_arthur_seyss-inquart
+					small = GFX_portrait_AUS_arthur_seyss-inquart_small
+				}
+			}
+			country_leader={
+				traits={ nazi_sympathizer }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }

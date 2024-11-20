@@ -1,23 +1,50 @@
 characters={
-	YFF_emile_vanderveld={
-		name=BEL_emile_vanderveld
-		portraits={
-			civilian = {
-				large = GFX_portrait_BEL_king_leopold_iii 
-				small = GFX_portrait_BEL_king_leopold_iii_civilian_small
+	YFF_emile_vanderveld = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=BEL_emile_vanderveld
+			portraits={
+				civilian={
+					large=GFX_portrait_BEL_emile_vanderveld
+				}
+			}
+			country_leader={
+				traits={ BEL_le_patron }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ BEL_le_patron }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			traits={ BEL_le_patron }
-			ideology=marxism
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			traits={ BEL_le_patron }
-			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=BEL_emile_vanderveld
+			portraits={
+				civilian={
+					large=GFX_Portrait_Europe_Generic_land_5
+				}
+			}
+			country_leader={
+				traits={ BEL_le_patron }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ BEL_le_patron }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }
