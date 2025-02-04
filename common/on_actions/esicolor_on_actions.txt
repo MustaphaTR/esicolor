@@ -203,52 +203,8 @@ on_actions = {
 						check_variable = { ROOT.claim_timer_@var:v < 2 }
 					}
 
-					add_threat = 1
-
 					var:v = {
-						add_claim_by = ROOT
-
-						owner = {
-							set_temp_variable = { state_owner = THIS }
-						}
-					}
-
-					if = {
-						limit = {
-							var:state_owner = {
-								NOT = {
-									tag = ROOT
-									is_in_faction_with = ROOT
-								}
-							}
-						}
-
-						if = {
-							limit = {
-								OR = {
-									has_global_flag = claiming_give_war_goals
-									has_global_flag = claiming_declare_war
-								}
-							}
-
-							create_wargoal = {
-								type = annex_everything
-								target = state_owner
-								#generator = { v.id }
-							}
-						}
-						if = {
-							limit = {
-								has_global_flag = claiming_declare_war
-								NOT = { has_war_with = state_owner }
-							}
-
-							declare_war_on = {
-								type = annex_everything
-								target = state_owner
-								#generator = { v.id }
-							}
-						}
+						claim_action_effect = yes
 					}
 
 					add_to_variable = { ROOT.dynamic_pp_gain_modifier = 0.1 }

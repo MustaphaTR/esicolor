@@ -84,15 +84,27 @@ scripted_gui = {
 		effects = {
 			esicolor_claim_button_clickable_click = {
 				THIS = {
-					add_to_array = { ROOT.states_being_claimed = THIS }
+					if = {
+						limit = { check_variable = { global.setup_fast_mode < 6 } }
+
+						add_to_array = { ROOT.states_being_claimed = THIS }
+					}
+					else = {
+						claim_action_effect = yes
+					}
 				}
 
 				hidden_effect = {
 					ROOT = {
 						add_political_power = global.claiming_cost_negative?-20
-						subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.1 }
-						#country_event = { id = esicolorstatemanagement.1 days = global.claiming_length?30 }
-						set_variable = { ROOT.claim_timer_@PREV = global.claiming_length?30 }
+
+						if = {
+							limit = { check_variable = { global.setup_fast_mode < 6 } }
+
+							subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.1 }
+							#country_event = { id = esicolorstatemanagement.1 days = global.claiming_length?30 }
+							set_variable = { ROOT.claim_timer_@PREV = global.claiming_length?30 }
+						}
 					}
 				}
 			}
@@ -147,15 +159,27 @@ scripted_gui = {
 		effects = {
 			esicolor_compliance_button_clickable_click = {
 				THIS = {
-					add_to_array = { ROOT.states_getting_compliance = THIS }
+					if = {
+						limit = { check_variable = { global.setup_fast_mode < 6 } }
+
+						add_to_array = { ROOT.states_getting_compliance = THIS }
+					}
+					else = {
+						add_compliance = 10
+					}
 				}
 
 				ROOT = {
 					hidden_effect = {
 						add_political_power = -40
-						add_to_variable = { ROOT.dynamic_civ_factory_use = 1 }
-						#country_event = { id = esicolorstatemanagement.2 days = 30 }
-						set_variable = { ROOT.compliance_timer_@PREV = 30 }
+
+						if = {
+							limit = { check_variable = { global.setup_fast_mode < 6 } }
+
+							add_to_variable = { ROOT.dynamic_civ_factory_use = 1 }
+							#country_event = { id = esicolorstatemanagement.2 days = global.compliance_length?30 }
+							set_variable = { ROOT.compliance_timer_@PREV = global.compliance_length?30 }
+						}
 					}
 				}
 			}
@@ -235,12 +259,19 @@ scripted_gui = {
 			esicolor_core_button_clickable_click = {
 				THIS = {
 					if = {
-						limit = { is_in_array = { ROOT.formable_cores = THIS } }
+						limit = { check_variable = { global.setup_fast_mode < 6 } }
 
-						add_to_array = { ROOT.states_being_cored_formable = THIS }
+						if = {
+							limit = { is_in_array = { ROOT.formable_cores = THIS } }
+
+							add_to_array = { ROOT.states_being_cored_formable = THIS }
+						}
+						else = {
+							add_to_array = { ROOT.states_being_cored_normal = THIS }
+						}
 					}
 					else = {
-						add_to_array = { ROOT.states_being_cored_normal = THIS }
+						add_core_of = ROOT
 					}
 				}
 
@@ -249,16 +280,26 @@ scripted_gui = {
 						if = {
 							limit = { is_in_array = { ROOT.formable_cores = PREV } }
 
-							add_political_power > -30
-							subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.125 }
-							#country_event = { id = esicolorstatemanagement.4 days = 30 }
-							set_variable = { ROOT.core_timer_@PREV = 30 }
+							add_political_power = -30
+
+							if = {
+								limit = { check_variable = { global.setup_fast_mode < 6 } }
+
+								subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.125 }
+								#country_event = { id = esicolorstatemanagement.4 days = global.coring_formable_length?30 }
+								set_variable = { ROOT.core_timer_@PREV = global.coring_formable_length?30 }
+							}
 						}
 						else = {
-							add_political_power > -60
-							subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.25 }
-							#country_event = { id = esicolorstatemanagement.3 days = 60 }
-							set_variable = { ROOT.core_timer_@PREV = 60 }
+							add_political_power = -60
+
+							if = {
+								limit = { check_variable = { global.setup_fast_mode < 6 } }
+
+								subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.25 }
+								#country_event = { id = esicolorstatemanagement.3 days = global.coring_length?60 }
+								set_variable = { ROOT.core_timer_@PREV = global.coring_length?60 }
+							}
 						}
 					}
 				}

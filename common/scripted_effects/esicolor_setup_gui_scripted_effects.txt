@@ -111,6 +111,7 @@ default_preset_effects = {
 
 	set_variable = { global.setup_state_management = 1 }
 	set_variable = { global.setup_claim_decision = 1 }
+	set_variable = { global.setup_fast_mode = 0 }
 }
 
 randomised_preset_effects = {
@@ -254,6 +255,7 @@ randomised_preset_effects = {
 
 	set_variable = { global.setup_state_management = 1 }
 	set_variable = { global.setup_claim_decision = 1 }
+	set_variable = { global.setup_fast_mode = 0 }
 }
 
 equalised_preset_effects = {
@@ -398,6 +400,7 @@ equalised_preset_effects = {
 
 	set_variable = { global.setup_state_management = 1 }
 	set_variable = { global.setup_claim_decision = 1 }
+	set_variable = { global.setup_fast_mode = 0 }
 }
 
 developer_preset_effects = {
@@ -497,6 +500,7 @@ developer_preset_effects = {
 
 	set_variable = { global.setup_state_management = 1 }
 	set_variable = { global.setup_claim_decision = 2 }
+	set_variable = { global.setup_fast_mode = 0 }
 }
 
 setup_gui_start_general = {
@@ -565,8 +569,9 @@ setup_gui_start_general = {
 	setup_gui_start_resource_prospecting = yes
 	setup_gui_start_foreign_generals = yes
 
-	setup_gui_start_claim_decision = yes
 	setup_gui_start_state_management = yes
+	setup_gui_start_claim_decision = yes
+	setup_gui_start_fast_mode = yes
 }
 
 setup_gui_start_infrastructure = {
@@ -1249,5 +1254,63 @@ setup_gui_start_claim_decision = {
 		set_variable = { global.claiming_cost_minus_one = 39 }
 		set_variable = { global.claiming_cost_negative = -40 }
 		set_variable = { global.claiming_length = 60 }
+	}
+}
+
+setup_gui_start_fast_mode = {
+	if = {
+		limit = { check_variable = { global.setup_fast_mode < 1 } }
+
+		set_variable = { global.compliance_length = 30 }
+		set_variable = { global.coring_formable_length = 30 }
+		set_variable = { global.coring_length = 60 }
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_fast_mode = 1 } }
+
+		divide_variable = { global.claiming_length = 2 }
+		set_variable = { global.compliance_length = 15 }
+		set_variable = { global.coring_formable_length = 15 }
+		set_variable = { global.coring_length = 30 }
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_fast_mode = 2 } }
+
+		divide_variable = { global.claiming_length = 3 }
+		set_variable = { global.compliance_length = 10 }
+		set_variable = { global.coring_formable_length = 10 }
+		set_variable = { global.coring_length = 20 }
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_fast_mode = 3 } }
+
+		divide_variable = { global.claiming_length = 4 }
+		set_variable = { global.compliance_length = 8 }
+		set_variable = { global.coring_formable_length = 8 }
+		set_variable = { global.coring_length = 15 }
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_fast_mode = 4 } }
+
+		divide_variable = { global.claiming_length = 5 }
+		set_variable = { global.compliance_length = 6 }
+		set_variable = { global.coring_formable_length = 6 }
+		set_variable = { global.coring_length = 12 }
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_fast_mode = 5 } }
+
+		divide_variable = { global.claiming_length = 6 }
+		set_variable = { global.compliance_length = 5 }
+		set_variable = { global.coring_formable_length = 5 }
+		set_variable = { global.coring_length = 10 }
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_fast_mode > 5 } }
+
+		set_variable = { global.claiming_length = 0 }
+		set_variable = { global.compliance_length = 0 }
+		set_variable = { global.coring_formable_length = 0 }
+		set_variable = { global.coring_length = 0 }
 	}
 }

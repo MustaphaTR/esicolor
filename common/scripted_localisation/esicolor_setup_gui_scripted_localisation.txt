@@ -2068,6 +2068,49 @@ defined_text = {
 }
 
 defined_text = {
+	name = esicolor_setup_fast_mode_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_fast_mode < 1 }
+		}
+		localization_key = esicolor_setup_disabled
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_fast_mode = 1 }
+		}
+		localization_key = esicolor_setup_fast_mode_x2
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_fast_mode = 2 }
+		}
+		localization_key = esicolor_setup_fast_mode_x3
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_fast_mode = 3 }
+		}
+		localization_key = esicolor_setup_fast_mode_x4
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_fast_mode = 4 }
+		}
+		localization_key = esicolor_setup_fast_mode_x5
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_fast_mode = 5 }
+		}
+		localization_key = esicolor_setup_fast_mode_x6
+	}
+	text = {
+		localization_key = esicolor_setup_fast_mode_instant
+	}
+}
+
+defined_text = {
 	name = esicolor_setup_start_continue_get_name
 	text = {
 		trigger = {

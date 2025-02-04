@@ -445,3 +445,48 @@ recalculate_recruitment_costs = {
 	set_variable = { THIS.admiral_recruitment_cost_minus = THIS.admiral_recruitment_cost }
 	multiply_variable = { THIS.admiral_recruitment_cost_minus = -1 }
 }
+
+claim_action_effect = {
+	ROOT = { add_threat = 1 }
+
+	add_claim_by = ROOT
+	owner = { set_temp_variable = { state_owner = THIS } }
+
+	if = {
+		limit = {
+			var:state_owner = {
+				NOT = {
+					tag = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+
+		ROOT = {
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = claiming_give_war_goals
+						has_global_flag = claiming_declare_war
+					}
+				}
+
+				create_wargoal = {
+					type = annex_everything
+					target = state_owner
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = claiming_declare_war
+					NOT = { has_war_with = state_owner }
+				}
+
+				declare_war_on = {
+					type = annex_everything
+					target = state_owner
+				}
+			}
+		}
+	}
+}
