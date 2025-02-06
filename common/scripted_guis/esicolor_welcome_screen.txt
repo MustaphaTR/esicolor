@@ -4499,6 +4499,8 @@ scripted_gui = {
 					limit = { check_variable = { global.setup_claim_decision > 0 } }
 
 					subtract_from_variable = { global.setup_claim_decision = 1 }
+					setup_gui_start_claim_decision = yes
+					setup_gui_start_fast_mode = yes
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_7_max_plus_7_click = {
@@ -4506,6 +4508,8 @@ scripted_gui = {
 					limit = { check_variable = { global.setup_claim_decision < 2 } }
 
 					add_to_variable = { global.setup_claim_decision = 1 }
+					setup_gui_start_claim_decision = yes
+					setup_gui_start_fast_mode = yes
 				}
 			}
 
@@ -4557,6 +4561,8 @@ scripted_gui = {
 					limit = { check_variable = { global.setup_fast_mode > 0 } }
 
 					subtract_from_variable = { global.setup_fast_mode = 1 }
+					setup_gui_start_claim_decision = yes
+					setup_gui_start_fast_mode = yes
 				}
 			}
 			esicolor_welcome_screen_tab_1_page_7_max_plus_9_click = {
@@ -4564,6 +4570,8 @@ scripted_gui = {
 					limit = { check_variable = { global.setup_fast_mode < 6 } }
 
 					add_to_variable = { global.setup_fast_mode = 1 }
+					setup_gui_start_claim_decision = yes
+					setup_gui_start_fast_mode = yes
 				}
 			}
 		}
