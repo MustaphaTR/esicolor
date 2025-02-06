@@ -1,0 +1,39 @@
+characters={
+	ZFA_kwame_nkrumah = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=GHA_kwame_nkrumah
+			portraits={
+				civilian={
+					large=GFX_portrait_GHA_kwame_nkrumah
+					small=GFX_portrait_GHA_kwame_nkrumah_small
+				}
+			}
+			country_leader={
+				traits={ pan_africanist_socialist }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=GHA_kwame_nkrumah
+			portraits={
+				civilian={
+					large=GFX_Portrait_Africa_Generic_3
+				}
+			}
+			country_leader={
+				traits={ pan_africanist_socialist }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
