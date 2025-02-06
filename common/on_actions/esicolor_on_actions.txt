@@ -306,321 +306,321 @@ on_actions = {
 		}
 	}
 
-	on_weekly = { #TODO, split all the AIs to 7 groups and run them at different days of the week.
-		effect = {
-			log = "[GetDateText] MustaphaTR's Every State Independent main on_weekly begin for [Root.GetName]"
-
-			if = {
-				limit = {
-					NOT = {
-						original_tag = OOO
-						has_global_flag = state_management_disabled
-						is_ai = no
-						# has_states_to_form_lv2_or_lv3_formable = yes
-					}
-				}
-
-				# First, we check if we have something to core
-				if = {
-					limit = {
-						has_political_power > 29
-						political_power_daily > 0.125
-
-						any_owned_state = { # seems like any_owned_controlled_state isn't a thing, it is not on wiki at least.
-							is_controlled_by = ROOT
-
-							NOT = {
-								is_core_of = ROOT
-
-								is_in_array = { ROOT.states_being_cored_formable = THIS }
-								is_in_array = { ROOT.states_being_cored_normal = THIS }
-							}
-
-							compliance > 20
-							is_in_array = { ROOT.formable_cores = THIS }
-						}
-					}
-
-					random_owned_controlled_state = {
-						limit = {
-							compliance > 20
-							is_in_array = { ROOT.formable_cores = THIS }
-						}
-
-						add_to_array = { ROOT.states_being_cored_formable = THIS }
-						ROOT = { add_political_power > -30 }
-						subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.125 }
-						set_variable = { ROOT.core_timer_@THIS = 30 }
-					}
-				}
-				else_if = {
-					limit = {
-						has_political_power > 59
-						political_power_daily > 0.25
-
-						any_owned_state = {
-							is_controlled_by = ROOT
-
-							NOT = {
-								is_core_of = ROOT
-
-								is_in_array = { ROOT.states_being_cored_formable = THIS }
-								is_in_array = { ROOT.states_being_cored_normal = THIS }
-							}
-
-							compliance > 40
-
-							OR = {
-								any_neighbor_state = {
-									is_core_of = ROOT
-								}
-
-								is_neighboring_core_special_case_state = yes
-							}
-						}
-					}
-
-					random_owned_controlled_state = {
-						limit = {
-							compliance > 40
-
-							OR = {
-								any_neighbor_state = {
-									is_core_of = ROOT
-								}
-
-								is_neighboring_core_special_case_state = yes
-							}
-						}
-
-						add_to_array = { ROOT.states_being_cored_normal = THIS }
-						ROOT = { add_political_power > -60 }
-						subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.25 }
-						set_variable = { ROOT.core_timer_@THIS = 60 }
-					}
-				}
-
-				# Then, increase compliance if we have little ponypower and states we can core.
-				if = {
-					limit = {
-						has_political_power > 39
-						num_of_civilian_factories_available_for_projects > 0
-
-						any_owned_state = {
-							is_controlled_by = ROOT
-
-							OR = {
-								set_temp_variable = { capital = ROOT.capital_scope }
-								check_variable = { state_population_k > capital.state_population_k }
-								arms_factory > 2
-								industrial_complex > 3
-							}
-
-							NOT = {
-								is_core_of = ROOT
-
-								is_in_array = { ROOT.states_getting_compliance = THIS }
-							}
-
-							if = {
-								limit = {
-									is_in_array = { ROOT.formable_cores = THIS }
-								}
-
-								compliance < 20
-							}
-							else = {
-								compliance < 40
-
-								OR = {
-									any_neighbor_state = {
-										is_core_of = ROOT
-									}
-
-									is_neighboring_core_special_case_state = yes
-								}
-							}
-						}
-					}
-
-					random_owned_controlled_state = {
-						limit = {
-							is_controlled_by = ROOT
-
-							OR = {
-								set_temp_variable = { capital = ROOT.capital_scope }
-								check_variable = { state_population_k > capital.state_population_k }
-								arms_factory > 2
-								industrial_complex > 3
-							}
-
-							NOT = {
-								is_core_of = ROOT
-
-								is_in_array = { ROOT.states_getting_compliance = THIS }
-							}
-
-							if = {
-								limit = {
-									is_in_array = { ROOT.formable_cores = THIS }
-								}
-
-								compliance < 20
-							}
-							else = {
-								compliance < 40
-
-								OR = {
-									any_neighbor_state = {
-										is_core_of = ROOT
-									}
-
-									is_neighboring_core_special_case_state = yes
-								}
-							}
-						}
-
-						add_to_array = { ROOT.states_getting_compliance = THIS }
-						ROOT = { add_political_power = -40 }
-						add_to_variable = { ROOT.dynamic_civ_factory_use = 1 }
-						set_variable = { ROOT.compliance_timer_@THIS = 30 }
-					}
-				}
-					
-				# If there is nothing to core or get compliance on, let's fight. If we aren't already fighting.
-				if = {
-					limit = {
-						OR = {
-							has_war = no
-							all_enemy_country = {
-								NOT = { is_neighbor_of = ROOT }
-							}
-						}
-						check_variable = { ROOT.states_being_claimed^num < 1 }
-						num_divisions > 0
-
-						has_political_power > global.claiming_cost_minus_one?19
-						political_power_daily > 0.1
-					}
-
-					if = {
-						limit = {
-							any_neighbor_country = {
-								NOT = {
-									original_tag = OOO
-									is_in_faction_with = ROOT
-									has_non_aggression_pact_with = ROOT
-									ROOT = { has_wargoal_against = PREV }
-								}
-
-								any_owned_state = {
-									OR = {
-										has_global_flag = claiming_give_war_goals
-										has_global_flag = claiming_declare_war
-
-										NOT = { is_claimed_by = ROOT }
-									}
-
-									any_neighbor_state = {
-										is_owned_by = ROOT
-									}
-								}
-							}
-						}
-
-						random_neighbor_country = {
-							limit = {
-								NOT = {
-									original_tag = OOO
-									is_in_faction_with = ROOT
-									has_non_aggression_pact_with = ROOT
-									ROOT = { has_wargoal_against = PREV }
-								}
-
-								OR = {
-									has_global_flag = claiming_give_war_goals
-									has_global_flag = claiming_declare_war
-
-									NOT = { any_owned_state = { is_claimed_by = ROOT } }
-								}
-							}
-
-							random_owned_state = {
-								limit = {
-									OR = {
-										has_global_flag = claiming_give_war_goals
-										has_global_flag = claiming_declare_war
-
-										NOT = { is_claimed_by = ROOT }
-									}
-
-									any_neighbor_state = {
-										is_owned_by = ROOT
-									}
-								}
-
-								add_to_array = { ROOT.states_being_claimed = THIS }
-								ROOT = { add_political_power = global.claiming_cost_negative?-20 }
-								subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.1 }
-								set_variable = { ROOT.claim_timer_@THIS = global.claiming_length?30 }
-							}
-						}
-					}
-					else_if = {
-						limit = {
-							any_country = {
-								NOT = {
-									original_tag = OOO
-									is_in_faction_with = ROOT
-									has_non_aggression_pact_with = ROOT
-									ROOT = { has_wargoal_against = PREV }
-								}
-
-								OR = {
-									has_global_flag = claiming_give_war_goals
-									has_global_flag = claiming_declare_war
-
-									NOT = { any_owned_state = { is_claimed_by = ROOT } }
-								}
-
-								is_neighboring_ownership_special_case_country = yes
-							}
-						}
-
-						random_country = {
-							limit = {
-								NOT = {
-									original_tag = OOO
-									is_in_faction_with = ROOT
-									has_non_aggression_pact_with = ROOT
-									ROOT = { has_wargoal_against = PREV }
-								}
-
-								OR = {
-									has_global_flag = claiming_give_war_goals
-									has_global_flag = claiming_declare_war
-
-									NOT = { any_owned_state = { is_claimed_by = ROOT } }
-								}
-
-								is_neighboring_ownership_special_case_country = yes
-							}
-
-							random_owned_state = {
-								limit = {
-									is_neighboring_ownership_special_case_state = yes
-								}
-
-								add_to_array = { ROOT.states_being_claimed = THIS }
-								ROOT = { add_political_power = global.claiming_cost_negative?-20 }
-								subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.1 }
-								set_variable = { ROOT.claim_timer_@THIS = global.claiming_length?30 }
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+	#on_weekly = { #TODO, split all the AIs to 7 groups and run them at different days of the week.
+	#	effect = {
+	#		log = "[GetDateText] MustaphaTR's Every State Independent main on_weekly begin for [Root.GetName]"
+	#
+	#		if = {
+	#			limit = {
+	#				NOT = {
+	#					original_tag = OOO
+	#					has_global_flag = state_management_disabled
+	#					is_ai = no
+	#					# has_states_to_form_lv2_or_lv3_formable = yes
+	#				}
+	#			}
+	#
+	#			# First, we check if we have something to core
+	#			if = {
+	#				limit = {
+	#					has_political_power > 29
+	#					political_power_daily > 0.125
+	#
+	#					any_owned_state = { # seems like any_owned_controlled_state isn't a thing, it is not on wiki at least.
+	#						is_controlled_by = ROOT
+	#
+	#						NOT = {
+	#							is_core_of = ROOT
+	#
+	#							is_in_array = { ROOT.states_being_cored_formable = THIS }
+	#							is_in_array = { ROOT.states_being_cored_normal = THIS }
+	#						}
+	#
+	#						compliance > 20
+	#						is_in_array = { ROOT.formable_cores = THIS }
+	#					}
+	#				}
+	#
+	#				random_owned_controlled_state = {
+	#					limit = {
+	#						compliance > 20
+	#						is_in_array = { ROOT.formable_cores = THIS }
+	#					}
+	#
+	#					add_to_array = { ROOT.states_being_cored_formable = THIS }
+	#					ROOT = { add_political_power > -30 }
+	#					subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.125 }
+	#					set_variable = { ROOT.core_timer_@THIS = global.coring_formable_length?30 }
+	#				}
+	#			}
+	#			else_if = {
+	#				limit = {
+	#					has_political_power > 59
+	#					political_power_daily > 0.25
+	#
+	#					any_owned_state = {
+	#						is_controlled_by = ROOT
+	#
+	#						NOT = {
+	#							is_core_of = ROOT
+	#
+	#							is_in_array = { ROOT.states_being_cored_formable = THIS }
+	#							is_in_array = { ROOT.states_being_cored_normal = THIS }
+	#						}
+	#
+	#						compliance > 40
+	#
+	#						OR = {
+	#							any_neighbor_state = {
+	#								is_core_of = ROOT
+	#							}
+	#
+	#							is_neighboring_core_special_case_state = yes
+	#						}
+	#					}
+	#				}
+	#
+	#				random_owned_controlled_state = {
+	#					limit = {
+	#						compliance > 40
+	#
+	#						OR = {
+	#							any_neighbor_state = {
+	#								is_core_of = ROOT
+	#							}
+	#
+	#							is_neighboring_core_special_case_state = yes
+	#						}
+	#					}
+	#
+	#					add_to_array = { ROOT.states_being_cored_normal = THIS }
+	#					ROOT = { add_political_power > -60 }
+	#					subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.25 }
+	#					set_variable = { ROOT.core_timer_@THIS = global.coring_length?60 }
+	#				}
+	#			}
+	#
+	#			# Then, increase compliance if we have little ponypower and states we can core.
+	#			if = {
+	#				limit = {
+	#					has_political_power > 39
+	#					num_of_civilian_factories_available_for_projects > 0
+	#
+	#					any_owned_state = {
+	#						is_controlled_by = ROOT
+	#
+	#						OR = {
+	#							set_temp_variable = { capital = ROOT.capital_scope }
+	#							check_variable = { state_population_k > capital.state_population_k }
+	#							arms_factory > 2
+	#							industrial_complex > 3
+	#						}
+	#
+	#						NOT = {
+	#							is_core_of = ROOT
+	#
+	#							is_in_array = { ROOT.states_getting_compliance = THIS }
+	#						}
+	#
+	#						if = {
+	#							limit = {
+	#								is_in_array = { ROOT.formable_cores = THIS }
+	#							}
+	#
+	#							compliance < 20
+	#						}
+	#						else = {
+	#							compliance < 40
+	#
+	#							OR = {
+	#								any_neighbor_state = {
+	#									is_core_of = ROOT
+	#								}
+	#
+	#								is_neighboring_core_special_case_state = yes
+	#							}
+	#						}
+	#					}
+	#				}
+	#
+	#				random_owned_controlled_state = {
+	#					limit = {
+	#						is_controlled_by = ROOT
+	#
+	#						OR = {
+	#							set_temp_variable = { capital = ROOT.capital_scope }
+	#							check_variable = { state_population_k > capital.state_population_k }
+	#							arms_factory > 2
+	#							industrial_complex > 3
+	#						}
+	#
+	#						NOT = {
+	#							is_core_of = ROOT
+	#
+	#							is_in_array = { ROOT.states_getting_compliance = THIS }
+	#						}
+	#
+	#						if = {
+	#							limit = {
+	#								is_in_array = { ROOT.formable_cores = THIS }
+	#							}
+	#
+	#							compliance < 20
+	#						}
+	#						else = {
+	#							compliance < 40
+	#
+	#							OR = {
+	#								any_neighbor_state = {
+	#									is_core_of = ROOT
+	#								}
+	#
+	#								is_neighboring_core_special_case_state = yes
+	#							}
+	#						}
+	#					}
+	#
+	#					add_to_array = { ROOT.states_getting_compliance = THIS }
+	#					ROOT = { add_political_power = -40 }
+	#					add_to_variable = { ROOT.dynamic_civ_factory_use = 1 }
+	#					set_variable = { ROOT.compliance_timer_@THIS = global.compliance_length?30 }
+	#				}
+	#			}
+	#
+	#			# If there is nothing to core or get compliance on, let's fight. If we aren't already fighting.
+	#			if = {
+	#				limit = {
+	#					OR = {
+	#						has_war = no
+	#						all_enemy_country = {
+	#							NOT = { is_neighbor_of = ROOT }
+	#						}
+	#					}
+	#					check_variable = { ROOT.states_being_claimed^num < 1 }
+	#					num_divisions > 0
+	#
+	#					has_political_power > global.claiming_cost_minus_one?19
+	#					political_power_daily > 0.1
+	#				}
+	#
+	#				if = {
+	#					limit = {
+	#						any_neighbor_country = {
+	#							NOT = {
+	#								original_tag = OOO
+	#								is_in_faction_with = ROOT
+	#								has_non_aggression_pact_with = ROOT
+	#								ROOT = { has_wargoal_against = PREV }
+	#							}
+	#
+	#							any_owned_state = {
+	#								OR = {
+	#									has_global_flag = claiming_give_war_goals
+	#									has_global_flag = claiming_declare_war
+	#
+	#									NOT = { is_claimed_by = ROOT }
+	#								}
+	#
+	#								any_neighbor_state = {
+	#									is_owned_by = ROOT
+	#								}
+	#							}
+	#						}
+	#					}
+	#
+	#					random_neighbor_country = {
+	#						limit = {
+	#							NOT = {
+	#								original_tag = OOO
+	#								is_in_faction_with = ROOT
+	#								has_non_aggression_pact_with = ROOT
+	#								ROOT = { has_wargoal_against = PREV }
+	#							}
+	#
+	#							OR = {
+	#								has_global_flag = claiming_give_war_goals
+	#								has_global_flag = claiming_declare_war
+	#
+	#								NOT = { any_owned_state = { is_claimed_by = ROOT } }
+	#							}
+	#						}
+	#
+	#						random_owned_state = {
+	#							limit = {
+	#								OR = {
+	#									has_global_flag = claiming_give_war_goals
+	#									has_global_flag = claiming_declare_war
+	#
+	#									NOT = { is_claimed_by = ROOT }
+	#								}
+	#
+	#								any_neighbor_state = {
+	#									is_owned_by = ROOT
+	#								}
+	#							}
+	#
+	#							add_to_array = { ROOT.states_being_claimed = THIS }
+	#							ROOT = { add_political_power = global.claiming_cost_negative?-20 }
+	#							subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.1 }
+	#							set_variable = { ROOT.claim_timer_@THIS = global.claiming_length?30 }
+	#						}
+	#					}
+	#				}
+	#				else_if = {
+	#					limit = {
+	#						any_country = {
+	#							NOT = {
+	#								original_tag = OOO
+	#								is_in_faction_with = ROOT
+	#								has_non_aggression_pact_with = ROOT
+	#								ROOT = { has_wargoal_against = PREV }
+	#							}
+	#
+	#							OR = {
+	#								has_global_flag = claiming_give_war_goals
+	#								has_global_flag = claiming_declare_war
+	#
+	#								NOT = { any_owned_state = { is_claimed_by = ROOT } }
+	#							}
+	#
+	#							is_neighboring_ownership_special_case_country = yes
+	#						}
+	#					}
+	#
+	#					random_country = {
+	#						limit = {
+	#							NOT = {
+	#								original_tag = OOO
+	#								is_in_faction_with = ROOT
+	#								has_non_aggression_pact_with = ROOT
+	#								ROOT = { has_wargoal_against = PREV }
+	#							}
+	#
+	#							OR = {
+	#								has_global_flag = claiming_give_war_goals
+	#								has_global_flag = claiming_declare_war
+	#
+	#								NOT = { any_owned_state = { is_claimed_by = ROOT } }
+	#							}
+	#
+	#							is_neighboring_ownership_special_case_country = yes
+	#						}
+	#
+	#						random_owned_state = {
+	#							limit = {
+	#								is_neighboring_ownership_special_case_state = yes
+	#							}
+	#
+	#							add_to_array = { ROOT.states_being_claimed = THIS }
+	#							ROOT = { add_political_power = global.claiming_cost_negative?-20 }
+	#							subtract_from_variable = { ROOT.dynamic_pp_gain_modifier = 0.1 }
+	#							set_variable = { ROOT.claim_timer_@THIS = global.claiming_length?30 }
+	#						}
+	#					}
+	#				}
+	#			}
+	#		}
+	#	}
+	#}
 }
 

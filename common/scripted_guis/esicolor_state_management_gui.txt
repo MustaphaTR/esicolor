@@ -32,7 +32,7 @@ scripted_gui = {
 				}
 
 				has_political_power > global.claiming_cost_minus_one?19
-				political_power_daily > 0.1
+				#political_power_daily > 0.1
 			}
 			THIS = {
 				NOT = {
@@ -106,6 +106,68 @@ scripted_gui = {
 							set_variable = { ROOT.claim_timer_@PREV = global.claiming_length?30 }
 						}
 					}
+				}
+			}
+		}
+
+		ai_enabled = { always = yes }
+
+		ai_test_interval = 168 # 1 week
+		ai_test_variance = 0.25
+		# ai_test_scopes = test_neighbouring_states # Would be nice to limit it, but we need them to check special case naval borders too.
+
+		ai_check = {
+			OR = {
+				has_war = no
+				all_enemy_country = {
+					NOT = { is_neighbor_of = ROOT }
+				}
+			}
+			num_divisions > 0
+			political_power_daily > 0.1
+			check_variable = { ROOT.states_being_claimed^num < 1 }
+		}
+
+		ai_check_scope = {
+			# Prioritise real neighbours over special naval borders.
+			OR = {
+				any_neighbor_state = { is_controlled_by = ROOT }
+
+				AND = {
+					is_neighboring_control_special_case_state = yes
+					ROOT = {
+						NOT = {
+							any_neighbor_country = {
+								NOT = {
+									original_tag = OOO
+									is_in_faction_with = ROOT
+									has_non_aggression_pact_with = ROOT
+									ROOT = { has_wargoal_against = PREV }
+								}
+
+								any_owned_state = {
+									OR = {
+										has_global_flag = claiming_give_war_goals
+										has_global_flag = claiming_declare_war
+
+										NOT = { is_claimed_by = ROOT }
+									}
+
+									any_neighbor_state = {
+										is_owned_by = ROOT
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		ai_weights = {
+			esicolor_claim_button_clickable_click = {
+				ai_will_do = {
+					base = 10
 				}
 			}
 		}
@@ -184,6 +246,156 @@ scripted_gui = {
 				}
 			}
 		}
+
+		ai_enabled = { always = yes }
+
+		ai_test_interval = 168 # 1 week
+		ai_test_variance = 0.25
+		ai_test_scopes = test_self_owned_states
+
+		ai_check = {
+			# If we have states we can core, don't increase compliance.
+			NOT = {
+				any_owned_state = {
+					is_controlled_by = ROOT
+					NOT = { is_core_of = ROOT }
+
+				#	if = {
+				#		limit = { is_in_array = { ROOT.formable_cores = THIS } }
+				#
+				#		compliance > 20
+				#	}
+				#	else = {
+						compliance > 40
+
+						OR = {
+							any_neighbor_state = {
+								is_core_of = ROOT
+							}
+
+							is_neighboring_core_special_case_state = yes
+						}
+				#	}
+				}
+			}
+		}
+
+		ai_check_scope = {
+		#	if = {
+		#		limit = { is_in_array = { ROOT.formable_cores = THIS } }
+		#
+		#		compliance < 20
+		#	}
+		#	else = {
+				compliance < 40
+		#	}
+		}
+
+		ai_weights = {
+			esicolor_compliance_button_clickable_click = {
+				ai_will_do = {
+					base = 50
+
+					# Focus on adjacent states to our cores.
+					modifier = {
+						factor = 0.2
+
+						NOT = {
+							any_neighbor_state = {
+								is_core_of = ROOT
+							}
+
+							is_neighboring_core_special_case_state = yes
+						}
+					}
+
+					# Focus on states with factories or high population.
+					modifier = {
+						factor = 1.1
+						industrial_complex > 1
+					}
+					modifier = {
+						factor = 1.1
+						industrial_complex > 2
+					}
+					modifier = {
+						factor = 1.1
+						industrial_complex > 3
+					}
+					modifier = {
+						factor = 1.1
+						industrial_complex > 4
+					}
+					modifier = {
+						factor = 1.1
+						industrial_complex > 5
+					}
+					modifier = {
+						factor = 1.1
+						arms_factory > 1
+					}
+					modifier = {
+						factor = 1.1
+						arms_factory > 2
+					}
+					modifier = {
+						factor = 1.1
+						arms_factory > 3
+					}
+					modifier = {
+						factor = 1.1
+						arms_factory > 4
+					}
+					modifier = {
+						factor = 1.1
+						arms_factory > 5
+					}
+					modifier = {
+						factor = 1.25
+
+						set_temp_variable = { capital = FROM.capital_scope }
+						check_variable = { state_population_k > capital.state_population_k }
+					}
+					modifier = {
+						factor = 1.1
+						state_population_k > 1000
+					}
+					modifier = {
+						factor = 1.1
+						state_population_k > 2000
+					}
+					modifier = {
+						factor = 1.1
+						state_population_k > 3000
+					}
+					modifier = {
+						factor = 1.1
+						state_population_k > 4000
+					}
+					modifier = {
+						factor = 1.1
+						state_population_k > 5000
+					}
+
+					# Focus on states that already have high compliance.
+					modifier = {
+						factor = 1.4
+
+						compliance > 10
+					}
+					modifier = {
+						factor = 1.4
+
+						compliance > 20
+					}
+					modifier = {
+						factor = 1.4
+
+						compliance > 30
+					}
+				}
+			}
+		}
 	}
 
 	esicolor_compliance_button_timer_gui = {
@@ -214,11 +426,11 @@ scripted_gui = {
 					limit = { is_in_array = { ROOT.formable_cores = PREV } }
 
 					has_political_power > 29
-					political_power_daily > 0.125
+					#political_power_daily > 0.125
 				}
 				else = {
 					has_political_power > 59
-					political_power_daily > 0.25
+					#political_power_daily > 0.25
 				}
 			}
 			THIS = {
@@ -301,6 +513,117 @@ scripted_gui = {
 								set_variable = { ROOT.core_timer_@PREV = global.coring_length?60 }
 							}
 						}
+					}
+				}
+			}
+		}
+
+		ai_enabled = { always = yes }
+
+		ai_test_interval = 168 # 1 week
+		ai_test_variance = 0.25
+		ai_test_scopes = test_self_owned_states
+
+		ai_check = {
+			# has_states_to_form_lv2_or_lv3_formable = no
+
+			#if = {
+			#	limit = { is_in_array = { ROOT.formable_cores = THIS } }
+			#
+			#	political_power_daily > 0.125
+			#}
+			#else = {
+				political_power_daily > 0.25
+			#}
+		}
+
+		#ai_check_scope = {
+		#	# Prioritise formable states.
+		#	OR = {
+		#		limit = { is_in_array = { ROOT.formable_cores = THIS } }
+		#		ROOT = {
+		#			NOT = {
+		#				any_owned_state = {
+		#					is_controlled_by = THIS
+		#					is_in_array = { ROOT.formable_cores = THIS }
+		#					compliance > 20
+		#				}
+		#			}
+		#		}
+		#	}
+		#}
+
+		ai_weights = {
+			esicolor_core_button_clickable_click = {
+				ai_will_do = {
+					base = 100
+
+					# Focus on states with factories or high population.
+					modifier = {
+						factor = 1.1
+						industrial_complex > 1
+					}
+					modifier = {
+						factor = 1.1
+						industrial_complex > 2
+					}
+					modifier = {
+						factor = 1.1
+						industrial_complex > 3
+					}
+					modifier = {
+						factor = 1.1
+						industrial_complex > 4
+					}
+					modifier = {
+						factor = 1.1
+						industrial_complex > 5
+					}
+					modifier = {
+						factor = 1.1
+						arms_factory > 1
+					}
+					modifier = {
+						factor = 1.1
+						arms_factory > 2
+					}
+					modifier = {
+						factor = 1.1
+						arms_factory > 3
+					}
+					modifier = {
+						factor = 1.1
+						arms_factory > 4
+					}
+					modifier = {
+						factor = 1.1
+						arms_factory > 5
+					}
+					modifier = {
+						factor = 1.25
+
+						set_temp_variable = { capital = FROM.capital_scope }
+						check_variable = { state_population_k > capital.state_population_k }
+					}
+					modifier = {
+						factor = 1.1
+						state_population_k > 1000
+					}
+					modifier = {
+						factor = 1.1
+						state_population_k > 2000
+					}
+					modifier = {
+						factor = 1.1
+						state_population_k > 3000
+					}
+					modifier = {
+						factor = 1.1
+						state_population_k > 4000
+					}
+					modifier = {
+						factor = 1.1
+						state_population_k > 5000
 					}
 				}
 			}
