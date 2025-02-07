@@ -10,6 +10,7 @@ adjust_state_names = {
 	adjust_state_name_251 = yes
 	adjust_state_name_252 = yes
 	adjust_state_name_268 = yes
+	adjust_state_name_290 = yes
 	adjust_state_name_295 = yes
 	adjust_state_name_296 = yes
 	adjust_state_name_329 = yes
@@ -69,6 +70,10 @@ adjust_state_names_on_state_core_changed = {
 	else_if = {
 		limit = { FROM.FROM = { state = 268 } }
 		adjust_state_name_268 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 290 } }
+		adjust_state_name_290 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 295 } }
@@ -168,6 +173,10 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 268 }
 		adjust_state_name_268 = yes
+	}
+	if = {
+		limit = { owns_state = 290 }
+		adjust_state_name_290 = yes
 	}
 	if = {
 		limit = { owns_state = 295 }
@@ -466,6 +475,17 @@ adjust_state_name_268 = {
 	}
 	else = {
 		268 = { set_state_name = ZLB }
+	}
+}
+
+adjust_state_name_290 = {
+	if = {
+		limit = { 290 = { owner = { has_government = democratic } } }
+
+		290 = { set_state_name = STATE_290 }
+	}
+	else = {
+		290 = { set_state_name = ZYO }
 	}
 }
 
