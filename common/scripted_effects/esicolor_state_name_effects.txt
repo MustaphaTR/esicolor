@@ -633,6 +633,15 @@ adjust_state_name_653 = {
 		}
 		653 = { set_state_name = STATE_653 }
 	}
+	else_if = {
+		limit = { 653 = { owner = { has_government = democratic } } }
+
+		set_province_name = {
+			id = 1821
+			name = SOV_Yekaterinburg
+		}
+		653 = { set_state_name = STATE_653 }
+	}
 	else = {
 		set_province_name = {
 			id = 1821
