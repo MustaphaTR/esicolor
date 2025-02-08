@@ -1,15 +1,15 @@
 OLA = {
-	light_tank_chassis = {
-		pool = {
-			weight = 0.9
-			icons = { 
-				GFX_GER_advanced_light_td_medium #Pz.Sfl. II
-			}
-			models = {
-				GER_light_tank_destroyer_brigade_2_entity #Pz.Sfl. II
-			}
-		}
-	}
+	#light_tank_chassis = { # SPECIALIZED TANKS ONLY SHOW UP IF TANK ROLE MATCHES
+	#	pool = {
+	#		weight = 0.9
+	#		icons = { 
+	#			GFX_GER_advanced_light_td_medium #Pz.Sfl. II
+	#		}
+	#		models = {
+	#			GER_light_tank_destroyer_brigade_2_entity #Pz.Sfl. II
+	#		}
+	#	}
+	#}
 	light_tank_destroyer_chassis = {
 		pool = {
 			weight = 2
@@ -23,7 +23,6 @@ OLA = {
 	}
 	light_tank_destroyer_chassis_3 = {
 		pool = {
-			weight = 2
 			icons = { 
 				GFX_GER_advanced_light_td_medium #Pz.Sfl. II
 			}
@@ -44,6 +43,7 @@ OLA = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
+			weight = 0.99
 			icons = { 
 				GFX_GER_advanced_medium_tank_var_1_medium #VK 30.01-30.02 (D)
 			}
@@ -54,7 +54,7 @@ OLA = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			#weight = 0.99 #Maus should show up first
+			weight = 1.1 #Maus should show up first - Then this - Then generic (which is another Maus icon)
 			icons = { 
 				GFX_GER_super_heavy_tank_var_1_medium #Panzer VII Löwe
 			}
