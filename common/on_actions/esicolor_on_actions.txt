@@ -14,7 +14,8 @@ on_actions = {
 					set_variable = { global.og_per_state_pop = global.per_state_pop }
 					set_variable = { global.og_per_state_pop_half = global.per_state_pop }
 					divide_variable = { global.og_per_state_pop_half = 2 }
-					
+					adjust_state_names = yes
+
 					if = {
 						limit = { NOT = { original_tag = OOO } }
 
@@ -71,8 +72,6 @@ on_actions = {
 			every_state = {
 				set_variable = { THIS.original_owner = THIS.owner }
 			}
-
-			adjust_state_names = yes # Just to be sure.
 		}
 	}
 

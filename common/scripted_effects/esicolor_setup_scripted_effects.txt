@@ -611,30 +611,27 @@ shuffle_population = {
 	}
 	round_temp_variable = random_index
 
-	for_each_loop = {
+	set_temp_variable = { chosen_value = global.populations^random_index }
+
+	clear_population = yes
+
+	multiply_temp_variable = { chosen_value = 100 }
+
+	for_loop_effect = {
+		end = 10
+
+		add_manpower = chosen_value
+	}
+
+	remove_from_array = {
 		array = global.populations
-
-		if = {
-			limit = { check_variable = { random_index = i } }
-
-			clear_population = yes
-
-			multiply_temp_variable = { v = 100 }
-
-			add_manpower = v
-			add_manpower = v
-			add_manpower = v
-			add_manpower = v
-			add_manpower = v
-			add_manpower = v
-			add_manpower = v
-			add_manpower = v
-			add_manpower = v
-			add_manpower = v
-
-			remove_from_array = { global.populations = i }
-			set_temp_variable = { break = 1 }
-		}
+		index = random_index
+	}
+	set_temp_variable = { break = 1 }
+}
+print_populations = {
+	every_state = {
+		log = "[GetDateText] [This.GetName] population: [?state_population_k]"
 	}
 }
 
