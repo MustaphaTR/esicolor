@@ -92,11 +92,20 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 		}
 		custom_trigger_tooltip = {
 			tooltip = RULE_ALLOW_GUARANTEES_NEIGHBORS_ONLY_TOOLTIP
-			OR = {
-				is_neighbor_of = FROM
-
-				FROM = {
-					is_neighboring_control_special_case_country = yes
+			any_country = {
+				OR = {
+					tag = FROM
+					is_ally_with = FROM
+				}
+				any_country = {
+					OR = {
+						tag = ROOT
+						is_ally_with = ROOT
+					}
+					OR = {
+						is_neighbor_of = PREV
+						PREV = { is_neighboring_control_special_case_country = yes }
+					}
 				}
 			}
 		}
@@ -967,11 +976,20 @@ DIPLOMACY_CREATE_FACTION_ENABLE_TRIGGER = { #Create Faction
 			}
 			custom_trigger_tooltip = {
 				tooltip = RULE_FACTION_NEIGHBORS_ONLY_TT
-				OR = {
-					is_neighbor_of = FROM
-
-					FROM = {
-						is_neighboring_control_special_case_country = yes
+				any_country = {
+					OR = {
+						tag = FROM
+						is_ally_with = FROM
+					}
+					any_country = {
+						OR = {
+							tag = ROOT
+							is_ally_with = ROOT
+						}
+						OR = {
+							is_neighbor_of = PREV
+							PREV = { is_neighboring_control_special_case_country = yes }
+						}
 					}
 				}
 			}
@@ -1115,11 +1133,19 @@ DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = { #Ask to join Faction
 			custom_trigger_tooltip = {
 				tooltip = RULE_FACTION_NEIGHBORS_ONLY_TT
 				any_country = {
-					is_in_faction_with = FROM
 					OR = {
-						is_neighbor_of = ROOT
-
-						is_neighboring_control_special_case_country = yes
+						tag = FROM
+						is_ally_with = FROM
+					}
+					any_country = {
+						OR = {
+							tag = ROOT
+							is_ally_with = ROOT
+						}
+						OR = {
+							is_neighbor_of = PREV
+							PREV = { is_neighboring_control_special_case_country = yes }
+						}
 					}
 				}
 			}
@@ -1262,11 +1288,19 @@ DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = { #Invite to faction
 			custom_trigger_tooltip = {
 				tooltip = RULE_FACTION_NEIGHBORS_ONLY_TT
 				any_country = {
-					is_in_faction_with = ROOT
 					OR = {
-						is_neighbor_of = FROM
-
-						is_neighboring_control_special_case_country_this_from = yes
+						tag = FROM
+						is_ally_with = FROM
+					}
+					any_country = {
+						OR = {
+							tag = ROOT
+							is_ally_with = ROOT
+						}
+						OR = {
+							is_neighbor_of = PREV
+							PREV = { is_neighboring_control_special_case_country = yes }
+						}
 					}
 				}
 			}
