@@ -278,6 +278,27 @@ defined_text = { # Country
 }
 
 defined_text = { # Country
+	name = esicolor_claim_action_no_subject
+	text = {
+		trigger = {
+			THIS = {
+				owner = {
+					NOT = {
+						is_subject_of = ROOT
+						is_subject_of = ROOT.overlord
+						has_subject = ROOT
+					}
+				}
+			}
+		}
+		localization_key = esicolor_claim_action_no_subject_met
+	}
+	text = {
+		localization_key = esicolor_claim_action_no_subject_unmet
+	}
+}
+
+defined_text = { # Country
 	name = esicolor_claim_action_no_faction
 	text = {
 		trigger = {
