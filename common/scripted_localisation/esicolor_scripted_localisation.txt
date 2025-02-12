@@ -121,7 +121,7 @@ defined_text = {
 	}
 }
 
-## Scripted GUI localization
+## State Management GUI localization
 defined_text = { # Country
 	name = esicolor_action_get_completed_selected
 	text = {
@@ -371,21 +371,6 @@ defined_text = { # Country
 }
 
 defined_text = { # Country
-	name = esicolor_compliance_action_cost
-	text = {
-		trigger = {
-			ROOT = {
-				has_political_power > 39
-			}
-		}
-		localization_key = esicolor_compliance_action_cost_met
-	}
-	text = {
-		localization_key = esicolor_compliance_action_cost_unmet
-	}
-}
-
-defined_text = { # Country
 	name = esicolor_compliance_action_ours
 	text = {
 		trigger = {
@@ -528,7 +513,6 @@ defined_text = { # Country
 		localization_key = esicolor_core_action_normal_active
 	}
 }
-
 
 defined_text = { # Country
 	name = esicolor_core_action_border
