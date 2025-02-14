@@ -1,0 +1,36 @@
+﻿characters={
+	OOI_napoleon_vi = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name=OOI_napoleon_vi
+			portraits={
+				civilian={
+					large=GFX_portraits_fra_napoleon_vi
+				}
+			}
+			country_leader={
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name=OOI_napoleon_vi
+			portraits={
+				civilian={
+					large="gfx/leaders/Europe/portrait_europe_generic_4.dds"
+				}
+			}
+			country_leader={
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
