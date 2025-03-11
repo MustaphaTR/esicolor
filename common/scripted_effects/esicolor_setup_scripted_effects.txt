@@ -922,8 +922,22 @@ randomise_anti_air = {
 	}
 }
 
+log_and_remove_air_bases = {
+	set_variable = { starting_air_bases = building_level@air_base }
+	meta_effect = {
+		text = {
+			add_to_variable = { global.starting_air_base_count_[COUNT] = 1 }
+		}
+		COUNT = "[?building_level@air_base]"
+	}
+	set_building_level = {
+		type = air_base
+		level = 0
+		instant_build = yes
+	}
+}
+
 place_starting_air_bases = {
-	# if list instead of else_if because some states appear twice for 1939 setup.
 	every_state = {
 		if = {
 			limit = { has_level_1_air_base = yes }
@@ -933,7 +947,7 @@ place_starting_air_bases = {
 				instant_build = yes
 			}
 		}
-		if = {
+		else_if = {
 			limit = { has_level_2_air_base = yes }
 			set_building_level = {
 				type = air_base
@@ -941,7 +955,7 @@ place_starting_air_bases = {
 				instant_build = yes
 			}
 		}
-		if = {
+		else_if = {
 			limit = { has_level_3_air_base = yes }
 			set_building_level = {
 				type = air_base
@@ -949,7 +963,7 @@ place_starting_air_bases = {
 				instant_build = yes
 			}
 		}
-		if = {
+		else_if = {
 			limit = { has_level_4_air_base = yes }
 			set_building_level = {
 				type = air_base
@@ -957,7 +971,7 @@ place_starting_air_bases = {
 				instant_build = yes
 			}
 		}
-		if = {
+		else_if = {
 			limit = { has_level_5_air_base = yes }
 			set_building_level = {
 				type = air_base
@@ -965,7 +979,7 @@ place_starting_air_bases = {
 				instant_build = yes
 			}
 		}
-		if = {
+		else_if = {
 			limit = { has_level_6_air_base = yes }
 			set_building_level = {
 				type = air_base
@@ -973,7 +987,7 @@ place_starting_air_bases = {
 				instant_build = yes
 			}
 		}
-		if = {
+		else_if = {
 			limit = { has_level_7_air_base = yes }
 			set_building_level = {
 				type = air_base
@@ -981,7 +995,7 @@ place_starting_air_bases = {
 				instant_build = yes
 			}
 		}
-		if = {
+		else_if = {
 			limit = { has_level_8_air_base = yes }
 			set_building_level = {
 				type = air_base
@@ -989,7 +1003,7 @@ place_starting_air_bases = {
 				instant_build = yes
 			}
 		}
-		if = {
+		else_if = {
 			limit = { has_level_10_air_base = yes }
 			set_building_level = {
 				type = air_base
