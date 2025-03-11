@@ -1,0 +1,81 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+ZLL_medium_tank_organization = {
+	name = PER_tehran_armor_organization
+	include = esicolor_generic_medium_tank_organization # Original is generic_tank_organization, but the idea version is medium_tank_manufacturer so using this one.
+	icon = GFX_idea_PER_tehran_armor
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+			OR = {
+				original_tag = ZLL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 266
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				266 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################# 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+ZLL_infantry_equipment_organization = {
+	name = PER_qorkhaneh_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_PER_qorkhaneh
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZLL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 266
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				266 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

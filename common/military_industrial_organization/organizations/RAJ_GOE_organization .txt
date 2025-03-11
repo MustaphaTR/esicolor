@@ -1,0 +1,102 @@
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+AZY_infantry_equipment_organization = {
+	name = RAJ_ammunition_factory_khadki
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_raj_rifle_factory_ishapore
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = AZY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 429
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				429 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+AEB_artillery_organization = {
+	name = RAJ_ordnance_factory_kanpur_uttar_pradesh
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_raj_ammunition_factory_khadki
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = AEB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 438
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				438 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+AZF_motorized_mechanized_organization = {
+	name = RAJ_ordnance_factory_medak_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_raj_ordnance_factory_medak
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = AZF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 427
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				427 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

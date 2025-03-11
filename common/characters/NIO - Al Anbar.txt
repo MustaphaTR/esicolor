@@ -1,0 +1,39 @@
+characters={
+	NIO_nuri_as_said = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=IRQ_nuri_as_said
+			portraits={
+				civilian={
+					large = GFX_portrait_IRQ_nuri_as_said
+					small = GFX_portrait_IRQ_nuri_as_said_small
+				}
+			}
+			country_leader={
+				traits={ IRQ_pro_western_iraqi_nationalist }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=IRQ_nuri_as_said
+			portraits={
+				civilian={
+					large="GFX_portrait_Abd_al-Malik_ibn_Hisham"
+				}
+			}
+			country_leader={
+				traits={ IRQ_pro_western_iraqi_nationalist }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

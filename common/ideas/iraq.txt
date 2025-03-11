@@ -1,0 +1,34 @@
+ideas = {
+	industrial_concern = {
+		ZYI_railway_company = {
+			name = IRQ_state_railways_company
+			picture = IRQ_state_railways_company
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = ZYI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 291
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					291 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
+		}
+	}
+}

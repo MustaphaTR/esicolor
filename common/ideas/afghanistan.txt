@@ -1,0 +1,96 @@
+ideas = {
+	industrial_concern = {
+		NOS_industrial_concern = {
+			name = AFG_baghlan_sugar_factory_idea
+			picture = generic_industrial_concern_1 # generic_industrial_concern_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = NOS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1005
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1005 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		NOL_industrial_concern = {
+			name = AFG_textile_company_idea
+			picture = generic_industrial_concern_1 # generic_industrial_concern_3
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = NOL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1006
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1006 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		ZLF_electronics_concern = {
+			name = AFG_electrical_company_idea
+			picture = AFG_electrification
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = ZLF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 267
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					267 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+	}
+}

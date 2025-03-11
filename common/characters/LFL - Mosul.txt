@@ -1,13 +1,35 @@
 characters={
 	LFL_mahmud_barzanji={
-		name=LFL_mahmud_barzanji
+		name=KUR_mahmud_barzanji
 		portraits={
 			civilian={
 				large=GFX_portrait_Sheikh_Mahmud_Barzanji
 			}
 		}
 		country_leader={
+			traits={ guerilla_warfare_expert } # For DLC consistency, fits both people anyway.
 			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LFL_ahmed_barzani={
+		name=IRQ_ahmed_barzani
+		portraits={
+			civilian={
+				large = GFX_portrait_IRQ_ahmed_barzani
+				small = GFX_portrait_IRQ_ahmed_barzani_small
+			}
+		}
+		country_leader={
+			traits={ guerilla_warfare_expert }
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			traits={ guerilla_warfare_expert }
+			ideology=conservatism
 			expire="1965.1.1.1"
 			id=-1
 		}

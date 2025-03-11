@@ -1,0 +1,75 @@
+ideas = {
+	tank_manufacturer = {
+		designer = yes
+
+		ZLL_medium_tank_manufacturer = {
+			name = PER_tehran_armor_manufacturer
+			picture = PER_tehran_armor
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+				OR = {
+					original_tag = ZLL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 266
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					266 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { medium_tank_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		ZLL_infantry_equipment_manufacturer = {
+			name = PER_qorkhaneh
+			picture = PER_qorkhaneh
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZLL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 266
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					266 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		# NIOC was the result of AIOC being nationalised and happened in 1951. Leaving it out since AIOC already exist as an Industrial Company.
+	}
+}

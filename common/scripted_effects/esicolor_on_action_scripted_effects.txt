@@ -207,6 +207,34 @@ handle_special_generals = {
 			}
 		}
 	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = LFL_ahmed_barzani ruling_only = yes }
+
+				NOT = { has_global_flag = mustafa_barzani_created }
+			}
+		}
+
+		set_global_flag = mustafa_barzani_created
+		set_character_name = IRQ_mustafa_barzani
+		set_character_flag = special_general
+
+		set_portraits = {
+			civilian = {
+				large = GFX_portrait_IRQ_mustafa_barzani
+				small = GFX_portrait_IRQ_mustafa_barzani_small
+			}
+			army = {
+				large = GFX_portrait_IRQ_mustafa_barzani
+				small = GFX_portrait_IRQ_mustafa_barzani_small
+			}
+			navy = {
+				large = GFX_portrait_IRQ_mustafa_barzani
+				small = GFX_portrait_IRQ_mustafa_barzani_small
+			}
+		}
+	}
 }
 
 handle_special_admirals = {

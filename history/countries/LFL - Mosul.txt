@@ -1,3 +1,10 @@
+676 = {
+	remove_core_of = IRQ
+
+	transfer_state_to = LFL
+	add_core_of = LFL
+}
+
 capital = 676
 oob = "676_1007"
 
@@ -20,7 +27,16 @@ set_politics = {
 	elections_allowed = no
 }
 
-recruit_character = LFL_mahmud_barzanji
+if = {
+	limit = {
+		has_dlc = "Graveyard of Empires"
+	}
+	recruit_character = LFL_ahmed_barzani
+
+	else = {
+		recruit_character = LFL_mahmud_barzanji
+	}
+}
 
 set_rule = {
 	can_generate_female_aces = yes

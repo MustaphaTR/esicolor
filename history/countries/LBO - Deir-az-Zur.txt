@@ -1,3 +1,10 @@
+680 = {
+	remove_core_of = SYR
+
+	transfer_state_to = LBO
+	add_core_of = LBO
+}
+
 capital = 680
 oob = "680_1007"
 
@@ -8,17 +15,19 @@ set_technology = {
 
 set_convoys = 5
 set_popularities = {
-	democratic = 5
-	fascism = 25
-	communism = 20
-	neutrality = 50
+	democratic = 20
+	fascism = 50
+	communism = 0
+	neutrality = 30
 }
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = fascism
 	last_election = "1935.10.10"
 	election_frequency = 36
 	elections_allowed = no
 }
+
+recruit_character = LBO_antun_saadeh
 
 set_rule = {
 	can_generate_female_aces = yes

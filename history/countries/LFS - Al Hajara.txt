@@ -1,3 +1,10 @@
+675 = {
+	remove_core_of = IRQ
+
+	transfer_state_to = LFS
+	add_core_of = LFS
+}
+
 capital = 675
 oob = "675_1007"
 
@@ -8,19 +15,19 @@ set_technology = {
 
 set_convoys = 5
 set_popularities = {
-	democratic = 10
-	fascism = 60
-	communism = 5
-	neutrality = 25
+	democratic = 15
+	fascism = 5
+	communism = 45
+	neutrality = 35
 }
 set_politics = {
-	ruling_party = fascism
+	ruling_party = communism
 	last_election = "1935.10.10"
 	election_frequency = 36
 	elections_allowed = no
 }
 
-recruit_character = LFS_rashid_ali_algaylani
+recruit_character = LFS_yusuf_salman_yusuf
 
 set_rule = {
 	can_generate_female_aces = yes

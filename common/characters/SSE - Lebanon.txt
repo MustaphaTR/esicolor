@@ -1,15 +1,37 @@
 characters={
-	SSE_habib_bacha_el_saad={
-		name=SSE_habib_bacha_el_saad
-		portraits={
-			civilian={
-				large="GFX_portrait_Hashim_al_Atassi"
+	SSE_abdallah_beyhum = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=LEB_abdallah_beyhum
+			portraits={
+				civilian={
+					large = GFX_portrait_LEB_abdallah_beyhum
+					small = GFX_portrait_LEB_abdallah_beyhum_small
+				}
+			}
+			country_leader={
+				ideology=liberalism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			ideology=liberalism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=LEB_abdallah_beyhum
+			portraits={
+				civilian={
+					large="GFX_portrait_Hashim_al_Atassi"
+				}
+			}
+			country_leader={
+				ideology=liberalism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }

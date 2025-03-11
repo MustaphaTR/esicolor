@@ -1,15 +1,39 @@
 characters={
-	LFS_rashid_ali_algaylani={
-		name=LFS_rashid_ali_algaylani
-		portraits={
-			civilian={
-				large="GFX_portrait_iraq_rashid_al_gaylani"
+	LFS_yusuf_salman_yusuf = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=IRQ_yusuf_salman_yusuf
+			portraits={
+				civilian={
+					large = GFX_portrait_IRQ_yusuf_salman_yusuf
+					small = GFX_portrait_IRQ_yusuf_salman_yusuf_small
+				}
+			}
+			country_leader={
+				traits={ IRQ_comrade_fahd }
+				ideology=leninism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=IRQ_yusuf_salman_yusuf
+			portraits={
+				civilian={
+					large="GFX_portrait_Yusuf_Salman_Yusuf"
+				}
+			}
+			country_leader={
+				traits={ IRQ_comrade_fahd }
+				ideology=leninism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }
