@@ -1143,6 +1143,24 @@ is_neighboring_control_special_case_state = {
 			}
 			299 = { is_controlled_by = ROOT }
 		}
+
+		# Bahrain-Qatar/Dammam
+		AND = {
+			THIS = { state = 1014 }
+			OR = {
+				745 = { is_controlled_by = ROOT }
+				859 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 745
+					state = 859
+				}
+			}
+			1014 = { is_controlled_by = ROOT }
+		}
 	}
 }
 
@@ -2291,6 +2309,24 @@ is_neighboring_ownership_special_case_state = {
 			}
 			299 = { is_owned_by = ROOT }
 		}
+
+		# Bahrain-Qatar/Dammam
+		AND = {
+			THIS = { state = 1014 }
+			OR = {
+				745 = { is_owned_by = ROOT }
+				859 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 745
+					state = 859
+				}
+			}
+			1014 = { is_owned_by = ROOT }
+		}
 	}
 }
 
@@ -3438,6 +3474,24 @@ is_neighboring_core_special_case_state = {
 				}
 			}
 			299 = { is_core_of = ROOT }
+		}
+
+		# Bahrain-Qatar/Dammam
+		AND = {
+			THIS = { state = 1014 }
+			OR = {
+				745 = { is_core_of = ROOT }
+				859 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 745
+					state = 859
+				}
+			}
+			1014 = { is_core_of = ROOT }
 		}
 	}
 }
@@ -4687,6 +4741,26 @@ is_neighboring_control_special_case_country = {
 			}
 			ROOT = { controls_state = 299 }
 		}
+
+		# Bahrain-Qatar/Dammam
+		AND = {
+			THIS = { controls_state = 1014 }
+			ROOT = {
+				OR = {
+					controls_state = 745
+					controls_state = 859
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 745
+					controls_state = 859
+				}
+			}
+			ROOT = { controls_state = 1014 }
+		}
 	}
 }
 
@@ -5935,6 +6009,26 @@ is_neighboring_control_special_case_country_this_from = {
 			}
 			FROM = { controls_state = 299 }
 		}
+
+		# Bahrain-Qatar/Dammam
+		AND = {
+			THIS = { controls_state = 1014 }
+			FROM = {
+				OR = {
+					controls_state = 745
+					controls_state = 859
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 745
+					controls_state = 859
+				}
+			}
+			FROM = { controls_state = 1014 }
+		}
 	}
 }
 
@@ -7182,6 +7276,26 @@ is_neighboring_ownership_special_case_country = {
 				}
 			}
 			ROOT = { owns_state = 299 }
+		}
+
+		# Bahrain-Qatar/Dammam
+		AND = {
+			THIS = { owns_state = 1014 }
+			ROOT = {
+				OR = {
+					owns_state = 745
+					owns_state = 859
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 745
+					owns_state = 859
+				}
+			}
+			ROOT = { owns_state = 1014 }
 		}
 	}
 }
