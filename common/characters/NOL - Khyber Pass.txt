@@ -1,0 +1,39 @@
+characters={
+	NOL_mohammed_daoud_khan = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=AFG_mohammed_daoud_khan
+			portraits={
+				civilian={
+					large = GFX_portrait_AFG_mohammad_daoud_khan
+					small = GFX_portrait_AFG_mohammad_daoud_khan_small
+				}
+			}
+			country_leader={
+				traits={ AFG_red_prince }
+				ideology=liberalism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=AFG_mohammed_daoud_khan
+			portraits={
+				civilian={
+					large=GFX_Portrait_Arabia_Generic_2
+				}
+			}
+			country_leader={
+				traits={ AFG_red_prince }
+				ideology=liberalism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

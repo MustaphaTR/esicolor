@@ -1,0 +1,39 @@
+characters={
+	AIS_muhammad_ibrahim_khan = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=AFG_muhammad_ibrahim_khan
+			portraits={
+				civilian={
+					large = GFX_portrait_AFG_muhammad_ibrahim_khan
+					small = GFX_portrait_AFG_muhammad_ibrahim_khan_small
+				}
+			}
+			country_leader={
+				traits={ AFG_reactionary_pm }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=AFG_muhammad_ibrahim_khan
+			portraits={
+				civilian={
+					large=GFX_Portrait_Arabia_Generic_democratic1
+				}
+			}
+			country_leader={
+				traits={ AFG_reactionary_pm }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

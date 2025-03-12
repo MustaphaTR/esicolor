@@ -1,0 +1,37 @@
+characters={
+	NOB_amunullah_khan = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=AFG_amunullah_khan
+			portraits={
+				civilian={
+					large = GFX_portrait_AFG_amanullah_khan
+					small = GFX_portrait_AFG_amanullah_khan_small
+				}
+			}
+			country_leader={
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=AFG_amunullah_khan
+			portraits={
+				civilian={
+					large=GFX_Portrait_Arabia_Generic_land_1
+				}
+			}
+			country_leader={
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
