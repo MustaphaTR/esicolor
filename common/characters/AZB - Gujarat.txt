@@ -1,0 +1,39 @@
+characters={
+	AZB_pratap_singh_rao_gaekwad = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=RAJ_pratap_singh_rao_gaekwad
+			portraits={
+				civilian={
+					large = GFX_portrait_RAJ_pratap_singh_rao_gaekwad
+					small = GFX_portrait_RAJ_pratap_singh_rao_gaekwad_small
+				}
+			}
+			country_leader={
+				traits={ RAJ_GOE_financial_strategist }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=RAJ_pratap_singh_rao_gaekwad
+			portraits={
+				civilian={
+					large=GFX_Portrait_The_Raj_Army_Generic
+				}
+			}
+			country_leader={
+				traits={ RAJ_GOE_financial_strategist }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

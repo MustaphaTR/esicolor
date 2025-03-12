@@ -1,18 +1,19 @@
 characters={
-	AZY_v_d_savarkar = {
+	AAI_maharaja_hari_singh = {
 		instance = {
 			allowed = {
 				has_dlc = "Graveyard of Empires"
 			}
-			name=RAJ_GOE_v_d_savarkar
+			name=RAJ_maharaja_hari_singh
 			portraits={
 				civilian={
-					large=GFX_RAJ_veer_savarkar
+					large = GFX_portrait_RAJ_maharaja_hari_singh
+					small = GFX_portrait_RAJ_maharaja_hari_singh_small
 				}
 			}
 			country_leader={
-				traits={ hindu_nationalist }
-				ideology=fascism_ideology
+				traits={ RAJ_GOE_the_reformer_maharaja }
+				ideology=despotism
 				expire="1965.1.1.1"
 				id=-1
 			}
@@ -21,15 +22,15 @@ characters={
 			allowed = {
 				NOT = { has_dlc = "Graveyard of Empires" }
 			}
-			name=RAJ_GOE_v_d_savarkar
+			name=RAJ_maharaja_hari_singh
 			portraits={
 				civilian={
-					large=GFX_RAJ_veer_savarkar
+					large=GFX_portrait_india_generic_land_3
 				}
 			}
 			country_leader={
-				traits={ hindu_nationalist }
-				ideology=falangism
+				traits={ RAJ_GOE_the_reformer_maharaja }
+				ideology=despotism
 				expire="1965.1.1.1"
 				id=-1
 			}

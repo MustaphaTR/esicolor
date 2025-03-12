@@ -13,17 +13,41 @@ characters={
 		}
 		gender = female
 	}
-	AZF_azam_jah={
-		name=AZF_azam_jah
-		portraits={
-			civilian={
-				large=GFX_Portrait_The_Raj_Political_Leader_Generic
+	AZF_mir_osman_ali_khan = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=RAJ_mir_osman_ali_khan
+			portraits={
+				civilian={
+					large = GFX_portrait_RAJ_mir_osman_ali_khan
+					small = GFX_portrait_RAJ_mir_osman_ali_khan_small
+				}
+			}
+			country_leader={
+				traits={ RAJ_GOE_patron_of_education }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=RAJ_mir_osman_ali_khan
+			portraits={
+				civilian={
+					large=GFX_Portrait_The_Raj_Political_Leader_Generic
+				}
+			}
+			country_leader={
+				traits={ RAJ_GOE_patron_of_education }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }

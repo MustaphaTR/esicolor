@@ -29,7 +29,16 @@ set_politics = {
 	elections_allowed = no
 }
 
-recruit_character = AEY_lord_linlithgow
+if = {
+	limit = {
+		has_dlc = "Graveyard of Empires"
+	}
+	recruit_character = AEY_freeman_freeman_thomas
+
+	else = {
+		recruit_character = AEY_lord_linlithgow
+	}
+}
 
 set_rule = {
 	can_generate_female_aces = yes

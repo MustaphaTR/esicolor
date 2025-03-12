@@ -1,0 +1,64 @@
+characters={
+	AZL_subhas_chanda_bose = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=RAJ_subhas_chanda_bose
+			portraits={
+				civilian={
+					large = GFX_portrait_RAJ_subhas_chandra_bose
+					small = GFX_portrait_RAJ_subhas_chandra_bose_civilian_small 
+				}
+			}
+			country_leader={
+				traits={ indomitable_perseverance }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ indomitable_perseverance }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ nationalistic_freedom_fighter }
+				ideology=centrism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=RAJ_subhas_chanda_bose
+			portraits={
+				civilian={
+					large=GFX_RAJ_subhas_chandra_bose
+					small=GFX_idea_RAJ_subhas_chanda_bose
+				}
+			}
+			country_leader={
+				traits={ indomitable_perseverance }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ indomitable_perseverance }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ nationalistic_freedom_fighter }
+				ideology=centrism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

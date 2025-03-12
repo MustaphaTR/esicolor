@@ -1,0 +1,39 @@
+characters={
+	AZS_maharaja_jayachamarajendra_wadiyar = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=RAJ_maharaja_jayachamarajendra_wadiyar
+			portraits={
+				civilian={
+					large = GFX_portrait_RAJ_maharaja_jayachamarajendra_wadiyar
+					small = GFX_portrait_RAJ_maharaja_jayachamarajendra_wadiyar_small
+				}
+			}
+			country_leader={
+				traits={ RAJ_GOE_scholar_king }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=RAJ_maharaja_jayachamarajendra_wadiyar
+			portraits={
+				civilian={
+					large=GFX_portrait_india_generic_land_3
+				}
+			}
+			country_leader={
+				traits={ RAJ_GOE_scholar_king }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
