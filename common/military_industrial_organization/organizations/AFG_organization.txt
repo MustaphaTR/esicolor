@@ -1,0 +1,102 @@
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+ZLF_infantry_equipment_organization = {
+	name = AFG_infantry_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_3 # GFX_idea_generic_infantry_equipment_manufacturer_2
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZLF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 267
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				267 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+NOL_infantry_equipment_organization = {
+	name = AFG_khyber_pass_rifling_org
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = NOL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 1006
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				1006 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZLF_artillery_organization = {
+	name = AFG_artillery_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_generic_artillery_manufacturer_2
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = ZLF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 267
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				267 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

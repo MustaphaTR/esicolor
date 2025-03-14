@@ -1,0 +1,308 @@
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+NII_escort_ship_organization = {
+	name = IRQ_naval_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_maizuru_naval_arsenal
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = NII
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 1011
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				1011 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+LSL_raider_ship_organization = {
+	name = IRQ_kuwait_dockyards_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_GER_deschimag
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = LSL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 656
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				656 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+NII_generic_submarine_organization = {
+	name = IRQ_submarine_organization
+	include = esicolor_generic_submarine_organization
+	icon = GFX_idea_electric_boat_company
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = submarine_manufacturer_disabled }
+			OR = {
+				original_tag = NII
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 1011
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				1011 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+ZYI_cas_aircraft_organization = {
+	name = IRQ_close_air_support_aircraft_organization
+	include = esicolor_generic_cas_aircraft_organization
+	icon = GFX_idea_focke_wulf
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = CAS_manufacturer_disabled }
+			OR = {
+				original_tag = ZYI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 291
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				291 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+NII_multi_role_aircraft_organization = {
+	name = IRQ_multi_role_aircraft_organization
+	include = esicolor_generic_multi_role_aircraft_organization
+	icon = GFX_idea_savoia_marchetti
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = NII
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 1011
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				1011 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+NII_infantry_equipment_organization = {
+	name = IRQ_infantry_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = NII
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 1011
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				1011 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZYI_support_equipment_organization = {
+	name = IRQ_support_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_1
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZYI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 291
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				291 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZYI_artillery_organization = {
+	name = IRQ_artillery_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_generic_artillery_manufacturer_2
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = ZYI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 291
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				291 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+LFL_motorized_mechanized_organization = {
+	name = IRQ_motor_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_generic_motorized_equipment_manufacturer_3
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = LFL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 676
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				676 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

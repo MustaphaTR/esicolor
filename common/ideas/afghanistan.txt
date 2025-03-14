@@ -1,4 +1,101 @@
 ideas = {
+	materiel_manufacturer = {
+		designer = yes
+
+		ZLF_infantry_equipment_manufacturer = {
+			name = IRQ_infantry_organization
+			picture = generic_infantry_equipment_manufacturer_3 # generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZLF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 267
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					267 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		NOL_infantry_equipment_manufacturer = {
+			name = IRQ_infantry_organization
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = NOL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1006
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1006 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		ZLF_artillery_manufacturer = {
+			name = IRQ_artillery_organization
+			picture = generic_artillery_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = ZLF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 267
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					267 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+	}
+
 	industrial_concern = {
 		NOS_industrial_concern = {
 			name = AFG_baghlan_sugar_factory_idea

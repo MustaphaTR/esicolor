@@ -1,0 +1,38 @@
+characters={
+	NOZ_zia_ol_din_tabatabee = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=PER_zia_ol_din_tabatabee
+			portraits={
+				civilian={
+					large=GFX_portrait_PER_zia_ol_din_tabatabee
+				}
+			}
+			country_leader={
+				traits={ dynastic_reformer }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=PER_zia_ol_din_tabatabee
+			portraits={
+				civilian={
+					large=GFX_portrait_generic_arabia_male_05
+				}
+			}
+			country_leader={
+				traits={ dynastic_reformer }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

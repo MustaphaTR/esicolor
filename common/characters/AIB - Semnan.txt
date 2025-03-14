@@ -1,0 +1,38 @@
+characters={
+	AIB_mohammad_ali_foroughi = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=PER_mohammad_ali_foroughi
+			portraits={
+				civilian={
+					large=GFX_portrait_PER_mohammad_ali_foroughi
+				}
+			}
+			country_leader={
+				traits={ renaissance_man }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=PER_mohammad_ali_foroughi
+			portraits={
+				civilian={
+					large=GFX_Portrait_Arabia_Generic_democratic1
+				}
+			}
+			country_leader={
+				traits={ renaissance_man }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

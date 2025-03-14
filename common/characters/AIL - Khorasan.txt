@@ -1,0 +1,39 @@
+characters={
+	AIL_mohammed_reza_pahlavi = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=PER_mohammed_reza_pahlavi
+			portraits={
+				civilian={
+					large=GFX_portrait_PER_mohammed_reza_pahlavi
+					small=GFX_portrait_PER_mohammed_reza_pahlavi_small
+				}
+			}
+			country_leader={
+				traits={ legitimate_heir }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=PER_mohammed_reza_pahlavi
+			portraits={
+				civilian={
+					large=GFX_Portrait_Arabia_Generic_land_3
+				}
+			}
+			country_leader={
+				traits={ legitimate_heir }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

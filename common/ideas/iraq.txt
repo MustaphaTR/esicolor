@@ -1,4 +1,296 @@
 ideas = {
+	naval_manufacturer = {
+		designer = yes
+
+		NII_convoy_escort_naval_manufacturer = {
+			name = IRQ_naval_organization
+			picture = maizuru_naval_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = NII
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1011
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1011 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+
+		LSL_raiding_fleet_naval_manufacturer = {
+			name = IRQ_kuwait_dockyards_organization
+			picture = GER_deschimag
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = LSL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 656
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					656 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { raiding_fleet_naval_manufacturer }
+		}
+
+		NII_submarine_manufacturer = {
+			name = IRQ_submarine_organization
+			picture = electric_boat_company
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = submarine_manufacturer_disabled }
+				OR = {
+					original_tag = NII
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1011
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1011 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { submarine_manufacturer }
+		}
+	}
+	
+	aircraft_manufacturer = {
+		designer = yes
+
+		ZYI_CAS_manufacturer = {
+			name = IRQ_close_air_support_aircraft_organization
+			picture = focke_wulf
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = CAS_manufacturer_disabled }
+				OR = {
+					original_tag = ZYI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 291
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					291 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { CAS_manufacturer }
+		}
+
+		NII_multi_role_aircraft_manufacturer = {
+			name = IRQ_multi_role_aircraft_organization
+			picture = savoia_marchetti
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = NII
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1011
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1011 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { multi_role_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		NII_infantry_equipment_manufacturer = {
+			name = IRQ_infantry_organization
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = NII
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1011
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1011 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		ZYI_support_equipment_manufacturer = {
+			name = IRQ_support_organization
+			picture = generic_infantry_equipment_manufacturer_1
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = ZYI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 291
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					291 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
+		}
+
+		ZYI_artillery_manufacturer = {
+			name = IRQ_artillery_organization
+			picture = generic_artillery_manufacturer_2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = ZYI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 291
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					291 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
+		LFL_motorized_equipment_manufacturer = {
+			name = IRQ_motor_organization
+			picture = generic_motorized_equipment_manufacturer_3
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = LFL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 676
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					676 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
 	industrial_concern = {
 		ZYI_railway_company = {
 			name = IRQ_state_railways_company
