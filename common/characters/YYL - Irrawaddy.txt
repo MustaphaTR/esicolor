@@ -1,0 +1,38 @@
+characters={
+	YYL_ba_maw = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=BRM_ba_maw
+			portraits={
+				civilian={
+					large=GFX_portrait_BRM_ba_maw
+				}
+			}
+			country_leader={
+				traits={ mon_dynasty_descendant }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=BRM_ba_maw
+			portraits={
+				civilian={
+					large=GFX_Portrait_Asia_Generic_land_4
+				}
+			}
+			country_leader={
+				traits={ mon_dynasty_descendant }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

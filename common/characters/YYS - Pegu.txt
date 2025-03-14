@@ -1,0 +1,36 @@
+characters={
+	YYS_archibald_cochrane = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=BRM_archibald_cochrane
+			portraits={
+				civilian={
+					large=GFX_portrait_BRM_archibald_cochrane
+				}
+			}
+			country_leader={
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=BRM_archibald_cochrane
+			portraits={
+				civilian={
+					large=GFX_Portrait_France_Generic_3
+				}
+			}
+			country_leader={
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
