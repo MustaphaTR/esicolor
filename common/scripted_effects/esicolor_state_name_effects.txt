@@ -15,12 +15,17 @@ adjust_state_names = {
 	adjust_state_name_296 = yes
 	adjust_state_name_329 = yes
 	adjust_state_name_330 = yes
+	adjust_state_name_350 = yes
+	adjust_state_name_352 = yes
+	adjust_state_name_353 = yes
 	adjust_state_name_400 = yes
+	adjust_state_name_419 = yes
 	adjust_state_name_422 = yes
 	adjust_state_name_545 = yes
 	adjust_state_name_653 = yes
 	adjust_state_name_732 = yes
 	adjust_state_name_742 = yes
+	adjust_state_name_800 = yes
 	adjust_state_name_828 = yes
 	adjust_state_name_829 = yes
 	adjust_state_name_833 = yes
@@ -92,8 +97,24 @@ adjust_state_names_on_state_core_changed = {
 		adjust_state_name_330 = yes
 	}
 	else_if = {
+		limit = { FROM.FROM = { state = 350 } }
+		adjust_state_name_350 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 352 } }
+		adjust_state_name_352 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 353 } }
+		adjust_state_name_353 = yes
+	}
+	else_if = {
 		limit = { FROM.FROM = { state = 400 } }
 		adjust_state_name_400 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 419 } }
+		adjust_state_name_419 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 422 } }
@@ -114,6 +135,10 @@ adjust_state_names_on_state_core_changed = {
 	else_if = {
 		limit = { FROM.FROM = { state = 742 } }
 		adjust_state_name_742 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 800 } }
+		adjust_state_name_800 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 828 } }
@@ -195,8 +220,24 @@ adjust_state_names_on_ruling_party_change = {
 		adjust_state_name_330 = yes
 	}
 	if = {
+		limit = { owns_state = 350 }
+		adjust_state_name_350 = yes
+	}
+	if = {
+		limit = { owns_state = 352 }
+		adjust_state_name_352 = yes
+	}
+	if = {
+		limit = { owns_state = 353 }
+		adjust_state_name_353 = yes
+	}
+	if = {
 		limit = { owns_state = 400 }
 		adjust_state_name_400 = yes
+	}
+	if = {
+		limit = { owns_state = 419 }
+		adjust_state_name_419 = yes
 	}
 	if = {
 		limit = { owns_state = 422 }
@@ -217,6 +258,10 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 742 }
 		adjust_state_name_742 = yes
+	}
+	if = {
+		limit = { owns_state = 800 }
+		adjust_state_name_800 = yes
 	}
 	if = {
 		limit = { owns_state = 828 }
@@ -573,6 +618,111 @@ adjust_state_name_330 = {
 	}
 }
 
+adjust_state_name_350 = {
+	if = {
+		limit = { 350 = { owner = { state_originally_from_KUR = yes } } }
+
+		set_province_name = {
+			id = 4512
+			name = ESO
+		}
+		set_province_name = {
+			id = 9823
+			name = VICTORY_POINTS_9823_KUR
+		}
+		set_province_name = {
+			id = 12387
+			name = VICTORY_POINTS_12387_KUR
+		}
+		350 = { set_state_name = ESO }
+	}
+	else = {
+		set_province_name = {
+			id = 4512
+			name = VICTORY_POINTS_4512
+		}
+		set_province_name = {
+			id = 9823
+			name = VICTORY_POINTS_9823
+		}
+		set_province_name = {
+			id = 12387
+			name = VICTORY_POINTS_12387
+		}
+		350 = { set_state_name = STATE_350 }
+	}
+}
+
+adjust_state_name_352 = {
+	if = {
+		limit = { 352 = { owner = { state_originally_from_KUR = yes } } }
+
+		set_province_name = {
+			id = 12476
+			name = ESZ
+		}
+		set_province_name = {
+			id = 7530
+			name = VICTORY_POINTS_7530
+		}
+		set_province_name = {
+			id = 10497
+			name = VICTORY_POINTS_10497
+		}
+		352 = { set_state_name = ESZ }
+	}
+	else = {
+		set_province_name = {
+			id = 12476
+			name = VICTORY_POINTS_12476
+		}
+		set_province_name = {
+			id = 7530
+			name = VICTORY_POINTS_7530_TUR
+		}
+		set_province_name = {
+			id = 10497
+			name = VICTORY_POINTS_10497_TUR
+		}
+		352 = { set_state_name = VICTORY_POINTS_12476 }
+	}
+}
+
+adjust_state_name_353 = {
+	if = {
+		limit = { 353 = { owner = { state_originally_from_KUR = yes } } }
+
+		set_province_name = {
+			id = 9860
+			name = ESE
+		}
+		set_province_name = {
+			id = 876
+			name = VICTORY_POINTS_876
+		}
+		set_province_name = {
+			id = 9868
+			name = VICTORY_POINTS_9868
+		}
+		353 = { set_state_name = ESE }
+	}
+	else = {
+		set_province_name = {
+			id = 9860
+			name = VICTORY_POINTS_9860
+		}
+		set_province_name = {
+			id = 876
+			name = VICTORY_POINTS_876_TUR
+		}
+		set_province_name = {
+			id = 9868
+			name = VICTORY_POINTS_9868_TUR
+		}
+		353 = { set_state_name = STATE_353 }
+	}
+}
+
 adjust_state_name_400 = {
 	if = {
 		limit = {
@@ -598,6 +748,17 @@ adjust_state_name_400 = {
 			name = SOV_Vyatka
 		}
 		400 = { set_state_name = SOV_Vyatka }
+	}
+}
+
+adjust_state_name_419 = {
+	if = {
+		limit = { 419 = { owner = { state_originally_from_KUR = yes } } }
+
+		419 = { set_state_name = AIY }
+	}
+	else = {
+		419 = { set_state_name = STATE_419 }
 	}
 }
 
@@ -693,6 +854,33 @@ adjust_state_name_742 = {
 			name = SOV_Dushanbe
 		}
 		742 = { set_state_name = SOV_Dushanbe }
+	}
+}
+
+adjust_state_name_800 = {
+	if = {
+		limit = { 800 = { owner = { state_originally_from_KUR = yes } } }
+
+		set_province_name = {
+			id = 6935
+			name = BOO
+		}
+		set_province_name = {
+			id = 12376
+			name = VICTORY_POINTS_12376
+		}
+		800 = { set_state_name = BOO }
+	}
+	else = {
+		set_province_name = {
+			id = 6935
+			name = VICTORY_POINTS_6935
+		}
+		set_province_name = {
+			id = 12376
+			name = VICTORY_POINTS_12376_TUR
+		}
+		800 = { set_state_name = STATE_800 }
 	}
 }
 
