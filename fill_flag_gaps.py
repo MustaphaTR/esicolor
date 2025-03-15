@@ -24,6 +24,7 @@ while i < 1017:
 
     if len(name) == 4 and name.startswith("IO"): name = name[:2].replace("IO", "N") + name[2:]
 
+    if name.endswith("OIL"): name = name.replace("OIL", "PJM")
     if name.endswith("IAS"): name = name.replace("IAS", "JBT")
     if name.endswith("ELS"): name = name.replace("ELS", "FMT")
     if name.endswith("AOI"): name = name.replace("AOI", "BPJ")
