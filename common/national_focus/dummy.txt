@@ -490,6 +490,17 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = RAJ_special_economic_zones
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_autarky_achieved
+
+		completion_reward = { }
+	}
+
 	# Manpower Ideas
 	focus = {
 		id = AST_citizen_military_forces
@@ -497,7 +508,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = GER_autarky_achieved
+		relative_position_id = RAJ_special_economic_zones
 
 		completion_reward = { }
 	}
@@ -879,6 +890,17 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = RAJ_tryst_with_destiny
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_ally_the_shade
+
+		completion_reward = { }
+	}
+
 	# Generic News Events
 	focus = {
 		id = GER_demand_memel
@@ -886,7 +908,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = GER_ally_the_shade
+		relative_position_id = RAJ_tryst_with_destiny
 
 		completion_reward = { }
 	}
@@ -1192,6 +1214,50 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = RAJ_a_secular_state
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_establish_volkskommissariats
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = RAJ_united_bengal
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_a_secular_state
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = RAJ_eastern_pakistan
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_united_bengal
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = RAJ_red_in_the_shadows
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_eastern_pakistan
+
+		completion_reward = { }
+	}
+
 	# Intelligence Operations
 	focus = {
 		id = SPR_regional_defense_council_of_aragon
@@ -1199,7 +1265,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = GER_establish_volkskommissariats
+		relative_position_id = RAJ_red_in_the_shadows
 
 		completion_reward = { }
 	}
@@ -2921,6 +2987,17 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = RAJ_the_ordnance_factories_board
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = NOR_norwegian_engineering
+
+		completion_reward = { }
+	}
+
 	# Army Spirits
 	focus = {
 		id = NOR_officers_academy
@@ -2928,7 +3005,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = NOR_norwegian_engineering
+		relative_position_id = RAJ_the_ordnance_factories_board
 
 		completion_reward = { }
 	}
@@ -2986,6 +3063,18 @@ focus_tree = {
 		y = 1
 		cost = 8
 		relative_position_id = COG_the_mwami_of_burundi_focus
+
+		completion_reward = { }
+	}
+
+	# Resistance Modifiers
+	focus = {
+		id = RAJ_forward_bloc
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_bathe_in_hellfire
 
 		completion_reward = { }
 	}
