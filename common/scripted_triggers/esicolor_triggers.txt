@@ -1148,14 +1148,14 @@ is_neighboring_control_special_case_state = {
 		AND = {
 			THIS = { state = 1014 }
 			OR = {
-				745 = { is_controlled_by = ROOT }
+				765 = { is_controlled_by = ROOT }
 				859 = { is_controlled_by = ROOT }
 			}
 		}
 		AND = {
 			THIS = {
 				OR = {
-					state = 745
+					state = 765
 					state = 859
 				}
 			}
@@ -2314,14 +2314,14 @@ is_neighboring_ownership_special_case_state = {
 		AND = {
 			THIS = { state = 1014 }
 			OR = {
-				745 = { is_owned_by = ROOT }
+				765 = { is_owned_by = ROOT }
 				859 = { is_owned_by = ROOT }
 			}
 		}
 		AND = {
 			THIS = {
 				OR = {
-					state = 745
+					state = 765
 					state = 859
 				}
 			}
@@ -3480,14 +3480,14 @@ is_neighboring_core_special_case_state = {
 		AND = {
 			THIS = { state = 1014 }
 			OR = {
-				745 = { is_core_of = ROOT }
+				765 = { is_core_of = ROOT }
 				859 = { is_core_of = ROOT }
 			}
 		}
 		AND = {
 			THIS = {
 				OR = {
-					state = 745
+					state = 765
 					state = 859
 				}
 			}
@@ -4747,7 +4747,7 @@ is_neighboring_control_special_case_country = {
 			THIS = { controls_state = 1014 }
 			ROOT = {
 				OR = {
-					controls_state = 745
+					controls_state = 765
 					controls_state = 859
 				}
 			}
@@ -4755,7 +4755,7 @@ is_neighboring_control_special_case_country = {
 		AND = {
 			THIS = {
 				OR = {
-					controls_state = 745
+					controls_state = 765
 					controls_state = 859
 				}
 			}
@@ -6015,7 +6015,7 @@ is_neighboring_control_special_case_country_this_from = {
 			THIS = { controls_state = 1014 }
 			FROM = {
 				OR = {
-					controls_state = 745
+					controls_state = 765
 					controls_state = 859
 				}
 			}
@@ -6023,7 +6023,7 @@ is_neighboring_control_special_case_country_this_from = {
 		AND = {
 			THIS = {
 				OR = {
-					controls_state = 745
+					controls_state = 765
 					controls_state = 859
 				}
 			}
@@ -7283,7 +7283,7 @@ is_neighboring_ownership_special_case_country = {
 			THIS = { owns_state = 1014 }
 			ROOT = {
 				OR = {
-					owns_state = 745
+					owns_state = 765
 					owns_state = 859
 				}
 			}
@@ -7291,7 +7291,7 @@ is_neighboring_ownership_special_case_country = {
 		AND = {
 			THIS = {
 				OR = {
-					owns_state = 745
+					owns_state = 765
 					owns_state = 859
 				}
 			}
