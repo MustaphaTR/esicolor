@@ -1,3 +1,43 @@
 ideas = {
+	country = {
+		# These are checked in generic scripted effects file, which i don't want to override. So keeping them here.
+		BALTIC_communist_propaganda = {
+			allowed = {
+				NOT = { has_country_flag = banned_communism_flag }
+				always = no
+			}
 
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				communism_drift = 0.1
+				stability_weekly = -0.015
+			}
+		}
+
+		BALTIC_communist_militancy = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = ast_abandon_the_westminster_system_communism
+
+			modifier = {
+				communism_drift = 0.1
+				war_support_weekly = -0.02
+			}
+		}
+	}
 }

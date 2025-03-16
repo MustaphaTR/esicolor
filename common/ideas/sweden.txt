@@ -27,6 +27,25 @@ ideas = {
 
 			picture = SWE_hungershield
 		}
+
+		# This is checked in generic scripted effects file, which i don't want to override. So keeping it here.
+		SWE_foreign_communist_influence = {
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				communism_drift = 0.15
+				drift_defence_factor = -0.3
+			}
+
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+		}
 	}
 
 	tank_manufacturer = {

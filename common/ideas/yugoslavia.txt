@@ -1,4 +1,71 @@
 ideas = {
+	country = {
+		# These are checked in generic scripted effects file, which i don't want to override. So keeping them here.
+		pan_slavic_propaganda = {
+			picture = generic_communism_drift_bonus
+			
+			allowed = {
+				original_tag = YUG
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.2
+			}
+		}
+
+		agitated_peasants = {
+			picture = generic_communism_drift_bonus
+			
+			allowed = {
+				original_tag = YUG
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.2
+			}
+		}
+
+		armed_communist_militants = {
+			picture = generic_communism_drift_bonus
+			
+			allowed = {
+				original_tag = YUG
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.2
+				stability_weekly = -0.005
+			}
+		}
+	}
+
 	aircraft_manufacturer = { 
 		designer = yes
 
