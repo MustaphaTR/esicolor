@@ -97,14 +97,8 @@ randomised_preset_selected = {
 	check_variable = { global.setup_dockyards_min = 0 }
 	check_variable = { global.setup_dockyards_max = 2 }
 	check_variable = { global.setup_synthetic_refineries = 1 }
-	check_variable = { global.setup_synthetic_refineries_min = 2 }
-	check_variable = { global.setup_synthetic_refineries_max = 2 }
-	if = {
-		limit = { has_start_date > 1939.1.1 }
-
-		check_variable = { global.setup_synthetic_refineries_min = 12 }
-		check_variable = { global.setup_synthetic_refineries_max = 12 }
-	}
+	check_variable = { global.setup_synthetic_refineries_min = global.starting_synthetic_refinery_count }
+	check_variable = { global.setup_synthetic_refineries_max = global.starting_synthetic_refinery_count }
 	check_variable = { global.setup_fuel_silos = 1 }
 	check_variable = { global.setup_fuel_silos_chance = 2 }
 

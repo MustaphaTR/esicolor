@@ -71,7 +71,6 @@ country_event = {
 				}
 
 				clear_dockyards = yes
-				clear_synthetic_refineries = yes
 				clear_fuel_silos = yes
 				clear_forts = yes
 				clear_anti_air = yes
@@ -79,6 +78,8 @@ country_event = {
 
 				set_state_category = town
 			}
+
+			clear_synthetic_refineries = yes
 
 			set_global_flag = leader_traits_disabled
 			set_global_flag = prospect_for_resources_disabled
@@ -110,39 +111,28 @@ country_event = {
 
 				random_list = {
 					seed = random
-					9 = {
+					1 = {
 						create_intelligence_agency = yes
 					}
-					960 = { }
+					1015 = { }
 				}
 			}
 
 			every_state = {
-				shuffle_population = yes
-				randomise_infrastructure = yes
-
-				clear_factories = yes
-				randomise_factories = yes
-
-				if = {
-					limit = { is_coastal = yes }
-
-					clear_dockyards = yes
-					randomise_dockyards = yes
-				}
-
-				clear_synthetic_refineries = yes
-
-				clear_fuel_silos = yes
-				randomise_fuel_silos = yes
-
-				randomise_air_bases = yes
-				randomise_anti_air = yes
-				randomise_radar_stations = yes
-				randomise_state_category = yes
 				randomise_resources = yes
 			}
 
+			shuffle_population = yes
+			randomise_state_category = yes
+
+			randomise_infrastructure = yes
+			randomise_air_bases = yes
+			randomise_anti_air = yes
+			randomise_radar_stations = yes
+
+			randomise_factories = yes
+			randomise_dockyards = yes
+			randomise_fuel_silos = yes
 			randomise_synthetic_refineries = yes
 
 			set_global_flag = claiming_give_war_goals
@@ -270,9 +260,8 @@ country_event = {
 		country_event = esicolor.4
 		every_state = {
 			custom_effect_tooltip = esicolor.3.c_tt
-
-			shuffle_population = yes
 		}
+		shuffle_population = yes
 	}
 	option = {
 		name = esicolor.2.e
@@ -320,9 +309,9 @@ country_event = {
 		country_event = esicolor.5
 		every_state = {
 			custom_effect_tooltip = esicolor.4.e_tt
-
-			randomise_infrastructure = yes
 		}
+
+		randomise_infrastructure = yes
 	}
 }
 
@@ -367,12 +356,11 @@ country_event = {
 		name = esicolor.5.e
 		country_event = esicolor.11
 		every_state = {
-			clear_factories = yes
 			custom_effect_tooltip = esicolor.5.e_tt1
 			custom_effect_tooltip = esicolor.5.e_tt2
-
-			randomise_factories = yes
 		}
+
+		randomise_factories = yes
 	}
 }
 
@@ -406,9 +394,7 @@ country_event = {
 	option = {
 		name = esicolor.6.c
 		country_event = esicolor.18
-		every_state = {
-			randomise_air_bases = yes
-		}
+		randomise_air_bases = yes
 	}
 }
 
@@ -435,9 +421,7 @@ country_event = {
 	option = {
 		name = esicolor.7.c
 		country_event = esicolor.8
-		every_state = {
-			randomise_state_category = yes
-		}
+		randomise_state_category = yes
 	}
 }
 
@@ -566,9 +550,7 @@ country_event = {
 	option = {
 		name = esicolor.9.c
 		country_event = esicolor.21
-		every_state = {
-			randomise_radar_stations = yes
-		}
+		randomise_radar_stations = yes
 	}
 }
 
@@ -673,11 +655,9 @@ country_event = {
 		every_state = {
 			limit = { is_coastal = yes }
 
-			clear_dockyards = yes
 			custom_effect_tooltip = esicolor.11.e_tt
-
-			randomise_dockyards = yes
 		}
+		randomise_dockyards = yes
 	}
 }
 
@@ -822,7 +802,7 @@ country_event = {
 				1 = {
 					create_intelligence_agency = yes
 				}
-				980 = { }
+				1015 = { }
 			}
 		}
 	}
@@ -844,17 +824,11 @@ country_event = {
 	option = {
 		name = esicolor.16.b
 		country_event = esicolor.17
-		every_state = {
-			clear_synthetic_refineries = yes
-		}
+		clear_synthetic_refineries = yes
 	}
 	option = {
 		name = esicolor.16.c
 		country_event = esicolor.17
-		every_state = {
-			clear_synthetic_refineries = yes
-		}
-
 		if = {
 			limit = { date > 1939.1.1 }
 
@@ -890,10 +864,7 @@ country_event = {
 	option = {
 		name = esicolor.17.c
 		country_event = esicolor.6
-		every_state = {
-			clear_fuel_silos = yes
-			randomise_fuel_silos = yes
-		}
+		randomise_fuel_silos = yes
 	}
 }
 
@@ -918,9 +889,7 @@ country_event = {
 	option = {
 		name = esicolor.18.c
 		country_event = esicolor.9
-		every_state = {
-			randomise_anti_air = yes
-		}
+		randomise_anti_air = yes
 	}
 }
 

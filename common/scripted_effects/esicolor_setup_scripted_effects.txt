@@ -578,56 +578,60 @@ get_total_manpower = {
 		add_to_array = { global.populations = state_population_k }
 	}
 	set_variable = { global.per_state_pop = global.total_pop }
-	divide_variable = { global.per_state_pop = 981 }
+	divide_variable = { global.per_state_pop = 1016 }
 	multiply_variable = { global.per_state_pop = 1000 }
 	round_variable = global.per_state_pop
 }
 
 randomise_population = {
 	hidden_effect = {
-		set_temp_variable = { manpowertoadd = 500000 }
-		randomize_temp_variable = {
-			var = manpowertoadd
-			distribution = uniform
-			min = global.setup_population_min
-			max = global.setup_population_max
-		}
+		every_state = {
+			set_temp_variable = { manpowertoadd = 500000 }
+			randomize_temp_variable = {
+				var = manpowertoadd
+				distribution = uniform
+				min = global.setup_population_min
+				max = global.setup_population_max
+			}
 
-		clear_population = yes
-		add_manpower = manpowertoadd
-		add_manpower = manpowertoadd
+			clear_population = yes
+			add_manpower = manpowertoadd
+			add_manpower = manpowertoadd
+		}
 	}
 }
 
 shuffle_population = {
-	set_temp_variable = { random_index = 0 }
-	set_temp_variable = { highest_index = global.populations^num }
-	subtract_from_temp_variable = { highest_index = 1 }
-	randomize_temp_variable = {
-		var = random_index
-		distribution = uniform
-		min = 0
-		max = highest_index
+	every_state = {
+		set_temp_variable = { random_index = 0 }
+		set_temp_variable = { highest_index = global.populations^num }
+		subtract_from_temp_variable = { highest_index = 1 }
+		randomize_temp_variable = {
+			var = random_index
+			distribution = uniform
+			min = 0
+			max = highest_index
+		}
+		round_temp_variable = random_index
+
+		set_temp_variable = { chosen_value = global.populations^random_index }
+
+		clear_population = yes
+
+		multiply_temp_variable = { chosen_value = 100 }
+
+		for_loop_effect = {
+			end = 10
+
+			add_manpower = chosen_value
+		}
+
+		remove_from_array = {
+			array = global.populations
+			index = random_index
+		}
+		set_temp_variable = { break = 1 }
 	}
-	round_temp_variable = random_index
-
-	set_temp_variable = { chosen_value = global.populations^random_index }
-
-	clear_population = yes
-
-	multiply_temp_variable = { chosen_value = 100 }
-
-	for_loop_effect = {
-		end = 10
-
-		add_manpower = chosen_value
-	}
-
-	remove_from_array = {
-		array = global.populations
-		index = random_index
-	}
-	set_temp_variable = { break = 1 }
 }
 print_populations = {
 	every_state = {
@@ -637,18 +641,20 @@ print_populations = {
 
 randomise_infrastructure = {
 	hidden_effect = {
-		set_temp_variable = { infrastructuretoadd = 2 }
-		randomize_temp_variable = {
-			var = infrastructuretoadd
-			distribution = uniform
-			min = global.setup_infrastructure_min
-			max = global.setup_infrastructure_max
-		}
+		every_state = {
+			set_temp_variable = { infrastructuretoadd = 2 }
+			randomize_temp_variable = {
+				var = infrastructuretoadd
+				distribution = uniform
+				min = global.setup_infrastructure_min
+				max = global.setup_infrastructure_max
+			}
 
-		set_building_level = {
-			type = infrastructure
-			level = infrastructuretoadd
-			instant_build = yes
+			set_building_level = {
+				type = infrastructure
+				level = infrastructuretoadd
+				instant_build = yes
+			}
 		}
 	}
 }
@@ -684,37 +690,45 @@ randomise_factories = {
 }
 
 randomise_civilian_factories = {
-	hidden_effect = {
-		set_temp_variable = { civstoadd = 1 }
-		randomize_temp_variable = {
-			var = civstoadd
-			distribution = uniform
-			min = global.setup_civilian_factories_min
-			max = global.setup_civilian_factories_max
-		}
+	every_state = {
+		hidden_effect = {
+			clear_civilian_factories = yes
 
-		add_building_construction = {
-			type = industrial_complex
-			level = civstoadd
-			instant_build = yes
+			set_temp_variable = { civstoadd = 1 }
+			randomize_temp_variable = {
+				var = civstoadd
+				distribution = uniform
+				min = global.setup_civilian_factories_min
+				max = global.setup_civilian_factories_max
+			}
+
+			add_building_construction = {
+				type = industrial_complex
+				level = civstoadd
+				instant_build = yes
+			}
 		}
 	}
 }
 
 randomise_military_factories = {
-	hidden_effect = {
-		set_temp_variable = { milstoadd = 1 }
-		randomize_temp_variable = {
-			var = milstoadd
-			distribution = uniform
-			min = global.setup_military_factories_min
-			max = global.setup_military_factories_max
-		}
+	every_state = {
+		hidden_effect = {
+			clear_military_factories = yes
 
-		add_building_construction = {
-			type = arms_factory
-			level = milstoadd
-			instant_build = yes
+			set_temp_variable = { milstoadd = 1 }
+			randomize_temp_variable = {
+				var = milstoadd
+				distribution = uniform
+				min = global.setup_military_factories_min
+				max = global.setup_military_factories_max
+			}
+
+			add_building_construction = {
+				type = arms_factory
+				level = milstoadd
+				instant_build = yes
+			}
 		}
 	}
 }
@@ -730,19 +744,25 @@ clear_dockyards = {
 }
 
 randomise_dockyards = {
-	hidden_effect = {
-		set_temp_variable = { dyardstoadd = 1 }
-		randomize_temp_variable = {
-			var = dyardstoadd
-			distribution = uniform
-			min = global.setup_dockyards_min
-			max = global.setup_dockyards_max
-		}
+	every_state = {
+		limit = { is_coastal = yes }
 
-		add_building_construction = {
-			type = dockyard
-			level = dyardstoadd
-			instant_build = yes
+		hidden_effect = {
+			clear_dockyards = yes
+
+			set_temp_variable = { dyardstoadd = 1 }
+			randomize_temp_variable = {
+				var = dyardstoadd
+				distribution = uniform
+				min = global.setup_dockyards_min
+				max = global.setup_dockyards_max
+			}
+
+			add_building_construction = {
+				type = dockyard
+				level = dyardstoadd
+				instant_build = yes
+			}
 		}
 	}
 }
@@ -761,6 +781,8 @@ clear_synthetic_refineries = {
 
 randomise_synthetic_refineries = {
 	hidden_effect = {
+		clear_synthetic_refineries = yes
+
 		set_temp_variable = { refineriestoadd = 5 }
 		randomize_temp_variable = {
 			var = refineriestoadd
@@ -798,13 +820,17 @@ clear_fuel_silos = {
 }
 
 randomise_fuel_silos = {
-	random = {
-		chance = global.setup_fuel_silos_chance
+	every_state = {
+		clear_fuel_silos = yes
 
-		add_building_construction = {
-			type = fuel_silo
-			level = 1
-			instant_build = yes
+		random = {
+			chance = global.setup_fuel_silos_chance
+
+			add_building_construction = {
+				type = fuel_silo
+				level = 1
+				instant_build = yes
+			}
 		}
 	}
 }
@@ -818,123 +844,132 @@ clear_anti_air = {
 }
 
 randomise_anti_air = {
-	random_list = {
-		seed = random
-		967 = {
-			modifier = {
-				add = -2
+	every_state = {
+		random_list = {
+			seed = random
+			var:global.starting_anti_air_count_0 = {
+				modifier = {
+					add = -2
 
-				has_start_date > 1939.1.1
-			}
-			modifier = {
-				factor = 0
+					has_start_date > 1939.1.1
+				}
+				modifier = {
+					factor = 0
 
-				check_variable = { global.setup_anti_air_min > 0 }
-			}
-			set_building_level = {
-				type = anti_air_building
-				level = 0
-				instant_build = yes
-			}
-		}
-		2 = {
-			modifier = {
-				factor = 0
-
-				OR = {
-					check_variable = { global.setup_anti_air_min > 1 }
-					check_variable = { global.setup_anti_air_max < 1 }
+					check_variable = { global.setup_anti_air_min > 0 }
+				}
+				set_building_level = {
+					type = anti_air_building
+					level = 0
+					instant_build = yes
 				}
 			}
-			set_building_level = {
-				type = anti_air_building
-				level = 1
-				instant_build = yes
-			}
-		}
-		8 = {
-			modifier = {
-				add = -2
+			var:global.starting_anti_air_count_1 = {
+				modifier = {
+					factor = 0
 
-				has_start_date > 1939.1.1
-			}
-			modifier = {
-				factor = 0
-
-				OR = {
-					check_variable = { global.setup_anti_air_min > 2 }
-					check_variable = { global.setup_anti_air_max < 2 }
+					OR = {
+						check_variable = { global.setup_anti_air_min > 1 }
+						check_variable = { global.setup_anti_air_max < 1 }
+					}
+				}
+				set_building_level = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
 				}
 			}
-			set_building_level = {
-				type = anti_air_building
-				level = 2
-				instant_build = yes
-			}
-		}
-		1 = {
-			modifier = {
-				factor = 0
+			var:global.starting_anti_air_count_2 = {
+				modifier = {
+					add = -2
 
-				OR = {
-					check_variable = { global.setup_anti_air_min > 3 }
-					check_variable = { global.setup_anti_air_max < 3 }
+					has_start_date > 1939.1.1
+				}
+				modifier = {
+					factor = 0
+
+					OR = {
+						check_variable = { global.setup_anti_air_min > 2 }
+						check_variable = { global.setup_anti_air_max < 2 }
+					}
+				}
+				set_building_level = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
 				}
 			}
-			set_building_level = {
-				type = anti_air_building
-				level = 3
-				instant_build = yes
-			}
-		}
-		0 = {
-			modifier = {
-				add = 1
+			var:global.starting_anti_air_count_3 = {
+				modifier = {
+					factor = 0
 
-				OR = {
-					check_variable = { global.setup_anti_air_min = 4 }
-					check_variable = { global.setup_anti_air_max = 4 }
+					OR = {
+						check_variable = { global.setup_anti_air_min > 3 }
+						check_variable = { global.setup_anti_air_max < 3 }
+					}
+				}
+				set_building_level = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
 				}
 			}
-			set_building_level = {
-				type = anti_air_building
-				level = 4
-				instant_build = yes
-			}
-		}
-		3 = {
-			modifier = {
-				add = 4
+			var:global.starting_anti_air_count_4 = {
+				modifier = {
+					add = 1
 
-				has_start_date > 1939.1.1
+					OR = {
+						check_variable = { global.setup_anti_air_min = 4 }
+						check_variable = { global.setup_anti_air_max = 4 }
+					}
+				}
+				set_building_level = {
+					type = anti_air_building
+					level = 4
+					instant_build = yes
+				}
 			}
-			modifier = {
-				factor = 0
+			var:global.starting_anti_air_count_5 = {
+				modifier = {
+					add = 4
 
-				check_variable = { global.setup_anti_air_max < 5 }
-			}
-			set_building_level = {
-				type = anti_air_building
-				level = 5
-				instant_build = yes
+					has_start_date > 1939.1.1
+				}
+				modifier = {
+					factor = 0
+
+					check_variable = { global.setup_anti_air_max < 5 }
+				}
+				set_building_level = {
+					type = anti_air_building
+					level = 5
+					instant_build = yes
+				}
 			}
 		}
 	}
 }
 
-log_and_remove_air_bases = {
+log_buildings = {
 	set_variable = { starting_air_bases = building_level@air_base }
+	set_variable = { global.starting_air_base_count_9 = 0 }
 	meta_effect = {
 		text = {
 			add_to_variable = { global.starting_air_base_count_[COUNT] = 1 }
 		}
 		COUNT = "[?building_level@air_base]"
 	}
-	set_building_level = {
-		type = air_base
-		level = 0
-		instant_build = yes
+
+	set_variable = { global.starting_anti_air_count_4 = 0 }
+	meta_effect = {
+		text = {
+			add_to_variable = { global.starting_anti_air_count_[COUNT] = 1 }
+		}
+		COUNT = "[?building_level@anti_air_building]"
 	}
+
+	set_variable = { starting_synthetic_refineries = building_level@synthetic_refinery }
+	add_to_variable = { global.starting_synthetic_refinery_count = building_level@synthetic_refinery }
 }
 
 log_resources = {
@@ -961,8 +996,6 @@ log_resources = {
 	set_variable = { starting_chromium = resource@chromium }
 	set_variable = { starting_chromium_minus = starting_chromium }
 	multiply_variable = { starting_chromium_minus = -1 }
-
-	set_variable = { starting_synthetic_refineries = building_level@synthetic_refinery }
 }
 remove_starting_resources = {
 	add_resource = {
@@ -988,6 +1021,14 @@ remove_starting_resources = {
 	add_resource = {
 		type = chromium
 		amount = starting_chromium_minus
+	}
+}
+
+clear_airbases = {
+	set_building_level = {
+		type = air_base
+		level = 0
+		instant_build = yes
 	}
 }
 
@@ -1069,195 +1110,167 @@ place_starting_air_bases = {
 }
 
 randomise_air_bases = {
-	random_list = {
-		seed = random
-		658 = {
-			modifier = {
-				add = -13
+	every_state = {
+		random_list = {
+			seed = random
+			var:global.starting_air_base_count_0 = {
+				modifier = {
+					factor = 0
 
-				has_start_date > 1939.1.1
-			}
-			modifier = {
-				factor = 0
-
-				check_variable = { global.setup_air_bases_min > 0 }
-			}
-			set_building_level = {
-				type = air_base
-				level = 0
-				instant_build = yes
-			}
-		}
-		86 = {
-			modifier = {
-				add = 3
-
-				has_start_date > 1939.1.1
-			}
-			modifier = {
-				factor = 0
-
-				OR = {
-					check_variable = { global.setup_air_bases_min > 1 }
-					check_variable = { global.setup_air_bases_max < 1 }
+					check_variable = { global.setup_air_bases_min > 0 }
+				}
+				set_building_level = {
+					type = air_base
+					level = 0
+					instant_build = yes
 				}
 			}
-			set_building_level = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-		58 = {
-			modifier = {
-				factor = 0
+			var:global.starting_air_base_count_1 = {
+				modifier = {
+					factor = 0
 
-				OR = {
-					check_variable = { global.setup_air_bases_min > 2 }
-					check_variable = { global.setup_air_bases_max < 2 }
+					OR = {
+						check_variable = { global.setup_air_bases_min > 1 }
+						check_variable = { global.setup_air_bases_max < 1 }
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 1
+					instant_build = yes
 				}
 			}
-			set_building_level = {
-				type = air_base
-				level = 2
-				instant_build = yes
-			}
-		}
-		77 = {
-			modifier = {
-				add = 7
+			var:global.starting_air_base_count_2 = {
+				modifier = {
+					factor = 0
 
-				has_start_date > 1939.1.1
-			}
-			modifier = {
-				factor = 0
-
-				OR = {
-					check_variable = { global.setup_air_bases_min > 3 }
-					check_variable = { global.setup_air_bases_max < 3 }
+					OR = {
+						check_variable = { global.setup_air_bases_min > 2 }
+						check_variable = { global.setup_air_bases_max < 2 }
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 2
+					instant_build = yes
 				}
 			}
-			set_building_level = {
-				type = air_base
-				level = 3
-				instant_build = yes
-			}
-		}
-		26 = {
-			modifier = {
-				factor = 0
+			var:global.starting_air_base_count_3 = {
+				modifier = {
+					factor = 0
 
-				OR = {
-					check_variable = { global.setup_air_bases_min > 4 }
-					check_variable = { global.setup_air_bases_max < 4 }
+					OR = {
+						check_variable = { global.setup_air_bases_min > 3 }
+						check_variable = { global.setup_air_bases_max < 3 }
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 3
+					instant_build = yes
 				}
 			}
-			set_building_level = {
-				type = air_base
-				level = 4
-				instant_build = yes
-			}
-		}
-		29 = {
-			modifier = {
-				factor = 0
+			var:global.starting_air_base_count_4 = {
+				modifier = {
+					factor = 0
 
-				OR = {
-					check_variable = { global.setup_air_bases_min > 5 }
-					check_variable = { global.setup_air_bases_max < 5 }
+					OR = {
+						check_variable = { global.setup_air_bases_min > 4 }
+						check_variable = { global.setup_air_bases_max < 4 }
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 4
+					instant_build = yes
 				}
 			}
-			set_building_level = {
-				type = air_base
-				level = 5
-				instant_build = yes
-			}
-		}
-		25 = {
-			modifier = {
-				add = -1
+			var:global.starting_air_base_count_5 = {
+				modifier = {
+					factor = 0
 
-				has_start_date > 1939.1.1
-			}
-			modifier = {
-				factor = 0
-
-				OR = {
-					check_variable = { global.setup_air_bases_min > 6 }
-					check_variable = { global.setup_air_bases_max < 6 }
+					OR = {
+						check_variable = { global.setup_air_bases_min > 5 }
+						check_variable = { global.setup_air_bases_max < 5 }
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 5
+					instant_build = yes
 				}
 			}
-			set_building_level = {
-				type = air_base
-				level = 6
-				instant_build = yes
-			}
-		}
-		1 = {
-			modifier = {
-				factor = 0
+			var:global.starting_air_base_count_6 = {
+				modifier = {
+					factor = 0
 
-				OR = {
-					check_variable = { global.setup_air_bases_min > 7 }
-					check_variable = { global.setup_air_bases_max < 7 }
+					OR = {
+						check_variable = { global.setup_air_bases_min > 6 }
+						check_variable = { global.setup_air_bases_max < 6 }
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 6
+					instant_build = yes
 				}
 			}
-			set_building_level = {
-				type = air_base
-				level = 7
-				instant_build = yes
-			}
-		}
-		7 = {
-			modifier = {
-				add = 1
+			var:global.starting_air_base_count_7 = {
+				modifier = {
+					factor = 0
 
-				has_start_date > 1939.1.1
-			}
-			modifier = {
-				factor = 0
-
-				OR = {
-					check_variable = { global.setup_air_bases_min > 8 }
-					check_variable = { global.setup_air_bases_max < 8 }
+					OR = {
+						check_variable = { global.setup_air_bases_min > 7 }
+						check_variable = { global.setup_air_bases_max < 7 }
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 7
+					instant_build = yes
 				}
 			}
-			set_building_level = {
-				type = air_base
-				level = 8
-				instant_build = yes
-			}
-		}
-		0 = {
-			modifier = {
-				add = 1
+			var:global.starting_air_base_count_8 = {
+				modifier = {
+					factor = 0
 
-				OR = {
-					check_variable = { global.setup_air_bases_min = 9 }
-					check_variable = { global.setup_air_bases_max = 9 }
+					OR = {
+						check_variable = { global.setup_air_bases_min > 8 }
+						check_variable = { global.setup_air_bases_max < 8 }
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 8
+					instant_build = yes
 				}
 			}
-			set_building_level = {
-				type = air_base
-				level = 9
-				instant_build = yes
-			}
-		}
-		14 = {
-			modifier = {
-				add = 2
+			var:global.starting_air_base_count_9 = {
+				modifier = {
+					add = 1
 
-				has_start_date > 1939.1.1
+					OR = {
+						check_variable = { global.setup_air_bases_min = 9 }
+						check_variable = { global.setup_air_bases_max = 9 }
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 9
+					instant_build = yes
+				}
 			}
-			modifier = {
-				factor = 0
+			var:global.starting_air_base_count_10 = {
+				modifier = {
+					factor = 0
 
-				check_variable = { global.setup_air_bases_max < 10 }
-			}
-			set_building_level = {
-				type = air_base
-				level = 10
-				instant_build = yes
+					check_variable = { global.setup_air_bases_max < 10 }
+				}
+				set_building_level = {
+					type = air_base
+					level = 10
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -1272,131 +1285,135 @@ clear_radar_stations = {
 }
 
 randomise_radar_stations = {
-	set_temp_variable = { radar_stations_minus = 100 }
-	subtract_from_temp_variable = { radar_stations_minus = global.setup_radar_stations_chance }
-	random_list = {
-		seed = random
-		global.setup_radar_stations_chance = {
-			set_building_level = {
-				type = radar_station
-				level = 1
-				instant_build = yes
+	every_state = {
+		set_temp_variable = { radar_stations_minus = 100 }
+		subtract_from_temp_variable = { radar_stations_minus = global.setup_radar_stations_chance }
+		random_list = {
+			seed = random
+			global.setup_radar_stations_chance = {
+				set_building_level = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
 			}
-		}
-		radar_stations_minus = {
-			set_building_level = {
-				type = radar_station
-				level = 0
-				instant_build = yes
+			radar_stations_minus = {
+				set_building_level = {
+					type = radar_station
+					level = 0
+					instant_build = yes
+				}
 			}
 		}
 	}
 }
 
 randomise_state_category = {
-	random_list = {
-		seed = random
-		10 = {
-			modifier = {
-				factor = 0
+	every_state = {
+		random_list = {
+			seed = random
+			10 = {
+				modifier = {
+					factor = 0
 
-				check_variable = { global.setup_state_category_min > 0 }
-			}
-
-			set_state_category = wasteland
-		}
-		10 = {
-			modifier = {
-				factor = 0
-
-				OR = {
-					check_variable = { global.setup_state_category_min > 1 }
-					check_variable = { global.setup_state_category_max < 1 }
+					check_variable = { global.setup_state_category_min > 0 }
 				}
+
+				set_state_category = wasteland
 			}
+			10 = {
+				modifier = {
+					factor = 0
 
-			set_state_category = pastoral
-		}
-		10 = {
-			modifier = {
-				factor = 0
-
-				OR = {
-					check_variable = { global.setup_state_category_min > 2 }
-					check_variable = { global.setup_state_category_max < 2 }
+					OR = {
+						check_variable = { global.setup_state_category_min > 1 }
+						check_variable = { global.setup_state_category_max < 1 }
+					}
 				}
+
+				set_state_category = pastoral
 			}
+			10 = {
+				modifier = {
+					factor = 0
 
-			set_state_category = rural
-		}
-		10 = {
-			modifier = {
-				factor = 0
-
-				OR = {
-					check_variable = { global.setup_state_category_min > 3 }
-					check_variable = { global.setup_state_category_max < 3 }
+					OR = {
+						check_variable = { global.setup_state_category_min > 2 }
+						check_variable = { global.setup_state_category_max < 2 }
+					}
 				}
+
+				set_state_category = rural
 			}
+			10 = {
+				modifier = {
+					factor = 0
 
-			set_state_category = town
-		}
-		10 = {
-			modifier = {
-				factor = 0
-
-				OR = {
-					check_variable = { global.setup_state_category_min > 4 }
-					check_variable = { global.setup_state_category_max < 4 }
+					OR = {
+						check_variable = { global.setup_state_category_min > 3 }
+						check_variable = { global.setup_state_category_max < 3 }
+					}
 				}
+
+				set_state_category = town
 			}
+			10 = {
+				modifier = {
+					factor = 0
 
-			set_state_category = large_town
-		}
-		10 = {
-			modifier = {
-				factor = 0
-
-				OR = {
-					check_variable = { global.setup_state_category_min > 5 }
-					check_variable = { global.setup_state_category_max < 5 }
+					OR = {
+						check_variable = { global.setup_state_category_min > 4 }
+						check_variable = { global.setup_state_category_max < 4 }
+					}
 				}
+
+				set_state_category = large_town
 			}
+			10 = {
+				modifier = {
+					factor = 0
 
-			set_state_category = city
-		}
-		10 = {
-			modifier = {
-				factor = 0
-
-				OR = {
-					check_variable = { global.setup_state_category_min > 6 }
-					check_variable = { global.setup_state_category_max < 6 }
+					OR = {
+						check_variable = { global.setup_state_category_min > 5 }
+						check_variable = { global.setup_state_category_max < 5 }
+					}
 				}
+
+				set_state_category = city
 			}
+			10 = {
+				modifier = {
+					factor = 0
 
-			set_state_category = large_city
-		}
-		10 = {
-			modifier = {
-				factor = 0
-
-				OR = {
-					check_variable = { global.setup_state_category_min > 7 }
-					check_variable = { global.setup_state_category_max < 7 }
+					OR = {
+						check_variable = { global.setup_state_category_min > 6 }
+						check_variable = { global.setup_state_category_max < 6 }
+					}
 				}
+
+				set_state_category = large_city
 			}
+			10 = {
+				modifier = {
+					factor = 0
 
-			set_state_category = metropolis
-		}
-		10 = {
-			modifier = {
-				factor = 0
+					OR = {
+						check_variable = { global.setup_state_category_min > 7 }
+						check_variable = { global.setup_state_category_max < 7 }
+					}
+				}
 
-				check_variable = { global.setup_state_category_max < 8 }
+				set_state_category = metropolis
 			}
+			10 = {
+				modifier = {
+					factor = 0
 
-			set_state_category = megalopolis
+					check_variable = { global.setup_state_category_max < 8 }
+				}
+
+				set_state_category = megalopolis
+			}
 		}
 	}
 }
@@ -1437,29 +1454,160 @@ clear_dams = {
 
 clear_facilities = {
 	every_state = {
-		set_building_level = {
+		remove_building = {
 			type = naval_facility
-			level = 0
-			province = { all_provinces = yes }
-			instant_build = yes
+			level = 1
 		}
-		set_building_level = {
+		remove_building = {
 			type = nuclear_facility
-			level = 0
-			province = { all_provinces = yes }
-			instant_build = yes
+			level = 1
 		}
-		set_building_level = {
+		remove_building = {
 			type = air_facility
-			level = 0
-			province = { all_provinces = yes }
-			instant_build = yes
+			level = 1
 		}
+		remove_building = {
+			type = land_facility
+			level = 1
+		}
+	}
+}
+
+# Since this needs province information, i can't log it in history and spawn back here.
+# So i need each of them noted separately. At least there aren't many of them.
+# Actually, can't even clear them in history, so couldn't even log them at the first place.
+setup_default_facilities = {
+	16 = {
 		set_building_level = {
 			type = land_facility
-			level = 0
-			province = { all_provinces = yes }
+			level = 1
+			province = 9534
 			instant_build = yes
+		}
+	}
+	64 = {
+		set_building_level = {
+			type = land_facility
+			level = 1
+			province = 3499
+			instant_build = yes
+		}
+	}
+	127 = {
+		set_building_level = {
+			type = naval_facility
+			level = 1
+			province = 13070
+			instant_build = yes
+		}
+	}
+	361 = {
+		set_building_level = {
+			type = naval_facility
+			level = 1
+			province = 3957
+			instant_build = yes
+		}
+	}
+	529 = {
+		set_building_level = {
+			type = naval_facility
+			level = 1
+			province = 1092
+			instant_build = yes
+		}
+	}
+	
+	if = {
+		limit = { date > 1939.1.1 }
+
+		56 = {
+			set_building_level = {
+				type = naval_facility
+				level = 1
+				province = 241
+				instant_build = yes
+			}
+		}
+		62 = {
+			set_building_level = {
+				type = air_facility
+				level = 1
+				province = 9388
+				instant_build = yes
+			}
+		}
+		137 = {
+			set_building_level = {
+				type = naval_facility
+				level = 1
+				province = 3686
+				instant_build = yes
+			}
+		}
+		158 = {
+			set_building_level = {
+				type = naval_facility
+				level = 1
+				province = 6788
+				instant_build = yes
+			}
+		}
+		219 = {
+			set_building_level = {
+				type = land_facility
+				level = 1
+				province = 3391
+				instant_build = yes
+			}
+		}
+		260 = {
+			set_building_level = {
+				type = air_facility
+				level = 1
+				province = 9448
+				instant_build = yes
+			}
+		}
+		386 = {
+			set_building_level = {
+				type = air_facility
+				level = 1
+				province = 7315
+				instant_build = yes
+			}
+		}
+		393 = {
+			set_building_level = {
+				type = land_facility
+				level = 1
+				province = 6710
+				instant_build = yes
+			}
+		}
+		528 = {
+			set_building_level = {
+				type = naval_facility
+				level = 1
+				province = 7110
+				instant_build = yes
+			}
+		}
+		532 = {
+			set_building_level = {
+				type = air_facility
+				level = 1
+				province = 10125
+				instant_build = yes
+			}
+		}
+		851 = {
+			set_building_level = {
+				type = naval_facility
+				level = 1
+				province = 911
+				instant_build = yes
+			}
 		}
 	}
 }
@@ -2730,7 +2878,7 @@ randomise_intelligence_agency = {
 
 			create_intelligence_agency = yes
 		}
-		981 = {
+		1016 = {
 			modifier = { add = intelligence_agency_minus }
 		}
 	}
@@ -10104,19 +10252,21 @@ clear_leader_traits = {
 }
 
 clear_province_modifiers = {
-	#remove_province_modifier = { 
-	#	static_modifiers = { dense_rural_infrastructure }
-	#
-	#	province = { all_provinces = yes }
-	#}
-	if = { limit = { has_dynamic_modifier = { modifier = FRA_maginot_line_dynamic_modifier } } remove_dynamic_modifier = { modifier = FRA_maginot_line_dynamic_modifier } }
-	if = { limit = { has_dynamic_modifier = { modifier = ETH_state_development_dynamic_modifier } } remove_dynamic_modifier = { modifier = ETH_state_development_dynamic_modifier } }
-	if = { limit = { has_dynamic_modifier = { modifier = ETH_state_decentralization_dynamic_modifier } } remove_dynamic_modifier = { modifier = ETH_state_decentralization_dynamic_modifier } }
-	if = { limit = { has_dynamic_modifier = { modifier = dense_rural_infrastructure } } remove_dynamic_modifier = { modifier = dense_rural_infrastructure } }
-	if = { limit = { has_dynamic_modifier = { modifier = COG_rwandan_separatism_modifier } } remove_dynamic_modifier = { modifier = COG_rwandan_separatism_modifier } }
-	if = { limit = { has_dynamic_modifier = { modifier = COG_burundian_separatism_modifier } } remove_dynamic_modifier = { modifier = COG_burundian_separatism_modifier } }
-	if = { limit = { has_dynamic_modifier = { modifier = COG_state_loyal_to_belgium_modifier } } remove_dynamic_modifier = { modifier = COG_state_loyal_to_belgium_modifier } }
-	if = { limit = { has_dynamic_modifier = { modifier = COG_state_loyal_to_free_congo_modifier } } remove_dynamic_modifier = { modifier = COG_state_loyal_to_free_congo_modifier } }
+	every_state = {
+		#remove_province_modifier = { 
+		#	static_modifiers = { dense_rural_infrastructure }
+		#
+		#	province = { all_provinces = yes }
+		#}
+		if = { limit = { has_dynamic_modifier = { modifier = FRA_maginot_line_dynamic_modifier } } remove_dynamic_modifier = { modifier = FRA_maginot_line_dynamic_modifier } }
+		if = { limit = { has_dynamic_modifier = { modifier = ETH_state_development_dynamic_modifier } } remove_dynamic_modifier = { modifier = ETH_state_development_dynamic_modifier } }
+		if = { limit = { has_dynamic_modifier = { modifier = ETH_state_decentralization_dynamic_modifier } } remove_dynamic_modifier = { modifier = ETH_state_decentralization_dynamic_modifier } }
+		if = { limit = { has_dynamic_modifier = { modifier = dense_rural_infrastructure } } remove_dynamic_modifier = { modifier = dense_rural_infrastructure } }
+		if = { limit = { has_dynamic_modifier = { modifier = COG_rwandan_separatism_modifier } } remove_dynamic_modifier = { modifier = COG_rwandan_separatism_modifier } }
+		if = { limit = { has_dynamic_modifier = { modifier = COG_burundian_separatism_modifier } } remove_dynamic_modifier = { modifier = COG_burundian_separatism_modifier } }
+		if = { limit = { has_dynamic_modifier = { modifier = COG_state_loyal_to_belgium_modifier } } remove_dynamic_modifier = { modifier = COG_state_loyal_to_belgium_modifier } }
+		if = { limit = { has_dynamic_modifier = { modifier = COG_state_loyal_to_free_congo_modifier } } remove_dynamic_modifier = { modifier = COG_state_loyal_to_free_congo_modifier } }
+	}
 }
 
 add_province_modifiers = {

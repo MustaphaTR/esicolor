@@ -1,0 +1,18 @@
+# Logging and changing some state data.
+
+if = {
+	limit = { has_start_date < 1939.8.14.1 }
+
+	every_state = {
+		log_buildings = yes
+		log_resources = yes
+		clear_airbases = yes
+	}
+}
+1939.8.14.12 = {
+	every_state = {
+		log_buildings = yes
+		log_resources = yes
+		clear_airbases = yes
+	}
+}

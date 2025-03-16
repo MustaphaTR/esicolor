@@ -141,14 +141,8 @@ randomised_preset_effects = {
 	set_variable = { global.setup_dockyards_min = 0 }
 	set_variable = { global.setup_dockyards_max = 2 }
 	set_variable = { global.setup_synthetic_refineries = 1 }
-	set_variable = { global.setup_synthetic_refineries_min = 2 }
-	set_variable = { global.setup_synthetic_refineries_max = 2 }
-	if = {
-		limit = { has_start_date > 1939.1.1 }
-
-		set_variable = { global.setup_synthetic_refineries_min = 12 }
-		set_variable = { global.setup_synthetic_refineries_max = 12 }
-	}
+	set_variable = { global.setup_synthetic_refineries_min = global.starting_synthetic_refinery_count }
+	set_variable = { global.setup_synthetic_refineries_max = global.starting_synthetic_refinery_count }
 	set_variable = { global.setup_fuel_silos = 1 }
 	set_variable = { global.setup_fuel_silos_chance = 2 }
 
@@ -514,32 +508,26 @@ developer_preset_effects = {
 setup_gui_start_general = {
 	set_global_flag = esicolor_setup_complete
 
-	every_state = {
-		setup_gui_start_infrastructure = yes
-		setup_gui_start_air_bases = yes
-		setup_gui_start_anti_air = yes
-		setup_gui_start_radar_station = yes
+	setup_gui_start_infrastructure = yes
+	setup_gui_start_air_bases = yes
+	setup_gui_start_anti_air = yes
+	setup_gui_start_radar_station = yes
 
-		setup_gui_start_civilian_factory = yes
-		setup_gui_start_military_factory = yes
-		if = {
-			limit = { is_coastal = yes }
+	setup_gui_start_civilian_factory = yes
+	setup_gui_start_military_factory = yes
+	setup_gui_start_dockyard = yes
 
-			setup_gui_start_dockyard = yes
-		}
-		setup_gui_start_fuel_silo = yes
-
-		setup_gui_start_forts = yes
-		setup_gui_start_dams = yes
-		setup_gui_start_facilities = yes
-		setup_gui_start_landmarks = yes
-
-		setup_gui_start_state_category = yes
-		setup_gui_start_province_modifiers = yes
-		setup_gui_start_population = yes
-	}
-
+	setup_gui_start_fuel_silo = yes
 	setup_gui_start_synthetic_refinery = yes
+
+	setup_gui_start_forts = yes
+	setup_gui_start_dams = yes
+	setup_gui_start_facilities = yes
+	setup_gui_start_landmarks = yes
+
+	setup_gui_start_population = yes
+	setup_gui_start_state_category = yes
+	setup_gui_start_province_modifiers = yes
 	setup_gui_start_resources = yes
 
 	every_country = {
@@ -615,7 +603,6 @@ setup_gui_start_radar_station = {
 	if = {
 		limit = { check_variable = { global.setup_radar_stations > -1 } }
 
-		clear_radar_stations = yes
 		randomise_radar_stations = yes
 	}
 }
@@ -624,7 +611,6 @@ setup_gui_start_civilian_factory = {
 	if = {
 		limit = { check_variable = { global.setup_civilian_factories > -1 } }
 
-		clear_civilian_factories = yes
 		randomise_civilian_factories = yes
 	}
 }
@@ -633,7 +619,6 @@ setup_gui_start_military_factory = {
 	if = {
 		limit = { check_variable = { global.setup_military_factories > -1 } }
 
-		clear_military_factories = yes
 		randomise_military_factories = yes
 	}
 }
@@ -642,7 +627,6 @@ setup_gui_start_dockyard = {
 	if = {
 		limit = { check_variable = { global.setup_dockyards > -1 } }
 
-		clear_dockyards = yes
 		randomise_dockyards = yes
 	}
 }
@@ -651,7 +635,6 @@ setup_gui_start_synthetic_refinery = {
 	if = {
 		limit = { check_variable = { global.setup_synthetic_refineries > -1 } }
 
-		clear_synthetic_refineries = yes
 		randomise_synthetic_refineries = yes
 	}
 	else = {
@@ -674,7 +657,6 @@ setup_gui_start_fuel_silo = {
 	if = {
 		limit = { check_variable = { global.setup_fuel_silos > -1 } }
 
-		clear_fuel_silos = yes
 		randomise_fuel_silos = yes
 	}
 }
@@ -709,9 +691,9 @@ setup_gui_start_dams = {
 
 setup_gui_start_facilities = {
 	if = {
-		limit = { check_variable = { global.setup_facilities > -1 } }
+		limit = { check_variable = { global.setup_facilities < 0 } }
 
-		clear_facilities = yes
+		setup_default_facilities = yes
 	}
 }
 
@@ -744,13 +726,11 @@ setup_gui_start_population = {
 	if = {
 		limit = { check_variable = { global.setup_population < -1 } }
 
-		clear_population = yes
 		shuffle_population = yes
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_population > -1 } }
 
-		clear_population = yes
 		randomise_population = yes
 	}
 }
