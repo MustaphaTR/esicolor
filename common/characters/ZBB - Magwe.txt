@@ -1,38 +1,16 @@
 characters={
 	ZBB_ne_win = {
-		instance = {
-			allowed = {
-				has_dlc = "Graveyard of Empires"
-			}
-			name=BRM_ne_win
-			portraits={
-				civilian={
-					large=GFX_portrait_BRM_ne_win
-				}
-			}
-			country_leader={
-				traits={ burmese_way_to_socialism_trait }
-				ideology=stalinism
-				expire="1965.1.1.1"
-				id=-1
+		name=BRM_ne_win
+		portraits={
+			civilian={
+				large=GFX_portrait_BRM_ne_win
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Graveyard of Empires" }
-			}
-			name=BRM_ne_win
-			portraits={
-				civilian={
-					large=GFX_Portrait_Asia_Generic_land_1
-				}
-			}
-			country_leader={
-				traits={ burmese_way_to_socialism_trait }
-				ideology=stalinism
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			traits={ burmese_way_to_socialism_trait }
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 }

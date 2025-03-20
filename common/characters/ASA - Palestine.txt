@@ -1,37 +1,16 @@
 characters={
 	ASA_amin_al_husseini = {
-		instance = {
-			allowed = {
-				has_dlc = "Graveyard of Empires"
-			}
-			name=PAL_amin_al_husseini
-			portraits={
-				civilian={
-					large = GFX_portrait_PAL_amin_al_husseini
-					small = GFX_portrait_PAL_amin_al_husseini_small
-				}
-			}
-			country_leader={
-				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=-1
+		name=PAL_amin_al_husseini
+		portraits={
+			civilian={
+				large = GFX_portrait_PAL_amin_al_husseini
+				small = GFX_portrait_PAL_amin_al_husseini_small
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Graveyard of Empires" }
-			}
-			name=PAL_amin_al_husseini
-			portraits={
-				civilian={
-					large="GFX_portrait_Amin_al_Husseini"
-				}
-			}
-			country_leader={
-				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 }

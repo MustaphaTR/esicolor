@@ -1,38 +1,16 @@
 characters={
 	BRM_u_nu = {
-		instance = {
-			allowed = {
-				has_dlc = "Graveyard of Empires"
-			}
-			name=BRM_u_nu
-			portraits={
-				civilian={
-					large=GFX_portrait_BRM_u_nu
-				}
-			}
-			country_leader={
-				traits={ anti_colonialist }
-				ideology=liberalism
-				expire="1965.1.1.1"
-				id=-1
+		name=BRM_u_nu
+		portraits={
+			civilian={
+				large=GFX_portrait_BRM_u_nu
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Graveyard of Empires" }
-			}
-			name=BRM_u_nu
-			portraits={
-				civilian={
-					large=GFX_Portrait_Asia_Generic_democracy
-				}
-			}
-			country_leader={
-				traits={ anti_colonialist }
-				ideology=liberalism
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			traits={ anti_colonialist }
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 }

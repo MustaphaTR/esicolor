@@ -1,36 +1,15 @@
 characters={
 	LFF_hashim_al_atassi = {
-		instance = {
-			allowed = {
-				has_dlc = "Graveyard of Empires"
-			}
-			name=SYR_hashim_al_atassi
-			portraits={
-				civilian={
-					large = GFX_portrait_SYR_hashim_al_atassi
-				}
-			}
-			country_leader={
-				ideology=oligarchism
-				expire="1965.1.1.1"
-				id=-1
+		name=SYR_hashim_al_atassi
+		portraits={
+			civilian={
+				large = GFX_portrait_SYR_hashim_al_atassi
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Graveyard of Empires" }
-			}
-			name=SYR_hashim_al_atassi
-			portraits={
-				civilian={
-					large="GFX_portrait_europe_generic_5"
-				}
-			}
-			country_leader={
-				ideology=oligarchism
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 }

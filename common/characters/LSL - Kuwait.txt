@@ -1,37 +1,16 @@
 characters={
 	LSL_ahmad_al_sabah = {
-		instance = {
-			allowed = {
-				has_dlc = "Graveyard of Empires"
-			}
-			name=KUW_ahmad_al_sabah
-			portraits={
-				civilian={
-					large = GFX_portrait_KUW_ahmad_al_sabah
-					small = GFX_portrait_KUW_ahmad_al_sabah_civilian_small
-				}
-			}
-			country_leader={
-				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
+		name=KUW_ahmad_al_sabah
+		portraits={
+			civilian={
+				large = GFX_portrait_KUW_ahmad_al_sabah
+				small = GFX_portrait_KUW_ahmad_al_sabah_civilian_small
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Graveyard of Empires" }
-			}
-			name=KUW_ahmad_al_sabah
-			portraits={
-				civilian={
-					large="GFX_Portrait_Arabia_Generic_land_1"
-				}
-			}
-			country_leader={
-				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 }

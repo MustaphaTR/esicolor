@@ -27,13 +27,7 @@ set_politics = {
 	elections_allowed = no
 }
 
-# No generic female portraits, so only recruit with the DLC.
-if = {
-	limit = {
-		has_dlc = "Graveyard of Empires"
-	}
-	recruit_character = MBP_myat_phaya_lat
-}
+recruit_character = MBP_myat_phaya_lat
 
 set_rule = {
 	can_generate_female_aces = yes
