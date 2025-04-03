@@ -1,0 +1,51 @@
+characters={
+	ZAS_vladimir_sidorin={
+		instance = {
+			allowed = {
+				has_dlc = "No Step Back"
+			}
+			name=DON_vladimir_sidorin
+			portraits={
+				civilian={
+					large=GFX_portrait_DON_Vladimir_Sidorin
+					small=GFX_idea_DON_vladimir_sidorin
+				}
+			}
+			country_leader={
+				traits={ cossack_ataman } 
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ cossack_ataman } 
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Step Back" }
+			}
+			name=DON_vladimir_sidorin
+			portraits={
+				civilian={
+					large=GFX_Portrait_Europe_Generic_land_4
+				}
+			}
+			country_leader={
+				traits={ cossack_ataman } 
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ cossack_ataman } 
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

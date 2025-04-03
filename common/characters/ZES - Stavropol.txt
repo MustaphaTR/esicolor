@@ -1,0 +1,51 @@
+characters={
+	ZES_ivanis_vasily_nikolaevich={
+		instance = {
+			allowed = {
+				has_dlc = "No Step Back"
+			}
+			name=KUB_ivanis_vasily_nikolaevich
+			portraits={
+				civilian={
+					large=GFX_portrait_KUB_ivanis_vasily_nikolaevich
+					small=GFX_idea_KUB_ivanis_vasily_nikolaevich
+				}
+			}
+			country_leader={
+				traits={ cossack_ataman } 
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ cossack_ataman } 
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Step Back" }
+			}
+			name=KUB_ivanis_vasily_nikolaevich
+			portraits={
+				civilian={
+					large=GFX_Portrait_Europe_Generic_land_5
+				}
+			}
+			country_leader={
+				traits={ cossack_ataman } 
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ cossack_ataman } 
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
