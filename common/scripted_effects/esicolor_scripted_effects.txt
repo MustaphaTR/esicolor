@@ -421,3 +421,11 @@ setup_generic_advisor_portraits = {
 
 	handle_special_advisors = yes
 }
+
+log_state_owners = {
+	every_state = {
+		owner = {
+			log = "[PREV.GetName] ([PREV.GetID]) is owned by [THIS.GetName]."
+		}
+	}
+}
