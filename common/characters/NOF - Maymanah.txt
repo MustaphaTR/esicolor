@@ -1,0 +1,39 @@
+characters={
+	NOF_nisar_muhammad_yousafzai = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=AFG_nisar_muhammad_yousafzai
+			portraits={
+				civilian={
+					large=GFX_portrait_AFG_nisar_muhammad_yousafzai
+					small=GFX_portrait_AFG_nisar_muhammad_yousafzai_small
+				}
+			}
+			country_leader={
+				traits={ AFG_general_secretary }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=AFG_nisar_muhammad_yousafzai
+			portraits={
+				civilian={
+					large=GFX_Portrait_Soviet_Generic_1
+				}
+			}
+			country_leader={
+				traits={ AFG_general_secretary }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
