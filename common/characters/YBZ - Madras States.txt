@@ -1,17 +1,40 @@
 characters={
-	YBZ_chithira_thirunal_balarma_varma={
-		name=RAJ_chithira_thirunal_balarma_varma
-		portraits={
-			civilian = {
-				large = GFX_portrait_india_generic_land_4
-				small = GFX_portrait_india_generic_land_4_small
+	YBZ_chithira_thirunal_balarma_varma = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=RAJ_chithira_thirunal_balarma_varma
+			portraits={
+				civilian={
+					large = GFX_portrait_RAJ_chithira_thirunal_balarama_varma
+					small = GFX_portrait_RAJ_chithira_thirunal_balarama_varma_small
+				}
+			}
+			country_leader={
+				traits={ RAJ_GOE_visionary_maharaja }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			traits={ RAJ_GOE_visionary_maharaja }
-			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=RAJ_chithira_thirunal_balarma_varma
+			portraits={
+				civilian={
+					large=GFX_portrait_india_generic_land_4
+					small=GFX_portrait_india_generic_land_4_small
+				}
+			}
+			country_leader={
+				traits={ RAJ_GOE_visionary_maharaja }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }
