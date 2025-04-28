@@ -690,8 +690,8 @@ randomise_factories = {
 }
 
 randomise_civilian_factories = {
-	every_state = {
-		hidden_effect = {
+	hidden_effect = {
+		every_state = {
 			clear_civilian_factories = yes
 
 			set_temp_variable = { civstoadd = 1 }
@@ -712,8 +712,8 @@ randomise_civilian_factories = {
 }
 
 randomise_military_factories = {
-	every_state = {
-		hidden_effect = {
+	hidden_effect = {
+		every_state = {
 			clear_military_factories = yes
 
 			set_temp_variable = { milstoadd = 1 }
@@ -791,7 +791,7 @@ randomise_synthetic_refineries = {
 			max = global.setup_synthetic_refineries_max
 		}
 
-		while_loop_effect  = {
+		while_loop_effect = {
 			limit = { check_variable = { refineriestoadd > 0 } }
 
 			random_state = {
@@ -1517,7 +1517,7 @@ setup_default_facilities = {
 			instant_build = yes
 		}
 	}
-	
+
 	if = {
 		limit = { date > 1939.1.1 }
 
