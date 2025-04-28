@@ -233,15 +233,27 @@ focus_tree = {
 
 		completion_reward = { }
 	}
-	
-	# NSB Armor Techonologies
+
+	# Support Technologies
+	focus = {
+		id = AFG_expand_quami_template
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SAF_south_africa_first
+
+		completion_reward = { }
+	}
+
+	# NSB Armor Technologies
 	focus = {
 		id = ITA_italian_tankettes
 		icon = GFX_goal_generic_demand_territory
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = SAF_south_africa_first
+		relative_position_id = AFG_expand_quami_template
 
 		completion_reward = { }
 	}
@@ -367,7 +379,7 @@ focus_tree = {
 		completion_reward = { }
 	}
 
-	# Industry Techonologies
+	# Industry Technologies
 	focus = {
 		id = FIN_tire_factory_at_nokia
 		icon = GFX_goal_generic_demand_territory
@@ -501,6 +513,17 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = RAJ_raise_import_duties
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_special_economic_zones
+
+		completion_reward = { }
+	}
+
 	# Manpower Ideas
 	focus = {
 		id = AST_citizen_military_forces
@@ -508,7 +531,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = RAJ_special_economic_zones
+		relative_position_id = RAJ_raise_import_duties
 
 		completion_reward = { }
 	}
@@ -1258,6 +1281,50 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = RAJ_his_majestys_loyal_government
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_red_in_the_shadows
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = RAJ_the_dominion_of_india
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_his_majestys_loyal_government
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = RAJ_keep_calm_and_carry_on
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_the_dominion_of_india
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = RAJ_holding_the_gates_of_india
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_keep_calm_and_carry_on
+
+		completion_reward = { }
+	}
+
 	# Intelligence Operations
 	focus = {
 		id = SPR_regional_defense_council_of_aragon
@@ -1265,7 +1332,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = RAJ_red_in_the_shadows
+		relative_position_id = RAJ_holding_the_gates_of_india
 
 		completion_reward = { }
 	}
