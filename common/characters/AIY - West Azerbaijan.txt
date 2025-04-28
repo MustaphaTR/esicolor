@@ -1,15 +1,36 @@
 characters={
-	AIY_qazi_muhammad={
-		name=KUR_qazi_muhamad
-		portraits={
-			civilian={
-				large=GFX_portrait_Qazi_Muhammad
+	AIY_qazi_muhammad = {
+		instance = {
+			allowed = {
+				has_dlc = "Graveyard of Empires"
+			}
+			name=KUR_qazi_muhamad
+			portraits={
+				civilian={
+					large=GFX_portrait_PER_qazi_muhammad
+				}
+			}
+			country_leader={
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			ideology=marxism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Graveyard of Empires" }
+			}
+			name=KUR_qazi_muhamad
+			portraits={
+				civilian={
+					large=GFX_portrait_Qazi_Muhammad
+				}
+			}
+			country_leader={
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }
