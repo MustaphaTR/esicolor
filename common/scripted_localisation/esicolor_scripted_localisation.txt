@@ -8,55 +8,46 @@
 # localization_key -> points to the localization key
 # that'll be used if trigger passes
 
-defined_text = { # Country
+defined_text = {
 	name = GetCoringCost
 	text = {
 		trigger = {
-			is_in_array = { ROOT.formable_cores = FROM }
+			FROM = { has_state_flag = is_formable_core_@ROOT }
 		}
 		localization_key = decision_cost_pp_30
 	}
 	text = {
-		trigger = {
-			NOT = { is_in_array = { ROOT.formable_cores = FROM } }
-		}
 		localization_key = decision_cost_pp_60
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = GetCoringCostBlocked
 	text = {
 		trigger = {
-			is_in_array = { ROOT.formable_cores = FROM }
+			FROM = { has_state_flag = is_formable_core_@ROOT }
 		}
 		localization_key = decision_cost_pp_30_blocked
 	}
 	text = {
-		trigger = {
-			NOT = { is_in_array = { ROOT.formable_cores = FROM } }
-		}
 		localization_key = decision_cost_pp_60_blocked
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = GetCoringCostTooltip
 	text = {
 		trigger = {
-			is_in_array = { ROOT.formable_cores = FROM }
+			FROM = { has_state_flag = is_formable_core_@ROOT }
 		}
 		localization_key = decision_cost_pp_30_tooltip
 	}
 	text = {
-		trigger = {
-			NOT = { is_in_array = { ROOT.formable_cores = FROM } }
-		}
 		localization_key = decision_cost_pp_60_tooltip
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = GetDecisionCostPP30
 	text = {
 		trigger = {
@@ -69,7 +60,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = GetDecisionCostPP60
 	text = {
 		trigger = {
@@ -135,7 +126,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_claim_button_tt_delayed_option_check
 	text = {
 		trigger = {
@@ -154,7 +145,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_claim_action_cost
 	text = {
 		trigger = {
@@ -188,7 +179,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_claim_action_not_ours
 	text = {
 		trigger = {
@@ -205,7 +196,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_claim_action_border
 	text = {
 		trigger = {
@@ -226,7 +217,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_claim_action_no_claim
 	text = {
 		trigger = {
@@ -243,7 +234,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_claim_action_no_war_goal
 	text = {
 		trigger = {
@@ -260,7 +251,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_claim_action_no_war
 	text = {
 		trigger = {
@@ -298,7 +289,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_claim_action_no_faction
 	text = {
 		trigger = {
@@ -317,7 +308,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_claim_action_no_nap
 	text = {
 		trigger = {
@@ -336,7 +327,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_compliance_action_cost
 	text = {
 		trigger = {
@@ -370,7 +361,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_compliance_action_ours
 	text = {
 		trigger = {
@@ -386,7 +377,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_compliance_action_not_core
 	text = {
 		trigger = {
@@ -403,7 +394,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_compliance_action_no_full_compliance
 	text = {
 		trigger = {
@@ -418,7 +409,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_compliance_action_factory
 	text = {
 		trigger = {
@@ -433,11 +424,11 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_core_button_tt_delayed_formable_check
 	text = {
 		trigger = {
-			is_in_array = { ROOT.formable_cores = THIS }
+			has_state_flag = is_formable_core_@ROOT
 		}
 		localization_key = esicolor_core_button_tt_delayed_formable
 	}
@@ -446,7 +437,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_core_action_cost_formable
 	text = {
 		trigger = {
@@ -461,7 +452,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_core_action_cost_normal
 	text = {
 		trigger = {
@@ -514,7 +505,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_core_action_border
 	text = {
 		trigger = {
@@ -535,7 +526,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_core_action_compliance_20
 	text = {
 		trigger = {
@@ -550,7 +541,7 @@ defined_text = { # Country
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = esicolor_core_action_compliance_40
 	text = {
 		trigger = {

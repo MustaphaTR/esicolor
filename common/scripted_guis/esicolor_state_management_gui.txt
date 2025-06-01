@@ -264,12 +264,12 @@ scripted_gui = {
 					is_controlled_by = ROOT
 					NOT = { is_core_of = ROOT }
 
-				#	if = {
-				#		limit = { is_in_array = { ROOT.formable_cores = THIS } }
-				#
-				#		compliance > 20
-				#	}
-				#	else = {
+					if = {
+						limit = { has_state_flag = is_formable_core_@ROOT }
+				
+						compliance > 20
+					}
+					else = {
 						compliance > 40
 
 						OR = {
@@ -279,20 +279,20 @@ scripted_gui = {
 
 							is_neighboring_core_special_case_state = yes
 						}
-				#	}
+					}
 				}
 			}
 		}
 
 		ai_check_scope = {
-		#	if = {
-		#		limit = { is_in_array = { ROOT.formable_cores = THIS } }
-		#
-		#		compliance < 20
-		#	}
-		#	else = {
+			if = {
+				limit = { has_state_flag = is_formable_core_@ROOT }
+		
+				compliance < 20
+			}
+			else = {
 				compliance < 40
-		#	}
+			}
 		}
 
 		ai_weights = {
@@ -427,7 +427,7 @@ scripted_gui = {
 				}
 
 				if = {
-					limit = { is_in_array = { ROOT.formable_cores = PREV } }
+					limit = { PREV = { has_state_flag = is_formable_core_@ROOT } }
 
 					has_political_power > 29
 					#political_power_daily > 0.125
@@ -451,7 +451,7 @@ scripted_gui = {
 					tag = ROOT
 				}
 				if = {
-					limit = { is_in_array = { ROOT.formable_cores = THIS } }
+					limit = { has_state_flag = is_formable_core_@ROOT }
 
 					compliance > 20
 				}
@@ -478,7 +478,7 @@ scripted_gui = {
 						limit = { check_variable = { global.setup_fast_mode < 6 } }
 
 						if = {
-							limit = { is_in_array = { ROOT.formable_cores = THIS } }
+							limit = { has_state_flag = is_formable_core_@ROOT }
 
 							add_to_array = { ROOT.states_being_cored_formable = THIS }
 						}
@@ -494,7 +494,7 @@ scripted_gui = {
 				ROOT = {
 					hidden_effect = {
 						if = {
-							limit = { is_in_array = { ROOT.formable_cores = PREV } }
+							limit = { PREV = { has_state_flag = is_formable_core_@ROOT } }
 
 							add_political_power = -30
 
@@ -529,10 +529,10 @@ scripted_gui = {
 		ai_test_scopes = test_self_owned_states
 
 		ai_check = {
-			# has_states_to_form_lv2_or_lv3_formable = no
+			has_states_to_form_lv2_or_lv3_formable = no
 
 			#if = {
-			#	limit = { is_in_array = { ROOT.formable_cores = THIS } }
+			#	limit = { has_state_flag = is_formable_core_@ROOT }
 			#
 			#	political_power_daily > 0.125
 			#}
@@ -541,21 +541,21 @@ scripted_gui = {
 			#}
 		}
 
-		#ai_check_scope = {
-		#	# Prioritise formable states.
-		#	OR = {
-		#		limit = { is_in_array = { ROOT.formable_cores = THIS } }
-		#		ROOT = {
-		#			NOT = {
-		#				any_owned_state = {
-		#					is_controlled_by = THIS
-		#					is_in_array = { ROOT.formable_cores = THIS }
-		#					compliance > 20
-		#				}
-		#			}
-		#		}
-		#	}
-		#}
+		ai_check_scope = {
+			# Prioritise formable states.
+			OR = {
+				has_state_flag = is_formable_core_@ROOT
+				ROOT = {
+					NOT = {
+						any_owned_state = {
+							is_controlled_by = ROOT
+							has_state_flag = is_formable_core_@ROOT
+							compliance > 20
+						}
+					}
+				}
+			}
+		}
 
 		ai_weights = {
 			esicolor_core_button_clickable_click = {

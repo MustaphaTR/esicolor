@@ -7,6 +7,8 @@ adjust_state_names = {
 	adjust_state_name_91 = yes
 	adjust_state_name_93 = yes
 	adjust_state_name_94 = yes
+	adjust_state_name_119 = yes
+	adjust_state_name_163 = yes
 	adjust_state_name_164 = yes
 	adjust_state_name_183 = yes
 	adjust_state_name_184 = yes
@@ -44,6 +46,7 @@ adjust_state_names = {
 	adjust_state_name_653 = yes
 	adjust_state_name_731 = yes
 	adjust_state_name_732 = yes
+	adjust_state_name_736 = yes
 	adjust_state_name_742 = yes
 	adjust_state_name_762 = yes
 	adjust_state_name_784 = yes
@@ -55,6 +58,7 @@ adjust_state_names = {
 	adjust_state_name_828 = yes
 	adjust_state_name_829 = yes
 	adjust_state_name_833 = yes
+	adjust_state_name_852 = yes
 }
 
 adjust_state_names_on_state_core_changed = {
@@ -89,6 +93,14 @@ adjust_state_names_on_state_core_changed = {
 	else_if = {
 		limit = { FROM.FROM = { state = 94 } }
 		adjust_state_name_94 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 119 } }
+		adjust_state_name_119 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 163 } }
+		adjust_state_name_163 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 164 } }
@@ -271,6 +283,10 @@ adjust_state_names_on_state_core_changed = {
 		adjust_state_name_732 = yes
 	}
 	else_if = {
+		limit = { FROM.FROM = { state = 736 } }
+		adjust_state_name_736 = yes
+	}
+	else_if = {
 		limit = { FROM.FROM = { state = 742 } }
 		adjust_state_name_742 = yes
 	}
@@ -314,6 +330,10 @@ adjust_state_names_on_state_core_changed = {
 		limit = { FROM.FROM = { state = 833 } }
 		adjust_state_name_833 = yes
 	}
+	else_if = {
+		limit = { FROM.FROM = { state = 852 } }
+		adjust_state_name_852 = yes
+	}
 }
 
 adjust_state_names_on_ruling_party_change = {
@@ -348,6 +368,14 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 94 }
 		adjust_state_name_94 = yes
+	}
+	if = {
+		limit = { owns_state = 119 }
+		adjust_state_name_119 = yes
+	}
+	if = {
+		limit = { owns_state = 163 }
+		adjust_state_name_163 = yes
 	}
 	if = {
 		limit = { owns_state = 164 }
@@ -530,6 +558,10 @@ adjust_state_names_on_ruling_party_change = {
 		adjust_state_name_732 = yes
 	}
 	if = {
+		limit = { owns_state = 736 }
+		adjust_state_name_736 = yes
+	}
+	if = {
 		limit = { owns_state = 742 }
 		adjust_state_name_742 = yes
 	}
@@ -572,6 +604,10 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 833 }
 		adjust_state_name_833 = yes
+	}
+	if = {
+		limit = { owns_state = 852 }
+		adjust_state_name_852 = yes
 	}
 }
 
@@ -939,6 +975,42 @@ adjust_state_name_94 = {
 			id = 3392
 			name = VICTORY_POINTS_3392
 		}
+	}
+}
+
+adjust_state_name_119 = {
+	if = {
+		limit = { 119 = { owner = { state_originally_from_IRE = yes } } }
+
+		set_province_name = {
+			id = 385
+			name = IRE_VICTORY_POINTS_385
+		}
+	}
+	else = {
+		set_province_name = {
+			id = 385
+			name = VICTORY_POINTS_385
+		}
+	}
+}
+
+adjust_state_name_163 = {
+	if = {
+		limit = { 163 = { owner = { state_originally_from_ITA = yes } } }
+
+		set_province_name = {
+			id = 3943
+			name = ITA_VICTORY_POINTS_3943
+		}
+		163 = { set_state_name = ITA_STATE_163 }
+	}
+	else = {
+		set_province_name = {
+			id = 3943
+			name = VICTORY_POINTS_3943
+		}
+		163 = { set_state_name = STATE_163 }
 	}
 }
 
@@ -2390,6 +2462,42 @@ adjust_state_name_732 = {
 	}
 }
 
+adjust_state_name_736 = {
+	if = {
+		limit = {
+			736 = {
+				owner = {
+					OR = {
+						state_originally_from_GER = yes
+						state_originally_from_AUS = yes
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 6626
+			name = GER_VICTORY_POINTS_6626
+		}
+	}
+	else_if = {
+		limit = {
+			736 = { owner = { state_originally_from_YUG = yes } }
+		}
+
+		set_province_name = {
+			id = 6626
+			name = YUG_VICTORY_POINTS_6626
+		}
+	}
+	else = {
+		set_province_name = {
+			id = 6626
+			name = VICTORY_POINTS_6626
+		}
+	}
+}
+
 adjust_state_name_742 = {
 	if = {
 		limit = { 742 = { owner = { has_country_leader_ideology = stalinism } } }
@@ -2842,6 +2950,23 @@ adjust_state_name_833 = {
 		set_province_name = {
 			id = 9402
 			name = SOV_Krasnokokshaysk
+		}
+	}
+}
+
+adjust_state_name_852 = {
+	if = {
+		limit = { 852 = { owner = { state_originally_from_ITA = yes } } }
+
+		set_province_name = {
+			id = 11564
+			name = ITA_VICTORY_POINTS_11564
+		}
+	}
+	else = {
+		set_province_name = {
+			id = 11564
+			name = VICTORY_POINTS_11564
 		}
 	}
 }

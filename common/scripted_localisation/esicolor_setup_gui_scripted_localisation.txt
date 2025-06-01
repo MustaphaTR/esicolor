@@ -1972,29 +1972,26 @@ defined_text = {
 defined_text = {
 	name = esicolor_setup_formables_get_name
 	text = {
-		localization_key = esicolor_setup_not_applicable
+		trigger = {
+			check_variable = { global.setup_formables < 1 }
+		}
+		localization_key = esicolor_setup_disabled
 	}
-	#text = {
-	#	trigger = {
-	#		check_variable = { global.setup_formables < 1 }
-	#	}
-	#	localization_key = esicolor_setup_disabled
-	#}
-	#text = {
-	#	trigger = {
-	#		check_variable = { global.setup_formables = 1 }
-	#	}
-	#	localization_key = esicolor_setup_formables_visual
-	#}
-	#text = {
-	#	trigger = {
-	#		check_variable = { global.setup_formables = 2 }
-	#	}
-	#	localization_key = esicolor_setup_default
-	#}
-	#text = {
-	#	localization_key = esicolor_setup_formables_core
-	#}
+	text = {
+		trigger = {
+			check_variable = { global.setup_formables = 1 }
+		}
+		localization_key = esicolor_setup_formables_visual
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_formables = 2 }
+		}
+		localization_key = esicolor_setup_default
+	}
+	text = {
+		localization_key = esicolor_setup_formables_core
+	}
 }
 
 defined_text = {

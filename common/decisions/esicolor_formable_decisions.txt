@@ -1,0 +1,842 @@
+esicolor_formables = {
+	form_slovenia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_slovenia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_slovenia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_slovenia"
+			set_country_flag = can_form_YUG_UNITED
+
+			set_cosmetic_tag = YUG_SLOVENIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_slovenia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_slovenia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_croatia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_croatia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_croatia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_croatia"
+			set_country_flag = can_form_YUG_UNITED
+
+			set_cosmetic_tag = YUG_CROATIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_croatia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_croatia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_bosnia_herzegovina = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_bosnia_herzegovina = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_bosnia_herzegovina = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_bosnia_herzegovina"
+			set_country_flag = can_form_YUG_UNITED
+
+			set_cosmetic_tag = YUG_BOSNIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_bosnia_herzegovina = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_serbia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_serbia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_serbia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_serbia"
+			set_country_flag = can_form_YUG_UNITED
+
+			set_cosmetic_tag = YUG_SERBIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_serbia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_serbia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_macedonia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_macedonia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_macedonia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_macedonia"
+			set_country_flag = can_form_YUG_UNITED
+
+			set_cosmetic_tag = YUG_MACEDONIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_macedonia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_yugoslavia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_yugoslavia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_yugoslavia = yes
+		}
+		available = {
+			has_states_to_form_yugoslavia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_yugoslavia"
+			clr_country_flag = can_form_YUG_UNITED
+
+			set_country_flag = can_form_UBF_UNITED
+
+			set_cosmetic_tag = YUG_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_yugoslavia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_yugoslavia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_albania = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_albania = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_albania = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_albania"
+			set_country_flag = can_form_UBF_UNITED
+
+			set_cosmetic_tag = ALB_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_albania = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_albania_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_greece = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_greece = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_greece = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_greece"
+			set_country_flag = can_form_UBF_UNITED
+
+			set_cosmetic_tag = GRE_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_greece = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_greece_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_bulgaria = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_bulgaria = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_bulgaria = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_bulgaria"
+			set_country_flag = can_form_UBF_UNITED
+
+			set_cosmetic_tag = BUL_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_bulgaria = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_bulgaria_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_wallachia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_wallachia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_wallachia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_wallachia"
+			set_country_flag = can_form_ROM_UNITED
+
+			set_cosmetic_tag = ROM_WALLACHIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_wallachia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_wallachia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_moldavia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_moldavia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_moldavia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_moldavia"
+			set_country_flag = can_form_ROM_UNITED
+
+			set_cosmetic_tag = ROM_MOLDAVIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_moldavia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_moldavia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_transylvania = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_transylvania = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_transylvania = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_transylvania"
+			set_country_flag = can_form_ROM_UNITED
+
+			set_cosmetic_tag = ROM_TRANSYLVANIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_transylvania = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_transylvania_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_romania = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_romania = yes
+		}
+		visible = {
+			has_cosmetics_to_form_romania = yes
+		}
+		available = {
+			has_states_to_form_romania = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_romania"
+			clr_country_flag = can_form_ROM_UNITED
+
+			set_country_flag = can_form_UBF_UNITED
+
+			set_cosmetic_tag = ROM_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_romania = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_romania_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_balkans = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_balkans = yes
+		}
+		visible = {
+			has_cosmetics_to_form_balkans = yes
+		}
+		available = {
+			has_states_to_form_balkans = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_balkans"
+			clr_country_flag = can_form_UBF_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+
+			set_cosmetic_tag = UBF_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_balkans = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_balkans_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_ireland = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_ireland = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_ireland = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_ireland"
+			clr_country_flag = can_form_UKD_UNITED
+
+			set_country_flag = can_form_CLT_UNITED
+
+			set_cosmetic_tag = IRE_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_ireland = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_ireland_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_celtic_union = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_celtic_union = yes
+		}
+		visible = {
+			has_cosmetics_to_form_celtic_union = yes
+		}
+		available = {
+			has_states_to_form_celtic_union = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_celtic_union"
+			clr_country_flag = can_form_CLT_UNITED
+			clr_country_flag = can_form_UKD_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+
+			set_cosmetic_tag = CLT_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_celtic_union = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_celtic_union_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_scotland = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_scotland = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_scotland = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_scotland"
+			set_country_flag = can_form_UKD_UNITED
+			set_country_flag = can_form_CLT_UNITED
+
+			set_cosmetic_tag = UKD_SCOTLAND
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_scotland = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_england = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_england = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_england = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_england"
+			set_country_flag = can_form_UKD_UNITED
+
+			set_cosmetic_tag = UKD_ENGLAND
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_england = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_united_kingdom = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_united_kingdom = yes
+		}
+		visible = {
+			has_cosmetics_to_form_united_kingdom = yes
+		}
+		available = {
+			has_states_to_form_united_kingdom = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_united_kingdom"
+			clr_country_flag = can_form_UKD_UNITED
+			clr_country_flag = can_form_CLT_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+
+			set_cosmetic_tag = UKD_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_united_kingdom = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_europe = {
+		icon = generic_form_nation
+		allowed = {
+			always = yes
+		}
+		visible = {
+			has_cosmetics_to_form_europe = yes
+		}
+		available = {
+			has_states_to_form_europe = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_europe"
+			clr_country_flag = can_form_EUR_UNITED
+
+			set_country_flag = can_form_EAR_UNITED
+
+			set_cosmetic_tag = EUR_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_on_continent = europe }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_200?200
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_earth = {
+		icon = generic_form_nation
+		allowed = {
+			always = yes
+		}
+		visible = {
+			has_cosmetics_to_form_earth = yes
+		}
+		available = {
+			has_states_to_form_earth = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_earth"
+			clr_country_flag = can_form_EAR_UNITED
+
+			set_cosmetic_tag = EAR_UNITED
+
+			hidden_effect = {
+				every_state = {
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_300?300
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+}

@@ -1,0 +1,89 @@
+formable_decision_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = formables_visual
+				has_global_flag = formables_give_core
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_state_flag = is_formable_core_@ROOT } }
+
+			set_state_flag = is_formable_core_@ROOT
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					THIS.owner = {
+						OR = {
+							tag = ROOT
+							is_in_faction_with = ROOT
+						}
+					}
+				}
+			}
+
+			add_claim_by = ROOT
+		}
+	}
+	else_if = {
+		limit = {
+			has_global_flag = formables_give_core
+		}
+
+		add_core_of = ROOT
+	}
+
+	ROOT = { set_country_flag = has_formed_a_formable }
+}
+
+formable_decision_effect_tooltip_default = {
+	if = {
+		limit = { NOT = { has_global_flag = formables_visual } }
+
+		custom_effect_tooltip = esicolor_formables_affected_states_default_tt
+		formable_decision_effect_tooltip = yes
+	}
+}
+
+formable_decision_effect_tooltip = {
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = formables_visual
+				has_global_flag = formables_give_core
+			}
+		}
+
+		custom_effect_tooltip = esicolor_formables_formable_default_effect1_tt
+		if = {
+			limit = { NOT = { has_global_flag = state_management_disabled } }
+	
+			custom_effect_tooltip = esicolor_formables_formable_default_effect2_tt
+		}
+	}
+	else_if = {
+		limit = {
+			has_global_flag = formables_give_core
+		}
+
+		custom_effect_tooltip = esicolor_formables_formable_default_effect3_tt
+	}
+}
+
+setup_direct_level_one_plus_formable_visibilties = {
+	IOS = { set_country_flag = can_form_YUG_UNITED }
+
+	OIA = { set_country_flag = can_form_CLT_UNITED }
+	IIY = { set_country_flag = can_form_UKD_UNITED }
+	IZZ = {
+		set_country_flag = can_form_UKD_UNITED
+		set_country_flag = can_form_CLT_UNITED
+	}
+	YEZ = {
+		set_country_flag = can_form_UKD_UNITED
+		set_country_flag = can_form_CLT_UNITED
+	}
+}
