@@ -395,6 +395,107 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetIdeologyDef_BAL_ESTONIA
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = BAL_ESTONIA_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = BAL_ESTONIA_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = BAL_ESTONIA_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = BAL_ESTONIA_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_BAL_LATVIA
+	text = {
+		trigger = { has_country_leader = { character = BIO_janis_balodis ruling_only = yes } }
+		localization_key = BAL_LATVIA_MILITARY_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = BAL_LATVIA_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = BAL_LATVIA_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = BAL_LATVIA_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = BAL_LATVIA_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_BAL_LITHUANIA
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = { character = BIS_antanas_gustaitis ruling_only = yes }
+				has_country_leader = { character = BIS_stasys_rastikis ruling_only = yes }
+			}
+		}
+		localization_key = BAL_LITHUANIA_MILITARY_neutrality_DEF
+	}
+	text = {
+		trigger = { has_country_leader = { character = IBB_karl_gero ruling_only = yes } }
+		localization_key = BAL_LITHUANIA_MONARCHIST_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = BAL_LITHUANIA_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = BAL_LITHUANIA_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = BAL_LITHUANIA_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = BAL_LITHUANIA_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_BAL_UNITED
+	text = {
+		trigger = { has_country_leader = { character = IBB_karl_gero ruling_only = yes } }
+		localization_key = BAL_UNITED_LIVONIA_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = BAL_UNITED_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = BAL_UNITED_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = BAL_UNITED_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = BAL_UNITED_communism_DEF
+	}
+}
+
+defined_text = {
 	name = GetIdeologyDef_EUR_UNITED
 	text = {
 		trigger = { has_government = neutrality }

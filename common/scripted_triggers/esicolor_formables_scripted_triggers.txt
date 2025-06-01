@@ -632,6 +632,134 @@ has_states_to_form_united_kingdom = {
 	}
 }
 
+#### Baltics ####
+can_form_estonia = {
+	OR = {
+		original_tag = OIE
+		original_tag = IYI
+		original_tag = BII
+		original_tag = BIZ
+		original_tag = BIE
+	}
+}
+
+can_form_latvia = {
+	OR = {
+		original_tag = OIZ
+		original_tag = IYO
+		original_tag = BOB
+		original_tag = BOY
+		original_tag = BIO
+	}
+}
+
+can_form_lithuania = {
+	OR = {
+		original_tag = OII
+		original_tag = IBB
+		original_tag = IBY
+		original_tag = FBA
+		original_tag = CJB # BIA
+		original_tag = BIS
+	}
+}
+
+can_form_baltics = {
+	OR = {
+		can_form_estonia = yes
+		can_form_latvia = yes
+		can_form_lithuania = yes
+	}
+}
+
+is_estonia = {
+	OR = {
+		state = 13
+		state = 191
+		state = 811
+		state = 812
+		state = 813
+	}
+}
+
+is_latvia = {
+	OR = {
+		state = 12
+		state = 190
+		state = 808
+		state = 809
+		state = 810
+	}
+}
+
+is_lithuania = {
+	OR = {
+		state = 11
+		state = 188
+		state = 189
+		state = 784
+		state = 814
+		state = 815
+	}
+}
+
+is_baltics = {
+	OR = {
+		is_estonia = yes
+		is_latvia = yes
+		is_lithuania = yes
+	}
+}
+
+has_states_to_form_estonia = {
+	custom_trigger_tooltip = {
+		tooltip = form_estonia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 13 } } } owns_state = 13 }
+		if = { limit = { NOT = { OOO = { owns_state = 191 } } } owns_state = 191 }
+		if = { limit = { NOT = { OOO = { owns_state = 811 } } } owns_state = 811 }
+		if = { limit = { NOT = { OOO = { owns_state = 812 } } } owns_state = 812 }
+		if = { limit = { NOT = { OOO = { owns_state = 813 } } } owns_state = 813 }
+	}
+}
+
+has_states_to_form_latvia = {
+	custom_trigger_tooltip = {
+		tooltip = form_latvia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 12 } } } owns_state = 12 }
+		if = { limit = { NOT = { OOO = { owns_state = 190 } } } owns_state = 190 }
+		if = { limit = { NOT = { OOO = { owns_state = 808 } } } owns_state = 808 }
+		if = { limit = { NOT = { OOO = { owns_state = 809 } } } owns_state = 809 }
+		if = { limit = { NOT = { OOO = { owns_state = 810 } } } owns_state = 810 }
+	}
+}
+
+has_states_to_form_lithuania = {
+	custom_trigger_tooltip = {
+		tooltip = form_lithuania_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 11 } } } owns_state = 11 }
+		if = { limit = { NOT = { OOO = { owns_state = 189 } } } owns_state = 189 }
+		if = { limit = { NOT = { OOO = { owns_state = 784 } } } owns_state = 784 }
+		if = { limit = { NOT = { OOO = { owns_state = 814 } } } owns_state = 814 }
+		if = { limit = { NOT = { OOO = { owns_state = 815 } } } owns_state = 815 }
+	}
+}
+
+has_cosmetics_to_form_baltics = {
+	has_country_flag = can_form_BAL_UNITED
+}
+has_states_to_form_baltics = {
+	custom_trigger_tooltip = {
+		tooltip = form_baltics_has_states_tt
+
+		has_states_to_form_estonia = yes
+		has_states_to_form_latvia = yes
+		has_states_to_form_lithuania = yes
+	}
+}
+
 #### Europe ####
 has_cosmetics_to_form_europe = {
 	has_country_flag = can_form_EUR_UNITED
