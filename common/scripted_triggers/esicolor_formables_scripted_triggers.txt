@@ -760,6 +760,92 @@ has_states_to_form_baltics = {
 	}
 }
 
+#### Benelux ####
+can_form_netherlands = {
+	OR = {
+		original_tag = OOF
+		original_tag = OES
+		original_tag = OEL
+	}
+}
+
+can_form_belgium = {
+	OR = {
+		original_tag = OOL
+		original_tag = OEA
+		original_tag = YFF
+		original_tag = YBO
+	}
+}
+
+can_form_benelux = {
+	OR = {
+		can_form_netherlands = yes
+		can_form_belgium = yes
+		original_tag = OOB
+	}
+}
+
+is_netherlands = {
+	OR = {
+		state = 7
+		state = 35
+		state = 36
+	}
+}
+
+is_belgium = {
+	OR = {
+		state = 6
+		state = 34
+		state = 977
+		state = 980
+	}
+}
+
+is_benelux = {
+	OR = {
+		is_netherlands = yes
+		is_belgium = yes
+		state = 8
+		state = 29
+	}
+}
+
+has_states_to_form_netherlands = {
+	custom_trigger_tooltip = {
+		tooltip = form_netherlands_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 7 } } } owns_state = 7 }
+		if = { limit = { NOT = { OOO = { owns_state = 35 } } } owns_state = 35 }
+		if = { limit = { NOT = { OOO = { owns_state = 36 } } } owns_state = 36 }
+	}
+}
+
+has_states_to_form_belgium = {
+	custom_trigger_tooltip = {
+		tooltip = form_belgium_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 6 } } } owns_state = 6 }
+		if = { limit = { NOT = { OOO = { owns_state = 34 } } } owns_state = 34 }
+		if = { limit = { NOT = { OOO = { owns_state = 977 } } } owns_state = 977 }
+		if = { limit = { NOT = { OOO = { owns_state = 980 } } } owns_state = 980 }
+	}
+}
+
+has_cosmetics_to_form_benelux = {
+	has_country_flag = can_form_UNL_UNITED
+}
+has_states_to_form_benelux = {
+	custom_trigger_tooltip = {
+		tooltip = form_benelux_has_states_tt
+
+		has_states_to_form_netherlands = yes
+		has_states_to_form_belgium = yes
+		if = { limit = { NOT = { OOO = { owns_state = 8 } } } owns_state = 8 }
+	}
+}
+
 #### Europe ####
 has_cosmetics_to_form_europe = {
 	has_country_flag = can_form_EUR_UNITED

@@ -958,6 +958,121 @@ esicolor_formables = {
 		}
 	}
 
+	form_netherlands = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_netherlands = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_netherlands = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_netherlands"
+			set_country_flag = can_form_UNL_UNITED
+
+			set_cosmetic_tag = UNL_NETHERLANDS
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_netherlands = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_belgium = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_belgium = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_belgium = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_belgium"
+			set_country_flag = can_form_UNL_UNITED
+
+			set_cosmetic_tag = UNL_BELGIUM
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_belgium = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_benelux = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_benelux = yes
+		}
+		visible = {
+			has_cosmetics_to_form_benelux = yes
+		}
+		available = {
+			has_states_to_form_benelux = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_benelux"
+			clr_country_flag = can_form_UNL_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+
+			set_cosmetic_tag = UNL_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_benelux = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_benelux_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
