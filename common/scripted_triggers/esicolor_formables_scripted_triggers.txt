@@ -1232,6 +1232,278 @@ has_states_to_form_guiana = {
 	}
 }
 
+#### Turkestan ####
+can_form_kazakhstan = {
+	OR = {
+		original_tag = AOZ
+		original_tag = AOA
+		original_tag = AOL
+		original_tag = AOF
+		original_tag = SBE
+		original_tag = SBL
+		original_tag = SBF
+		original_tag = SBB
+		original_tag = SBY
+		original_tag = SYO
+		original_tag = BBI
+		original_tag = BBZ
+	}
+}
+
+can_form_uzbekistan = {
+	OR = {
+		original_tag = AOS
+		original_tag = SBS
+	}
+}
+
+can_form_bukhara = {
+	OR = {
+		original_tag = BEO
+	}
+}
+
+can_form_karakalpakstan = {
+	OR = {
+		original_tag = BZE
+	}
+}
+
+can_form_khiva = {
+	OR = {
+		original_tag = BEI
+		original_tag = BEZ
+	}
+}
+
+can_form_turkmenistan = {
+	OR = {
+		original_tag = SBA
+		original_tag = BEZ
+	}
+}
+
+can_form_altai = {
+	OR = {
+		original_tag = OAO
+		original_tag = LSA
+	}
+}
+
+can_form_sinkiang = {
+	OR = {
+		original_tag = ZBF
+		original_tag = LIF
+		original_tag = LIB
+		original_tag = LIY
+		original_tag = FSY
+		original_tag = FLO
+	}
+}
+
+can_form_turkestan = {
+	OR = {
+		can_form_kazakhstan = yes
+		can_form_uzbekistan = yes
+		can_form_bukhara = yes
+		can_form_karakalpakstan = yes
+		can_form_khiva = yes
+		can_form_turkmenistan = yes
+		can_form_altai = yes
+		can_form_sinkiang = yes
+		original_tag = EZY
+		original_tag = FEZ
+	}
+}
+
+is_kazakhstan = {
+	OR = {
+		state = 402
+		state = 404
+		state = 406
+		state = 407
+		state = 583
+		state = 586
+		state = 587
+		state = 588
+		state = 589
+		state = 590
+		state = 881
+		state = 882
+	}
+}
+
+is_uzbekistan = {
+	OR = {
+		state = 405
+		state = 585
+		state = 823
+		state = 830
+		state = 831
+	}
+}
+
+is_bukhara = {
+	OR = {
+		state = 742
+		state = 830
+	}
+}
+
+is_karakalpakstan = {
+	OR = {
+		state = 823
+		state = 831
+	}
+}
+
+is_khiva = {
+	OR = {
+		state = 831
+		state = 832
+	}
+}
+
+is_turkmenistan = {
+	OR = {
+		state = 584
+		state = 832
+	}
+}
+
+is_altai = {
+	OR = {
+		state = 40
+		state = 654
+	}
+}
+
+is_sinkiang = {
+	OR = {
+		state = 287
+		state = 617
+		state = 618
+		state = 619
+		state = 759
+		state = 760
+	}
+}
+
+is_turkestan = {
+	OR = {
+		is_kazakhstan = yes
+		is_uzbekistan = yes
+		is_bukhara = yes
+		is_turkmenistan = yes
+		is_altai = yes
+		is_sinkiang = yes
+		state = 329
+		state = 732
+	}
+}
+
+has_states_to_form_kazakhstan = {
+	custom_trigger_tooltip = {
+		tooltip = form_kazakhstan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 402 } } } owns_state = 402 }
+		if = { limit = { NOT = { OOO = { owns_state = 404 } } } owns_state = 404 }
+		if = { limit = { NOT = { OOO = { owns_state = 406 } } } owns_state = 406 }
+		if = { limit = { NOT = { OOO = { owns_state = 407 } } } owns_state = 407 }
+		if = { limit = { NOT = { OOO = { owns_state = 583 } } } owns_state = 583 }
+		if = { limit = { NOT = { OOO = { owns_state = 586 } } } owns_state = 586 }
+		if = { limit = { NOT = { OOO = { owns_state = 587 } } } owns_state = 587 }
+		if = { limit = { NOT = { OOO = { owns_state = 588 } } } owns_state = 588 }
+		if = { limit = { NOT = { OOO = { owns_state = 589 } } } owns_state = 589 }
+		if = { limit = { NOT = { OOO = { owns_state = 590 } } } owns_state = 590 }
+		if = { limit = { NOT = { OOO = { owns_state = 881 } } } owns_state = 881 }
+		if = { limit = { NOT = { OOO = { owns_state = 882 } } } owns_state = 882 }
+	}
+}
+
+has_states_to_form_uzbekistan = {
+	custom_trigger_tooltip = {
+		tooltip = form_uzbekistan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 405 } } } owns_state = 405 }
+		if = { limit = { NOT = { OOO = { owns_state = 585 } } } owns_state = 585 }
+		if = { limit = { NOT = { OOO = { owns_state = 830 } } } owns_state = 830 }
+	}
+}
+
+has_states_to_form_bukhara = {
+	custom_trigger_tooltip = {
+		tooltip = form_bukhara_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 742 } } } owns_state = 742 }
+		if = { limit = { NOT = { OOO = { owns_state = 830 } } } owns_state = 830 }
+	}
+}
+
+has_states_to_form_karakalpakstan = {
+	custom_trigger_tooltip = {
+		tooltip = form_karakalpakstan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 823 } } } owns_state = 823 }
+		if = { limit = { NOT = { OOO = { owns_state = 831 } } } owns_state = 831 }
+	}
+}
+
+has_states_to_form_khiva = {
+	custom_trigger_tooltip = {
+		tooltip = form_khiva_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 831 } } } owns_state = 831 }
+		if = { limit = { NOT = { OOO = { owns_state = 832 } } } owns_state = 832 }
+	}
+}
+
+has_states_to_form_turkmenistan = {
+	custom_trigger_tooltip = {
+		tooltip = form_turkmenistan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 584 } } } owns_state = 584 }
+		if = { limit = { NOT = { OOO = { owns_state = 832 } } } owns_state = 832 }
+	}
+}
+
+has_states_to_form_altai = {
+	custom_trigger_tooltip = {
+		tooltip = form_altai_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 40 } } } owns_state = 40 }
+		if = { limit = { NOT = { OOO = { owns_state = 654 } } } owns_state = 654 }
+	}
+}
+
+has_states_to_form_sinkiang = {
+	custom_trigger_tooltip = {
+		tooltip = form_sinkiang_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 287 } } } owns_state = 287 }
+		if = { limit = { NOT = { OOO = { owns_state = 617 } } } owns_state = 617 }
+		if = { limit = { NOT = { OOO = { owns_state = 618 } } } owns_state = 618 }
+		if = { limit = { NOT = { OOO = { owns_state = 619 } } } owns_state = 619 }
+		if = { limit = { NOT = { OOO = { owns_state = 759 } } } owns_state = 759 }
+		if = { limit = { NOT = { OOO = { owns_state = 760 } } } owns_state = 760 }
+	}
+}
+
+has_cosmetics_to_form_turkestan = {
+	has_country_flag = can_form_TKS_UNITED
+}
+has_states_to_form_turkestan = {
+	custom_trigger_tooltip = {
+		tooltip = form_turkestan_has_states_tt
+
+		has_states_to_form_kazakhstan = yes
+		has_states_to_form_uzbekistan = yes
+		has_states_to_form_karakalpakstan = yes
+		has_states_to_form_turkmenistan = yes
+		if = { limit = { NOT = { OOO = { owns_state = 732 } } } owns_state = 732 }
+	}
+}
+
 #### Europe ####
 has_cosmetics_to_form_europe = {
 	has_country_flag = can_form_EUR_UNITED
@@ -1240,6 +1512,20 @@ has_states_to_form_europe = {
 	all_state = {
 		OR = {
 			NOT = { is_on_continent = europe }
+			is_owned_by = PREV
+			is_owned_by = OOO
+		}
+	}
+}
+
+#### North America ####
+has_cosmetics_to_form_north_america = {
+	has_country_flag = can_form_NOA_UNITED
+}
+has_states_to_form_north_america = {
+	all_state = {
+		OR = {
+			NOT = { is_on_continent = north_america }
 			is_owned_by = PREV
 			is_owned_by = OOO
 		}
@@ -1260,6 +1546,20 @@ has_states_to_form_south_america = {
 	}
 }
 
+#### Oceania ####
+has_cosmetics_to_form_australia = {
+	has_country_flag = can_form_OCE_UNITED
+}
+has_states_to_form_australia = {
+	all_state = {
+		OR = {
+			NOT = { is_on_continent = australia }
+			is_owned_by = PREV
+			is_owned_by = OOO
+		}
+	}
+}
+
 #### Africa ####
 has_cosmetics_to_form_africa = {
 	has_country_flag = can_form_AFR_UNITED
@@ -1268,6 +1568,34 @@ has_states_to_form_africa = {
 	all_state = {
 		OR = {
 			NOT = { is_on_continent = africa }
+			is_owned_by = PREV
+			is_owned_by = OOO
+		}
+	}
+}
+
+#### Asia ####
+has_cosmetics_to_form_asia = {
+	has_country_flag = can_form_ASI_UNITED
+}
+has_states_to_form_asia = {
+	all_state = {
+		OR = {
+			NOT = { is_on_continent = asia }
+			is_owned_by = PREV
+			is_owned_by = OOO
+		}
+	}
+}
+
+#### Middle East ####
+has_cosmetics_to_form_middle_east = {
+	has_country_flag = can_form_MEA_UNITED
+}
+has_states_to_form_middle_east = {
+	all_state = {
+		OR = {
+			NOT = { is_on_continent = middle_east }
 			is_owned_by = PREV
 			is_owned_by = OOO
 		}
