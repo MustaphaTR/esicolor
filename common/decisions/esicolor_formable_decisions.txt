@@ -1325,6 +1325,287 @@ esicolor_formables = {
 		}
 	}
 
+	form_panama = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_panama = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_panama = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_panama"
+			set_country_flag = can_form_GCO_UNITED
+
+			set_cosmetic_tag = GCO_PANAMA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_panama = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_colombia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_colombia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_colombia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_colombia"
+			set_country_flag = can_form_GCO_UNITED
+
+			set_cosmetic_tag = GCO_COLOMBIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_colombia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_venezuela = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_venezuela = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_venezuela = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_venezuela"
+			set_country_flag = can_form_GCO_UNITED
+
+			set_cosmetic_tag = GCO_VENEZUELA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_venezuela = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_venezuela_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_ecuador = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_ecuador = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_ecuador = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_ecuador"
+			set_country_flag = can_form_GCO_UNITED
+
+			set_cosmetic_tag = GCO_ECUADOR
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_ecuador = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_ecuador_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_peru = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_peru = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_peru = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_peru"
+			set_country_flag = can_form_GCO_UNITED
+
+			set_cosmetic_tag = GCO_PERU
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_peru = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_peru_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_gran_colombia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_gran_colombia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_gran_colombia = yes
+		}
+		available = {
+			has_states_to_form_gran_colombia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_gran_colombia"
+			clr_country_flag = can_form_GCO_UNITED
+
+			set_country_flag = can_form_SOA_UNITED
+
+			set_cosmetic_tag = GCO_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_gran_colombia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_gran_colombia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_guiana = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_guiana = yes
+		}
+		visible = {
+			has_cosmetics_to_form_guiana = yes
+		}
+		available = {
+			has_states_to_form_guiana = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_guiana"
+			clr_country_flag = can_form_GUY_UNITED
+
+			set_country_flag = can_form_SOA_UNITED
+
+			set_cosmetic_tag = GUY_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_guiana = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_guiana_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
@@ -1347,6 +1628,44 @@ esicolor_formables = {
 			hidden_effect = {
 				every_state = {
 					limit = { is_on_continent = europe }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_200?200
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_south_america = {
+		icon = generic_form_nation
+		allowed = {
+			always = yes
+		}
+		visible = {
+			has_cosmetics_to_form_south_america = yes
+		}
+		available = {
+			has_states_to_form_south_america = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_south_america"
+			clr_country_flag = can_form_SOA_UNITED
+
+			set_country_flag = can_form_EAR_UNITED
+
+			set_cosmetic_tag = SOA_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_on_continent = south_america }
 
 					formable_decision_effect = yes
 				}

@@ -1030,6 +1030,208 @@ has_states_to_form_magreb = {
 	}
 }
 
+#### Gran Colombia ####
+can_form_panama = {
+	OR = {
+		original_tag = EOA
+		original_tag = LBS
+	}
+}
+
+can_form_colombia = {
+	OR = {
+		original_tag = EOL
+		original_tag = ABL
+		original_tag = AYE
+	}
+}
+
+can_form_venezuela = {
+	OR = {
+		original_tag = EOF
+		original_tag = ABB
+		original_tag = ABY
+	}
+}
+
+can_form_ecuador = {
+	OR = {
+		original_tag = EOS
+		original_tag = AYO
+		original_tag = LAY
+	}
+}
+
+can_form_peru = {
+	OR = {
+		original_tag = EOE
+		original_tag = AYI
+		original_tag = AYZ
+		original_tag = AYA
+		original_tag = YAF
+	}
+}
+
+can_form_gran_colombia = {
+	OR = {
+		can_form_panama = yes
+		can_form_colombia = yes
+		can_form_venezuela = yes
+		can_form_ecuador = yes
+		can_form_peru = yes
+	}
+}
+
+is_panama = {
+	OR = {
+		state = 304
+		state = 685
+	}
+}
+
+is_colombia = {
+	OR = {
+		state = 306
+		state = 486
+		state = 493
+	}
+}
+
+is_venezuela = {
+	OR = {
+		state = 307
+		state = 488
+		state = 489
+		state = 687
+		state = 695
+	}
+}
+
+is_ecuador = {
+	OR = {
+		state = 305
+		state = 490
+		state = 491
+		state = 649
+	}
+}
+
+is_peru = {
+	OR = {
+		state = 303
+		state = 490
+		state = 491
+		state = 492
+		state = 494
+		state = 947
+	}
+}
+
+is_gran_colombia = {
+	OR = {
+		is_panama = yes
+		is_colombia = yes
+		is_venezluela = yes
+		is_ecuador = yes
+	}
+}
+
+has_states_to_form_panama = {
+	custom_trigger_tooltip = {
+		tooltip = form_panama_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 304 } } } owns_state = 304 }
+		if = { limit = { NOT = { OOO = { owns_state = 685 } } } owns_state = 685 }
+	}
+}
+
+has_states_to_form_colombia = {
+	custom_trigger_tooltip = {
+		tooltip = form_colombia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 306 } } } owns_state = 306 }
+		if = { limit = { NOT = { OOO = { owns_state = 486 } } } owns_state = 486 }
+		if = { limit = { NOT = { OOO = { owns_state = 493 } } } owns_state = 493 }
+	}
+}
+
+has_states_to_form_venezuela = {
+	custom_trigger_tooltip = {
+		tooltip = form_venezuela_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 307 } } } owns_state = 307 }
+		if = { limit = { NOT = { OOO = { owns_state = 488 } } } owns_state = 488 }
+		if = { limit = { NOT = { OOO = { owns_state = 489 } } } owns_state = 489 }
+	}
+}
+
+has_states_to_form_ecuador = {
+	custom_trigger_tooltip = {
+		tooltip = form_ecuador_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 305 } } } owns_state = 305 }
+		if = { limit = { NOT = { OOO = { owns_state = 490 } } } owns_state = 490 }
+		if = { limit = { NOT = { OOO = { owns_state = 649 } } } owns_state = 649 }
+	}
+}
+
+has_states_to_form_peru = {
+	custom_trigger_tooltip = {
+		tooltip = form_peru_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 303 } } } owns_state = 303 }
+		if = { limit = { NOT = { OOO = { owns_state = 491 } } } owns_state = 491 }
+		if = { limit = { NOT = { OOO = { owns_state = 492 } } } owns_state = 492 }
+		if = { limit = { NOT = { OOO = { owns_state = 494 } } } owns_state = 494 }
+		if = { limit = { NOT = { OOO = { owns_state = 947 } } } owns_state = 947 }
+	}
+}
+
+has_cosmetics_to_form_gran_colombia = {
+	has_country_flag = can_form_GCO_UNITED
+}
+has_states_to_form_gran_colombia = {
+	custom_trigger_tooltip = {
+		tooltip = form_gran_colombia_has_states_tt
+
+		has_states_to_form_panama = yes
+		has_states_to_form_colombia = yes
+		has_states_to_form_venezuela = yes
+		has_states_to_form_ecuador = yes
+	}
+}
+
+#### Guiana ####
+can_form_guiana = {
+	OR = {
+		original_tag = EOY
+		original_tag = EIO
+		original_tag = LBY
+	}
+}
+
+is_guiana = {
+	OR = {
+		state = 309
+		state = 310
+		state = 488
+		state = 687
+		state = 939
+		state = 968
+		state = 969
+	}
+}
+
+has_states_to_form_guiana = {
+	custom_trigger_tooltip = {
+		tooltip = form_guiana_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 309 } } } owns_state = 309 }
+		if = { limit = { NOT = { OOO = { owns_state = 310 } } } owns_state = 310 }
+		if = { limit = { NOT = { OOO = { owns_state = 687 } } } owns_state = 687 }
+	}
+}
+
 #### Europe ####
 has_cosmetics_to_form_europe = {
 	has_country_flag = can_form_EUR_UNITED
@@ -1038,6 +1240,20 @@ has_states_to_form_europe = {
 	all_state = {
 		OR = {
 			NOT = { is_on_continent = europe }
+			is_owned_by = PREV
+			is_owned_by = OOO
+		}
+	}
+}
+
+#### South America ####
+has_cosmetics_to_form_south_america = {
+	has_country_flag = can_form_SOA_UNITED
+}
+has_states_to_form_south_america = {
+	all_state = {
+		OR = {
+			NOT = { is_on_continent = south_america }
 			is_owned_by = PREV
 			is_owned_by = OOO
 		}
