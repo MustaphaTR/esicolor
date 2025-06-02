@@ -846,6 +846,190 @@ has_states_to_form_benelux = {
 	}
 }
 
+#### Magreb ####
+can_form_mauritania = {
+	OR = {
+		original_tag = SSF
+		original_tag = FBL
+	}
+}
+
+can_form_morocco = {
+	OR = {
+		original_tag = ZYO
+		original_tag = ALI
+		original_tag = ALZ
+		original_tag = FBE
+	}
+}
+
+can_form_algeria = {
+	OR = {
+		original_tag = BTZ # ASY
+		original_tag = ALO
+		original_tag = TJF # SIE
+		original_tag = YJB # SIA
+	}
+}
+
+can_form_tunisia = {
+	OR = {
+		original_tag = ASB
+		original_tag = LLS
+	}
+}
+
+can_form_libya = {
+	OR = {
+		original_tag = ZFE
+		original_tag = AAB
+		original_tag = AAY
+		original_tag = ASO
+		original_tag = ASI
+		original_tag = LLI
+		original_tag = LLZ
+		original_tag = LLE
+	}
+}
+
+can_form_magreb = {
+	OR = {
+		can_form_mauritania = yes
+		can_form_morocco = yes
+		can_form_algeria = yes
+		can_form_tunisia = yes
+		can_form_libya = yes
+		original_tag = LYY
+	}
+}
+
+is_mauritania = {
+	OR = {
+		state = 557
+		state = 786
+	}
+}
+
+is_morocco = {
+	OR = {
+		state = 290
+		state = 461
+		state = 462
+		state = 699
+		state = 783
+	}
+}
+
+is_algeria = {
+	OR = {
+		state = 459
+		state = 460
+		state = 513
+		state = 514
+	}
+}
+
+is_tunisia = {
+	OR = {
+		state = 458
+		state = 665
+	}
+}
+
+is_libya = {
+	OR = {
+		state = 273
+		state = 448
+		state = 449
+		state = 450
+		state = 451
+		state = 661
+		state = 662
+		state = 663
+	}
+}
+
+is_magreb = {
+	OR = {
+		is_mauritania = yes
+		is_morocco = yes
+		is_algeria = yes
+		is_tunisia = yes
+		is_libya = yes
+	}
+}
+
+has_states_to_form_mauritania = {
+	custom_trigger_tooltip = {
+		tooltip = form_mauritania_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 557 } } } owns_state = 557 }
+		if = { limit = { NOT = { OOO = { owns_state = 786 } } } owns_state = 786 }
+	}
+}
+
+has_states_to_form_morocco = {
+	custom_trigger_tooltip = {
+		tooltip = form_morocco_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 290 } } } owns_state = 290 }
+		if = { limit = { NOT = { OOO = { owns_state = 461 } } } owns_state = 461 }
+		if = { limit = { NOT = { OOO = { owns_state = 462 } } } owns_state = 462 }
+		if = { limit = { NOT = { OOO = { owns_state = 783 } } } owns_state = 783 }
+	}
+}
+
+has_states_to_form_algeria = {
+	custom_trigger_tooltip = {
+		tooltip = form_algeria_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 459 } } } owns_state = 459 }
+		if = { limit = { NOT = { OOO = { owns_state = 460 } } } owns_state = 460 }
+		if = { limit = { NOT = { OOO = { owns_state = 513 } } } owns_state = 513 }
+		if = { limit = { NOT = { OOO = { owns_state = 514 } } } owns_state = 514 }
+	}
+}
+
+has_states_to_form_tunisia = {
+	custom_trigger_tooltip = {
+		tooltip = form_tunisia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 458 } } } owns_state = 458 }
+		if = { limit = { NOT = { OOO = { owns_state = 665 } } } owns_state = 665 }
+	}
+}
+
+has_states_to_form_libya = {
+	custom_trigger_tooltip = {
+		tooltip = form_libya_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 273 } } } owns_state = 273 }
+		if = { limit = { NOT = { OOO = { owns_state = 448 } } } owns_state = 448 }
+		if = { limit = { NOT = { OOO = { owns_state = 449 } } } owns_state = 449 }
+		if = { limit = { NOT = { OOO = { owns_state = 450 } } } owns_state = 450 }
+		if = { limit = { NOT = { OOO = { owns_state = 451 } } } owns_state = 451 }
+		if = { limit = { NOT = { OOO = { owns_state = 661 } } } owns_state = 661 }
+		if = { limit = { NOT = { OOO = { owns_state = 662 } } } owns_state = 662 }
+		if = { limit = { NOT = { OOO = { owns_state = 663 } } } owns_state = 663 }
+	}
+}
+
+has_cosmetics_to_form_magreb = {
+	has_country_flag = can_form_MGR_UNITED
+}
+has_states_to_form_magreb = {
+	custom_trigger_tooltip = {
+		tooltip = form_magreb_has_states_tt
+
+		has_states_to_form_mauritania = yes
+		has_states_to_form_morocco = yes
+		has_states_to_form_algeria = yes
+		has_states_to_form_tunisia = yes
+		has_states_to_form_libya = yes
+		if = { limit = { NOT = { OOO = { owns_state = 699 } } } owns_state = 699 }
+	}
+}
+
 #### Europe ####
 has_cosmetics_to_form_europe = {
 	has_country_flag = can_form_EUR_UNITED
@@ -854,6 +1038,20 @@ has_states_to_form_europe = {
 	all_state = {
 		OR = {
 			NOT = { is_on_continent = europe }
+			is_owned_by = PREV
+			is_owned_by = OOO
+		}
+	}
+}
+
+#### Africa ####
+has_cosmetics_to_form_africa = {
+	has_country_flag = can_form_AFR_UNITED
+}
+has_states_to_form_africa = {
+	all_state = {
+		OR = {
+			NOT = { is_on_continent = africa }
 			is_owned_by = PREV
 			is_owned_by = OOO
 		}

@@ -1073,6 +1073,258 @@ esicolor_formables = {
 		}
 	}
 
+	form_mauritania = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_mauritania = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_mauritania = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_mauritania"
+			set_country_flag = can_form_MGR_UNITED
+
+			set_cosmetic_tag = MGR_MAURITANIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_mauritania = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_morocco = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_morocco = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_morocco = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_morocco"
+			set_country_flag = can_form_MGR_UNITED
+
+			if = {
+				limit = { original_tag = ZYO }
+
+				set_cosmetic_tag = MGR_MOROCCO_RIF
+
+				else = {
+					set_cosmetic_tag = MGR_MOROCCO
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_morocco = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_morocco_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_algeria = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_algeria = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_algeria = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_algeria"
+			set_country_flag = can_form_MGR_UNITED
+
+			set_cosmetic_tag = MGR_ALGERIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_algeria = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_tunisia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_tunisia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_tunisia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_tunisia"
+			set_country_flag = can_form_MGR_UNITED
+
+			set_cosmetic_tag = MGR_TUNISIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_tunisia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_libya = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_libya = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_libya = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_libya"
+			set_country_flag = can_form_MGR_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = ASI_italo_balbo ruling_only = yes } }
+
+				set_cosmetic_tag = MGR_LIBYA_ITALIAN
+
+				else = {
+					set_cosmetic_tag = MGR_LIBYA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_libya = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_magreb = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_magreb = yes
+		}
+		visible = {
+			has_cosmetics_to_form_magreb = yes
+		}
+		available = {
+			has_states_to_form_magreb = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_magreb"
+			clr_country_flag = can_form_MGR_UNITED
+
+			set_country_flag = can_form_AFR_UNITED
+
+			if = {
+				limit = { original_tag = ZYO }
+
+				set_cosmetic_tag = MGR_UNITED_RIF
+			}
+			else_if = {
+				limit = { has_country_leader = { character = ASI_italo_balbo ruling_only = yes } }
+
+				set_cosmetic_tag = MGR_UNITED_ITALIAN
+
+				else = {
+					set_cosmetic_tag = MGR_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_magreb = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
@@ -1095,6 +1347,44 @@ esicolor_formables = {
 			hidden_effect = {
 				every_state = {
 					limit = { is_on_continent = europe }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_200?200
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_africa = {
+		icon = generic_form_nation
+		allowed = {
+			always = yes
+		}
+		visible = {
+			has_cosmetics_to_form_africa = yes
+		}
+		available = {
+			has_states_to_form_africa = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_africa"
+			clr_country_flag = can_form_AFR_UNITED
+
+			set_country_flag = can_form_EAR_UNITED
+
+			set_cosmetic_tag = AFR_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_on_continent = africa }
 
 					formable_decision_effect = yes
 				}
