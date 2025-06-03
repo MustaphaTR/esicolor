@@ -13,6 +13,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_slovenia"
 			set_country_flag = can_form_YUG_UNITED
+			set_country_flag = can_form_DNB_UNITED
 
 			set_cosmetic_tag = YUG_SLOVENIA
 
@@ -54,6 +55,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_croatia"
 			set_country_flag = can_form_YUG_UNITED
+			set_country_flag = can_form_DNB_UNITED
 
 			set_cosmetic_tag = YUG_CROATIA
 
@@ -95,6 +97,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_bosnia_herzegovina"
 			set_country_flag = can_form_YUG_UNITED
+			set_country_flag = can_form_DNB_UNITED
 
 			set_cosmetic_tag = YUG_BOSNIA
 
@@ -208,6 +211,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_yugoslavia"
 			clr_country_flag = can_form_YUG_UNITED
+			clr_country_flag = can_form_DNB_UNITED
 
 			set_country_flag = can_form_UBF_UNITED
 
@@ -456,6 +460,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_transylvania"
 			set_country_flag = can_form_ROM_UNITED
+			set_country_flag = can_form_DNB_UNITED
 
 			set_cosmetic_tag = ROM_TRANSYLVANIA
 
@@ -2465,6 +2470,341 @@ esicolor_formables = {
 		}
 
 		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_austria = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_austria = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_austria = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_austria"
+			set_country_flag = can_form_DNB_AUSTRIA_HUNGARY
+
+			if = {
+				limit = { has_country_leader = { character = HUN_otto_von_habsburg ruling_only = yes } }
+
+				set_cosmetic_tag = DNB_AUSTRIA_OTTO
+			}
+			else_if = {
+				limit = { has_country_leader = { character = BAB_alois_of_liechtenstein ruling_only = yes } }
+
+				set_cosmetic_tag = DNB_AUSTRIA_ALOIS
+
+				else = {
+					set_cosmetic_tag = DNB_AUSTRIA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_austria = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_austria_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_hungary = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_hungary = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_hungary = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_hungary"
+			set_country_flag = can_form_DNB_AUSTRIA_HUNGARY
+
+			if = {
+				limit = { has_country_leader = { character = HUN_otto_von_habsburg ruling_only = yes } }
+
+				set_cosmetic_tag = DNB_HUNGARY_OTTO
+
+				else = {
+					set_cosmetic_tag = DNB_HUNGARY
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_hungary = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_hungary_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_czechia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_czechia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_czechia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_czechia"
+			set_country_flag = can_form_DNB_CZECHOSLOVAKIA
+
+			if = {
+				limit = { has_country_leader = { character = OLY_konstantin_von_neurath ruling_only = yes } }
+
+				set_cosmetic_tag = DNB_CZECHIA_GERMAN
+
+				else = {
+					set_cosmetic_tag = DNB_CZECHIA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_czechia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_slovakia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_slovakia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_slovakia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_slovakia"
+			set_country_flag = can_form_DNB_CZECHOSLOVAKIA
+
+			set_cosmetic_tag = DNB_SLOVAKIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_slovakia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_slovakia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_austria_hungary = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_austria_hungary = yes
+		}
+		visible = {
+			has_cosmetics_to_form_austria_hungary = yes
+		}
+		available = {
+			has_states_to_form_austria_hungary = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_austria_hungary"
+			clr_country_flag = can_form_DNB_AUSTRIA_HUNGARY
+
+			set_country_flag = can_form_DNB_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = BAB_alois_of_liechtenstein ruling_only = yes } }
+
+				set_cosmetic_tag = DNB_AUSTRIA_HUNGARY_ALOIS
+
+				else = {
+					set_cosmetic_tag = DNB_AUSTRIA_HUNGARY
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_austria_hungary = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_austria_hungary_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_czechoslovakia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_czechoslovakia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_czechoslovakia = yes
+		}
+		available = {
+			has_states_to_form_czechoslovakia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_czechoslovakia"
+			clr_country_flag = can_form_DNB_CZECHOSLOVAKIA
+
+			set_country_flag = can_form_DNB_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = OLY_konstantin_von_neurath ruling_only = yes } }
+
+				set_cosmetic_tag = DNB_CZECHOSLOVAKIA_GERMAN
+
+				else = {
+					set_cosmetic_tag = DNB_CZECHOSLOVAKIA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_czechoslovakia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_czechoslovakia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_danubia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_danubia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_danubia = yes
+		}
+		available = {
+			has_states_to_form_danubia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_danubia"
+			clr_country_flag = can_form_DNB_UNITED
+			clr_country_flag = can_form_YUG_UNITED
+			clr_country_flag = can_form_ROM_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+
+			set_cosmetic_tag = DNB_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_danubia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_danubia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_100?100
 
 		fire_only_once = yes
 

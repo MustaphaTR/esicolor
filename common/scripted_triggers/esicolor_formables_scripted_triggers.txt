@@ -130,7 +130,7 @@ has_states_to_form_croatia = {
 	custom_trigger_tooltip = {
 		tooltip = form_croatia_has_states_tt
 
-		if = { limit = { NOT = { OOO = { owns_state = 103 } } } owns_state = 102 }
+		if = { limit = { NOT = { OOO = { owns_state = 103 } } } owns_state = 103 }
 		if = { limit = { NOT = { OOO = { owns_state = 109 } } } owns_state = 109 }
 		if = { limit = { NOT = { OOO = { owns_state = 163 } } } owns_state = 163 }
 	}
@@ -140,7 +140,7 @@ has_states_to_form_bosnia_herzegovina = {
 	custom_trigger_tooltip = {
 		tooltip = form_bosnia_herzegovina_has_states_tt
 
-		if = { limit = { NOT = { OOO = { owns_state = 104 } } } owns_state = 102 }
+		if = { limit = { NOT = { OOO = { owns_state = 104 } } } owns_state = 104 }
 		if = { limit = { NOT = { OOO = { owns_state = 804 } } } owns_state = 804 }
 	}
 }
@@ -1075,6 +1075,227 @@ has_states_to_form_iberia = {
 
 		has_states_to_form_portugal = yes
 		has_states_to_form_spain = yes
+	}
+}
+
+#### Danubian Federation ####
+can_form_austria = {
+	OR = {
+		original_tag = OOA
+		original_tag = ISZ
+		original_tag = ISE
+		original_tag = BAB
+		original_tag = YFL
+		original_tag = YFS
+	}
+}
+
+can_form_hungary = {
+	OR = {
+		original_tag = OAE
+		original_tag = ISA
+		original_tag = ISS
+		original_tag = YFE
+		original_tag = YFA
+		original_tag = YFS
+	}
+}
+
+can_form_czechia = {
+	OR = {
+		original_tag = OOY
+		original_tag = OLY
+		original_tag = OFZ
+		original_tag = OFA
+		original_tag = OFS
+		original_tag = YFZ
+	}
+}
+
+can_form_slovakia = {
+	OR = {
+		original_tag = OFO
+		original_tag = OFI
+		original_tag = LLA
+	}
+}
+
+can_form_austria_hungary = {
+	OR = {
+		can_form_austria = yes
+		can_form_hungary = yes
+	}
+}
+
+can_form_czechoslovakia = {
+	OR = {
+		can_form_czechia = yes
+		can_form_slovakia = yes
+	}
+}
+
+can_form_danubia = {
+	OR = {
+		can_form_czechoslovakia = yes
+		can_form_austria_hungary = yes
+		can_form_transylvania = yes
+		can_form_slovenia = yes
+		can_form_croatia = yes
+		can_form_bosnia_herzegovina = yes
+	}
+}
+
+is_austria = {
+	OR = {
+		state = 4
+		state = 39
+		state = 152
+		state = 153
+		state = 848
+		state = 975
+		state = 976
+	}
+}
+
+is_hungary = {
+	OR = {
+		state = 43
+		state = 45
+		state = 154
+		state = 155
+		state = 664
+		state = 973
+		state = 974
+		state = 975
+	}
+}
+
+is_czechia = {
+	OR = {
+		state = 9
+		state = 69
+		state = 72
+		state = 74
+		state = 75
+		state = 972
+	}
+}
+
+is_slovakia = {
+	OR = {
+		state = 70
+		state = 71
+		state = 73
+		state = 664
+	}
+}
+
+is_austria_hungary = {
+	OR = {
+		is_austria = yes
+		is_hungary = yes
+	}
+}
+
+is_czechoslovakia = {
+	OR = {
+		is_czechia = yes
+		is_slovakia = yes
+	}
+}
+
+is_danubia = {
+	OR = {
+		is_austria_hungary = yes
+		is_czechoslovakia = yes
+		is_transylvania = yes
+		is_slovenia = yes
+		is_croatia = yes
+		is_bosnia_herzegovina = yes
+	}
+}
+
+has_states_to_form_austria = {
+	custom_trigger_tooltip = {
+		tooltip = form_austria_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 4 } } } owns_state = 4 }
+		if = { limit = { NOT = { OOO = { owns_state = 152 } } } owns_state = 152 }
+		if = { limit = { NOT = { OOO = { owns_state = 153 } } } owns_state = 153 }
+		if = { limit = { NOT = { OOO = { owns_state = 848 } } } owns_state = 848 }
+		if = { limit = { NOT = { OOO = { owns_state = 975 } } } owns_state = 975 }
+		if = { limit = { NOT = { OOO = { owns_state = 976 } } } owns_state = 976 }
+	}
+}
+
+has_states_to_form_hungary = {
+	custom_trigger_tooltip = {
+		tooltip = form_hungary_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 43 } } } owns_state = 43 }
+		if = { limit = { NOT = { OOO = { owns_state = 154 } } } owns_state = 154 }
+		if = { limit = { NOT = { OOO = { owns_state = 155 } } } owns_state = 155 }
+		if = { limit = { NOT = { OOO = { owns_state = 973 } } } owns_state = 973 }
+		if = { limit = { NOT = { OOO = { owns_state = 974 } } } owns_state = 974 }
+	}
+}
+
+has_states_to_form_czechia = {
+	custom_trigger_tooltip = {
+		tooltip = form_czechia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 9 } } } owns_state = 9 }
+		if = { limit = { NOT = { OOO = { owns_state = 69 } } } owns_state = 69 }
+		if = { limit = { NOT = { OOO = { owns_state = 72 } } } owns_state = 72 }
+		if = { limit = { NOT = { OOO = { owns_state = 74 } } } owns_state = 74 }
+		if = { limit = { NOT = { OOO = { owns_state = 75 } } } owns_state = 75 }
+		if = { limit = { NOT = { OOO = { owns_state = 972 } } } owns_state = 972 }
+	}
+}
+
+has_states_to_form_slovakia = {
+	custom_trigger_tooltip = {
+		tooltip = form_slovakia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 70 } } } owns_state = 70 }
+		if = { limit = { NOT = { OOO = { owns_state = 71 } } } owns_state = 71 }
+		if = { limit = { NOT = { OOO = { owns_state = 664 } } } owns_state = 664 }
+	}
+}
+
+has_cosmetics_to_form_austria_hungary = {
+	has_country_flag = can_form_DNB_AUSTRIA_HUNGARY
+}
+has_states_to_form_austria_hungary = {
+	custom_trigger_tooltip = {
+		tooltip = form_austria_hungary_has_states_tt
+
+		has_states_to_form_austria = yes
+		has_states_to_form_hungary = yes
+	}
+}
+
+has_cosmetics_to_form_czechoslovakia = {
+	has_country_flag = can_form_DNB_CZECHOSLOVAKIA
+}
+has_states_to_form_czechoslovakia = {
+	custom_trigger_tooltip = {
+		tooltip = form_czechoslovakia_has_states_tt
+
+		has_states_to_form_czechia = yes
+		has_states_to_form_slovakia = yes
+	}
+}
+
+has_cosmetics_to_form_danubia = {
+	has_country_flag = can_form_DNB_UNITED
+}
+has_states_to_form_danubia = {
+	custom_trigger_tooltip = {
+		tooltip = form_danubia_has_states_tt
+
+		has_states_to_form_austria_hungary = yes
+		has_states_to_form_czechoslovakia = yes
 	}
 }
 
