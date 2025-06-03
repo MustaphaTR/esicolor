@@ -2281,6 +2281,198 @@ esicolor_formables = {
 		}
 	}
 
+	form_saudi_arabia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_saudi_arabia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_saudi_arabia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_saudi_arabia"
+			set_country_flag = can_form_ARA_UNITED
+
+			set_cosmetic_tag = ARA_SAUDI
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_saudi_arabia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_gulf_states = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_gulf_states = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_gulf_states = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_gulf_states"
+			set_country_flag = can_form_ARA_UNITED
+
+			set_cosmetic_tag = ARA_GULF
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_gulf_states = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_gulf_states_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_oman = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_oman = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_oman = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_oman"
+			set_country_flag = can_form_ARA_UNITED
+
+			set_cosmetic_tag = ARA_OMAN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_oman = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_yemen = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_yemen = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_yemen = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_yemen"
+			set_country_flag = can_form_ARA_UNITED
+
+			set_cosmetic_tag = ARA_YEMEN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_yemen = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_arabia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_arabia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_arabia = yes
+		}
+		available = {
+			has_states_to_form_arabia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_arabia"
+			clr_country_flag = can_form_ARA_UNITED
+
+			set_country_flag = can_form_MEA_UNITED
+
+			set_cosmetic_tag = ARA_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_arabia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_arabia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {

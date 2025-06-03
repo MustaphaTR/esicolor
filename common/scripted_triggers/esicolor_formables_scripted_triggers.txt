@@ -1736,6 +1736,175 @@ has_states_to_form_turkestan = {
 	}
 }
 
+#### Arabia ####
+can_form_saudi_arabia = {
+	OR = {
+		original_tag = ZYZ
+		original_tag = LFB
+		original_tag = LFY
+		original_tag = BSA
+		original_tag = BSS
+		original_tag = BSL
+		original_tag = BSF
+		original_tag = BSB
+		original_tag = BSY
+	}
+}
+
+can_form_gulf_states = {
+	OR = {
+		original_tag = LSL
+		original_tag = LSB
+		original_tag = LFB
+		original_tag = BSY
+		original_tag = FLS
+		original_tag = NIE
+		original_tag = NIA
+	}
+}
+
+can_form_oman = {
+	OR = {
+		original_tag = ZYA
+		original_tag = NIE
+		original_tag = NIS
+		original_tag = NIL
+	}
+}
+
+can_form_yemen = {
+	OR = {
+		original_tag = ZYE
+		original_tag = LSY
+		original_tag = YOL
+		original_tag = YYZ
+	}
+}
+
+can_form_arabia = {
+	OR = {
+		can_form_saudi_arabia = yes
+		can_form_gulf_states = yes
+		can_form_oman = yes
+		can_form_yemen = yes
+	}
+}
+
+is_saudi_arabia = {
+	OR = {
+		state = 292
+		state = 678
+		state = 679
+		state = 854
+		state = 855
+		state = 856
+		state = 857
+		state = 858
+		state = 859
+	}
+}
+
+is_gulf_states = {
+	OR = {
+		state = 656
+		state = 658
+		state = 678
+		state = 765
+		state = 859
+		state = 1013
+		state = 1014
+	}
+}
+
+is_oman = {
+	OR = {
+		state = 294
+		state = 1013
+		state = 1015
+		state = 1016
+	}
+}
+
+is_yemen = {
+	OR = {
+		state = 293
+		state = 659
+		state = 906
+		state = 992
+	}
+}
+
+is_arabia = {
+	OR = {
+		is_saudi_arabia = yes
+		is_gulf_states = yes
+		is_oman = yes
+		is_yemen = yes
+	}
+}
+
+has_states_to_form_saudi_arabia = {
+	custom_trigger_tooltip = {
+		tooltip = form_saudi_arabia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 292 } } } owns_state = 292 }
+		if = { limit = { NOT = { OOO = { owns_state = 678 } } } owns_state = 678 }
+		if = { limit = { NOT = { OOO = { owns_state = 679 } } } owns_state = 679 }
+		if = { limit = { NOT = { OOO = { owns_state = 854 } } } owns_state = 854 }
+		if = { limit = { NOT = { OOO = { owns_state = 855 } } } owns_state = 855 }
+		if = { limit = { NOT = { OOO = { owns_state = 856 } } } owns_state = 856 }
+		if = { limit = { NOT = { OOO = { owns_state = 857 } } } owns_state = 857 }
+		if = { limit = { NOT = { OOO = { owns_state = 858 } } } owns_state = 858 }
+		if = { limit = { NOT = { OOO = { owns_state = 858 } } } owns_state = 859 }
+	}
+}
+
+has_states_to_form_gulf_states = {
+	custom_trigger_tooltip = {
+		tooltip = form_gulf_states_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 658 } } } owns_state = 658 }
+		if = { limit = { NOT = { OOO = { owns_state = 765 } } } owns_state = 765 }
+		if = { limit = { NOT = { OOO = { owns_state = 1014 } } } owns_state = 1014 }
+	}
+}
+
+has_states_to_form_oman = {
+	custom_trigger_tooltip = {
+		tooltip = form_oman_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 294 } } } owns_state = 294 }
+		if = { limit = { NOT = { OOO = { owns_state = 1013 } } } owns_state = 1013 }
+		if = { limit = { NOT = { OOO = { owns_state = 1015 } } } owns_state = 1015 }
+		if = { limit = { NOT = { OOO = { owns_state = 1016 } } } owns_state = 1016 }
+	}
+}
+
+has_states_to_form_yemen = {
+	custom_trigger_tooltip = {
+		tooltip = form_yemen_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 293 } } } owns_state = 293 }
+		if = { limit = { NOT = { OOO = { owns_state = 659 } } } owns_state = 659 }
+		if = { limit = { NOT = { OOO = { owns_state = 906 } } } owns_state = 906 }
+		if = { limit = { NOT = { OOO = { owns_state = 992 } } } owns_state = 992 }
+	}
+}
+
+has_cosmetics_to_form_arabia = {
+	has_country_flag = can_form_ARA_UNITED
+}
+has_states_to_form_arabia = {
+	custom_trigger_tooltip = {
+		tooltip = form_arabia_has_states_tt
+
+		has_states_to_form_saudi_arabia = yes
+		has_states_to_form_gulf_states = yes
+		has_states_to_form_oman = yes
+		has_states_to_form_yemen = yes
+	}
+}
+
 #### Europe ####
 has_cosmetics_to_form_europe = {
 	has_country_flag = can_form_EUR_UNITED
