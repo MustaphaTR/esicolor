@@ -846,6 +846,238 @@ has_states_to_form_benelux = {
 	}
 }
 
+#### Iberia ####
+can_form_portugal = {
+	OR = {
+		original_tag = IIZ
+		original_tag = IFY
+		original_tag = IBO
+		original_tag = IBI
+		original_tag = LYF
+		original_tag = LYB
+		original_tag = FYS
+	}
+}
+
+can_form_andalusia = {
+	OR = {
+		original_tag = IIB
+		original_tag = ILY
+		original_tag = IFE
+		original_tag = FBY
+	}
+}
+
+can_form_aragon = {
+	OR = {
+		original_tag = ILL
+		original_tag = FYA
+	}
+}
+
+can_form_basque_country = {
+	OR = {
+		original_tag = IFZ
+		original_tag = FYZ
+		original_tag = CPM # BOL
+	}
+}
+
+can_form_castille_leon = {
+	OR = {
+		original_tag = IFA
+		original_tag = IFL
+		original_tag = FBB
+		original_tag = FYI
+	}
+}
+
+can_form_spain = {
+	OR = {
+		can_form_andalusia = yes
+		can_form_aragon = yes
+		can_form_basque_country = yes
+		can_form_castille_leon = yes
+		original_tag = OAI
+		original_tag = ILS
+		original_tag = ILF
+		original_tag = ILB
+		original_tag = IFO
+		original_tag = IFI
+		original_tag = IFS
+		original_tag = IFF
+		original_tag = IFB
+		original_tag = FYO
+		original_tag = FYE
+	}
+}
+
+can_form_iberia = {
+	OR = {
+		can_form_portugal = yes
+		can_form_spain = yes
+	}
+}
+
+is_portugal = {
+	OR = {
+		state = 112
+		state = 179
+		state = 180
+		state = 181
+		state = 697
+		state = 698
+		state = 795
+	}
+}
+
+is_andalusia = {
+	OR = {
+		state = 118
+		state = 169
+		state = 173
+		state = 789
+	}
+}
+
+is_aragon = {
+	OR = {
+		state = 166
+		state = 794
+	}
+}
+
+is_basque_country = {
+	OR = {
+		state = 172
+		state = 792
+		state = 806
+	}
+}
+
+is_castille_leon = {
+	OR = {
+		state = 174
+		state = 176
+		state = 788
+		state = 791
+	}
+}
+
+is_spain = {
+	OR = {
+		is_andalusia = yes
+		is_aragon = yes
+		is_basque_country = yes
+		is_castille_leon = yes
+		state = 41
+		state = 165
+		state = 167
+		state = 168
+		state = 170
+		state = 171
+		state = 175
+		state = 177
+		state = 178
+		state = 790
+		state = 793
+	}
+}
+
+is_iberia = {
+	OR = {
+		is_portugal = yes
+		is_spain = yes
+	}
+}
+
+has_states_to_form_portugal = {
+	custom_trigger_tooltip = {
+		tooltip = form_portugal_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 112 } } } owns_state = 112 }
+		if = { limit = { NOT = { OOO = { owns_state = 179 } } } owns_state = 179 }
+		if = { limit = { NOT = { OOO = { owns_state = 180 } } } owns_state = 180 }
+		if = { limit = { NOT = { OOO = { owns_state = 181 } } } owns_state = 181 }
+		if = { limit = { NOT = { OOO = { owns_state = 795 } } } owns_state = 795 }
+	}
+}
+
+has_states_to_form_andalusia = {
+	custom_trigger_tooltip = {
+		tooltip = form_andalusia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 169 } } } owns_state = 169 }
+		if = { limit = { NOT = { OOO = { owns_state = 173 } } } owns_state = 173 }
+		if = { limit = { NOT = { OOO = { owns_state = 789 } } } owns_state = 789 }
+	}
+}
+
+has_states_to_form_aragon = {
+	custom_trigger_tooltip = {
+		tooltip = form_aragon_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 166 } } } owns_state = 166 }
+		if = { limit = { NOT = { OOO = { owns_state = 794 } } } owns_state = 794 }
+	}
+}
+
+has_states_to_form_basque_country = {
+	custom_trigger_tooltip = {
+		tooltip = form_basque_country_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 172 } } } owns_state = 172 }
+		if = { limit = { NOT = { OOO = { owns_state = 792 } } } owns_state = 792 }
+	}
+}
+
+has_states_to_form_castille_leon = {
+	custom_trigger_tooltip = {
+		tooltip = form_castille_leon_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 174 } } } owns_state = 174 }
+		if = { limit = { NOT = { OOO = { owns_state = 176 } } } owns_state = 176 }
+		if = { limit = { NOT = { OOO = { owns_state = 788 } } } owns_state = 788 }
+		if = { limit = { NOT = { OOO = { owns_state = 791 } } } owns_state = 791 }
+	}
+}
+
+has_cosmetics_to_form_spain = {
+	has_country_flag = can_form_IBR_SPAIN
+}
+has_states_to_form_spain = {
+	custom_trigger_tooltip = {
+		tooltip = form_spain_has_states_tt
+
+		has_states_to_form_andalusia = yes
+		has_states_to_form_aragon = yes
+		has_states_to_form_basque_country = yes
+		has_states_to_form_castille_leon = yes
+		if = { limit = { NOT = { OOO = { owns_state = 41 } } } owns_state = 41 }
+		if = { limit = { NOT = { OOO = { owns_state = 165 } } } owns_state = 165 }
+		if = { limit = { NOT = { OOO = { owns_state = 167 } } } owns_state = 167 }
+		if = { limit = { NOT = { OOO = { owns_state = 168 } } } owns_state = 168 }
+		if = { limit = { NOT = { OOO = { owns_state = 170 } } } owns_state = 170 }
+		if = { limit = { NOT = { OOO = { owns_state = 171 } } } owns_state = 171 }
+		if = { limit = { NOT = { OOO = { owns_state = 175 } } } owns_state = 175 }
+		if = { limit = { NOT = { OOO = { owns_state = 177 } } } owns_state = 177 }
+		if = { limit = { NOT = { OOO = { owns_state = 790 } } } owns_state = 790 }
+		if = { limit = { NOT = { OOO = { owns_state = 793 } } } owns_state = 793 }
+	}
+}
+
+has_cosmetics_to_form_iberia = {
+	has_country_flag = can_form_IBR_UNITED
+}
+has_states_to_form_iberia = {
+	custom_trigger_tooltip = {
+		tooltip = form_iberia_has_states_tt
+
+		has_states_to_form_portugal = yes
+		has_states_to_form_spain = yes
+	}
+}
+
 #### Magreb ####
 can_form_mauritania = {
 	OR = {

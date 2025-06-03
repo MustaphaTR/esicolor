@@ -1948,6 +1948,339 @@ esicolor_formables = {
 		}
 	}
 
+	form_portugal = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_portugal = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_portugal = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_portugal"
+			set_country_flag = can_form_IBR_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = IFY_dom_duarte_nuno ruling_only = yes } }
+
+				set_cosmetic_tag = IBR_PORTUGAL_MONARCHIST
+
+				else = {
+					set_cosmetic_tag = IBR_PORTUGAL
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_portugal = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_portugal_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_andalusia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_andalusia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_andalusia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_andalusia"
+			set_country_flag = can_form_IBR_SPAIN
+
+			set_cosmetic_tag = IBR_ANDALUSIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_andalusia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_andalusia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_aragon = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_aragon = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_aragon = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_aragon"
+			set_country_flag = can_form_IBR_SPAIN
+
+			if = {
+				limit = { has_country_leader_ideology = anarchism }
+
+				set_cosmetic_tag = IBR_ARAGON_ANARCHIST
+
+				else = {
+					set_cosmetic_tag = IBR_ARAGON
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_aragon = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_basque_country = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_basque_country = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_basque_country = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_basque_country"
+			set_country_flag = can_form_IBR_SPAIN
+
+			set_cosmetic_tag = IBR_BASQUE
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_basque_country = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_basque_country_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_castille_leon = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_castille_leon = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_castille_leon = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_castille_leon"
+			set_country_flag = can_form_IBR_SPAIN
+
+			set_cosmetic_tag = IBR_CASTILLE_LEON
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_castille_leon = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_spain = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_spain = yes
+		}
+		visible = {
+			has_cosmetics_to_form_spain = yes
+		}
+		available = {
+			has_states_to_form_spain = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_spain"
+			clr_country_flag = can_form_IBR_SPAIN
+
+			set_country_flag = can_form_IBR_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = ILS_julian_gorkin ruling_only = yes } }
+
+				set_cosmetic_tag = IBR_SPAIN_POUM
+			}
+			else_if = {
+				limit = { has_country_leader = { character = IFI_francisco_franco ruling_only = yes } }
+
+				set_cosmetic_tag = IBR_SPAIN_FRANCO
+			}
+			else_if = {
+				limit = { has_country_leader = { character = IFL_manuel_fal_conde ruling_only = yes } }
+
+				set_cosmetic_tag = IBR_SPAIN_CARLIST
+			}
+			else_if = {
+				limit = { has_country_leader_ideology = anarchism }
+
+				set_cosmetic_tag = IBR_SPAIN_ANARCHIST
+			}
+			else_if = {
+				limit = { has_country_leader_ideology = falangism }
+
+				set_cosmetic_tag = IBR_SPAIN_DIRECTORY
+
+				else = {
+					set_cosmetic_tag = IBR_SPAIN
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_spain = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_spain_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_iberia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_iberia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_iberia = yes
+		}
+		available = {
+			has_states_to_form_iberia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_iberia"
+			clr_country_flag = can_form_IBR_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+
+			if = {
+				limit = { has_country_leader_ideology = anarchism }
+
+				set_cosmetic_tag = IBR_UNITED_ANARCHIST
+
+				else = {
+					set_cosmetic_tag = IBR_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_iberia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_iberia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
@@ -1965,7 +2298,15 @@ esicolor_formables = {
 
 			set_country_flag = can_form_EAR_UNITED
 
-			set_cosmetic_tag = EUR_UNITED
+			if = {
+				limit = { has_country_leader_ideology = anarchism }
+
+				set_cosmetic_tag = EUR_UNITED_ANARCHIST
+
+				else = {
+					set_cosmetic_tag = EUR_UNITED
+				}
+			}
 
 			hidden_effect = {
 				every_state = {
@@ -2229,7 +2570,15 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_earth"
 			clr_country_flag = can_form_EAR_UNITED
 
-			set_cosmetic_tag = EAR_UNITED
+			if = {
+				limit = { has_country_leader_ideology = anarchism }
+
+				set_cosmetic_tag = EAR_UNITED_ANARCHIST
+
+				else = {
+					set_cosmetic_tag = EAR_UNITED
+				}
+			}
 
 			hidden_effect = {
 				every_state = {

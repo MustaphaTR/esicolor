@@ -48,6 +48,8 @@ on_actions = {
 
 				set_variable = { THIS.original_capital = THIS.capital_scope }
 				set_variable = { THIS.original_ideology = THIS.current_party_ideology_group }
+
+				setup_direct_level_one_plus_formable_visibilties = yes
 			}
 
 			# Artillery designer for Swiss Plateau. There are two available, so select one to use.
@@ -75,8 +77,6 @@ on_actions = {
 				# add_resource can't be called in the history files, so doing it here.
 				remove_starting_resources = yes
 			}
-
-			setup_direct_level_one_plus_formable_visibilties = yes
 		}
 	}
 

@@ -32,3 +32,30 @@ recruit_character = OOB_joseph_bech
 set_rule = {
 	can_generate_female_aces = yes
 }
+
+if = {
+	limit = {
+		NOT = { has_dlc = "Gotterdammerung" }
+	}
+
+	set_party_name = {
+		ideology = neutrality
+		name = LUX_neutrality_party
+		long_name = LUX_neutrality_party_long
+	}
+}
+set_party_name = {
+	ideology = democratic
+	name = LUX_democratic_party
+	long_name = LUX_democratic_party_long
+}
+set_party_name = {
+	ideology = fascism
+	name = LUX_fascism_party
+	long_name = LUX_fascism_party_long
+}
+set_party_name = {
+	ideology = communism
+	name = LUX_communism_party
+	long_name = LUX_communism_party_long
+}
