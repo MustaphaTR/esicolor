@@ -1,6 +1,7 @@
 adjust_state_names = {
 	adjust_state_name_49 = yes
 	adjust_state_name_73 = yes
+	adjust_state_name_76 = yes
 	adjust_state_name_85 = yes
 	adjust_state_name_86 = yes
 	adjust_state_name_89 = yes
@@ -44,6 +45,7 @@ adjust_state_names = {
 	adjust_state_name_422 = yes
 	adjust_state_name_545 = yes
 	adjust_state_name_653 = yes
+	adjust_state_name_664 = yes
 	adjust_state_name_731 = yes
 	adjust_state_name_732 = yes
 	adjust_state_name_736 = yes
@@ -59,6 +61,8 @@ adjust_state_names = {
 	adjust_state_name_829 = yes
 	adjust_state_name_833 = yes
 	adjust_state_name_852 = yes
+	adjust_state_name_853 = yes
+	adjust_state_name_975 = yes
 }
 
 adjust_state_names_on_state_core_changed = {
@@ -69,6 +73,10 @@ adjust_state_names_on_state_core_changed = {
 	else_if = {
 		limit = { FROM.FROM = { state = 73 } }
 		adjust_state_name_73 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 76 } }
+		adjust_state_name_76 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 85 } }
@@ -275,6 +283,10 @@ adjust_state_names_on_state_core_changed = {
 		adjust_state_name_653 = yes
 	}
 	else_if = {
+		limit = { FROM.FROM = { state = 664 } }
+		adjust_state_name_664 = yes
+	}
+	else_if = {
 		limit = { FROM.FROM = { state = 731 } }
 		adjust_state_name_731 = yes
 	}
@@ -334,6 +346,14 @@ adjust_state_names_on_state_core_changed = {
 		limit = { FROM.FROM = { state = 852 } }
 		adjust_state_name_852 = yes
 	}
+	else_if = {
+		limit = { FROM.FROM = { state = 853 } }
+		adjust_state_name_853 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 975 } }
+		adjust_state_name_975 = yes
+	}
 }
 
 adjust_state_names_on_ruling_party_change = {
@@ -344,6 +364,10 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 73 }
 		adjust_state_name_73 = yes
+	}
+	if = {
+		limit = { owns_state = 76 }
+		adjust_state_name_76 = yes
 	}
 	if = {
 		limit = { owns_state = 89 }
@@ -550,6 +574,10 @@ adjust_state_names_on_ruling_party_change = {
 		adjust_state_name_653 = yes
 	}
 	if = {
+		limit = { owns_state = 664 }
+		adjust_state_name_664 = yes
+	}
+	if = {
 		limit = { owns_state = 731 }
 		adjust_state_name_731 = yes
 	}
@@ -608,6 +636,14 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 852 }
 		adjust_state_name_852 = yes
+	}
+	if = {
+		limit = { owns_state = 853 }
+		adjust_state_name_853 = yes
+	}
+	if = {
+		limit = { owns_state = 975 }
+		adjust_state_name_975 = yes
 	}
 }
 
@@ -773,6 +809,55 @@ adjust_state_name_73 = {
 			name = VICTORY_POINTS_3548
 		}
 		73 = { set_state_name = STATE_73 }
+	}
+}
+
+adjust_state_name_76 = {
+	if = {
+		limit = { 76 = { owner = { state_originally_from_HUN = yes } } }
+
+		set_province_name = {
+			id = 6711
+			name = HUN_VICTORY_POINTS_6711
+		}
+		set_province_name = {
+			id = 9672
+			name = HUN_VICTORY_POINTS_9672
+		}
+		76 = { set_state_name = HUN_STATE_76 }
+	}
+	else_if = {
+		limit = {
+			76 = {
+				owner = {
+					OR = {
+						state_originally_from_GER = yes
+						state_originally_from_AUS = yes
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 6711
+			name = GER_VICTORY_POINTS_6711
+		}
+		set_province_name = {
+			id = 9672
+			name = GER_VICTORY_POINTS_9672
+		}
+		76 = { set_state_name = STATE_76 }
+	}
+	else = {
+		set_province_name = {
+			id = 6711
+			name = VICTORY_POINTS_6711
+		}
+		set_province_name = {
+			id = 9672
+			name = VICTORY_POINTS_9672
+		}
+		76 = { set_state_name = STATE_76 }
 	}
 }
 
@@ -2377,6 +2462,89 @@ adjust_state_name_653 = {
 	}
 }
 
+adjust_state_name_664 = {
+	if = {
+		limit = { 664 = { owner = { state_originally_from_CZE = yes } } }
+
+		set_province_name = {
+			id = 6573
+			name = CZE_VICTORY_POINTS_6573
+		}
+		664 = { set_state_name = STATE_664 }
+	}
+	else_if = {
+		limit = { 664 = { owner = { state_originally_from_HUN = yes } } }
+
+		set_province_name = {
+			id = 6573
+			name = HUN_VICTORY_POINTS_6573
+		}
+		664 = { set_state_name = HUN_STATE_664 }
+	}
+	else_if = {
+		limit = {
+			664 = {
+				owner = {
+					OR = {
+						state_originally_from_GER = yes
+						state_originally_from_AUS = yes
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 6573
+			name = GER_VICTORY_POINTS_6573
+		}
+		664 = { set_state_name = STATE_664 }
+	}
+	else_if = {
+		limit = { 664 = { owner = { state_originally_from_TUR = yes } } }
+
+		set_province_name = {
+			id = 6573
+			name = TUR_VICTORY_POINTS_6573
+		}
+		664 = { set_state_name = STATE_664 }
+	}
+	# Romanian name has an invalid character.
+	#else_if = {
+	#	limit = { 664 = { owner = { state_originally_from_ROM = yes } } }
+	#
+	#	set_province_name = {
+	#		id = 6573
+	#		name = ROM_VICTORY_POINTS_6573
+	#	}
+	#	664 = { set_state_name = STATE_664 }
+	#}
+	else_if = {
+		limit = { 664 = { owner = { state_originally_from_UKR = yes } } }
+
+		set_province_name = {
+			id = 6573
+			name = UKR_VICTORY_POINTS_6573
+		}
+		664 = { set_state_name = STATE_664 }
+	}
+	else_if = {
+		limit = { 664 = { owner = { state_originally_from_POL = yes } } }
+
+		set_province_name = {
+			id = 6573
+			name = POL_VICTORY_POINTS_6573
+		}
+		664 = { set_state_name = STATE_664 }
+	}
+	else = {
+		set_province_name = {
+			id = 6573
+			name = VICTORY_POINTS_6573
+		}
+		664 = { set_state_name = STATE_664 }
+	}
+}
+
 adjust_state_name_731 = {
 	if = {
 		limit = {
@@ -2968,5 +3136,79 @@ adjust_state_name_852 = {
 			id = 11564
 			name = VICTORY_POINTS_11564
 		}
+	}
+}
+
+adjust_state_name_853 = {
+	if = {
+		limit = {
+			853 = {
+				owner = {
+					OR = {
+						state_originally_from_GER = yes
+						state_originally_from_AUS = yes
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 9627
+			name = GER_VICTORY_POINTS_9627
+		}
+		853 = { set_state_name = GER_STATE_853 }
+	}
+	else = {
+		set_province_name = {
+			id = 9627
+			name = VICTORY_POINTS_9627
+		}
+		853 = { set_state_name = STATE_853 }
+	}
+}
+
+adjust_state_name_975 = {
+	if = {
+		limit = { 975 = { owner = { state_originally_from_HUN = yes } } }
+
+		set_province_name = {
+			id = 3700
+			name = HUN_VICTORY_POINTS_3700
+		}
+		975 = { set_state_name = HUN_STATE_975 }
+	}
+	else_if = {
+		limit = { 975 = { owner = { state_originally_from_CRO = yes } } }
+
+		set_province_name = {
+			id = 3700
+			name = CRO_VICTORY_POINTS_3700
+		}
+		975 = { set_state_name = CRO_STATE_975 }
+	}
+	else_if = {
+		limit = { 975 = { owner = { state_originally_from_SLV = yes } } }
+
+		set_province_name = {
+			id = 3700
+			name = SLV_VICTORY_POINTS_3700
+		}
+		975 = { set_state_name = SLV_STATE_975 }
+	}
+	else_if = {
+		limit = { 975 = { owner = { state_originally_from_SLO = yes } } }
+
+		set_province_name = {
+			id = 3700
+			name = VICTORY_POINTS_3700
+		}
+		975 = { set_state_name = SLO_STATE_975 }
+	}
+	else = {
+		set_province_name = {
+			id = 3700
+			name = VICTORY_POINTS_3700
+		}
+		975 = { set_state_name = STATE_975 }
 	}
 }

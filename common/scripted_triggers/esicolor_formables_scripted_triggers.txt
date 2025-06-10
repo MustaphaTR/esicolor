@@ -1957,6 +1957,140 @@ has_states_to_form_turkestan = {
 	}
 }
 
+#### Indochina ####
+can_form_vietnam = {
+	OR = {
+		original_tag = ZBL
+		original_tag = LFI
+	}
+}
+
+can_form_siam = {
+	OR = {
+		original_tag = ZBY
+		original_tag = FZA
+		original_tag = BLB
+		original_tag = BLY
+	}
+}
+
+can_form_burma = {
+	OR = {
+		original_tag = ZBB
+		original_tag = MPB # LAO
+		original_tag = YYE
+		original_tag = YYA
+		original_tag = YYS
+		original_tag = YYL
+		original_tag = YYF
+		original_tag = YYB
+		original_tag = YYY
+	}
+}
+
+can_form_indochina = {
+	OR = {
+		can_form_vietnam = yes
+		can_form_siam = yes
+		can_form_burma = yes
+		original_tag = EEL
+		original_tag = LFO
+		original_tag = FAI
+	}
+}
+
+is_vietnam = {
+	OR = {
+		state = 286
+		state = 671
+	}
+}
+
+is_siam = {
+	OR = {
+		state = 289
+		state = 724
+		state = 868
+		state = 869
+	}
+}
+
+is_burma = {
+	OR = {
+		state = 288
+		state = 640
+		state = 993
+		state = 994
+		state = 995
+		state = 996
+		state = 997
+		state = 998
+		state = 999
+	}
+}
+
+is_indochina = {
+	OR = {
+		is_netherlands = yes
+		is_siam = yes
+		is_burma = yes
+		state = 336
+		state = 670
+		state = 741
+	}
+}
+
+has_states_to_form_vietnam = {
+	custom_trigger_tooltip = {
+		tooltip = form_vietnam_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 286 } } } owns_state = 286 }
+		if = { limit = { NOT = { OOO = { owns_state = 671 } } } owns_state = 671 }
+	}
+}
+
+has_states_to_form_siam = {
+	custom_trigger_tooltip = {
+		tooltip = form_siam_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 289 } } } owns_state = 289 }
+		if = { limit = { NOT = { OOO = { owns_state = 724 } } } owns_state = 724 }
+		if = { limit = { NOT = { OOO = { owns_state = 868 } } } owns_state = 868 }
+		if = { limit = { NOT = { OOO = { owns_state = 869 } } } owns_state = 869 }
+	}
+}
+
+has_states_to_form_burma = {
+	custom_trigger_tooltip = {
+		tooltip = form_burma_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 288 } } } owns_state = 288 }
+		if = { limit = { NOT = { OOO = { owns_state = 640 } } } owns_state = 640 }
+		if = { limit = { NOT = { OOO = { owns_state = 993 } } } owns_state = 993 }
+		if = { limit = { NOT = { OOO = { owns_state = 994 } } } owns_state = 994 }
+		if = { limit = { NOT = { OOO = { owns_state = 995 } } } owns_state = 995 }
+		if = { limit = { NOT = { OOO = { owns_state = 996 } } } owns_state = 996 }
+		if = { limit = { NOT = { OOO = { owns_state = 997 } } } owns_state = 997 }
+		if = { limit = { NOT = { OOO = { owns_state = 998 } } } owns_state = 998 }
+		if = { limit = { NOT = { OOO = { owns_state = 999 } } } owns_state = 999 }
+	}
+}
+
+has_cosmetics_to_form_indochina = {
+	has_country_flag = can_form_IDC_UNITED
+}
+has_states_to_form_indochina = {
+	custom_trigger_tooltip = {
+		tooltip = form_indochina_has_states_tt
+
+		has_states_to_form_vietnam = yes
+		has_states_to_form_siam = yes
+		has_states_to_form_burma = yes
+		if = { limit = { NOT = { OOO = { owns_state = 670 } } } owns_state = 670 }
+		if = { limit = { NOT = { OOO = { owns_state = 741 } } } owns_state = 741 }
+	}
+}
+
 #### Arabia ####
 can_form_saudi_arabia = {
 	OR = {

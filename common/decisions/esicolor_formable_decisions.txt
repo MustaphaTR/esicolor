@@ -2813,6 +2813,165 @@ esicolor_formables = {
 		}
 	}
 
+	form_vietnam = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_vietnam = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_vietnam = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_vietnam"
+			set_country_flag = can_form_IDC_UNITED
+
+			set_cosmetic_tag = IDC_VIETNAM
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_vietnam = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_siam = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_siam = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_siam = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_siam"
+			set_country_flag = can_form_IDC_UNITED
+
+			set_cosmetic_tag = IDC_SIAM
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_siam = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_burma = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_burma = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_burma = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_burma"
+			set_country_flag = can_form_IDC_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = YYS_archibald_cochrane ruling_only = yes } }
+
+				set_cosmetic_tag = IDC_BURMA_BRIT
+
+				else = {
+					set_cosmetic_tag = IDC_BURMA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_burma = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_indochina = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_indochina = yes
+		}
+		visible = {
+			has_cosmetics_to_form_indochina = yes
+		}
+		available = {
+			has_states_to_form_indochina = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_indochina"
+			clr_country_flag = can_form_IDC_UNITED
+
+			set_country_flag = can_form_ASI_UNITED
+
+			set_cosmetic_tag = IDC_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_indochina = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_indochina_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
