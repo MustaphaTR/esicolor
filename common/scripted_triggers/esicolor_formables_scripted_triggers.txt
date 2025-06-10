@@ -1483,6 +1483,71 @@ has_states_to_form_magreb = {
 	}
 }
 
+#### East Africa ####
+can_form_kenya = {
+	OR = {
+		original_tag = TBG # SAF
+		original_tag = YOE
+		original_tag = YOA
+		original_tag = YOS
+	}
+}
+
+can_form_east_africa = {
+	OR = {
+		can_form_kenya = yes
+		original_tag = SAL
+		original_tag = SAB
+		original_tag = FLB
+		original_tag = FLY
+	}
+}
+
+is_kenya = {
+	OR = {
+		state = 547
+		state = 903
+		state = 904
+		state = 905
+	}
+}
+
+is_east_africa = {
+	OR = {
+		is_kenya = yes
+		state = 546
+		state = 548
+		state = 768
+		state = 769
+	}
+}
+
+has_states_to_form_kenya = {
+	custom_trigger_tooltip = {
+		tooltip = form_kenya_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 547 } } } owns_state = 547 }
+		if = { limit = { NOT = { OOO = { owns_state = 903 } } } owns_state = 903 }
+		if = { limit = { NOT = { OOO = { owns_state = 904 } } } owns_state = 904 }
+		if = { limit = { NOT = { OOO = { owns_state = 905 } } } owns_state = 905 }
+	}
+}
+
+has_cosmetics_to_form_east_africa = {
+	has_country_flag = can_form_EAF_UNITED
+}
+has_states_to_form_east_africa = {
+	custom_trigger_tooltip = {
+		tooltip = form_east_africa_has_states_tt
+
+		has_states_to_form_kenya = yes
+		if = { limit = { NOT = { OOO = { owns_state = 546 } } } owns_state = 546 }
+		if = { limit = { NOT = { OOO = { owns_state = 548 } } } owns_state = 548 }
+		if = { limit = { NOT = { OOO = { owns_state = 768 } } } owns_state = 768 }
+		if = { limit = { NOT = { OOO = { owns_state = 769 } } } owns_state = 769 }
+	}
+}
+
 #### Gran Colombia ####
 can_form_panama = {
 	OR = {

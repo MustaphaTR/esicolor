@@ -2972,6 +2972,80 @@ esicolor_formables = {
 		}
 	}
 
+	form_kenya = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_kenya = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_kenya = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_kenya"
+			set_country_flag = can_form_EAF_UNITED
+
+			set_cosmetic_tag = EAF_KENYA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_kenya = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_east_africa = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_east_africa = yes
+		}
+		visible = {
+			has_cosmetics_to_form_east_africa = yes
+		}
+		available = {
+			has_states_to_form_east_africa = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_east_africa"
+			clr_country_flag = can_form_EAF_UNITED
+
+			set_country_flag = can_form_AFR_UNITED
+
+			set_cosmetic_tag = EAF_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_east_africa = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
