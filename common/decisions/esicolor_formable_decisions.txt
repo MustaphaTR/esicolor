@@ -3046,6 +3046,284 @@ esicolor_formables = {
 		}
 	}
 
+	form_afar = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_afar = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_afar = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_afar"
+			if = {
+				limit = { can_form_ethiopia = yes }
+
+				set_country_flag = can_form_HOA_ETHIOPIA
+			}
+			else = {
+				set_country_flag = can_form_HOA_UNITED
+			}
+
+			set_cosmetic_tag = HOA_AFAR
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_afar = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_afar_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_oromia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_oromia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_oromia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_oromia"
+			set_country_flag = can_form_HOA_ETHIOPIA
+
+			set_cosmetic_tag = HOA_OROMIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_oromia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_oromia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_benishangul_gumuz = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_benishangul_gumuz = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_benishangul_gumuz = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_benishangul_gumuz"
+			set_country_flag = can_form_HOA_ETHIOPIA
+
+			set_cosmetic_tag = HOA_BENISHANGUL
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_benishangul_gumuz = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_somalia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_somalia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_somalia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_somalia"
+			set_country_flag = can_form_HOA_ETHIOPIA
+
+			set_cosmetic_tag = HOA_SOMALIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_somalia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_somalia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_ethiopia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_ethiopia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_ethiopia = yes
+		}
+		available = {
+			has_states_to_form_ethiopia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_ethiopia"
+			clr_country_flag = can_form_HOA_ETHIOPIA
+
+			set_country_flag = can_form_HOA_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = BAO_hailu_tekle_haymanot ruling_only = yes } }
+
+				set_cosmetic_tag = HOA_ETHIOPIA_GOJJAM
+			}
+			else_if = {
+				limit = { has_country_leader = { character = BEB_abba_jofir ruling_only = yes } }
+
+				set_cosmetic_tag = HOA_ETHIOPIA_JIMMA
+			}
+			else_if = {
+				limit = { has_country_leader_ideology = anarchist_communism }
+
+				set_cosmetic_tag = HOA_ETHIOPIA_ANARCHIST
+
+				else = {
+					set_cosmetic_tag = HOA_ETHIOPIA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_ethiopia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_ethiopia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_horn_of_africa = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_horn_of_africa = yes
+		}
+		visible = {
+			has_cosmetics_to_form_horn_of_africa = yes
+		}
+		available = {
+			has_states_to_form_horn_of_africa = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_horn_of_africa"
+			clr_country_flag = can_form_HOA_UNITED
+
+			set_country_flag = can_form_AFR_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = SSO_emilio_de_bono ruling_only = yes } }
+
+				set_cosmetic_tag = HOA_UNITED_ITALIAN
+
+				else = {
+					set_cosmetic_tag = HOA_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_horn_of_africa = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_horn_of_africa_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {

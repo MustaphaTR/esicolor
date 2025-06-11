@@ -1548,6 +1548,190 @@ has_states_to_form_east_africa = {
 	}
 }
 
+#### Horn of Africa ####
+can_form_afar = {
+	OR = {
+		original_tag = ZLB
+		original_tag = BAE
+		original_tag = YOB
+	}
+}
+
+can_form_oromia = {
+	OR = {
+		original_tag = ZFI
+		original_tag = CFM # BEL
+		original_tag = BEY
+	}
+}
+
+can_form_benishangul_gumuz = {
+	OR = {
+		original_tag = BEY
+		original_tag = BAO
+	}
+}
+
+can_form_somalia = {
+	OR = {
+		original_tag = ZLB
+		original_tag = ZLY
+		original_tag = SSY
+		original_tag = BES
+		original_tag = BAA
+	}
+}
+
+can_form_ethiopia = {
+	OR = {
+		original_tag = BAE
+		original_tag = YOB
+		can_form_oromia = yes
+		can_form_benishangul_gumuz = yes
+		original_tag = BES
+		original_tag = BEF
+		original_tag = BEB
+		original_tag = BAI
+		original_tag = BAZ
+	}
+}
+
+can_form_horn_of_africa = {
+	OR = {
+		can_form_somalia = yes
+		can_form_ethiopia = yes
+		original_tag = SSO
+	}
+}
+
+is_afar = {
+	OR = {
+		state = 268
+		state = 843
+		state = 908
+	}
+}
+
+is_oromia = {
+	OR = {
+		state = 271
+		state = 836
+		state = 837
+		state = 839
+	}
+}
+
+is_benishangul_gumuz = {
+	OR = {
+		state = 839
+		state = 840
+	}
+}
+
+is_somalia = {
+	OR = {
+		state = 268
+		state = 269
+		state = 559
+		state = 835
+		state = 836
+		state = 844
+		state = 903
+		state = 906
+	}
+}
+
+is_ethiopia = {
+	OR = {
+		state = 843
+		state = 908
+		is_oromia = yes
+		is_benishangul_gumuz = yes
+		state = 835
+		state = 837
+		state = 838
+		state = 841
+		state = 842
+	}
+}
+
+is_horn_of_africa = {
+	OR = {
+		is_somalia = yes
+		is_ethiopia = yes
+		state = 550
+	}
+}
+
+has_states_to_form_afar = {
+	custom_trigger_tooltip = {
+		tooltip = form_afar_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 843 } } } owns_state = 843 }
+		if = { limit = { NOT = { OOO = { owns_state = 908 } } } owns_state = 908 }
+	}
+}
+
+has_states_to_form_benishangul_gumuz = {
+	custom_trigger_tooltip = {
+		tooltip = form_benishangul_gumuz_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 839 } } } owns_state = 839 }
+		if = { limit = { NOT = { OOO = { owns_state = 840 } } } owns_state = 840 }
+	}
+}
+
+has_states_to_form_oromia = {
+	custom_trigger_tooltip = {
+		tooltip = form_oromia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 271 } } } owns_state = 271 }
+		if = { limit = { NOT = { OOO = { owns_state = 836 } } } owns_state = 836 }
+		if = { limit = { NOT = { OOO = { owns_state = 837 } } } owns_state = 837 }
+	}
+}
+
+has_states_to_form_somalia = {
+	custom_trigger_tooltip = {
+		tooltip = form_somalia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 269 } } } owns_state = 269 }
+		if = { limit = { NOT = { OOO = { owns_state = 559 } } } owns_state = 559 }
+		if = { limit = { NOT = { OOO = { owns_state = 844 } } } owns_state = 844 }
+	}
+}
+
+has_cosmetics_to_form_ethiopia = {
+	has_country_flag = can_form_HOA_ETHIOPIA
+}
+has_states_to_form_ethiopia = {
+	custom_trigger_tooltip = {
+		tooltip = form_ethiopia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 843 } } } owns_state = 843 }
+		has_states_to_form_benishangul_gumuz = yes
+		has_states_to_form_oromia = yes
+		if = { limit = { NOT = { OOO = { owns_state = 835 } } } owns_state = 835 }
+		if = { limit = { NOT = { OOO = { owns_state = 838 } } } owns_state = 838 }
+		if = { limit = { NOT = { OOO = { owns_state = 841 } } } owns_state = 841 }
+		if = { limit = { NOT = { OOO = { owns_state = 842 } } } owns_state = 842 }
+	}
+}
+
+has_cosmetics_to_form_horn_of_africa = {
+	has_country_flag = can_form_HOA_UNITED
+}
+has_states_to_form_horn_of_africa = {
+	custom_trigger_tooltip = {
+		tooltip = form_horn_of_africa_has_states_tt
+
+		has_states_to_form_somalia = yes
+		has_states_to_form_ethiopia = yes
+		if = { limit = { NOT = { OOO = { owns_state = 268 } } } owns_state = 268 }
+		if = { limit = { NOT = { OOO = { owns_state = 550 } } } owns_state = 550 }
+	}
+}
+
 #### Gran Colombia ####
 can_form_panama = {
 	OR = {
@@ -1649,7 +1833,7 @@ is_gran_colombia = {
 	OR = {
 		is_panama = yes
 		is_colombia = yes
-		is_venezluela = yes
+		is_venezuela = yes
 		is_ecuador = yes
 	}
 }
