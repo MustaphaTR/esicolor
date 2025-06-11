@@ -1,0 +1,39 @@
+characters={
+	FFZ_moe_poaty_iii = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=COG_moe_poaty_iii
+			portraits={
+				civilian={
+					large=GFX_portrait_COG_moe_poaty_III
+					small=GFX_portrait_COG_moe_poaty_iii_small
+				}
+			}
+			country_leader={
+				traits={ ma_loango }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=COG_moe_poaty_iii
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_Africa_Political_Leader_Generic_2
+				}
+			}
+			country_leader={
+				traits={ ma_loango }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

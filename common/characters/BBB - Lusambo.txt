@@ -1,0 +1,39 @@
+characters={
+	BBB_mbop_mabiinc_mambeky = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=COG_mbop_mabiinc_mambeky
+			portraits={
+				civilian={
+					large=GFX_portrait_COG_mbop_mabiinc_mambeky
+					small=GFX_portrait_COG_mbop_mabiinc_mambeky_small
+				}
+			}
+			country_leader={
+				traits={ nyim_of_kuba }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=COG_mbop_mabiinc_mambeky
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_Africa_Army_Generic_2
+				}
+			}
+			country_leader={
+				traits={ nyim_of_kuba }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

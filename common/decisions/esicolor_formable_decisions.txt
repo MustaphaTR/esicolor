@@ -3022,6 +3022,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_east_africa"
 			clr_country_flag = can_form_EAF_UNITED
+			clr_country_flag = can_form_LAF_UNITED
 
 			set_country_flag = can_form_AFR_UNITED
 
@@ -3311,6 +3312,191 @@ esicolor_formables = {
 				limit = { NOT = { has_global_flag = formables_visual } }
 
 				custom_effect_tooltip = form_horn_of_africa_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_chad = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_chad = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_chad = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_chad"
+			set_country_flag = can_form_LAF_UNITED
+
+			set_cosmetic_tag = LAF_CHAD
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_chad = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_congo = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_congo = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_congo = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_congo"
+			set_country_flag = can_form_LAF_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = ZYS_pierre_ryckmans ruling_only = yes } }
+
+				set_cosmetic_tag = LAF_CONGO_BELGIAN
+			}
+			else_if = {
+				limit = { has_country_leader = { character = BYO_yuhi_musinga ruling_only = yes } }
+
+				set_cosmetic_tag = LAF_CONGO_MITTELAFRIKA
+			}
+			else_if = {
+				limit = { has_country_leader = { character = BBB_mbop_mabiinc_mambeky ruling_only = yes } }
+
+				set_cosmetic_tag = LAF_CONGO_BAKUBA
+			}
+			else_if = {
+				limit = { has_country_leader = { character = FFZ_moe_poaty_iii ruling_only = yes } }
+
+				set_cosmetic_tag = LAF_CONGO_LOANGO
+
+				else = {
+					set_cosmetic_tag = LAF_CONGO
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_congo = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_congo_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_angola = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_angola = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_angola = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_angola"
+			set_country_flag = can_form_LAF_UNITED
+
+			set_cosmetic_tag = LAF_ANGOLA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_angola = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_angola_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_latin_africa = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_latin_africa = yes
+		}
+		visible = {
+			has_cosmetics_to_form_latin_africa = yes
+		}
+		available = {
+			has_states_to_form_latin_africa = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_latin_africa"
+			clr_country_flag = can_form_LAF_UNITED
+			clr_country_flag = can_form_EAF_UNITED
+
+			set_country_flag = can_form_AFR_UNITED
+
+			set_cosmetic_tag = LAF_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_latin_africa = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_latin_africa_affected_states_tt
 				formable_decision_effect_tooltip = yes
 			}
 		}

@@ -43,9 +43,11 @@ adjust_state_names = {
 	adjust_state_name_400 = yes
 	adjust_state_name_419 = yes
 	adjust_state_name_422 = yes
+	adjust_state_name_538 = yes
 	adjust_state_name_545 = yes
 	adjust_state_name_653 = yes
 	adjust_state_name_664 = yes
+	adjust_state_name_718 = yes
 	adjust_state_name_731 = yes
 	adjust_state_name_732 = yes
 	adjust_state_name_736 = yes
@@ -62,6 +64,9 @@ adjust_state_names = {
 	adjust_state_name_833 = yes
 	adjust_state_name_852 = yes
 	adjust_state_name_853 = yes
+	adjust_state_name_888 = yes
+	adjust_state_name_889 = yes
+	adjust_state_name_890 = yes
 	adjust_state_name_975 = yes
 }
 
@@ -275,6 +280,10 @@ adjust_state_names_on_state_core_changed = {
 		adjust_state_name_422 = yes
 	}
 	else_if = {
+		limit = { FROM.FROM = { state = 538 } }
+		adjust_state_name_538 = yes
+	}
+	else_if = {
 		limit = { FROM.FROM = { state = 545 } }
 		adjust_state_name_545 = yes
 	}
@@ -285,6 +294,10 @@ adjust_state_names_on_state_core_changed = {
 	else_if = {
 		limit = { FROM.FROM = { state = 664 } }
 		adjust_state_name_664 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 718 } }
+		adjust_state_name_718 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 731 } }
@@ -349,6 +362,18 @@ adjust_state_names_on_state_core_changed = {
 	else_if = {
 		limit = { FROM.FROM = { state = 853 } }
 		adjust_state_name_853 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 888 } }
+		adjust_state_name_888 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 889 } }
+		adjust_state_name_889 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 890 } }
+		adjust_state_name_890 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 975 } }
@@ -570,12 +595,20 @@ adjust_state_names_on_ruling_party_change = {
 		adjust_state_name_545 = yes
 	}
 	if = {
+		limit = { owns_state = 538 }
+		adjust_state_name_538 = yes
+	}
+	if = {
 		limit = { owns_state = 653 }
 		adjust_state_name_653 = yes
 	}
 	if = {
 		limit = { owns_state = 664 }
 		adjust_state_name_664 = yes
+	}
+	if = {
+		limit = { owns_state = 718 }
+		adjust_state_name_718 = yes
 	}
 	if = {
 		limit = { owns_state = 731 }
@@ -640,6 +673,18 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 853 }
 		adjust_state_name_853 = yes
+	}
+	if = {
+		limit = { owns_state = 888 }
+		adjust_state_name_888 = yes
+	}
+	if = {
+		limit = { owns_state = 889 }
+		adjust_state_name_889 = yes
+	}
+	if = {
+		limit = { owns_state = 890 }
+		adjust_state_name_890 = yes
 	}
 	if = {
 		limit = { owns_state = 975 }
@@ -2423,6 +2468,34 @@ adjust_state_name_422 = {
 	}
 }
 
+adjust_state_name_538 = {
+	if = {
+		limit = {
+			538 = {
+				owner = {
+					OR = {
+						state_originally_from_BEL = yes
+						has_country_leader = { character = ZYS_pierre_ryckmans ruling_only = yes }
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 988
+			name = VICTORY_POINTS_988
+		}
+		538 = { set_state_name = STATE_538 }
+	}
+	else = {
+		set_province_name = {
+			id = 988
+			name = 988_autenticite_name
+		}
+		538 = { set_state_name = 538_autenticite_name }
+	}
+}
+
 adjust_state_name_545 = {
 	if = {
 		limit = { 545 = { owner = { has_government = fascism } } }
@@ -2542,6 +2615,34 @@ adjust_state_name_664 = {
 			name = VICTORY_POINTS_6573
 		}
 		664 = { set_state_name = STATE_664 }
+	}
+}
+
+adjust_state_name_718 = {
+	if = {
+		limit = {
+			718 = {
+				owner = {
+					OR = {
+						state_originally_from_BEL = yes
+						has_country_leader = { character = ZYS_pierre_ryckmans ruling_only = yes }
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 1950
+			name = VICTORY_POINTS_1950
+		}
+		718 = { set_state_name = STATE_718 }
+	}
+	else = {
+		set_province_name = {
+			id = 1950
+			name = 1950_autenticite_name
+		}
+		718 = { set_state_name = 718_autenticite_name }
 	}
 }
 
@@ -3164,6 +3265,90 @@ adjust_state_name_853 = {
 			name = VICTORY_POINTS_9627
 		}
 		853 = { set_state_name = STATE_853 }
+	}
+}
+
+adjust_state_name_888 = {
+	if = {
+		limit = {
+			888 = {
+				owner = {
+					OR = {
+						state_originally_from_BEL = yes
+						has_country_leader = { character = ZYS_pierre_ryckmans ruling_only = yes }
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 2024
+			name = VICTORY_POINTS_2024
+		}
+		888 = { set_state_name = STATE_888 }
+	}
+	else = {
+		set_province_name = {
+			id = 2024
+			name = 2024_autenticite_name
+		}
+		888 = { set_state_name = 888_autenticite_name }
+	}
+}
+
+adjust_state_name_889 = {
+	if = {
+		limit = {
+			889 = {
+				owner = {
+					OR = {
+						state_originally_from_BEL = yes
+						has_country_leader = { character = ZYS_pierre_ryckmans ruling_only = yes }
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 191
+			name = VICTORY_POINTS_191
+		}
+		889 = { set_state_name = STATE_889 }
+	}
+	else = {
+		set_province_name = {
+			id = 191
+			name = 191_autenticite_name
+		}
+		889 = { set_state_name = BBY }
+	}
+}
+
+adjust_state_name_890 = {
+	if = {
+		limit = {
+			890 = {
+				owner = {
+					OR = {
+						state_originally_from_BEL = yes
+						has_country_leader = { character = ZYS_pierre_ryckmans ruling_only = yes }
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 4941
+			name = VICTORY_POINTS_4941
+		}
+		890 = { set_state_name = STATE_890 }
+	}
+	else = {
+		set_province_name = {
+			id = 4941
+			name = 4941_autenticite_name
+		}
+		890 = { set_state_name = 890_autenticite_name }
 	}
 }
 

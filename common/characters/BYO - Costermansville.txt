@@ -1,0 +1,39 @@
+characters={
+	BYO_yuhi_musinga = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=RWA_yuhi_musinga
+			portraits={
+				civilian={
+					large=GFX_portrait_RWA_yuhi_musinga
+					small=GFX_portrait_RWA_yuhi_musinga_small
+				}
+			}
+			country_leader={
+				traits={ the_rwandan_collaborstionist_king }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=RWA_yuhi_musinga
+			portraits={
+				civilian={
+					large=GFX_Portrait_Africa_Generic_3
+				}
+			}
+			country_leader={
+				traits={ the_rwandan_collaborstionist_king }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

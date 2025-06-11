@@ -1732,6 +1732,143 @@ has_states_to_form_horn_of_africa = {
 	}
 }
 
+#### Latin Africa ####
+can_form_chad = {
+	OR = {
+		original_tag = FFA
+		original_tag = FFS
+	}
+}
+
+can_form_congo = {
+	OR = {
+		original_tag = ZYS
+		original_tag = SEB
+		original_tag = FIB
+		original_tag = FFZ
+		original_tag = BBB
+		original_tag = BBY
+		original_tag = BYO
+	}
+}
+
+can_form_angola = {
+	OR = {
+		original_tag = SAO
+		original_tag = FYL
+		original_tag = BYI
+		original_tag = BYZ
+	}
+}
+
+can_form_latin_africa = {
+	OR = {
+		can_form_chad = yes
+		can_form_congo = yes
+		can_form_angola = yes
+		original_tag = ZYF
+		original_tag = SEY
+		original_tag = LLO
+		original_tag = FOS
+		original_tag = FFE
+		original_tag = FLB
+		original_tag = FLY
+	}
+}
+
+is_chad = {
+	OR = {
+		state = 774
+		state = 775
+	}
+}
+
+is_congo = {
+	OR = {
+		state = 295
+		state = 538
+		state = 718
+		state = 772
+		state = 888
+		state = 889
+		state = 890
+	}
+}
+
+is_angola = {
+	OR = {
+		state = 540
+		state = 796
+		state = 891
+		state = 892
+	}
+}
+
+is_latin_africa = {
+	OR = {
+		is_chad = yes
+		is_congo = yes
+		is_angola = yes
+		state = 297
+		state = 539
+		state = 660
+		state = 705
+		state = 768
+		state = 769
+		state = 773
+	}
+}
+
+has_states_to_form_chad = {
+	custom_trigger_tooltip = {
+		tooltip = form_chad_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 774 } } } owns_state = 774 }
+		if = { limit = { NOT = { OOO = { owns_state = 775 } } } owns_state = 775 }
+	}
+}
+
+has_states_to_form_congo = {
+	custom_trigger_tooltip = {
+		tooltip = form_congo_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 295 } } } owns_state = 295 }
+		if = { limit = { NOT = { OOO = { owns_state = 538 } } } owns_state = 538 }
+		if = { limit = { NOT = { OOO = { owns_state = 718 } } } owns_state = 718 }
+		if = { limit = { NOT = { OOO = { owns_state = 888 } } } owns_state = 888 }
+		if = { limit = { NOT = { OOO = { owns_state = 889 } } } owns_state = 889 }
+		if = { limit = { NOT = { OOO = { owns_state = 890 } } } owns_state = 890 }
+	}
+}
+
+has_states_to_form_angola = {
+	custom_trigger_tooltip = {
+		tooltip = form_angola_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 540 } } } owns_state = 540 }
+		if = { limit = { NOT = { OOO = { owns_state = 891 } } } owns_state = 891 }
+		if = { limit = { NOT = { OOO = { owns_state = 892 } } } owns_state = 892 }
+	}
+}
+
+has_cosmetics_to_form_latin_africa = {
+	has_country_flag = can_form_LAF_UNITED
+}
+has_states_to_form_latin_africa = {
+	custom_trigger_tooltip = {
+		tooltip = form_latin_africa_has_states_tt
+
+		has_states_to_form_chad = yes
+		has_states_to_form_congo = yes
+		has_states_to_form_angola = yes
+		if = { limit = { NOT = { OOO = { owns_state = 297 } } } owns_state = 297 }
+		if = { limit = { NOT = { OOO = { owns_state = 660 } } } owns_state = 660 }
+		if = { limit = { NOT = { OOO = { owns_state = 772 } } } owns_state = 772 }
+		if = { limit = { NOT = { OOO = { owns_state = 773 } } } owns_state = 773 }
+		if = { limit = { NOT = { OOO = { owns_state = 796 } } } owns_state = 796 }
+	}
+}
+
 #### Gran Colombia ####
 can_form_panama = {
 	OR = {
