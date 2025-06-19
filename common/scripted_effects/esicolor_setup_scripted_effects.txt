@@ -10281,6 +10281,8 @@ clear_province_modifiers = {
 		if = { limit = { has_dynamic_modifier = { modifier = COG_burundian_separatism_modifier } } remove_dynamic_modifier = { modifier = COG_burundian_separatism_modifier } }
 		if = { limit = { has_dynamic_modifier = { modifier = COG_state_loyal_to_belgium_modifier } } remove_dynamic_modifier = { modifier = COG_state_loyal_to_belgium_modifier } }
 		if = { limit = { has_dynamic_modifier = { modifier = COG_state_loyal_to_free_congo_modifier } } remove_dynamic_modifier = { modifier = COG_state_loyal_to_free_congo_modifier } }
+		if = { limit = { has_dynamic_modifier = { modifier = BRA_neglected_state_dynamic_modifier } } remove_dynamic_modifier = { modifier = BRA_neglected_state_dynamic_modifier } }
+		if = { limit = { has_dynamic_modifier = { modifier = idea_PAR_river_navy } } remove_dynamic_modifier = { modifier = idea_PAR_river_navy } }
 	}
 }
 
@@ -10332,9 +10334,13 @@ add_province_modifiers = {
 		set_variable = { BRA_state_development_local_factories = -0.4 }
 		set_variable = { BRA_state_development_state_resources_factor = -0.4 }
 
-		add_dynamic_modifier = {
-			modifier = BRA_neglected_state_dynamic_modifier
-		}
+		add_dynamic_modifier = { modifier = BRA_neglected_state_dynamic_modifier }
+	}
+
+	every_state = {
+		limit = { var:original_owner = { state_originally_from_PAR = yes } }
+
+		add_dynamic_modifier = { modifier = idea_PAR_river_navy }
 	}
 
 	640 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Mandalay

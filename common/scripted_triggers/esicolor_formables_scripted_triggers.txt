@@ -1963,6 +1963,7 @@ is_peru = {
 		state = 492
 		state = 494
 		state = 947
+		state = 951
 	}
 }
 
@@ -2068,6 +2069,61 @@ has_states_to_form_guiana = {
 		if = { limit = { NOT = { OOO = { owns_state = 309 } } } owns_state = 309 }
 		if = { limit = { NOT = { OOO = { owns_state = 310 } } } owns_state = 310 }
 		if = { limit = { NOT = { OOO = { owns_state = 687 } } } owns_state = 687 }
+	}
+}
+
+#### Peru-Bolivia ####
+can_form_bolivia = {
+	OR = {
+		original_tag = EOZ
+		original_tag = ABF
+	}
+}
+
+can_form_peru_bolivia = {
+	OR = {
+		can_form_peru = yes
+		can_form_bolivia = yes
+	}
+}
+
+is_bolivia = {
+	OR = {
+		state = 302
+		state = 487
+		state = 506
+		state = 688
+		state = 957
+		state = 959
+	}
+}
+
+is_peru_bolivia = {
+	OR = {
+		is_peru = yes
+		is_bolivia = yes
+		state = 940
+	}
+}
+
+has_states_to_form_bolivia = {
+	custom_trigger_tooltip = {
+		tooltip = form_bolivia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 302 } } } owns_state = 302 }
+		if = { limit = { NOT = { OOO = { owns_state = 487 } } } owns_state = 487 }
+	}
+}
+
+has_cosmetics_to_form_peru_bolivia = {
+	has_country_flag = can_form_PRB_UNITED
+}
+has_states_to_form_peru_bolivia = {
+	custom_trigger_tooltip = {
+		tooltip = form_peru_bolivia_has_states_tt
+
+		has_states_to_form_peru = yes
+		has_states_to_form_bolivia = yes
 	}
 }
 
@@ -2207,6 +2263,7 @@ is_turkmenistan = {
 	OR = {
 		state = 584
 		state = 832
+		state = 1007
 	}
 }
 

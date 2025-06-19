@@ -1498,6 +1498,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_peru"
 			set_country_flag = can_form_GCO_UNITED
+			set_country_flag = can_form_PRB_UNITED
 
 			set_cosmetic_tag = GCO_PERU
 
@@ -1539,6 +1540,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_gran_colombia"
 			clr_country_flag = can_form_GCO_UNITED
+			clr_country_flag = can_form_PRB_UNITED
 
 			set_country_flag = can_form_SOA_UNITED
 
@@ -1818,7 +1820,12 @@ esicolor_formables = {
 					formable_decision_effect = yes
 				}
 			}
-			formable_decision_effect_tooltip_default = yes
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_turkmenistan_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
 		}
 
 		cost = global.formables_cost_25?25
@@ -3502,6 +3509,91 @@ esicolor_formables = {
 		}
 
 		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_bolivia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_bolivia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_bolivia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_bolivia"
+			set_country_flag = can_form_PRB_UNITED
+
+			set_cosmetic_tag = PRB_BOLIVIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_bolivia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_bolivia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_peru_bolivia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_peru_bolivia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_peru_bolivia = yes
+		}
+		available = {
+			has_states_to_form_peru_bolivia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_peru_bolivia"
+			clr_country_flag = can_form_PRB_UNITED
+			clr_country_flag = can_form_GCO_UNITED
+
+			set_country_flag = can_form_SOA_UNITED
+
+			set_cosmetic_tag = PRB_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_peru_bolivia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_peru_bolivia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
 
 		fire_only_once = yes
 
