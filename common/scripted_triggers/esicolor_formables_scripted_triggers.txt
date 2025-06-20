@@ -1869,6 +1869,152 @@ has_states_to_form_latin_africa = {
 	}
 }
 
+#### Mutapa ####
+can_form_south_africa = {
+	OR = {
+		original_tag = ZFS
+		original_tag = LBI
+		original_tag = FIY
+	}
+}
+
+can_form_namibia = {
+	OR = {
+		original_tag = SAI
+		original_tag = BYE
+		original_tag = CZB # BYA
+		original_tag = BYS
+	}
+}
+
+can_form_mozambique = {
+	OR = {
+		original_tag = SAA
+		original_tag = BYL
+		original_tag = BYF
+	}
+}
+
+can_form_zambia = {
+	OR = {
+		original_tag = FFI
+		original_tag = YBI
+	}
+}
+
+can_form_mutapa = {
+	OR = {
+		can_form_south_africa = yes
+		can_form_namibia = yes
+		can_form_mozambique = yes
+		can_form_zambia = yes
+		original_tag = SAZ
+		original_tag = SAS
+		original_tag = FFO
+	}
+}
+
+is_south_africa = {
+	OR = {
+		state = 275
+		state = 681
+		state = 719
+	}
+}
+
+is_namibia = {
+	OR = {
+		state = 541
+		state = 893
+		state = 894
+		state = 895
+	}
+}
+
+is_mozambique = {
+	OR = {
+		state = 544
+		state = 896
+		state = 897
+	}
+}
+
+is_zambia = {
+	OR = {
+		state = 771
+		state = 981
+	}
+}
+
+is_latin_africa = {
+	OR = {
+		is_south_africa = yes
+		is_namibia = yes
+		is_mozambique = yes
+		is_zambia = yes
+		state = 542
+		state = 545
+		state = 770
+	}
+}
+
+has_states_to_form_south_africa = {
+	custom_trigger_tooltip = {
+		tooltip = form_south_africa_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 275 } } } owns_state = 275 }
+		if = { limit = { NOT = { OOO = { owns_state = 681 } } } owns_state = 681 }
+		if = { limit = { NOT = { OOO = { owns_state = 719 } } } owns_state = 719 }
+	}
+}
+
+has_states_to_form_namibia = {
+	custom_trigger_tooltip = {
+		tooltip = form_namibia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 541 } } } owns_state = 541 }
+		if = { limit = { NOT = { OOO = { owns_state = 893 } } } owns_state = 893 }
+		if = { limit = { NOT = { OOO = { owns_state = 894 } } } owns_state = 894 }
+		if = { limit = { NOT = { OOO = { owns_state = 895 } } } owns_state = 895 }
+	}
+}
+
+has_states_to_form_mozambique = {
+	custom_trigger_tooltip = {
+		tooltip = form_mozambique_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 544 } } } owns_state = 544 }
+		if = { limit = { NOT = { OOO = { owns_state = 896 } } } owns_state = 896 }
+		if = { limit = { NOT = { OOO = { owns_state = 897 } } } owns_state = 897 }
+	}
+}
+
+has_states_to_form_zambia = {
+	custom_trigger_tooltip = {
+		tooltip = form_zambia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 771 } } } owns_state = 771 }
+		if = { limit = { NOT = { OOO = { owns_state = 981 } } } owns_state = 981 }
+	}
+}
+
+has_cosmetics_to_form_mutapa = {
+	has_country_flag = can_form_MUT_UNITED
+}
+has_states_to_form_mutapa = {
+	custom_trigger_tooltip = {
+		tooltip = form_mutapa_has_states_tt
+
+		has_states_to_form_south_africa = yes
+		has_states_to_form_namibia = yes
+		has_states_to_form_mozambique = yes
+		has_states_to_form_zambia = yes
+		if = { limit = { NOT = { OOO = { owns_state = 542 } } } owns_state = 542 }
+		if = { limit = { NOT = { OOO = { owns_state = 545 } } } owns_state = 545 }
+		if = { limit = { NOT = { OOO = { owns_state = 770 } } } owns_state = 770 }
+	}
+}
+
 #### Gran Colombia ####
 can_form_panama = {
 	OR = {

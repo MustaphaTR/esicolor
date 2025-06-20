@@ -3602,6 +3602,204 @@ esicolor_formables = {
 		}
 	}
 
+	form_south_africa = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_south_africa = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_south_africa = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_south_africa"
+			set_country_flag = can_form_MUT_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = ZFS_j_b_m_hertzog ruling_only = yes } }
+
+				set_cosmetic_tag = MUT_SAFRICA_BRITISH
+
+				else = {
+					set_cosmetic_tag = MUT_SAFRICA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_south_africa = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_namibia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_namibia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_namibia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_namibia"
+			set_country_flag = can_form_MUT_UNITED
+
+			set_cosmetic_tag = MUT_NAMIBIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_namibia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_mozambique = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_mozambique = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_mozambique = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_mozambique"
+			set_country_flag = can_form_MUT_UNITED
+
+			set_cosmetic_tag = MUT_MOZAMBIQUE
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_mozambique = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_zambia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_zambia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_zambia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_zambia"
+			set_country_flag = can_form_MUT_UNITED
+
+			if = {
+				limit = { original_tag = YBI }
+
+				set_cosmetic_tag = MUT_ZAMBIA_BAROTSELAND
+
+				else = {
+					set_cosmetic_tag = MUT_ZAMBIA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_zambia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_mutapa = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_mutapa = yes
+		}
+		visible = {
+			has_cosmetics_to_form_mutapa = yes
+		}
+		available = {
+			has_states_to_form_mutapa = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_mutapa"
+			clr_country_flag = can_form_MUT_UNITED
+
+			set_country_flag = can_form_AFR_UNITED
+
+			set_cosmetic_tag = MUT_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_mutapa = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {

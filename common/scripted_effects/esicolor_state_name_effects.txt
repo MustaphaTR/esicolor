@@ -44,6 +44,7 @@ adjust_state_names = {
 	adjust_state_name_419 = yes
 	adjust_state_name_422 = yes
 	adjust_state_name_538 = yes
+	adjust_state_name_542 = yes
 	adjust_state_name_545 = yes
 	adjust_state_name_653 = yes
 	adjust_state_name_664 = yes
@@ -282,6 +283,10 @@ adjust_state_names_on_state_core_changed = {
 	else_if = {
 		limit = { FROM.FROM = { state = 538 } }
 		adjust_state_name_538 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 542 } }
+		adjust_state_name_542 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 545 } }
@@ -589,6 +594,10 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 422 }
 		adjust_state_name_422 = yes
+	}
+	if = {
+		limit = { owns_state = 542 }
+		adjust_state_name_542 = yes
 	}
 	if = {
 		limit = { owns_state = 545 }
@@ -2493,6 +2502,17 @@ adjust_state_name_538 = {
 			name = 988_autenticite_name
 		}
 		538 = { set_state_name = 538_autenticite_name }
+	}
+}
+
+adjust_state_name_542 = {
+	if = {
+		limit = { 542 = { owner = { has_government = democratic } } }
+
+		542 = { set_state_name = STATE_542 }
+	}
+	else = {
+		542 = { set_state_name = SAZ }
 	}
 }
 
