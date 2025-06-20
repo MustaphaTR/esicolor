@@ -1299,6 +1299,81 @@ has_states_to_form_danubia = {
 	}
 }
 
+#### Alipne Confederation ####
+can_form_switzerland = {
+	OR = {
+		original_tag = OOE
+		original_tag = ISI
+		original_tag = CBT # BAS
+		original_tag = BAL
+		original_tag = BAF
+	}
+}
+
+can_form_alpine_confederation = {
+	OR = {
+		can_form_switzerland = yes
+		can_form_austria = yes
+	}
+}
+
+is_switzerland = {
+	OR = {
+		state = 3
+		state = 151
+		state = 845
+		state = 846
+		state = 847
+		state = 848
+	}
+}
+
+is_alpine_confederation = {
+	OR = {
+		is_switzerland = yes
+		is_austria = yes
+		state = 21
+		state = 32
+		state = 158
+		state = 159
+		state = 735
+		state = 850
+		state = 851
+	}
+}
+
+has_states_to_form_switzerland = {
+	custom_trigger_tooltip = {
+		tooltip = form_switzerland_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 3 } } } owns_state = 3 }
+		if = { limit = { NOT = { OOO = { owns_state = 151 } } } owns_state = 151 }
+		if = { limit = { NOT = { OOO = { owns_state = 845 } } } owns_state = 845 }
+		if = { limit = { NOT = { OOO = { owns_state = 846 } } } owns_state = 846 }
+		if = { limit = { NOT = { OOO = { owns_state = 847 } } } owns_state = 847 }
+	}
+}
+
+has_cosmetics_to_form_alpine_confederation = {
+	has_country_flag = can_form_ALP_UNITED
+}
+has_states_to_form_alpine_confederation = {
+	custom_trigger_tooltip = {
+		tooltip = form_alpine_confederation_has_states_tt
+
+		has_states_to_form_switzerland = yes
+		has_states_to_form_austria = yes
+		if = { limit = { NOT = { OOO = { owns_state = 21 } } } owns_state = 21 }
+		if = { limit = { NOT = { OOO = { owns_state = 32 } } } owns_state = 32 }
+		if = { limit = { NOT = { OOO = { owns_state = 39 } } } owns_state = 39 }
+		if = { limit = { NOT = { OOO = { owns_state = 158 } } } owns_state = 158 }
+		if = { limit = { NOT = { OOO = { owns_state = 159 } } } owns_state = 159 }
+		if = { limit = { NOT = { OOO = { owns_state = 735 } } } owns_state = 735 }
+		if = { limit = { NOT = { OOO = { owns_state = 850 } } } owns_state = 850 }
+		if = { limit = { NOT = { OOO = { owns_state = 851 } } } owns_state = 851 }
+	}
+}
+
 #### Magreb ####
 can_form_mauritania = {
 	OR = {

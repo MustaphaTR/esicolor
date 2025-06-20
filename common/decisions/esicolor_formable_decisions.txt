@@ -2499,6 +2499,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_austria"
 			set_country_flag = can_form_DNB_AUSTRIA_HUNGARY
+			set_country_flag = can_form_ALP_UNITED
 
 			if = {
 				limit = { has_country_leader = { character = HUN_otto_von_habsburg ruling_only = yes } }
@@ -2687,6 +2688,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_austria_hungary"
 			clr_country_flag = can_form_DNB_AUSTRIA_HUNGARY
+			clr_country_flag = can_form_ALP_UNITED
 
 			set_country_flag = can_form_DNB_UNITED
 
@@ -3784,6 +3786,86 @@ esicolor_formables = {
 			hidden_effect = {
 				every_state = {
 					limit = { is_mutapa = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_switzerland = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_switzerland = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_switzerland = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_switzerland"
+			set_country_flag = can_form_ALP_UNITED
+
+			set_cosmetic_tag = ALP_SWITZERLAND
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_switzerland = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_switzerland_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_alpine_confederation = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_alpine_confederation = yes
+		}
+		visible = {
+			has_cosmetics_to_form_alpine_confederation = yes
+		}
+		available = {
+			has_states_to_form_alpine_confederation = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_alpine_confederation"
+			clr_country_flag = can_form_ALP_UNITED
+			clr_country_flag = can_form_DNB_AUSTRIA_HUNGARY
+
+			set_country_flag = can_form_EUR_UNITED
+
+			set_cosmetic_tag = ALP_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_alpine_confederation = yes }
 
 					formable_decision_effect = yes
 				}
