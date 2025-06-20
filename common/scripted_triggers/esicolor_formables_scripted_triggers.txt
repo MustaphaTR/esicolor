@@ -1299,6 +1299,17 @@ has_states_to_form_danubia = {
 	}
 }
 
+required_states_to_form_austria = {
+	OR = {
+		state = 4
+		state = 152
+		state = 153
+		state = 848
+		state = 975
+		state = 976
+	}
+}
+
 #### Alipne Confederation ####
 can_form_switzerland = {
 	OR = {
@@ -1371,6 +1382,352 @@ has_states_to_form_alpine_confederation = {
 		if = { limit = { NOT = { OOO = { owns_state = 735 } } } owns_state = 735 }
 		if = { limit = { NOT = { OOO = { owns_state = 850 } } } owns_state = 850 }
 		if = { limit = { NOT = { OOO = { owns_state = 851 } } } owns_state = 851 }
+	}
+}
+
+required_states_to_form_switzerland = {
+	OR = {
+		state = 3
+		state = 151
+		state = 845
+		state = 846
+		state = 847
+	}
+}
+
+#### Germany ####
+can_form_bavaria = {
+	OR = {
+		original_tag = OSZ
+		original_tag = OSE
+		original_tag = OSA
+	}
+}
+
+can_form_bawu = {
+	OR = {
+		original_tag = OSO
+		original_tag = YFB
+	}
+}
+
+can_form_rhineland = {
+	OR = {
+		original_tag = OAZ
+		original_tag = OSI
+	}
+}
+
+can_form_hannover = {
+	OR = {
+		original_tag = OSL
+		original_tag = OSF
+		original_tag = OSY
+	}
+}
+
+can_form_schleswig_holstein = {
+	OR = {
+		original_tag = OSB
+		original_tag = YOY
+	}
+}
+
+can_form_silesia = {
+	OR = {
+		original_tag = OLL
+		original_tag = OLF
+		original_tag = FLZ
+	}
+}
+
+can_form_prussia = {
+	OR = {
+		original_tag = OOS
+		original_tag = OBS
+		original_tag = FLE
+	}
+}
+
+can_form_mecklenburg_pommern = {
+	OR = {
+		original_tag = OLI
+		original_tag = OLZ
+		original_tag = OLE
+	}
+}
+
+can_form_brandenburg = {
+	OR = {
+		original_tag = OLA
+		original_tag = OLB
+	}
+}
+
+can_form_central_germany = {
+	OR = {
+		original_tag = OSS
+		original_tag = OLO
+		original_tag = OLS
+	}
+}
+
+can_form_germany = {
+	OR = {
+		can_form_bavaria = yes
+		can_form_bawu = yes
+		can_form_rhineland = yes
+		can_form_hannover = yes
+		can_form_schleswig_holstein = yes
+		can_form_silesia = yes
+		can_form_prussia = yes
+		can_form_mecklenburg_pommern = yes
+		can_form_brandenburg = yes
+		can_form_central_germany = yes
+	}
+}
+
+is_bavaria = {
+	OR = {
+		state = 52
+		state = 53
+		state = 54
+	}
+}
+
+is_bawu = {
+	OR = {
+		state = 50
+		state = 978
+	}
+}
+
+is_rhineland = {
+	OR = {
+		state = 42
+		state = 51
+	}
+}
+
+is_hannover = {
+	OR = {
+		state = 56
+		state = 57
+		state = 59
+	}
+}
+
+is_schleswig_holstein = {
+	OR = {
+		state = 59
+		state = 909
+		state = 912
+	}
+}
+
+is_silesia = {
+	OR = {
+		state = 66
+		state = 67
+		state = 762
+	}
+}
+
+is_prussia = {
+	OR = {
+		state = 5
+		state = 85
+		state = 86
+		state = 188
+		state = 763
+		state = 807
+	}
+}
+
+is_mecklenburg_pommern = {
+	OR = {
+		state = 61
+		state = 62
+		state = 63
+	}
+}
+
+is_brandenburg = {
+	OR = {
+		state = 64
+		state = 68
+	}
+}
+
+is_central_germany = {
+	OR = {
+		state = 55
+		state = 60
+		state = 65
+	}
+}
+
+is_germany = {
+	OR = {
+		is_bavaria = yes
+		is_bawu = yes
+		is_rhineland = yes
+		is_hannover = yes
+		is_silesia = yes
+		is_prussia = yes
+		is_mecklenburg_pommern = yes
+		is_brandenburg = yes
+		is_central_germany = yes
+	}
+}
+
+has_states_to_form_bavaria = {
+	custom_trigger_tooltip = {
+		tooltip = form_bavaria_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 52 } } } owns_state = 52 }
+		if = { limit = { NOT = { OOO = { owns_state = 53 } } } owns_state = 53 }
+		if = { limit = { NOT = { OOO = { owns_state = 54 } } } owns_state = 54 }
+	}
+}
+
+has_states_to_form_bawu = {
+	custom_trigger_tooltip = {
+		tooltip = form_bawu_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 50 } } } owns_state = 50 }
+		if = { limit = { NOT = { OOO = { owns_state = 978 } } } owns_state = 978 }
+	}
+}
+
+has_states_to_form_rhineland = {
+	custom_trigger_tooltip = {
+		tooltip = form_rhineland_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 42 } } } owns_state = 42 }
+		if = { limit = { NOT = { OOO = { owns_state = 51 } } } owns_state = 51 }
+	}
+}
+
+has_states_to_form_hannover = {
+	custom_trigger_tooltip = {
+		tooltip = form_hannover_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 56 } } } owns_state = 56 }
+		if = { limit = { NOT = { OOO = { owns_state = 57 } } } owns_state = 57 }
+		if = { limit = { NOT = { OOO = { owns_state = 59 } } } owns_state = 59 }
+	}
+}
+
+has_states_to_form_schleswig_holstein = {
+	custom_trigger_tooltip = {
+		tooltip = form_schleswig_holstein_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 58 } } } owns_state = 58 }
+		if = { limit = { NOT = { OOO = { owns_state = 909 } } } owns_state = 909 }
+	}
+}
+
+has_states_to_form_silesia = {
+	custom_trigger_tooltip = {
+		tooltip = form_silesia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 66 } } } owns_state = 66 }
+		if = { limit = { NOT = { OOO = { owns_state = 67 } } } owns_state = 67 }
+	}
+}
+
+has_states_to_form_prussia = {
+	custom_trigger_tooltip = {
+		tooltip = form_prussia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 5 } } } owns_state = 5 }
+		if = { limit = { NOT = { OOO = { owns_state = 85 } } } owns_state = 85 }
+		if = { limit = { NOT = { OOO = { owns_state = 763 } } } owns_state = 763 }
+	}
+}
+
+has_states_to_form_mecklenburg_pommern = {
+	custom_trigger_tooltip = {
+		tooltip = form_mecklenburg_pommern_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 61 } } } owns_state = 61 }
+		if = { limit = { NOT = { OOO = { owns_state = 62 } } } owns_state = 62 }
+		if = { limit = { NOT = { OOO = { owns_state = 63 } } } owns_state = 63 }
+	}
+}
+
+has_states_to_form_brandenburg = {
+	custom_trigger_tooltip = {
+		tooltip = form_brandenburg_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 64 } } } owns_state = 64 }
+		if = { limit = { NOT = { OOO = { owns_state = 68 } } } owns_state = 68 }
+	}
+}
+
+has_states_to_form_central_germany = {
+	custom_trigger_tooltip = {
+		tooltip = form_central_germany_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 55 } } } owns_state = 55 }
+		if = { limit = { NOT = { OOO = { owns_state = 60 } } } owns_state = 60 }
+		if = { limit = { NOT = { OOO = { owns_state = 65 } } } owns_state = 65 }
+	}
+}
+
+has_cosmetics_to_form_germany = {
+	has_country_flag = can_form_GER_UNITED
+}
+has_states_to_form_germany = {
+	custom_trigger_tooltip = {
+		tooltip = form_germany_has_states_tt
+
+		has_states_to_form_bavaria = yes
+		has_states_to_form_bawu = yes
+		has_states_to_form_rhineland = yes
+		has_states_to_form_hannover = yes
+		has_states_to_form_schleswig_holstein = yes
+		if = { limit = { NOT = { OOO = { owns_state = 64 } } } owns_state = 64 }
+		if = { limit = { NOT = { OOO = { owns_state = 61 } } } owns_state = 61 }
+		if = { limit = { NOT = { OOO = { owns_state = 62 } } } owns_state = 62 }
+		has_states_to_form_central_germany = yes
+	}
+}
+
+required_states_to_form_schleswig_holstein = {
+	OR = {
+		state = 58
+		state = 909
+	}
+}
+
+required_states_to_form_silesia = {
+	OR = {
+		state = 66
+		state = 67
+	}
+}
+
+required_states_to_form_prussia = {
+	OR = {
+		state = 5
+		state = 85
+		state = 763
+	}
+}
+
+required_states_to_form_germany = {
+	OR = {
+		is_bavaria = yes
+		is_bawu = yes
+		is_rhineland = yes
+		is_hannover = yes
+		required_states_to_form_schleswig_holstein = yes
+		state = 64
+		state = 61
+		state = 62
+		is_central_germany = yes
 	}
 }
 

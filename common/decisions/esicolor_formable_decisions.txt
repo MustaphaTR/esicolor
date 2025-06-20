@@ -3834,6 +3834,12 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				required_states_to_form_switzerland = yes
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -3873,7 +3879,500 @@ esicolor_formables = {
 			formable_decision_effect_tooltip_default = yes
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				is_alpine_confederation = yes
+			}
+		}
+
 		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_bavaria = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_bavaria = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_bavaria = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_bavaria"
+			set_country_flag = can_form_GER_UNITED
+
+			set_cosmetic_tag = GER_BAVARIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_bavaria = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_bavaria = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_bawu = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_bawu = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_bawu = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_bawu"
+			set_country_flag = can_form_GER_UNITED
+
+			set_cosmetic_tag = GER_BAWU
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_bawu = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_bawu = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_rhineland = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_rhineland = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_rhineland = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_rhineland"
+			set_country_flag = can_form_GER_UNITED
+
+			set_cosmetic_tag = GER_RHINELAND
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_rhineland = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_rhineland = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_hannover = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_hannover = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_hannover = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_hannover"
+			set_country_flag = can_form_GER_UNITED
+
+			set_cosmetic_tag = GER_HANNOVER
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_hannover = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_hannover = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_schleswig_holstein = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_schleswig_holstein = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_schleswig_holstein = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_schleswig_holstein"
+			set_country_flag = can_form_GER_UNITED
+
+			set_cosmetic_tag = GER_SCHHOL
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_schleswig_holstein = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_schleswig_holstein_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				required_states_to_form_schleswig_holstein = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_silesia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_silesia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_silesia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_silesia"
+			set_country_flag = can_form_GER_UNITED
+
+			set_cosmetic_tag = GER_SILESIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_silesia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_silesia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				required_states_to_form_silesia = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_prussia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_prussia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_prussia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_prussia"
+			set_country_flag = can_form_GER_UNITED
+
+			set_cosmetic_tag = GER_PRUSSIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_prussia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_prussia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				required_states_to_form_prussia = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_mecklenburg_pommern = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_mecklenburg_pommern = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_mecklenburg_pommern = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_mecklenburg_pommern"
+			set_country_flag = can_form_GER_UNITED
+
+			set_cosmetic_tag = GER_MECPOM
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_mecklenburg_pommern = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_mecklenburg_pommern = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_brandenburg = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_brandenburg = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_brandenburg = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_brandenburg"
+			set_country_flag = can_form_GER_UNITED
+
+			set_cosmetic_tag = GER_BRANDENBURG
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_brandenburg = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_brandenburg = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_central_germany = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_central_germany = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_central_germany = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_central_germany"
+			set_country_flag = can_form_GER_UNITED
+
+			set_cosmetic_tag = GER_CENTRAL
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_germany = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_central_germany = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_germany = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_germany = yes
+		}
+		visible = {
+			has_cosmetics_to_form_germany = yes
+		}
+		available = {
+			has_states_to_form_germany = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_germany"
+			clr_country_flag = can_form_GER_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = OSA_otto_strasser ruling_only = yes } }
+
+				set_cosmetic_tag = GER_UNITED_STRASSER
+
+				else = {
+					set_cosmetic_tag = GER_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_germany = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				required_states_to_form_germany = yes
+			}
+		}
+
+		cost = global.formables_cost_100?100
 
 		fire_only_once = yes
 
