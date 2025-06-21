@@ -2712,7 +2712,7 @@ is_zambia = {
 	}
 }
 
-is_latin_africa = {
+is_mutapa = {
 	OR = {
 		is_south_africa = yes
 		is_namibia = yes
@@ -2778,6 +2778,272 @@ has_states_to_form_mutapa = {
 		if = { limit = { NOT = { OOO = { owns_state = 542 } } } owns_state = 542 }
 		if = { limit = { NOT = { OOO = { owns_state = 545 } } } owns_state = 545 }
 		if = { limit = { NOT = { OOO = { owns_state = 770 } } } owns_state = 770 }
+	}
+}
+
+#### Canada ####
+can_form_british_columbia = {
+	OR = {
+		original_tag = AFI
+		original_tag = AFE
+		original_tag = FEY
+		original_tag = FAO
+	}
+}
+
+can_form_saskatchewan = {
+	OR = {
+		original_tag = ALY
+		original_tag = BLS
+	}
+}
+
+can_form_manitoba = {
+	OR = {
+		original_tag = ALF
+		original_tag = BLF
+	}
+}
+
+can_form_inuit_states = {
+	OR = {
+		original_tag = AFZ
+		original_tag = LBE
+		original_tag = BLA
+	}
+}
+
+can_form_ontario = {
+	OR = {
+		original_tag = ZFL
+		original_tag = LBZ
+		original_tag = BLL
+	}
+}
+
+can_form_quebec = {
+	OR = {
+		original_tag = ALL
+		original_tag = BMC # ALB
+		original_tag = FEO
+		original_tag = BLO
+		original_tag = BLI
+		original_tag = CMA # BLZ
+		original_tag = BLE
+	}
+}
+
+can_form_newfoundland_and_labrador = {
+	OR = {
+		original_tag = EEI
+		original_tag = EEZ
+	}
+}
+
+can_form_canada = {
+	OR = {
+		can_form_british_columbia = yes
+		can_form_saskatchewan = yes
+		can_form_manitoba = yes
+		can_form_inuit_states = yes
+		can_form_quebec = yes
+		can_form_newfoundland_and_labrador = yes
+		original_tag = ALA
+		original_tag = ALS
+		original_tag = AFO
+	}
+}
+
+is_british_colombia = {
+	OR = {
+		state = 471
+		state = 473
+		state = 739
+		state = 740
+	}
+}
+
+is_saskatchewan = {
+	OR = {
+		state = 469
+		state = 865
+	}
+}
+
+is_manitoba = {
+	OR = {
+		state = 467
+		state = 867
+	}
+}
+
+is_inuit_states = {
+	OR = {
+		state = 472
+		state = 683
+		state = 864
+	}
+}
+
+is_ontario = {
+	OR = {
+		state = 276
+		state = 682
+		state = 866
+	}
+}
+
+is_quebec = {
+	OR = {
+		state = 466
+		state = 468
+		state = 730
+		state = 860
+		state = 861
+		state = 862
+		state = 863
+	}
+}
+
+is_newfoundland_and_labrador = {
+	OR = {
+		state = 331
+		state = 332
+	}
+}
+
+is_canada = {
+	OR = {
+		is_british_colombia = yes
+		is_saskatchewan = yes
+		is_manitoba = yes
+		is_inuit_states = yes
+		is_ontario = yes
+		is_quebec = yes
+		is_newfoundland_and_labrador = yes
+		state = 464
+		state = 465
+		state = 470
+	}
+}
+
+has_states_to_form_british_colombia = {
+	custom_trigger_tooltip = {
+		tooltip = form_british_colombia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 471 } } } owns_state = 471 }
+		if = { limit = { NOT = { OOO = { owns_state = 473 } } } owns_state = 473 }
+		if = { limit = { NOT = { OOO = { owns_state = 740 } } } owns_state = 740 }
+	}
+}
+
+has_states_to_form_saskatchewan = {
+	custom_trigger_tooltip = {
+		tooltip = form_saskatchewan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 469 } } } owns_state = 469 }
+		if = { limit = { NOT = { OOO = { owns_state = 865 } } } owns_state = 865 }
+	}
+}
+
+has_states_to_form_manitoba = {
+	custom_trigger_tooltip = {
+		tooltip = form_manitoba_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 467 } } } owns_state = 467 }
+		if = { limit = { NOT = { OOO = { owns_state = 867 } } } owns_state = 867 }
+	}
+}
+
+has_states_to_form_inuit_states = {
+	custom_trigger_tooltip = {
+		tooltip = form_inuit_states_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 472 } } } owns_state = 472 }
+		if = { limit = { NOT = { OOO = { owns_state = 683 } } } owns_state = 683 }
+		if = { limit = { NOT = { OOO = { owns_state = 864 } } } owns_state = 864 }
+	}
+}
+
+has_states_to_form_ontario = {
+	custom_trigger_tooltip = {
+		tooltip = form_ontario_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 276 } } } owns_state = 276 }
+		if = { limit = { NOT = { OOO = { owns_state = 682 } } } owns_state = 682 }
+		if = { limit = { NOT = { OOO = { owns_state = 866 } } } owns_state = 866 }
+	}
+}
+
+has_states_to_form_quebec = {
+	custom_trigger_tooltip = {
+		tooltip = form_quebec_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 466 } } } owns_state = 466 }
+		if = { limit = { NOT = { OOO = { owns_state = 468 } } } owns_state = 468 }
+		if = { limit = { NOT = { OOO = { owns_state = 860 } } } owns_state = 860 }
+		if = { limit = { NOT = { OOO = { owns_state = 861 } } } owns_state = 861 }
+		if = { limit = { NOT = { OOO = { owns_state = 862 } } } owns_state = 862 }
+		if = { limit = { NOT = { OOO = { owns_state = 863 } } } owns_state = 863 }
+	}
+}
+
+has_states_to_form_newfoundland_and_labrador = {
+	custom_trigger_tooltip = {
+		tooltip = form_newfoundland_and_labrador_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 331 } } } owns_state = 331 }
+		if = { limit = { NOT = { OOO = { owns_state = 332 } } } owns_state = 332 }
+	}
+}
+
+has_cosmetics_to_form_canada = {
+	has_country_flag = can_form_CAN_UNITED
+}
+has_states_to_form_antilles = {
+	custom_trigger_tooltip = {
+		tooltip = form_antilles_has_states_tt
+
+		has_states_to_form_british_colombia = yes
+		has_states_to_form_saskatchewan = yes
+		has_states_to_form_manitoba = yes
+		has_states_to_form_inuit_states = yes
+		has_states_to_form_ontario = yes
+		if = { limit = { NOT = { OOO = { owns_state = 464 } } } owns_state = 464 }
+		if = { limit = { NOT = { OOO = { owns_state = 465 } } } owns_state = 465 }
+		if = { limit = { NOT = { OOO = { owns_state = 470 } } } owns_state = 470 }
+	}
+}
+
+required_states_to_form_british_colombia = {
+	OR = {
+		state = 471
+		state = 473
+		state = 740
+	}
+}
+
+required_states_to_form_quebec = {
+	OR = {
+		state = 466
+		state = 468
+		state = 860
+		state = 861
+		state = 862
+		state = 863
+	}
+}
+
+required_states_to_form_canada = {
+	OR = {
+		required_states_to_form_british_colombia = yes
+		is_saskatchewan = yes
+		is_manitoba = yes
+		is_inuit_states = yes
+		is_ontario = yes
+		state = 464
+		state = 465
+		state = 470
 	}
 }
 

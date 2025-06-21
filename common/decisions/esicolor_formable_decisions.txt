@@ -5521,6 +5521,401 @@ esicolor_formables = {
 		}
 	}
 
+	form_british_columbia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_british_columbia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_british_columbia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_british_columbia"
+			set_country_flag = can_form_CAN_UNITED
+
+			if = {
+				limit = { original_tag = FEY }
+
+				set_cosmetic_tag = CAN_COLUMBIA_HAIDA
+
+				else = {
+					set_cosmetic_tag = CAN_COLUMBIA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_british_columbia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_british_columbia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_british_columbia = yes
+				}
+				else = {
+					required_states_to_form_british_columbia = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_saskatchewan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_saskatchewan = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_saskatchewan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_saskatchewan"
+			set_country_flag = can_form_CAN_UNITED
+
+			set_cosmetic_tag = CAN_SASKATCHEWAN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_saskatchewan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_saskatchewan = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_manitoba = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_manitoba = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_manitoba = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_manitoba"
+			set_country_flag = can_form_CAN_UNITED
+
+			set_cosmetic_tag = CAN_MANITOBA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_manitoba = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_manitoba = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_inuit_states = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_inuit_states = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_inuit_states = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_inuit_states"
+			set_country_flag = can_form_CAN_UNITED
+
+			set_cosmetic_tag = CAN_INUIT
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_inuit_states = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_inuit_states = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_ontario = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_ontario = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_ontario = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_ontario"
+			set_country_flag = can_form_CAN_UNITED
+
+			set_cosmetic_tag = CAN_ONTARIO
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_ontario = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_ontario = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_quebec = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_quebec = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_quebec = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_quebec"
+			set_country_flag = can_form_CAN_UNITED
+
+			set_cosmetic_tag = CAN_QUEBEC
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_quebec = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_quebec_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_quebec = yes
+				}
+				else = {
+					required_states_to_form_quebec = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_newfoundland_and_labrador = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_newfoundland_and_labrador = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_newfoundland_and_labrador = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_newfoundland_and_labrador"
+			set_country_flag = can_form_CAN_UNITED
+
+			set_cosmetic_tag = CAN_NFLLAB
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_newfoundland_and_labrador = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_newfoundland_and_labrador = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_canada = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_canada = yes
+		}
+		visible = {
+			has_cosmetics_to_form_canada = yes
+		}
+		available = {
+			has_states_to_form_canada = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_canada"
+			clr_country_flag = can_form_CAN_UNITED
+
+			set_country_flag = can_form_NOA_UNITED
+
+			if = {
+				limit = { 
+					OR = {
+						can_form_inuit_states = yes
+						original_tag = FEY
+					}
+				}
+
+				set_cosmetic_tag = CAN_UNITED_NATIVE
+
+				else = {
+					set_cosmetic_tag = CAN_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_canada = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_canada_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_canada = yes
+				}
+				else = {
+					required_states_to_form_canada = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
