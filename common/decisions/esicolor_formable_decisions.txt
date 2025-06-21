@@ -1853,7 +1853,7 @@ esicolor_formables = {
 					is_ecuador = yes
 				}
 				else = {
-					required_states_to_form_ecudaor = yes
+					required_states_to_form_ecuador = yes
 				}
 			}
 		}
@@ -5916,6 +5916,313 @@ esicolor_formables = {
 		}
 	}
 
+	form_azerbaijan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_azerbaijan = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_azerbaijan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_azerbaijan"
+			set_country_flag = can_form_CAU_TRANS
+
+			set_cosmetic_tag = CAU_AZERBAIJAN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_azerbaijan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_azerbaijan_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_azerbaijan = yes
+				}
+				else = {
+					required_states_to_form_azerbaijan = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_armenia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_armenia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_armenia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_armenia"
+			set_country_flag = can_form_CAU_TRANS
+
+			set_cosmetic_tag = CAU_ARMENIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_armenia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_armenia = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_georgia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_georgia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_georgia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_georgia"
+			set_country_flag = can_form_CAU_TRANS
+
+			set_cosmetic_tag = CAU_GEORGIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_georgia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_georgia = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_transcaucasia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_transcaucasia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_transcaucasia = yes
+		}
+		available = {
+			has_states_to_form_transcaucasia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_transcaucasia"
+			clr_country_flag = can_form_CAU_TRANS
+
+			set_country_flag = can_form_CAU_UNITED
+
+			set_cosmetic_tag = CAU_TRANS
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_transcaucasia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_transcaucasia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_transcaucasia = yes
+				}
+				else = {
+					required_states_to_form_transcaucasia = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_mountain_republic = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_mountain_republic = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_mountain_republic = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_mountain_republic"
+			clr_country_flag = can_form_CAU_TRANS
+
+			set_country_flag = can_form_CAU_UNITED
+
+			set_cosmetic_tag = CAU_CIS
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_mountain_republic = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_mountain_republic_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_mountain_republic = yes
+				}
+				else = {
+					required_states_to_form_mountain_republic = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_caucasia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_caucasia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_caucasia = yes
+		}
+		available = {
+			has_states_to_form_caucasia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_caucasia"
+			clr_country_flag = can_form_CAU_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+			set_country_flag = can_form_MEA_UNITED
+
+			set_cosmetic_tag = CAU_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_caucasia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_caucasia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_caucasia = yes
+				}
+				else = {
+					required_states_to_form_caucasia = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
@@ -5930,6 +6237,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_europe"
 			clr_country_flag = can_form_EUR_UNITED
+			clr_country_flag = can_form_MEA_UNITED
 
 			set_country_flag = can_form_EAR_UNITED
 
@@ -6204,6 +6512,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_middle_east"
 			clr_country_flag = can_form_MEA_UNITED
+			clr_country_flag = can_form_EUR_UNITED
 
 			set_country_flag = can_form_EAR_UNITED
 

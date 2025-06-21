@@ -1980,6 +1980,200 @@ required_states_to_form_germany = {
 	}
 }
 
+#### Caucasia ####
+can_form_azerbaijan = {
+	OR = {
+		original_tag = ZZY
+		original_tag = AZO
+		original_tag = NOO
+	}
+}
+
+can_form_armenia = {
+	OR = {
+		original_tag = ZEO
+	}
+}
+
+can_form_georgia = {
+	OR = {
+		original_tag = ZEI
+	}
+}
+
+can_form_transcaucasia = {
+	OR = {
+		can_form_azerbaijan = yes
+		can_form_armenia = yes
+		can_form_georgia = yes
+		original_tag = BZL
+	}
+}
+
+can_form_mountain_republic = {
+	OR = {
+		original_tag = ZEZ
+		original_tag = BZI
+		original_tag = BZL
+		original_tag = BZF
+		original_tag = BZB
+	}
+}
+
+can_form_caucasia = {
+	OR = {
+		can_form_transcaucasia = yes
+		can_form_mountain_republic = yes
+	}
+}
+
+is_azerbaijan = {
+	OR = {
+		state = 229
+		state = 419
+		state = 420
+		state = 1000
+	}
+}
+
+is_armenia = {
+	OR = {
+		state = 230
+		state = 354
+		state = 800
+	}
+}
+
+is_georgia = {
+	OR = {
+		state = 231
+		state = 826
+	}
+}
+
+is_transcaucasia = {
+	OR = {
+		is_azerbaijan = yes
+		is_armenia = yes
+		is_georgia = yes
+	}
+}
+
+is_mountain_republic = {
+	OR = {
+		state = 232
+		state = 233
+		state = 821
+		state = 826
+		state = 827
+		state = 828
+	}
+}
+
+is_caucasia = {
+	OR = {
+		is_transcaucasia = yes
+		is_mountain_republic = yes
+	}
+}
+
+has_states_to_form_azerbaijan = {
+	custom_trigger_tooltip = {
+		tooltip = form_azerbaijan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 229 } } } owns_state = 229 }
+		if = { limit = { NOT = { OOO = { owns_state = 420 } } } owns_state = 420 }
+		if = { limit = { NOT = { OOO = { owns_state = 1000 } } } owns_state = 1000 }
+	}
+}
+
+has_states_to_form_armenia = {
+	custom_trigger_tooltip = {
+		tooltip = form_armenia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 230 } } } owns_state = 230 }
+		if = { limit = { NOT = { OOO = { owns_state = 354 } } } owns_state = 354 }
+		if = { limit = { NOT = { OOO = { owns_state = 800 } } } owns_state = 800 }
+	}
+}
+
+has_states_to_form_georgia = {
+	custom_trigger_tooltip = {
+		tooltip = form_georgia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 231 } } } owns_state = 231 }
+		if = { limit = { NOT = { OOO = { owns_state = 826 } } } owns_state = 826 }
+	}
+}
+
+has_cosmetics_to_form_transcaucasia = {
+	has_country_flag = can_form_CAU_TRANS
+}
+has_states_to_form_transcaucasia = {
+	custom_trigger_tooltip = {
+		tooltip = form_transcaucasia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 229 } } } owns_state = 229 }
+		if = { limit = { NOT = { OOO = { owns_state = 230 } } } owns_state = 230 }
+		has_states_to_form_georgia = yes
+	}
+}
+
+has_states_to_form_mountain_republic = {
+	custom_trigger_tooltip = {
+		tooltip = form_mountain_republic_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 232 } } } owns_state = 232 }
+		if = { limit = { NOT = { OOO = { owns_state = 821 } } } owns_state = 821 }
+		if = { limit = { NOT = { OOO = { owns_state = 827 } } } owns_state = 827 }
+		if = { limit = { NOT = { OOO = { owns_state = 828 } } } owns_state = 828 }
+	}
+}
+
+has_cosmetics_to_form_caucasia = {
+	has_country_flag = can_form_CAU_UNITED
+}
+has_states_to_form_caucasia = {
+	custom_trigger_tooltip = {
+		tooltip = form_caucasia_has_states_tt
+
+		has_states_to_form_transcaucasia = yes
+		has_states_to_form_mountain_republic = yes
+	}
+}
+
+required_states_to_form_azerbaijan = {
+	OR = {
+		state = 229
+		state = 420
+		state = 1000
+	}
+}
+
+required_states_to_form_transcaucasia = {
+	OR = {
+		state = 229
+		state = 230
+		is_georgia = yes
+	}
+}
+
+required_states_to_form_mountain_republic = {
+	OR = {
+		state = 232
+		state = 821
+		state = 827
+		state = 828
+	}
+}
+
+required_states_to_form_caucasia = {
+	OR = {
+		required_states_to_form_transcaucasia = yes
+		required_states_to_form_mountain_republic = yes
+	}
+}
+
 #### Magreb ####
 can_form_mauritania = {
 	OR = {
@@ -2854,7 +3048,7 @@ can_form_canada = {
 	}
 }
 
-is_british_colombia = {
+is_british_columbia = {
 	OR = {
 		state = 471
 		state = 473
@@ -2914,7 +3108,7 @@ is_newfoundland_and_labrador = {
 
 is_canada = {
 	OR = {
-		is_british_colombia = yes
+		is_british_columbia = yes
 		is_saskatchewan = yes
 		is_manitoba = yes
 		is_inuit_states = yes
@@ -2927,9 +3121,9 @@ is_canada = {
 	}
 }
 
-has_states_to_form_british_colombia = {
+has_states_to_form_british_columbia = {
 	custom_trigger_tooltip = {
-		tooltip = form_british_colombia_has_states_tt
+		tooltip = form_british_columbia_has_states_tt
 
 		if = { limit = { NOT = { OOO = { owns_state = 471 } } } owns_state = 471 }
 		if = { limit = { NOT = { OOO = { owns_state = 473 } } } owns_state = 473 }
@@ -3000,11 +3194,11 @@ has_states_to_form_newfoundland_and_labrador = {
 has_cosmetics_to_form_canada = {
 	has_country_flag = can_form_CAN_UNITED
 }
-has_states_to_form_antilles = {
+has_states_to_form_canada = {
 	custom_trigger_tooltip = {
-		tooltip = form_antilles_has_states_tt
+		tooltip = form_canada_has_states_tt
 
-		has_states_to_form_british_colombia = yes
+		has_states_to_form_british_columbia = yes
 		has_states_to_form_saskatchewan = yes
 		has_states_to_form_manitoba = yes
 		has_states_to_form_inuit_states = yes
@@ -3015,7 +3209,7 @@ has_states_to_form_antilles = {
 	}
 }
 
-required_states_to_form_british_colombia = {
+required_states_to_form_british_columbia = {
 	OR = {
 		state = 471
 		state = 473
