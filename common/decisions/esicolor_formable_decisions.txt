@@ -2894,6 +2894,12 @@ esicolor_formables = {
 			formable_decision_effect_tooltip_default = yes
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				is_saudi_arabia = yes
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -2935,6 +2941,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_gulf_states = yes
+				}
+				else = {
+					required_states_to_form_gulf_states = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -2971,6 +2990,12 @@ esicolor_formables = {
 			formable_decision_effect_tooltip_default = yes
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				is_oman = yes
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -3005,6 +3030,12 @@ esicolor_formables = {
 				}
 			}
 			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_yemen = yes
+			}
 		}
 
 		cost = global.formables_cost_25?25
@@ -3047,6 +3078,19 @@ esicolor_formables = {
 
 				custom_effect_tooltip = form_arabia_affected_states_tt
 				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_arabia = yes
+				}
+				else = {
+					required_states_to_form_arabia = yes
+				}
 			}
 		}
 
@@ -3105,6 +3149,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_austria = yes
+				}
+				else = {
+					required_states_to_form_austria = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -3154,6 +3211,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_hungary = yes
+				}
+				else = {
+					required_states_to_form_hungary = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -3198,6 +3268,12 @@ esicolor_formables = {
 			formable_decision_effect_tooltip_default = yes
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				is_czechia = yes
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -3236,6 +3312,19 @@ esicolor_formables = {
 
 				custom_effect_tooltip = form_slovakia_affected_states_tt
 				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_slovakia = yes
+				}
+				else = {
+					required_states_to_form_slovakia = yes
+				}
 			}
 		}
 
@@ -3291,6 +3380,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_austria_hungary = yes
+				}
+				else = {
+					required_states_to_form_austria_hungary = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_50?50
 
 		fire_only_once = yes
@@ -3342,6 +3444,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_czechoslovakia = yes
+				}
+				else = {
+					required_states_to_form_czechoslovakia = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_50?50
 
 		fire_only_once = yes
@@ -3387,6 +3502,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_danubia = yes
+				}
+				else = {
+					required_states_to_form_danubia = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_100?100
 
 		fire_only_once = yes
@@ -3423,6 +3551,12 @@ esicolor_formables = {
 			formable_decision_effect_tooltip_default = yes
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				is_vietnam = yes
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -3457,6 +3591,12 @@ esicolor_formables = {
 				}
 			}
 			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_siam = yes
+			}
 		}
 
 		cost = global.formables_cost_25?25
@@ -3503,6 +3643,12 @@ esicolor_formables = {
 			formable_decision_effect_tooltip_default = yes
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				is_burma = yes
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -3546,6 +3692,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_indochina = yes
+				}
+				else = {
+					required_states_to_form_indochina = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_50?50
 
 		fire_only_once = yes
@@ -3580,6 +3739,12 @@ esicolor_formables = {
 				}
 			}
 			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_kenya = yes
+			}
 		}
 
 		cost = global.formables_cost_25?25
@@ -3619,6 +3784,12 @@ esicolor_formables = {
 				}
 			}
 			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_east_africa = yes
+			}
 		}
 
 		cost = global.formables_cost_50?50
@@ -3669,6 +3840,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_afar = yes
+				}
+				else = {
+					required_states_to_form_afar = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -3710,6 +3894,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_oromia = yes
+				}
+				else = {
+					required_states_to_form_oromia = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -3744,6 +3941,12 @@ esicolor_formables = {
 				}
 			}
 			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_benishangul_gumuz = yes
+			}
 		}
 
 		cost = global.formables_cost_25?25
@@ -3784,6 +3987,19 @@ esicolor_formables = {
 
 				custom_effect_tooltip = form_somalia_affected_states_tt
 				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_somalia = yes
+				}
+				else = {
+					required_states_to_form_somalia = yes
+				}
 			}
 		}
 
@@ -3848,6 +4064,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_ethiopia = yes
+				}
+				else = {
+					required_states_to_form_ethiopia = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_50?50
 
 		fire_only_once = yes
@@ -3899,6 +4128,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_horn_of_africa = yes
+				}
+				else = {
+					required_states_to_form_horn_of_africa = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_100?100
 
 		fire_only_once = yes
@@ -3933,6 +4175,12 @@ esicolor_formables = {
 				}
 			}
 			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_chad = yes
+			}
 		}
 
 		cost = global.formables_cost_25?25
@@ -3999,6 +4247,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_congo = yes
+				}
+				else = {
+					required_states_to_form_congo = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_50?50
 
 		fire_only_once = yes
@@ -4037,6 +4298,19 @@ esicolor_formables = {
 
 				custom_effect_tooltip = form_angola_affected_states_tt
 				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_angola = yes
+				}
+				else = {
+					required_states_to_form_angola = yes
+				}
 			}
 		}
 
@@ -4084,6 +4358,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_latin_africa = yes
+				}
+				else = {
+					required_states_to_form_latin_africa = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_100?100
 
 		fire_only_once = yes
@@ -4122,6 +4409,19 @@ esicolor_formables = {
 
 				custom_effect_tooltip = form_bolivia_affected_states_tt
 				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_bolivia = yes
+				}
+				else = {
+					required_states_to_form_bolivia = yes
+				}
 			}
 		}
 
@@ -4169,6 +4469,19 @@ esicolor_formables = {
 			}
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_peru_bolivia = yes
+				}
+				else = {
+					required_states_to_form_peru_bolivia = yes
+				}
+			}
+		}
+
 		cost = global.formables_cost_50?50
 
 		fire_only_once = yes
@@ -4213,6 +4526,12 @@ esicolor_formables = {
 			formable_decision_effect_tooltip_default = yes
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				is_south_africa = yes
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -4249,6 +4568,12 @@ esicolor_formables = {
 			formable_decision_effect_tooltip_default = yes
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				is_namibia = yes
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -4283,6 +4608,12 @@ esicolor_formables = {
 				}
 			}
 			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_mozambique = yes
+			}
 		}
 
 		cost = global.formables_cost_25?25
@@ -4329,6 +4660,12 @@ esicolor_formables = {
 			formable_decision_effect_tooltip_default = yes
 		}
 
+		highlight_states = {
+			highlight_states_trigger = {
+				is_zambia = yes
+			}
+		}
+
 		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
@@ -4365,6 +4702,12 @@ esicolor_formables = {
 				}
 			}
 			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_mutapa = yes
+			}
 		}
 
 		cost = global.formables_cost_50?50
@@ -4410,7 +4753,14 @@ esicolor_formables = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				required_states_to_form_switzerland = yes
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_switzerland = yes
+				}
+				else = {
+					required_states_to_form_switzerland = yes
+				}
 			}
 		}
 
@@ -4670,7 +5020,14 @@ esicolor_formables = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				required_states_to_form_schleswig_holstein = yes
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_schleswig_holstein = yes
+				}
+				else = {
+					required_states_to_form_schleswig_holstein = yes
+				}
 			}
 		}
 
@@ -4717,7 +5074,14 @@ esicolor_formables = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				required_states_to_form_silesia = yes
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_silesia = yes
+				}
+				else = {
+					required_states_to_form_silesia = yes
+				}
 			}
 		}
 
@@ -4764,7 +5128,14 @@ esicolor_formables = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				required_states_to_form_prussia = yes
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_prussia = yes
+				}
+				else = {
+					required_states_to_form_prussia = yes
+				}
 			}
 		}
 
@@ -4942,7 +5313,14 @@ esicolor_formables = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				required_states_to_form_germany = yes
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_germany = yes
+				}
+				else = {
+					required_states_to_form_germany = yes
+				}
 			}
 		}
 

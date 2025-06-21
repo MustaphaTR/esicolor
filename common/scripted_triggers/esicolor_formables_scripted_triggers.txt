@@ -1519,6 +1519,45 @@ required_states_to_form_austria = {
 	}
 }
 
+required_states_to_form_hungary = {
+	OR = {
+		state = 43
+		state = 154
+		state = 155
+		state = 973
+		state = 974
+	}
+}
+
+required_states_to_form_slovakia = {
+	OR = {
+		state = 70
+		state = 71
+		state = 664
+	}
+}
+
+required_states_to_form_austria_hungary = {
+	OR = {
+		required_states_to_form_austria = yes
+		required_states_to_form_hungary = yes
+	}
+}
+
+required_states_to_form_czechoslovakia = {
+	OR = {
+		is_czechia = yes
+		required_states_to_form_slovakia = yes
+	}
+}
+
+required_states_to_form_danubia = {
+	OR = {
+		required_states_to_form_austria_hungary = yes
+		required_states_to_form_czechoslovakia = yes
+	}
+}
+
 #### Alipne Confederation ####
 can_form_switzerland = {
 	OR = {
@@ -1782,6 +1821,7 @@ is_germany = {
 		is_bawu = yes
 		is_rhineland = yes
 		is_hannover = yes
+		is_schleswig_holstein = yes
 		is_silesia = yes
 		is_prussia = yes
 		is_mecklenburg_pommern = yes
@@ -2322,15 +2362,6 @@ has_states_to_form_afar = {
 	}
 }
 
-has_states_to_form_benishangul_gumuz = {
-	custom_trigger_tooltip = {
-		tooltip = form_benishangul_gumuz_has_states_tt
-
-		if = { limit = { NOT = { OOO = { owns_state = 839 } } } owns_state = 839 }
-		if = { limit = { NOT = { OOO = { owns_state = 840 } } } owns_state = 840 }
-	}
-}
-
 has_states_to_form_oromia = {
 	custom_trigger_tooltip = {
 		tooltip = form_oromia_has_states_tt
@@ -2338,6 +2369,15 @@ has_states_to_form_oromia = {
 		if = { limit = { NOT = { OOO = { owns_state = 271 } } } owns_state = 271 }
 		if = { limit = { NOT = { OOO = { owns_state = 836 } } } owns_state = 836 }
 		if = { limit = { NOT = { OOO = { owns_state = 837 } } } owns_state = 837 }
+	}
+}
+
+has_states_to_form_benishangul_gumuz = {
+	custom_trigger_tooltip = {
+		tooltip = form_benishangul_gumuz_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 839 } } } owns_state = 839 }
+		if = { limit = { NOT = { OOO = { owns_state = 840 } } } owns_state = 840 }
 	}
 }
 
@@ -2379,6 +2419,50 @@ has_states_to_form_horn_of_africa = {
 		has_states_to_form_ethiopia = yes
 		if = { limit = { NOT = { OOO = { owns_state = 268 } } } owns_state = 268 }
 		if = { limit = { NOT = { OOO = { owns_state = 550 } } } owns_state = 550 }
+	}
+}
+
+required_states_to_form_afar = {
+	OR = {
+		state = 843
+		state = 908
+	}
+}
+
+required_states_to_form_oromia = {
+	OR = {
+		state = 271
+		state = 836
+		state = 837
+	}
+}
+
+required_states_to_form_somalia = {
+	OR = {
+		state = 269
+		state = 559
+		state = 844
+	}
+}
+
+required_states_to_form_ethiopia = {
+	OR = {
+		state = 843
+		is_benishangul_gumuz = yes
+		required_states_to_form_oromia = yes
+		state = 835
+		state = 838
+		state = 841
+		state = 842
+	}
+}
+
+required_states_to_form_horn_of_africa = {
+	OR = {
+		required_states_to_form_somalia = yes
+		required_states_to_form_ethiopia = yes
+		state = 268
+		state = 550
 	}
 }
 
@@ -2516,6 +2600,38 @@ has_states_to_form_latin_africa = {
 		if = { limit = { NOT = { OOO = { owns_state = 772 } } } owns_state = 772 }
 		if = { limit = { NOT = { OOO = { owns_state = 773 } } } owns_state = 773 }
 		if = { limit = { NOT = { OOO = { owns_state = 796 } } } owns_state = 796 }
+	}
+}
+
+required_states_to_form_congo = {
+	OR = {
+		state = 295
+		state = 538
+		state = 718
+		state = 888
+		state = 889
+		state = 890
+	}
+}
+
+required_states_to_form_angola = {
+	OR = {
+		state = 540
+		state = 891
+		state = 892
+	}
+}
+
+required_states_to_form_latin_africa = {
+	OR = {
+		is_chad = yes
+		required_states_to_form_congo = yes
+		required_states_to_form_angola = yes
+		state = 297
+		state = 660
+		state = 772
+		state = 773
+		state = 796
 	}
 }
 
@@ -2966,6 +3082,20 @@ has_states_to_form_peru_bolivia = {
 	}
 }
 
+required_states_to_form_bolivia = {
+	OR = {
+		state = 302
+		state = 487
+	}
+}
+
+required_states_to_form_peru_bolivia = {
+	OR = {
+		required_states_to_form_peru = yes
+		required_states_to_form_bolivia = yes
+	}
+}
+
 #### Turkestan ####
 can_form_kazakhstan = {
 	OR = {
@@ -3398,6 +3528,16 @@ has_states_to_form_indochina = {
 	}
 }
 
+required_states_to_form_indochina = {
+	OR = {
+		is_netherlands = yes
+		is_siam = yes
+		is_burma = yes
+		state = 670
+		state = 741
+	}
+}
+
 #### Arabia ####
 can_form_saudi_arabia = {
 	OR = {
@@ -3564,6 +3704,23 @@ has_states_to_form_arabia = {
 		has_states_to_form_gulf_states = yes
 		has_states_to_form_oman = yes
 		has_states_to_form_yemen = yes
+	}
+}
+
+required_states_to_form_gulf_states = {
+	OR = {
+		state = 658
+		state = 765
+		state = 1014
+	}
+}
+
+required_states_to_form_arabia = {
+	OR = {
+		is_saudi_arabia = yes
+		required_states_to_form_gulf_states = yes
+		is_oman = yes
+		is_yemen = yes
 	}
 }
 
