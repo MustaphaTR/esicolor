@@ -5308,7 +5308,12 @@ esicolor_formables = {
 					formable_decision_effect = yes
 				}
 			}
-			formable_decision_effect_tooltip_default = yes
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_germany_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
 		}
 
 		highlight_states = {
@@ -5325,6 +5330,189 @@ esicolor_formables = {
 		}
 
 		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_hispaniola = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_hispaniola = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_hispaniola = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_hispaniola"
+			set_country_flag = can_form_ANT_UNITED
+
+			set_cosmetic_tag = ANT_HISPANIOLA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_hispaniola = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_hispaniola = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_bahamas = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_bahamas = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_bahamas = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_bahamas"
+			set_country_flag = can_form_ANT_UNITED
+
+			set_cosmetic_tag = ANT_BAHAMAS
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_bahamas = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_bahamas = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_british_antilles = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_british_antilles = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_british_antilles = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_british_antilles"
+			set_country_flag = can_form_ANT_UNITED
+
+			set_cosmetic_tag = ANT_BRITISH
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_british_antilles = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_british_antilles = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_antilles = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_antilles = yes
+		}
+		visible = {
+			has_cosmetics_to_form_antilles = yes
+		}
+		available = {
+			has_states_to_form_antilles = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_antilles"
+			clr_country_flag = can_form_ANT_UNITED
+
+			set_country_flag = can_form_NOA_UNITED
+			set_country_flag = can_form_SOA_UNITED
+
+			set_cosmetic_tag = ANT_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_antilles = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_antilles_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_antilles = yes
+				}
+				else = {
+					required_states_to_form_antilles = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
 
 		fire_only_once = yes
 
@@ -5399,6 +5587,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_north_america"
 			clr_country_flag = can_form_NOA_UNITED
+			clr_country_flag = can_form_SOA_UNITED
 
 			set_country_flag = can_form_EAR_UNITED
 
@@ -5443,6 +5632,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_south_america"
 			clr_country_flag = can_form_SOA_UNITED
+			clr_country_flag = can_form_NOA_UNITED
 
 			set_country_flag = can_form_EAR_UNITED
 
