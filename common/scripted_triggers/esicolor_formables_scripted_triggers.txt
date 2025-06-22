@@ -2975,6 +2975,218 @@ has_states_to_form_mutapa = {
 	}
 }
 
+#### West Africa ####
+can_form_nigeria = {
+	OR = {
+		original_tag = SSB
+		original_tag = YOO
+		original_tag = YOI
+		original_tag = YOZ
+	}
+}
+
+can_form_sokoto = {
+	OR = {
+		original_tag = FBI
+		original_tag = YOI
+		original_tag = YOZ
+	}
+}
+
+can_form_niger = {
+	OR = {
+		original_tag = SIS
+		original_tag = FBI
+	}
+}
+
+can_form_mali = {
+	OR = {
+		original_tag = SSL
+		original_tag = FBZ
+		original_tag = BYB
+		original_tag = BYY
+	}
+}
+
+can_form_senegambia = {
+	OR = {
+		original_tag = ZFZ
+		original_tag = FOI
+	}
+}
+
+can_form_west_africa = {
+	OR = {
+		can_form_nigeria = yes
+		can_form_niger = yes
+		can_form_mali = yes
+		can_form_senegambia = yes
+		original_tag = ZFA
+		original_tag = ZYL
+		original_tag = ZYB
+		original_tag = FOO
+		original_tag = FOZ
+		original_tag = FFL
+		original_tag = FFF
+		original_tag = FFB
+		original_tag = FFY
+		original_tag = FBO
+		can_form_mauritania = yes
+	}
+}
+
+is_nigeria = {
+	OR = {
+		state = 558
+		state = 900
+		state = 901
+		state = 902
+	}
+}
+
+is_sokoto = {
+	OR = {
+		state = 781
+		state = 901
+		state = 902
+	}
+}
+
+is_niger = {
+	OR = {
+		state = 515
+		state = 781
+	}
+}
+
+is_mali = {
+	OR = {
+		state = 556
+		state = 782
+		state = 898
+		state = 899
+	}
+}
+
+is_senegambia = {
+	OR = {
+		state = 272
+		state = 701
+	}
+}
+
+is_west_africa = {
+	OR = {
+		is_nigeria = yes
+		is_niger = yes
+		is_mali = yes
+		is_senegambia = yes
+		state = 274
+		state = 296
+		state = 298
+		state = 700
+		state = 702
+		state = 776
+		state = 777
+		state = 778
+		state = 779
+		state = 780
+		is_mauritania = yes
+	}
+}
+
+has_states_to_form_nigeria = {
+	custom_trigger_tooltip = {
+		tooltip = form_nigeria_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 558 } } } owns_state = 558 }
+		if = { limit = { NOT = { OOO = { owns_state = 900 } } } owns_state = 900 }
+		if = { limit = { NOT = { OOO = { owns_state = 901 } } } owns_state = 901 }
+		if = { limit = { NOT = { OOO = { owns_state = 902 } } } owns_state = 902 }
+	}
+}
+
+has_states_to_form_sokoto = {
+	custom_trigger_tooltip = {
+		tooltip = form_sokoto_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 781 } } } owns_state = 781 }
+		if = { limit = { NOT = { OOO = { owns_state = 901 } } } owns_state = 901 }
+		if = { limit = { NOT = { OOO = { owns_state = 902 } } } owns_state = 902 }
+	}
+}
+
+has_states_to_form_niger = {
+	custom_trigger_tooltip = {
+		tooltip = form_niger_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 515 } } } owns_state = 515 }
+		if = { limit = { NOT = { OOO = { owns_state = 781 } } } owns_state = 781 }
+	}
+}
+
+has_states_to_form_mali = {
+	custom_trigger_tooltip = {
+		tooltip = form_mali_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 556 } } } owns_state = 556 }
+		if = { limit = { NOT = { OOO = { owns_state = 782 } } } owns_state = 782 }
+		if = { limit = { NOT = { OOO = { owns_state = 898 } } } owns_state = 898 }
+		if = { limit = { NOT = { OOO = { owns_state = 899 } } } owns_state = 899 }
+	}
+}
+
+has_states_to_form_senegambia = {
+	custom_trigger_tooltip = {
+		tooltip = form_senegambia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 272 } } } owns_state = 272 }
+		if = { limit = { NOT = { OOO = { owns_state = 701 } } } owns_state = 701 }
+	}
+}
+
+has_cosmetics_to_form_west_africa = {
+	has_country_flag = can_form_WAF_UNITED
+}
+has_states_to_form_west_africa = {
+	custom_trigger_tooltip = {
+		tooltip = form_west_africa_has_states_tt
+
+		has_states_to_form_nigeria = yes
+		has_states_to_form_niger = yes
+		has_states_to_form_mali = yes
+		has_states_to_form_senegambia = yes
+		if = { limit = { NOT = { OOO = { owns_state = 274 } } } owns_state = 274 }
+		if = { limit = { NOT = { OOO = { owns_state = 296 } } } owns_state = 296 }
+		if = { limit = { NOT = { OOO = { owns_state = 298 } } } owns_state = 298 }
+		if = { limit = { NOT = { OOO = { owns_state = 700 } } } owns_state = 700 }
+		if = { limit = { NOT = { OOO = { owns_state = 776 } } } owns_state = 776 }
+		if = { limit = { NOT = { OOO = { owns_state = 777 } } } owns_state = 777 }
+		if = { limit = { NOT = { OOO = { owns_state = 778 } } } owns_state = 778 }
+		if = { limit = { NOT = { OOO = { owns_state = 779 } } } owns_state = 779 }
+		if = { limit = { NOT = { OOO = { owns_state = 780 } } } owns_state = 780 }
+	}
+}
+
+required_states_to_form_west_africa = {
+	OR = {
+		is_nigeria = yes
+		is_niger = yes
+		is_mali = yes
+		is_senegambia = yes
+		state = 274
+		state = 296
+		state = 298
+		state = 700
+		state = 776
+		state = 777
+		state = 778
+		state = 779
+		state = 780
+	}
+}
+
 #### Canada ####
 can_form_british_columbia = {
 	OR = {
@@ -3230,7 +3442,7 @@ required_states_to_form_quebec = {
 
 required_states_to_form_canada = {
 	OR = {
-		required_states_to_form_british_colombia = yes
+		required_states_to_form_british_columbia = yes
 		is_saskatchewan = yes
 		is_manitoba = yes
 		is_inuit_states = yes

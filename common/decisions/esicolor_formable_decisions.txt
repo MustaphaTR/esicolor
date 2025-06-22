@@ -6223,6 +6223,272 @@ esicolor_formables = {
 		}
 	}
 
+	form_nigeria = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_nigeria = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_nigeria = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_nigeria"
+			set_country_flag = can_form_WAF_UNITED
+
+			set_cosmetic_tag = WAF_NIGERIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_nigeria = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_nigeria = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_sokoto = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_sokoto = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_sokoto = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_sokoto"
+			set_country_flag = can_form_WAF_UNITED
+
+			set_cosmetic_tag = WAF_SOKOTO
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_sokoto = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_sokoto = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_niger = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_niger = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_niger = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_niger"
+			set_country_flag = can_form_WAF_UNITED
+
+			set_cosmetic_tag = WAF_NIGER
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_niger = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_niger = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_mali = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_mali = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_mali = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_mali"
+			set_country_flag = can_form_WAF_UNITED
+
+			set_cosmetic_tag = WAF_MALI
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_mali = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_mali = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_senegambia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_senegambia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_senegambia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_senegambia"
+			set_country_flag = can_form_WAF_UNITED
+
+			set_cosmetic_tag = WAF_SENEGAMBIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_senegambia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_senegambia = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_west_africa = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_west_africa = yes
+		}
+		visible = {
+			has_cosmetics_to_form_west_africa = yes
+		}
+		available = {
+			has_states_to_form_west_africa = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_west_africa"
+			clr_country_flag = can_form_WAF_UNITED
+
+			set_country_flag = can_form_AFR_UNITED
+
+			set_cosmetic_tag = WAF_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_west_africa = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_west_africa_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_west_africa = yes
+				}
+				else = {
+					required_states_to_form_west_africa = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
