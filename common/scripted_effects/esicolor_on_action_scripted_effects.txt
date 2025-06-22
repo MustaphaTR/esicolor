@@ -30,6 +30,102 @@ handle_special_generals = {
 	else_if = {
 		limit = {
 			var:creator = {
+				has_country_leader = { character = OOB_joseph_bech ruling_only = yes }
+
+				NOT = { has_global_flag = emile_speller_created }
+			}
+		}
+
+		set_global_flag = emile_speller_created
+		set_character_name = LUX_emile_speller
+		set_character_flag = special_general
+
+		if = {
+			limit = { has_dlc = "Gotterdammerung" }
+
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_LUX_emile_speller
+					small = GFX_portrait_LUX_emile_speller_small
+				}
+				army = {
+					large = GFX_portrait_LUX_emile_speller
+					small = GFX_portrait_LUX_emile_speller_small
+				}
+				navy = {
+					large = GFX_portrait_LUX_emile_speller
+					small = GFX_portrait_LUX_emile_speller_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large = GFX_Portrait_France_Generic_land_2
+					small = GFX_Portrait_France_Generic_land_2_small
+				}
+				army = {
+					large = GFX_Portrait_France_Generic_land_2
+					small = GFX_Portrait_France_Generic_land_2_small
+				}
+				navy = {
+					large = GFX_Portrait_France_Generic_land_2
+					small = GFX_Portrait_France_Generic_land_2_small
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = OOB_joseph_bech ruling_only = yes }
+
+				NOT = { has_global_flag = guillaume_konsbruck_created }
+			}
+		}
+
+		set_global_flag = guillaume_konsbruck_created
+		set_character_name = LUX_guillaume_konsbruck
+		set_character_flag = special_general
+
+		if = {
+			limit = { has_dlc = "Gotterdammerung" }
+
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_LUX_guillaume_konsbruck
+					small = GFX_portrait_LUX_guillaume_konsbruck_small
+				}
+				army = {
+					large = GFX_portrait_LUX_guillaume_konsbruck
+					small = GFX_portrait_LUX_guillaume_konsbruck_small
+				}
+				navy = {
+					large = GFX_portrait_LUX_guillaume_konsbruck
+					small = GFX_portrait_LUX_guillaume_konsbruck_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large = GFX_Portrait_Europe_Generic_land_3
+					small = GFX_Portrait_Europe_Generic_land_3_small
+				}
+				army = {
+					large = GFX_Portrait_Europe_Generic_land_3
+					small = GFX_Portrait_Europe_Generic_land_3_small
+				}
+				navy = {
+					large = GFX_Portrait_Europe_Generic_land_3
+					small = GFX_Portrait_Europe_Generic_land_3_small
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
 				has_country_leader = { character = OES_lou_de_visser ruling_only = yes }
 
 				NOT = { has_global_flag = schoonheyt_created }

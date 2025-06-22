@@ -1,0 +1,39 @@
+﻿characters={
+	ISL_ferdinand_pius = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=TTS_ferdinand_pius
+			portraits={
+				civilian={
+				large=GFX_portrait_TTS_ferdinand_pius
+				small=GFX_portrait_TTS_ferdinand_pius_small
+				}
+			}
+			country_leader={
+				traits={ duke_of_castro }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=TTS_ferdinand_pius
+			portraits={
+				civilian={
+					large=GFX_portrait_europe_generic_6
+				}
+			}
+			country_leader={
+				traits={ duke_of_castro }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
