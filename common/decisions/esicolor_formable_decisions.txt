@@ -6758,6 +6758,512 @@ esicolor_formables = {
 		}
 	}
 
+	form_norway = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_norway = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_norway = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_norway"
+			set_country_flag = can_form_NDC_SCANDINAVIA
+
+			set_cosmetic_tag = NDC_NORWAY
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_norway = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_norway_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_norway = yes
+				}
+				else = {
+					required_states_to_form_norway = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_sweden = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_sweden = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_sweden = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_sweden"
+			set_country_flag = can_form_NDC_SCANDINAVIA
+
+			set_cosmetic_tag = NDC_SWEDEN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_sweden = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_sweden_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_sweden = yes
+				}
+				else = {
+					required_states_to_form_sweden = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_denmark = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_denmark = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_denmark = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_denmark"
+			set_country_flag = can_form_NDC_SCANDINAVIA
+
+			set_cosmetic_tag = NDC_DENMARK
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_denmark = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_denmark_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_denmark = yes
+				}
+				else = {
+					required_states_to_form_denmark = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_finland = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_finland = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_finland = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_finland"
+			set_country_flag = can_form_NDC_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = JBT_prince_wolfgang_von_hesse ruling_only = yes } }
+
+				set_cosmetic_tag = NDC_FINLAND_MONARCHIST
+
+				else = {
+					set_cosmetic_tag = NDC_FINLAND
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_finland = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_finland_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_finland = yes
+				}
+				else = {
+					required_states_to_form_finland = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_arctic = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_arctic = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_arctic = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_arctic"
+			set_country_flag = can_form_NDC_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = YIA_grand_admiral_johan_mayen ruling_only = yes } }
+
+				set_cosmetic_tag = NDC_ARCTIC_BEAR
+
+				else = {
+					set_cosmetic_tag = NDC_ARCTIC
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_arctic = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_arctic_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_arctic = yes
+				}
+				else = {
+					required_states_to_form_arctic = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_karelia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_karelia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_karelia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_karelia"
+			set_country_flag = can_form_NDC_UNITED
+
+			set_cosmetic_tag = NDC_KARELIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_karelia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_karelia = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_scandinavia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_scandinavia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_scandinavia = yes
+		}
+		available = {
+			has_states_to_form_scandinavia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_scandinavia"
+			clr_country_flag = can_form_NDC_SCANDINAVIA
+			clr_country_flag = can_form_NDC_NORTHSEA
+
+			set_country_flag = can_form_NDC_UNITED
+
+			set_cosmetic_tag = NDC_SCANDINAVIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_scandinavia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_scandinavia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_scandinavia = yes
+				}
+				else = {
+					required_states_to_form_scandinavia = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_north_sea = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_north_sea = yes
+		}
+		visible = {
+			has_cosmetics_to_form_north_sea = yes
+		}
+		available = {
+			has_states_to_form_north_sea = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_north_sea"
+			clr_country_flag = can_form_NDC_NORTHSEA
+			clr_country_flag = can_form_NDC_SCANDINAVIA
+
+			set_country_flag = can_form_EUR_UNITED
+
+			set_cosmetic_tag = NDC_NORTHSEA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_north_sea = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_north_sea_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_north_sea = yes
+				}
+				else = {
+					required_states_to_form_north_sea = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_nordic_council = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_nordic_council = yes
+		}
+		visible = {
+			has_cosmetics_to_form_nordic_council = yes
+		}
+		available = {
+			has_states_to_form_nordic_council = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_nordic_council"
+			clr_country_flag = can_form_NDC_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = YIA_grand_admiral_johan_mayen ruling_only = yes } }
+
+				set_cosmetic_tag = NDC_UNITED_BEAR
+
+				else = {
+					set_cosmetic_tag = NDC_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_nordic_council = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_nordic_council_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_nordic_council = yes
+				}
+				else = {
+					required_states_to_form_nordic_council = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
