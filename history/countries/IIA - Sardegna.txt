@@ -27,6 +27,20 @@ set_politics = {
 	elections_allowed = no
 }
 
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	recruit_character = OOZ_vittorio_emanuele_iii
+
+	set_popularities = {
+		democratic = 15
+		fascism = 20
+		communism = 5
+		neutrality = 60
+	}
+}
+
 set_rule = {
 	can_generate_female_aces = yes
 }

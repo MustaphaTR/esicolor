@@ -3183,6 +3183,19 @@ adjust_state_name_800 = {
 		800 = { set_state_name = BOO }
 	}
 	else_if = {
+		limit = { 800 = { owner = { state_originally_from_ARM = yes } } }
+
+		set_province_name = {
+			id = 6935
+			name = VICTORY_POINTS_6935
+		}
+		set_province_name = {
+			id = 12376
+			name = VICTORY_POINTS_12376_ARM
+		}
+		800 = { set_state_name = STATE_800 }
+	}
+	else_if = {
 		limit = {
 			800 = {
 				owner = {

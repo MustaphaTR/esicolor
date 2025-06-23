@@ -27,7 +27,16 @@ set_politics = {
 	elections_allowed = no
 }
 
-recruit_character = OOZ_vittorio_emanuele_iii
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	recruit_character = OOZ_papa_pio_xi
+
+	else = {
+		recruit_character = OOZ_vittorio_emanuele_iii
+	}
+}
 
 set_rule = {
 	can_generate_female_aces = yes

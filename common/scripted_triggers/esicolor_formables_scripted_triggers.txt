@@ -2174,6 +2174,179 @@ required_states_to_form_caucasia = {
 	}
 }
 
+#### Italy ####
+can_form_sardinia_piedmont = {
+	OR = {
+		original_tag = IIA
+		original_tag = ISB
+	}
+}
+
+can_form_lombardy_venice = {
+	OR = {
+		original_tag = OEY
+		original_tag = ISY
+		original_tag = ILO
+		original_tag = FEL
+		original_tag = BSO
+		original_tag = BSZ
+	}
+}
+
+can_form_central_italy = {
+	OR = {
+		original_tag = OOZ
+		original_tag = ISF
+		original_tag = ILI
+		original_tag = ILZ
+	}
+}
+
+can_form_two_sicilies = {
+	OR = {
+		original_tag = IIS
+		original_tag = IIF
+		original_tag = ISL
+		original_tag = CBZ # BAY
+	}
+}
+
+can_form_italy = {
+	OR = {
+		can_form_sardinia_piedmont = yes
+		can_form_lombardy_venice = yes
+		can_form_central_italy = yes
+		can_form_two_sicilies = yes
+	}
+}
+
+is_sardinia_piedmont = {
+	OR = {
+		state = 114
+		state = 158
+		state = 735
+	}
+}
+
+is_lombardy_venice = {
+	OR = {
+		state = 39
+		state = 159
+		state = 160
+		state = 736
+		state = 850
+		state = 852
+	}
+}
+
+is_central_italy = {
+	OR = {
+		state = 2
+		state = 157
+		state = 161
+		state = 162
+	}
+}
+
+is_two_sicilies = {
+	OR = {
+		state = 115
+		state = 117
+		state = 156
+		state = 849
+	}
+}
+
+is_italy = {
+	OR = {
+		is_sardinia_piedmont = yes
+		is_lombardy_venice = yes
+		is_central_italy = yes
+		is_two_sicilies = yes
+	}
+}
+
+has_states_to_form_sardinia_piedmont = {
+	custom_trigger_tooltip = {
+		tooltip = form_sardinia_piedmont_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 114 } } } owns_state = 114 }
+		if = { limit = { NOT = { OOO = { owns_state = 158 } } } owns_state = 158 }
+	}
+}
+
+has_states_to_form_lombardy_venice = {
+	custom_trigger_tooltip = {
+		tooltip = form_lombardy_venice_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 39 } } } owns_state = 39 }
+		if = { limit = { NOT = { OOO = { owns_state = 159 } } } owns_state = 159 }
+		if = { limit = { NOT = { OOO = { owns_state = 160 } } } owns_state = 160 }
+		if = { limit = { NOT = { OOO = { owns_state = 850 } } } owns_state = 850 }
+	}
+}
+
+has_states_to_form_central_italy = {
+	custom_trigger_tooltip = {
+		tooltip = form_central_italy_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 2 } } } owns_state = 2 }
+		if = { limit = { NOT = { OOO = { owns_state = 157 } } } owns_state = 157 }
+		if = { limit = { NOT = { OOO = { owns_state = 161 } } } owns_state = 161 }
+		if = { limit = { NOT = { OOO = { owns_state = 162 } } } owns_state = 162 }
+	}
+}
+
+has_states_to_form_two_sicilies = {
+	custom_trigger_tooltip = {
+		tooltip = form_two_sicilies_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 115 } } } owns_state = 115 }
+		if = { limit = { NOT = { OOO = { owns_state = 117 } } } owns_state = 117 }
+		if = { limit = { NOT = { OOO = { owns_state = 156 } } } owns_state = 156 }
+		if = { limit = { NOT = { OOO = { owns_state = 849 } } } owns_state = 849 }
+	}
+}
+
+has_cosmetics_to_form_italy = {
+	has_country_flag = can_form_ITA_UNITED
+}
+has_states_to_form_italy = {
+	custom_trigger_tooltip = {
+		tooltip = form_italy_has_states_tt
+
+		has_states_to_form_sardinia_piedmont = yes
+		has_states_to_form_lombardy_venice = yes
+		has_states_to_form_central_italy = yes
+		has_states_to_form_two_sicilies = yes
+	}
+}
+
+required_states_to_form_sardinia_piedmont = {
+	OR = {
+		state = 114
+		state = 158
+	}
+}
+
+required_states_to_form_lombardy_venice = {
+	OR = {
+		state = 39
+		state = 159
+		state = 160
+		state = 850
+	}
+}
+
+required_states_to_form_italy = {
+	OR = {
+		required_states_to_form_sardinia_piedmont = yes
+		required_states_to_form_lombardy_venice = yes
+		is_central_italy = yes
+		is_two_sicilies = yes
+	}
+}
+
 #### Magreb ####
 can_form_mauritania = {
 	OR = {
