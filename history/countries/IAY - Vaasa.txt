@@ -15,13 +15,13 @@ set_technology = {
 
 set_convoys = 5
 set_popularities = {
-	democratic = 25
-	fascism = 25
-	communism = 25
-	neutrality = 25
+	democratic = 10
+	fascism = 55
+	communism = 5
+	neutrality = 30
 }
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = fascism
 	last_election = "1935.10.10"
 	election_frequency = 36
 	elections_allowed = no
@@ -29,4 +29,10 @@ set_politics = {
 
 set_rule = {
 	can_generate_female_aces = yes
+}
+
+set_party_name = {
+	ideology = fascism
+	name = FIN_fascism_party
+	long_name = FIN_fascism_party_long
 }

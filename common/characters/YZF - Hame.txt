@@ -1,0 +1,39 @@
+characters={
+	YZF_vaino_tanner = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name=FIN_vaino_tanner
+			portraits={
+				civilian={
+					large = GFX_portrait_FIN_vaino_tanner
+					small = GFX_portrait_FIN_vaino_tanner_small
+				}
+			}
+			country_leader={
+				traits = { pragmatic_socialist }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name=FIN_vaino_tanner
+			portraits={
+				civilian={
+					large = "GFX_Portrait_Europe_Generic_2"
+				}
+			}
+			country_leader={
+				traits = { pragmatic_socialist }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

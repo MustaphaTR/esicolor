@@ -15,18 +15,26 @@ set_technology = {
 
 set_convoys = 5
 set_popularities = {
-	democratic = 25
-	fascism = 25
+	democratic = 55
+	fascism = 5
 	communism = 25
-	neutrality = 25
+	neutrality = 15
 }
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = democratic
 	last_election = "1935.10.10"
 	election_frequency = 36
 	elections_allowed = no
 }
 
+recruit_character = YZF_vaino_tanner
+
 set_rule = {
 	can_generate_female_aces = yes
+}
+
+set_party_name = {
+	ideology = democratic
+	name = FIN_democratic_party
+	long_name = FIN_democratic_party_long
 }

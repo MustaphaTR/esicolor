@@ -1,0 +1,39 @@
+﻿characters={
+	IAY_vilho_annala = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name=FIN_vilho_annala
+			portraits={
+				civilian={
+					large = GFX_portrait_FIN_vilho_annala
+					small = GFX_portrait_FIN_vilho_annala_small
+				}
+			}
+			country_leader={
+				traits = { economic_reformer }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name=FIN_vilho_annala
+			portraits={
+				civilian={
+					large = "GFX_Portrait_Europe_Generic_land_5"
+				}
+			}
+			country_leader={
+				traits = { economic_reformer }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

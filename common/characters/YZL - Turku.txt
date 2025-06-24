@@ -1,0 +1,78 @@
+characters={
+	YZL_aimo_aaltonen = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+				has_dlc = "La Resistance"
+			}
+			name=FIN_aimo_aaltonen
+			portraits={
+				civilian={
+					large = GFX_portrait_FIN_aimo_aaltonen
+					small = GFX_portrait_FIN_aimo_aaltonen_small
+				}
+			}
+			country_leader={
+				traits = { committed_anti_fascist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+				has_dlc = "La Resistance"
+			}
+			name=FIN_aimo_aaltonen
+			portraits={
+				civilian={
+					large = "GFX_portrait_europe_generic_4"
+				}
+			}
+			country_leader={
+				traits = { committed_anti_fascist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name=FIN_aimo_aaltonen
+			portraits={
+				civilian={
+					large = GFX_portrait_FIN_aimo_aaltonen
+					small = GFX_portrait_FIN_aimo_aaltonen_small
+				}
+			}
+			country_leader={
+				traits = { committed_anti_fascist_no_lar }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name=FIN_aimo_aaltonen
+			portraits={
+				civilian={
+					large = "GFX_portrait_europe_generic_4"
+				}
+			}
+			country_leader={
+				traits = { committed_anti_fascist_no_lar }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

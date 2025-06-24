@@ -1,17 +1,39 @@
 characters={
-	YZB_carl_mannerheim={
-		name=FIN_carl_mannerheim
-		portraits={
-			civilian={
-				large=GFX_portrait_FIN_carl_mannerheim
-				small=GFX_idea_carl_mannerheim
+	YZB_otto_wille_kuusinen = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name=FIN_otto_wille_kuusinen
+			portraits={
+				civilian={
+					large = GFX_portrait_FIN_otto_wille_kuusinen
+					small = GFX_portrait_FIN_otto_wille_kuusinen_small
+				}
+			}
+			country_leader={
+				traits = { FIN_stalins_puppet_kuusinen comintern_workhorse }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			traits={ sotamarsalkka }
-			ideology=oligarchism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name=FIN_otto_wille_kuusinen
+			portraits={
+				civilian={
+					large = "GFX_portrait_europe_generic_5"
+				}
+			}
+			country_leader={
+				traits = { FIN_stalins_puppet_kuusinen comintern_workhorse }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }
