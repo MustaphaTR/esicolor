@@ -3178,6 +3178,10 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_PLC_POLAND
 	text = {
+		trigger = { has_country_leader = { character = OBB_stanislaw_mikolajczyk ruling_only = yes } }
+		localization_key = PLC_POLAND_PEASANT_democratic_DEF
+	}
+	text = {
 		trigger = { has_government = neutrality }
 		localization_key = PLC_POLAND_neutrality_DEF
 	}
@@ -3252,6 +3256,66 @@ defined_text = {
 	text = {
 		trigger = { has_government = communism }
 		localization_key = PLC_UNITED_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_NIL_EGYPT
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = NIL_EGYPT_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = NIL_EGYPT_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = NIL_EGYPT_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = NIL_EGYPT_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_NIL_SUDAN
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = NIL_SUDAN_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = NIL_SUDAN_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = NIL_SUDAN_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = NIL_SUDAN_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_NIL_UNITED
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = NIL_UNITED_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = NIL_UNITED_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = NIL_UNITED_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = NIL_UNITED_communism_DEF
 	}
 }
 

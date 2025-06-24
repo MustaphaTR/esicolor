@@ -3995,6 +3995,129 @@ required_states_to_form_west_africa = {
 	}
 }
 
+#### Nile ####
+can_form_egypt = {
+	OR = {
+		original_tag = AAL
+		original_tag = AAF
+		original_tag = ASZ
+		original_tag = ASE
+		original_tag = ASL
+		original_tag = ASF
+		original_tag = SSZ
+		original_tag = YOF
+	}
+}
+
+can_form_sudan = {
+	OR = {
+		original_tag = SAY
+		original_tag = SSI
+		original_tag = FLF
+		original_tag = BBE
+		original_tag = BBA
+		original_tag = BBS
+		original_tag = BBL
+		original_tag = BBF
+	}
+}
+
+can_form_nile = {
+	OR = {
+		can_form_egypt = yes
+		can_form_sudan = yes
+		can_form_benishangul_gumuz = yes
+		original_tag = BEB
+		original_tag = BAI
+	}
+}
+
+is_egypt = {
+	OR = {
+		state = 446
+		state = 447
+		state = 452
+		state = 453
+		state = 456
+		state = 457
+		state = 552
+		state = 907
+	}
+}
+
+is_sudan = {
+	OR = {
+		state = 549
+		state = 551
+		state = 767
+		state = 883
+		state = 884
+		state = 885
+		state = 886
+		state = 887
+	}
+}
+
+
+is_nile = {
+	OR = {
+		is_egypt = yes
+		is_sudan = yes
+		is_benishangul_gumuz = yes
+		state = 838
+		state = 841
+	}
+}
+
+has_states_to_form_egypt = {
+	custom_trigger_tooltip = {
+		tooltip = form_egypt_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 446 } } } owns_state = 446 }
+		if = { limit = { NOT = { OOO = { owns_state = 447 } } } owns_state = 447 }
+		if = { limit = { NOT = { OOO = { owns_state = 452 } } } owns_state = 452 }
+		if = { limit = { NOT = { OOO = { owns_state = 453 } } } owns_state = 453 }
+		if = { limit = { NOT = { OOO = { owns_state = 456 } } } owns_state = 456 }
+		if = { limit = { NOT = { OOO = { owns_state = 457 } } } owns_state = 457 }
+		if = { limit = { NOT = { OOO = { owns_state = 552 } } } owns_state = 552 }
+		if = { limit = { NOT = { OOO = { owns_state = 907 } } } owns_state = 907 }
+	}
+}
+
+has_states_to_form_sudan = {
+	custom_trigger_tooltip = {
+		tooltip = form_sudan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 549 } } } owns_state = 549 }
+		if = { limit = { NOT = { OOO = { owns_state = 551 } } } owns_state = 551 }
+		if = { limit = { NOT = { OOO = { owns_state = 767 } } } owns_state = 767 }
+		if = { limit = { NOT = { OOO = { owns_state = 883 } } } owns_state = 883 }
+		if = { limit = { NOT = { OOO = { owns_state = 884 } } } owns_state = 884 }
+		if = { limit = { NOT = { OOO = { owns_state = 885 } } } owns_state = 885 }
+		if = { limit = { NOT = { OOO = { owns_state = 886 } } } owns_state = 886 }
+		if = { limit = { NOT = { OOO = { owns_state = 887 } } } owns_state = 887 }
+	}
+}
+
+has_cosmetics_to_form_nile = {
+	has_country_flag = can_form_NIL_UNITED
+}
+has_states_to_form_nile = {
+	custom_trigger_tooltip = {
+		tooltip = form_nile_has_states_tt
+
+		has_states_to_form_egypt = yes
+		has_states_to_form_sudan = yes
+	}
+}
+
+required_states_to_form_nile = {
+	OR = {
+		is_egypt = yes
+		is_sudan = yes
+	}
+}
+
 #### Canada ####
 can_form_british_columbia = {
 	OR = {
