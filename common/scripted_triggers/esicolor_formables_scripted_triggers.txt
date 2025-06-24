@@ -1351,6 +1351,7 @@ can_form_danubia = {
 		can_form_slovenia = yes
 		can_form_croatia = yes
 		can_form_bosnia_herzegovina = yes
+		can_form_galicja = yes
 	}
 }
 
@@ -1421,6 +1422,7 @@ is_danubia = {
 		is_slovenia = yes
 		is_croatia = yes
 		is_bosnia_herzegovina = yes
+		is_galicja = yes
 	}
 }
 
@@ -2774,6 +2776,209 @@ required_states_to_form_nordic_council = {
 		required_states_to_form_finland = yes
 		required_states_to_form_arctic = yes
 		required_states_to_form_scandinavia = yes
+	}
+}
+
+#### Poland-Lithuania ####
+can_form_poland = {
+	OR = {
+		original_tag = OIO
+		original_tag = OBL
+		original_tag = OBF
+		original_tag = OBB
+		original_tag = OYO
+		original_tag = OYZ
+		original_tag = OYF
+		original_tag = OYB
+		original_tag = BOF
+	}
+}
+
+can_form_galicja = {
+	OR = {
+		original_tag = OBO
+		original_tag = OBB
+		original_tag = OBY
+		original_tag = OYI
+	}
+}
+
+can_form_belarus = {
+	OR = {
+		original_tag = OYA
+		original_tag = OYS
+		original_tag = OYL
+		original_tag = IYA
+		original_tag = ZOA
+		original_tag = ZOL
+		original_tag = ZOF
+		original_tag = ZAI
+	}
+}
+
+can_form_poland_lithuania = {
+	OR = {
+		can_form_poland = yes
+		can_form_lithuania = yes
+	}
+}
+
+is_poland = {
+	OR = {
+		state = 10
+		state = 72
+		state = 86
+		state = 87
+		state = 88
+		state = 90
+		state = 92
+		state = 97
+		state = 98
+		state = 762
+		state = 807
+	}
+}
+
+is_galicja = {
+	OR = {
+		state = 80
+		state = 88
+		state = 89
+		state = 91
+	}
+}
+
+is_belarus = {
+	OR = {
+		state = 94
+		state = 95
+		state = 96
+		state = 96
+		state = 194
+		state = 204
+		state = 206
+		state = 207
+		state = 241
+	}
+}
+
+is_poland_lithuania = {
+	OR = {
+		is_poland = yes
+		is_lithuania = yes
+		is_latvia = yes
+		is_belarus = yes
+		is_prussia = yes
+		is_silesia = yes
+		state = 89
+		state = 91
+		state = 93
+		state = 193
+		state = 198
+		state = 199
+		state = 201
+		state = 202
+		state = 203
+		state = 242
+		state = 243
+		state = 259
+	}
+}
+
+has_states_to_form_poland = {
+	custom_trigger_tooltip = {
+		tooltip = form_poland_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 10 } } } owns_state = 10 }
+		if = { limit = { NOT = { OOO = { owns_state = 87 } } } owns_state = 87 }
+		if = { limit = { NOT = { OOO = { owns_state = 90 } } } owns_state = 90 }
+		if = { limit = { NOT = { OOO = { owns_state = 92 } } } owns_state = 92 }
+		if = { limit = { NOT = { OOO = { owns_state = 97 } } } owns_state = 97 }
+		if = { limit = { NOT = { OOO = { owns_state = 98 } } } owns_state = 98 }
+	}
+}
+
+has_states_to_form_galicja = {
+	custom_trigger_tooltip = {
+		tooltip = form_galicja_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 88 } } } owns_state = 88 }
+		if = { limit = { NOT = { OOO = { owns_state = 89 } } } owns_state = 89 }
+		if = { limit = { NOT = { OOO = { owns_state = 91 } } } owns_state = 91 }
+	}
+}
+
+has_states_to_form_belarus = {
+	custom_trigger_tooltip = {
+		tooltip = form_belarus_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 194 } } } owns_state = 194 }
+		if = { limit = { NOT = { OOO = { owns_state = 204 } } } owns_state = 204 }
+		if = { limit = { NOT = { OOO = { owns_state = 206 } } } owns_state = 206 }
+		if = { limit = { NOT = { OOO = { owns_state = 207 } } } owns_state = 207 }
+		if = { limit = { NOT = { OOO = { owns_state = 241 } } } owns_state = 241 }
+	}
+}
+
+has_cosmetics_to_form_poland_lithuania = {
+	has_country_flag = can_form_PLC_UNITED
+}
+has_states_to_form_poland_lithuania = {
+	custom_trigger_tooltip = {
+		tooltip = form_poland_lithuania_has_states_tt
+
+		has_states_to_form_poland = yes
+		has_states_to_form_lithuania = yes
+		if = { limit = { NOT = { OOO = { owns_state = 88 } } } owns_state = 88 }
+		if = { limit = { NOT = { OOO = { owns_state = 89 } } } owns_state = 89 }
+		if = { limit = { NOT = { OOO = { owns_state = 91 } } } owns_state = 91 }
+		if = { limit = { NOT = { OOO = { owns_state = 93 } } } owns_state = 93 }
+		if = { limit = { NOT = { OOO = { owns_state = 94 } } } owns_state = 94 }
+		if = { limit = { NOT = { OOO = { owns_state = 95 } } } owns_state = 95 }
+		if = { limit = { NOT = { OOO = { owns_state = 96 } } } owns_state = 96 }
+	}
+}
+
+required_states_to_form_poland = {
+	OR = {
+		state = 10
+		state = 87
+		state = 90
+		state = 92
+		state = 97
+		state = 98
+	}
+}
+
+required_states_to_form_galicja = {
+	OR = {
+		state = 88
+		state = 89
+		state = 91
+	}
+}
+
+required_states_to_form_belarus = {
+	OR = {
+		state = 194
+		state = 204
+		state = 206
+		state = 207
+		state = 241
+	}
+}
+
+required_states_to_form_poland_lithuania = {
+	OR = {
+		required_states_to_form_poland = yes
+		required_states_to_form_lithuania = yes
+		state = 88
+		state = 89
+		state = 91
+		state = 93
+		state = 94
+		state = 95
+		state = 96
 	}
 }
 
