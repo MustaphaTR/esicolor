@@ -382,6 +382,102 @@ handle_special_admirals = {
 			}
 		}
 	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = YZZ_peder_anker_wedel_jarlsberg ruling_only = yes }
+
+				NOT = { has_global_flag = haarkon_vii_created }
+			}
+		}
+
+		set_global_flag = haarkon_vii_created
+		set_character_name = NOR_king_haakon_vii
+		set_character_flag = special_admiral
+
+		if = {
+			limit = { has_dlc = "Arms Against Tyranny" }
+
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_king_haakon_vii
+					small = GFX_portrait_NOR_king_haakon_military_small
+				}
+				army = {
+					large = GFX_portrait_NOR_king_haakon_vii
+					small = GFX_portrait_NOR_king_haakon_military_small
+				}
+				navy = {
+					large = GFX_portrait_NOR_king_haakon_vii
+					small = GFX_portrait_NOR_king_haakon_military_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large = GFX_Portrait_Europe_Generic_navy_1
+					small = GFX_Portrait_Europe_Generic_navy_1_small
+				}
+				army = {
+					large = GFX_Portrait_Europe_Generic_navy_1
+					small = GFX_Portrait_Europe_Generic_navy_1_small
+				}
+				navy = {
+					large = GFX_Portrait_Europe_Generic_navy_1
+					small = GFX_Portrait_Europe_Generic_navy_1_small
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = YZZ_peder_anker_wedel_jarlsberg ruling_only = yes }
+
+				NOT = { has_global_flag = prince_olav_created }
+			}
+		}
+
+		set_global_flag = prince_olav_created
+		set_character_name = NOR_prince_olav
+		set_character_flag = special_admiral
+
+		if = {
+			limit = { has_dlc = "Arms Against Tyranny" }
+
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_NOR_prince_olav
+					small = GFX_portrait_NOR_prince_olaf_military_small
+				}
+				army = {
+					large = GFX_portrait_NOR_prince_olav
+					small = GFX_portrait_NOR_prince_olaf_military_small
+				}
+				navy = {
+					large = GFX_portrait_NOR_prince_olav
+					small = GFX_portrait_NOR_prince_olaf_military_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large = GFX_Portrait_Europe_Generic_navy_3
+					small = GFX_Portrait_Europe_Generic_navy_3_small
+				}
+				army = {
+					large = GFX_Portrait_Europe_Generic_navy_3
+					small = GFX_Portrait_Europe_Generic_navy_3_small
+				}
+				navy = {
+					large = GFX_Portrait_Europe_Generic_navy_3
+					small = GFX_Portrait_Europe_Generic_navy_3_small
+				}
+			}
+		}
+	}
 }
 
 handle_special_advisors = {

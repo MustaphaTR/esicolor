@@ -1,0 +1,39 @@
+﻿characters={
+	IAE_olav_scheflo = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name=NOR_olav_scheflo
+			portraits={
+				civilian={
+					large=GFX_portrait_NOR_olav_scheflo
+					small=GFX_portrait_NOR_olav_scheflo_small
+				}
+			}
+			country_leader={
+				traits = { NOR_conciliatory_socialist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name=NOR_olav_scheflo
+			portraits={
+				civilian={
+					large = "GFX_portrait_europe_generic_4"
+				}
+			}
+			country_leader={
+				traits = { NOR_conciliatory_socialist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

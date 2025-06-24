@@ -6777,7 +6777,15 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_norway"
 			set_country_flag = can_form_NDC_SCANDINAVIA
 
-			set_cosmetic_tag = NDC_NORWAY
+			if = {
+				limit = { has_country_leader = { character = YZZ_peder_anker_wedel_jarlsberg ruling_only = yes } }
+
+				set_cosmetic_tag = NDC_NORWAY_MONARCHIST
+
+				else = {
+					set_cosmetic_tag = NDC_NORWAY
+				}
+			}
 
 			hidden_effect = {
 				every_state = {

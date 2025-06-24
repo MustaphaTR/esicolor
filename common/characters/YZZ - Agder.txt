@@ -1,0 +1,39 @@
+characters={
+	YZZ_peder_anker_wedel_jarlsberg = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name=NOR_peder_anker_wedel_jarlsberg
+			portraits={
+				civilian={
+					large=GFX_portrait_NOR_peder_anker_wedel_jarlsberg
+					small=GFX_portrait_NOR_peder_anker_wedel_jarlsberg_small
+				}
+			}
+			country_leader={
+				traits = { NOR_shrewd_regent }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name=NOR_peder_anker_wedel_jarlsberg
+			portraits={
+				civilian={
+					large = "GFX_portrait_europe_generic_6"
+				}
+			}
+			country_leader={
+				traits = { NOR_shrewd_regent }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

@@ -2986,6 +2986,10 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_NDC_NORWAY
 	text = {
+		trigger = { has_country_leader = { character = YZZ_peder_anker_wedel_jarlsberg ruling_only = yes } }
+		localization_key = NDC_NORWAY_MONARCHIST_neutrality_DEF
+	}
+	text = {
 		trigger = { has_government = neutrality }
 		localization_key = NDC_NORWAY_neutrality_DEF
 	}
