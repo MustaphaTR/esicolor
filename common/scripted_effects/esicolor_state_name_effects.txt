@@ -11,7 +11,11 @@ adjust_state_names = {
 	adjust_state_name_93 = yes
 	adjust_state_name_94 = yes
 	adjust_state_name_99 = yes
+	adjust_state_name_111 = yes
 	adjust_state_name_119 = yes
+	adjust_state_name_148 = yes
+	adjust_state_name_149 = yes
+	adjust_state_name_150 = yes
 	adjust_state_name_163 = yes
 	adjust_state_name_164 = yes
 	adjust_state_name_183 = yes
@@ -73,6 +77,11 @@ adjust_state_names = {
 	adjust_state_name_890 = yes
 	adjust_state_name_909 = yes
 	adjust_state_name_912 = yes
+	adjust_state_name_926 = yes
+	adjust_state_name_927 = yes
+	adjust_state_name_928 = yes
+	adjust_state_name_929 = yes
+	adjust_state_name_930 = yes
 	adjust_state_name_975 = yes
 }
 
@@ -126,8 +135,24 @@ adjust_state_names_on_state_core_changed = {
 		adjust_state_name_99 = yes
 	}
 	else_if = {
+		limit = { FROM.FROM = { state = 111 } }
+		adjust_state_name_111 = yes
+	}
+	else_if = {
 		limit = { FROM.FROM = { state = 119 } }
 		adjust_state_name_119 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 148 } }
+		adjust_state_name_148 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 149 } }
+		adjust_state_name_149 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 150 } }
+		adjust_state_name_150 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 163 } }
@@ -406,6 +431,26 @@ adjust_state_names_on_state_core_changed = {
 		adjust_state_name_912 = yes
 	}
 	else_if = {
+		limit = { FROM.FROM = { state = 926 } }
+		adjust_state_name_926 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 927 } }
+		adjust_state_name_927 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 928 } }
+		adjust_state_name_928 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 929 } }
+		adjust_state_name_929 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 930 } }
+		adjust_state_name_930 = yes
+	}
+	else_if = {
 		limit = { FROM.FROM = { state = 975 } }
 		adjust_state_name_975 = yes
 	}
@@ -461,8 +506,24 @@ adjust_state_names_on_ruling_party_change = {
 		adjust_state_name_99 = yes
 	}
 	if = {
+		limit = { owns_state = 111 }
+		adjust_state_name_111 = yes
+	}
+	if = {
 		limit = { owns_state = 119 }
 		adjust_state_name_119 = yes
+	}
+	if = {
+		limit = { owns_state = 148 }
+		adjust_state_name_148 = yes
+	}
+	if = {
+		limit = { owns_state = 149 }
+		adjust_state_name_149 = yes
+	}
+	if = {
+		limit = { owns_state = 150 }
+		adjust_state_name_150 = yes
 	}
 	if = {
 		limit = { owns_state = 163 }
@@ -739,6 +800,26 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 912 }
 		adjust_state_name_912 = yes
+	}
+	if = {
+		limit = { owns_state = 926 }
+		adjust_state_name_926 = yes
+	}
+	if = {
+		limit = { owns_state = 927 }
+		adjust_state_name_927 = yes
+	}
+	if = {
+		limit = { owns_state = 928 }
+		adjust_state_name_928 = yes
+	}
+	if = {
+		limit = { owns_state = 929 }
+		adjust_state_name_929 = yes
+	}
+	if = {
+		limit = { owns_state = 930 }
+		adjust_state_name_930 = yes
 	}
 	if = {
 		limit = { owns_state = 975 }
@@ -1235,6 +1316,41 @@ adjust_state_name_99 = {
 	}
 }
 
+adjust_state_name_111 = {
+	if = {
+		limit = { 111 = { owner = { state_originally_from_SWE = yes } } }
+
+		set_province_name = {
+			id = 6009
+			name = SWE_VICTORY_POINTS_6009
+		}
+		set_province_name = {
+			id = 11211
+			name = SWE_VICTORY_POINTS_11211
+		}
+		set_province_name = {
+			id = 11105
+			name = SWE_VICTORY_POINTS_11105
+		}
+		111 = { set_state_name = SWE_STATE_111 }
+	}
+	else = {
+		set_province_name = {
+			id = 6009
+			name = VICTORY_POINTS_6009
+		}
+		set_province_name = {
+			id = 11211
+			name = VICTORY_POINTS_11211
+		}
+		set_province_name = {
+			id = 11105
+			name = VICTORY_POINTS_11105
+		}
+		111 = { set_state_name = STATE_111 }
+	}
+}
+
 adjust_state_name_119 = {
 	if = {
 		limit = { 119 = { owner = { state_originally_from_IRE = yes } } }
@@ -1248,6 +1364,85 @@ adjust_state_name_119 = {
 		set_province_name = {
 			id = 385
 			name = VICTORY_POINTS_385
+		}
+	}
+}
+
+adjust_state_name_148 = {
+	if = {
+		limit = { 148 = { owner = { state_originally_from_SWE = yes } } }
+
+		set_province_name = {
+			id = 6142
+			name = SWE_VICTORY_POINTS_6142
+		}
+		set_province_name = {
+			id = 11125
+			name = SWE_VICTORY_POINTS_11125
+		}
+		148 = { set_state_name = SWE_STATE_148 }
+	}
+	else = {
+		set_province_name = {
+			id = 6142
+			name = VICTORY_POINTS_6142
+		}
+		set_province_name = {
+			id = 11125
+			name = VICTORY_POINTS_11125
+		}
+		148 = { set_state_name = STATE_148 }
+	}
+}
+
+adjust_state_name_149 = {
+	if = {
+		limit = { 149 = { owner = { state_originally_from_SWE = yes } } }
+
+		set_province_name = {
+			id = 66
+			name = SWE_VICTORY_POINTS_66
+		}
+		set_province_name = {
+			id = 6013
+			name = SWE_VICTORY_POINTS_6013
+		}
+		set_province_name = {
+			id = 3122
+			name = SWE_VICTORY_POINTS_3122
+		}
+		149 = { set_state_name = SWE_STATE_149 }
+	}
+	else = {
+		set_province_name = {
+			id = 66
+			name = VICTORY_POINTS_66
+		}
+		set_province_name = {
+			id = 6013
+			name = VICTORY_POINTS_6013
+		}
+		set_province_name = {
+			id = 3122
+			name = VICTORY_POINTS_3122
+		}
+		149 = { set_state_name = STATE_149 }
+	}
+}
+
+adjust_state_name_150 = {
+	if = {
+		limit = { 150 = { owner = { state_originally_from_SWE = yes } } }
+
+		set_province_name = {
+			id = 3125
+			name = SWE_VICTORY_POINTS_3125
+		}
+	}
+	else = {
+		set_province_name = {
+			id = 3125
+			name = VICTORY_POINTS_3125
 		}
 	}
 }
@@ -3547,6 +3742,141 @@ adjust_state_name_912 = {
 			name = VICTORY_POINTS_13258
 		}
 		912 = { set_state_name = STATE_912 }
+	}
+}
+
+adjust_state_name_928 = {
+	if = {
+		limit = { 928 = { owner = { state_originally_from_SWE = yes } } }
+
+		set_province_name = {
+			id = 6082
+			name = SWE_VICTORY_POINTS_6082
+		}
+		928 = { set_state_name = SWE_STATE_928 }
+	}
+	else = {
+		set_province_name = {
+			id = 6082
+			name = VICTORY_POINTS_6082
+		}
+		928 = { set_state_name = STATE_928 }
+	}
+}
+
+adjust_state_name_929 = {
+	if = {
+		limit = { 929 = { owner = { state_originally_from_SWE = yes } } }
+
+		set_province_name = {
+			id = 158
+			name = SWE_VICTORY_POINTS_158
+		}
+		929 = { set_state_name = SWE_STATE_929 }
+	}
+	else = {
+		set_province_name = {
+			id = 158
+			name = VICTORY_POINTS_158
+		}
+		929 = { set_state_name = STATE_929 }
+	}
+}
+
+adjust_state_name_930 = {
+	if = {
+		limit = { 930 = { owner = { state_originally_from_SWE = yes } } }
+
+		set_province_name = {
+			id = 37
+			name = SWE_VICTORY_POINTS_37
+		}
+		set_province_name = {
+			id = 165
+			name = SWE_VICTORY_POINTS_165
+		}
+		930 = { set_state_name = SWE_STATE_930 }
+	}
+	else = {
+		set_province_name = {
+			id = 37
+			name = VICTORY_POINTS_37
+		}
+		set_province_name = {
+			id = 165
+			name = VICTORY_POINTS_165
+		}
+		930 = { set_state_name = STATE_930 }
+	}
+}
+
+adjust_state_name_926 = {
+	if = {
+		limit = { 926 = { owner = { state_originally_from_SWE = yes } } }
+
+		set_province_name = {
+			id = 3117
+			name = SWE_VICTORY_POINTS_3117
+		}
+		set_province_name = {
+			id = 169
+			name = SWE_VICTORY_POINTS_169
+		}
+		set_province_name = {
+			id = 3083
+			name = SWE_VICTORY_POINTS_3083
+		}
+		926 = { set_state_name = SWE_STATE_926 }
+	}
+	else = {
+		set_province_name = {
+			id = 3117
+			name = VICTORY_POINTS_3117
+		}
+		set_province_name = {
+			id = 169
+			name = VICTORY_POINTS_169
+		}
+		set_province_name = {
+			id = 3083
+			name = VICTORY_POINTS_3083
+		}
+		926 = { set_state_name = STATE_926 }
+	}
+}
+
+adjust_state_name_927 = {
+	if = {
+		limit = { 927 = { owner = { state_originally_from_SWE = yes } } }
+
+		set_province_name = {
+			id = 67
+			name = SWE_VICTORY_POINTS_67
+		}
+		set_province_name = {
+			id = 9167
+			name = SWE_VICTORY_POINTS_9167
+		}
+		set_province_name = {
+			id = 3137
+			name = SWE_VICTORY_POINTS_3137
+		}
+		927 = { set_state_name = SWE_STATE_927 }
+	}
+	else = {
+		set_province_name = {
+			id = 67
+			name = VICTORY_POINTS_67
+		}
+		set_province_name = {
+			id = 9167
+			name = VICTORY_POINTS_9167
+		}
+		set_province_name = {
+			id = 3137
+			name = VICTORY_POINTS_3137
+		}
+		927 = { set_state_name = STATE_927 }
 	}
 }
 

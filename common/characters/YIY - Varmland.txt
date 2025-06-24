@@ -1,0 +1,39 @@
+characters={
+	YIY_birger_furugard = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name=SWE_birger_furugard
+			portraits={
+				civilian={
+					large="GFX_portrait_SWE_birger_furugard"
+					small="GFX_portrait_SWE_birger_furugard_small"
+				}
+			}
+			country_leader={
+				traits = { national_socialist_veterinarian }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name=SWE_birger_furugard
+			portraits={
+				civilian={
+					large = "GFX_portrait_europe_generic_6"
+				}
+			}
+			country_leader={
+				traits = { national_socialist_veterinarian }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

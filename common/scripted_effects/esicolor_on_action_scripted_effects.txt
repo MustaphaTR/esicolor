@@ -337,6 +337,54 @@ handle_special_admirals = {
 	if = {
 		limit = {
 			var:creator = {
+				has_country_leader = { character = IZA_king_gustaf_v ruling_only = yes }
+
+				NOT = { has_global_flag = de_champs_created }
+			}
+		}
+
+		set_global_flag = de_champs_created
+		set_character_name = SWE_charles_de_champs
+		set_character_flag = special_admiral
+
+		if = {
+			limit = { has_dlc = "Arms Against Tyranny" }
+
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_SWE_charles_leon_de_champs
+					small = GFX_portrait_SWE_charles_leon_de_champs_small
+				}
+				army = {
+					large = GFX_portrait_SWE_charles_leon_de_champs
+					small = GFX_portrait_SWE_charles_leon_de_champs_small
+				}
+				navy = {
+					large = GFX_portrait_SWE_charles_leon_de_champs
+					small = GFX_portrait_SWE_charles_leon_de_champs_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large = GFX_Portrait_Europe_Generic_navy_2
+					small = GFX_Portrait_Europe_Generic_navy_2_small
+				}
+				army = {
+					large = GFX_Portrait_Europe_Generic_navy_2
+					small = GFX_Portrait_Europe_Generic_navy_2_small
+				}
+				navy = {
+					large = GFX_Portrait_Europe_Generic_navy_2
+					small = GFX_Portrait_Europe_Generic_navy_2_small
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
 				has_country_leader = { character = BAB_alois_of_liechtenstein ruling_only = yes }
 
 				NOT = { has_global_flag = johannes_of_liechtenstein_created }
@@ -352,16 +400,16 @@ handle_special_admirals = {
 
 			set_portraits = {
 				civilian = {
-					large = "GFX_portrait_AUS_johannes_von_liechtenstein"
-					small = "GFX_portrait_AUS_johannes_von_liechtenstein_small"
+					large = GFX_portrait_AUS_johannes_von_liechtenstein
+					small = GFX_portrait_AUS_johannes_von_liechtenstein_small
 				}
 				army = {
-					large = "GFX_portrait_AUS_johannes_von_liechtenstein"
-					small = "GFX_portrait_AUS_johannes_von_liechtenstein_small"
+					large = GFX_portrait_AUS_johannes_von_liechtenstein
+					small = GFX_portrait_AUS_johannes_von_liechtenstein_small
 				}
 				navy = {
-					large = "GFX_portrait_AUS_johannes_von_liechtenstein"
-					small = "GFX_portrait_AUS_johannes_von_liechtenstein_small"
+					large = GFX_portrait_AUS_johannes_von_liechtenstein
+					small = GFX_portrait_AUS_johannes_von_liechtenstein_small
 				}
 			}
 		}

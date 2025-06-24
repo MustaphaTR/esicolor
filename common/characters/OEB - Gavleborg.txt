@@ -1,0 +1,39 @@
+﻿characters={
+	OEB_karl_kilbom = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name=SWE_karl_kilbom
+			portraits={
+				civilian={
+					large="GFX_portrait_SWE_karl_kilbom"
+					small="GFX_portrait_SWE_karl_kilbom_small"
+				}
+			}
+			country_leader={
+				traits = { anti_soviet_socialist likes_allies dislikes_soviet dislikes_germany }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name=SWE_karl_kilbom
+			portraits={
+				civilian={
+					large = "GFX_Portrait_Soviet_Generic_1"
+				}
+			}
+			country_leader={
+				traits = { anti_soviet_socialist likes_allies dislikes_soviet dislikes_germany }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

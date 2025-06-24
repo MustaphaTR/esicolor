@@ -1,0 +1,38 @@
+﻿characters={
+	IEY_sven_olov_lindholm = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name=SWE_sven_olov_lindholm
+			portraits={
+				civilian={
+					large="GFX_portrait_SWE_sven_olav_lindholm"
+				}
+			}
+			country_leader={
+				traits = { anti_democrat }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name=SWE_sven_olov_lindholm
+			portraits={
+				civilian={
+					large = "GFX_Portrait_Germany_Generic_3"
+				}
+			}
+			country_leader={
+				traits = { anti_democrat }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
