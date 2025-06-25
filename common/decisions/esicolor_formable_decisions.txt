@@ -6948,6 +6948,11 @@ esicolor_formables = {
 			set_country_flag = can_form_NDC_UNITED
 
 			if = {
+				limit = { has_country_leader = { character = YZB_otto_wille_kuusinen ruling_only = yes } }
+
+				set_cosmetic_tag = NDC_FINLAND_KUUSINEN
+			}
+			else_if = {
 				limit = { has_country_leader = { character = JBT_prince_wolfgang_von_hesse ruling_only = yes } }
 
 				set_cosmetic_tag = NDC_FINLAND_MONARCHIST

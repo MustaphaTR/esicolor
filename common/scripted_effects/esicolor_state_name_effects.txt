@@ -2852,7 +2852,19 @@ adjust_state_name_538 = {
 
 adjust_state_name_542 = {
 	if = {
-		limit = { 542 = { owner = { has_government = democratic } } }
+		limit = {
+			542 = {
+				owner = {
+					OR = {
+						original_tag = SAZ
+						has_country_leader = { character = ZFS_j_b_m_hertzog ruling_only = yes }
+						has_country_leader = { character = ZYL_luis_antonio_de_carvalho_viegas ruling_only = yes }
+						has_country_leader = { character = ASI_italo_balbo ruling_only = yes }
+						has_country_leader = { character = SSO_emilio_de_bono ruling_only = yes }
+					}
+				}
+			}
+		}
 
 		542 = { set_state_name = STATE_542 }
 	}
@@ -2863,7 +2875,22 @@ adjust_state_name_542 = {
 
 adjust_state_name_545 = {
 	if = {
-		limit = { 545 = { owner = { has_government = fascism } } }
+		limit = {
+			545 = {
+				owner = {
+					OR = {
+						AND = {
+							original_tag = SAS
+							has_government = fascism
+						}
+						has_country_leader = { character = ZFS_j_b_m_hertzog ruling_only = yes }
+						has_country_leader = { character = ZYL_luis_antonio_de_carvalho_viegas ruling_only = yes }
+						has_country_leader = { character = ASI_italo_balbo ruling_only = yes }
+						has_country_leader = { character = SSO_emilio_de_bono ruling_only = yes }
+					}
+				}
+			}
+		}
 
 		545 = { set_state_name = STATE_545 }
 	}
