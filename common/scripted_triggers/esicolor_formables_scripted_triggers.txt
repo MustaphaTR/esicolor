@@ -2379,7 +2379,6 @@ can_form_sweden = {
 		original_tag = YIS
 		original_tag = YIL
 		original_tag = YIF
-		original_tag = YIB
 		original_tag = YIY
 	}
 }
@@ -2432,6 +2431,18 @@ can_form_karelia = {
 	}
 }
 
+can_form_sapmi = {
+	OR = {
+		original_tag = IAA
+		original_tag = IAB
+		original_tag = LLL
+		original_tag = FZZ
+		original_tag = YIB
+		original_tag = YZA
+		original_tag = YZS
+	}
+}
+
 can_form_scandinavia = {
 	OR = {
 		can_form_norway = yes
@@ -2452,6 +2463,7 @@ can_form_nordic_council = {
 		can_form_finland = yes
 		can_form_arctic = yes
 		can_form_karelia = yes
+		can_form_sapmi = yes
 		can_form_scandinavia = yes
 	}
 }
@@ -2538,6 +2550,23 @@ is_karelia = {
 	}
 }
 
+is_sapmi = {
+	OR = {
+		state = 143
+		state = 144
+		state = 147
+		state = 148
+		state = 213
+		state = 666
+		state = 722
+		state = 917
+		state = 918
+		state = 923
+		state = 924
+		state = 925
+	}
+}
+
 is_scandinavia = {
 	OR = {
 		is_norway = yes
@@ -2561,8 +2590,8 @@ is_nordic_council = {
 		is_finland = yes
 		is_arctic = yes
 		is_karelia = yes
+		is_sapmi = yes
 		is_scandinavia = yes
-		state = 213
 	}
 }
 
@@ -2573,13 +2602,10 @@ has_states_to_form_norway = {
 		if = { limit = { NOT = { OOO = { owns_state = 110 } } } owns_state = 110 }
 		if = { limit = { NOT = { OOO = { owns_state = 142 } } } owns_state = 142 }
 		if = { limit = { NOT = { OOO = { owns_state = 143 } } } owns_state = 143 }
-		if = { limit = { NOT = { OOO = { owns_state = 144 } } } owns_state = 144 }
 		if = { limit = { NOT = { OOO = { owns_state = 920 } } } owns_state = 920 }
 		if = { limit = { NOT = { OOO = { owns_state = 921 } } } owns_state = 921 }
 		if = { limit = { NOT = { OOO = { owns_state = 922 } } } owns_state = 922 }
 		if = { limit = { NOT = { OOO = { owns_state = 923 } } } owns_state = 923 }
-		if = { limit = { NOT = { OOO = { owns_state = 924 } } } owns_state = 924 }
-		if = { limit = { NOT = { OOO = { owns_state = 925 } } } owns_state = 925 }
 	}
 }
 
@@ -2592,13 +2618,11 @@ has_states_to_form_sweden = {
 		if = { limit = { NOT = { OOO = { owns_state = 139 } } } owns_state = 139 }
 		if = { limit = { NOT = { OOO = { owns_state = 140 } } } owns_state = 140 }
 		if = { limit = { NOT = { OOO = { owns_state = 141 } } } owns_state = 141 }
-		if = { limit = { NOT = { OOO = { owns_state = 666 } } } owns_state = 666 }
 		if = { limit = { NOT = { OOO = { owns_state = 913 } } } owns_state = 913 }
 		if = { limit = { NOT = { OOO = { owns_state = 915 } } } owns_state = 915 }
 		if = { limit = { NOT = { OOO = { owns_state = 916 } } } owns_state = 916 }
 		if = { limit = { NOT = { OOO = { owns_state = 917 } } } owns_state = 917 }
-		if = { limit = { NOT = { OOO = { owns_state = 918 } } } owns_state = 918 }
-		if = { limit = { NOT = { OOO = { owns_state = 918 } } } owns_state = 919 }
+		if = { limit = { NOT = { OOO = { owns_state = 919 } } } owns_state = 919 }
 	}
 }
 
@@ -2618,7 +2642,6 @@ has_states_to_form_finland = {
 		tooltip = form_finland_has_states_tt
 
 		if = { limit = { NOT = { OOO = { owns_state = 111 } } } owns_state = 111 }
-		if = { limit = { NOT = { OOO = { owns_state = 148 } } } owns_state = 148 }
 		if = { limit = { NOT = { OOO = { owns_state = 149 } } } owns_state = 149 }
 		if = { limit = { NOT = { OOO = { owns_state = 150 } } } owns_state = 150 }
 		if = { limit = { NOT = { OOO = { owns_state = 926 } } } owns_state = 926 }
@@ -2648,6 +2671,20 @@ has_states_to_form_karelia = {
 		if = { limit = { NOT = { OOO = { owns_state = 147 } } } owns_state = 147 }
 		if = { limit = { NOT = { OOO = { owns_state = 215 } } } owns_state = 215 }
 		if = { limit = { NOT = { OOO = { owns_state = 216 } } } owns_state = 216 }
+	}
+}
+
+has_states_to_form_sapmi = {
+	custom_trigger_tooltip = {
+		tooltip = form_sapmi_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 144 } } } owns_state = 144 }
+		if = { limit = { NOT = { OOO = { owns_state = 148 } } } owns_state = 148 }
+		if = { limit = { NOT = { OOO = { owns_state = 666 } } } owns_state = 666 }
+		if = { limit = { NOT = { OOO = { owns_state = 722 } } } owns_state = 722 }
+		if = { limit = { NOT = { OOO = { owns_state = 918 } } } owns_state = 918 }
+		if = { limit = { NOT = { OOO = { owns_state = 924 } } } owns_state = 924 }
+		if = { limit = { NOT = { OOO = { owns_state = 925 } } } owns_state = 925 }
 	}
 }
 
@@ -2686,6 +2723,12 @@ has_states_to_form_nordic_council = {
 
 		has_states_to_form_finland = yes
 		has_states_to_form_arctic = yes
+		if = { limit = { NOT = { OOO = { owns_state = 144 } } } owns_state = 144 }
+		if = { limit = { NOT = { OOO = { owns_state = 148 } } } owns_state = 148 }
+		if = { limit = { NOT = { OOO = { owns_state = 666 } } } owns_state = 666 }
+		if = { limit = { NOT = { OOO = { owns_state = 918 } } } owns_state = 918 }
+		if = { limit = { NOT = { OOO = { owns_state = 924 } } } owns_state = 924 }
+		if = { limit = { NOT = { OOO = { owns_state = 925 } } } owns_state = 925 }
 		has_states_to_form_scandinavia = yes
 	}
 }
@@ -2695,13 +2738,10 @@ required_states_to_form_norway = {
 		state = 110
 		state = 142
 		state = 143
-		state = 144
 		state = 920
 		state = 921
 		state = 922
 		state = 923
-		state = 924
-		state = 925
 	}
 }
 
@@ -2712,12 +2752,10 @@ required_states_to_form_sweden = {
 		state = 139
 		state = 140
 		state = 141
-		state = 666
 		state = 913
 		state = 915
 		state = 916
 		state = 917
-		state = 918
 		state = 919
 	}
 }
@@ -2734,8 +2772,6 @@ required_states_to_form_denmark = {
 required_states_to_form_finland = {
 	OR = {
 		state = 111
-		state = 145
-		state = 148
 		state = 149
 		state = 150
 		state = 926
@@ -2752,6 +2788,18 @@ required_states_to_form_arctic = {
 		state = 101
 		state = 337
 		state = 914
+	}
+}
+
+required_states_to_form_sapmi = {
+	OR = {
+		state = 144
+		state = 148
+		state = 666
+		state = 722
+		state = 918
+		state = 924
+		state = 925
 	}
 }
 
@@ -2775,6 +2823,12 @@ required_states_to_form_nordic_council = {
 	OR = {
 		required_states_to_form_finland = yes
 		required_states_to_form_arctic = yes
+		state = 144
+		state = 148
+		state = 666
+		state = 918
+		state = 924
+		state = 925
 		required_states_to_form_scandinavia = yes
 	}
 }
@@ -2979,6 +3033,220 @@ required_states_to_form_poland_lithuania = {
 		state = 94
 		state = 95
 		state = 96
+	}
+}
+
+#### Finno-Ugria ####
+can_form_white_sea = {
+	OR = {
+		original_tag = ZIE
+		original_tag = ZIA
+		original_tag = ZIS
+		original_tag = ZIL
+		original_tag = BYF
+		original_tag = BBO
+	}
+}
+
+can_form_komi = {
+	OR = {
+		original_tag = ZLZ
+		original_tag = EYF
+		original_tag = SBI
+	}
+}
+
+can_form_yamalia = {
+	OR = {
+		original_tag = SFY
+		original_tag = BZA
+	}
+}
+
+can_form_ostyak_vogul = {
+	OR = {
+		original_tag = SFF
+		original_tag = SBO
+	}
+}
+
+can_form_estonia_finland = {
+	OR = {
+		can_form_estonia = yes
+		can_form_finland = yes
+	}
+}
+
+can_form_finno_ugria = {
+	OR = {
+		can_form_estonia_finland = yes
+		can_form_karelia = yes
+		can_form_sapmi = yes
+		can_form_komi = yes
+		can_form_yamalia = yes
+		can_form_ostyak_vogul = yes
+		original_tag = BZS
+	}
+}
+
+is_white_sea = {
+	OR = {
+		state = 147
+		state = 213
+		state = 214
+		state = 215
+		state = 216
+		state = 722
+		state = 879
+		state = 880
+	}
+}
+
+is_komi = {
+	OR = {
+		state = 262
+		state = 397
+		state = 581
+	}
+}
+
+is_yamalia = {
+	OR = {
+		state = 579
+		state = 824
+	}
+}
+
+is_ostyak_vogul = {
+	OR = {
+		state = 577
+		state = 580
+	}
+}
+
+is_estonia_finland = {
+	OR = {
+		is_estonia = yes
+		is_finland = yes
+	}
+}
+
+is_finno_ugria = {
+	OR = {
+		is_estonia_finland = yes
+		is_karelia = yes
+		is_sapmi = yes
+		is_white_sea = yes
+		is_komi = yes
+		is_yamalia = yes
+		is_ostyak_vogul = yes
+		state = 208
+		state = 351
+		state = 398
+		state = 400
+		state = 573
+		state = 653
+		state = 825
+	}
+}
+
+has_states_to_form_white_sea = {
+	custom_trigger_tooltip = {
+		tooltip = form_white_sea_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 213 } } } owns_state = 213 }
+		if = { limit = { NOT = { OOO = { owns_state = 214 } } } owns_state = 214 }
+		if = { limit = { NOT = { OOO = { owns_state = 215 } } } owns_state = 215 }
+		if = { limit = { NOT = { OOO = { owns_state = 879 } } } owns_state = 879 }
+		if = { limit = { NOT = { OOO = { owns_state = 880 } } } owns_state = 880 }
+	}
+}
+
+has_states_to_form_komi = {
+	custom_trigger_tooltip = {
+		tooltip = form_komi_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 262 } } } owns_state = 262 }
+		if = { limit = { NOT = { OOO = { owns_state = 397 } } } owns_state = 397 }
+		if = { limit = { NOT = { OOO = { owns_state = 581 } } } owns_state = 581 }
+	}
+}
+
+has_states_to_form_yamalia = {
+	custom_trigger_tooltip = {
+		tooltip = form_yamalia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 579 } } } owns_state = 579 }
+		if = { limit = { NOT = { OOO = { owns_state = 824 } } } owns_state = 824 }
+	}
+}
+
+has_states_to_form_ostyak_vogul = {
+	custom_trigger_tooltip = {
+		tooltip = form_ostyak_vogul_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 577 } } } owns_state = 577 }
+		if = { limit = { NOT = { OOO = { owns_state = 580 } } } owns_state = 580 }
+	}
+}
+
+has_states_to_form_estonia_finland = {
+	custom_trigger_tooltip = {
+		tooltip = form_estonia_finland_has_states_tt
+
+		has_states_to_form_estonia = yes
+		has_states_to_form_finland = yes
+	}
+}
+
+has_states_to_form_finno_ugria = {
+	custom_trigger_tooltip = {
+		tooltip = form_finno_ugria_has_states_tt
+
+		has_states_to_form_estonia_finland = yes
+		has_states_to_form_karelia = yes
+		has_states_to_form_sapmi = yes
+		has_states_to_form_white_sea = yes
+		has_states_to_form_komi = yes
+		has_states_to_form_yamalia = yes
+		has_states_to_form_ostyak_vogul = yes
+		if = { limit = { NOT = { OOO = { owns_state = 825 } } } owns_state = 825 }
+	}
+}
+
+required_states_to_form_white_sea = {
+	OR = {
+		state = 213
+		state = 214
+		state = 215
+		state = 879
+		state = 880
+	}
+}
+
+has_cosmetics_to_form_estonia_finland = {
+	has_country_flag = can_form_FUG_ESTFIN
+}
+required_states_to_form_estonia_finland = {
+	OR = {
+		is_estonia = yes
+		required_states_to_form_finland = yes
+	}
+}
+
+has_cosmetics_to_form_finno_ugria = {
+	has_country_flag = can_form_FUG_UNITED
+}
+required_states_to_form_finno_ugria = {
+	OR = {
+		required_states_to_form_estonia_finland = yes
+		is_karelia = yes
+		required_states_to_form_white_sea = yes
+		required_states_to_form_sapmi = yes
+		is_komi = yes
+		is_yamalia = yes
+		is_ostyak_vogul = yes
+		state = 825
 	}
 }
 

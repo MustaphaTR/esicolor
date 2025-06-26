@@ -1026,6 +1026,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_estonia"
 			set_country_flag = can_form_BAL_UNITED
+			set_country_flag = can_form_FUG_ESTFIN
 
 			set_cosmetic_tag = BAL_ESTONIA
 
@@ -1192,6 +1193,7 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_baltics"
 			clr_country_flag = can_form_BAL_UNITED
 			clr_country_flag = can_form_PLC_UNITED
+			clr_country_flag = can_form_FUG_ESTFIN
 
 			set_country_flag = can_form_EUR_UNITED
 
@@ -6946,6 +6948,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_finland"
 			set_country_flag = can_form_NDC_UNITED
+			set_country_flag = can_form_FUG_ESTFIN
 
 			if = {
 				limit = { has_country_leader = { character = YZB_otto_wille_kuusinen ruling_only = yes } }
@@ -7103,6 +7106,61 @@ esicolor_formables = {
 		}
 	}
 
+	form_sapmi = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_sapmi = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_sapmi = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_sapmi"
+			set_country_flag = can_form_NDC_UNITED
+			set_country_flag = can_form_FUG_UNITED
+
+			set_cosmetic_tag = NDC_SAPMI
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_sapmi = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_sapmi_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_sapmi = yes
+				}
+				else = {
+					required_states_to_form_sapmi = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_scandinavia = {
 		icon = generic_form_nation
 		allowed = {
@@ -7231,6 +7289,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_nordic_council"
 			clr_country_flag = can_form_NDC_UNITED
+			clr_country_flag = can_form_FUG_ESTFIN
 
 			set_country_flag = can_form_EUR_UNITED
 
@@ -7641,6 +7700,313 @@ esicolor_formables = {
 				}
 				else = {
 					required_states_to_form_nile = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_white_sea = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_white_sea = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_white_sea = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_white_sea"
+			set_country_flag = can_form_EUR_UNITED
+
+			set_cosmetic_tag = FUG_WHITE
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_white_sea = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_white_sea_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_white_sea = yes
+				}
+				else = {
+					required_states_to_form_white_sea = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_komi = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_komi = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_komi = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_komi"
+			set_country_flag = can_form_FUG_UNITED
+
+			set_cosmetic_tag = FUG_KOMI
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_komi = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_komi = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_yamalia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_yamalia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_yamalia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_yamalia"
+			set_country_flag = can_form_FUG_UNITED
+
+			set_cosmetic_tag = FUG_YAMALIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_yamalia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_yamalia = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_ostyak_vogul = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_ostyak_vogul = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_ostyak_vogul = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_ostyak_vogul"
+			set_country_flag = can_form_FUG_UNITED
+
+			set_cosmetic_tag = FUG_OSTVOG
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_ostyak_vogul = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_ostyak_vogul = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_estonia_finland = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_estonia_finland = yes
+		}
+		visible = {
+			has_cosmetics_to_form_estonia_finland = yes
+		}
+		available = {
+			has_states_to_form_estonia_finland = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_estonia_finland"
+			clr_country_flag = can_form_FUG_ESTFIN
+			clr_country_flag = can_form_BAL_UNITED
+			clr_country_flag = can_form_NDC_UNITED
+
+			set_country_flag = can_form_FUG_UNITED
+
+			set_cosmetic_tag = FUG_ESTFIN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_estonia_finland = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_estonia_finland_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_estonia_finland = yes
+				}
+				else = {
+					required_states_to_form_estonia_finland = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_finno_ugria = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_finno_ugria = yes
+		}
+		visible = {
+			has_cosmetics_to_form_finno_ugria = yes
+		}
+		available = {
+			has_states_to_form_finno_ugria = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_finno_ugria"
+			clr_country_flag = can_form_FUG_UNITED
+			clr_country_flag = can_form_NDC_UNITED
+
+			if = {
+				limit = {
+					can_form_komi = yes
+					can_form_yamelia = yes
+					can_form_ostyak_vogul = yes
+					original_tag = BZS
+				}
+
+				set_country_flag = can_form_ASI_UNITED
+			}
+			else = {
+				set_country_flag = can_form_EUR_UNITED
+			}
+
+			set_cosmetic_tag = FUG_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_finno_ugria = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_finno_ugria_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_finno_ugria = yes
+				}
+				else = {
+					required_states_to_form_finno_ugria = yes
 				}
 			}
 		}
