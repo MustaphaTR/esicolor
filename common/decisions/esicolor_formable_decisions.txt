@@ -6132,6 +6132,7 @@ esicolor_formables = {
 			clr_country_flag = can_form_CAU_TRANS
 
 			set_country_flag = can_form_CAU_UNITED
+			set_country_flag = can_form_SRS_UNITED
 
 			set_cosmetic_tag = CAU_CIS
 
@@ -6186,6 +6187,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_caucasia"
 			clr_country_flag = can_form_CAU_UNITED
+			clr_country_flag = can_form_SRS_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
 			set_country_flag = can_form_MEA_UNITED
@@ -7970,7 +7972,7 @@ esicolor_formables = {
 			if = {
 				limit = {
 					can_form_komi = yes
-					can_form_yamelia = yes
+					can_form_yamalia = yes
 					can_form_ostyak_vogul = yes
 					original_tag = BZS
 				}
@@ -8012,6 +8014,297 @@ esicolor_formables = {
 		}
 
 		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_don = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_don = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_don = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_don"
+			set_country_flag = can_form_SRS_UNITED
+
+			set_cosmetic_tag = SRS_DON
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_don = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_don = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_kuban = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_kuban = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_kuban = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_kuban"
+			set_country_flag = can_form_SRS_UNITED
+
+			set_cosmetic_tag = SRS_KUBAN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_kuban = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_kuban = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_volgograd = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_volgograd = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_volgograd = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_volgograd"
+			set_country_flag = can_form_SRS_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = ZIF_iosif_stalin ruling_only = yes } }
+
+				set_cosmetic_tag = SRS_VOLGOGRAD_STALIN
+
+				else = {
+					set_cosmetic_tag = SRS_VOLGOGRAD
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_volgograd = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_volgograd = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_kalmykia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_kalmykia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_kalmykia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_kalmykia"
+			set_country_flag = can_form_SRS_UNITED
+
+			if = {
+				limit = { original_tag = ZEL }
+
+				set_cosmetic_tag = SRS_KALMYKIA_RUS
+
+				else = {
+					set_cosmetic_tag = SRS_KALMYKIA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_kalmykia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_kalmykia = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_crimea = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_crimea = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_crimea = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_crimea"
+			set_country_flag = can_form_SRS_UNITED
+
+			set_cosmetic_tag = SRS_CRIMEA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_crimea = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_crimea = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_south_russia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_south_russia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_south_russia = yes
+		}
+		available = {
+			has_states_to_form_south_russia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_south_russia"
+			clr_country_flag = can_form_SRS_UNITED
+			clr_country_flag = can_form_CAU_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = ZIF_iosif_stalin ruling_only = yes } }
+
+				set_cosmetic_tag = SRS_UNITED_STALIN
+
+				else = {
+					set_cosmetic_tag = SRS_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_south_russia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_south_russia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_south_russia = yes
+				}
+				else = {
+					required_states_to_form_south_russia = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
 
 		fire_only_once = yes
 

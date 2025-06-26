@@ -3190,6 +3190,9 @@ has_states_to_form_ostyak_vogul = {
 	}
 }
 
+has_cosmetics_to_form_estonia_finland = {
+	has_country_flag = can_form_FUG_ESTFIN
+}
 has_states_to_form_estonia_finland = {
 	custom_trigger_tooltip = {
 		tooltip = form_estonia_finland_has_states_tt
@@ -3199,6 +3202,9 @@ has_states_to_form_estonia_finland = {
 	}
 }
 
+has_cosmetics_to_form_finno_ugria = {
+	has_country_flag = can_form_FUG_UNITED
+}
 has_states_to_form_finno_ugria = {
 	custom_trigger_tooltip = {
 		tooltip = form_finno_ugria_has_states_tt
@@ -3224,9 +3230,6 @@ required_states_to_form_white_sea = {
 	}
 }
 
-has_cosmetics_to_form_estonia_finland = {
-	has_country_flag = can_form_FUG_ESTFIN
-}
 required_states_to_form_estonia_finland = {
 	OR = {
 		is_estonia = yes
@@ -3234,9 +3237,6 @@ required_states_to_form_estonia_finland = {
 	}
 }
 
-has_cosmetics_to_form_finno_ugria = {
-	has_country_flag = can_form_FUG_UNITED
-}
 required_states_to_form_finno_ugria = {
 	OR = {
 		required_states_to_form_estonia_finland = yes
@@ -3247,6 +3247,174 @@ required_states_to_form_finno_ugria = {
 		is_yamalia = yes
 		is_ostyak_vogul = yes
 		state = 825
+	}
+}
+
+#### South Russia ####
+can_form_don = {
+	OR = {
+		original_tag = ZIB
+		original_tag = ZEB
+		original_tag = ZAS
+	}
+}
+
+can_form_kuban = {
+	OR = {
+		original_tag = ZEE
+		original_tag = ZEA
+		original_tag = ZES
+	}
+}
+
+can_form_volgograd = {
+	OR = {
+		original_tag = ZIF
+		original_tag = ZLS
+	}
+}
+
+can_form_kalmykia = {
+	OR = {
+		original_tag = ZEL
+		original_tag = ZEF
+	}
+}
+
+can_form_crimea = {
+	OR = {
+		original_tag = IEF
+	}
+}
+
+can_form_south_russia = {
+	OR = {
+		can_form_mountain_republic = yes
+		can_form_don = yes
+		can_form_kuban = yes
+		can_form_volgograd = yes
+		can_form_kalmykia = yes
+		can_form_crimea = yes
+	}
+}
+
+is_don = {
+	OR = {
+		state = 218
+		state = 238
+		state = 245
+	}
+}
+
+is_kuban = {
+	OR = {
+		state = 233
+		state = 234
+		state = 235
+	}
+}
+
+is_volgograd = {
+	OR = {
+		state = 217
+		state = 265
+		state = 236
+		state = 237
+	}
+}
+
+is_kalmykia = {
+	OR = {
+		state = 236
+		state = 237
+	}
+}
+
+is_crimea = {
+	OR = {
+		state = 137
+		state = 196
+	}
+}
+
+is_south_russia = {
+	OR = {
+		is_mountain_republic = yes
+		is_don = yes
+		is_kuban = yes
+		is_volgograd = yes
+		is_kalmykia = yes
+		state = 137
+	}
+}
+
+has_states_to_form_don = {
+	custom_trigger_tooltip = {
+		tooltip = form_don_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 218 } } } owns_state = 218 }
+		if = { limit = { NOT = { OOO = { owns_state = 238 } } } owns_state = 238 }
+		if = { limit = { NOT = { OOO = { owns_state = 245 } } } owns_state = 245 }
+	}
+}
+
+has_states_to_form_kuban = {
+	custom_trigger_tooltip = {
+		tooltip = form_kuban_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 233 } } } owns_state = 233 }
+		if = { limit = { NOT = { OOO = { owns_state = 234 } } } owns_state = 234 }
+		if = { limit = { NOT = { OOO = { owns_state = 235 } } } owns_state = 235 }
+	}
+}
+
+has_states_to_form_volgograd = {
+	custom_trigger_tooltip = {
+		tooltip = form_volgograd_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 217 } } } owns_state = 217 }
+		if = { limit = { NOT = { OOO = { owns_state = 265 } } } owns_state = 265 }
+	}
+}
+
+has_states_to_form_kalmykia = {
+	custom_trigger_tooltip = {
+		tooltip = form_kalmykia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 236 } } } owns_state = 236 }
+		if = { limit = { NOT = { OOO = { owns_state = 237 } } } owns_state = 237 }
+	}
+}
+
+has_states_to_form_crimea = {
+	custom_trigger_tooltip = {
+		tooltip = form_crimea_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 137 } } } owns_state = 137 }
+		if = { limit = { NOT = { OOO = { owns_state = 196 } } } owns_state = 196 }
+	}
+}
+
+has_cosmetics_to_form_south_russia = {
+	has_country_flag = can_form_SRS_UNITED
+}
+has_states_to_form_south_russia = {
+	custom_trigger_tooltip = {
+		tooltip = form_south_russia_has_states_tt
+
+		has_states_to_form_don = yes
+		has_states_to_form_kuban = yes
+		has_states_to_form_volgograd = yes
+		has_states_to_form_kalmykia = yes
+	}
+}
+
+required_states_to_form_south_russia = {
+	OR = {
+		is_don = yes
+		is_kuban = yes
+		is_volgograd = yes
+		is_kalmykia = yes
 	}
 }
 
