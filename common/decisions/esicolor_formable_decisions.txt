@@ -8753,7 +8753,7 @@ esicolor_formables = {
 
 				set_cosmetic_tag = MAJ_INDONESIA_DUTCH
 			}
-			else = {
+			else_if = {
 				limit = { original_tag = FZI }
 
 				set_cosmetic_tag = MAJ_INDONESIA_PORTUGAL
@@ -8910,6 +8910,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_nusantara"
 			clr_country_flag = can_form_MAJ_UNITED
+			clr_country_flag = can_form_AST_UNITED
 
 			set_country_flag = can_form_OCE_UNITED
 			set_country_flag = can_form_ASI_UNITED
@@ -8945,6 +8946,190 @@ esicolor_formables = {
 		}
 
 		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_australian_iot = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_australian_iot = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_australian_iot = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_australian_iot"
+			set_country_flag = can_form_AST_UNITED
+			set_country_flag = can_form_MAJ_UNITED
+
+			set_cosmetic_tag = AST_INDIANOT
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_australian_iot = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_australian_iot = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_western_australia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_western_australia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_western_australia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_western_australia"
+			set_country_flag = can_form_AST_UNITED
+
+			set_cosmetic_tag = AST_WESTERN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_western_australia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_western_australia = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_queensland = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_queensland = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_queensland = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_queensland"
+			set_country_flag = can_form_AST_UNITED
+
+			set_cosmetic_tag = AST_QUEENSLAND
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_queensland = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_western_australia = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_australia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_australia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_australia = yes
+		}
+		available = {
+			has_states_to_form_australia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_australia"
+			clr_country_flag = can_form_AST_UNITED
+			clr_country_flag = can_form_MAJ_UNITED
+
+			set_country_flag = can_form_OCE_UNITED
+
+			set_cosmetic_tag = AST_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_australia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_australia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_australia = yes
+				}
+				else = {
+					required_states_to_form_australia = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
 
 		fire_only_once = yes
 
@@ -9098,19 +9283,19 @@ esicolor_formables = {
 		}
 	}
 
-	form_australia = {
+	form_oceania = {
 		icon = generic_form_nation
 		allowed = {
 			always = yes
 		}
 		visible = {
-			has_cosmetics_to_form_australia = yes
+			has_cosmetics_to_form_oceania = yes
 		}
 		available = {
-			has_states_to_form_australia = yes
+			has_states_to_form_oceania = yes
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision form_australia"
+			log = "[GetDateText]: [Root.GetName]: Decision form_oceania"
 			clr_country_flag = can_form_OCE_UNITED
 			clr_country_flag = can_form_ASI_UNITED
 			clr_country_flag = can_form_SOA_UNITED
@@ -9121,7 +9306,7 @@ esicolor_formables = {
 
 			hidden_effect = {
 				every_state = {
-					limit = { is_on_continent = australia }
+					limit = { is_on_continent = oceania }
 
 					formable_decision_effect = yes
 				}

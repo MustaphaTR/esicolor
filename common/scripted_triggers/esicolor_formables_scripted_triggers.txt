@@ -5563,6 +5563,7 @@ can_form_nusantara = {
 		can_form_indonesia = yes
 		can_form_philippines = yes
 		can_form_papua = yes
+		can_form_australian_iot = yes
 	}
 }
 
@@ -5615,8 +5616,7 @@ is_nusantara = {
 		is_indonesia = yes
 		is_philippines = yes
 		is_papua = yes
-		state = 711
-		state = 712
+		is_australian_iot = yes
 	}
 }
 
@@ -5720,6 +5720,141 @@ required_states_to_form_nusantara = {
 		state = 669
 		state = 721
 		state = 979
+	}
+}
+
+#### Australia ####
+can_form_australian_iot = {
+	OR = {
+		original_tag = FII
+		original_tag = FIZ
+	}
+}
+
+can_form_western_australia = {
+	OR = {
+		original_tag = SZZ
+		original_tag = BFO
+		original_tag = BFI
+	}
+}
+
+can_form_queensland = {
+	OR = {
+		original_tag = SZI
+		original_tag = BFZ
+		original_tag = BFE
+	}
+}
+
+can_form_australia = {
+	OR = {
+		can_form_australian_iot = yes
+		can_form_western_australia = yes
+		can_form_queensland = yes
+		original_tag = ZBS
+		original_tag = SIF
+		original_tag = SIB
+		original_tag = SIY
+		original_tag = SZO
+		original_tag = LFA
+	}
+}
+
+is_australian_iot = {
+	OR = {
+		state = 711
+		state = 712
+	}
+}
+
+is_western_australia = {
+	OR = {
+		state = 522
+		state = 870
+		state = 871
+	}
+}
+
+is_queensland = {
+	OR = {
+		state = 521
+		state = 872
+		state = 873
+	}
+}
+
+is_australia = {
+	OR = {
+		is_australian_iot = yes
+		is_western_australia = yes
+		is_queensland = yes
+		state = 285
+		state = 517
+		state = 518
+		state = 519
+		state = 520
+		state = 674
+	}
+}
+
+has_states_to_form_australian_iot = {
+	custom_trigger_tooltip = {
+		tooltip = form_australian_iot_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 711 } } } owns_state = 711 }
+		if = { limit = { NOT = { OOO = { owns_state = 712 } } } owns_state = 712 }
+	}
+}
+
+has_states_to_form_western_australia = {
+	custom_trigger_tooltip = {
+		tooltip = form_western_australia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 522 } } } owns_state = 522 }
+		if = { limit = { NOT = { OOO = { owns_state = 870 } } } owns_state = 870 }
+		if = { limit = { NOT = { OOO = { owns_state = 871 } } } owns_state = 871 }
+	}
+}
+
+has_states_to_form_queensland = {
+	custom_trigger_tooltip = {
+		tooltip = form_queensland_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 521 } } } owns_state = 521 }
+		if = { limit = { NOT = { OOO = { owns_state = 872 } } } owns_state = 872 }
+		if = { limit = { NOT = { OOO = { owns_state = 873 } } } owns_state = 873 }
+	}
+}
+
+has_cosmetics_to_form_australia = {
+	has_country_flag = can_form_AST_UNITED
+}
+has_states_to_form_australia = {
+	custom_trigger_tooltip = {
+		tooltip = form_australia_has_states_tt
+
+		has_states_to_form_western_australia = yes
+		has_states_to_form_queensland = yes
+		if = { limit = { NOT = { OOO = { owns_state = 285 } } } owns_state = 285 }
+		if = { limit = { NOT = { OOO = { owns_state = 517 } } } owns_state = 517 }
+		if = { limit = { NOT = { OOO = { owns_state = 518 } } } owns_state = 518 }
+		if = { limit = { NOT = { OOO = { owns_state = 519 } } } owns_state = 519 }
+		if = { limit = { NOT = { OOO = { owns_state = 520 } } } owns_state = 520 }
+		if = { limit = { NOT = { OOO = { owns_state = 674 } } } owns_state = 674 }
+	}
+}
+
+required_states_to_form_australia = {
+	OR = {
+		is_western_australia = yes
+		is_queensland = yes
+		state = 285
+		state = 517
+		state = 518
+		state = 519
+		state = 520
+		state = 674
 	}
 }
 
@@ -6394,10 +6529,10 @@ has_states_to_form_south_america = {
 }
 
 #### Oceania ####
-has_cosmetics_to_form_australia = {
+has_cosmetics_to_form_oceania = {
 	has_country_flag = can_form_OCE_UNITED
 }
-has_states_to_form_australia = {
+has_states_to_form_oceania = {
 	all_state = {
 		OR = {
 			NOT = { is_on_continent = australia }
