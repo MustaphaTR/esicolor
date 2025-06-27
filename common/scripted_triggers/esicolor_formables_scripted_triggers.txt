@@ -318,6 +318,7 @@ required_states_to_form_greece = {
 can_form_bulgaria = {
 	OR = {
 		original_tag = OAB
+		original_tag = OFF
 		original_tag = ZII
 		original_tag = ZIZ
 		original_tag = BOI
@@ -364,7 +365,6 @@ required_states_to_form_bulgaria = {
 can_form_wallachia = {
 	OR = {
 		original_tag = OAL
-		original_tag = OFF
 		original_tag = OBI
 		original_tag = YFI
 	}
@@ -5261,6 +5261,256 @@ required_states_to_form_peru_bolivia = {
 	OR = {
 		required_states_to_form_peru = yes
 		required_states_to_form_bolivia = yes
+	}
+}
+
+#### Polynesia ####
+can_form_hawaii = {
+	OR = {
+		original_tag = LZY
+		original_tag = LEO
+		original_tag = LEI
+		original_tag = LAZ
+		original_tag = FZF
+	}
+}
+
+can_form_mariana = {
+	OR = {
+		original_tag = LEZ
+		original_tag = MFC # LEB
+		original_tag = LAL
+		original_tag = LAB
+	}
+}
+
+can_form_micronesia = {
+	OR = {
+		original_tag = LEE
+		original_tag = LAF
+		original_tag = MCB # LBA
+	}
+}
+
+can_form_fiji = {
+	OR = {
+		original_tag = LEL
+		original_tag = LEY
+		original_tag = LAE
+		original_tag = FZS
+	}
+}
+
+can_form_tahiti = {
+	OR = {
+		original_tag = LES
+		original_tag = LAI
+		original_tag = FEA
+	}
+}
+
+can_form_rapa_nui = {
+	OR = {
+		original_tag = ZFO
+		original_tag = YAB
+	}
+}
+
+can_form_new_zealand = {
+	OR = {
+		original_tag = ZBA
+		original_tag = FZE
+	}
+}
+
+can_form_polynesia = {
+	OR = {
+		can_form_hawaii = yes
+		can_form_mariana = yes
+		can_form_micronesia = yes
+		can_form_fiji = yes
+		can_form_tahiti = yes
+		can_form_rapa_nui = yes
+		can_form_new_zealand = yes
+		original_tag = SZA
+		original_tag = LEA
+		original_tag = LAS
+		original_tag = FZL
+	}
+}
+
+is_hawaii = {
+	OR = {
+		state = 629
+		state = 630
+		state = 631
+		state = 642
+		state = 727
+	}
+}
+
+is_mariana = {
+	OR = {
+		state = 632
+		state = 638
+		state = 646
+		state = 648
+	}
+}
+
+is_micronesia = {
+	OR = {
+		state = 633
+		state = 647
+		state = 684
+	}
+}
+
+is_fiji = {
+	OR = {
+		state = 636
+		state = 639
+		state = 643
+		state = 725
+	}
+}
+
+is_tahiti = {
+	OR = {
+		state = 635
+		state = 641
+		state = 734
+	}
+}
+
+is_rapa_nui = {
+	OR = {
+		state = 270
+		state = 948
+	}
+}
+
+is_new_zealand = {
+	OR = {
+		state = 284
+		state = 723
+	}
+}
+
+is_polynesia = {
+	OR = {
+		is_hawaii = yes
+		is_mariana = yes
+		is_micronesia = yes
+		is_fiji = yes
+		is_tahiti = yes
+		is_rapa_nui = yes
+		is_new_zealand = yes
+		state = 524
+		state = 634
+		state = 645
+		state = 726
+	}
+}
+
+has_states_to_form_hawaii = {
+	custom_trigger_tooltip = {
+		tooltip = form_hawaii_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 629 } } } owns_state = 629 }
+		if = { limit = { NOT = { OOO = { owns_state = 630 } } } owns_state = 630 }
+		if = { limit = { NOT = { OOO = { owns_state = 631 } } } owns_state = 631 }
+		if = { limit = { NOT = { OOO = { owns_state = 642 } } } owns_state = 642 }
+		if = { limit = { NOT = { OOO = { owns_state = 727 } } } owns_state = 727 }
+	}
+}
+
+has_states_to_form_mariana = {
+	custom_trigger_tooltip = {
+		tooltip = form_mariana_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 632 } } } owns_state = 632 }
+		if = { limit = { NOT = { OOO = { owns_state = 638 } } } owns_state = 638 }
+		if = { limit = { NOT = { OOO = { owns_state = 646 } } } owns_state = 646 }
+		if = { limit = { NOT = { OOO = { owns_state = 648 } } } owns_state = 648 }
+	}
+}
+
+has_states_to_form_micronesia = {
+	custom_trigger_tooltip = {
+		tooltip = form_micronesia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 633 } } } owns_state = 633 }
+		if = { limit = { NOT = { OOO = { owns_state = 647 } } } owns_state = 647 }
+		if = { limit = { NOT = { OOO = { owns_state = 684 } } } owns_state = 684 }
+	}
+}
+
+has_states_to_form_fiji = {
+	custom_trigger_tooltip = {
+		tooltip = form_fiji_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 636 } } } owns_state = 636 }
+		if = { limit = { NOT = { OOO = { owns_state = 639 } } } owns_state = 639 }
+		if = { limit = { NOT = { OOO = { owns_state = 643 } } } owns_state = 643 }
+		if = { limit = { NOT = { OOO = { owns_state = 725 } } } owns_state = 725 }
+	}
+}
+
+has_states_to_form_tahiti = {
+	custom_trigger_tooltip = {
+		tooltip = form_tahiti_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 635 } } } owns_state = 635 }
+		if = { limit = { NOT = { OOO = { owns_state = 641 } } } owns_state = 641 }
+		if = { limit = { NOT = { OOO = { owns_state = 734 } } } owns_state = 734 }
+	}
+}
+
+has_states_to_form_rapa_nui = {
+	custom_trigger_tooltip = {
+		tooltip = form_rapa_nui_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 270 } } } owns_state = 270 }
+		if = { limit = { NOT = { OOO = { owns_state = 948 } } } owns_state = 948 }
+	}
+}
+
+has_states_to_form_new_zealand = {
+	custom_trigger_tooltip = {
+		tooltip = form_new_zealand_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 284 } } } owns_state = 284 }
+		if = { limit = { NOT = { OOO = { owns_state = 723 } } } owns_state = 723 }
+	}
+}
+
+has_cosmetics_to_form_polynesia = {
+	has_country_flag = can_form_PLY_UNITED
+}
+has_states_to_form_polynesia = {
+	custom_trigger_tooltip = {
+		tooltip = form_polynesia_has_states_tt
+
+		has_states_to_form_hawaii = yes
+		has_states_to_form_mariana = yes
+		has_states_to_form_micronesia = yes
+		has_states_to_form_fiji = yes
+		has_states_to_form_tahiti = yes
+		has_states_to_form_new_zealand = yes
+		if = { limit = { NOT = { OOO = { owns_state = 726 } } } owns_state = 726 }
+	}
+}
+
+required_states_to_form_polynesia = {
+	OR = {
+		is_hawaii = yes
+		is_mariana = yes
+		is_micronesia = yes
+		is_fiji = yes
+		is_tahiti = yes
+		is_new_zealand = yes
+		state = 726
 	}
 }
 
