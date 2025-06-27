@@ -9138,6 +9138,380 @@ esicolor_formables = {
 		}
 	}
 
+	form_iraq = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_iraq = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_iraq = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_iraq"
+			clr_country_flag = can_form_MSP_KURD
+
+			set_country_flag = can_form_MSP_UNITED
+
+			set_cosmetic_tag = MSP_IRAQ
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_iraq = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_iraq_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_iraq = yes
+				}
+				else = {
+					required_states_to_form_iraq = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_syria = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_syria = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_syria = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_syria"
+			set_country_flag = can_form_MSP_LEVANT
+
+			set_cosmetic_tag = MSP_SYRIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_syria = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_syria_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_syria = yes
+				}
+				else = {
+					required_states_to_form_syria = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_anatolian_kurdistan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_anatolian_kurdistan = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_anatolian_kurdistan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_anatolian_kurdistan"
+			set_country_flag = can_form_MSP_KURD
+
+			set_cosmetic_tag = MSP_KURDTUR
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_anatolian_kurdistan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_anatolian_kurdistan = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_iranian_kurdistan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_iranian_kurdistan = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_iranian_kurdistan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_iranian_kurdistan"
+			set_country_flag = can_form_MSP_KURD
+
+			set_cosmetic_tag = MSP_KURDPER
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_iranian_kurdistan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_iranian_kurdistan_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_iranian_kurdistan = yes
+				}
+				else = {
+					required_states_to_form_iranian_kurdistan = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_kurdistan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_kurdistan = yes
+		}
+		visible = {
+			has_cosmetics_to_form_kurdistan = yes
+		}
+		available = {
+			has_states_to_form_kurdistan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_kurdistan"
+			clr_country_flag = can_form_MSP_KURD
+
+			set_country_flag = can_form_MSP_UNITED
+
+			set_cosmetic_tag = MSP_KURD
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_kurdistan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_kurdistan_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_kurdistan = yes
+				}
+				else = {
+					required_states_to_form_kurdistan = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_levant = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_levant = yes
+		}
+		visible = {
+			has_cosmetics_to_form_levant = yes
+		}
+		available = {
+			has_states_to_form_levant = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_levant"
+			clr_country_flag = can_form_MSP_LEVANT
+
+			set_country_flag = can_form_MSP_UNITED
+
+			set_cosmetic_tag = MSP_LEVANT
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_levant = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_levant_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_levant = yes
+				}
+				else = {
+					required_states_to_form_levant = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_mesopotamia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_mesopotamia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_mesopotamia = yes
+		}
+		available = {
+			has_states_to_form_mesopotamia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_mesopotamia"
+			clr_country_flag = can_form_MSP_UNITED
+
+			set_country_flag = can_form_MEA_UNITED
+
+			set_cosmetic_tag = MSP_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_mesopotamia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_mesopotamia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_mesopotamia = yes
+				}
+				else = {
+					required_states_to_form_mesopotamia = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {

@@ -6486,6 +6486,276 @@ required_states_to_form_arabia = {
 	}
 }
 
+#### Mesopotamia ####
+can_form_iraq = {
+	OR = {
+		original_tag = ZYI
+		original_tag = LFS
+		original_tag = LFL
+		original_tag = NIO
+		original_tag = NII
+	}
+}
+
+can_form_syria = {
+	OR = {
+		original_tag = SSA
+		original_tag = LFF
+		original_tag = LBO
+		original_tag = FYY
+	}
+}
+
+can_form_anatolian_kurdistan = {
+	OR = {
+		original_tag = ESO
+		original_tag = ESZ
+		original_tag = ESE
+		original_tag = BOO
+	}
+}
+
+can_form_iranian_kurdistan = {
+	OR = {
+		original_tag = AIY
+		original_tag = AZI
+		original_tag = NOI
+	}
+}
+
+can_form_kurdistan = {
+	OR = {
+		can_form_iranian_kurdistan = yes
+		can_form_anatolian_kurdistan = yes
+		original_tag = LFL
+	}
+}
+
+can_form_levant = {
+	OR = {
+		can_form_syria = yes
+		original_tag = IBE
+		original_tag = AAL
+		original_tag = ASE
+		original_tag = ASA
+		original_tag = ASS
+		original_tag = SSE
+	}
+}
+
+can_form_mesopotamia = {
+	OR = {
+		can_form_levant = yes
+		can_form_kurdistan = yes
+		can_form_iraq = yes
+		original_tag = AIE
+		original_tag = LSL
+	}
+}
+
+is_iraq = {
+	OR = {
+		state = 291
+		state = 675
+		state = 676
+		state = 1010
+		state = 1011
+	}
+}
+
+is_syria = {
+	OR = {
+		state = 554
+		state = 677
+		state = 680
+		state = 799
+	}
+}
+
+is_anatolian_kurdistan = {
+	OR = {
+		state = 350
+		state = 352
+		state = 353
+		state = 800
+	}
+}
+
+is_iranian_kurdistan = {
+	OR = {
+		state = 419
+		state = 421
+		state = 1000
+		state = 1001
+	}
+}
+
+is_kurdistan = {
+	OR = {
+		is_anatolian_kurdistan = yes
+		is_iranian_kurdistan = yes
+		state = 676
+		state = 680
+	}
+}
+
+is_levant = {
+	OR = {
+		is_syria = yes
+		state = 183
+		state = 446
+		state = 453
+		state = 454
+		state = 455
+		state = 553
+	}
+}
+
+is_mesopotamia = {
+	OR = {
+		is_iraq = yes
+		is_kurdistan = yes
+		is_levant = yes
+		state = 344
+		state = 413
+		state = 656
+	}
+}
+
+has_states_to_form_iraq = {
+	custom_trigger_tooltip = {
+		tooltip = form_iraq_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 291 } } } owns_state = 291 }
+		if = { limit = { NOT = { OOO = { owns_state = 675 } } } owns_state = 675 }
+		if = { limit = { NOT = { OOO = { owns_state = 1010 } } } owns_state = 1010 }
+		if = { limit = { NOT = { OOO = { owns_state = 1011 } } } owns_state = 1011 }
+	}
+}
+
+has_states_to_form_syria = {
+	custom_trigger_tooltip = {
+		tooltip = form_syria_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 554 } } } owns_state = 554 }
+		if = { limit = { NOT = { OOO = { owns_state = 677 } } } owns_state = 677 }
+		if = { limit = { NOT = { OOO = { owns_state = 680 } } } owns_state = 680 }
+	}
+}
+
+has_states_to_form_anatolian_kurdistan = {
+	custom_trigger_tooltip = {
+		tooltip = form_anatolian_kurdistan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 350 } } } owns_state = 350 }
+		if = { limit = { NOT = { OOO = { owns_state = 352 } } } owns_state = 352 }
+		if = { limit = { NOT = { OOO = { owns_state = 353 } } } owns_state = 353 }
+		if = { limit = { NOT = { OOO = { owns_state = 800 } } } owns_state = 800 }
+	}
+}
+
+has_states_to_form_iranian_kurdistan = {
+	custom_trigger_tooltip = {
+		tooltip = form_iranian_kurdistan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 419 } } } owns_state = 419 }
+		if = { limit = { NOT = { OOO = { owns_state = 421 } } } owns_state = 421 }
+		if = { limit = { NOT = { OOO = { owns_state = 1001 } } } owns_state = 1001 }
+	}
+}
+
+has_cosmetics_to_form_kurdistan = {
+	has_country_flag = can_form_MSP_KURD
+}
+has_states_to_form_kurdistan = {
+	custom_trigger_tooltip = {
+		tooltip = form_kurdistan_has_states_tt
+
+		has_states_to_form_anatolian_kurdistan = yes
+		has_states_to_form_iranian_kurdistan = yes
+		if = { limit = { NOT = { OOO = { owns_state = 676 } } } owns_state = 676 }
+	}
+}
+
+has_cosmetics_to_form_levant = {
+	has_country_flag = can_form_MSP_LEVANT
+}
+has_states_to_form_levant = {
+	custom_trigger_tooltip = {
+		tooltip = form_levant_has_states_tt
+
+		has_states_to_form_syria = yes
+		if = { limit = { NOT = { OOO = { owns_state = 454 } } } owns_state = 454 }
+		if = { limit = { NOT = { OOO = { owns_state = 455 } } } owns_state = 455 }
+		if = { limit = { NOT = { OOO = { owns_state = 553 } } } owns_state = 553 }
+	}
+}
+
+has_cosmetics_to_form_mesopotamia = {
+	has_country_flag = can_form_MSP_UNITED
+}
+has_states_to_form_mesopotamia = {
+	custom_trigger_tooltip = {
+		tooltip = form_mesopotamia_has_states_tt
+
+		has_states_to_form_iraq = yes
+		has_states_to_form_kurdistan = yes
+		has_states_to_form_levant = yes
+		if = { limit = { NOT = { OOO = { owns_state = 656 } } } owns_state = 656 }
+	}
+}
+
+required_states_to_form_iraq = {
+	OR = {
+		state = 291
+		state = 675
+		state = 1010
+		state = 1011
+	}
+}
+
+required_states_to_form_syria = {
+	OR = {
+		state = 554
+		state = 677
+		state = 680
+	}
+}
+
+required_states_to_form_iranian_kurdistan = {
+	OR = {
+		state = 419
+		state = 421
+		state = 1001
+	}
+}
+
+required_states_to_form_kurdistan = {
+	OR = {
+		is_anatolian_kurdistan = yes
+		required_states_to_form_iranian_kurdistan = yes
+		state = 676
+	}
+}
+
+required_states_to_form_levant = {
+	OR = {
+		required_states_to_form_syria = yes
+		state = 454
+		state = 455
+		state = 553
+	}
+}
+
+required_states_to_form_mesopotamia = {
+	OR = {
+		required_states_to_form_iraq = yes
+		required_states_to_form_kurdistan = yes
+		required_states_to_form_levant = yes
+		state = 656
+	}
+}
+
 #### Europe ####
 has_cosmetics_to_form_europe = {
 	has_country_flag = can_form_EUR_UNITED
