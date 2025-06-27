@@ -5514,6 +5514,207 @@ required_states_to_form_polynesia = {
 	}
 }
 
+#### Nusantara ####
+can_form_malaysia = {
+	OR = {
+		original_tag = EEE
+		original_tag = EEL
+	}
+}
+
+can_form_indonesia = {
+	OR = {
+		original_tag = EEA
+		original_tag = EES
+		original_tag = LLF
+		original_tag = LLB
+		original_tag = LLY
+		original_tag = LFZ
+		original_tag = LFE
+		original_tag = FZI
+		original_tag = FEB
+	}
+}
+
+can_form_philippines = {
+	OR = {
+		original_tag = EZF
+		original_tag = LZE
+		original_tag = LZA
+		original_tag = LZS
+		original_tag = LZL
+		original_tag = LZF
+		original_tag = LZB
+	}
+}
+
+can_form_papua = {
+	OR = {
+		original_tag = SZE
+		original_tag = LLY
+		original_tag = FEF
+		original_tag = YFY
+	}
+}
+
+can_form_nusantara = {
+	OR = {
+		can_form_malaysia = yes
+		can_form_indonesia = yes
+		can_form_philippines = yes
+		can_form_papua = yes
+	}
+}
+
+is_malaysia = {
+	OR = {
+		state = 333
+		state = 336
+		state = 724
+	}
+}
+
+is_indonesia = {
+	OR = {
+		state = 334
+		state = 335
+		state = 667
+		state = 668
+		state = 669
+		state = 672
+		state = 673
+		state = 721
+		state = 738
+	}
+}
+
+is_philippines = {
+	OR = {
+		state = 327
+		state = 623
+		state = 624
+		state = 625
+		state = 626
+		state = 627
+		state = 628
+	}
+}
+
+is_papua = {
+	OR = {
+		state = 523
+		state = 669
+		state = 737
+		state = 979
+	}
+}
+
+is_nusantara = {
+	OR = {
+		is_malaysia = yes
+		is_indonesia = yes
+		is_philippines = yes
+		is_papua = yes
+		state = 711
+		state = 712
+	}
+}
+
+has_states_to_form_malaysia = {
+	custom_trigger_tooltip = {
+		tooltip = form_malaysia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 333 } } } owns_state = 333 }
+		if = { limit = { NOT = { OOO = { owns_state = 336 } } } owns_state = 336 }
+	}
+}
+
+has_states_to_form_indonesia = {
+	custom_trigger_tooltip = {
+		tooltip = form_indonesia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 334 } } } owns_state = 334 }
+		if = { limit = { NOT = { OOO = { owns_state = 335 } } } owns_state = 335 }
+		if = { limit = { NOT = { OOO = { owns_state = 667 } } } owns_state = 667 }
+		if = { limit = { NOT = { OOO = { owns_state = 668 } } } owns_state = 668 }
+		if = { limit = { NOT = { OOO = { owns_state = 672 } } } owns_state = 672 }
+		if = { limit = { NOT = { OOO = { owns_state = 673 } } } owns_state = 673 }
+		if = { limit = { NOT = { OOO = { owns_state = 738 } } } owns_state = 738 }
+	}
+}
+
+has_states_to_form_philippines = {
+	custom_trigger_tooltip = {
+		tooltip = form_philippines_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 327 } } } owns_state = 327 }
+		if = { limit = { NOT = { OOO = { owns_state = 623 } } } owns_state = 623 }
+		if = { limit = { NOT = { OOO = { owns_state = 624 } } } owns_state = 624 }
+		if = { limit = { NOT = { OOO = { owns_state = 625 } } } owns_state = 625 }
+		if = { limit = { NOT = { OOO = { owns_state = 625 } } } owns_state = 626 }
+		if = { limit = { NOT = { OOO = { owns_state = 627 } } } owns_state = 627 }
+		if = { limit = { NOT = { OOO = { owns_state = 628 } } } owns_state = 628 }
+	}
+}
+
+has_states_to_form_papua = {
+	custom_trigger_tooltip = {
+		tooltip = form_papua_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 523 } } } owns_state = 523 }
+		if = { limit = { NOT = { OOO = { owns_state = 737 } } } owns_state = 737 }
+		if = { limit = { NOT = { OOO = { owns_state = 979 } } } owns_state = 979 }
+	}
+}
+
+has_cosmetics_to_form_nusantara = {
+	has_country_flag = can_form_MAJ_UNITED
+}
+has_states_to_form_nusantara = {
+	custom_trigger_tooltip = {
+		tooltip = form_nusantara_has_states_tt
+
+		has_states_to_form_malaysia = yes
+		has_states_to_form_indonesia = yes
+		has_states_to_form_philippines = yes
+		if = { limit = { NOT = { OOO = { owns_state = 523 } } } owns_state = 523 }
+		if = { limit = { NOT = { OOO = { owns_state = 669 } } } owns_state = 669 }
+		if = { limit = { NOT = { OOO = { owns_state = 721 } } } owns_state = 721 }
+		if = { limit = { NOT = { OOO = { owns_state = 979 } } } owns_state = 979 }
+	}
+}
+
+required_states_to_form_malaysia = {
+	OR = {
+		state = 333
+		state = 336
+	}
+}
+
+required_states_to_form_indonesia = {
+	OR = {
+		state = 334
+		state = 335
+		state = 667
+		state = 668
+		state = 672
+		state = 673
+		state = 738
+	}
+}
+
+required_states_to_form_nusantara = {
+	OR = {
+		required_states_to_form_malaysia = yes
+		required_states_to_form_indonesia = yes
+		is_philippines = yes
+		state = 523
+		state = 669
+		state = 721
+		state = 979
+	}
+}
+
 #### Turkestan ####
 can_form_kazakhstan = {
 	OR = {
@@ -5948,7 +6149,7 @@ has_states_to_form_indochina = {
 
 required_states_to_form_indochina = {
 	OR = {
-		is_netherlands = yes
+		is_vietnam = yes
 		is_siam = yes
 		is_burma = yes
 		state = 670
