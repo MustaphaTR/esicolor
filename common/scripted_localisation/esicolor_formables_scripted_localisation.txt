@@ -4122,6 +4122,10 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_MSP_LEVANT
 	text = {
+		trigger = { has_country_leader = { character = ASS_abdullah_bin_al_hussein ruling_only = yes } }
+		localization_key = MSP_LEVANT_HASHEMITE_neutrality_DEF
+	}
+	text = {
 		trigger = { has_government = neutrality }
 		localization_key = MSP_LEVANT_neutrality_DEF
 	}
@@ -4141,6 +4145,15 @@ defined_text = {
 
 defined_text = {
 	name = GetIdeologyDef_MSP_UNITED
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = { character = ZYI_ghazi_i ruling_only = yes }
+				has_country_leader = { character = ASS_abdullah_bin_al_hussein ruling_only = yes }
+			}
+		}
+		localization_key = MSP_LEVANT_HASHEMITE_neutrality_DEF
+	}
 	text = {
 		trigger = { has_government = neutrality }
 		localization_key = MSP_UNITED_neutrality_DEF

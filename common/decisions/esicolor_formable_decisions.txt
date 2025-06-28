@@ -9417,7 +9417,15 @@ esicolor_formables = {
 
 			set_country_flag = can_form_MSP_UNITED
 
-			set_cosmetic_tag = MSP_LEVANT
+			if = {
+				limit = { has_country_leader = { character = ASS_abdullah_bin_al_hussein ruling_only = yes } }
+
+				set_cosmetic_tag = MSP_LEVANT_HASHEMITE
+
+				else = {
+					set_cosmetic_tag = MSP_LEVANT
+				}
+			}
 
 			hidden_effect = {
 				every_state = {
@@ -9473,7 +9481,20 @@ esicolor_formables = {
 
 			set_country_flag = can_form_MEA_UNITED
 
-			set_cosmetic_tag = MSP_UNITED
+			if = {
+				limit = {
+					OR = {
+						has_country_leader = { character = ZYI_ghazi_i ruling_only = yes }
+						has_country_leader = { character = ASS_abdullah_bin_al_hussein ruling_only = yes }
+					}
+				}
+
+				set_cosmetic_tag = MSP_UNITED_HASHEMITE
+
+				else = {
+					set_cosmetic_tag = MSP_UNITED
+				}
+			}
 
 			hidden_effect = {
 				every_state = {
