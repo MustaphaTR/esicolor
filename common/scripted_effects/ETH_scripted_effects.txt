@@ -1,11 +1,7165 @@
+ETH_upgrade_state_category = {
+	if = {
+		limit = { has_state_category = wasteland }
+		set_state_category = pastoral
+	}
+	else_if = {
+		limit = { has_state_category = pastoral }
+		set_state_category = rural
+	}
+	else_if = {
+		limit = { has_state_category = rural }
+		set_state_category = town
+	}
+	else_if = {
+		limit = { has_state_category = town }
+		set_state_category = large_town
+	}
+	else_if = {
+		limit = { has_state_category = large_town }
+		set_state_category = city
+	}
+	else_if = {
+		limit = { has_state_category = city }
+		set_state_category = large_city
+	}
+	else_if = {
+		limit = { has_state_category = large_city }
+		set_state_category = metropolis
+	}
+	else_if = {
+		limit = { has_state_category = metropolis }
+		set_state_category = megalopolis
+	}
+	else_if = {
+		limit = { has_state_category = megalopolis }
+		add_extra_state_shared_building_slots = 2
+	}
+}
+
+ETH_upgrade_main_city = {
+    if = {
+        limit = { state = 1 }
+        add_victory_points = {
+            province = 3838
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 2 }
+        add_victory_points = {
+            province = 9904
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 3 }
+        add_victory_points = {
+            province = 9620
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 4 }
+        add_victory_points = {
+            province = 11666
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 5 }
+        add_victory_points = {
+            province = 6375
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 6 }
+        add_victory_points = {
+            province = 516
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 7 }
+        add_victory_points = {
+            province = 391
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 8 }
+        add_victory_points = {
+            province = 6583
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 9 }
+        add_victory_points = {
+            province = 11542
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 10 }
+        add_victory_points = {
+            province = 3544
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 11 }
+        add_victory_points = {
+            province = 6296
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 12 }
+        add_victory_points = {
+            province = 10493
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 13 }
+        add_victory_points = {
+            province = 3174
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 14 }
+        add_victory_points = {
+            province = 3552
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 15 }
+        add_victory_points = {
+            province = 9434
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 16 }
+        add_victory_points = {
+            province = 11506
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 17 }
+        add_victory_points = {
+            province = 9642
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 18 }
+        add_victory_points = {
+            province = 9490
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 19 }
+        add_victory_points = {
+            province = 9737
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 20 }
+        add_victory_points = {
+            province = 6613
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 21 }
+        add_victory_points = {
+            province = 11834
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 22 }
+        add_victory_points = {
+            province = 9898
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 23 }
+        add_victory_points = {
+            province = 6657
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 24 }
+        add_victory_points = {
+            province = 512
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 25 }
+        add_victory_points = {
+            province = 620
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 26 }
+        add_victory_points = {
+            province = 3594
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 27 }
+        add_victory_points = {
+            province = 3652
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 28 }
+        add_victory_points = {
+            province = 9559
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 29 }
+        add_victory_points = {
+            province = 11548
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 30 }
+        add_victory_points = {
+            province = 11465
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 31 }
+        add_victory_points = {
+            province = 6766
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 32 }
+        add_victory_points = {
+            province = 3768
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 33 }
+        add_victory_points = {
+            province = 651
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 34 }
+        add_victory_points = {
+            province = 11519
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 35 }
+        add_victory_points = {
+            province = 3262
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 36 }
+        add_victory_points = {
+            province = 6241
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 37 }
+        add_victory_points = {
+            province = 6287
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 38 }
+        add_victory_points = {
+            province = 11091
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 39 }
+        add_victory_points = {
+            province = 11598
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 40 }
+        add_victory_points = {
+            province = 1794
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 41 }
+        add_victory_points = {
+            province = 3938
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 42 }
+        add_victory_points = {
+            province = 11531
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 43 }
+        add_victory_points = {
+            province = 9660
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 44 }
+        add_victory_points = {
+            province = 9914
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 45 }
+        add_victory_points = {
+            province = 619
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 46 }
+        add_victory_points = {
+            province = 9617
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 47 }
+        add_victory_points = {
+            province = 4109
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 48 }
+        add_victory_points = {
+            province = 949
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 49 }
+        add_victory_points = {
+            province = 11747
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 50 }
+        add_victory_points = {
+            province = 9517
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 51 }
+        add_victory_points = {
+            province = 6469
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 52 }
+        add_victory_points = {
+            province = 692
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 53 }
+        add_victory_points = {
+            province = 9515
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 54 }
+        add_victory_points = {
+            province = 11544
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 55 }
+        add_victory_points = {
+            province = 6488
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 56 }
+        add_victory_points = {
+            province = 241
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 57 }
+        add_victory_points = {
+            province = 495
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 58 }
+        add_victory_points = {
+            province = 9347
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 59 }
+        add_victory_points = {
+            province = 6377
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 60 }
+        add_victory_points = {
+            province = 3561
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 61 }
+        add_victory_points = {
+            province = 321
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 62 }
+        add_victory_points = {
+            province = 3258
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 63 }
+        add_victory_points = {
+            province = 6282
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 64 }
+        add_victory_points = {
+            province = 6521
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 65 }
+        add_victory_points = {
+            province = 514
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 66 }
+        add_victory_points = {
+            province = 9570
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 67 }
+        add_victory_points = {
+            province = 11467
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 68 }
+        add_victory_points = {
+            province = 3473
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 69 }
+        add_victory_points = {
+            province = 3585
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 70 }
+        add_victory_points = {
+            province = 9692
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 71 }
+        add_victory_points = {
+            province = 3581
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 72 }
+        add_victory_points = {
+            province = 9567
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 73 }
+        add_victory_points = {
+            province = 11691
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 74 }
+        add_victory_points = {
+            province = 3583
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 75 }
+        add_victory_points = {
+            province = 3569
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 76 }
+        add_victory_points = {
+            province = 6711
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 77 }
+        add_victory_points = {
+            province = 11597
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 78 }
+        add_victory_points = {
+            province = 3707
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 79 }
+        add_victory_points = {
+            province = 6706
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 80 }
+        add_victory_points = {
+            province = 577
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 81 }
+        add_victory_points = {
+            province = 6652
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 82 }
+        add_victory_points = {
+            province = 9606
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 83 }
+        add_victory_points = {
+            province = 6682
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 84 }
+        add_victory_points = {
+            province = 690
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 85 }
+        add_victory_points = {
+            province = 362
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 86 }
+        add_victory_points = {
+            province = 6558
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 87 }
+        add_victory_points = {
+            province = 9508
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 88 }
+        add_victory_points = {
+            province = 9427
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 89 }
+        add_victory_points = {
+            province = 11411
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 90 }
+        add_victory_points = {
+            province = 3458
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 91 }
+        add_victory_points = {
+            province = 11479
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 92 }
+        add_victory_points = {
+            province = 11399
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 93 }
+        add_victory_points = {
+            province = 422
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 94 }
+        add_victory_points = {
+            province = 560
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 95 }
+        add_victory_points = {
+            province = 3393
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 96 }
+        add_victory_points = {
+            province = 406
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 97 }
+        add_victory_points = {
+            province = 11301
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 98 }
+        add_victory_points = {
+            province = 3230
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 99 }
+        add_victory_points = {
+            province = 6364
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 100 }
+        add_victory_points = {
+            province = 12674
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 101 }
+        add_victory_points = {
+            province = 12512
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 102 }
+        add_victory_points = {
+            province = 665
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 103 }
+        add_victory_points = {
+            province = 3924
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 104 }
+        add_victory_points = {
+            province = 11899
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 105 }
+        add_victory_points = {
+            province = 9809
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 106 }
+        add_victory_points = {
+            province = 3882
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 107 }
+        add_victory_points = {
+            province = 11586
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 108 }
+        add_victory_points = {
+            province = 9602
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 109 }
+        add_victory_points = {
+            province = 11581
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 110 }
+        add_victory_points = {
+            province = 6115
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 111 }
+        add_victory_points = {
+            province = 11105
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 112 }
+        add_victory_points = {
+            province = 11805
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 113 }
+        add_victory_points = {
+            province = 11293
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 114 }
+        add_victory_points = {
+            province = 11773
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 115 }
+        add_victory_points = {
+            province = 10074
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 116 }
+        add_victory_points = {
+            province = 12003
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 117 }
+        add_victory_points = {
+            province = 819
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 118 }
+        add_victory_points = {
+            province = 4135
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 119 }
+        add_victory_points = {
+            province = 3379
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 120 }
+        add_victory_points = {
+            province = 284
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 121 }
+        add_victory_points = {
+            province = 9392
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 122 }
+        add_victory_points = {
+            province = 377
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 123 }
+        add_victory_points = {
+            province = 540
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 124 }
+        add_victory_points = {
+            province = 408
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 125 }
+        add_victory_points = {
+            province = 271
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 126 }
+        add_victory_points = {
+            province = 6103
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 127 }
+        add_victory_points = {
+            province = 3501
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 128 }
+        add_victory_points = {
+            province = 9297
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 129 }
+        add_victory_points = {
+            province = 6237
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 130 }
+        add_victory_points = {
+            province = 9315
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 131 }
+        add_victory_points = {
+            province = 351
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 132 }
+        add_victory_points = {
+            province = 6384
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 133 }
+        add_victory_points = {
+            province = 3273
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 134 }
+        add_victory_points = {
+            province = 9303
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 135 }
+        add_victory_points = {
+            province = 7394
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 136 }
+        add_victory_points = {
+            province = 200
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 137 }
+        add_victory_points = {
+            province = 3686
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 138 }
+        add_victory_points = {
+            province = 9279
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 139 }
+        add_victory_points = {
+            province = 299
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 140 }
+        add_victory_points = {
+            province = 383
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 141 }
+        add_victory_points = {
+            province = 6050
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 142 }
+        add_victory_points = {
+            province = 122
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 143 }
+        add_victory_points = {
+            province = 3022
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 144 }
+        add_victory_points = {
+            province = 192
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 145 }
+        add_victory_points = {
+            province = 9228
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 146 }
+        add_victory_points = {
+            province = 9206
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 147 }
+        add_victory_points = {
+            province = 197
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 148 }
+        add_victory_points = {
+            province = 11164
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 149 }
+        add_victory_points = {
+            province = 3122
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 150 }
+        add_victory_points = {
+            province = 11141
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 151 }
+        add_victory_points = {
+            province = 658
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 152 }
+        add_victory_points = {
+            province = 688
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 153 }
+        add_victory_points = {
+            province = 673
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 154 }
+        add_victory_points = {
+            province = 11659
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 155 }
+        add_victory_points = {
+            province = 6720
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 156 }
+        add_victory_points = {
+            province = 9990
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 157 }
+        add_victory_points = {
+            province = 925
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 158 }
+        add_victory_points = {
+            province = 6788
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 159 }
+        add_victory_points = {
+            province = 3780
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 160 }
+        add_victory_points = {
+            province = 11584
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 161 }
+        add_victory_points = {
+            province = 6606
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 162 }
+        add_victory_points = {
+            province = 9907
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 163 }
+        add_victory_points = {
+            province = 3943
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 164 }
+        add_victory_points = {
+            province = 10007
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 165 }
+        add_victory_points = {
+            province = 9764
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 166 }
+        add_victory_points = {
+            province = 3816
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 167 }
+        add_victory_points = {
+            province = 6906
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 168 }
+        add_victory_points = {
+            province = 10024
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 169 }
+        add_victory_points = {
+            province = 7183
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 170 }
+        add_victory_points = {
+            province = 6902
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 171 }
+        add_victory_points = {
+            province = 758
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 172 }
+        add_victory_points = {
+            province = 3933
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 173 }
+        add_victory_points = {
+            province = 9979
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 174 }
+        add_victory_points = {
+            province = 726
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 175 }
+        add_victory_points = {
+            province = 6832
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 176 }
+        add_victory_points = {
+            province = 885
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 177 }
+        add_victory_points = {
+            province = 9793
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 178 }
+        add_victory_points = {
+            province = 13071
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 179 }
+        add_victory_points = {
+            province = 970
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 180 }
+        add_victory_points = {
+            province = 9817
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 181 }
+        add_victory_points = {
+            province = 6996
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 182 }
+        add_victory_points = {
+            province = 9940
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 183 }
+        add_victory_points = {
+            province = 11984
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 184 }
+        add_victory_points = {
+            province = 11905
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 185 }
+        add_victory_points = {
+            province = 3914
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 186 }
+        add_victory_points = {
+            province = 7211
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 187 }
+        add_victory_points = {
+            province = 6550
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 188 }
+        add_victory_points = {
+            province = 3288
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 189 }
+        add_victory_points = {
+            province = 9483
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 190 }
+        add_victory_points = {
+            province = 9262
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 191 }
+        add_victory_points = {
+            province = 592
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 192 }
+        add_victory_points = {
+            province = 11670
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 193 }
+        add_victory_points = {
+            province = 3568
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 194 }
+        add_victory_points = {
+            province = 6232
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 195 }
+        add_victory_points = {
+            province = 3151
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 196 }
+        add_victory_points = {
+            province = 721
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 197 }
+        add_victory_points = {
+            province = 11683
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 198 }
+        add_victory_points = {
+            province = 476
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 199 }
+        add_victory_points = {
+            province = 3457
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 200 }
+        add_victory_points = {
+            province = 11405
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 201 }
+        add_victory_points = {
+            province = 6593
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 202 }
+        add_victory_points = {
+            province = 525
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 203 }
+        add_victory_points = {
+            province = 488
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 204 }
+        add_victory_points = {
+            province = 3350
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 205 }
+        add_victory_points = {
+            province = 382
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 206 }
+        add_victory_points = {
+            province = 11370
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 207 }
+        add_victory_points = {
+            province = 11241
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 208 }
+        add_victory_points = {
+            province = 9098
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 209 }
+        add_victory_points = {
+            province = 11202
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 210 }
+        add_victory_points = {
+            province = 11234
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 211 }
+        add_victory_points = {
+            province = 9783
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 212 }
+        add_victory_points = {
+            province = 6923
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 213 }
+        add_victory_points = {
+            province = 3134
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 214 }
+        add_victory_points = {
+            province = 3338
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 215 }
+        add_victory_points = {
+            province = 9195
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 216 }
+        add_victory_points = {
+            province = 11159
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 217 }
+        add_victory_points = {
+            province = 3529
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 218 }
+        add_victory_points = {
+            province = 9417
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 219 }
+        add_victory_points = {
+            province = 6380
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 220 }
+        add_victory_points = {
+            province = 3580
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 221 }
+        add_victory_points = {
+            province = 418
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 222 }
+        add_victory_points = {
+            province = 9355
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 223 }
+        add_victory_points = {
+            province = 6262
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 224 }
+        add_victory_points = {
+            province = 3335
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 225 }
+        add_victory_points = {
+            province = 3520
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 226 }
+        add_victory_points = {
+            province = 11437
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 227 }
+        add_victory_points = {
+            province = 6474
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 228 }
+        add_victory_points = {
+            province = 9461
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 229 }
+        add_victory_points = {
+            province = 7661
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 230 }
+        add_victory_points = {
+            province = 12320
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 231 }
+        add_victory_points = {
+            province = 1599
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 232 }
+        add_victory_points = {
+            province = 6701
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 233 }
+        add_victory_points = {
+            province = 9663
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 234 }
+        add_victory_points = {
+            province = 3734
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 235 }
+        add_victory_points = {
+            province = 11696
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 236 }
+        add_victory_points = {
+            province = 9753
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 237 }
+        add_victory_points = {
+            province = 11724
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 238 }
+        add_victory_points = {
+            province = 775
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 239 }
+        add_victory_points = {
+            province = 3578
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 240 }
+        add_victory_points = {
+            province = 9449
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 241 }
+        add_victory_points = {
+            province = 9288
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 242 }
+        add_victory_points = {
+            province = 306
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 243 }
+        add_victory_points = {
+            province = 11336
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 244 }
+        add_victory_points = {
+            province = 9197
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 245 }
+        add_victory_points = {
+            province = 11476
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 246 }
+        add_victory_points = {
+            province = 11349
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 247 }
+        add_victory_points = {
+            province = 6245
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 248 }
+        add_victory_points = {
+            province = 121
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 249 }
+        add_victory_points = {
+            province = 6338
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 250 }
+        add_victory_points = {
+            province = 392
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 251 }
+        add_victory_points = {
+            province = 11225
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 252 }
+        add_victory_points = {
+            province = 11375
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 253 }
+        add_victory_points = {
+            province = 6269
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 254 }
+        add_victory_points = {
+            province = 11248
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 255 }
+        add_victory_points = {
+            province = 9258
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 256 }
+        add_victory_points = {
+            province = 9259
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 257 }
+        add_victory_points = {
+            province = 11351
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 258 }
+        add_victory_points = {
+            province = 6398
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 259 }
+        add_victory_points = {
+            province = 11504
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 260 }
+        add_victory_points = {
+            province = 413
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 261 }
+        add_victory_points = {
+            province = 6890
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 262 }
+        add_victory_points = {
+            province = 10723
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 263 }
+        add_victory_points = {
+            province = 117
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 264 }
+        add_victory_points = {
+            province = 3140
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 265 }
+        add_victory_points = {
+            province = 487
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 266 }
+        add_victory_points = {
+            province = 10837
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 267 }
+        add_victory_points = {
+            province = 10737
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 268 }
+        add_victory_points = {
+            province = 8124
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 269 }
+        add_victory_points = {
+            province = 5068
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 270 }
+        add_victory_points = {
+            province = 1280
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 271 }
+        add_victory_points = {
+            province = 5010
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 272 }
+        add_victory_points = {
+            province = 4948
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 273 }
+        add_victory_points = {
+            province = 12022
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 274 }
+        add_victory_points = {
+            province = 10862
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 275 }
+        add_victory_points = {
+            province = 10400
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 276 }
+        add_victory_points = {
+            province = 3778
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 277 }
+        add_victory_points = {
+            province = 1965
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 278 }
+        add_victory_points = {
+            province = 12364
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 279 }
+        add_victory_points = {
+            province = 650
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 280 }
+        add_victory_points = {
+            province = 2111
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 281 }
+        add_victory_points = {
+            province = 4967
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 282 }
+        add_victory_points = {
+            province = 1182
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 283 }
+        add_victory_points = {
+            province = 2022
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 284 }
+        add_victory_points = {
+            province = 1814
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 285 }
+        add_victory_points = {
+            province = 7859
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 286 }
+        add_victory_points = {
+            province = 4401
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 287 }
+        add_victory_points = {
+            province = 4973
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 288 }
+        add_victory_points = {
+            province = 7034
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 289 }
+        add_victory_points = {
+            province = 7408
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 290 }
+        add_victory_points = {
+            province = 9945
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 291 }
+        add_victory_points = {
+            province = 2097
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 292 }
+        add_victory_points = {
+            province = 12727
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 293 }
+        add_victory_points = {
+            province = 10840
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 294 }
+        add_victory_points = {
+            province = 10760
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 295 }
+        add_victory_points = {
+            province = 5117
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 296 }
+        add_victory_points = {
+            province = 12891
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 297 }
+        add_victory_points = {
+            province = 1903
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 298 }
+        add_victory_points = {
+            province = 7959
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 299 }
+        add_victory_points = {
+            province = 12960
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 300 }
+        add_victory_points = {
+            province = 10362
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 301 }
+        add_victory_points = {
+            province = 2152
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 302 }
+        add_victory_points = {
+            province = 5230
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 303 }
+        add_victory_points = {
+            province = 12997
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 304 }
+        add_victory_points = {
+            province = 7630
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 305 }
+        add_victory_points = {
+            province = 12798
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 306 }
+        add_victory_points = {
+            province = 10747
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 307 }
+        add_victory_points = {
+            province = 8113
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 308 }
+        add_victory_points = {
+            province = 4450
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 309 }
+        add_victory_points = {
+            province = 10906
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 310 }
+        add_victory_points = {
+            province = 12885
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 311 }
+        add_victory_points = {
+            province = 2077
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 312 }
+        add_victory_points = {
+            province = 12865
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 313 }
+        add_victory_points = {
+            province = 10886
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 314 }
+        add_victory_points = {
+            province = 12823
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 315 }
+        add_victory_points = {
+            province = 7622
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 316 }
+        add_victory_points = {
+            province = 13087
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 317 }
+        add_victory_points = {
+            province = 12738
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 318 }
+        add_victory_points = {
+            province = 4641
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 319 }
+        add_victory_points = {
+            province = 7660
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 320 }
+        add_victory_points = {
+            province = 10149
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 321 }
+        add_victory_points = {
+            province = 1273
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 322 }
+        add_victory_points = {
+            province = 7926
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 323 }
+        add_victory_points = {
+            province = 4987
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 324 }
+        add_victory_points = {
+            province = 8010
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 325 }
+        add_victory_points = {
+            province = 1319
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 326 }
+        add_victory_points = {
+            province = 10062
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 327 }
+        add_victory_points = {
+            province = 10265
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 328 }
+        add_victory_points = {
+            province = 4572
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 329 }
+        add_victory_points = {
+            province = 10627
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 330 }
+        add_victory_points = {
+            province = 4801
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 331 }
+        add_victory_points = {
+            province = 12505
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 332 }
+        add_victory_points = {
+            province = 1426
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 333 }
+        add_victory_points = {
+            province = 1208
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 334 }
+        add_victory_points = {
+            province = 10237
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 335 }
+        add_victory_points = {
+            province = 7381
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 336 }
+        add_victory_points = {
+            province = 12299
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 337 }
+        add_victory_points = {
+            province = 13003
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 338 }
+        add_victory_points = {
+            province = 3369
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 339 }
+        add_victory_points = {
+            province = 4112
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 340 }
+        add_victory_points = {
+            province = 947
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 341 }
+        add_victory_points = {
+            province = 11842
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 342 }
+        add_victory_points = {
+            province = 1005
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 343 }
+        add_victory_points = {
+            province = 9878
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 344 }
+        add_victory_points = {
+            province = 9893
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 345 }
+        add_victory_points = {
+            province = 11810
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 346 }
+        add_victory_points = {
+            province = 9861
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 347 }
+        add_victory_points = {
+            province = 904
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 348 }
+        add_victory_points = {
+            province = 3870
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 349 }
+        add_victory_points = {
+            province = 9777
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 350 }
+        add_victory_points = {
+            province = 4512
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 351 }
+        add_victory_points = {
+            province = 9131
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 352 }
+        add_victory_points = {
+            province = 7530
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 353 }
+        add_victory_points = {
+            province = 876
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 354 }
+        add_victory_points = {
+            province = 9932
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 355 }
+        add_victory_points = {
+            province = 11881
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 356 }
+        add_victory_points = {
+            province = 6938
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 357 }
+        add_victory_points = {
+            province = 6732
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 358 }
+        add_victory_points = {
+            province = 3878
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 359 }
+        add_victory_points = {
+            province = 6882
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 360 }
+        add_victory_points = {
+            province = 6845
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 361 }
+        add_victory_points = {
+            province = 3957
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 362 }
+        add_victory_points = {
+            province = 10412
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 363 }
+        add_victory_points = {
+            province = 7138
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 364 }
+        add_victory_points = {
+            province = 7202
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 365 }
+        add_victory_points = {
+            province = 12384
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 366 }
+        add_victory_points = {
+            province = 1843
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 367 }
+        add_victory_points = {
+            province = 7480
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 368 }
+        add_victory_points = {
+            province = 12501
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 369 }
+        add_victory_points = {
+            province = 6696
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 370 }
+        add_victory_points = {
+            province = 4464
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 371 }
+        add_victory_points = {
+            province = 7552
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 372 }
+        add_victory_points = {
+            province = 12489
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 373 }
+        add_victory_points = {
+            province = 4569
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 374 }
+        add_victory_points = {
+            province = 1806
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 375 }
+        add_victory_points = {
+            province = 3960
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 376 }
+        add_victory_points = {
+            province = 4975
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 377 }
+        add_victory_points = {
+            province = 853
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 378 }
+        add_victory_points = {
+            province = 9814
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 379 }
+        add_victory_points = {
+            province = 1862
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 380 }
+        add_victory_points = {
+            province = 4865
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 381 }
+        add_victory_points = {
+            province = 4723
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 382 }
+        add_victory_points = {
+            province = 1827
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 383 }
+        add_victory_points = {
+            province = 4740
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 384 }
+        add_victory_points = {
+            province = 12586
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 385 }
+        add_victory_points = {
+            province = 3513
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 386 }
+        add_victory_points = {
+            province = 7315
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 387 }
+        add_victory_points = {
+            province = 9616
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 388 }
+        add_victory_points = {
+            province = 4860
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 389 }
+        add_victory_points = {
+            province = 1836
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 390 }
+        add_victory_points = {
+            province = 1747
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 391 }
+        add_victory_points = {
+            province = 1866
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 392 }
+        add_victory_points = {
+            province = 1770
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 393 }
+        add_victory_points = {
+            province = 6710
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 394 }
+        add_victory_points = {
+            province = 12357
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 395 }
+        add_victory_points = {
+            province = 9450
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 396 }
+        add_victory_points = {
+            province = 1595
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 397 }
+        add_victory_points = {
+            province = 108
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 398 }
+        add_victory_points = {
+            province = 7375
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 399 }
+        add_victory_points = {
+            province = 6278
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 400 }
+        add_victory_points = {
+            province = 6124
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 401 }
+        add_victory_points = {
+            province = 6502
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 402 }
+        add_victory_points = {
+            province = 7341
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 403 }
+        add_victory_points = {
+            province = 4824
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 404 }
+        add_victory_points = {
+            province = 7597
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 405 }
+        add_victory_points = {
+            province = 1459
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 406 }
+        add_victory_points = {
+            province = 3618
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 407 }
+        add_victory_points = {
+            province = 11537
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 408 }
+        add_victory_points = {
+            province = 957
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 409 }
+        add_victory_points = {
+            province = 12189
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 410 }
+        add_victory_points = {
+            province = 10782
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 411 }
+        add_victory_points = {
+            province = 2026
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 412 }
+        add_victory_points = {
+            province = 7982
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 413 }
+        add_victory_points = {
+            province = 7953
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 414 }
+        add_victory_points = {
+            province = 10913
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 415 }
+        add_victory_points = {
+            province = 4893
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 416 }
+        add_victory_points = {
+            province = 5029
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 417 }
+        add_victory_points = {
+            province = 8040
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 418 }
+        add_victory_points = {
+            province = 8093
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 419 }
+        add_victory_points = {
+            province = 1822
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 420 }
+        add_victory_points = {
+            province = 7969
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 421 }
+        add_victory_points = {
+            province = 829
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 422 }
+        add_victory_points = {
+            province = 10201
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 423 }
+        add_victory_points = {
+            province = 10278
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 424 }
+        add_victory_points = {
+            province = 7340
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 425 }
+        add_victory_points = {
+            province = 4315
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 426 }
+        add_victory_points = {
+            province = 10116
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 427 }
+        add_victory_points = {
+            province = 8087
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 428 }
+        add_victory_points = {
+            province = 9975
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 429 }
+        add_victory_points = {
+            province = 1349
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 430 }
+        add_victory_points = {
+            province = 11929
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 431 }
+        add_victory_points = {
+            province = 4245
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 432 }
+        add_victory_points = {
+            province = 12366
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 433 }
+        add_victory_points = {
+            province = 1908
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 434 }
+        add_victory_points = {
+            province = 1116
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 435 }
+        add_victory_points = {
+            province = 4516
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 436 }
+        add_victory_points = {
+            province = 4950
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 437 }
+        add_victory_points = {
+            province = 4106
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 438 }
+        add_victory_points = {
+            province = 1377
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 439 }
+        add_victory_points = {
+            province = 2086
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 440 }
+        add_victory_points = {
+            province = 10772
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 441 }
+        add_victory_points = {
+            province = 12754
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 442 }
+        add_victory_points = {
+            province = 12763
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 443 }
+        add_victory_points = {
+            province = 3456
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 444 }
+        add_victory_points = {
+            province = 12774
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 445 }
+        add_victory_points = {
+            province = 7847
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 446 }
+        add_victory_points = {
+            province = 12049
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 447 }
+        add_victory_points = {
+            province = 4076
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 448 }
+        add_victory_points = {
+            province = 1149
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 449 }
+        add_victory_points = {
+            province = 4057
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 450 }
+        add_victory_points = {
+            province = 11954
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 451 }
+        add_victory_points = {
+            province = 1130
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 452 }
+        add_victory_points = {
+            province = 10061
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 453 }
+        add_victory_points = {
+            province = 4161
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 454 }
+        add_victory_points = {
+            province = 1086
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 455 }
+        add_victory_points = {
+            province = 7151
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 456 }
+        add_victory_points = {
+            province = 12071
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 457 }
+        add_victory_points = {
+            province = 12002
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 458 }
+        add_victory_points = {
+            province = 11969
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 459 }
+        add_victory_points = {
+            province = 1145
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 460 }
+        add_victory_points = {
+            province = 12051
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 461 }
+        add_victory_points = {
+            province = 7069
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 462 }
+        add_victory_points = {
+            province = 4108
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 463 }
+        add_victory_points = {
+            province = 13091
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 464 }
+        add_victory_points = {
+            province = 7361
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 465 }
+        add_victory_points = {
+            province = 1424
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 466 }
+        add_victory_points = {
+            province = 6740
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 467 }
+        add_victory_points = {
+            province = 4872
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 468 }
+        add_victory_points = {
+            province = 4345
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 469 }
+        add_victory_points = {
+            province = 4739
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 470 }
+        add_victory_points = {
+            province = 3010
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 471 }
+        add_victory_points = {
+            province = 10548
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 472 }
+        add_victory_points = {
+            province = 10527
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 473 }
+        add_victory_points = {
+            province = 1408
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 474 }
+        add_victory_points = {
+            province = 4965
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 475 }
+        add_victory_points = {
+            province = 1900
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 476 }
+        add_victory_points = {
+            province = 2021
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 477 }
+        add_victory_points = {
+            province = 8089
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 478 }
+        add_victory_points = {
+            province = 13089
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 479 }
+        add_victory_points = {
+            province = 4956
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 480 }
+        add_victory_points = {
+            province = 12835
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 481 }
+        add_victory_points = {
+            province = 7921
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 482 }
+        add_victory_points = {
+            province = 8097
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 483 }
+        add_victory_points = {
+            province = 10765
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 484 }
+        add_victory_points = {
+            province = 12461
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 485 }
+        add_victory_points = {
+            province = 10730
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 486 }
+        add_victory_points = {
+            province = 5026
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 487 }
+        add_victory_points = {
+            province = 2160
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 488 }
+        add_victory_points = {
+            province = 10879
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 489 }
+        add_victory_points = {
+            province = 1944
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 490 }
+        add_victory_points = {
+            province = 13289
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 491 }
+        add_victory_points = {
+            province = 10970
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 492 }
+        add_victory_points = {
+            province = 2210
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 493 }
+        add_victory_points = {
+            province = 12790
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 494 }
+        add_victory_points = {
+            province = 5166
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 495 }
+        add_victory_points = {
+            province = 10934
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 496 }
+        add_victory_points = {
+            province = 7476
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 497 }
+        add_victory_points = {
+            province = 12933
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 498 }
+        add_victory_points = {
+            province = 10933
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 499 }
+        add_victory_points = {
+            province = 10946
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 500 }
+        add_victory_points = {
+            province = 10980
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 501 }
+        add_victory_points = {
+            province = 10513
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 502 }
+        add_victory_points = {
+            province = 10447
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 503 }
+        add_victory_points = {
+            province = 4548
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 504 }
+        add_victory_points = {
+            province = 12951
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 505 }
+        add_victory_points = {
+            province = 12987
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 506 }
+        add_victory_points = {
+            province = 12994
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 507 }
+        add_victory_points = {
+            province = 5215
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 508 }
+        add_victory_points = {
+            province = 8216
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 509 }
+        add_victory_points = {
+            province = 2106
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 510 }
+        add_victory_points = {
+            province = 1449
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 511 }
+        add_victory_points = {
+            province = 10964
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 512 }
+        add_victory_points = {
+            province = 12321
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 513 }
+        add_victory_points = {
+            province = 12034
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 514 }
+        add_victory_points = {
+            province = 5095
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 515 }
+        add_victory_points = {
+            province = 8028
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 516 }
+        add_victory_points = {
+            province = 4859
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 517 }
+        add_victory_points = {
+            province = 7798
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 518 }
+        add_victory_points = {
+            province = 2189
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 519 }
+        add_victory_points = {
+            province = 12910
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 520 }
+        add_victory_points = {
+            province = 7669
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 521 }
+        add_victory_points = {
+            province = 7564
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 522 }
+        add_victory_points = {
+            province = 1652
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 523 }
+        add_victory_points = {
+            province = 4329
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 524 }
+        add_victory_points = {
+            province = 7186
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 525 }
+        add_victory_points = {
+            province = 7125
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 526 }
+        add_victory_points = {
+            province = 11932
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 527 }
+        add_victory_points = {
+            province = 4052
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 528 }
+        add_victory_points = {
+            province = 9950
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 529 }
+        add_victory_points = {
+            province = 1092
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 530 }
+        add_victory_points = {
+            province = 4179
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 531 }
+        add_victory_points = {
+            province = 7072
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 532 }
+        add_victory_points = {
+            province = 10125
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 533 }
+        add_victory_points = {
+            province = 7169
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 534 }
+        add_victory_points = {
+            province = 1117
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 535 }
+        add_victory_points = {
+            province = 10032
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 536 }
+        add_victory_points = {
+            province = 10444
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 537 }
+        add_victory_points = {
+            province = 12446
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 538 }
+        add_victory_points = {
+            province = 988
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 539 }
+        add_victory_points = {
+            province = 5139
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 540 }
+        add_victory_points = {
+            province = 8248
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 541 }
+        add_victory_points = {
+            province = 4879
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 542 }
+        add_victory_points = {
+            province = 8214
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 543 }
+        add_victory_points = {
+            province = 5128
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 544 }
+        add_victory_points = {
+            province = 8245
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 545 }
+        add_victory_points = {
+            province = 10929
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 546 }
+        add_victory_points = {
+            province = 2196
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 547 }
+        add_victory_points = {
+            province = 1939
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 548 }
+        add_victory_points = {
+            province = 12989
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 549 }
+        add_victory_points = {
+            province = 2016
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 550 }
+        add_victory_points = {
+            province = 13250
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 551 }
+        add_victory_points = {
+            province = 12806
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 552 }
+        add_victory_points = {
+            province = 12099
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 553 }
+        add_victory_points = {
+            province = 792
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 554 }
+        add_victory_points = {
+            province = 4111
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 555 }
+        add_victory_points = {
+            province = 1399
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 556 }
+        add_victory_points = {
+            province = 4927
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 557 }
+        add_victory_points = {
+            province = 5034
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 558 }
+        add_victory_points = {
+            province = 2050
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 559 }
+        add_victory_points = {
+            province = 12991
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 560 }
+        add_victory_points = {
+            province = 12559
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 561 }
+        add_victory_points = {
+            province = 12660
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 562 }
+        add_victory_points = {
+            province = 12518
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 563 }
+        add_victory_points = {
+            province = 4705
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 564 }
+        add_victory_points = {
+            province = 7835
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 565 }
+        add_victory_points = {
+            province = 7759
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 566 }
+        add_victory_points = {
+            province = 4797
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 567 }
+        add_victory_points = {
+            province = 7802
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 568 }
+        add_victory_points = {
+            province = 4724
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 569 }
+        add_victory_points = {
+            province = 10580
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 570 }
+        add_victory_points = {
+            province = 7274
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 571 }
+        add_victory_points = {
+            province = 10696
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 572 }
+        add_victory_points = {
+            province = 9292
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 573 }
+        add_victory_points = {
+            province = 10329
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 574 }
+        add_victory_points = {
+            province = 10641
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 575 }
+        add_victory_points = {
+            province = 4737
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 576 }
+        add_victory_points = {
+            province = 7805
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 577 }
+        add_victory_points = {
+            province = 7685
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 578 }
+        add_victory_points = {
+            province = 7789
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 579 }
+        add_victory_points = {
+            province = 1684
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 580 }
+        add_victory_points = {
+            province = 1659
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 581 }
+        add_victory_points = {
+            province = 11098
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 582 }
+        add_victory_points = {
+            province = 10256
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 583 }
+        add_victory_points = {
+            province = 10312
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 584 }
+        add_victory_points = {
+            province = 12333
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 585 }
+        add_victory_points = {
+            province = 1554
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 586 }
+        add_victory_points = {
+            province = 1591
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 587 }
+        add_victory_points = {
+            province = 1517
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 588 }
+        add_victory_points = {
+            province = 12594
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 589 }
+        add_victory_points = {
+            province = 1668
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 590 }
+        add_victory_points = {
+            province = 4333
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 591 }
+        add_victory_points = {
+            province = 1070
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 592 }
+        add_victory_points = {
+            province = 1047
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 593 }
+        add_victory_points = {
+            province = 7108
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 594 }
+        add_victory_points = {
+            province = 7137
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 595 }
+        add_victory_points = {
+            province = 4196
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 596 }
+        add_victory_points = {
+            province = 7191
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 597 }
+        add_victory_points = {
+            province = 1069
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 598 }
+        add_victory_points = {
+            province = 7142
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 599 }
+        add_victory_points = {
+            province = 10404
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 600 }
+        add_victory_points = {
+            province = 3992
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 601 }
+        add_victory_points = {
+            province = 10856
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 602 }
+        add_victory_points = {
+            province = 7097
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 603 }
+        add_victory_points = {
+            province = 4504
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 604 }
+        add_victory_points = {
+            province = 7940
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 605 }
+        add_victory_points = {
+            province = 6999
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 606 }
+        add_victory_points = {
+            province = 7222
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 607 }
+        add_victory_points = {
+            province = 9958
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 608 }
+        add_victory_points = {
+            province = 9843
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 609 }
+        add_victory_points = {
+            province = 12043
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 610 }
+        add_victory_points = {
+            province = 6837
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 611 }
+        add_victory_points = {
+            province = 11752
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 612 }
+        add_victory_points = {
+            province = 10372
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 613 }
+        add_victory_points = {
+            province = 11913
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 614 }
+        add_victory_points = {
+            province = 4190
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 615 }
+        add_victory_points = {
+            province = 1519
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 616 }
+        add_victory_points = {
+            province = 8127
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 617 }
+        add_victory_points = {
+            province = 4709
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 618 }
+        add_victory_points = {
+            province = 4823
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 619 }
+        add_victory_points = {
+            province = 2015
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 620 }
+        add_victory_points = {
+            province = 4619
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 621 }
+        add_victory_points = {
+            province = 10424
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 622 }
+        add_victory_points = {
+            province = 8049
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 623 }
+        add_victory_points = {
+            province = 1415
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 624 }
+        add_victory_points = {
+            province = 4288
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 625 }
+        add_victory_points = {
+            province = 1224
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 626 }
+        add_victory_points = {
+            province = 4429
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 627 }
+        add_victory_points = {
+            province = 4241
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 628 }
+        add_victory_points = {
+            province = 12118
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 629 }
+        add_victory_points = {
+            province = 4180
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 630 }
+        add_victory_points = {
+            province = 13051
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 631 }
+        add_victory_points = {
+            province = 13052
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 632 }
+        add_victory_points = {
+            province = 13047
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 633 }
+        add_victory_points = {
+            province = 13041
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 634 }
+        add_victory_points = {
+            province = 1269
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 635 }
+        add_victory_points = {
+            province = 4268
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 636 }
+        add_victory_points = {
+            province = 4286
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 637 }
+        add_victory_points = {
+            province = 1823
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 638 }
+        add_victory_points = {
+            province = 12140
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 639 }
+        add_victory_points = {
+            province = 13021
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 640 }
+        add_victory_points = {
+            province = 1492
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 641 }
+        add_victory_points = {
+            province = 12148
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 642 }
+        add_victory_points = {
+            province = 13050
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 643 }
+        add_victory_points = {
+            province = 13054
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 644 }
+        add_victory_points = {
+            province = 1819
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 645 }
+        add_victory_points = {
+            province = 13025
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 646 }
+        add_victory_points = {
+            province = 3995
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 647 }
+        add_victory_points = {
+            province = 4357
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 648 }
+        add_victory_points = {
+            province = 13026
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 649 }
+        add_victory_points = {
+            province = 5023
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 650 }
+        add_victory_points = {
+            province = 13067
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 651 }
+        add_victory_points = {
+            province = 1278
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 652 }
+        add_victory_points = {
+            province = 12128
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 653 }
+        add_victory_points = {
+            province = 1821
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 654 }
+        add_victory_points = {
+            province = 4800
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 655 }
+        add_victory_points = {
+            province = 855
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 656 }
+        add_victory_points = {
+            province = 8085
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 657 }
+        add_victory_points = {
+            province = 4725
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 658 }
+        add_victory_points = {
+            province = 7960
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 659 }
+        add_victory_points = {
+            province = 2029
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 660 }
+        add_victory_points = {
+            province = 12830
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 661 }
+        add_victory_points = {
+            province = 1174
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 662 }
+        add_victory_points = {
+            province = 4200
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 663 }
+        add_victory_points = {
+            province = 1062
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 664 }
+        add_victory_points = {
+            province = 6573
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 665 }
+        add_victory_points = {
+            province = 7005
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 666 }
+        add_victory_points = {
+            province = 9108
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 667 }
+        add_victory_points = {
+            province = 1298
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 668 }
+        add_victory_points = {
+            province = 1351
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 669 }
+        add_victory_points = {
+            province = 12371
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 670 }
+        add_victory_points = {
+            province = 1464
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 671 }
+        add_victory_points = {
+            province = 4075
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 672 }
+        add_victory_points = {
+            province = 4652
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 673 }
+        add_victory_points = {
+            province = 10263
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 674 }
+        add_victory_points = {
+            province = 2133
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 675 }
+        add_victory_points = {
+            province = 12879
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 676 }
+        add_victory_points = {
+            province = 10106
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 677 }
+        add_victory_points = {
+            province = 12473
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 678 }
+        add_victory_points = {
+            province = 4932
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 679 }
+        add_victory_points = {
+            province = 12758
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 680 }
+        add_victory_points = {
+            province = 1549
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 681 }
+        add_victory_points = {
+            province = 12589
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 682 }
+        add_victory_points = {
+            province = 7899
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 683 }
+        add_victory_points = {
+            province = 2947
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 684 }
+        add_victory_points = {
+            province = 2489
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 685 }
+        add_victory_points = {
+            province = 7617
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 686 }
+        add_victory_points = {
+            province = 1440
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 687 }
+        add_victory_points = {
+            province = 4982
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 688 }
+        add_victory_points = {
+            province = 2195
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 689 }
+        add_victory_points = {
+            province = 12304
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 690 }
+        add_victory_points = {
+            province = 10254
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 691 }
+        add_victory_points = {
+            province = 3284
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 692 }
+        add_victory_points = {
+            province = 11350
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 693 }
+        add_victory_points = {
+            province = 1513
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 694 }
+        add_victory_points = {
+            province = 9377
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 695 }
+        add_victory_points = {
+            province = 153
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 696 }
+        add_victory_points = {
+            province = 13010
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 697 }
+        add_victory_points = {
+            province = 3118
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 698 }
+        add_victory_points = {
+            province = 1751
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 699 }
+        add_victory_points = {
+            province = 8038
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 700 }
+        add_victory_points = {
+            province = 2038
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 701 }
+        add_victory_points = {
+            province = 4989
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 702 }
+        add_victory_points = {
+            province = 13014
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 703 }
+        add_victory_points = {
+            province = 13013
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 704 }
+        add_victory_points = {
+            province = 13016
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 705 }
+        add_victory_points = {
+            province = 13015
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 706 }
+        add_victory_points = {
+            province = 13017
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 707 }
+        add_victory_points = {
+            province = 13018
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 708 }
+        add_victory_points = {
+            province = 13072
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 709 }
+        add_victory_points = {
+            province = 2188
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 710 }
+        add_victory_points = {
+            province = 13019
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 711 }
+        add_victory_points = {
+            province = 13005
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 712 }
+        add_victory_points = {
+            province = 13002
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 713 }
+        add_victory_points = {
+            province = 2165
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 714 }
+        add_victory_points = {
+            province = 4506
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 715 }
+        add_victory_points = {
+            province = 916
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 716 }
+        add_victory_points = {
+            province = 11771
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 717 }
+        add_victory_points = {
+            province = 9897
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 718 }
+        add_victory_points = {
+            province = 1950
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 719 }
+        add_victory_points = {
+            province = 1468
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 720 }
+        add_victory_points = {
+            province = 10995
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 721 }
+        add_victory_points = {
+            province = 1326
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 722 }
+        add_victory_points = {
+            province = 9140
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 723 }
+        add_victory_points = {
+            province = 2197
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 724 }
+        add_victory_points = {
+            province = 7236
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 725 }
+        add_victory_points = {
+            province = 13038
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 726 }
+        add_victory_points = {
+            province = 7290
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 727 }
+        add_victory_points = {
+            province = 13048
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 728 }
+        add_victory_points = {
+            province = 11981
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 729 }
+        add_victory_points = {
+            province = 4189
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 730 }
+        add_victory_points = {
+            province = 373
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 731 }
+        add_victory_points = {
+            province = 11818
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 732 }
+        add_victory_points = {
+            province = 12583
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 733 }
+        add_victory_points = {
+            province = 10321
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 734 }
+        add_victory_points = {
+            province = 7390
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 735 }
+        add_victory_points = {
+            province = 9909
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 736 }
+        add_victory_points = {
+            province = 6626
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 737 }
+        add_victory_points = {
+            province = 7251
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 738 }
+        add_victory_points = {
+            province = 4579
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 739 }
+        add_victory_points = {
+            province = 1869
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 740 }
+        add_victory_points = {
+            province = 7259
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 741 }
+        add_victory_points = {
+            province = 7376
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 742 }
+        add_victory_points = {
+            province = 1384
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 743 }
+        add_victory_points = {
+            province = 10000
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 744 }
+        add_victory_points = {
+            province = 7418
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 745 }
+        add_victory_points = {
+            province = 1150
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 746 }
+        add_victory_points = {
+            province = 1959
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 747 }
+        add_victory_points = {
+            province = 7965
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 748 }
+        add_victory_points = {
+            province = 1010
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 749 }
+        add_victory_points = {
+            province = 12019
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 750 }
+        add_victory_points = {
+            province = 7101
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 751 }
+        add_victory_points = {
+            province = 12141
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 752 }
+        add_victory_points = {
+            province = 4999
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 753 }
+        add_victory_points = {
+            province = 2045
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 754 }
+        add_victory_points = {
+            province = 12732
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 755 }
+        add_victory_points = {
+            province = 2053
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 756 }
+        add_victory_points = {
+            province = 1778
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 757 }
+        add_victory_points = {
+            province = 5033
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 758 }
+        add_victory_points = {
+            province = 1961
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 759 }
+        add_victory_points = {
+            province = 1698
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 760 }
+        add_victory_points = {
+            province = 1838
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 761 }
+        add_victory_points = {
+            province = 1776
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 762 }
+        add_victory_points = {
+            province = 6464
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 763 }
+        add_victory_points = {
+            province = 6332
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 764 }
+        add_victory_points = {
+            province = 3614
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 765 }
+        add_victory_points = {
+            province = 8051
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 766 }
+        add_victory_points = {
+            province = 6727
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 767 }
+        add_victory_points = {
+            province = 7987
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 768 }
+        add_victory_points = {
+            province = 9962
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 769 }
+        add_victory_points = {
+            province = 2220
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 770 }
+        add_victory_points = {
+            province = 12986
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 771 }
+        add_victory_points = {
+            province = 5199
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 772 }
+        add_victory_points = {
+            province = 8193
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 773 }
+        add_victory_points = {
+            province = 2080
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 774 }
+        add_victory_points = {
+            province = 2081
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 775 }
+        add_victory_points = {
+            province = 4902
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 776 }
+        add_victory_points = {
+            province = 10919
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 777 }
+        add_victory_points = {
+            province = 1951
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 778 }
+        add_victory_points = {
+            province = 10836
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 779 }
+        add_victory_points = {
+            province = 10803
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 780 }
+        add_victory_points = {
+            province = 1909
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 781 }
+        add_victory_points = {
+            province = 2056
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 782 }
+        add_victory_points = {
+            province = 1115
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 783 }
+        add_victory_points = {
+            province = 12857
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 784 }
+        add_victory_points = {
+            province = 3320
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 785 }
+        add_victory_points = {
+            province = 11420
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 786 }
+        add_victory_points = {
+            province = 1897
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 787 }
+        add_victory_points = {
+            province = 1910
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 788 }
+        add_victory_points = {
+            province = 3874
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 789 }
+        add_victory_points = {
+            province = 875
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 790 }
+        add_victory_points = {
+            province = 11707
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 791 }
+        add_victory_points = {
+            province = 11825
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 792 }
+        add_victory_points = {
+            province = 740
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 793 }
+        add_victory_points = {
+            province = 3945
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 794 }
+        add_victory_points = {
+            province = 3954
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 795 }
+        add_victory_points = {
+            province = 924
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 796 }
+        add_victory_points = {
+            province = 2115
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 797 }
+        add_victory_points = {
+            province = 9833
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 798 }
+        add_victory_points = {
+            province = 919
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 799 }
+        add_victory_points = {
+            province = 12029
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 800 }
+        add_victory_points = {
+            province = 6935
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 801 }
+        add_victory_points = {
+            province = 3796
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 802 }
+        add_victory_points = {
+            province = 6940
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 803 }
+        add_victory_points = {
+            province = 11857
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 804 }
+        add_victory_points = {
+            province = 9894
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 805 }
+        add_victory_points = {
+            province = 914
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 806 }
+        add_victory_points = {
+            province = 9710
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 807 }
+        add_victory_points = {
+            province = 3295
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 808 }
+        add_victory_points = {
+            province = 9340
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 809 }
+        add_victory_points = {
+            province = 6222
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 810 }
+        add_victory_points = {
+            province = 310
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 811 }
+        add_victory_points = {
+            province = 185
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 812 }
+        add_victory_points = {
+            province = 3152
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 813 }
+        add_victory_points = {
+            province = 4640
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 814 }
+        add_victory_points = {
+            province = 11312
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 815 }
+        add_victory_points = {
+            province = 6229
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 816 }
+        add_victory_points = {
+            province = 7588
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 817 }
+        add_victory_points = {
+            province = 12612
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 818 }
+        add_victory_points = {
+            province = 7843
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 819 }
+        add_victory_points = {
+            province = 12557
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 820 }
+        add_victory_points = {
+            province = 7717
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 821 }
+        add_victory_points = {
+            province = 3672
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 822 }
+        add_victory_points = {
+            province = 13063
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 823 }
+        add_victory_points = {
+            province = 1614
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 824 }
+        add_victory_points = {
+            province = 96
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 825 }
+        add_victory_points = {
+            province = 105
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 826 }
+        add_victory_points = {
+            province = 11617
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 827 }
+        add_victory_points = {
+            province = 11614
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 828 }
+        add_victory_points = {
+            province = 9628
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 829 }
+        add_victory_points = {
+            province = 11523
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 830 }
+        add_victory_points = {
+            province = 1573
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 831 }
+        add_victory_points = {
+            province = 12465
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 832 }
+        add_victory_points = {
+            province = 1493
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 833 }
+        add_victory_points = {
+            province = 9402
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 834 }
+        add_victory_points = {
+            province = 3757
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 835 }
+        add_victory_points = {
+            province = 13249
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 836 }
+        add_victory_points = {
+            province = 10775
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 837 }
+        add_victory_points = {
+            province = 13246
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 838 }
+        add_victory_points = {
+            province = 13244
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 839 }
+        add_victory_points = {
+            province = 2009
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 840 }
+        add_victory_points = {
+            province = 13242
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 841 }
+        add_victory_points = {
+            province = 1984
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 842 }
+        add_victory_points = {
+            province = 2072
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 843 }
+        add_victory_points = {
+            province = 5097
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 844 }
+        add_victory_points = {
+            province = 12941
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 845 }
+        add_victory_points = {
+            province = 6666
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 846 }
+        add_victory_points = {
+            province = 9600
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 847 }
+        add_victory_points = {
+            province = 636
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 848 }
+        add_victory_points = {
+            province = 6678
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 849 }
+        add_victory_points = {
+            province = 11837
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 850 }
+        add_victory_points = {
+            province = 9598
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 851 }
+        add_victory_points = {
+            province = 911
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 852 }
+        add_victory_points = {
+            province = 11564
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 853 }
+        add_victory_points = {
+            province = 9627
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 854 }
+        add_victory_points = {
+            province = 2057
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 855 }
+        add_victory_points = {
+            province = 1033
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 856 }
+        add_victory_points = {
+            province = 5037
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 857 }
+        add_victory_points = {
+            province = 4968
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 858 }
+        add_victory_points = {
+            province = 5006
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 859 }
+        add_victory_points = {
+            province = 12702
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 860 }
+        add_victory_points = {
+            province = 7683
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 861 }
+        add_victory_points = {
+            province = 1657
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 862 }
+        add_victory_points = {
+            province = 983
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 863 }
+        add_victory_points = {
+            province = 12223
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 864 }
+        add_victory_points = {
+            province = 3606
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 865 }
+        add_victory_points = {
+            province = 1671
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 866 }
+        add_victory_points = {
+            province = 761
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 867 }
+        add_victory_points = {
+            province = 5239
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 868 }
+        add_victory_points = {
+            province = 10438
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 869 }
+        add_victory_points = {
+            province = 1488
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 870 }
+        add_victory_points = {
+            province = 2201
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 871 }
+        add_victory_points = {
+            province = 1526
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 872 }
+        add_victory_points = {
+            province = 1501
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 873 }
+        add_victory_points = {
+            province = 2116
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 874 }
+        add_victory_points = {
+            province = 12683
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 875 }
+        add_victory_points = {
+            province = 13204
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 876 }
+        add_victory_points = {
+            province = 1722
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 877 }
+        add_victory_points = {
+            province = 12549
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 878 }
+        add_victory_points = {
+            province = 2900
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 879 }
+        add_victory_points = {
+            province = 138
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 880 }
+        add_victory_points = {
+            province = 11061
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 881 }
+        add_victory_points = {
+            province = 1243
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 882 }
+        add_victory_points = {
+            province = 7708
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 883 }
+        add_victory_points = {
+            province = 12725
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 884 }
+        add_victory_points = {
+            province = 2096
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 885 }
+        add_victory_points = {
+            province = 1953
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 886 }
+        add_victory_points = {
+            province = 1914
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 887 }
+        add_victory_points = {
+            province = 1960
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 888 }
+        add_victory_points = {
+            province = 2024
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 889 }
+        add_victory_points = {
+            province = 191
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 890 }
+        add_victory_points = {
+            province = 4941
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 891 }
+        add_victory_points = {
+            province = 1552
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 892 }
+        add_victory_points = {
+            province = 10966
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 893 }
+        add_victory_points = {
+            province = 2229
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 894 }
+        add_victory_points = {
+            province = 10957
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 895 }
+        add_victory_points = {
+            province = 8136
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 896 }
+        add_victory_points = {
+            province = 2120
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 897 }
+        add_victory_points = {
+            province = 2123
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 898 }
+        add_victory_points = {
+            province = 2044
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 899 }
+        add_victory_points = {
+            province = 2012
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 900 }
+        add_victory_points = {
+            province = 8034
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 901 }
+        add_victory_points = {
+            province = 4997
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 902 }
+        add_victory_points = {
+            province = 1891
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 903 }
+        add_victory_points = {
+            province = 8133
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 904 }
+        add_victory_points = {
+            province = 5160
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 905 }
+        add_victory_points = {
+            province = 5210
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 906 }
+        add_victory_points = {
+            province = 8000
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 907 }
+        add_victory_points = {
+            province = 7011
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 908 }
+        add_victory_points = {
+            province = 13240
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 909 }
+        add_victory_points = {
+            province = 317
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 910 }
+        add_victory_points = {
+            province = 6361
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 911 }
+        add_victory_points = {
+            province = 3325
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 912 }
+        add_victory_points = {
+            province = 13258
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 913 }
+        add_victory_points = {
+            province = 9393
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 914 }
+        add_victory_points = {
+            province = 13272
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 915 }
+        add_victory_points = {
+            province = 6310
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 916 }
+        add_victory_points = {
+            province = 156
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 917 }
+        add_victory_points = {
+            province = 11148
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 918 }
+        add_victory_points = {
+            province = 6132
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 919 }
+        add_victory_points = {
+            province = 11114
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 920 }
+        add_victory_points = {
+            province = 3136
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 921 }
+        add_victory_points = {
+            province = 6151
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 922 }
+        add_victory_points = {
+            province = 9296
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 923 }
+        add_victory_points = {
+            province = 3048
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 924 }
+        add_victory_points = {
+            province = 11050
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 925 }
+        add_victory_points = {
+            province = 9116
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 926 }
+        add_victory_points = {
+            province = 3083
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 927 }
+        add_victory_points = {
+            province = 3137
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 928 }
+        add_victory_points = {
+            province = 3061
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 929 }
+        add_victory_points = {
+            province = 158
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 930 }
+        add_victory_points = {
+            province = 37
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 931 }
+        add_victory_points = {
+            province = 11332
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 932 }
+        add_victory_points = {
+            province = 3311
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 933 }
+        add_victory_points = {
+            province = 6196
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 934 }
+        add_victory_points = {
+            province = 9780
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 935 }
+        add_victory_points = {
+            province = 5107
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 936 }
+        add_victory_points = {
+            province = 5168
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 937 }
+        add_victory_points = {
+            province = 5153
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 938 }
+        add_victory_points = {
+            province = 12853
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 939 }
+        add_victory_points = {
+            province = 4980
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 940 }
+        add_victory_points = {
+            province = 13278
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 941 }
+        add_victory_points = {
+            province = 5151
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 942 }
+        add_victory_points = {
+            province = 12939
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 943 }
+        add_victory_points = {
+            province = 10999
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 944 }
+        add_victory_points = {
+            province = 8181
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 945 }
+        add_victory_points = {
+            province = 1641
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 946 }
+        add_victory_points = {
+            province = 12468
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 947 }
+        add_victory_points = {
+            province = 13086
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 948 }
+        add_victory_points = {
+            province = 13294
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 949 }
+        add_victory_points = {
+            province = 2161
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 950 }
+        add_victory_points = {
+            province = 5121
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 951 }
+        add_victory_points = {
+            province = 5131
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 952 }
+        add_victory_points = {
+            province = 5228
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 953 }
+        add_victory_points = {
+            province = 13300
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 954 }
+        add_victory_points = {
+            province = 5173
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 955 }
+        add_victory_points = {
+            province = 10953
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 956 }
+        add_victory_points = {
+            province = 7500
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 957 }
+        add_victory_points = {
+            province = 12922
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 958 }
+        add_victory_points = {
+            province = 12942
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 959 }
+        add_victory_points = {
+            province = 2224
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 960 }
+        add_victory_points = {
+            province = 2136
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 961 }
+        add_victory_points = {
+            province = 12919
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 962 }
+        add_victory_points = {
+            province = 13330
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 963 }
+        add_victory_points = {
+            province = 10960
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 964 }
+        add_victory_points = {
+            province = 2198
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 965 }
+        add_victory_points = {
+            province = 2147
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 966 }
+        add_victory_points = {
+            province = 8172
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 967 }
+        add_victory_points = {
+            province = 13285
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 968 }
+        add_victory_points = {
+            province = 5008
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 969 }
+        add_victory_points = {
+            province = 5214
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 970 }
+        add_victory_points = {
+            province = 833
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 971 }
+        add_victory_points = {
+            province = 657
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 972 }
+        add_victory_points = {
+            province = 557
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 973 }
+        add_victory_points = {
+            province = 6700
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 974 }
+        add_victory_points = {
+            province = 11610
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 975 }
+        add_victory_points = {
+            province = 3700
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 976 }
+        add_victory_points = {
+            province = 9648
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 977 }
+        add_victory_points = {
+            province = 6598
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 978 }
+        add_victory_points = {
+            province = 3530
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 979 }
+        add_victory_points = {
+            province = 12237
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 980 }
+        add_victory_points = {
+            province = 9418
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 981 }
+        add_victory_points = {
+            province = 697
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 982 }
+        add_victory_points = {
+            province = 1321
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 983 }
+        add_victory_points = {
+            province = 12295
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 984 }
+        add_victory_points = {
+            province = 7465
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 985 }
+        add_victory_points = {
+            province = 4435
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 986 }
+        add_victory_points = {
+            province = 10729
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 987 }
+        add_victory_points = {
+            province = 1107
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 988 }
+        add_victory_points = {
+            province = 5105
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 989 }
+        add_victory_points = {
+            province = 10843
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 990 }
+        add_victory_points = {
+            province = 1553
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 991 }
+        add_victory_points = {
+            province = 1949
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 992 }
+        add_victory_points = {
+            province = 5074
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 993 }
+        add_victory_points = {
+            province = 4175
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 994 }
+        add_victory_points = {
+            province = 1403
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 995 }
+        add_victory_points = {
+            province = 1330
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 996 }
+        add_victory_points = {
+            province = 7254
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 997 }
+        add_victory_points = {
+            province = 1014
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 998 }
+        add_victory_points = {
+            province = 4425
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 999 }
+        add_victory_points = {
+            province = 1170
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1000 }
+        add_victory_points = {
+            province = 1896
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1001 }
+        add_victory_points = {
+            province = 4943
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1002 }
+        add_victory_points = {
+            province = 8031
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1003 }
+        add_victory_points = {
+            province = 7990
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1004 }
+        add_victory_points = {
+            province = 7573
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1005 }
+        add_victory_points = {
+            province = 10781
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1006 }
+        add_victory_points = {
+            province = 5082
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1007 }
+        add_victory_points = {
+            province = 12248
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1008 }
+        add_victory_points = {
+            province = 5064
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1009 }
+        add_victory_points = {
+            province = 2017
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1010 }
+        add_victory_points = {
+            province = 12413
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1011 }
+        add_victory_points = {
+            province = 2089
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1012 }
+        add_victory_points = {
+            province = 8098
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1013 }
+        add_victory_points = {
+            province = 13369
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1014 }
+        add_victory_points = {
+            province = 13313
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1015 }
+        add_victory_points = {
+            province = 5049
+            value = 2
+        }
+    }
+    else_if = {
+        limit = { state = 1016 }
+        add_victory_points = {
+            province = 2103
+            value = 2
+        }
+    }
+}
+
 ETH_get_ships_from_country = { #MOved this here from event in ETH. This works with events where FROM is the country making the ships and ROOT is the country receiving it. Check which country it is and transfers an appropriate amount of ships of a template depending on the country. Currently only works with USA, ENG, GER and SOV.
-	IF = {
+	if = {
 		limit = {
 			FROM = {
 				state_originally_from_UKD = yes
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
@@ -97,7 +7251,7 @@ ETH_get_ships_from_country = { #MOved this here from event in ETH. This works wi
 		}	
 		FROM = { set_country_flag = sold_ships_to_us@ROOT }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			 FROM = {
 			 	state_originally_from_SOV = yes
@@ -132,7 +7286,7 @@ ETH_get_ships_from_country = { #MOved this here from event in ETH. This works wi
 		FROM = { set_country_flag = sold_ships_to_us@ROOT }
 		
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			 FROM = {
 			 	state_originally_from_GER = yes
@@ -262,7 +7416,7 @@ ETH_get_ships_from_country = { #MOved this here from event in ETH. This works wi
 		}
 		FROM = { set_country_flag = sold_ships_to_us@ROOT }
 	}
-	ELSE_IF = {
+	else_if = {
 		limit = {
 			 FROM = {
 			 	state_originally_from_USA = yes

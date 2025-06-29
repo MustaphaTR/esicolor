@@ -54,6 +54,7 @@ adjust_state_names = {
 	adjust_state_name_538 = yes
 	adjust_state_name_542 = yes
 	adjust_state_name_545 = yes
+	adjust_state_name_555 = yes
 	adjust_state_name_653 = yes
 	adjust_state_name_664 = yes
 	adjust_state_name_718 = yes
@@ -338,6 +339,10 @@ adjust_state_names_on_state_core_changed = {
 	else_if = {
 		limit = { FROM.FROM = { state = 545 } }
 		adjust_state_name_545 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 555 } }
+		adjust_state_name_555 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 653 } }
@@ -711,6 +716,10 @@ adjust_state_names_on_ruling_party_change = {
 		adjust_state_name_545 = yes
 	}
 	if = {
+		limit = { owns_state = 555 }
+		adjust_state_name_555 = yes
+	}
+	if = {
 		limit = { owns_state = 538 }
 		adjust_state_name_538 = yes
 	}
@@ -903,19 +912,35 @@ adjust_state_name_72 = {
 	if = {
 		limit = { 72 = { owner = { state_originally_from_CZE = yes } } }
 
+		set_province_name = {
+			id = 9567
+			name = VICTORY_POINTS_9567
+		}
 		72 = { set_state_name = CZE_STATE_72 }
 	}
 	else_if = {
 		limit = { 72 = { owner = { state_originally_from_POL = yes } } }
 
+		set_province_name = {
+			id = 9567
+			name = VICTORY_POINTS_9567_POL
+		}
 		72 = { set_state_name = POL_STATE_72 }
 	}
 	else_if = {
 		limit = { 72 = { owner = { state_originally_from_GER = yes } } }
 
+		set_province_name = {
+			id = 9567
+			name = VICTORY_POINTS_9567_GER
+		}
 		72 = { set_state_name = GER_STATE_72 }
 	}
 	else = {
+		set_province_name = {
+			id = 9567
+			name = VICTORY_POINTS_9567
+		}
 		72 = { set_state_name = STATE_72 }
 	}
 }
@@ -2896,6 +2921,23 @@ adjust_state_name_545 = {
 	}
 	else = {
 		545 = { set_state_name = SAS }
+	}
+}
+
+adjust_state_name_555 = {
+	if = {
+		limit = { 555 = { owner = { state_originally_from_SOV = yes } } }
+
+		set_province_name = {
+			id = 1399
+			name = VICTORY_POINTS_1399_SOV
+		}
+	}
+	else = {
+		set_province_name = {
+			id = 1399
+			name = VICTORY_POINTS_1399
+		}
 	}
 }
 

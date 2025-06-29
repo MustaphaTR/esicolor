@@ -1,0 +1,293 @@
+ideas = {
+	country = {
+		# Default Generic Tree
+		idea_political_correctness = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			modifier = {
+				drift_defence_factor = 0.5
+			}
+		}
+
+		democratic_ideals = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+
+			modifier = {
+				democratic_drift = 0.1
+			}
+		}
+
+		neutral_ideals = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				neutrality_drift = 0.1
+			}
+		}
+
+		defence_of_our_land_idea = {
+			name = defence_of_our_land
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_naval_auxiliary_patrol
+
+			modifier = {
+				defensive_war_stability_factor = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		volunteer_corps_focus = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				send_volunteer_divisions_required = -0.25
+				send_volunteer_size = 1
+			}
+		}
+
+		foreign_expeditions_focus = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				send_volunteer_divisions_required = -0.75
+				send_volunteer_size = 3
+			}
+		}
+
+		# Horn of Africa Generic Tree
+		HOA_the_capital_school_of_technology = {
+			picture = generic_research_bonus
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		HOA_a_change_in_course_idea_neutrality = {
+			name = ENG_a_change_in_course
+			picture = eng_a_change_in_course
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				neutrality_drift = -0.2
+			}
+		}
+		HOA_a_change_in_course_idea_democratic = {
+			name = ENG_a_change_in_course
+			picture = eng_a_change_in_course
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				democratic_drift = -0.2
+			}
+		}
+		HOA_a_change_in_course_idea_fascism = {
+			name = ENG_a_change_in_course
+			picture = eng_a_change_in_course
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				fascism_drift = -0.2
+			}
+		}
+		HOA_a_change_in_course_idea_communism = {
+			name = ENG_a_change_in_course
+			picture = eng_a_change_in_course
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				communism_drift = -0.2
+			}
+		}
+
+		HOA_empowered_chambers = {
+			picture = AFG_parliament_building
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		HOA_federalisation = {
+			picture = GFX_focus_generic_self_management
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				global_building_slots = 1
+			}
+		}
+
+		HOA_improved_administration = {
+			picture = ETH_corrupt_bureaucracy
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		HOA_rally_around_na_leader_idea = {
+			picture = generic_pp_unity_bonus
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				neutrality_drift = 0.1
+			}
+		}
+
+		HOA_fortification_focus = {
+			picture = generic_fortify_the_borders
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_bunker_factor = 0.25
+				production_speed_coastal_bunker_factor = 0.25
+				production_speed_anti_air_building_factor = 0.25
+				bunker_max_level_terrain_limit = 1
+				coastal_bunker_max_level_terrain_limit = 1
+			}
+		}
+	}
+}

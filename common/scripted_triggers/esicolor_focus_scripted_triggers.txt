@@ -1,0 +1,201 @@
+has_any_resources = {
+	OR = {
+		oil > 0
+		rubber > 0
+		steel > 0
+		aluminium > 0
+		tungsten > 0
+		chromium > 0
+	}
+}
+
+any_neighbour_valid_for_war_goal = {
+	custom_trigger_tooltip = {
+		tooltip = any_neighbour_valid_for_war_goal_tt
+
+		any_neighbor_country = {
+			NOT = {
+				original_tag = OOO
+				is_in_faction_with = ROOT
+				is_subject_of = ROOT
+				is_subject_of = ROOT.overlord
+				has_subject = ROOT
+				has_non_aggression_pact_with = ROOT
+				ROOT = { has_wargoal_against = PREV }
+			}
+
+			any_owned_state = {
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { is_claimed_by = ROOT }
+				}
+
+				OR = {
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+					is_neighboring_ownership_special_case_country = yes
+				}
+			}
+		}
+	}
+}
+
+state_without_VP_at_start = {
+	OR = {
+		state = 72
+		state = 215
+		state = 262
+		state = 270
+		state = 273
+		state = 288
+		state = 308
+		state = 320
+		state = 322
+		state = 332
+		state = 381
+		state = 421
+		state = 424
+		state = 426
+		state = 434
+		state = 444
+		state = 445
+		state = 449
+		state = 466
+		state = 471
+		state = 472
+		state = 486
+		state = 514
+		state = 515
+		state = 552
+		state = 555
+		state = 560
+		state = 561
+		state = 562
+		state = 565
+		state = 567
+		state = 575
+		state = 577
+		state = 581
+		state = 593
+		state = 598
+		state = 609
+		state = 610
+		state = 612
+		state = 614
+		state = 621
+		state = 625
+		state = 626
+		state = 630
+		state = 637
+		state = 642
+		state = 643
+		state = 648
+		state = 652
+		state = 655
+		state = 657
+		state = 659
+		state = 661
+		state = 662
+		state = 663
+		state = 667
+		state = 668
+		state = 674
+		state = 678
+		state = 683
+		state = 693
+		state = 703
+		state = 704
+		state = 705
+		state = 706
+		state = 707
+		state = 708
+		state = 709
+		state = 710
+		state = 711
+		state = 712
+		state = 713
+		state = 714
+		state = 715
+		state = 717
+		state = 720
+		state = 721
+		state = 727
+		state = 728
+		state = 730
+		state = 734
+		state = 738
+		state = 739
+		state = 746
+		state = 755
+		state = 756
+		state = 758
+		state = 759
+		state = 760
+		state = 761
+		state = 767
+		state = 775
+		state = 782
+		state = 786
+		state = 824
+		state = 847
+		state = 848
+		state = 854
+		state = 855
+		state = 857
+		state = 858
+		state = 860
+		state = 861
+		state = 862
+		state = 864
+		state = 865
+		state = 866
+		state = 867
+		state = 870
+		state = 871
+		state = 872
+		state = 873
+		state = 878
+		state = 884
+		state = 885
+		state = 886
+		state = 887
+		state = 891
+		state = 893
+		state = 894
+		state = 895
+		state = 896
+		state = 897
+		state = 898
+		state = 899
+		state = 901
+		state = 903
+		state = 904
+		state = 906
+		state = 910
+		state = 914
+		state = 933
+		state = 961
+		state = 962
+		state = 963
+		state = 964
+		state = 965
+		state = 966
+		state = 967
+		state = 968
+		state = 969
+		state = 984
+		state = 987
+		state = 989
+		state = 991
+		state = 993
+		state = 994
+		state = 996
+		state = 997
+		state = 999
+		state = 1004
+		state = 1013
+	}
+}

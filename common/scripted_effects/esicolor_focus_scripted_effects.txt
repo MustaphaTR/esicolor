@@ -1,0 +1,322 @@
+esicolor_add_random_civ_factory_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+				building = industrial_complex
+				size > 0
+				include_locked = yes
+			}
+			if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+							is_in_home_area = yes
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_in_home_area = yes
+				is_core_of = ROOT ## Prioritise cores in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_core_of = ROOT ## Then cores not in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+							is_in_home_area = yes
+						}
+					}
+				}
+				is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+esicolor_add_random_mil_factory_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+				building = arms_factory
+				size > 0
+				include_locked = yes
+			}
+			if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+							is_in_home_area = yes
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_in_home_area = yes
+				is_core_of = ROOT ## Prioritise cores in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_core_of = ROOT ## Then cores not in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+							is_in_home_area = yes
+						}
+					}
+				}
+				is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+esicolor_add_random_dockyard_effect = {
+	random_controlled_state = {
+		limit = {
+			is_coastal = yes
+			free_building_slots = {
+				building = dockyard
+				size > 2
+				include_locked = yes
+			}
+			if = {
+				limit = {
+					controller = {
+						any_owned_state = {
+							is_coastal = yes
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+							is_controlled_by = ROOT
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_owned_by = ROOT
+				is_core_of = ROOT ## Prioritise owned cores.
+			}
+			else_if = {
+				limit = {
+					controller = {
+						any_controlled_state = {
+							is_coastal = yes
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_core_of = ROOT ## Then controlled cores.
+			}
+			else_if = {
+				limit = {
+					controller = {
+						any_owned_state = {
+							is_coastal = yes
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+							is_controlled_by = ROOT
+						}
+					}
+				}
+				is_owned_by = ROOT ## Then owned non-cores, if this fails too it goes to a random state.
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = dockyard
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+war_goal_effect_on_random_neighbour = {
+	if = {
+		limit = {
+			any_neighbor_country = {
+				NOT = {
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				any_owned_state = {
+					OR = {
+						has_global_flag = claiming_give_war_goals
+						has_global_flag = claiming_declare_war
+
+						NOT = { is_claimed_by = ROOT }
+					}
+
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+				}
+			}
+		}
+
+		random_neighbor_country = {
+			limit = {
+				NOT = {
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { any_owned_state = { is_claimed_by = ROOT } }
+				}
+			}
+
+			random_owned_state = {
+				limit = {
+					OR = {
+						has_global_flag = claiming_give_war_goals
+						has_global_flag = claiming_declare_war
+
+						NOT = { is_claimed_by = ROOT }
+					}
+
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+				}
+
+				claim_action_effect = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			any_country = {
+				NOT = {
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { any_owned_state = { is_claimed_by = ROOT } }
+				}
+
+				is_neighboring_ownership_special_case_country = yes
+			}
+		}
+
+		random_country = {
+			limit = {
+				NOT = {
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { any_owned_state = { is_claimed_by = ROOT } }
+				}
+
+				is_neighboring_ownership_special_case_country = yes
+			}
+
+			random_owned_state = {
+				limit = {
+					is_neighboring_ownership_special_case_state = yes
+				}
+
+				claim_action_effect = yes
+			}
+		}
+	}
+}

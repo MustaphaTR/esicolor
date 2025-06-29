@@ -2840,6 +2840,29 @@ randomise_technology_legacy = {
 	}
 }
 
+load_continent_focus_trees = {
+	if = {
+		limit = { can_form_horn_of_africa = yes }
+		
+		load_focus_tree = horn_of_africa_tree
+	}
+	else = {
+		load_focus_tree = generic_focus
+	}
+}
+
+randomise_focus_trees = {
+	random_list = {
+		seed = random
+		50 = {
+			load_focus_tree = generic_focus
+		}
+		50 = {
+			load_focus_tree = horn_of_africa_tree
+		}
+	}
+}
+
 randomise_stability = {
 	hidden_effect = {
 		set_temp_variable = { stabtoset = 50 }

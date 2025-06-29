@@ -43,6 +43,8 @@ default_preset_effects = {
 	set_variable = { global.setup_party_popularity = -1 }
 	set_variable = { global.setup_ai_change_ideology = -1 }
 
+	set_variable = { global.setup_focus_tree = -1 }
+
 	set_variable = { global.setup_stability_min = 50 }
 	set_variable = { global.setup_stability_max = 50 }
 	set_variable = { global.setup_war_support_min = 50 }
@@ -182,6 +184,8 @@ randomised_preset_effects = {
 	set_variable = { global.setup_ideology = -2 }
 	set_variable = { global.setup_party_popularity = -2 }
 	set_variable = { global.setup_ai_change_ideology = -1 }
+
+	set_variable = { global.setup_focus_tree = -2 }
 
 	set_variable = { global.setup_stability_min = 10 }
 	set_variable = { global.setup_stability_max = 90 }
@@ -330,6 +334,8 @@ equalised_preset_effects = {
 	set_variable = { global.setup_party_popularity_other = 25 }
 	set_variable = { global.setup_ai_change_ideology = 1 }
 
+	set_variable = { global.setup_focus_tree = 0 }
+
 	set_variable = { global.setup_stability_min = 50 }
 	set_variable = { global.setup_stability_max = 50 }
 	set_variable = { global.setup_war_support_min = 50 }
@@ -431,6 +437,8 @@ developer_preset_effects = {
 	set_variable = { global.setup_ideology = -1 }
 	set_variable = { global.setup_party_popularity = -1 }
 	set_variable = { global.setup_ai_change_ideology = -1 }
+
+	set_variable = { global.setup_focus_tree = -1 }
 
 	set_variable = { global.setup_stability_min = 10 }
 	set_variable = { global.setup_stability_max = 90 }
@@ -536,6 +544,8 @@ setup_gui_start_general = {
 		setup_gui_start_ideology = yes
 		setup_gui_start_party_popularity = yes
 		setup_gui_start_ai_change_ideology = yes
+
+		setup_gui_start_focus_tree = yes
 
 		setup_gui_start_stability = yes
 		setup_gui_start_war_support = yes
@@ -833,6 +843,29 @@ setup_gui_start_ai_change_ideology = {
 		limit = { check_variable = { global.setup_ai_change_ideology > 0 } }
 
 		randomise_ai_ideology_path = yes
+	}
+}
+
+setup_gui_start_focus_tree = {
+	if = {
+		limit = { check_variable = { global.setup_focus_tree < -1 } }
+
+		randomise_focus_trees = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_focus_tree = -1 } }
+
+		load_continent_focus_trees = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_focus_tree = 0 } }
+
+		load_focus_tree = generic_focus
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_focus_tree > 0 } }
+
+		load_focus_tree = horn_of_africa_tree
 	}
 }
 

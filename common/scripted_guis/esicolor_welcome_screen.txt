@@ -2248,6 +2248,21 @@ scripted_gui = {
 				set_variable = { global.setup_ai_change_ideology = -1 }
 			}
 
+			esicolor_welcome_screen_tab_1_page_4_max_minus_4_click = {
+				if = {
+					limit = { check_variable = { global.setup_focus_tree > -2 } }
+
+					subtract_from_variable = { global.setup_focus_tree = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_4_max_plus_4_click = {
+				if = {
+					limit = { check_variable = { global.setup_focus_tree < 1 } }
+
+					add_to_variable = { global.setup_focus_tree = 1 }
+				}
+			}
+
 			esicolor_welcome_screen_tab_1_page_4_min_minus_5_click = {
 				set_variable = { global.setup_stability = 1 }
 				if = {
