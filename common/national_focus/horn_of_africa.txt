@@ -529,7 +529,6 @@ focus_tree = {
 		id = HOA_study_naval_doctrines
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = HOA_a_steamboat_fleet }
-		mutually_exclusive = { focus = HOA_flexible_navy }
 		x = 0
 		y = 1
 		relative_position_id = HOA_a_steamboat_fleet
@@ -556,7 +555,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus HOA_strudy_naval_doctrine"
 			navy_experience = 25
 			add_doctrine_cost_reduction = {
-				name = HOA_study_naval_doctrine
+				name = HOA_study_naval_doctrines
 				cost_reduction = 0.50
 				uses = 1
 				category = naval_doctrine
@@ -678,7 +677,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus submarine_effort"
 			add_tech_bonus = {
-				name = HOA_expand_naval_varierty
+				name = HOA_expand_naval_variety
 				bonus = 1.0
 				ahead_reduction = 2
 				uses = 1
@@ -770,7 +769,7 @@ focus_tree = {
 	focus = {
 		id = HOA_the_grand_university_of_capital 
 		icon = GFX_focus_research
-		prerequisite = { focus = HOA_reorganise_the_education_system focus = HOA_expand_naval_varierty }
+		prerequisite = { focus = HOA_reorganise_the_education_system focus = HOA_expand_naval_variety }
 
 		x = 0
 		y = 1
