@@ -8220,6 +8220,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_crimea"
 			set_country_flag = can_form_SRS_UNITED
+			set_country_flag = can_form_UKR_SOUTH
 
 			set_cosmetic_tag = SRS_CRIMEA
 
@@ -8263,6 +8264,7 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_south_russia"
 			clr_country_flag = can_form_SRS_UNITED
 			clr_country_flag = can_form_CAU_UNITED
+			clr_country_flag = can_form_UKR_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
 
@@ -9525,6 +9527,268 @@ esicolor_formables = {
 		}
 
 		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_western_ukraine = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_western_ukraine = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_western_ukraine = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_western_ukraine"
+			set_country_flag = can_form_UKR_UNITED
+
+			set_cosmetic_tag = UKR_WEST
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_western_ukraine = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_western_ukraine_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_western_ukraine = yes
+				}
+				else = {
+					required_states_to_form_western_ukraine = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_central_ukraine = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_central_ukraine = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_central_ukraine = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_central_ukraine"
+			set_country_flag = can_form_UKR_UNITED
+
+			set_cosmetic_tag = UKR_CENTER
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_ukraine = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_central_ukraine = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_eastern_ukraine = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_eastern_ukraine = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_eastern_ukraine = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_eastern_ukraine"
+			set_country_flag = can_form_UKR_UNITED
+
+			set_cosmetic_tag = UKR_EAST
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_eastern_ukraine = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_eastern_ukraine_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_eastern_ukraine = yes
+				}
+				else = {
+					required_states_to_form_eastern_ukraine = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_southern_ukraine = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_southern_ukraine = yes
+		}
+		visible = {
+			has_cosmetics_to_form_southern_ukraine = yes
+		}
+		available = {
+			has_states_to_form_southern_ukraine = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_southern_ukraine"
+			clr_country_flag = can_form_SRS_UNITED
+
+			set_country_flag = can_form_UKR_UNITED
+
+			set_cosmetic_tag = UKR_SOUTH
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_southern_ukraine = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_southern_ukraine_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_southern_ukraine = yes
+				}
+				else = {
+					required_states_to_form_southern_ukraine = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_ukraine = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_ukraine = yes
+		}
+		visible = {
+			has_cosmetics_to_form_ukraine = yes
+		}
+		available = {
+			has_states_to_form_ukraine = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_ukraine"
+			clr_country_flag = can_form_UKR_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+
+			set_cosmetic_tag = UKR_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_ukraine = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_ukraine_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_ukraine = yes
+				}
+				else = {
+					required_states_to_form_ukraine = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
 
 		fire_only_once = yes
 

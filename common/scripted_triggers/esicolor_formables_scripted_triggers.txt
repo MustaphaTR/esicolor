@@ -3418,6 +3418,220 @@ required_states_to_form_south_russia = {
 	}
 }
 
+#### Ukraine ####
+can_form_western_ukraine = {
+	OR = {
+		original_tag = OFE
+		original_tag = OBO
+		original_tag = OBY
+		original_tag = OYI
+		original_tag = OYE
+		original_tag = IYY
+	}
+}
+
+can_form_central_ukraine = {
+	OR = {
+		original_tag = IYE
+		original_tag = IYB
+		original_tag = ZOI
+		original_tag = ZOZ
+		original_tag = ZOE
+		original_tag = ZZS
+		original_tag = ZSY
+	}
+}
+
+can_form_eastern_ukraine = {
+	OR = {
+		original_tag = ZOO
+		original_tag = ZZI
+		original_tag = ZZS
+		original_tag = ZZL
+		original_tag = ZZF
+		original_tag = ZZB
+		original_tag = ZSY
+	}
+}
+
+can_form_southern_ukraine = {
+	OR = {
+		original_tag = IEF
+		original_tag = IYZ
+		original_tag = IYF
+		original_tag = IYL
+		original_tag = ZOO
+		original_tag = BEA
+	}
+}
+
+can_form_ukraine = {
+	OR = {
+		can_form_western_ukraine = yes
+		can_form_central_ukraine = yes
+		can_form_eastern_ukraine = yes
+		can_form_southern_ukraine = yes
+	}
+}
+
+is_western_ukraine = {
+	OR = {
+		state = 73
+		state = 80
+		state = 89
+		state = 91
+		state = 93
+		state = 199
+	}
+}
+
+is_central_ukraine = {
+	OR = {
+		state = 193
+		state = 198
+		state = 201
+		state = 202
+		state = 203
+		state = 225
+		state = 259
+	}
+}
+
+is_eastern_ukraine = {
+	OR = {
+		state = 200
+		state = 221
+		state = 225
+		state = 226
+		state = 227
+		state = 228
+		state = 259
+	}
+}
+
+is_southern_ukraine = {
+	OR = {
+		state = 137
+		state = 192
+		state = 196
+		state = 197
+		state = 200
+		state = 766
+		state = 834
+	}
+}
+
+is_ukraine = {
+	OR = {
+		is_western_ukraine = yes
+		is_central_ukraine = yes
+		is_eastern_ukraine = yes
+		is_southern_ukraine = yes
+	}
+}
+
+has_states_to_form_western_ukraine = {
+	custom_trigger_tooltip = {
+		tooltip = form_western_ukraine_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 89 } } } owns_state = 89 }
+		if = { limit = { NOT = { OOO = { owns_state = 91 } } } owns_state = 91 }
+		if = { limit = { NOT = { OOO = { owns_state = 93 } } } owns_state = 93 }
+		if = { limit = { NOT = { OOO = { owns_state = 199 } } } owns_state = 199 }
+	}
+}
+
+has_states_to_form_central_ukraine = {
+	custom_trigger_tooltip = {
+		tooltip = form_central_ukraine_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 193 } } } owns_state = 193 }
+		if = { limit = { NOT = { OOO = { owns_state = 198 } } } owns_state = 198 }
+		if = { limit = { NOT = { OOO = { owns_state = 201 } } } owns_state = 201 }
+		if = { limit = { NOT = { OOO = { owns_state = 202 } } } owns_state = 202 }
+		if = { limit = { NOT = { OOO = { owns_state = 203 } } } owns_state = 203 }
+		if = { limit = { NOT = { OOO = { owns_state = 225 } } } owns_state = 225 }
+		if = { limit = { NOT = { OOO = { owns_state = 259 } } } owns_state = 259 }
+	}
+}
+
+has_states_to_form_eastern_ukraine = {
+	custom_trigger_tooltip = {
+		tooltip = form_eastern_ukraine_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 200 } } } owns_state = 200 }
+		if = { limit = { NOT = { OOO = { owns_state = 221 } } } owns_state = 221 }
+		if = { limit = { NOT = { OOO = { owns_state = 226 } } } owns_state = 226 }
+		if = { limit = { NOT = { OOO = { owns_state = 227 } } } owns_state = 227 }
+		if = { limit = { NOT = { OOO = { owns_state = 228 } } } owns_state = 228 }
+	}
+}
+
+has_cosmetics_to_form_southern_ukraine = {
+	has_country_flag = can_form_UKR_SOUTH
+}
+has_states_to_form_southern_ukraine = {
+	custom_trigger_tooltip = {
+		tooltip = form_southern_ukraine_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 192 } } } owns_state = 192 }
+		if = { limit = { NOT = { OOO = { owns_state = 196 } } } owns_state = 196 }
+		if = { limit = { NOT = { OOO = { owns_state = 197 } } } owns_state = 197 }
+		if = { limit = { NOT = { OOO = { owns_state = 834 } } } owns_state = 834 }
+	}
+}
+
+has_cosmetics_to_form_ukraine = {
+	has_country_flag = can_form_UKR_UNITED
+}
+has_states_to_form_ukraine = {
+	custom_trigger_tooltip = {
+		tooltip = form_ukraine_has_states_tt
+
+		has_states_to_form_central_ukraine = yes
+		has_states_to_form_eastern_ukraine = yes
+		has_states_to_form_southern_ukraine = yes
+		if = { limit = { NOT = { OOO = { owns_state = 199 } } } owns_state = 199 }
+	}
+}
+
+required_states_to_form_western_ukraine = {
+	OR = {
+		state = 89
+		state = 91
+		state = 93
+		state = 199
+	}
+}
+
+required_states_to_form_eastern_ukraine = {
+	OR = {
+		state = 200
+		state = 221
+		state = 226
+		state = 227
+		state = 228
+	}
+}
+
+required_states_to_form_southern_ukraine = {
+	OR = {
+		state = 192
+		state = 196
+		state = 197
+		state = 834
+	}
+}
+
+required_states_to_form_ukraine = {
+	OR = {
+		is_central_ukraine = yes
+		required_states_to_form_eastern_ukraine = yes
+		required_states_to_form_southern_ukraine = yes
+		state = 199
+	}
+}
+
 #### Magreb ####
 can_form_mauritania = {
 	OR = {
