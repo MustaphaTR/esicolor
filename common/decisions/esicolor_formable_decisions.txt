@@ -386,19 +386,131 @@ esicolor_formables = {
 		}
 	}
 
+	form_greek_mainland = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_greek_mainland = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_greek_mainland = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_greek_mainland"
+			set_country_flag = can_form_GRE_UNITED
+
+			set_cosmetic_tag = GRE_MAINLAND
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_greek_mainland = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_greek_mainland_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_greek_mainland = yes
+				}
+				else = {
+					required_states_to_form_greek_mainland = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_greek_islands = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_greek_islands = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_greek_islands = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_greek_islands"
+			set_country_flag = can_form_GRE_UNITED
+			set_country_flag = can_form_MED_UNITED
+
+			set_cosmetic_tag = GRE_ISLANDS
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_greek_islands = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_greek_islands_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_greek_islands = yes
+				}
+				else = {
+					required_states_to_form_greek_islands = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_greece = {
 		icon = generic_form_nation
 		allowed = {
 			can_form_greece = yes
 		}
 		visible = {
-			has_formed_a_formable = no
+			has_cosmetics_to_form_greece = yes
 		}
 		available = {
 			has_states_to_form_greece = yes
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_greece"
+			clr_country_flag = can_form_GRE_UNITED
+			clr_country_flag = can_form_MED_UNITED
+
 			set_country_flag = can_form_UBF_UNITED
 
 			set_cosmetic_tag = GRE_UNITED
@@ -735,7 +847,16 @@ esicolor_formables = {
 
 			set_country_flag = can_form_EUR_UNITED
 
-			set_cosmetic_tag = UBF_UNITED
+			if = {
+				limit = { has_country_leader = { character = EAI_halife_abdulmecid_efendi ruling_only = yes } }
+
+				set_cosmetic_tag = UBF_UNITED_ABDULMEJID
+				EAI_halife_abdulmecid_efendi = { set_character_name = TUR_abdulmejid_ii }
+
+				else = {
+					set_cosmetic_tag = UBF_UNITED
+				}
+			}
 
 			hidden_effect = {
 				every_state = {
@@ -10135,6 +10256,105 @@ esicolor_formables = {
 				}
 				else = {
 					required_states_to_form_turkey = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_west_mediterranean = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_west_mediterranean = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_west_mediterranean = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_west_mediterranean"
+			set_country_flag = can_form_MED_UNITED
+
+			set_cosmetic_tag = MED_WEST
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_west_mediterranean = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_west_mediterranean = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_mediterranean = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_mediterranean = yes
+		}
+		visible = {
+			has_cosmetics_to_form_mediterranean = yes
+		}
+		available = {
+			has_states_to_form_mediterranean = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_mediterranean"
+			clr_country_flag = can_form_MED_UNITED
+			clr_country_flag = can_form_GRE_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+
+			set_cosmetic_tag = MED_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_mediterranean = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_mediterranean_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_mediterranean = yes
+				}
+				else = {
+					required_states_to_form_mediterranean = yes
 				}
 			}
 		}

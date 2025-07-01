@@ -257,12 +257,9 @@ required_states_to_form_albania = {
 }
 
 #### Greece ####
-can_form_greece = {
+can_form_greek_mainland = {
 	OR = {
 		original_tag = OAF
-		original_tag = ILA
-		original_tag = IBZ
-		original_tag = IBE
 		original_tag = IBA
 		original_tag = IBS
 		original_tag = IBL
@@ -271,46 +268,105 @@ can_form_greece = {
 	}
 }
 
-is_greece = {
+can_form_greek_islands = {
+	OR = {
+		original_tag = ILA
+		original_tag = IBZ
+		original_tag = IBE
+		original_tag = IBF
+	}
+}
+
+can_form_greece = {
+	OR = {
+		can_form_greek_mainland = yes
+		can_form_greek_islands = yes
+	}
+}
+
+is_greek_mainland = {
 	OR = {
 		state = 47
-		state = 164
-		state = 182
-		state = 183
 		state = 184
 		state = 185
 		state = 186
-		state = 187
 		state = 731
 		state = 805
 	}
 }
 
+is_greek_islands = {
+	OR = {
+		state = 164
+		state = 182
+		state = 183
+		state = 187
+	}
+}
+
+is_greece = {
+	OR = {
+		is_greek_mainland = yes
+		is_greek_islands = yes
+	}
+}
+
+has_states_to_form_greek_mainland = {
+	custom_trigger_tooltip = {
+		tooltip = form_greek_mainland_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 47 } } } owns_state = 47 }
+		if = { limit = { NOT = { OOO = { owns_state = 184 } } } owns_state = 184 }
+		if = { limit = { NOT = { OOO = { owns_state = 185 } } } owns_state = 185 }
+		if = { limit = { NOT = { OOO = { owns_state = 186 } } } owns_state = 186 }
+		if = { limit = { NOT = { OOO = { owns_state = 731 } } } owns_state = 731 }
+	}
+}
+
+has_states_to_form_greek_islands = {
+	custom_trigger_tooltip = {
+		tooltip = form_greek_islands_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 164 } } } owns_state = 164 }
+		if = { limit = { NOT = { OOO = { owns_state = 182 } } } owns_state = 182 }
+		if = { limit = { NOT = { OOO = { owns_state = 187 } } } owns_state = 187 }
+	}
+}
+
+has_cosmetics_to_form_greece = {
+	has_country_flag = can_form_GRE_UNITED
+}
 has_states_to_form_greece = {
 	custom_trigger_tooltip = {
 		tooltip = form_greece_has_states_tt
 
-		if = { limit = { NOT = { OOO = { owns_state = 47 } } } owns_state = 47 }
-		if = { limit = { NOT = { OOO = { owns_state = 164 } } } owns_state = 164 }
-		if = { limit = { NOT = { OOO = { owns_state = 182 } } } owns_state = 182 }
-		if = { limit = { NOT = { OOO = { owns_state = 184 } } } owns_state = 184 }
-		if = { limit = { NOT = { OOO = { owns_state = 185 } } } owns_state = 185 }
-		if = { limit = { NOT = { OOO = { owns_state = 186 } } } owns_state = 186 }
-		if = { limit = { NOT = { OOO = { owns_state = 187 } } } owns_state = 187 }
-		if = { limit = { NOT = { OOO = { owns_state = 731 } } } owns_state = 731 }
+		has_states_to_form_greek_mainland = yes
+		has_states_to_form_greek_islands = yes
+	}
+}
+
+required_states_to_form_greek_mainland = {
+	OR = {
+		state = 47
+		state = 184
+		state = 185
+		state = 186
+		state = 731
+	}
+}
+
+required_states_to_form_greek_islands = {
+	OR = {
+		state = 164
+		state = 182
+		state = 187
 	}
 }
 
 required_states_to_form_greece = {
 	OR = {
-		state = 47
-		state = 164
-		state = 182
-		state = 184
-		state = 185
-		state = 186
-		state = 187
-		state = 731
+		required_states_to_form_greek_mainland = yes
+		required_states_to_form_greek_islands = yes
 	}
 }
 
@@ -3681,6 +3737,7 @@ can_form_akdeniz = {
 can_form_turkey = {
 	OR = {
 		can_form_anatolian_kurdistan = yes
+		can_form_marmara = yes
 		can_form_karadeniz = yes
 		can_form_central_anatolia = yes
 		can_form_aegea = yes
@@ -3851,6 +3908,72 @@ required_states_to_form_turkey = {
 		required_states_to_form_aegea = yes
 		required_states_to_form_akdeniz = yes
 		state = 347
+	}
+}
+
+#### Mediterranean ####
+can_form_west_mediterranean = {
+	OR = {
+		original_tag = OOI
+		original_tag = IIA
+		original_tag = IIS
+		original_tag = IIL
+		original_tag = IFF
+	}
+}
+
+can_form_mediterranean = {
+	OR = {
+		can_form_west_mediterranean = yes
+		can_form_greek_islands = yes
+	}
+}
+
+is_west_mediterranean = {
+	OR = {
+		state = 1
+		state = 114
+		state = 115
+		state = 116
+		state = 177
+	}
+}
+
+is_mediterranean = {
+	OR = {
+		is_west_mediterranean = yes
+		is_greek_islands = yes
+	}
+}
+
+has_states_to_form_west_mediterranean = {
+	custom_trigger_tooltip = {
+		tooltip = form_west_mediterranean_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 1 } } } owns_state = 1 }
+		if = { limit = { NOT = { OOO = { owns_state = 114 } } } owns_state = 114 }
+		if = { limit = { NOT = { OOO = { owns_state = 115 } } } owns_state = 115 }
+		if = { limit = { NOT = { OOO = { owns_state = 116 } } } owns_state = 116 }
+		if = { limit = { NOT = { OOO = { owns_state = 177 } } } owns_state = 177 }
+	}
+}
+
+has_cosmetics_to_form_mediterranean = {
+	has_country_flag = can_form_MED_UNITED
+}
+has_states_to_form_mediterranean = {
+	custom_trigger_tooltip = {
+		tooltip = form_mediterranean_has_states_tt
+
+		has_states_to_form_west_mediterranean = yes
+		has_states_to_form_greek_islands = yes
+	}
+}
+
+required_states_to_form_mediterranean = {
+	OR = {
+		is_west_mediterranean = yes
+		required_states_to_form_greek_islands = yes
 	}
 }
 
