@@ -888,7 +888,10 @@ adjust_state_name_49 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -1539,7 +1542,10 @@ adjust_state_name_164 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -1585,7 +1591,10 @@ adjust_state_name_183 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							NOT = { has_country_flag = has_formed_TUR_AKDENIZ }
+						}
 					}
 				}
 			}
@@ -1601,7 +1610,19 @@ adjust_state_name_183 = {
 		}
 	}
 	else_if = {
-		limit = { 183 = { owner = { state_originally_from_TUR = yes } } }
+		limit = {
+			183 = {
+				owner = {
+					OR = {
+						state_originally_from_TUR = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_TUR_AKDENIZ
+						}
+					}
+				}
+			}
+		}
 
 		set_province_name = {
 			id = 11984
@@ -2070,7 +2091,10 @@ adjust_state_name_339 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2106,7 +2130,10 @@ adjust_state_name_340 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2160,7 +2187,10 @@ adjust_state_name_341 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2188,7 +2218,10 @@ adjust_state_name_342 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2216,7 +2249,10 @@ adjust_state_name_343 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2260,7 +2296,10 @@ adjust_state_name_344 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2333,7 +2372,10 @@ adjust_state_name_345 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2361,7 +2403,10 @@ adjust_state_name_346 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2405,7 +2450,10 @@ adjust_state_name_347 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2441,7 +2489,10 @@ adjust_state_name_348 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2469,7 +2520,10 @@ adjust_state_name_349 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2514,7 +2568,10 @@ adjust_state_name_350 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2575,7 +2632,10 @@ adjust_state_name_352 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2671,7 +2731,10 @@ adjust_state_name_354 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2749,7 +2812,10 @@ adjust_state_name_355 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -2777,7 +2843,10 @@ adjust_state_name_356 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -3388,7 +3457,10 @@ adjust_state_name_797 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -3488,7 +3560,10 @@ adjust_state_name_798 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -3524,7 +3599,10 @@ adjust_state_name_799 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}
@@ -3578,7 +3656,10 @@ adjust_state_name_800 = {
 				owner = {
 					OR = {
 						state_originally_from_GRE = yes
-						state_originally_from_CYP = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
 					}
 				}
 			}

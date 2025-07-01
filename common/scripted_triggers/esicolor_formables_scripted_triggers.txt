@@ -3632,6 +3632,228 @@ required_states_to_form_ukraine = {
 	}
 }
 
+#### Turkey ####
+can_form_marmara = {
+	OR = {
+		original_tag = EAO
+		original_tag = EAI
+		original_tag = EAF
+		original_tag = FYF
+	}
+}
+
+can_form_karadeniz = {
+	OR = {
+		original_tag = EAF
+		original_tag = ESA
+		original_tag = ESS
+		original_tag = ESL
+	}
+}
+
+can_form_central_anatolia = {
+	OR = {
+		original_tag = OAY
+		original_tag = EAL
+		original_tag = EAB
+		original_tag = EAY
+		original_tag = FYB
+	}
+}
+
+can_form_aegea = {
+	OR = {
+		original_tag = EEY
+		original_tag = EAZ
+		original_tag = EAE
+	}
+}
+
+can_form_akdeniz = {
+	OR = {
+		original_tag = IBE
+		original_tag = EAZ
+		original_tag = EAA
+		original_tag = EAS
+	}
+}
+
+can_form_turkey = {
+	OR = {
+		can_form_anatolian_kurdistan = yes
+		can_form_karadeniz = yes
+		can_form_central_anatolia = yes
+		can_form_aegea = yes
+		can_form_akdeniz = yes
+	}
+}
+
+is_marmara = {
+	OR = {
+		state = 340
+		state = 341
+		state = 347
+		state = 797
+	}
+}
+
+is_karadeniz = {
+	OR = {
+		state = 347
+		state = 354
+		state = 355
+		state = 356
+	}
+}
+
+is_central_anatolia = {
+	OR = {
+		state = 49
+		state = 346
+		state = 348
+		state = 349
+		state = 798
+	}
+}
+
+is_aegea = {
+	OR = {
+		state = 339
+		state = 342
+		state = 343
+	}
+}
+
+is_akdeniz = {
+	OR = {
+		state = 183
+		state = 342
+		state = 344
+		state = 345
+		state = 799
+	}
+}
+
+is_turkey = {
+	OR = {
+		is_anatolian_kurdistan = yes
+		is_marmara = yes
+		is_karadeniz = yes
+		is_central_anatolia = yes
+		is_aegea = yes
+		is_akdeniz = yes
+	}
+}
+
+has_states_to_form_marmara = {
+	custom_trigger_tooltip = {
+		tooltip = form_marmara_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 340 } } } owns_state = 340 }
+		if = { limit = { NOT = { OOO = { owns_state = 341 } } } owns_state = 341 }
+		if = { limit = { NOT = { OOO = { owns_state = 797 } } } owns_state = 797 }
+	}
+}
+
+has_states_to_form_karadeniz = {
+	custom_trigger_tooltip = {
+		tooltip = form_karadeniz_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 354 } } } owns_state = 354 }
+		if = { limit = { NOT = { OOO = { owns_state = 355 } } } owns_state = 355 }
+		if = { limit = { NOT = { OOO = { owns_state = 356 } } } owns_state = 356 }
+	}
+}
+
+has_states_to_form_central_anatolia = {
+	custom_trigger_tooltip = {
+		tooltip = form_central_anatolia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 49 } } } owns_state = 49 }
+		if = { limit = { NOT = { OOO = { owns_state = 346 } } } owns_state = 346 }
+		if = { limit = { NOT = { OOO = { owns_state = 348 } } } owns_state = 348 }
+		if = { limit = { NOT = { OOO = { owns_state = 348 } } } owns_state = 349 }
+		if = { limit = { NOT = { OOO = { owns_state = 798 } } } owns_state = 798 }
+	}
+}
+
+has_states_to_form_aegea = {
+	custom_trigger_tooltip = {
+		tooltip = form_aegea_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 339 } } } owns_state = 339 }
+		if = { limit = { NOT = { OOO = { owns_state = 343 } } } owns_state = 343 }
+	}
+}
+
+has_states_to_form_akdeniz = {
+	custom_trigger_tooltip = {
+		tooltip = form_akdeniz_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 342 } } } owns_state = 342 }
+		if = { limit = { NOT = { OOO = { owns_state = 344 } } } owns_state = 344 }
+		if = { limit = { NOT = { OOO = { owns_state = 345 } } } owns_state = 345 }
+	}
+}
+
+has_cosmetics_to_form_turkey = {
+	has_country_flag = can_form_TUR_UNITED
+}
+has_states_to_form_turkey = {
+	custom_trigger_tooltip = {
+		tooltip = form_turkey_has_states_tt
+
+		has_states_to_form_marmara = yes
+		has_states_to_form_karadeniz = yes
+		has_states_to_form_central_anatolia = yes
+		has_states_to_form_aegea = yes
+		has_states_to_form_akdeniz = yes
+		if = { limit = { NOT = { OOO = { owns_state = 347 } } } owns_state = 347 }
+	}
+}
+
+required_states_to_form_marmara = {
+	OR = {
+		state = 340
+		state = 341
+		state = 797
+	}
+}
+
+required_states_to_form_karadeniz = {
+	OR = {
+		state = 354
+		state = 355
+		state = 356
+	}
+}
+
+required_states_to_form_aegea = {
+	OR = {
+		state = 339
+		state = 343
+	}
+}
+
+required_states_to_form_akdeniz = {
+	OR = {
+		state = 342
+		state = 344
+		state = 345
+	}
+}
+
+required_states_to_form_turkey = {
+	OR = {
+		required_states_to_form_marmara = yes
+		required_states_to_form_karadeniz = yes
+		is_central_anatolia = yes
+		required_states_to_form_aegea = yes
+		required_states_to_form_akdeniz = yes
+		state = 347
+	}
+}
+
 #### Magreb ####
 can_form_mauritania = {
 	OR = {
