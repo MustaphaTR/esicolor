@@ -10571,7 +10571,7 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_southeast_brazil"
 			set_country_flag = can_form_BRA_UNITED
 
-			set_cosmetic_tag = BRA_SOUTH
+			set_cosmetic_tag = BRA_SOUTHEAST
 
 			hidden_effect = {
 				every_state = {
@@ -10616,6 +10616,11 @@ esicolor_formables = {
 			set_country_flag = can_form_SOA_UNITED
 
 			if = {
+				limit = { has_country_leader = { character = YEF_lampiao ruling_only = yes } }
+
+				set_cosmetic_tag = BRA_UNITED_CANGACO
+			}
+			else_if = {
 				limit = { has_country_leader = { character = YAE_pedro_henrique ruling_only = yes } }
 
 				set_cosmetic_tag = BRA_UNITED_EMPIRE
