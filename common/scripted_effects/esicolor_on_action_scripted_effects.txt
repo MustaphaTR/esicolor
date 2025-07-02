@@ -680,6 +680,51 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = SAO }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = backroom_backstabber
+			}
+
+			set_character_name = BRA_washington_luis_pereira
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "La Resistance" }
+
+				set_portraits = {
+					civilian = {
+						large="GFX_portrait_BRA_washington_luis" 
+						small="GFX_portrait_BRA_washington_luis_small"
+					}
+					army = {
+						large="GFX_portrait_BRA_washington_luis" 
+						small="GFX_portrait_BRA_washington_luis_small"
+					}
+					navy = {
+						large="GFX_portrait_BRA_washington_luis" 
+						small="GFX_portrait_BRA_washington_luis_small"
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+				}
+			}
+		}
+	}
+	else_if = {
 		limit = { original_tag = BIS }
 
 		# Depending on the DLC, one is the leader, other is an advisor.
@@ -735,6 +780,51 @@ handle_special_advisors = {
 					}
 					navy = {
 						small = GFX_idea_LIT_stasys_rastikis
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { original_tag = YAE }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = staunch_monarchist
+			}
+
+			set_character_name = BRA_arlindo_veiga_dos_santos
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "La Resistance" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_BRA_arlindo_veiga_dos_santos
+						small = GFX_idea_BRA_arlindo_veiga_dos_santos
+					}
+					army = {
+						large = GFX_portrait_BRA_arlindo_veiga_dos_santos
+						small = GFX_idea_BRA_arlindo_veiga_dos_santos
+					}
+					navy = {
+						large = GFX_portrait_BRA_arlindo_veiga_dos_santos
+						small = GFX_idea_BRA_arlindo_veiga_dos_santos
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_air_africa_2
+					}
+					army = {
+						small = GFX_idea_generic_air_africa_2
+					}
+					navy = {
+						small = GFX_idea_generic_air_africa_2
 					}
 				}
 			}

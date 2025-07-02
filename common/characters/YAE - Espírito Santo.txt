@@ -1,0 +1,44 @@
+characters={
+	YAE_pedro_henrique = {
+		instance = {
+			allowed = {
+				OR = {
+					has_dlc = "La Resistance"
+					has_dlc = "Trial of Allegiance"
+				}
+			}
+			name=BRA_pedro_henrique
+			portraits={
+				civilian={
+					large="GFX_portrait_BRA_pedro_henrique"
+				}
+			}
+			country_leader={
+				traits={ BRA_politically_educated }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = {
+					has_dlc = "La Resistance"
+					has_dlc = "Trial of Allegiance"
+				}
+			}
+			name=BRA_pedro_henrique
+			portraits={
+				civilian={
+					large="GFX_Portrait_South_America_Generic_navy_2"
+				}
+			}
+			country_leader={
+				traits={ BRA_politically_educated }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

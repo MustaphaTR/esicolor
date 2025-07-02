@@ -1,0 +1,39 @@
+characters={
+	YAZ_candido_mariano = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=BRA_candido_mariano
+			portraits={
+				civilian={
+					large=GFX_portrait_BRA_candido_mariano
+					small=GFX_portrait_BRA_candido_mariano_small
+				}
+			}
+			country_leader={
+				traits={ army_jungle_warfare_2 }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=BRA_candido_mariano
+			portraits={
+				civilian={
+					large="GFX_Portrait_South_America_Generic_land_1"
+				}
+			}
+			country_leader={
+				traits={ army_jungle_warfare_2 }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

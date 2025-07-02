@@ -1,0 +1,38 @@
+characters={
+	AYB_luis_carlos_prestes = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=BRA_luis_carlos_prestes
+			portraits={
+				civilian={
+					large="GFX_portrait_BRA_luis_carlos_prestes"
+				}
+			}
+			country_leader={
+				traits={ JUNO_aligned_with_stalin }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=BRA_luis_carlos_prestes
+			portraits={
+				civilian={
+					large="GFX_Portrait_South_America_Generic_4"
+				}
+			}
+			country_leader={
+				traits={ JUNO_aligned_with_stalin }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

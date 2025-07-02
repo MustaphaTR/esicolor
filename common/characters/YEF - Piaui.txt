@@ -1,0 +1,39 @@
+characters={
+	YEF_lampiao = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=BRA_lampiao
+			portraits={
+				civilian={
+					large=GFX_portrait_BRA_lampiao
+					small=GFX_portrait_BRA_lampiao_small
+				}
+			}
+			country_leader={
+				traits={ BRA_bandit_revolutionary }
+				ideology=anarchist_communism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=BRA_lampiao
+			portraits={
+				civilian={
+					large="GFX_Portrait_South_America_Generic_land_5"
+				}
+			}
+			country_leader={
+				traits={ BRA_bandit_revolutionary }
+				ideology=anarchist_communism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

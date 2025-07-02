@@ -1,0 +1,51 @@
+characters={
+	ZBO_eurico_gaspar_dutra = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=BRA_eurico_gaspar_dutra
+			portraits={
+				civilian={
+					large=GFX_portrait_BRA_eurico_dutra
+					small=GFX_portrait_BRA_eurico_dutra_civilian_small
+				}
+			}
+			country_leader={
+				traits={ war_industrialist }
+				ideology=moderatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ war_industrialist }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=BRA_eurico_gaspar_dutra
+			portraits={
+				civilian={
+					large="GFX_Portrait_South_America_Generic_land_4"
+				}
+			}
+			country_leader={
+				traits={ war_industrialist }
+				ideology=moderatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ war_industrialist }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

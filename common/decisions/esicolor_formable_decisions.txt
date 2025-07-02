@@ -10368,6 +10368,305 @@ esicolor_formables = {
 		}
 	}
 
+	form_north_brazil = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_north_brazil = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_north_brazil = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_north_brazil"
+			set_country_flag = can_form_BRA_UNITED
+
+			set_cosmetic_tag = BRA_NORTH
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_north_brazil = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_north_brazil = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_northwest_brazil = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_northwest_brazil = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_northwest_brazil = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_northwest_brazil"
+			set_country_flag = can_form_BRA_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = YEB_henry_ford ruling_only = yes } }
+
+				set_cosmetic_tag = BRA_NORTHWEST_FORD
+
+				else = {
+					set_cosmetic_tag = BRA_NORTHWEST
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_northwest_brazil = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_northwest_brazil_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_northwest_brazil = yes
+				}
+				else = {
+					required_states_to_form_northwest_brazil = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_central_brazil = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_central_brazil = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_central_brazil = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_central_brazil"
+			set_country_flag = can_form_BRA_UNITED
+
+			set_cosmetic_tag = BRA_CENTRAL
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_brazil = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_central_brazil = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_south_brazil = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_south_brazil = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_south_brazil = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_south_brazil"
+			set_country_flag = can_form_BRA_UNITED
+
+			set_cosmetic_tag = BRA_SOUTHEAST
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_south_brazil = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_south_brazil = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_southeast_brazil = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_southeast_brazil = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_southeast_brazil = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_southeast_brazil"
+			set_country_flag = can_form_BRA_UNITED
+
+			set_cosmetic_tag = BRA_SOUTH
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_southeast_brazil = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_southeast_brazil = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_brazil = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_brazil = yes
+		}
+		visible = {
+			has_cosmetics_to_form_brazil = yes
+		}
+		available = {
+			has_states_to_form_brazil = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_brazil"
+			clr_country_flag = can_form_BRA_UNITED
+
+			set_country_flag = can_form_SOA_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = YAE_pedro_henrique ruling_only = yes } }
+
+				set_cosmetic_tag = BRA_UNITED_EMPIRE
+			}
+			else_if = {
+				limit = { has_country_leader = { character = YEB_henry_ford ruling_only = yes } }
+
+				set_cosmetic_tag = BRA_UNITED_FORD
+
+				else = {
+					set_cosmetic_tag = BRA_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_brazil = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_brazil_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_brazil = yes
+				}
+				else = {
+					required_states_to_form_brazil = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {

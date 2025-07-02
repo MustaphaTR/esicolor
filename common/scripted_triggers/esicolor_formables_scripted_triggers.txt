@@ -5825,6 +5825,234 @@ required_states_to_form_peru_bolivia = {
 	}
 }
 
+#### Brazil ####
+can_form_north_brazil = {
+	OR = {
+		original_tag = AYF
+		original_tag = AYB
+		original_tag = AYY
+		original_tag = ZFT # YES
+		original_tag = YEL
+		original_tag = YEF
+	}
+}
+
+can_form_northwest_brazil = {
+	OR = {
+		original_tag = AYS
+		original_tag = YEB
+		original_tag = YEY
+		original_tag = YAO
+		original_tag = YAI
+		original_tag = YAZ
+		original_tag = YLI
+		original_tag = YLZ
+		original_tag = YLE
+		original_tag = YLA
+		original_tag = YLS
+		original_tag = YLL
+		original_tag = YLF
+		original_tag = YLB
+		original_tag = YLY
+	}
+}
+
+can_form_central_brazil = {
+	OR = {
+		original_tag = ZBO
+		original_tag = SOA
+		original_tag = SOS
+	}
+}
+
+can_form_south_brazil = {
+	OR = {
+		original_tag = SOZ
+		original_tag = SOE
+		original_tag = YAA
+	}
+}
+
+can_form_southeast_brazil = {
+	OR = {
+		original_tag = AYL
+		original_tag = SOO
+		original_tag = SOI
+		original_tag = YAE
+	}
+}
+
+can_form_brazil = {
+	OR = {
+		can_form_north_brazil = yes
+		can_form_northwest_brazil = yes
+		can_form_central_brazil = yes
+		can_form_south_brazil = yes
+		can_form_southeast_brazil = yes
+	}
+}
+
+is_north_brazil = {
+	OR = {
+		state = 497
+		state = 498
+		state = 499
+		state = 935
+		state = 936
+		state = 937
+	}
+}
+
+is_northwest_brazil = {
+	OR = {
+		state = 495
+		state = 938
+		state = 939
+		state = 940
+		state = 941
+		state = 942
+		state = 961
+		state = 962
+		state = 963
+		state = 964
+		state = 965
+		state = 966
+		state = 967
+		state = 968
+		state = 969
+	}
+}
+
+is_central_brazil = {
+	OR = {
+		state = 280
+		state = 504
+		state = 505
+	}
+}
+
+is_south_brazil = {
+	OR = {
+		state = 502
+		state = 503
+		state = 944
+	}
+}
+
+is_southeast_brazil = {
+	OR = {
+		state = 496
+		state = 500
+		state = 501
+		state = 943
+	}
+}
+
+is_brazil = {
+	OR = {
+		is_north_brazil = yes
+		is_northwest_brazil = yes
+		is_central_brazil = yes
+		is_south_brazil = yes
+		is_southeast_brazil = yes
+	}
+}
+
+has_states_to_form_north_brazil = {
+	custom_trigger_tooltip = {
+		tooltip = form_north_brazil_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 497 } } } owns_state = 497 }
+		if = { limit = { NOT = { OOO = { owns_state = 498 } } } owns_state = 498 }
+		if = { limit = { NOT = { OOO = { owns_state = 499 } } } owns_state = 499 }
+		if = { limit = { NOT = { OOO = { owns_state = 935 } } } owns_state = 935 }
+		if = { limit = { NOT = { OOO = { owns_state = 936 } } } owns_state = 936 }
+		if = { limit = { NOT = { OOO = { owns_state = 937 } } } owns_state = 937 }
+	}
+}
+
+has_states_to_form_northwest_brazil = {
+	custom_trigger_tooltip = {
+		tooltip = form_northwest_brazil_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 495 } } } owns_state = 495 }
+		if = { limit = { NOT = { OOO = { owns_state = 938 } } } owns_state = 938 }
+		if = { limit = { NOT = { OOO = { owns_state = 939 } } } owns_state = 939 }
+		if = { limit = { NOT = { OOO = { owns_state = 940 } } } owns_state = 940 }
+		if = { limit = { NOT = { OOO = { owns_state = 941 } } } owns_state = 941 }
+		if = { limit = { NOT = { OOO = { owns_state = 942 } } } owns_state = 942 }
+		if = { limit = { NOT = { OOO = { owns_state = 969 } } } owns_state = 969 }
+	}
+}
+
+has_states_to_form_central_brazil = {
+	custom_trigger_tooltip = {
+		tooltip = form_central_brazil_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 280 } } } owns_state = 280 }
+		if = { limit = { NOT = { OOO = { owns_state = 504 } } } owns_state = 504 }
+		if = { limit = { NOT = { OOO = { owns_state = 505 } } } owns_state = 505 }
+	}
+}
+
+has_states_to_form_south_brazil = {
+	custom_trigger_tooltip = {
+		tooltip = form_south_brazil_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 502 } } } owns_state = 502 }
+		if = { limit = { NOT = { OOO = { owns_state = 503 } } } owns_state = 503 }
+		if = { limit = { NOT = { OOO = { owns_state = 944 } } } owns_state = 944 }
+	}
+}
+
+has_states_to_form_southeast_brazil = {
+	custom_trigger_tooltip = {
+		tooltip = form_southeast_brazil_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 496 } } } owns_state = 496 }
+		if = { limit = { NOT = { OOO = { owns_state = 500 } } } owns_state = 500 }
+		if = { limit = { NOT = { OOO = { owns_state = 501 } } } owns_state = 501 }
+		if = { limit = { NOT = { OOO = { owns_state = 943 } } } owns_state = 943 }
+	}
+}
+
+has_cosmetics_to_form_brazil = {
+	has_country_flag = can_form_BRA_UNITED
+}
+has_states_to_form_brazil = {
+	custom_trigger_tooltip = {
+		tooltip = form_brazil_has_states_tt
+
+		has_states_to_form_north_brazil = yes
+		has_states_to_form_northwest_brazil = yes
+		has_states_to_form_central_brazil = yes
+		has_states_to_form_south_brazil = yes
+		has_states_to_form_southeast_brazil = yes
+	}
+}
+
+required_states_to_form_northwest_brazil = {
+	OR = {
+		state = 495
+		state = 938
+		state = 939
+		state = 940
+		state = 941
+		state = 942
+		state = 969
+	}
+}
+
+required_states_to_form_brazil = {
+	OR = {
+		is_north_brazil = yes
+		required_states_to_form_northwest_brazil = yes
+		is_central_brazil = yes
+		is_south_brazil = yes
+		is_southeast_brazil = yes
+	}
+}
+
 #### Polynesia ####
 can_form_hawaii = {
 	OR = {
