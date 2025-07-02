@@ -4920,6 +4920,7 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_alpine_confederation"
 			clr_country_flag = can_form_ALP_UNITED
 			clr_country_flag = can_form_DNB_AUSTRIA_HUNGARY
+			clr_country_flag = can_form_FRA_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
 
@@ -10659,6 +10660,350 @@ esicolor_formables = {
 				}
 				else = {
 					required_states_to_form_brazil = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_upper_france = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_upper_france = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_upper_france = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_upper_france"
+			set_country_flag = can_form_FRA_UNITED
+
+			set_cosmetic_tag = FRA_NORTH
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_upper_france = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_upper_france = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_grand_est = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_grand_est = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_grand_est = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_grand_est"
+			set_country_flag = can_form_FRA_UNITED
+
+			set_cosmetic_tag = FRA_EAST
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_grand_est = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_grand_est = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_french_alps = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_french_alps = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_french_alps = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_french_alps"
+			set_country_flag = can_form_FRA_UNITED
+			set_country_flag = can_form_ALP_UNITED
+
+			set_cosmetic_tag = FRA_ALPS
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_french_alps = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_french_alps = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_occitania = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_occitania = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_occitania = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_occitania"
+			set_country_flag = can_form_FRA_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = OZL_philippe_petain ruling_only = yes } }
+
+				set_cosmetic_tag = FRA_OCCITANIA_VICHY
+
+				else = {
+					set_cosmetic_tag = FRA_OCCITANIA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_occitania = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_occitania = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_orleans = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_orleans = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_orleans = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_orleans"
+			set_country_flag = can_form_FRA_UNITED
+
+			set_cosmetic_tag = FRA_ORLEANS
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_orleans = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_orleans = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_western_france = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_western_france = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_western_france = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_western_france"
+			clr_country_flag = can_form_CLT_UNITED
+
+			set_country_flag = can_form_FRA_UNITED
+
+			set_cosmetic_tag = FRA_WEST
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_western_france = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_western_france_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_western_france = yes
+				}
+				else = {
+					required_states_to_form_western_france = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_france = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_france = yes
+		}
+		visible = {
+			has_cosmetics_to_form_france = yes
+		}
+		available = {
+			has_states_to_form_france = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_france"
+			clr_country_flag = can_form_FRA_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = OZA_jean_iii ruling_only = yes } }
+
+				set_cosmetic_tag = FRA_UNITED_ORLEANS
+			}
+			else_if = {
+				limit = { has_country_leader = { character = OOI_napoleon_vi ruling_only = yes } }
+
+				set_cosmetic_tag = FRA_UNITED_NAPOLEON
+
+				else = {
+					set_cosmetic_tag = FRA_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_france = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_france_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_france = yes
+				}
+				else = {
+					required_states_to_form_france = yes
 				}
 			}
 		}
