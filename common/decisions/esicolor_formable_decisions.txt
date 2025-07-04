@@ -11749,6 +11749,227 @@ esicolor_formables = {
 		}
 	}
 
+	form_rio_grande = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_rio_grande = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_rio_grande = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_rio_grande"
+			set_country_flag = can_form_MEX_UNITED
+
+			set_cosmetic_tag = MEX_RIOGRANDE
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_rio_grande = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_rio_grande = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_northwest_mexico = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_northwest_mexico = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_northwest_mexico = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_northwest_mexico"
+			set_country_flag = can_form_MEX_UNITED
+
+			set_cosmetic_tag = MEX_NORTHWEST
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_northwest_mexico = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_northwest_mexico = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_central_mexico = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_central_mexico = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_central_mexico = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_central_mexico"
+			set_country_flag = can_form_MEX_UNITED
+
+			set_cosmetic_tag = MEX_CENTRAL
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_mexico = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_central_mexico = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_south_mexico = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_south_mexico = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_south_mexico = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_south_mexico"
+			set_country_flag = can_form_MEX_UNITED
+
+			if = {
+				limit = { original_tag = BGB }
+
+				set_cosmetic_tag = MEX_SOUTH_YUCATAN
+
+				else = {
+					set_cosmetic_tag = MEX_SOUTH
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_south_mexico = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_south_mexico = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_mexico = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_mexico = yes
+		}
+		visible = {
+			has_cosmetics_to_form_mexico = yes
+		}
+		available = {
+			has_states_to_form_mexico = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_mexico"
+			clr_country_flag = can_form_MEX_UNITED
+			clr_country_flag = can_form_USC_UNITED
+
+			set_country_flag = can_form_NOA_UNITED
+
+			set_cosmetic_tag = MEX_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_mexico = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_mexico = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {

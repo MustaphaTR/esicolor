@@ -5795,6 +5795,137 @@ required_states_to_form_central_america = {
 	}
 }
 
+#### Mexico ####
+can_form_rio_grande = {
+	OR = {
+		original_tag = AFY
+		original_tag = ABO
+	}
+}
+
+can_form_northwest_mexico = {
+	OR = {
+		original_tag = ABI
+		original_tag = ABZ
+		original_tag = ABE
+		original_tag = ABA
+	}
+}
+
+can_form_central_mexico = {
+	OR = {
+		original_tag = ZFF
+		original_tag = AFF
+		original_tag = AFB
+		original_tag = ABS
+	}
+}
+
+can_form_south_mexico = {
+	OR = {
+		original_tag = BGB # AFA
+		original_tag = AFS
+		original_tag = AFL
+	}
+}
+
+is_rio_grande = {
+	OR = {
+		state = 479
+		state = 480
+	}
+}
+
+is_northwest_mexico = {
+	OR = {
+		state = 481
+		state = 482
+		state = 483
+		state = 484
+	}
+}
+
+is_central_mexico = {
+	OR = {
+		state = 277
+		state = 477
+		state = 478
+		state = 485
+	}
+}
+
+is_south_mexico = {
+	OR = {
+		state = 474
+		state = 475
+		state = 476
+	}
+}
+
+is_mexico = {
+	OR = {
+		is_rio_grande = yes
+		is_northwest_mexico = yes
+		is_central_mexico = yes
+		is_south_mexico = yes
+	}
+}
+
+has_states_to_form_rio_grande = {
+	custom_trigger_tooltip = {
+		tooltip = form_rio_grande_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 479 } } } owns_state = 479 }
+		if = { limit = { NOT = { OOO = { owns_state = 480 } } } owns_state = 480 }
+	}
+}
+
+has_states_to_form_northwest_mexico = {
+	custom_trigger_tooltip = {
+		tooltip = form_northwest_mexico_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 481 } } } owns_state = 481 }
+		if = { limit = { NOT = { OOO = { owns_state = 482 } } } owns_state = 482 }
+		if = { limit = { NOT = { OOO = { owns_state = 483 } } } owns_state = 483 }
+		if = { limit = { NOT = { OOO = { owns_state = 484 } } } owns_state = 484 }
+	}
+}
+
+has_states_to_form_central_mexico = {
+	custom_trigger_tooltip = {
+		tooltip = form_central_mexico_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 277 } } } owns_state = 277 }
+		if = { limit = { NOT = { OOO = { owns_state = 477 } } } owns_state = 477 }
+		if = { limit = { NOT = { OOO = { owns_state = 478 } } } owns_state = 478 }
+		if = { limit = { NOT = { OOO = { owns_state = 485 } } } owns_state = 485 }
+	}
+}
+
+has_states_to_form_south_mexico = {
+	custom_trigger_tooltip = {
+		tooltip = form_south_mexico_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 474 } } } owns_state = 474 }
+		if = { limit = { NOT = { OOO = { owns_state = 475 } } } owns_state = 475 }
+		if = { limit = { NOT = { OOO = { owns_state = 476 } } } owns_state = 476 }
+	}
+}
+
+has_cosmetics_to_form_mexico = {
+	has_country_flag = can_form_MEX_UNITED
+}
+has_states_to_form_mexico = {
+	custom_trigger_tooltip = {
+		tooltip = form_mexico_has_states_tt
+
+		has_states_to_form_rio_grande = yes
+		has_states_to_form_northwest_mexico = yes
+		has_states_to_form_central_mexico = yes
+		has_states_to_form_south_mexico = yes
+	}
+}
+
 #### Gran Colombia ####
 can_form_panama = {
 	OR = {
