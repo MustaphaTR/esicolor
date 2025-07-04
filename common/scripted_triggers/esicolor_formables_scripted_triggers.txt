@@ -7318,6 +7318,437 @@ required_states_to_form_indochina = {
 	}
 }
 
+#### Siberia ####
+can_form_trans_urals = {
+	OR = {
+		original_tag = AOE
+		original_tag = SFO
+		original_tag = SFI
+		original_tag = SFZ
+		original_tag = SFB
+		original_tag = LSE
+	}
+}
+
+can_form_western_siberia = {
+	OR = {
+		can_form_yamalia = yes
+		can_form_ostyak_vogul = yes
+		can_form_altai = yes
+		can_form_trans_urals = yes
+		original_tag = SLY
+	}
+}
+
+can_form_evenkia = {
+	OR = {
+		original_tag = SLS
+		original_tag = SFS
+		original_tag = SFL
+	}
+}
+
+can_form_taymiria = {
+	OR = {
+		original_tag = TJM # SIL
+		original_tag = BFB
+	}
+}
+
+can_form_baikal = {
+	OR = {
+		original_tag = SLA
+		original_tag = SLA
+		original_tag = SLL
+		original_tag = SLF
+		original_tag = SFS
+	}
+}
+
+can_form_krasnoyarsk_krai = {
+	OR = {
+		can_form_taymiria = yes
+		original_tag = SFL
+		original_tag = SLB
+	}
+}
+
+can_form_yakutia = {
+	OR = {
+		original_tag = SFA
+		original_tag = LAA
+		original_tag = BFL
+		original_tag = BFF
+	}
+}
+
+can_form_central_siberia = {
+	OR = {
+		can_form_baikal = yes
+		can_form_evenkia = yes
+		can_form_krasnoyarsk_krai = yes
+		can_form_yakutia = yes
+		original_tag = EZY
+	}
+}
+
+can_form_chukotka = {
+	OR = {
+		original_tag = BZZ
+		original_tag = BFS
+	}
+}
+
+can_form_vladivostok = {
+	OR = {
+		original_tag = AOB
+		original_tag = AOY
+	}
+}
+
+can_form_sakhalin = {
+	OR = {
+		original_tag = SEF
+		original_tag = SSS
+		original_tag = LSS
+	}
+}
+
+can_form_far_eastern_republic = {
+	OR = {
+		can_form_chukotka = yes
+		can_form_vladivostok = yes
+		can_form_sakhalin = yes
+		original_tag = TPM # SLO
+		original_tag = SLI
+		original_tag = SLZ
+		original_tag = SLE
+		original_tag = LEF
+		original_tag = LSF
+		original_tag = BFA
+	}
+}
+
+can_form_siberia = {
+	OR = {
+		can_form_western_siberia = yes
+		can_form_central_siberia = yes
+		can_form_far_eastern_republic = yes
+	}
+}
+
+is_trans_urals = {
+	OR = {
+		state = 403
+		state = 570
+		state = 571
+		state = 572
+		state = 578
+		state = 653
+	}
+}
+
+is_western_siberia = {
+	OR = {
+		is_yamalia = yes
+		is_ostyak_vogul = yes
+		is_altai = yes
+		is_trans_urals = yes
+		state = 569
+	}
+}
+
+is_evenkia = {
+	OR = {
+		state = 565
+		state = 575
+		state = 576
+	}
+}
+
+is_taymiria = {
+	OR = {
+		state = 516
+		state = 878
+	}
+}
+
+is_baikal = {
+	OR = {
+		state = 564
+		state = 565
+		state = 566
+		state = 567
+		state = 575
+	}
+}
+
+is_krasnoyarsk_krai = {
+	OR = {
+		is_taymiria = yes
+		state = 568
+		state = 576
+	}
+}
+
+is_yakutia = {
+	OR = {
+		state = 574
+		state = 644
+		state = 876
+		state = 877
+	}
+}
+
+is_central_siberia = {
+	OR = {
+		is_baikal = yes
+		is_evenkia = yes
+		is_krasnoyarsk_krai = yes
+		is_yakutia = yes
+		state = 329
+	}
+}
+
+is_chukotka = {
+	OR = {
+		state = 822
+		state = 875
+	}
+}
+
+is_vladivostok = {
+	OR = {
+		state = 408
+		state = 409
+	}
+}
+
+is_sakhalin = {
+	OR = {
+		state = 537
+		state = 555
+		state = 655
+	}
+}
+
+is_far_eastern_republic = {
+	OR = {
+		is_chukotka = yes
+		is_vladivostok = yes
+		is_sakhalin = yes
+		state = 560
+		state = 561
+		state = 562
+		state = 563
+		state = 637
+		state = 657
+		state = 874
+	}
+}
+
+is_siberia = {
+	OR = {
+		is_western_siberia = yes
+		is_central_siberia = yes
+		is_far_eastern_republic = yes
+	}
+}
+
+has_states_to_form_trans_urals = {
+	custom_trigger_tooltip = {
+		tooltip = form_trans_urals_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 403 } } } owns_state = 403 }
+		if = { limit = { NOT = { OOO = { owns_state = 570 } } } owns_state = 570 }
+		if = { limit = { NOT = { OOO = { owns_state = 571 } } } owns_state = 571 }
+		if = { limit = { NOT = { OOO = { owns_state = 572 } } } owns_state = 572 }
+		if = { limit = { NOT = { OOO = { owns_state = 578 } } } owns_state = 578 }
+		if = { limit = { NOT = { OOO = { owns_state = 653 } } } owns_state = 653 }
+	}
+}
+
+has_cosmetics_to_form_western_siberia = {
+	has_country_flag = can_form_SBR_WEST
+}
+has_states_to_form_western_siberia = {
+	custom_trigger_tooltip = {
+		tooltip = form_western_siberia_has_states_tt
+
+		has_states_to_form_yamalia = yes
+		has_states_to_form_ostyak_vogul = yes
+		has_states_to_form_altai = yes
+		has_states_to_form_trans_urals = yes
+		if = { limit = { NOT = { OOO = { owns_state = 569 } } } owns_state = 569 }
+	}
+}
+
+has_states_to_form_evenkia = {
+	custom_trigger_tooltip = {
+		tooltip = form_evenkia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 565 } } } owns_state = 565 }
+		if = { limit = { NOT = { OOO = { owns_state = 575 } } } owns_state = 575 }
+		if = { limit = { NOT = { OOO = { owns_state = 576 } } } owns_state = 576 }
+	}
+}
+
+has_states_to_form_taymiria = {
+	custom_trigger_tooltip = {
+		tooltip = form_taymiria_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 516 } } } owns_state = 516 }
+		if = { limit = { NOT = { OOO = { owns_state = 878 } } } owns_state = 878 }
+	}
+}
+
+has_states_to_form_baikal = {
+	custom_trigger_tooltip = {
+		tooltip = form_baikal_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 564 } } } owns_state = 564 }
+		if = { limit = { NOT = { OOO = { owns_state = 566 } } } owns_state = 566 }
+		if = { limit = { NOT = { OOO = { owns_state = 567 } } } owns_state = 567 }
+	}
+}
+
+has_cosmetics_to_form_krasnoyarsk_krai = {
+	has_country_flag = can_form_SBR_KRASNOYARSK
+}
+has_states_to_form_krasnoyarsk_krai = {
+	custom_trigger_tooltip = {
+		tooltip = form_krasnoyarsk_krai_has_states_tt
+
+		has_states_to_form_taymiria = yes
+		if = { limit = { NOT = { OOO = { owns_state = 568 } } } owns_state = 568 }
+		if = { limit = { NOT = { OOO = { owns_state = 576 } } } owns_state = 576 }
+	}
+}
+
+has_states_to_form_yakutia = {
+	custom_trigger_tooltip = {
+		tooltip = form_yakutia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 574 } } } owns_state = 574 }
+		if = { limit = { NOT = { OOO = { owns_state = 644 } } } owns_state = 644 }
+		if = { limit = { NOT = { OOO = { owns_state = 876 } } } owns_state = 876 }
+		if = { limit = { NOT = { OOO = { owns_state = 877 } } } owns_state = 877 }
+	}
+}
+
+has_cosmetics_to_form_central_siberia = {
+	has_country_flag = can_form_SBR_CENTRAL
+}
+has_states_to_form_central_siberia = {
+	custom_trigger_tooltip = {
+		tooltip = form_central_siberia_has_states_tt
+
+		has_states_to_form_baikal = yes
+		has_states_to_form_evenkia = yes
+		has_states_to_form_krasnoyarsk_krai = yes
+		has_states_to_form_yakutia = yes
+		if = { limit = { NOT = { OOO = { owns_state = 329 } } } owns_state = 329 }
+		if = { limit = { NOT = { OOO = { owns_state = 329 } } } owns_state = 567 }
+	}
+}
+
+has_states_to_form_chukotka = {
+	custom_trigger_tooltip = {
+		tooltip = form_chukotka_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 822 } } } owns_state = 822 }
+		if = { limit = { NOT = { OOO = { owns_state = 875 } } } owns_state = 875 }
+	}
+}
+
+has_states_to_form_vladivostok = {
+	custom_trigger_tooltip = {
+		tooltip = form_vladivostok_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 408 } } } owns_state = 408 }
+		if = { limit = { NOT = { OOO = { owns_state = 409 } } } owns_state = 409 }
+	}
+}
+
+has_states_to_form_sakhalin = {
+	custom_trigger_tooltip = {
+		tooltip = form_sakhalin_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 537 } } } owns_state = 537 }
+		if = { limit = { NOT = { OOO = { owns_state = 655 } } } owns_state = 655 }
+	}
+}
+
+has_cosmetics_to_form_far_eastern_republic = {
+	has_country_flag = can_form_SBR_EAST
+}
+has_states_to_form_far_eastern_republic = {
+	custom_trigger_tooltip = {
+		tooltip = form_far_eastern_republic_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 560 } } } owns_state = 560 }
+		if = { limit = { NOT = { OOO = { owns_state = 561 } } } owns_state = 561 }
+		if = { limit = { NOT = { OOO = { owns_state = 562 } } } owns_state = 562 }
+		if = { limit = { NOT = { OOO = { owns_state = 563 } } } owns_state = 563 }
+		if = { limit = { NOT = { OOO = { owns_state = 637 } } } owns_state = 637 }
+		if = { limit = { NOT = { OOO = { owns_state = 657 } } } owns_state = 657 }
+		if = { limit = { NOT = { OOO = { owns_state = 874 } } } owns_state = 874 }
+	}
+}
+
+has_cosmetics_to_form_siberia = {
+	has_country_flag = can_form_SBR_UNITED
+}
+has_states_to_form_siberia = {
+	custom_trigger_tooltip = {
+		tooltip = form_siberia_has_states_tt
+
+		has_states_to_form_western_siberia = yes
+		has_cosmetics_to_form_central_siberia = yes
+		if = { limit = { NOT = { OOO = { owns_state = 822 } } } owns_state = 822 }
+		has_states_to_form_vladivostok = yes
+		has_states_to_form_sakhalin = yes
+		has_states_to_form_far_eastern_republic = yes
+	}
+}
+
+required_states_to_form_baikal = {
+	OR = {
+		state = 564
+		state = 566
+	}
+}
+
+required_states_to_form_sakhalin = {
+	OR = {
+		state = 537
+		state = 655
+	}
+}
+
+required_states_to_form_far_eastern_republic = {
+	OR = {
+		state = 560
+		state = 561
+		state = 562
+		state = 563
+		state = 637
+		state = 657
+		state = 874
+	}
+}
+
+required_states_to_form_siberia = {
+	OR = {
+		is_western_siberia = yes
+		is_central_siberia = yes
+		state = 822
+		is_vladivostok = yes
+		required_states_to_form_sakhalin = yes
+		required_states_to_form_far_eastern_republic = yes
+	}
+}
+
 #### Arabia ####
 can_form_saudi_arabia = {
 	OR = {
