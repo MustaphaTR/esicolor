@@ -5739,6 +5739,62 @@ required_states_to_form_antilles = {
 	}
 }
 
+#### Central America ####
+can_form_central_america = {
+	OR = {
+		can_form_panama = yes
+		original_tag = EII
+		original_tag = EIZ
+		original_tag = EIE
+		original_tag = EIA
+		original_tag = EIL
+		original_tag = EIF
+		original_tag = BGB # AFA
+		original_tag = AFS
+	}
+}
+
+is_central_america = {
+	OR = {
+		is_panama = yes
+		state = 311
+		state = 312
+		state = 313
+		state = 314
+		state = 316
+		state = 317
+		state = 474
+		state = 475
+	}
+}
+
+has_cosmetics_to_form_central_america = {
+	has_country_flag = can_form_USC_UNITED
+}
+has_states_to_form_central_america = {
+	custom_trigger_tooltip = {
+		tooltip = form_central_america_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 311 } } } owns_state = 311 }
+		if = { limit = { NOT = { OOO = { owns_state = 312 } } } owns_state = 312 }
+		if = { limit = { NOT = { OOO = { owns_state = 313 } } } owns_state = 313 }
+		if = { limit = { NOT = { OOO = { owns_state = 314 } } } owns_state = 314 }
+		if = { limit = { NOT = { OOO = { owns_state = 316 } } } owns_state = 316 }
+		if = { limit = { NOT = { OOO = { owns_state = 317 } } } owns_state = 317 }
+	}
+}
+
+required_states_to_form_central_america = {
+	OR = {
+		state = 311
+		state = 312
+		state = 313
+		state = 314
+		state = 316
+		state = 317
+	}
+}
+
 #### Gran Colombia ####
 can_form_panama = {
 	OR = {
@@ -5940,7 +5996,7 @@ required_states_to_form_peru = {
 required_states_to_form_gran_colombia = {
 	OR = {
 		is_panama = yes
-		is_venezuela = yes
+		is_colombia = yes
 		required_states_to_form_venezuela = yes
 		required_states_to_form_ecuador = yes
 	}

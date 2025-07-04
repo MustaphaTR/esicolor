@@ -5209,6 +5209,26 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetIdeologyDef_USC_UNITED
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = USC_UNITED_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = USC_UNITED_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = USC_UNITED_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = USC_UNITED_communism_DEF
+	}
+}
+
+defined_text = {
 	name = GetIdeologyDef_EUR_UNITED
 	text = {
 		trigger = { has_country_leader_ideology = anarchism }

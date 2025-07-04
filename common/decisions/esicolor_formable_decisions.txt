@@ -1819,6 +1819,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_panama"
 			set_country_flag = can_form_GCO_UNITED
+			set_country_flag = can_form_USC_UNITED
 
 			set_cosmetic_tag = GCO_PANAMA
 
@@ -2067,6 +2068,7 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_gran_colombia"
 			clr_country_flag = can_form_GCO_UNITED
 			clr_country_flag = can_form_PRB_UNITED
+			clr_country_flag = can_form_USC_UNITED
 
 			set_country_flag = can_form_SOA_UNITED
 
@@ -11681,6 +11683,64 @@ esicolor_formables = {
 		}
 
 		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_central_america = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_central_america = yes
+		}
+		visible = {
+			has_cosmetics_to_form_central_america = yes
+		}
+		available = {
+			has_states_to_form_central_america = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_central_america"
+			clr_country_flag = can_form_USC_UNITED
+			clr_country_flag = can_form_GCO_UNITED
+
+			set_country_flag = can_form_NOA_UNITED
+			set_country_flag = can_form_SOA_UNITED
+
+			set_cosmetic_tag = USC_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_america = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_central_america_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_central_america = yes
+				}
+				else = {
+					required_states_to_form_central_america = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
 
