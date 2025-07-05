@@ -26,6 +26,32 @@ esicolor_formables = {
 		}
 	}
 
+	#enable_formable_colors = {
+	#	allowed = {
+	#		always = yes
+	#	}
+	#	visible = {
+	#		has_global_flag = formables_colors_disabled
+	#	}
+	#	complete_effect = {
+	#		clr_global_flag = formables_colors_disabled
+	#		enable_formable_colors_effect = yes
+	#	}
+	#}
+
+	#disable_formable_colors = {
+	#	allowed = {
+	#		always = yes
+	#	}
+	#	visible = {
+	#		NOT = { has_global_flag = formables_colors_enabled }
+	#	}
+	#	complete_effect = {
+	#		set_global_flag = formables_colors_enabled
+	#		disable_formable_colors_effect = yes
+	#	}
+	#}
+
 	form_slovenia = {
 		icon = generic_form_nation
 		allowed = {
@@ -6065,6 +6091,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_azerbaijan"
 			set_country_flag = can_form_CAU_TRANS
+			set_country_flag = can_form_PER_IRAN
 
 			set_cosmetic_tag = CAU_AZERBAIJAN
 
@@ -6203,6 +6230,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_transcaucasia"
 			clr_country_flag = can_form_CAU_TRANS
+			clr_country_flag = can_form_PER_IRAN
 
 			set_country_flag = can_form_CAU_UNITED
 
@@ -9439,6 +9467,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_iranian_kurdistan"
 			set_country_flag = can_form_MSP_KURD
+			set_country_flag = can_form_PER_IRAN
 
 			set_cosmetic_tag = MSP_KURDPER
 
@@ -9494,8 +9523,10 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_kurdistan"
 			clr_country_flag = can_form_MSP_KURD
 			clr_country_flag = can_form_TUR_UNITED
+			clr_country_flag = can_form_PER_IRAN
 
 			set_country_flag = can_form_MSP_UNITED
+			set_country_flag = can_form_PER_UNITED
 
 			set_cosmetic_tag = MSP_KURD
 
@@ -9614,6 +9645,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_mesopotamia"
 			clr_country_flag = can_form_MSP_UNITED
+			clr_country_flag = can_form_PER_UNITED
 
 			set_country_flag = can_form_MEA_UNITED
 
@@ -11962,6 +11994,443 @@ esicolor_formables = {
 		}
 
 		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_khorasan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_khorasan = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_khorasan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_khorasan"
+			set_country_flag = can_form_PER_IRAN
+
+			set_cosmetic_tag = PER_KHORASAN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_khorasan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_khorasan = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_north_iran = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_north_iran = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_north_iran = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_north_iran"
+			set_country_flag = can_form_PER_IRAN
+
+			set_cosmetic_tag = PER_NORTH
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_north_iran = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_north_iran = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_central_iran = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_central_iran = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_central_iran = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_central_iran"
+			set_country_flag = can_form_PER_IRAN
+
+			set_cosmetic_tag = PER_CENTRAL
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_iran = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_central_iran = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_south_iran = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_south_iran = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_south_iran = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_south_iran"
+			set_country_flag = can_form_PER_IRAN
+
+			set_cosmetic_tag = PER_SOUTH
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_south_iran = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_south_iran_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_south_iran = yes
+				}
+				else = {
+					required_states_to_form_south_iran = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_iran = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_iran = yes
+		}
+		visible = {
+			has_cosmetics_to_form_iran = yes
+		}
+		available = {
+			has_states_to_form_iran = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_iran"
+			clr_country_flag = can_form_PER_IRAN
+			clr_country_flag = can_form_MSP_KURD
+			clr_country_flag = can_form_CAU_TRANS
+
+			set_country_flag = can_form_PER_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = AIZ_mohammad_hassan_mirza ruling_only = yes } }
+
+				set_cosmetic_tag = PER_IRAN_QAJAR
+
+				else = {
+					set_cosmetic_tag = PER_IRAN
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_iran = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_iran = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_afghanistan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_afghanistan = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_afghanistan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_afghanistan"
+			set_country_flag = can_form_PER_UNITED
+
+			set_cosmetic_tag = PER_AFGHANISTAN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_afghanistan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_afghanistan = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_tajikistan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_tajikistan = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_tajikistan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_tajikistan"
+			set_country_flag = can_form_PER_UNITED
+
+			set_cosmetic_tag = PER_TAJIKISTAN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_tajikistan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_tajikistan = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_balochistan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_balochistan = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_balochistan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_balochistan"
+			set_country_flag = can_form_PER_UNITED
+
+			if = {
+				limit = { original_tag = NIZ }
+
+				set_cosmetic_tag = PER_BALOCHISTAN_KALAT
+
+				else = {
+					set_cosmetic_tag = PER_BALOCHISTAN
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_balochistan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_balochistan_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_balochistan = yes
+				}
+				else = {
+					required_states_to_form_balochistan = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_persia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_persia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_persia = yes
+		}
+		available = {
+			has_states_to_form_persia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_persia"
+			clr_country_flag = can_form_PER_UNITED
+			clr_country_flag = can_form_MSP_UNITED
+
+			set_country_flag = can_form_MEA_UNITED
+
+			set_cosmetic_tag = PER_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_persia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_persia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_persia = yes
+				}
+				else = {
+					required_states_to_form_persia = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
 
 		fire_only_once = yes
 

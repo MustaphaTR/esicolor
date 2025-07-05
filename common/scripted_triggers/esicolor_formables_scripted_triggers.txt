@@ -8401,6 +8401,299 @@ required_states_to_form_mesopotamia = {
 	}
 }
 
+#### Persia ####
+can_form_khorasan = {
+	OR = {
+		original_tag = AIL
+		original_tag = NOE
+		original_tag = OPB # NOA
+	}
+}
+
+can_form_north_iran = {
+	OR = {
+		original_tag = ZLL
+		original_tag = AIB
+	}
+}
+
+can_form_central_iran = {
+	OR = {
+		original_tag = AII
+		original_tag = AIF
+		original_tag = NOZ
+	}
+}
+
+can_form_south_iran = {
+	OR = {
+		original_tag = AIZ
+		original_tag = AIE
+		original_tag = AIA
+		original_tag = AIO
+	}
+}
+
+can_form_iran = {
+	OR = {
+		original_tag = AZO
+		original_tag = NOO
+		can_form_iranian_kurdistan = yes
+		can_form_khorasan = yes
+		can_form_northern_iran = yes
+		can_form_central_iran = yes
+		can_form_southern_iran = yes
+	}
+}
+
+can_form_afghanistan = {
+	OR = {
+		original_tag = ZLF
+		original_tag = AIS
+		original_tag = NOS
+		original_tag = NOL
+		original_tag = NOF
+		original_tag = NOB
+		original_tag = NOY
+	}
+}
+
+can_form_tajikistan = {
+	OR = {
+		original_tag = FAZ
+	}
+}
+
+can_form_balochistan = {
+	OR = {
+		original_tag = AIO
+		original_tag = AAA
+		original_tag = YBB
+		original_tag = NIZ
+	}
+}
+
+can_form_persia = {
+	OR = {
+		can_form_azerbaijan = yes
+		can_form_kurdistan = yes
+		can_form_iran = yes
+		can_form_afghanistan = yes
+		can_form_balochistan = yes
+		original_tag = FAZ
+	}
+}
+
+is_khorasan = {
+	OR = {
+		state = 416
+		state = 1003
+		state = 1004
+	}
+}
+
+is_north_iran = {
+	OR = {
+		state = 266
+		state = 418
+	}
+}
+
+is_central_iran = {
+	OR = {
+		state = 411
+		state = 417
+		state = 1002
+	}
+}
+
+is_south_iran = {
+	OR = {
+		state = 410
+		state = 412
+		state = 413
+		state = 414
+	}
+}
+
+is_iran = {
+	OR = {
+		state = 420
+		state = 1000
+		is_iranian_kurdistan = yes
+		is_khorasan = yes
+		is_north_iran = yes
+		is_central_iran = yes
+		is_south_iran = yes
+	}
+}
+
+is_afghanistan = {
+	OR = {
+		state = 267
+		state = 415
+		state = 1005
+		state = 1006
+		state = 1007
+		state = 1008
+		state = 1009
+	}
+}
+
+is_tajikistan = {
+	OR = {
+		state = 742
+		state = 1005
+	}
+}
+
+is_balochistan = {
+	OR = {
+		state = 410
+		state = 444
+		state = 988
+		state = 1012
+	}
+}
+
+is_persia = {
+	OR = {
+		is_azerbaijan = yes
+		is_kurdistan = yes
+		is_iran = yes
+		is_afghanistan = yes
+		is_balochistan = yes
+		state = 742
+	}
+}
+
+has_states_to_form_khorasan = {
+	custom_trigger_tooltip = {
+		tooltip = form_khorasan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 416 } } } owns_state = 416 }
+		if = { limit = { NOT = { OOO = { owns_state = 1003 } } } owns_state = 1003 }
+		if = { limit = { NOT = { OOO = { owns_state = 1004 } } } owns_state = 1004 }
+	}
+}
+
+has_states_to_form_north_iran = {
+	custom_trigger_tooltip = {
+		tooltip = form_north_iran_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 266 } } } owns_state = 266 }
+		if = { limit = { NOT = { OOO = { owns_state = 418 } } } owns_state = 418 }
+	}
+}
+
+has_states_to_form_central_iran = {
+	custom_trigger_tooltip = {
+		tooltip = form_central_iran_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 411 } } } owns_state = 411 }
+		if = { limit = { NOT = { OOO = { owns_state = 417 } } } owns_state = 417 }
+		if = { limit = { NOT = { OOO = { owns_state = 1002 } } } owns_state = 1002 }
+	}
+}
+
+has_states_to_form_south_iran = {
+	custom_trigger_tooltip = {
+		tooltip = form_south_iran_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 412 } } } owns_state = 412 }
+		if = { limit = { NOT = { OOO = { owns_state = 413 } } } owns_state = 413 }
+		if = { limit = { NOT = { OOO = { owns_state = 414 } } } owns_state = 414 }
+	}
+}
+
+has_cosmetics_to_form_iran = {
+	has_country_flag = can_form_PER_IRAN
+}
+has_states_to_form_iran = {
+	custom_trigger_tooltip = {
+		tooltip = form_iran_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 420 } } } owns_state = 420 }
+		if = { limit = { NOT = { OOO = { owns_state = 1000 } } } owns_state = 1000 }
+		has_states_to_form_iranian_kurdistan = yes
+		has_states_to_form_khorasan = yes
+		has_states_to_form_north_iran = yes
+		has_states_to_form_central_iran = yes
+		has_states_to_form_south_iran = yes
+		if = { limit = { NOT = { OOO = { owns_state = 410 } } } owns_state = 410 }
+	}
+}
+
+has_states_to_form_afghanistan = {
+	custom_trigger_tooltip = {
+		tooltip = form_afghanistan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 267 } } } owns_state = 267 }
+		if = { limit = { NOT = { OOO = { owns_state = 415 } } } owns_state = 415 }
+		if = { limit = { NOT = { OOO = { owns_state = 1005 } } } owns_state = 1005 }
+		if = { limit = { NOT = { OOO = { owns_state = 1006 } } } owns_state = 1006 }
+		if = { limit = { NOT = { OOO = { owns_state = 1007 } } } owns_state = 1007 }
+		if = { limit = { NOT = { OOO = { owns_state = 1008 } } } owns_state = 1008 }
+		if = { limit = { NOT = { OOO = { owns_state = 1009 } } } owns_state = 1009 }
+	}
+}
+
+has_states_to_form_tajikistan = {
+	custom_trigger_tooltip = {
+		tooltip = form_tajikistan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 742 } } } owns_state = 742 }
+		if = { limit = { NOT = { OOO = { owns_state = 1005 } } } owns_state = 1005 }
+	}
+}
+
+has_states_to_form_balochistan = {
+	custom_trigger_tooltip = {
+		tooltip = form_balochistan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 444 } } } owns_state = 444 }
+		if = { limit = { NOT = { OOO = { owns_state = 988 } } } owns_state = 988 }
+		if = { limit = { NOT = { OOO = { owns_state = 1012 } } } owns_state = 1012 }
+	}
+}
+
+has_cosmetics_to_form_persia = {
+	has_country_flag = can_form_PER_UNITED
+}
+has_states_to_form_persia = {
+	custom_trigger_tooltip = {
+		tooltip = form_persia_has_states_tt
+
+		has_states_to_form_kurdistan = yes
+		has_states_to_form_iran = yes
+		has_states_to_form_afghanistan = yes
+	}
+}
+
+required_states_to_form_south_iran = {
+	OR = {
+		state = 412
+		state = 413
+		state = 414
+	}
+}
+
+required_states_to_form_balochistan = {
+	OR = {
+		state = 444
+		state = 988
+		state = 1012
+	}
+}
+
+required_states_to_form_persia = {
+	OR = {
+		required_states_to_form_kurdistan = yes
+		is_iran = yes
+		is_afghanistan = yes
+	}
+}
+
 #### Europe ####
 has_cosmetics_to_form_europe = {
 	has_country_flag = can_form_EUR_UNITED
