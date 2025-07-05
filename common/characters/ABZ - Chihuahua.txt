@@ -1,0 +1,36 @@
+characters={
+	ABZ_adolfo_de_la_huerta = {
+		instance = {
+			allowed = {
+				has_dlc = "Man the Guns"
+			}
+			name=MEX_adolfo_de_la_huerta
+			portraits={
+				civilian={
+					large=GFX_Portrait_MEX_Adolfo_de_la_Huerta
+				}
+			}
+			country_leader={
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+			name=MEX_adolfo_de_la_huerta
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_America_Generic_navy_3
+				}
+			}
+			country_leader={
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+characters={
+	ABO_dionisio_encina = {
+		instance = {
+			allowed = {
+				has_dlc = "Man the Guns"
+			}
+			name=MEX_dionisio_encina
+			portraits={
+				civilian={
+					large=GFX_Portrait_MEX_Dionisio_Encina
+				}
+			}
+			country_leader={
+				traits={ staunch_stalinist }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+			name=MEX_dionisio_encina
+			portraits={
+				civilian={
+					large=GFX_Portrait_Italy_Generic_1
+				}
+			}
+			country_leader={
+				traits={ staunch_stalinist }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

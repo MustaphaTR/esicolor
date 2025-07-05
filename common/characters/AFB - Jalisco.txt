@@ -1,0 +1,38 @@
+characters={
+	AFB_luis_maria_martinez = {
+		instance = {
+			allowed = {
+				has_dlc = "Man the Guns"
+			}
+			name=MEX_luis_maria_martinez
+			portraits={
+				civilian={
+					large=GFX_portrait_MEX_Luis_Maria_Martinez
+				}
+			}
+			country_leader={
+				traits={ primate_of_mexico }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+			name=MEX_luis_maria_martinez
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_America_Generic_3
+				}
+			}
+			country_leader={
+				traits={ primate_of_mexico }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
