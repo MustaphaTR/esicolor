@@ -7945,6 +7945,94 @@ required_states_to_form_siberia = {
 	}
 }
 
+#### Mongolia ####
+can_form_outer_mongolia = {
+	OR = {
+		original_tag = EEO
+		original_tag = BIF
+		original_tag = BIB
+		original_tag = BIY
+		original_tag = BZO
+	}
+}
+
+can_form_inner_mongolia = {
+	OR = {
+		original_tag = LII
+		original_tag = LIZ
+	}
+}
+
+can_form_mongolia = {
+	OR = {
+		can_form_outer_mongolia = yes
+		can_form_inner_mongolia = yes
+	}
+}
+
+is_outer_mongolia = {
+	OR = {
+		state = 330
+		state = 817
+		state = 818
+		state = 819
+		state = 820
+	}
+}
+
+is_inner_mongolia = {
+	OR = {
+		state = 611
+		state = 612
+		state = 621
+		state = 746
+		state = 761
+	}
+}
+
+is_mongolia = {
+	OR = {
+		is_outer_mongolia = yes
+		is_inner_mongolia = yes
+	}
+}
+
+has_states_to_form_outer_mongolia = {
+	custom_trigger_tooltip = {
+		tooltip = form_outer_mongolia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 330 } } } owns_state = 330 }
+		if = { limit = { NOT = { OOO = { owns_state = 817 } } } owns_state = 817 }
+		if = { limit = { NOT = { OOO = { owns_state = 818 } } } owns_state = 818 }
+		if = { limit = { NOT = { OOO = { owns_state = 819 } } } owns_state = 819 }
+		if = { limit = { NOT = { OOO = { owns_state = 820 } } } owns_state = 820 }
+	}
+}
+
+has_states_to_form_inner_mongolia = {
+	custom_trigger_tooltip = {
+		tooltip = form_inner_mongolia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 611 } } } owns_state = 611 }
+		if = { limit = { NOT = { OOO = { owns_state = 612 } } } owns_state = 612 }
+		if = { limit = { NOT = { OOO = { owns_state = 621 } } } owns_state = 621 }
+		if = { limit = { NOT = { OOO = { owns_state = 746 } } } owns_state = 746 }
+		if = { limit = { NOT = { OOO = { owns_state = 761 } } } owns_state = 761 }
+	}
+}
+
+has_cosmetics_to_form_mongolia = {
+	has_country_flag = can_form_MON_UNITED
+}
+has_states_to_form_mongolia = {
+	custom_trigger_tooltip = {
+		tooltip = form_mongolia_has_states_tt
+
+		has_states_to_form_outer_mongolia = yes
+		has_states_to_form_inner_mongolia = yes
+	}
+}
+
 #### Arabia ####
 can_form_saudi_arabia = {
 	OR = {

@@ -12439,6 +12439,134 @@ esicolor_formables = {
 		}
 	}
 
+	form_outer_mongolia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_outer_mongolia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_outer_mongolia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_outer_mongolia"
+			set_country_flag = can_form_MON_UNITED
+
+			set_cosmetic_tag = MON_OUTER
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_outer_mongolia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_outer_mongolia = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_inner_mongolia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_inner_mongolia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_inner_mongolia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_inner_mongolia"
+			set_country_flag = can_form_MON_UNITED
+
+			set_cosmetic_tag = MON_INNER
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_inner_mongolia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_inner_mongolia = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_mongolia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_mongolia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_mongolia = yes
+		}
+		available = {
+			has_states_to_form_mongolia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_mongolia"
+			clr_country_flag = can_form_MON_UNITED
+
+			set_country_flag = can_form_ASI_UNITED
+
+			set_cosmetic_tag = MON_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_mongolia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_mongolia = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
