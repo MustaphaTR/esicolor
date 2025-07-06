@@ -424,6 +424,84 @@ defined_text = {
 	}
 }
 
+defined_text = { # Country
+	name = esicolor_build_city_action_duration
+	text = {
+		trigger = {
+			check_variable = { global.setup_fast_mode < 6 }
+		}
+		localization_key = esicolor_build_city_action_duration
+	}
+}
+
+defined_text = { # Country
+	name = esicolor_move_capital_action_duration
+	text = {
+		trigger = {
+			check_variable = { global.setup_fast_mode < 6 }
+		}
+		localization_key = esicolor_move_capital_action_duration
+	}
+}
+defined_text = { # Country
+	name = esicolor_move_capital_action_active
+	text = {
+		trigger = {
+			check_variable = { global.setup_fast_mode < 6 }
+		}
+		localization_key = esicolor_move_capital_action_active
+	}
+}
+
+defined_text = {
+	name = esicolor_move_capital_action_cost
+	text = {
+		trigger = {
+			ROOT = {
+				has_political_power > 49
+			}
+		}
+		localization_key = esicolor_move_capital_action_cost_met
+	}
+	text = {
+		localization_key = esicolor_move_capital_action_cost_unmet
+	}
+}
+
+defined_text = {
+	name = esicolor_move_capital_action_core
+	text = {
+		trigger = {
+			THIS = {
+				is_core_of = ROOT
+			}
+		}
+		localization_key = esicolor_move_capital_action_core_met
+	}
+	text = {
+		localization_key = esicolor_move_capital_action_core_unmet
+	}
+}
+
+defined_text = {
+	name = esicolor_move_capital_action_capital
+	text = {
+		trigger = {
+			ROOT = {
+				capital_scope = {
+					NOT = {
+						state = PREV.PREV
+					}
+				}
+			}
+		}
+		localization_key = esicolor_move_capital_action_capital_met
+	}
+	text = {
+		localization_key = esicolor_move_capital_action_capital_unmet
+	}
+}
+
 defined_text = {
 	name = esicolor_core_button_tt_delayed_formable_check
 	text = {

@@ -909,3 +909,11 @@ claim_action_effect = {
 		}
 	}
 }
+
+setup_state_without_VP_array = {
+	every_state = {
+		limit = { state_without_VP_at_start = yes }
+
+		add_to_array = { global.state_without_VP = THIS }
+	}
+}

@@ -30,7 +30,7 @@
  esicolor_claim_button_timer_text:0 "[?Root.claim_timer_@This]"
 
  esicolor_compliance_button_tt:0 "Distrubute Goods in §Y[This.GetName]§!"
- esicolor_compliance_button_tt_delayed:0 "\n§YCost:§![esicolor_compliance_action_cost][esicolor_compliance_action_duration]\n\n§YPrerequisites:§!\n[Root.GetFlag] §Y[Root.GetName]:§!\n[This.esicolor_compliance_action_ours]\n[esicolor_compliance_action_not_core]\n[esicolor_compliance_action_factory]\n§Y[This.GetName]:§!\n[esicolor_compliance_action_no_full_compliance][esicolor_compliance_action_active]\n\n§YEffects when [esicolor_action_get_completed_selected]:§!\n§Y[This.GetName]:§!\n  Compliance: §G+10%§!."
+ esicolor_compliance_button_tt_delayed:0 "\n§YCost:§![esicolor_compliance_action_cost][esicolor_compliance_action_duration]\n\n§YPrerequisites:§!\n[Root.GetFlag] §Y[Root.GetName]:§!\n[This.esicolor_compliance_action_ours]\n[esicolor_compliance_action_factory]\n§Y[This.GetName]:§!\n[esicolor_compliance_action_no_full_compliance][esicolor_compliance_action_active]\n\n§YEffects when [esicolor_action_get_completed_selected]:§!\n§Y[This.GetName]:§!\n  Compliance: §G+10%§!."
  esicolor_compliance_action_duration:0 "\n§YDuration:§! [?global.compliance_length] days."
  esicolor_compliance_action_active:0 "\n\n§YWhile active:§!\nCivilian Factory Use: §R1§!"
  esicolor_compliance_action_cost_met:0 "£trigger_yes £pol_power 40."
@@ -44,6 +44,23 @@
  esicolor_compliance_action_factory_met:0 "  £trigger_yes Has a §YCivilian Factory§! to use for project."
  esicolor_compliance_action_factory_unmet:0 "  £trigger_no Has a §YCivilian Factory§! to use for project."
  esicolor_compliance_button_timer_text:0 "[?Root.compliance_timer_@This]"
+
+ esicolor_build_city_button_tt:0 "Build Administrative Infrastructure in §Y[This.GetName]§!"
+ esicolor_build_city_button_tt_delayed:0 "\n§YCost:§![esicolor_compliance_action_cost][esicolor_build_city_action_duration]\n\n§YPrerequisites:§!\n[Root.GetFlag] §Y[Root.GetName]:§!\n[This.esicolor_compliance_action_ours]\n[esicolor_compliance_action_factory][esicolor_compliance_action_active]\n\n§YEffects when [esicolor_action_get_completed_selected]:§!\n§Y[This.GetName]:§!\n  Add §Y2§!£victory_points  to a province in the state."
+ esicolor_build_city_action_duration:0 "\n§YDuration:§! [?global.build_city_length] days."
+ esicolor_build_city_button_timer_text:0 "[?Root.build_city_timer_@This]"
+
+ esicolor_move_capital_button_tt:0 "Move Capital to §Y[This.GetCapitalVictoryPointName]§!"
+ esicolor_move_capital_button_tt_delayed:0 "\n§YCost:§![esicolor_move_capital_action_cost][esicolor_move_capital_action_duration]\n\n§YPrerequisites:§!\n[Root.GetFlag] §Y[Root.GetName]:§!\n[This.esicolor_compliance_action_ours]\n[esicolor_move_capital_action_capital][esicolor_move_capital_action_active]\n\n§YEffects when selected:§!\n[Root.GetFlag] §Y[Root.GetName]:§!\n  Moves capital to §Y[This.GetName]§!."
+ esicolor_move_capital_action_duration:0 "\n§YDuration:§! [?global.move_capital_length] days."
+ esicolor_move_capital_action_active:0 "\n\n§YWhile active:§!\n§RCan't move capital§!."
+ esicolor_move_capital_action_cost_met:0 "£trigger_yes £pol_power 50."
+ esicolor_move_capital_action_cost_unmet:0 "£trigger_no £pol_power 50."
+ esicolor_move_capital_action_core_met:0 "  £trigger_yes Have core on §Y[This.GetName]§!."
+ esicolor_move_capital_action_core_unmet:0 "  £trigger_no Have core on §Y[This.GetName]§!."
+ esicolor_move_capital_action_capital_met:0 "  £trigger_yes Has not their capital on §Y[This.GetName]§!."
+ esicolor_move_capital_action_capital_unmet:0 "  £trigger_no Has not their capital on §Y[This.GetName]§!."
+ esicolor_move_capital_button_timer_text:0 "[?Root.move_capital_timer]"
 
  esicolor_core_button_tt:0 "Integrate §Y[This.GetName]§!"
  esicolor_core_button_tt_delayed:0 "[esicolor_core_button_tt_delayed_formable_check]"

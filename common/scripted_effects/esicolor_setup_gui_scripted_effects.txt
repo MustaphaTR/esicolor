@@ -1287,6 +1287,8 @@ setup_gui_start_fast_mode = {
 		limit = { check_variable = { global.setup_fast_mode < 1 } }
 
 		set_variable = { global.compliance_length = 30 }
+		set_variable = { global.build_city_length = 30 }
+		set_variable = { global.move_capital_length = 60 }
 		set_variable = { global.coring_formable_length = 30 }
 		set_variable = { global.coring_length = 60 }
 	}
@@ -1295,6 +1297,8 @@ setup_gui_start_fast_mode = {
 
 		divide_variable = { global.claiming_length = 2 }
 		set_variable = { global.compliance_length = 15 }
+		set_variable = { global.build_city_length = 15 }
+		set_variable = { global.move_capital_length = 30 }
 		set_variable = { global.coring_formable_length = 15 }
 		set_variable = { global.coring_length = 30 }
 	}
@@ -1303,6 +1307,8 @@ setup_gui_start_fast_mode = {
 
 		divide_variable = { global.claiming_length = 3 }
 		set_variable = { global.compliance_length = 10 }
+		set_variable = { global.build_city_length = 10 }
+		set_variable = { global.move_capital_length = 20 }
 		set_variable = { global.coring_formable_length = 10 }
 		set_variable = { global.coring_length = 20 }
 	}
@@ -1312,6 +1318,8 @@ setup_gui_start_fast_mode = {
 		divide_variable = { global.claiming_length = 4 }
 		round_variable = global.claiming_length
 		set_variable = { global.compliance_length = 8 }
+		set_variable = { global.build_city_length = 8 }
+		set_variable = { global.move_capital_length = 15 }
 		set_variable = { global.coring_formable_length = 8 }
 		set_variable = { global.coring_length = 15 }
 	}
@@ -1320,6 +1328,8 @@ setup_gui_start_fast_mode = {
 
 		divide_variable = { global.claiming_length = 5 }
 		set_variable = { global.compliance_length = 6 }
+		set_variable = { global.build_city_length = 6 }
+		set_variable = { global.move_capital_length = 12 }
 		set_variable = { global.coring_formable_length = 6 }
 		set_variable = { global.coring_length = 12 }
 	}
@@ -1328,6 +1338,8 @@ setup_gui_start_fast_mode = {
 
 		divide_variable = { global.claiming_length = 6 }
 		set_variable = { global.compliance_length = 5 }
+		set_variable = { global.build_city_length = 5 }
+		set_variable = { global.move_capital_length = 10 }
 		set_variable = { global.coring_formable_length = 5 }
 		set_variable = { global.coring_length = 10 }
 	}
@@ -1335,7 +1347,9 @@ setup_gui_start_fast_mode = {
 		limit = { check_variable = { global.setup_fast_mode > 5 } }
 
 		set_variable = { global.claiming_length = 0 }
+		set_variable = { global.build_city_length = 0 }
 		set_variable = { global.compliance_length = 0 }
+		set_variable = { global.move_capital_length = 0 }
 		set_variable = { global.coring_formable_length = 0 }
 		set_variable = { global.coring_length = 0 }
 	}

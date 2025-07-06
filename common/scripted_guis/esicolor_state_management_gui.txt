@@ -17,6 +17,26 @@ scripted_gui = {
 			}
 		}
 
+		triggers = {
+			esicolor_compliance_button_visible = {
+				THIS = { NOT = { is_core_of = ROOT } }
+			}
+
+			esicolor_build_city_button_visible = {
+				THIS = {
+					is_core_of = ROOT
+					is_in_array = { global.state_without_VP = THIS }
+				}
+			}
+
+			esicolor_move_capital_button_visible = {
+				THIS = {
+					is_core_of = ROOT
+					NOT = { is_in_array = { global.state_without_VP = THIS } }
+				}
+			}
+		}
+
 		window_name = "esicolor_state_action_category_container"
 	}
 
@@ -409,10 +429,156 @@ scripted_gui = {
 		visible = {
 			THIS = {
 				is_in_array = { ROOT.states_getting_compliance = THIS }
+				NOT = { is_core_of = ROOT }
 			}
 		}
 
 		window_name = "esicolor_compliance_button_timer"
+	}
+
+	esicolor_build_city_button_clickable_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+
+		visible = {
+			ROOT = {
+				NOT = {
+					original_tag = OOO
+					has_global_flag =  state_management_disabled
+				}
+
+				num_of_civilian_factories_available_for_projects > 0
+				has_political_power > 39
+			}
+			THIS = {
+				is_core_of = ROOT
+				is_in_array = { global.state_without_VP = THIS }
+				NOT = { is_in_array = { ROOT.states_getting_city_built = THIS } }
+				owner = {
+					tag = ROOT
+				}
+				controller = {
+					tag = ROOT
+				}
+			}
+		}
+
+		window_name = "esicolor_build_city_button_clickable_window"
+
+		effects = {
+			esicolor_build_city_button_clickable_click = {
+				THIS = {
+					if = {
+						limit = { check_variable = { global.setup_fast_mode < 6 } }
+
+						add_to_array = { ROOT.states_getting_city_built = THIS }
+					}
+					else = {
+						ETH_upgrade_main_city = yes
+					}
+				}
+
+				ROOT = {
+					hidden_effect = {
+						add_political_power = -40
+
+						if = {
+							limit = { check_variable = { global.setup_fast_mode < 6 } }
+
+							add_to_variable = { ROOT.dynamic_civ_factory_use = 1 }
+							set_variable = { ROOT.build_city_timer_@PREV = global.build_city_length?30 }
+						}
+					}
+				}
+			}
+		}
+
+		# AI doesn't build cities.
+	}
+
+	esicolor_build_city_timer_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+
+		visible = {
+			THIS = {
+				is_core_of = ROOT
+				is_in_array = { global.state_without_VP = THIS }
+				is_in_array = { ROOT.states_getting_city_built = THIS }
+			}
+		}
+
+		window_name = "esicolor_build_city_button_timer"
+	}
+
+	esicolor_move_capital_button_clickable_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+
+		visible = {
+			ROOT = {
+				NOT = {
+					original_tag = OOO
+					has_global_flag =  state_management_disabled
+				}
+
+				NOT = {
+					check_variable = { ROOT.move_capital_timer > 1 } 
+					capital_scope = { state = PREV.PREV }
+				}
+				has_political_power > 49
+			}
+			THIS = {
+				is_core_of = ROOT
+				NOT = { is_in_array = { global.state_without_VP = THIS } }
+				owner = {
+					tag = ROOT
+				}
+				controller = {
+					tag = ROOT
+				}
+			}
+		}
+
+		window_name = "esicolor_move_capital_button_clickable_window"
+
+		effects = {
+			esicolor_move_capital_button_clickable_click = {
+				ROOT = {
+					hidden_effect = {
+						add_political_power = -50
+
+						set_capital = {
+							state = PREV
+							remember_old_capital = no
+						}
+
+						if = {
+							limit = { check_variable = { global.setup_fast_mode < 6 } }
+
+							set_variable = { ROOT.move_capital_timer = global.move_capital_length?60 }
+						}
+					}
+				}
+			}
+		}
+
+		# AI doesn't move capitals.
+	}
+
+	esicolor_move_capital_timer_gui = {
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+
+		visible = {
+			THIS = {
+				is_core_of = ROOT
+				NOT = { is_in_array = { global.state_without_VP = THIS } }
+				check_variable = { ROOT.move_capital_timer > 1 }
+			}
+		}
+
+		window_name = "esicolor_move_capital_button_timer"
 	}
 
 	esicolor_core_button_clickable_gui = {
