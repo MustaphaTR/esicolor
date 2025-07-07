@@ -3040,7 +3040,15 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_saudi_arabia"
 			set_country_flag = can_form_ARA_UNITED
 
-			set_cosmetic_tag = ARA_SAUDI
+			if = {
+				limit = { has_country_leader = { character = ZYZ_abdulaziz_ibn_saud ruling_only = yes } }
+
+				set_cosmetic_tag = ARA_SAUDI_REAL
+
+				else = {
+					set_cosmetic_tag = ARA_SAUDI
+				}
+			}
 
 			hidden_effect = {
 				every_state = {
@@ -12555,6 +12563,154 @@ esicolor_formables = {
 		highlight_states = {
 			highlight_states_trigger = {
 				is_mongolia = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_tibet = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_tibet = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_tibet = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_tibet"
+			set_country_flag = can_form_HIM_UNITED
+
+			set_cosmetic_tag = HIM_TIBET
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_tibet = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_tibet = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_kashmir = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_kashmir = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_kashmir = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_kashmir"
+			set_country_flag = can_form_HIM_UNITED
+
+			set_cosmetic_tag = HIM_KASHMIR
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_kashmir = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_kashmir = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_himalayas = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_himalayas = yes
+		}
+		visible = {
+			has_cosmetics_to_form_himalayas = yes
+		}
+		available = {
+			has_states_to_form_himalayas = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_himalayas"
+			clr_country_flag = can_form_HIM_UNITED
+
+			set_country_flag = can_form_ASI_UNITED
+
+			if = {
+				limit = { original_tag = EZA }
+
+				set_cosmetic_tag = HIM_UNITED_BHUTAN
+
+				else = {
+					set_cosmetic_tag = HIM_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_himalayas = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_himalayas_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_himalayas = yes
+				}
+				else = {
+					required_states_to_form_himalayas = yes
+				}
 			}
 		}
 

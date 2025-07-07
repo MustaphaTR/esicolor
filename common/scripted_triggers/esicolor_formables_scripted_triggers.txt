@@ -8033,6 +8033,102 @@ has_states_to_form_mongolia = {
 	}
 }
 
+#### Himalayas ####
+can_form_tibet = {
+	OR = {
+		original_tag = EZZ
+		original_tag = LOI
+		original_tag = FSF
+		original_tag = FSB
+	}
+}
+
+can_form_kashmir = {
+	OR = {
+		original_tag = AAI
+		original_tag = FBF
+	}
+}
+
+can_form_himalayas = {
+	OR = {
+		can_form_tibet = yes
+		can_form_kashmir = yes
+		original_tag = EZE
+		original_tag = EZA
+		original_tag = AEA
+		original_tag = YBS
+	}
+}
+
+is_tibet = {
+	OR = {
+		state = 322
+		state = 601
+		state = 757
+		state = 758
+	}
+}
+
+is_kashmir = {
+	OR = {
+		state = 441
+		state = 787
+	}
+}
+
+is_himalayas = {
+	OR = {
+		is_tibet = yes
+		is_kashmir = yes
+		state = 323
+		state = 324
+		state = 434
+		state = 985
+	}
+}
+
+has_states_to_form_tibet = {
+	custom_trigger_tooltip = {
+		tooltip = form_tibet_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 322 } } } owns_state = 322 }
+		if = { limit = { NOT = { OOO = { owns_state = 601 } } } owns_state = 601 }
+		if = { limit = { NOT = { OOO = { owns_state = 757 } } } owns_state = 757 }
+		if = { limit = { NOT = { OOO = { owns_state = 758 } } } owns_state = 758 }
+	}
+}
+
+has_states_to_form_kashmir = {
+	custom_trigger_tooltip = {
+		tooltip = form_kashmir_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 441 } } } owns_state = 441 }
+		if = { limit = { NOT = { OOO = { owns_state = 787 } } } owns_state = 787 }
+	}
+}
+
+has_cosmetics_to_form_himalayas = {
+	has_country_flag = can_form_HIM_UNITED
+}
+has_states_to_form_himalayas = {
+	custom_trigger_tooltip = {
+		tooltip = form_himalayas_has_states_tt
+
+		has_states_to_form_tibet = yes
+		if = { limit = { NOT = { OOO = { owns_state = 323 } } } owns_state = 323 }
+		if = { limit = { NOT = { OOO = { owns_state = 324 } } } owns_state = 324 }
+	}
+}
+
+required_states_to_form_himalayas = {
+	OR = {
+		is_tibet = yes
+		state = 323
+		state = 324
+	}
+}
+
 #### Arabia ####
 can_form_saudi_arabia = {
 	OR = {

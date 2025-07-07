@@ -1282,6 +1282,10 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_ARA_SAUDI
 	text = {
+		trigger = { has_country_leader = { character = ZYZ_abdulaziz_ibn_saud ruling_only = yes } }
+		localization_key = ARA_SAUDI_REAL_neutrality_DEF
+	}
+	text = {
 		trigger = { has_government = neutrality }
 		localization_key = ARA_SAUDI_neutrality_DEF
 	}
@@ -5625,6 +5629,80 @@ defined_text = {
 	text = {
 		trigger = { has_government = communism }
 		localization_key = MON_UNITED_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_HIM_TIBET
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = HIM_TIBET_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = HIM_TIBET_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = HIM_TIBET_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = HIM_TIBET_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_HIM_KASHMIR
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = HIM_KASHMIR_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = HIM_KASHMIR_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = HIM_KASHMIR_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = HIM_KASHMIR_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_HIM_UNITED
+	text = {
+		trigger = {
+			has_government = fascism
+			original_tag = EZA
+		}
+		localization_key = HIM_UNITED_BHUTAN_fascism_DEF
+	}
+	text = {
+		trigger = {
+			has_government = communism
+			original_tag = EZA
+		}
+		localization_key = HIM_UNITED_BHUTAN_communism_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = HIM_UNITED_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = HIM_UNITED_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = HIM_UNITED_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = HIM_UNITED_communism_DEF
 	}
 }
 
