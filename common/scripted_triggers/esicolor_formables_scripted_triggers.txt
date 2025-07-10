@@ -8129,6 +8129,694 @@ required_states_to_form_himalayas = {
 	}
 }
 
+#### China ####
+can_form_qinghai = {
+	OR = {
+		original_tag = LOA
+		original_tag = GTB # FSA
+		original_tag = FSS
+	}
+}
+
+can_form_gansu = {
+	OR = {
+		original_tag = ZBE
+		original_tag = LIL
+		original_tag = FSL
+	}
+}
+
+can_form_ma_clique = {
+	OR = {
+		can_form_qinghai = yes
+		can_form_gansu = yes
+		original_tag = FSE
+	}
+}
+
+can_form_shaanxi = {
+	OR = {
+		original_tag = LZZ
+		original_tag = FAA
+	}
+}
+
+can_form_shanxi = {
+	OR = {
+		original_tag = LIS
+		original_tag = LZI
+		original_tag = FAL
+	}
+}
+
+can_form_zhili = {
+	OR = {
+		original_tag = LOB
+		original_tag = LOY
+		original_tag = LIA
+	}
+}
+
+can_form_north_china = {
+	OR = {
+		can_form_inner_mongolia = yes
+		can_form_shaanxi = yes
+		can_form_shanxi = yes
+		can_form_zhili = yes
+	}
+}
+
+can_form_manchuria = {
+	OR = {
+		original_tag = EZB
+		original_tag = LIO
+		original_tag = FIA
+		original_tag = FIS
+		original_tag = FIL
+		original_tag = FIF
+		original_tag = FAS
+		original_tag = FLI
+	}
+}
+
+can_form_sichuan = {
+	OR = {
+		original_tag = LOS
+		original_tag = FSI
+		original_tag = FSZ
+		original_tag = FSE
+	}
+}
+
+can_form_guizhou = {
+	OR = {
+		original_tag = LOE
+		original_tag = FAB
+	}
+}
+
+can_form_yunnan = {
+	OR = {
+		original_tag = EZS
+		original_tag = FAF
+	}
+}
+
+can_form_southwest_china = {
+	OR = {
+		can_form_sichuan = yes
+		can_form_guizhou = yes
+		can_form_yunnan = yes
+	}
+}
+
+can_form_hunnan = {
+	OR = {
+		original_tag = LOZ
+		original_tag = FSO
+	}
+}
+
+can_form_central_china = {
+	OR = {
+		can_form_hunnan = yes
+		original_tag = LOF
+		original_tag = LZO
+	}
+}
+
+can_form_guangxi = {
+	OR = {
+		original_tag = SYA
+		original_tag = SYY
+	}
+}
+
+can_form_guangdong = {
+	OR = {
+		original_tag = SYZ
+		original_tag = SYE
+		original_tag = FZB
+	}
+}
+
+can_form_south_china = {
+	OR = {
+		can_form_guangxi = yes
+		can_form_guangdong = yes
+		original_tag = EZL
+		original_tag = SYI
+		original_tag = FZY
+	}
+}
+
+can_form_anhui = {
+	OR = {
+		original_tag = LOL
+		original_tag = FAY
+	}
+}
+
+can_form_jiangsu = {
+	OR = {
+		original_tag = SYB
+		original_tag = LIE
+	}
+}
+
+can_form_shandong = {
+	OR = {
+		original_tag = SFY
+		original_tag = FAE
+	}
+}
+
+can_form_east_china = {
+	OR = {
+		can_form_anhui = yes
+		can_form_jiangsu = yes
+		can_form_shandong = yes
+		original_tag = SZA
+		original_tag = SYS
+		original_tag = SYL
+		original_tag = LOO
+	}
+}
+
+can_form_china = {
+	OR = {
+		can_form_sinkiang = yes
+		can_form_ma_clique = yes
+		can_form_north_china = yes
+		can_form_manchuria = yes
+		can_form_southwest_china = yes
+		can_form_central_china = yes
+		can_form_south_china = yes
+		can_form_east_china = yes
+	}
+}
+
+is_qinghai = {
+	OR = {
+		state = 604
+		state = 754
+		state = 755
+	}
+}
+
+is_gansu = {
+	OR = {
+		state = 283
+		state = 616
+		state = 756
+	}
+}
+
+is_ma_clique = {
+	OR = {
+		is_qinghai = yes
+		is_gansu = yes
+		state = 753
+	}
+}
+
+is_shaanxi = {
+	OR = {
+		state = 622
+		state = 744
+	}
+}
+
+is_shanxi = {
+	OR = {
+		state = 615
+		state = 621
+		state = 746
+	}
+}
+
+is_zhili = {
+	OR = {
+		state = 608
+		state = 609
+		state = 614
+	}
+}
+
+is_north_china = {
+	OR = {
+		is_inner_mongolia = yes
+		is_shaanxi = yes
+		is_shanxi = yes
+		is_zhili = yes
+	}
+}
+
+is_manchuria = {
+	OR = {
+		state = 328
+		state = 610
+		state = 714
+		state = 715
+		state = 716
+		state = 717
+		state = 745
+		state = 761
+	}
+}
+
+is_sichuan = {
+	OR = {
+		state = 605
+		state = 751
+		state = 752
+		state = 753
+	}
+}
+
+is_guizhou = {
+	OR = {
+		state = 603
+		state = 748
+	}
+}
+
+is_yunnan = {
+	OR = {
+		state = 325
+		state = 747
+	}
+}
+
+is_southwest_china = {
+	OR = {
+		is_sichuan = yes
+		is_guizhou = yes
+		is_yunnan = yes
+	}
+}
+
+is_guangxi = {
+	OR = {
+		state = 594
+		state = 599
+	}
+}
+
+is_guangdong = {
+	OR = {
+		state = 592
+		state = 593
+		state = 728
+	}
+}
+
+is_south_china = {
+	OR = {
+		is_guangxi = yes
+		is_guangdong = yes
+		state = 326
+		state = 591
+		state = 729
+	}
+}
+
+is_hunnan = {
+	OR = {
+		state = 602
+		state = 750
+	}
+}
+
+is_central_china = {
+	OR = {
+		is_hunnan = yes
+		state = 607
+		state = 620
+	}
+}
+
+is_anhui = {
+	OR = {
+		state = 606
+		state = 749
+	}
+}
+
+is_jiangsu = {
+	OR = {
+		state = 598
+		state = 613
+	}
+}
+
+is_shandong = {
+	OR = {
+		state = 597
+		state = 743
+	}
+}
+
+is_east_china = {
+	OR = {
+		is_anhui = yes
+		is_jiangsu = yes
+		is_shandong = yes
+		state = 524
+		state = 595
+		state = 596
+		state = 600
+	}
+}
+
+is_china = {
+	OR = {
+		is_sinkiang = yes
+		is_tibet = yes
+		is_ma_clique = yes
+		is_north_china = yes
+		is_manchuria = yes
+		is_southwest_china = yes
+		is_central_china = yes
+		is_south_china = yes
+		is_east_china = yes
+		state = 434
+	}
+}
+
+has_states_to_form_qinghai = {
+	custom_trigger_tooltip = {
+		tooltip = form_qinghai_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 604 } } } owns_state = 604 }
+		if = { limit = { NOT = { OOO = { owns_state = 754 } } } owns_state = 754 }
+		if = { limit = { NOT = { OOO = { owns_state = 755 } } } owns_state = 755 }
+	}
+}
+
+has_states_to_form_gansu = {
+	custom_trigger_tooltip = {
+		tooltip = form_gansu_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 283 } } } owns_state = 283 }
+		if = { limit = { NOT = { OOO = { owns_state = 616 } } } owns_state = 616 }
+		if = { limit = { NOT = { OOO = { owns_state = 756 } } } owns_state = 756 }
+	}
+}
+
+has_cosmetics_to_form_ma_clique = {
+	has_country_flag = can_form_CHI_HUI
+}
+has_states_to_form_ma_clique = {
+	custom_trigger_tooltip = {
+		tooltip = form_ma_clique_has_states_tt
+
+		has_states_to_form_qinghai = yes
+		has_states_to_form_gansu = yes
+	}
+}
+
+has_states_to_form_shaanxi = {
+	custom_trigger_tooltip = {
+		tooltip = form_shaanxi_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 622 } } } owns_state = 622 }
+		if = { limit = { NOT = { OOO = { owns_state = 744 } } } owns_state = 744 }
+	}
+}
+
+has_states_to_form_shanxi = {
+	custom_trigger_tooltip = {
+		tooltip = form_shanxi_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 615 } } } owns_state = 615 }
+		if = { limit = { NOT = { OOO = { owns_state = 621 } } } owns_state = 621 }
+		if = { limit = { NOT = { OOO = { owns_state = 746 } } } owns_state = 746 }
+	}
+}
+
+has_states_to_form_zhili = {
+	custom_trigger_tooltip = {
+		tooltip = form_zhili_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 608 } } } owns_state = 608 }
+		if = { limit = { NOT = { OOO = { owns_state = 609 } } } owns_state = 609 }
+		if = { limit = { NOT = { OOO = { owns_state = 614 } } } owns_state = 614 }
+	}
+}
+
+has_cosmetics_to_form_north_china = {
+	has_country_flag = can_form_CHI_NORTH
+}
+has_states_to_form_north_china = {
+	custom_trigger_tooltip = {
+		tooltip = form_north_china_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 611 } } } owns_state = 611 }
+		if = { limit = { NOT = { OOO = { owns_state = 612 } } } owns_state = 612 }
+		has_states_to_form_shaanxi = yes
+		has_states_to_form_shanxi = yes
+		has_states_to_form_zhili = yes
+	}
+}
+
+has_states_to_form_manchuria = {
+	custom_trigger_tooltip = {
+		tooltip = form_manchuria_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 328 } } } owns_state = 328 }
+		if = { limit = { NOT = { OOO = { owns_state = 610 } } } owns_state = 610 }
+		if = { limit = { NOT = { OOO = { owns_state = 714 } } } owns_state = 714 }
+		if = { limit = { NOT = { OOO = { owns_state = 715 } } } owns_state = 715 }
+		if = { limit = { NOT = { OOO = { owns_state = 716 } } } owns_state = 716 }
+		if = { limit = { NOT = { OOO = { owns_state = 717 } } } owns_state = 717 }
+		if = { limit = { NOT = { OOO = { owns_state = 745 } } } owns_state = 745 }
+		if = { limit = { NOT = { OOO = { owns_state = 761 } } } owns_state = 761 }
+	}
+}
+
+has_states_to_form_sichuan = {
+	custom_trigger_tooltip = {
+		tooltip = form_sichuan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 605 } } } owns_state = 605 }
+		if = { limit = { NOT = { OOO = { owns_state = 751 } } } owns_state = 751 }
+		if = { limit = { NOT = { OOO = { owns_state = 752 } } } owns_state = 752 }
+		if = { limit = { NOT = { OOO = { owns_state = 753 } } } owns_state = 753 }
+	}
+}
+
+has_states_to_form_guizhou = {
+	custom_trigger_tooltip = {
+		tooltip = form_guizhou_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 603 } } } owns_state = 603 }
+		if = { limit = { NOT = { OOO = { owns_state = 748 } } } owns_state = 748 }
+	}
+}
+
+has_states_to_form_yunnan = {
+	custom_trigger_tooltip = {
+		tooltip = form_yunnan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 325 } } } owns_state = 325 }
+		if = { limit = { NOT = { OOO = { owns_state = 747 } } } owns_state = 747 }
+	}
+}
+
+has_cosmetics_to_form_southwest_china = {
+	has_country_flag = can_form_CHI_SOUTHWEST
+}
+has_states_to_form_southwest_china = {
+	custom_trigger_tooltip = {
+		tooltip = form_southwest_china_has_states_tt
+
+		has_states_to_form_sichuan = yes
+		has_states_to_form_guizhou = yes
+		has_states_to_form_yunnan = yes
+	}
+}
+
+has_states_to_form_hunnan = {
+	custom_trigger_tooltip = {
+		tooltip = form_hunnan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 602 } } } owns_state = 602 }
+		if = { limit = { NOT = { OOO = { owns_state = 750 } } } owns_state = 750 }
+	}
+}
+
+has_cosmetics_to_form_central_china = {
+	has_country_flag = can_form_CHI_CENTRAL
+}
+has_states_to_form_central_china = {
+	custom_trigger_tooltip = {
+		tooltip = form_central_china_has_states_tt
+
+		has_states_to_form_hunnan = yes
+		if = { limit = { NOT = { OOO = { owns_state = 607 } } } owns_state = 607 }
+		if = { limit = { NOT = { OOO = { owns_state = 620 } } } owns_state = 620 }
+	}
+}
+
+has_states_to_form_guangxi = {
+	custom_trigger_tooltip = {
+		tooltip = form_guangxi_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 594 } } } owns_state = 594 }
+		if = { limit = { NOT = { OOO = { owns_state = 599 } } } owns_state = 599 }
+	}
+}
+
+has_states_to_form_guangdong = {
+	custom_trigger_tooltip = {
+		tooltip = form_guangdong_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 592 } } } owns_state = 592 }
+		if = { limit = { NOT = { OOO = { owns_state = 593 } } } owns_state = 593 }
+		if = { limit = { NOT = { OOO = { owns_state = 728 } } } owns_state = 728 }
+	}
+}
+
+has_cosmetics_to_form_south_china = {
+	has_country_flag = can_form_CHI_SOUTH
+}
+has_states_to_form_south_china = {
+	custom_trigger_tooltip = {
+		tooltip = form_south_china_has_states_tt
+
+		has_states_to_form_guangxi = yes
+		has_states_to_form_guangdong = yes
+		if = { limit = { NOT = { OOO = { owns_state = 591 } } } owns_state = 591 }
+	}
+}
+
+has_states_to_form_anhui = {
+	custom_trigger_tooltip = {
+		tooltip = form_anhui_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 606 } } } owns_state = 606 }
+		if = { limit = { NOT = { OOO = { owns_state = 749 } } } owns_state = 749 }
+	}
+}
+
+has_states_to_form_jiangsu = {
+	custom_trigger_tooltip = {
+		tooltip = form_jiangsu_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 598 } } } owns_state = 598 }
+		if = { limit = { NOT = { OOO = { owns_state = 613 } } } owns_state = 613 }
+	}
+}
+
+has_states_to_form_shandong = {
+	custom_trigger_tooltip = {
+		tooltip = form_shandong_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 597 } } } owns_state = 597 }
+		if = { limit = { NOT = { OOO = { owns_state = 743 } } } owns_state = 743 }
+	}
+}
+
+has_cosmetics_to_form_east_china = {
+	has_country_flag = can_form_CHI_EAST
+}
+has_states_to_form_east_china = {
+	custom_trigger_tooltip = {
+		tooltip = form_east_china_has_states_tt
+
+		has_states_to_form_anhui = yes
+		has_states_to_form_jiangsu = yes
+		has_states_to_form_shandong = yes
+		if = { limit = { NOT = { OOO = { owns_state = 595 } } } owns_state = 595 }
+		if = { limit = { NOT = { OOO = { owns_state = 596 } } } owns_state = 596 }
+		if = { limit = { NOT = { OOO = { owns_state = 600 } } } owns_state = 600 }
+	}
+}
+
+has_cosmetics_to_form_china = {
+	has_country_flag = can_form_CHI_UNITED
+}
+has_states_to_form_china = {
+	custom_trigger_tooltip = {
+		tooltip = form_china_has_states_tt
+
+		has_states_to_form_ma_clique = yes
+		has_states_to_form_shaanxi = yes
+		if = { limit = { NOT = { OOO = { owns_state = 615 } } } owns_state = 615 }
+		has_states_to_form_zhili = yes
+		if = { limit = { NOT = { OOO = { owns_state = 328 } } } owns_state = 328 }
+		if = { limit = { NOT = { OOO = { owns_state = 610 } } } owns_state = 610 }
+		if = { limit = { NOT = { OOO = { owns_state = 714 } } } owns_state = 714 }
+		if = { limit = { NOT = { OOO = { owns_state = 715 } } } owns_state = 715 }
+		if = { limit = { NOT = { OOO = { owns_state = 716 } } } owns_state = 716 }
+		if = { limit = { NOT = { OOO = { owns_state = 717 } } } owns_state = 717 }
+		if = { limit = { NOT = { OOO = { owns_state = 745 } } } owns_state = 745 }
+		has_states_to_form_southwest_china = yes
+		has_states_to_form_central_china = yes
+		has_states_to_form_guangdong = yes
+		if = { limit = { NOT = { OOO = { owns_state = 591 } } } owns_state = 591 }
+		has_states_to_form_east_china = yes
+	}
+}
+
+required_states_to_form_ma_clique = {
+	OR = {
+		is_qinghai = yes
+		is_gansu = yes
+	}
+}
+
+required_states_to_form_north_china = {
+	OR = {
+		state = 611
+		state = 612
+		is_shaanxi = yes
+		is_shanxi = yes
+		is_zhili = yes
+	}
+}
+
+required_states_to_form_south_china = {
+	OR = {
+		is_guangxi = yes
+		is_guangdong = yes
+		state = 591
+	}
+}
+
+required_states_to_form_east_china = {
+	OR = {
+		is_anhui = yes
+		is_jiangsu = yes
+		is_shandong = yes
+		state = 595
+		state = 596
+		state = 600
+	}
+}
+
+required_states_to_form_china = {
+	OR = {
+		required_states_to_form_ma_clique = yes
+		is_shaanxi = yes
+		state = 615
+		is_zhili = yes
+		state = 328
+		state = 610
+		state = 714
+		state = 715
+		state = 716
+		state = 717
+		state = 745
+		is_southwest_china = yes
+		is_central_china = yes
+		is_guangdong = yes
+		state = 591
+		required_states_to_form_east_china = yes
+	}
+}
+
 #### Arabia ####
 can_form_saudi_arabia = {
 	OR = {

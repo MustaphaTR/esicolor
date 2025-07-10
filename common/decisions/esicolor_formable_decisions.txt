@@ -8790,6 +8790,7 @@ esicolor_formables = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_polynesia"
+			clr_country_flag = can_form_CHI_EAST
 			clr_country_flag = can_form_PLY_UNITED
 
 			if = {
@@ -12715,6 +12716,1028 @@ esicolor_formables = {
 		}
 
 		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_qinghai = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_qinghai = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_qinghai = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_qinghai"
+			set_country_flag = can_form_CHI_HUI
+
+			set_cosmetic_tag = CHI_QINGHAI
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_qinghai = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_qinghai = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_gansu = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_gansu = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_gansu = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_gansu"
+			set_country_flag = can_form_CHI_HUI
+
+			set_cosmetic_tag = CHI_GANSU
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_gansu = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_gansu = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_ma_clique = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_ma_clique = yes
+		}
+		visible = {
+			has_cosmetics_to_form_ma_clique = yes
+		}
+		available = {
+			has_states_to_form_ma_clique = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_ma_clique"
+			clr_country_flag = can_form_CHI_HUI
+
+			set_country_flag = can_form_CHI_UNITED
+
+			if = {
+				limit = {
+					OR = {
+						has_country_leader = { character = ZBE_ma_hongbin ruling_only = yes }
+						has_country_leader = { character = GTB_ma_bufang ruling_only = yes }
+					}
+				}
+
+				set_cosmetic_tag = CHI_HUI_MA
+
+				else = {
+					set_cosmetic_tag = CHI_HUI
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_ma_clique = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_ma_clique_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_ma_clique = yes
+				}
+				else = {
+					required_states_to_form_ma_clique = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_shaanxi = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_shaanxi = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_shaanxi = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_shaanxi"
+			set_country_flag = can_form_CHI_NORTH
+
+			set_cosmetic_tag = CHI_SHAANXI
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_shaanxi = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_shaanxi = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_shanxi = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_shanxi = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_shanxi = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_shanxi"
+			set_country_flag = can_form_CHI_NORTH
+
+			set_cosmetic_tag = CHI_SHANXI
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_shanxi = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_shanxi = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_zhili = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_zhili = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_zhili = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_zhili"
+			set_country_flag = can_form_CHI_NORTH
+
+			set_cosmetic_tag = CHI_ZHILI
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_zhili = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_zhili = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_north_china = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_north_china = yes
+		}
+		visible = {
+			has_cosmetics_to_form_north_china = yes
+		}
+		available = {
+			has_states_to_form_north_china = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_north_china"
+			clr_country_flag = can_form_CHI_NORTH
+
+			set_country_flag = can_form_CHI_UNITED
+
+			set_cosmetic_tag = CHI_NORTH
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_north_china = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_north_china_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_north_china = yes
+				}
+				else = {
+					required_states_to_form_north_china = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_manchuria = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_manchuria = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_manchuria = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_manchuria"
+			set_country_flag = can_form_CHI_UNITED
+
+			set_cosmetic_tag = CHI_MANCHURIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_manchuria = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_manchuria = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_sichuan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_sichuan = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_sichuan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_sichuan"
+			clr_country_flag = can_form_CHI_HUI
+
+			set_country_flag = can_form_CHI_SOUTHWEST
+
+			set_cosmetic_tag = CHI_SICHUAN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_sichuan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_sichuan = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_guizhou = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_guizhou = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_guizhou = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_guizhou"
+			set_country_flag = can_form_CHI_SOUTHWEST
+
+			set_cosmetic_tag = CHI_GUIZHOU
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_guizhou = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_guizhou = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_yunnan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_yunnan = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_yunnan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_yunnan"
+			set_country_flag = can_form_CHI_SOUTHWEST
+
+			set_cosmetic_tag = CHI_YUNNAN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_yunnan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_yunnan = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_southwest_china = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_southwest_china = yes
+		}
+		visible = {
+			has_cosmetics_to_form_southwest_china = yes
+		}
+		available = {
+			has_states_to_form_southwest_china = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_southwest_china"
+			clr_country_flag = can_form_CHI_SOUTHWEST
+
+			set_country_flag = can_form_CHI_UNITED
+
+			set_cosmetic_tag = CHI_SOUTHWEST
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_southwest_china = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_southwest_china = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_hunnan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_hunnan = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_hunnan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_hunnan"
+			set_country_flag = can_form_CHI_CENTRAL
+
+			set_cosmetic_tag = CHI_HUNNAN
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_hunnan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_hunnan = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_central_china = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_central_china = yes
+		}
+		visible = {
+			has_cosmetics_to_form_central_china = yes
+		}
+		available = {
+			has_states_to_form_central_china = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_central_china"
+			clr_country_flag = can_form_CHI_CENTRAL
+
+			set_country_flag = can_form_CHI_UNITED
+
+			set_cosmetic_tag = CHI_CENTRAL
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_china = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_central_china = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_guangxi = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_guangxi = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_guangxi = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_guangxi"
+			set_country_flag = can_form_CHI_SOUTH
+
+			set_cosmetic_tag = CHI_GUANGXI
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_guangxi = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_guangxi = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_guangdong = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_guangdong = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_guangdong = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_guangdong"
+			set_country_flag = can_form_CHI_SOUTH
+
+			set_cosmetic_tag = CHI_GUANGDONG
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_guangdong = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_guangdong = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_south_china = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_south_china = yes
+		}
+		visible = {
+			has_cosmetics_to_form_south_china = yes
+		}
+		available = {
+			has_states_to_form_south_china = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_south_china"
+			clr_country_flag = can_form_CHI_SOUTH
+
+			set_country_flag = can_form_CHI_UNITED
+
+			set_cosmetic_tag = CHI_SOUTH
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_south_china = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_south_china_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_south_china = yes
+				}
+				else = {
+					required_states_to_form_south_china = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_anhui = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_anhui = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_anhui = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_anhui"
+			set_country_flag = can_form_CHI_EAST
+
+			set_cosmetic_tag = CHI_ANHUI
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_anhui = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_anhui = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_jiangsu = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_jiangsu = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_jiangsu = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_jiangsu"
+			set_country_flag = can_form_CHI_EAST
+
+			set_cosmetic_tag = CHI_JIANGSU
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_jiangsu = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_jiangsu = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_shandong = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_shandong = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_shandong = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_shandong"
+			set_country_flag = can_form_CHI_EAST
+
+			set_cosmetic_tag = CHI_SHANDONG
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_shandong = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_shandong = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_east_china = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_east_china = yes
+		}
+		visible = {
+			has_cosmetics_to_form_east_china = yes
+		}
+		available = {
+			has_states_to_form_east_china = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_east_china"
+			clr_country_flag = can_form_CHI_EAST
+			clr_country_flag = can_form_PLY_UNITED
+
+			set_country_flag = can_form_CHI_UNITED
+
+			set_cosmetic_tag = CHI_EAST
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_east_china = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_east_china_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_east_china = yes
+				}
+				else = {
+					required_states_to_form_east_china = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_china = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_china = yes
+		}
+		visible = {
+			has_cosmetics_to_form_china = yes
+		}
+		available = {
+			has_states_to_form_china = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_china"
+			clr_country_flag = can_form_CHI_UNITED
+
+			set_country_flag = can_form_ASI_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = EZB_aisin_gioro_puyi ruling_only = yes } }
+
+				set_cosmetic_tag = CHI_UNITED_QING
+
+				else = {
+					set_cosmetic_tag = CHI_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_china = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_china_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_china = yes
+				}
+				else = {
+					required_states_to_form_china = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
 
 		fire_only_once = yes
 
