@@ -7245,6 +7245,8 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_karelia"
 			set_country_flag = can_form_NDC_UNITED
+			set_country_flag = can_form_FUG_UNITED
+			set_country_flag = can_form_SVR_UNITED
 
 			set_cosmetic_tag = NDC_KARELIA
 
@@ -7457,6 +7459,7 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_nordic_council"
 			clr_country_flag = can_form_NDC_UNITED
 			clr_country_flag = can_form_FUG_ESTFIN
+			clr_country_flag = can_form_SVR_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
 
@@ -7893,7 +7896,7 @@ esicolor_formables = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_white_sea"
-			set_country_flag = can_form_EUR_UNITED
+			set_country_flag = can_form_SVR_UNITED
 
 			set_cosmetic_tag = FUG_WHITE
 
@@ -7925,7 +7928,7 @@ esicolor_formables = {
 			}
 		}
 
-		cost = global.formables_cost_50?50
+		cost = global.formables_cost_25?25
 
 		fire_only_once = yes
 
@@ -7948,6 +7951,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_komi"
 			set_country_flag = can_form_FUG_UNITED
+			set_country_flag = can_form_SVR_UNITED
 
 			set_cosmetic_tag = FUG_KOMI
 
@@ -8136,6 +8140,7 @@ esicolor_formables = {
 			clr_country_flag = can_form_FUG_UNITED
 			clr_country_flag = can_form_NDC_UNITED
 			clr_country_flag = can_form_SBR_WEST
+			clr_country_flag = can_form_SVR_UNITED
 
 			if = {
 				limit = {
@@ -14508,6 +14513,284 @@ esicolor_formables = {
 		highlight_states = {
 			highlight_states_trigger = {
 				is_privolzhsk = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_leningrad = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_leningrad = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_leningrad = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_leningrad"
+			set_country_flag = can_form_SVR_UNITED
+
+			set_cosmetic_tag = SVR_LENINGRAD
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_leningrad = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_leningrad = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_pskov = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_pskov = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_pskov = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_pskov"
+			set_country_flag = can_form_SVR_UNITED
+
+			set_cosmetic_tag = SVR_PSKOV
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_pskov = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_pskov = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_severnaya = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_severnaya = yes
+		}
+		visible = {
+			has_cosmetics_to_form_severnaya = yes
+		}
+		available = {
+			has_states_to_form_severnaya = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_severnaya"
+			clr_country_flag = can_form_SVR_UNITED
+			clr_country_flag = can_form_FUG_UNITED
+			clr_country_flag = can_form_NDC_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+			if = {
+				limit = {
+					can_form_komi = yes
+					original_tag = BZS
+				}
+
+				set_country_flag = can_form_ASI_UNITED
+			}
+
+			set_cosmetic_tag = SVR_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_severnaya = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_severnaya_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_severnaya = yes
+				}
+				else = {
+					required_states_to_form_severnaya = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_tver = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_tver = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_tver = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_tver"
+			set_country_flag = can_form_MSC_UNITED
+
+			set_cosmetic_tag = MSC_TVER
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_tver = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_tver = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_smolensk = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_smolensk = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_smolensk = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_smolensk"
+			set_country_flag = can_form_MSC_UNITED
+
+			set_cosmetic_tag = MSC_SMOLENSK
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_smolensk = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_smolensk = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_muscovy = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_muscovy = yes
+		}
+		visible = {
+			has_cosmetics_to_form_muscovy = yes
+		}
+		available = {
+			has_states_to_form_muscovy = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_muscovy"
+			clr_country_flag = can_form_MSC_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+
+			set_cosmetic_tag = MSC_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_muscovy = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_muscovy = yes
 			}
 		}
 

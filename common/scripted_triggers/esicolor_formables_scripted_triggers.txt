@@ -4318,6 +4318,328 @@ has_states_to_form_privolzhsk = {
 	}
 }
 
+#### Severnaya/Novogorod ####
+can_form_leningrad = {
+	OR = {
+		original_tag = IYS
+		original_tag = ZOB
+		original_tag = ZAA
+		original_tag = ZLA
+	}
+}
+
+can_form_pskov = {
+	OR = {
+		original_tag = ZOY
+		original_tag = ZIO
+	}
+}
+
+can_form_severnaya = {
+	OR = {
+		can_form_white_sea = yes
+		can_form_komi = yes
+		can_form_leningrad = yes
+		can_form_pskov = yes
+		original_tag = ZIL
+		original_tag = ZLE
+		original_tag = ESI
+		original_tag = BZS
+	}
+}
+
+is_leningrad = {
+	OR = {
+		state = 195
+		state = 208
+		state = 244
+		state = 264
+	}
+}
+
+is_pskov = {
+	OR = {
+		state = 209
+		state = 210
+	}
+}
+
+is_severnaya = {
+	OR = {
+		is_karelia = yes
+		is_white_sea = yes
+		is_komi = yes
+		is_leningrad = yes
+		is_pskov = yes
+		state = 216
+		state = 263
+		state = 351
+		state = 825
+	}
+}
+
+has_states_to_form_leningrad = {
+	custom_trigger_tooltip = {
+		tooltip = form_leningrad_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 195 } } } owns_state = 195 }
+		if = { limit = { NOT = { OOO = { owns_state = 208 } } } owns_state = 208 }
+		if = { limit = { NOT = { OOO = { owns_state = 244 } } } owns_state = 244 }
+		if = { limit = { NOT = { OOO = { owns_state = 264 } } } owns_state = 264 }
+	}
+}
+
+has_states_to_form_pskov = {
+	custom_trigger_tooltip = {
+		tooltip = form_pskov_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 207 } } } owns_state = 209 }
+		if = { limit = { NOT = { OOO = { owns_state = 210 } } } owns_state = 210 }
+	}
+}
+
+has_cosmetics_to_form_severnaya = {
+	has_country_flag = can_form_SVR_UNITED
+}
+has_states_to_form_severnaya = {
+	custom_trigger_tooltip = {
+		tooltip = form_severnaya_has_states_tt
+
+		has_states_to_form_white_sea = yes
+		has_states_to_form_komi = yes
+		has_states_to_form_leningrad = yes
+		has_states_to_form_pskov = yes
+		if = { limit = { NOT = { OOO = { owns_state = 216 } } } owns_state = 216 }
+		if = { limit = { NOT = { OOO = { owns_state = 263 } } } owns_state = 263 }
+		if = { limit = { NOT = { OOO = { owns_state = 351 } } } owns_state = 351 }
+		if = { limit = { NOT = { OOO = { owns_state = 825 } } } owns_state = 825 }
+	}
+}
+
+required_states_to_form_severnaya = {
+	OR = {
+		required_states_to_form_white_sea = yes
+		is_komi = yes
+		is_leningrad = yes
+		is_pskov = yes
+		state = 216
+		state = 263
+		state = 351
+		state = 825
+	}
+}
+
+#### Central Russia/Muscovy ####
+can_form_tver = {
+	OR = {
+		original_tag = ZAL
+		original_tag = ZAF
+	}
+}
+
+can_form_smolensk = {
+	OR = {
+		original_tag = ZAZ
+		original_tag = ZAE
+	}
+}
+
+can_form_muscovy = {
+	OR = {
+		can_form_tver = yes
+		can_form_smolensk = yes
+		original_tag = ZOS
+		original_tag = ZIY
+		original_tag = ZZO
+		original_tag = ZZZ
+		original_tag = ZZE
+		original_tag = ZZA
+		original_tag = ZAO
+		original_tag = ZAB
+		original_tag = ZSE
+		original_tag = ZSA
+		original_tag = ZSF
+		original_tag = ZSB
+		original_tag = ZLO
+	}
+}
+
+is_tver = {
+	OR = {
+		state = 246
+		state = 247
+	}
+}
+
+is_smolensk = {
+	OR = {
+		state = 242
+		state = 243
+	}
+}
+
+is_muscovy = {
+	OR = {
+		is_tver = yes
+		is_smolensk = yes
+		state = 205
+		state = 219
+		state = 220
+		state = 222
+		state = 223
+		state = 224
+		state = 240
+		state = 248
+		state = 253
+		state = 254
+		state = 257
+		state = 258
+		state = 260
+	}
+}
+
+has_states_to_form_tver = {
+	custom_trigger_tooltip = {
+		tooltip = form_tver_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 246 } } } owns_state = 246 }
+		if = { limit = { NOT = { OOO = { owns_state = 247 } } } owns_state = 247 }
+	}
+}
+
+has_states_to_form_smolensk = {
+	custom_trigger_tooltip = {
+		tooltip = form_smolensk_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 242 } } } owns_state = 242 }
+		if = { limit = { NOT = { OOO = { owns_state = 243 } } } owns_state = 243 }
+	}
+}
+
+has_cosmetics_to_form_muscovy = {
+	has_country_flag = can_form_MSC_UNITED
+}
+has_states_to_form_muscovy = {
+	custom_trigger_tooltip = {
+		tooltip = form_muscovy_has_states_tt
+
+		has_states_to_form_tver = yes
+		has_states_to_form_smolensk = yes
+		if = { limit = { NOT = { OOO = { owns_state = 205 } } } owns_state = 205 }
+		if = { limit = { NOT = { OOO = { owns_state = 219 } } } owns_state = 219 }
+		if = { limit = { NOT = { OOO = { owns_state = 220 } } } owns_state = 220 }
+		if = { limit = { NOT = { OOO = { owns_state = 222 } } } owns_state = 222 }
+		if = { limit = { NOT = { OOO = { owns_state = 223 } } } owns_state = 223 }
+		if = { limit = { NOT = { OOO = { owns_state = 224 } } } owns_state = 224 }
+		if = { limit = { NOT = { OOO = { owns_state = 240 } } } owns_state = 240 }
+		if = { limit = { NOT = { OOO = { owns_state = 248 } } } owns_state = 248 }
+		if = { limit = { NOT = { OOO = { owns_state = 253 } } } owns_state = 253 }
+		if = { limit = { NOT = { OOO = { owns_state = 254 } } } owns_state = 254 }
+		if = { limit = { NOT = { OOO = { owns_state = 257 } } } owns_state = 257 }
+		if = { limit = { NOT = { OOO = { owns_state = 258 } } } owns_state = 258 }
+		if = { limit = { NOT = { OOO = { owns_state = 260 } } } owns_state = 260 }
+	}
+}
+
+#### USSR ####
+can_form_west_russia = {
+	OR = {
+		can_form_south_russia = yes
+		can_form_privolzhsk = yes
+		can_form_severnaya = yes
+		can_form_muscovy = yes
+	}
+}
+
+can_form_russia = {
+	OR = {
+		can_form_siberia = yes
+		can_form_west_russia = yes
+	}
+}
+
+can_form_ussr = {
+	OR = {
+		can_form_baltics = yes
+		can_form_kazakhstan = yes
+		can_form_uzbekistan = yes
+		can_form_turkmenistan = yes
+		original_tag = FEZ
+		original_tag = FAZ
+		can_form_belarus = yes
+		can_form_ukraine = yes
+		can_form_transcaucasia = yes
+		can_form_russia = yes
+	}
+}
+
+is_west_russia = {
+	OR = {
+		is_south_russia = yes
+		is_privolzhsk = yes
+		is_severnaya = yes
+		is_muscovy = yes
+	}
+}
+
+is_russia = {
+	OR = {
+		is_west_russia = yes
+		is_siberia = yes
+	}
+}
+
+is_ussr = {
+	OR = {
+		is_baltics = yes
+		is_kazakhstan = yes
+		is_uzbekistan = yes
+		is_turkmenistan = yes
+		is_belarus = yes
+		is_ukraine = yes
+		is_transcaucasia = yes
+		is_russia = yes
+	}
+}
+
+has_cosmetics_to_form_west_russia = {
+	has_country_flag = can_form_RUS_WEST
+}
+has_states_to_form_west_russia = {
+	custom_trigger_tooltip = {
+		tooltip = form_west_russia_has_states_tt
+
+		has_states_to_form_south_russia = yes
+		has_states_to_form_privolzhsk = yes
+		has_states_to_form_severnaya = yes
+		has_states_to_form_muscovy = yes
+	}
+}
+
+has_cosmetics_to_form_russia = {
+	has_country_flag = can_form_RUS_UNITED
+}
+has_states_to_form_russia = {
+	custom_trigger_tooltip = {
+		tooltip = form_russia_has_states_tt
+
+		has_states_to_form_west_russia = yes
+		has_states_to_form_siberia = yes
+	}
+}
+
+has_cosmetics_to_form_ussr = {
+	has_country_flag = can_form_SOV_UNITED
+}
+has_states_to_form_russia = {
+	custom_trigger_tooltip = {
+		tooltip = form_russia_has_states_tt
+
+		has_states_to_form_west_russia = yes
+		has_states_to_form_siberia = yes
+	}
+}
+
 #### Magreb ####
 can_form_mauritania = {
 	OR = {
