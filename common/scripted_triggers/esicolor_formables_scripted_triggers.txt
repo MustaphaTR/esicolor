@@ -4206,6 +4206,118 @@ required_states_to_form_france = {
 	}
 }
 
+#### Privolzhsk ####
+can_form_saratov = {
+	OR = {
+		original_tag = ZEY
+		original_tag = BPJ # AOI
+		original_tag = BZY
+	}
+}
+
+can_form_idel_ural = {
+	OR = {
+		original_tag = ZAY
+		original_tag = ZSL
+		original_tag = EYY
+		original_tag = LSI
+		original_tag = BEE
+	}
+}
+
+can_form_privolzhsk = {
+	OR = {
+		can_form_saratov = yes
+		can_form_idel_ural = yes
+		original_tag = ZSO
+		original_tag = ZSI
+		original_tag = ZSZ
+		original_tag = ZSS
+		original_tag = EYB
+		original_tag = AOO
+		original_tag = SFE
+		original_tag = SBZ
+		original_tag = LSZ
+	}
+}
+
+is_saratov = {
+	OR = {
+		state = 239
+		state = 401
+		state = 829
+	}
+}
+
+is_idel_ural = {
+	OR = {
+		state = 249
+		state = 256
+		state = 399
+		state = 651
+		state = 833
+	}
+}
+
+is_privolzhsk = {
+	OR = {
+		is_saratov = yes
+		is_idel_ural = yes
+		state = 250
+		state = 251
+		state = 252
+		state = 255
+		state = 398
+		state = 400
+		state = 573
+		state = 582
+		state = 652
+	}
+}
+
+has_states_to_form_saratov = {
+	custom_trigger_tooltip = {
+		tooltip = form_saratov_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 239 } } } owns_state = 239 }
+		if = { limit = { NOT = { OOO = { owns_state = 401 } } } owns_state = 401 }
+		if = { limit = { NOT = { OOO = { owns_state = 829 } } } owns_state = 829 }
+	}
+}
+
+has_states_to_form_idel_ural = {
+	custom_trigger_tooltip = {
+		tooltip = form_idel_ural_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 249 } } } owns_state = 249 }
+		if = { limit = { NOT = { OOO = { owns_state = 256 } } } owns_state = 256 }
+		if = { limit = { NOT = { OOO = { owns_state = 399 } } } owns_state = 399 }
+		if = { limit = { NOT = { OOO = { owns_state = 651 } } } owns_state = 651 }
+		if = { limit = { NOT = { OOO = { owns_state = 833 } } } owns_state = 833 }
+	}
+}
+
+has_cosmetics_to_form_privolzhsk = {
+	has_country_flag = can_form_PRV_UNITED
+}
+has_states_to_form_privolzhsk = {
+	custom_trigger_tooltip = {
+		tooltip = form_privolzhsk_has_states_tt
+
+		has_states_to_form_saratov = yes
+		has_states_to_form_idel_ural = yes
+		if = { limit = { NOT = { OOO = { owns_state = 250 } } } owns_state = 250 }
+		if = { limit = { NOT = { OOO = { owns_state = 251 } } } owns_state = 251 }
+		if = { limit = { NOT = { OOO = { owns_state = 252 } } } owns_state = 252 }
+		if = { limit = { NOT = { OOO = { owns_state = 255 } } } owns_state = 255 }
+		if = { limit = { NOT = { OOO = { owns_state = 398 } } } owns_state = 398 }
+		if = { limit = { NOT = { OOO = { owns_state = 400 } } } owns_state = 400 }
+		if = { limit = { NOT = { OOO = { owns_state = 573 } } } owns_state = 573 }
+		if = { limit = { NOT = { OOO = { owns_state = 582 } } } owns_state = 582 }
+		if = { limit = { NOT = { OOO = { owns_state = 652 } } } owns_state = 652 }
+	}
+}
+
 #### Magreb ####
 can_form_mauritania = {
 	OR = {

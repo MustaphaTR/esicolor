@@ -14383,6 +14383,143 @@ esicolor_formables = {
 		}
 	}
 
+	form_saratov = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_saratov = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_saratov = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_saratov"
+			set_country_flag = can_form_PRV_UNITED
+
+			if = {
+				limit = { original_tag = BZY }
+
+				set_cosmetic_tag = PRV_SARATOV_GERMAN
+
+				else = {
+					set_cosmetic_tag = PRV_SARATOV
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_saratov = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_saratov = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_idel_ural = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_idel_ural = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_idel_ural = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_idel_ural"
+			set_country_flag = can_form_PRV_UNITED
+
+			set_cosmetic_tag = PRV_IDELURAL
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_idel_ural = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_idel_ural = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_privolzhsk = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_privolzhsk = yes
+		}
+		visible = {
+			has_cosmetics_to_form_privolzhsk = yes
+		}
+		available = {
+			has_states_to_form_privolzhsk = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_privolzhsk"
+			clr_country_flag = can_form_PRV_UNITED
+
+			set_country_flag = can_form_EUR_UNITED
+			set_country_flag = can_form_ASI_UNITED
+
+			set_cosmetic_tag = PRV_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_privolzhsk = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_privolzhsk = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
