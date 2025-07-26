@@ -13820,6 +13820,11 @@ esicolor_formables = {
 			set_country_flag = can_form_LAP_UNITED
 
 			if = {
+				limit = { has_country_leader = { character = EOO_gabriel_terra ruling_only = yes } }
+
+				set_cosmetic_tag = LAP_URUGUAY_TERRA
+			}
+			else_if = {
 				limit = { has_country_leader = { character = YAL_arnulf_fuhrmann ruling_only = yes } }
 
 				set_cosmetic_tag = LAP_URUGUAY_GERMAN
@@ -14075,6 +14080,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_south_chile"
 			set_country_flag = can_form_LAP_CHILE
+			set_country_flag = can_form_LAP_PATAGONIA
 
 			set_cosmetic_tag = LAP_SCHILE
 
