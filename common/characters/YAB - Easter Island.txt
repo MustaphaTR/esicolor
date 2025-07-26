@@ -1,0 +1,39 @@
+characters={
+	YAB_juan_tepano = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=YAB_juan_tepano
+			portraits={
+				civilian = {
+					large=GFX_portrait_RAP_juan_tepano
+					small=GFX_portrait_RAP_juan_tepano_small
+				}
+			}
+			country_leader={
+				traits={ cultural_preserver }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=YAB_juan_tepano
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_America_Generic_5
+				}
+			}
+			country_leader={
+				traits={ cultural_preserver }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

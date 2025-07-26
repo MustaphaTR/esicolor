@@ -1,0 +1,39 @@
+characters={
+	YSO_manuel_manquilef = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=CHL_manuel_manquilef
+			portraits={
+				civilian={
+					large=GFX_portrait_CHL_manuel_manquilef
+					small=GFX_portrait_CHL_manuel_manquilef_small
+				}
+			}
+			country_leader={
+				traits={ JUNO_defender_of_araucania }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=CHL_manuel_manquilef
+			portraits={
+				civilian={
+					large="GFX_Portrait_South_America_Generic_5"
+				}
+			}
+			country_leader={
+				traits={ JUNO_defender_of_araucania }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

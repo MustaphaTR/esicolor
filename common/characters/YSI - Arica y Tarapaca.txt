@@ -1,0 +1,39 @@
+characters={
+	YSI_carlos_contreras_labarca = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=CHL_carlos_contreras_labarca
+			portraits={
+				civilian={
+					large=GFX_portrait_CHL_carlos_contreras_labarca
+					small=GFX_portrait_CHL_carlos_contreras_labarca_small
+				}
+			}
+			country_leader={
+				traits={ staunch_stalinist }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=CHL_carlos_contreras_labarca
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_America_Generic_navy_3
+				}
+			}
+			country_leader={
+				traits={ staunch_stalinist }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

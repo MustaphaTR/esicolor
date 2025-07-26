@@ -6478,6 +6478,387 @@ required_states_to_form_brazil = {
 	}
 }
 
+#### La Plata ####
+can_form_paraguay = {
+	OR = {
+		original_tag = EOI
+		original_tag = LBB
+	}
+}
+
+can_form_uruguay = {
+	OR = {
+		original_tag = EOO
+		original_tag = YAS
+		original_tag = YAL
+	}
+}
+
+can_form_argentine_la_plata = {
+	OR = {
+		original_tag = ZFB
+		original_tag = SOY
+		original_tag = SIO
+		original_tag = YSL
+		original_tag = YSF
+	}
+}
+
+can_form_argentine_andes = {
+	OR = {
+		original_tag = SOB
+		original_tag = SII
+		original_tag = YSB
+		original_tag = YSY
+		original_tag = YLO
+	}
+}
+
+can_form_argentine_patagonia = {
+	OR = {
+		original_tag = ZYY
+		original_tag = SIZ
+		original_tag = YSE
+		original_tag = YSA
+		original_tag = YSS
+	}
+}
+
+can_form_north_chile = {
+	OR = {
+		original_tag = SFY
+		original_tag = TPM # SOL
+		original_tag = YAB
+		original_tag = YSI
+		original_tag = YSZ
+	}
+}
+
+can_form_south_chile = {
+	OR = {
+		original_tag = SOF
+		original_tag = YAF
+		original_tag = YSO
+	}
+}
+
+can_form_la_plata = {
+	OR = {
+		can_form_south_brazil = yes
+		can_form_paraguay = yes
+		can_form_uruguay = yes
+		can_form_argentine_la_plata = yes
+		original_tag = SOA
+	}
+}
+
+can_form_argentina = {
+	OR = {
+		can_form_argentine_la_plata = yes
+		can_form_argentine_andes = yes
+		can_form_argentine_patagonia = yes
+	}
+}
+
+can_form_chile = {
+	OR = {
+		can_form_north_chile = yes
+		can_form_south_chile = yes
+	}
+}
+
+can_form_patagonia = {
+	OR = {
+		can_form_argentine_patagonia = yes
+		can_form_south_chile = yes
+	}
+}
+
+is_paraguay = {
+	OR = {
+		state = 301
+		state = 688
+		state = 957
+	}
+}
+
+is_uruguay = {
+	OR = {
+		state = 300
+		state = 945
+		state = 946
+	}
+}
+
+is_argentine_la_plata = {
+	OR = {
+		state = 278
+		state = 509
+		state = 510
+		state = 956
+		state = 957
+	}
+}
+
+is_argentine_andes = {
+	OR = {
+		state = 508
+		state = 511
+		state = 958
+		state = 959
+		state = 960
+	}
+}
+
+is_argentine_patagonia = {
+	OR = {
+		state = 299
+		state = 512
+		state = 953
+		state = 954
+		state = 955
+	}
+}
+
+is_north_chile = {
+	OR = {
+		state = 279
+		state = 506
+		state = 948
+		state = 951
+		state = 952
+	}
+}
+
+is_south_chile = {
+	OR = {
+		state = 507
+		state = 949
+		state = 950
+		state = 953
+	}
+}
+
+is_la_plata = {
+	OR = {
+		is_south_brazil = yes
+		is_paraguay = yes
+		is_uruguay = yes
+		is_argentine_la_plata = yes
+		state = 504
+	}
+}
+
+is_argentina = {
+	OR = {
+		is_argentine_la_plata = yes
+		is_argentine_andes = yes
+		is_argentine_patagonia = yes
+	}
+}
+
+is_chile = {
+	OR = {
+		is_north_chile = yes
+		is_south_chile = yes
+	}
+}
+
+is_patagonia = {
+	OR = {
+		is_argentine_patagonia = yes
+		is_south_chile = yes
+	}
+}
+
+has_states_to_form_paraguay = {
+	custom_trigger_tooltip = {
+		tooltip = form_paraguay_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 301 } } } owns_state = 301 }
+		if = { limit = { NOT = { OOO = { owns_state = 688 } } } owns_state = 688 }
+	}
+}
+
+has_states_to_form_uruguay = {
+	custom_trigger_tooltip = {
+		tooltip = form_uruguay_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 300 } } } owns_state = 300 }
+		if = { limit = { NOT = { OOO = { owns_state = 945 } } } owns_state = 945 }
+		if = { limit = { NOT = { OOO = { owns_state = 946 } } } owns_state = 946 }
+	}
+}
+
+has_states_to_form_argentine_la_plata = {
+	custom_trigger_tooltip = {
+		tooltip = form_argentine_la_plata_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 278 } } } owns_state = 278 }
+		if = { limit = { NOT = { OOO = { owns_state = 509 } } } owns_state = 509 }
+		if = { limit = { NOT = { OOO = { owns_state = 510 } } } owns_state = 510 }
+		if = { limit = { NOT = { OOO = { owns_state = 956 } } } owns_state = 956 }
+		if = { limit = { NOT = { OOO = { owns_state = 957 } } } owns_state = 957 }
+	}
+}
+
+has_states_to_form_argentine_andes = {
+	custom_trigger_tooltip = {
+		tooltip = form_argentine_andes_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 508 } } } owns_state = 508 }
+		if = { limit = { NOT = { OOO = { owns_state = 511 } } } owns_state = 511 }
+		if = { limit = { NOT = { OOO = { owns_state = 958 } } } owns_state = 958 }
+		if = { limit = { NOT = { OOO = { owns_state = 959 } } } owns_state = 959 }
+		if = { limit = { NOT = { OOO = { owns_state = 960 } } } owns_state = 960 }
+	}
+}
+
+has_states_to_form_argentine_patagonia = {
+	custom_trigger_tooltip = {
+		tooltip = form_argentine_patagonia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 512 } } } owns_state = 512 }
+		if = { limit = { NOT = { OOO = { owns_state = 953 } } } owns_state = 953 }
+		if = { limit = { NOT = { OOO = { owns_state = 954 } } } owns_state = 954 }
+		if = { limit = { NOT = { OOO = { owns_state = 955 } } } owns_state = 955 }
+	}
+}
+
+has_states_to_form_north_chile = {
+	custom_trigger_tooltip = {
+		tooltip = form_north_chile_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 279 } } } owns_state = 279 }
+		if = { limit = { NOT = { OOO = { owns_state = 506 } } } owns_state = 506 }
+		if = { limit = { NOT = { OOO = { owns_state = 951 } } } owns_state = 951 }
+		if = { limit = { NOT = { OOO = { owns_state = 952 } } } owns_state = 952 }
+	}
+}
+
+has_states_to_form_south_chile = {
+	custom_trigger_tooltip = {
+		tooltip = form_south_chile_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 507 } } } owns_state = 507 }
+		if = { limit = { NOT = { OOO = { owns_state = 949 } } } owns_state = 949 }
+		if = { limit = { NOT = { OOO = { owns_state = 950 } } } owns_state = 950 }
+	}
+}
+
+has_cosmetics_to_form_la_plata = {
+	has_country_flag = can_form_LAP_UNITED
+}
+has_states_to_form_la_plata = {
+	custom_trigger_tooltip = {
+		tooltip = form_la_plata_has_states_tt
+
+		has_states_to_form_paraguay = yes
+		has_states_to_form_uruguay = yes
+		has_states_to_form_argentine_la_plata = yes
+	}
+}
+
+has_cosmetics_to_form_argentina = {
+	has_country_flag = can_form_LAP_ARGENTINA
+}
+has_states_to_form_argentina = {
+	custom_trigger_tooltip = {
+		tooltip = form_argentina_has_states_tt
+
+		has_states_to_form_argentine_la_plata = yes
+		has_states_to_form_argentine_andes = yes
+		has_states_to_form_argentine_patagonia = yes
+	}
+}
+
+has_cosmetics_to_form_chile = {
+	has_country_flag = can_form_LAP_CHILE
+}
+has_states_to_form_chile = {
+	custom_trigger_tooltip = {
+		tooltip = form_chile_has_states_tt
+
+		has_states_to_form_north_chile = yes
+		has_states_to_form_south_chile = yes
+	}
+}
+
+has_cosmetics_to_form_patagonia = {
+	has_country_flag = can_form_LAP_PATAGONIA
+}
+has_states_to_form_patagonia = {
+	custom_trigger_tooltip = {
+		tooltip = form_patagonia_has_states_tt
+
+		has_states_to_form_argentine_patagonia = yes
+		has_states_to_form_south_chile = yes
+	}
+}
+
+required_states_to_form_paraguay = {
+	OR = {
+		state = 301
+		state = 688
+	}
+}
+
+required_states_to_form_argentine_patagonia = {
+	OR = {
+		state = 512
+		state = 953
+		state = 954
+		state = 955
+	}
+}
+
+required_states_to_form_north_chile = {
+	OR = {
+		state = 279
+		state = 506
+		state = 951
+		state = 952
+	}
+}
+
+required_states_to_form_south_chile = {
+	OR = {
+		state = 507
+		state = 949
+		state = 950
+	}
+}
+
+required_states_to_form_la_plata = {
+	OR = {
+		required_states_to_form_paraguay = yes
+		is_uruguay = yes
+		is_argentine_la_plata = yes
+	}
+}
+
+required_states_to_form_argentina = {
+	OR = {
+		is_argentine_la_plata = yes
+		is_argentine_andes = yes
+		required_states_to_form_argentine_patagonia = yes
+	}
+}
+
+required_states_to_form_chile = {
+	OR = {
+		required_states_to_form_north_chile = yes
+		required_states_to_form_south_chile = yes
+	}
+}
+
+required_states_to_form_patagonia = {
+	OR = {
+		required_states_to_form_argentine_patagonia = yes
+		required_states_to_form_south_chile = yes
+	}
+}
+
 #### Polynesia ####
 can_form_hawaii = {
 	OR = {

@@ -51,7 +51,7 @@
  esicolor_build_city_button_timer_text:0 "[?Root.build_city_timer_@This]"
 
  esicolor_move_capital_button_tt:0 "Move Capital to §Y[This.GetCapitalVictoryPointName]§!"
- esicolor_move_capital_button_tt_delayed:0 "\n§YCost:§![esicolor_move_capital_action_cost][esicolor_move_capital_action_duration]\n\n§YPrerequisites:§!\n[Root.GetFlag] §Y[Root.GetName]:§!\n[This.esicolor_compliance_action_ours]\n[esicolor_move_capital_action_capital][esicolor_move_capital_action_active]\n\n§YEffects when selected:§!\n[Root.GetFlag] §Y[Root.GetName]:§!\n  Moves capital to §Y[This.GetName]§!."
+ esicolor_move_capital_button_tt_delayed:0 "\n§YCost:§![esicolor_move_capital_action_cost][esicolor_move_capital_action_duration]\n\n§YPrerequisites:§!\n[Root.GetFlag] §Y[Root.GetName]:§!\n[This.esicolor_compliance_action_ours]\n[esicolor_move_capital_action_capital][esicolor_move_capital_action_active]\n\n§YEffects when selected:§!\n[Root.GetFlag] §Y[Root.GetName]:§!\n  Moves capital to §Y[This.GetCapitalVictoryPointName]§!."
  esicolor_move_capital_action_duration:0 "\n§YDuration:§! [?global.move_capital_length] days."
  esicolor_move_capital_action_active:0 "\n\n§YWhile active:§!\n§RCan't move capital§!."
  esicolor_move_capital_action_cost_met:0 "£trigger_yes £pol_power 50."

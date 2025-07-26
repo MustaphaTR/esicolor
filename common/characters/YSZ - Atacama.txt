@@ -1,0 +1,42 @@
+characters={
+	YSZ_jorge_gonzalez_von_marees = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=CHL_jorge_gonzalez_von_marees
+			portraits={
+				civilian = {
+					large=GFX_portrait_CHL_jorge_gonzalez_von_marees
+					small=GFX_portrait_CHL_jorge_gonzalez_von_marees_small
+				}
+				army = {
+					large=GFX_portrait_CHL_jorge_gonzalez_von_marees_army
+				}
+			}
+			country_leader={
+				traits={ JUNO_el_jefe }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=CHL_jorge_gonzalez_von_marees
+			portraits={
+				civilian={
+					large=GFX_Portrait_South_America_Generic_land_5
+				}
+			}
+			country_leader={
+				traits={ JUNO_el_jefe }
+				ideology=nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

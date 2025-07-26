@@ -10532,6 +10532,8 @@ esicolor_formables = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_central_brazil"
+			clr_country_flag = can_form_LAP_UNITED
+
 			set_country_flag = can_form_BRA_UNITED
 
 			set_cosmetic_tag = BRA_CENTRAL
@@ -10575,6 +10577,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_south_brazil"
 			set_country_flag = can_form_BRA_UNITED
+			set_country_flag = can_form_LAP_UNITED
 
 			set_cosmetic_tag = BRA_SOUTHEAST
 
@@ -10659,6 +10662,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_brazil"
 			clr_country_flag = can_form_BRA_UNITED
+			clr_country_flag = can_form_LAP_UNITED
 
 			set_country_flag = can_form_SOA_UNITED
 
@@ -13746,6 +13750,633 @@ esicolor_formables = {
 		}
 	}
 
+	form_paraguay = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_paraguay = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_paraguay = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_paraguay"
+			set_country_flag = can_form_LAP_UNITED
+
+			set_cosmetic_tag = LAP_PARAGUAY
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_paraguay = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_paraguay_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_paraguay = yes
+				}
+				else = {
+					required_states_to_form_paraguay = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_uruguay = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_uruguay = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_uruguay = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_uruguay"
+			set_country_flag = can_form_LAP_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = YAL_arnulf_fuhrmann ruling_only = yes } }
+
+				set_cosmetic_tag = LAP_URUGUAY_GERMAN
+
+				else = {
+					set_cosmetic_tag = LAP_URUGUAY
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_uruguay = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_uruguay = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_argentine_la_plata = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_argentine_la_plata = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_argentine_la_plata = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_argentine_la_plata"
+			set_country_flag = can_form_LAP_UNITED
+			set_country_flag = can_form_LAP_ARGENTINA
+
+			set_cosmetic_tag = LAP_ARGLAP
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_argentine_la_plata = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_argentine_la_plata = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_argentine_andes = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_argentine_andes = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_argentine_andes = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_argentine_andes"
+			set_country_flag = can_form_LAP_ARGENTINA
+
+			set_cosmetic_tag = LAP_ARGAND
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_argentine_andes = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_argentine_andes = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_argentine_patagonia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_argentine_patagonia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_argentine_patagonia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_argentine_patagonia"
+			set_country_flag = can_form_LAP_ARGENTINA
+			set_country_flag = can_form_LAP_PATAGONIA
+
+			if = {
+				limit = { original_tag = ZYY }
+
+				set_cosmetic_tag = LAP_ARGPAT_BRITISH
+			}
+			else_if = {
+				limit = { original_tag = YSS }
+
+				set_cosmetic_tag = LAP_ARGPAT_WELSH
+
+				else = {
+					set_cosmetic_tag = LAP_ARGPAT
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_argentine_patagonia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_argentine_patagonia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_argentine_patagonia = yes
+				}
+				else = {
+					required_states_to_form_argentine_patagonia = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_north_chile = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_north_chile = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_north_chile = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_north_chile"
+			set_country_flag = can_form_LAP_CHILE
+
+			set_cosmetic_tag = LAP_NCHILE
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_north_chile = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_north_chile_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_north_chile = yes
+				}
+				else = {
+					required_states_to_form_north_chile = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_south_chile = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_south_chile = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_south_chile = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_south_chile"
+			set_country_flag = can_form_LAP_CHILE
+
+			set_cosmetic_tag = LAP_SCHILE
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_south_chile = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_south_chile_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_south_chile = yes
+				}
+				else = {
+					required_states_to_form_south_chile = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_la_plata = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_la_plata = yes
+		}
+		visible = {
+			has_cosmetics_to_form_la_plata = yes
+		}
+		available = {
+			has_states_to_form_la_plata = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_la_plata"
+			clr_country_flag = can_form_LAP_UNITED
+			clr_country_flag = can_form_BRA_UNITED
+			clr_country_flag = can_form_LAP_ARGENTINA
+
+			set_country_flag = can_form_SOA_UNITED
+
+			set_cosmetic_tag = LAP_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_la_plata = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_la_plata_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_la_plata = yes
+				}
+				else = {
+					required_states_to_form_la_plata = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_argentina = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_argentina = yes
+		}
+		visible = {
+			has_cosmetics_to_form_argentina = yes
+		}
+		available = {
+			has_states_to_form_argentina = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_argentina"
+			clr_country_flag = can_form_LAP_ARGENTINA
+			clr_country_flag = can_form_LAP_UNITED
+			clr_country_flag = can_form_LAP_PATAGONIA
+
+			set_country_flag = can_form_SOA_UNITED
+
+			if = {
+				limit = { original_tag = ZYY }
+
+				set_cosmetic_tag = LAP_ARGENTINA_BRITISH
+			}
+			else_if = {
+				limit = { has_country_leader_ideology = marxism }
+
+				set_cosmetic_tag = LAP_ARGENTINA_MARXISM
+
+				else = {
+					set_cosmetic_tag = LAP_ARGENTINA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_argentina = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_argentina_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_argentina = yes
+				}
+				else = {
+					required_states_to_form_argentina = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_chile = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_chile = yes
+		}
+		visible = {
+			has_cosmetics_to_form_chile = yes
+		}
+		available = {
+			has_states_to_form_chile = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_chile"
+			clr_country_flag = can_form_LAP_CHILE
+			clr_country_flag = can_form_LAP_PATAGONIA
+
+			set_country_flag = can_form_SOA_UNITED
+
+			set_cosmetic_tag = LAP_CHILE
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_chile = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_chile_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_chile = yes
+				}
+				else = {
+					required_states_to_form_chile = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_patagonia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_patagonia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_patagonia = yes
+		}
+		available = {
+			has_states_to_form_patagonia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_patagonia"
+			clr_country_flag = can_form_LAP_PATAGONIA
+			clr_country_flag = can_form_LAP_ARGENTINA
+			clr_country_flag = can_form_LAP_CHILE
+
+			set_country_flag = can_form_SOA_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = YSO_manuel_manquilef ruling_only = yes } }
+
+				set_cosmetic_tag = LAP_PATAGONIA_MAPUCHE
+			}
+			else_if = {
+				limit = { original_tag = ZYY }
+
+				set_cosmetic_tag = LAP_PATAGONIA_BRITISH
+			}
+			else_if = {
+				limit = { original_tag = YSS }
+
+				set_cosmetic_tag = LAP_PATAGONIA_WELSH
+
+				else = {
+					set_cosmetic_tag = LAP_PATAGONIA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_patagonia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_patagonia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_patagonia = yes
+				}
+				else = {
+					required_states_to_form_patagonia = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
@@ -13864,7 +14495,15 @@ esicolor_formables = {
 
 			set_country_flag = can_form_EAR_UNITED
 
-			set_cosmetic_tag = SOA_UNITED
+			if = {
+				limit = { has_country_leader = { character = YSO_manuel_manquilef ruling_only = yes } }
+
+				set_cosmetic_tag = SOA_UNITED_AMERINDIA
+
+				else = {
+					set_cosmetic_tag = SOA_UNITED
+				}
+			}
 
 			hidden_effect = {
 				every_state = {
