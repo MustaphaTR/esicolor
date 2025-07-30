@@ -9704,7 +9704,131 @@ required_states_to_form_japan = {
 		state = 535
 		state = 536
 	}
+}
 
+#### Pakistan ####
+can_form_northwestern_provinces = {
+	OR = {
+		original_tag = AAZ
+		original_tag = YBF
+	}
+}
+
+can_form_punjab = {
+	OR = {
+		original_tag = AAO
+		original_tag = YBL
+	}
+}
+
+can_form_pakistan = {
+	OR = {
+		can_form_balochistan = yes
+		original_tag = FBF
+		can_form_northwestern_provinces = yes
+		original_tag = AAO
+		original_tag = AEO
+		original_tag = AAE
+	}
+}
+
+can_form_afghanistan_pakistan = {
+	OR = {
+		can_form_afghanistan = yes
+		can_form_pakistan = yes
+	}
+}
+
+is_northwestern_provinces = {
+	OR = {
+		state = 442
+		state = 987
+	}
+}
+
+is_punjab = {
+	OR = {
+		state = 440
+		state = 986
+	}
+}
+
+is_pakistan = {
+	OR = {
+		is_balochistan = yes
+		is_kashmir = yes
+		is_northwestern_provinces = yes
+		state = 440
+		state = 430
+		state = 443
+	}
+}
+
+is_afghanistan_pakistan = {
+	OR = {
+		is_afghanistan = yes
+		is_pakistan = yes
+	}
+}
+
+has_states_to_form_northwestern_provinces = {
+	custom_trigger_tooltip = {
+		tooltip = form_northwestern_provinces_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 442 } } } owns_state = 442 }
+		if = { limit = { NOT = { OOO = { owns_state = 987 } } } owns_state = 987 }
+	}
+}
+
+has_states_to_form_punjab = {
+	custom_trigger_tooltip = {
+		tooltip = form_punjab_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 440 } } } owns_state = 440 }
+		if = { limit = { NOT = { OOO = { owns_state = 986 } } } owns_state = 986 }
+	}
+}
+
+has_cosmetics_to_form_pakistan = {
+	has_country_flag = can_form_PAK_UNITED
+}
+has_states_to_form_pakistan = {
+	custom_trigger_tooltip = {
+		tooltip = form_pakistan_has_states_tt
+
+		has_states_to_form_balochistan = yes
+		has_states_to_form_northwestern_provinces = yes
+		if = { limit = { NOT = { OOO = { owns_state = 440 } } } owns_state = 440 }
+		if = { limit = { NOT = { OOO = { owns_state = 443 } } } owns_state = 443 }
+	}
+}
+
+has_cosmetics_to_form_afghanistan_pakistan = {
+	has_country_flag = can_form_APK_UNITED
+}
+has_states_to_form_afghanistan_pakistan = {
+	custom_trigger_tooltip = {
+		tooltip = form_afghanistan_pakistan_has_states_tt
+
+		has_states_to_form_afghanistan = yes
+		has_states_to_form_pakistan = yes
+	}
+}
+
+required_states_to_form_pakistan = {
+	OR = {
+		required_states_to_form_balochistan = yes
+		is_northwestern_provinces = yes
+		state = 440
+		state = 443
+	}
+}
+
+required_states_to_form_afghanistan_pakistan = {
+	OR = {
+		is_afghanistan = yes
+		required_states_to_form_pakistan = yes
+	}
 }
 
 #### Arabia ####
@@ -10230,6 +10354,7 @@ can_form_balochistan = {
 	OR = {
 		original_tag = AIO
 		original_tag = AAA
+		original_tag = AAS
 		original_tag = YBB
 		original_tag = NIZ
 	}
@@ -10313,6 +10438,7 @@ is_balochistan = {
 	OR = {
 		state = 410
 		state = 444
+		state = 445
 		state = 988
 		state = 1012
 	}
@@ -10414,6 +10540,7 @@ has_states_to_form_balochistan = {
 		tooltip = form_balochistan_has_states_tt
 
 		if = { limit = { NOT = { OOO = { owns_state = 444 } } } owns_state = 444 }
+		if = { limit = { NOT = { OOO = { owns_state = 445 } } } owns_state = 445 }
 		if = { limit = { NOT = { OOO = { owns_state = 988 } } } owns_state = 988 }
 		if = { limit = { NOT = { OOO = { owns_state = 1012 } } } owns_state = 1012 }
 	}
@@ -10443,6 +10570,7 @@ required_states_to_form_south_iran = {
 required_states_to_form_balochistan = {
 	OR = {
 		state = 444
+		state = 445
 		state = 988
 		state = 1012
 	}

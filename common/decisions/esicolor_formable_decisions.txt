@@ -12274,6 +12274,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_afghanistan"
 			set_country_flag = can_form_PER_UNITED
+			set_country_flag = can_form_APK_UNITED
 
 			set_cosmetic_tag = PER_AFGHANISTAN
 
@@ -12359,6 +12360,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_balochistan"
 			set_country_flag = can_form_PER_UNITED
+			set_country_flag = can_form_PAK_UNITED
 
 			if = {
 				limit = { original_tag = NIZ }
@@ -12422,6 +12424,7 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_persia"
 			clr_country_flag = can_form_PER_UNITED
 			clr_country_flag = can_form_MSP_UNITED
+			clr_country_flag = can_form_PAK_UNITED
 
 			set_country_flag = can_form_MEA_UNITED
 
@@ -15013,6 +15016,204 @@ esicolor_formables = {
 		}
 
 		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_northwestern_provinces = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_northwestern_provinces = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_northwestern_provinces = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_northwestern_provinces"
+			set_country_flag = can_form_PAK_UNITED
+
+			set_cosmetic_tag = PAK_NORTHWEST
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_northwestern_provinces = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_northwestern_provinces = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_punjab = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_punjab = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_punjab = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_punjab"
+			set_country_flag = can_form_PAK_UNITED
+
+			set_cosmetic_tag = PAK_PUNJAB
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_punjab = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_punjab = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_pakistan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_pakistan = yes
+		}
+		visible = {
+			has_cosmetics_to_form_pakistan = yes
+		}
+		available = {
+			has_states_to_form_pakistan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_pakistan"
+			clr_country_flag = can_form_PAK_UNITED
+			clr_country_flag = can_form_PER_UNITED
+
+			set_country_flag = can_form_APK_UNITED
+
+			set_cosmetic_tag = PAK_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_pakistan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_pakistan_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_pakistan = yes
+				}
+				else = {
+					required_states_to_form_pakistan = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_afghanistan_pakistan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_afghanistan_pakistan = yes
+		}
+		visible = {
+			has_cosmetics_to_form_afghanistan_pakistan = yes
+		}
+		available = {
+			has_states_to_form_afghanistan_pakistan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_afghanistan_pakistan"
+			clr_country_flag = can_form_APK_UNITED
+			clr_country_flag = can_form_PER_UNITED
+
+			set_country_flag = can_form_ASI_UNITED
+
+			set_cosmetic_tag = APK_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_afghanistan_pakistan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_afghanistan_pakistan_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_afghanistan_pakistan = yes
+				}
+				else = {
+					required_states_to_form_afghanistan_pakistan = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
 
 		fire_only_once = yes
 
