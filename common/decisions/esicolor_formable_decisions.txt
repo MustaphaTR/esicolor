@@ -11554,6 +11554,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_sakhalin"
 			set_country_flag = can_form_SBR_EAST
+			set_country_flag = can_form_JAP_UNITED
 
 			if = {
 				limit = { original_tag = LSS }
@@ -14968,11 +14969,20 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_japan"
 			clr_country_flag = can_form_JAP_UNITED
-			clr_country_flag = can_form_JAP_UNITED
+			clr_country_flag = can_form_PLY_UNITED
+			clr_country_flag = can_form_SBR_EAST
 
 			set_country_flag = can_form_ASI_UNITED
 
-			set_cosmetic_tag = JAP_UNITED
+			if = {
+				limit = { original_tag = LSS }
+
+				set_cosmetic_tag = JAP_UNITED_RUS
+
+				else = {
+					set_cosmetic_tag = JAP_UNITED
+				}
+			}
 
 			hidden_effect = {
 				every_state = {
