@@ -1348,6 +1348,7 @@ esicolor_formables = {
 			clr_country_flag = can_form_FUG_ESTFIN
 
 			set_country_flag = can_form_EUR_UNITED
+			set_country_flag = can_form_SOV_UNITED
 
 			if = {
 				limit = { has_country_leader = { character = IBB_karl_gero ruling_only = yes } }
@@ -2574,7 +2575,7 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_turkestan"
 			clr_country_flag = can_form_TKS_UNITED
 
-			set_country_flag = can_form_ASI_UNITED
+			set_country_flag = can_form_SOV_UNITED
 
 			set_cosmetic_tag = TKS_UNITED
 
@@ -6354,7 +6355,7 @@ esicolor_formables = {
 			clr_country_flag = can_form_CAU_UNITED
 			clr_country_flag = can_form_SRS_UNITED
 
-			set_country_flag = can_form_EUR_UNITED
+			set_country_flag = can_form_SOV_UNITED
 			set_country_flag = can_form_MEA_UNITED
 
 			set_cosmetic_tag = CAU_UNITED
@@ -7640,6 +7641,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_belarus"
 			set_country_flag = can_form_EUR_UNITED
+			set_country_flag = can_form_SOV_UNITED
 
 			set_cosmetic_tag = PLC_BELARUS
 
@@ -8439,7 +8441,7 @@ esicolor_formables = {
 			clr_country_flag = can_form_CAU_UNITED
 			clr_country_flag = can_form_UKR_UNITED
 
-			set_country_flag = can_form_EUR_UNITED
+			set_country_flag = can_form_RUS_WEST
 
 			if = {
 				limit = { has_country_leader = { character = ZIF_iosif_stalin ruling_only = yes } }
@@ -9936,6 +9938,7 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_ukraine"
 			clr_country_flag = can_form_UKR_UNITED
 
+			set_country_flag = can_form_SOV_UNITED
 			set_country_flag = can_form_EUR_UNITED
 
 			set_cosmetic_tag = UKR_UNITED
@@ -12216,6 +12219,7 @@ esicolor_formables = {
 			clr_country_flag = can_form_PER_IRAN
 			clr_country_flag = can_form_MSP_KURD
 			clr_country_flag = can_form_CAU_TRANS
+			clr_country_flag = can_form_SOV_UNITED
 
 			set_country_flag = can_form_PER_UNITED
 
@@ -12310,6 +12314,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_tajikistan"
 			set_country_flag = can_form_PER_UNITED
+			set_country_flag = can_form_SOV_UNITED
 
 			set_cosmetic_tag = PER_TAJIKISTAN
 
@@ -14495,8 +14500,7 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_privolzhsk"
 			clr_country_flag = can_form_PRV_UNITED
 
-			set_country_flag = can_form_EUR_UNITED
-			set_country_flag = can_form_ASI_UNITED
+			set_country_flag = can_form_RUS_WEST
 
 			set_cosmetic_tag = PRV_UNITED
 
@@ -14626,15 +14630,7 @@ esicolor_formables = {
 			clr_country_flag = can_form_FUG_UNITED
 			clr_country_flag = can_form_NDC_UNITED
 
-			set_country_flag = can_form_EUR_UNITED
-			if = {
-				limit = {
-					can_form_komi = yes
-					original_tag = BZS
-				}
-
-				set_country_flag = can_form_ASI_UNITED
-			}
+			set_country_flag = can_form_RUS_WEST
 
 			set_cosmetic_tag = SVR_UNITED
 
@@ -14774,7 +14770,7 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_muscovy"
 			clr_country_flag = can_form_MSC_UNITED
 
-			set_country_flag = can_form_EUR_UNITED
+			set_country_flag = can_form_RUS_WEST
 
 			set_cosmetic_tag = MSC_UNITED
 
@@ -14803,6 +14799,192 @@ esicolor_formables = {
 		}
 	}
 
+	form_west_russia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_west_russia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_west_russia = yes
+		}
+		available = {
+			has_states_to_form_west_russia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_west_russia"
+			clr_country_flag = can_form_RUS_WEST
+
+			set_country_flag = can_form_RUS_UNITED
+
+			set_cosmetic_tag = RUS_WEST
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_west_russia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_west_russia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_west_russia = yes
+				}
+				else = {
+					required_states_to_form_west_russia = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_russia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_russia = yes
+		}
+		visible = {
+			has_cosmetics_to_form_russia = yes
+		}
+		available = {
+			has_states_to_form_russia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_russia"
+			clr_country_flag = can_form_RUS_UNITED
+
+			set_country_flag = can_form_SOV_UNITED
+
+			set_cosmetic_tag = RUS_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_russia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_russia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_russia = yes
+				}
+				else = {
+					required_states_to_form_russia = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_150?150
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_ussr = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_ussr = yes
+		}
+		visible = {
+			has_cosmetics_to_form_ussr = yes
+		}
+		available = {
+			has_states_to_form_ussr = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_ussr"
+			clr_country_flag = can_form_SOV_UNITED
+			clr_country_flag = can_form_EUR_UNITED
+			clr_country_flag = can_form_ASI_UNITED
+			clr_country_flag = can_form_PER_UNITED
+			clr_country_flag = can_form_MEA_UNITED
+
+			set_country_flag = can_form_EAR_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = IYS_lev_trotsky ruling_only = yes } }
+
+				set_cosmetic_tag = SOV_UNITED_LEFTCOM
+			}
+			else_if = {
+				limit = { has_country_leader = { character = AOE_metropolitan_meletius ruling_only = yes } }
+
+				set_cosmetic_tag = SOV_UNITED_ROME
+				AOE_metropolitan_meletius = { set_character_name = SOV_patriarch_meletius }
+
+				else = {
+					set_cosmetic_tag = SOV_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_ussr = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_ussr_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_ussr = yes
+				}
+				else = {
+					required_states_to_form_ussr = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_200?200
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_europe = {
 		icon = generic_form_nation
 		allowed = {
@@ -14817,6 +14999,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_europe"
 			clr_country_flag = can_form_EUR_UNITED
+			clr_country_flag = can_form_SOV_UNITED
 			clr_country_flag = can_form_MEA_UNITED
 
 			set_country_flag = can_form_EAR_UNITED
@@ -14833,7 +15016,7 @@ esicolor_formables = {
 
 			hidden_effect = {
 				every_state = {
-					limit = { is_on_continent = europe }
+					limit = { is_europe = yes }
 
 					formable_decision_effect = yes
 				}
@@ -14843,7 +15026,14 @@ esicolor_formables = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_on_continent = europe
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_europe = yes
+				}
+				else = {
+					required_states_to_form_europe = yes
+				}
 			}
 		}
 
@@ -14878,7 +15068,7 @@ esicolor_formables = {
 
 			hidden_effect = {
 				every_state = {
-					limit = { is_on_continent = north_america }
+					limit = { is_north_america = yes }
 
 					formable_decision_effect = yes
 				}
@@ -14888,7 +15078,7 @@ esicolor_formables = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_on_continent = north_america
+				is_north_america = yes
 			}
 		}
 
@@ -14933,7 +15123,7 @@ esicolor_formables = {
 
 			hidden_effect = {
 				every_state = {
-					limit = { is_on_continent = south_america }
+					limit = { is_south_america = yes }
 
 					formable_decision_effect = yes
 				}
@@ -14943,7 +15133,7 @@ esicolor_formables = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_on_continent = south_america
+				is_south_america = yes
 			}
 		}
 
@@ -14979,7 +15169,7 @@ esicolor_formables = {
 
 			hidden_effect = {
 				every_state = {
-					limit = { is_on_continent = oceania }
+					limit = { is_oceania = yes }
 
 					formable_decision_effect = yes
 				}
@@ -14989,7 +15179,7 @@ esicolor_formables = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_on_continent = australia
+				is_oceania = yes
 			}
 		}
 
@@ -15024,7 +15214,7 @@ esicolor_formables = {
 
 			hidden_effect = {
 				every_state = {
-					limit = { is_on_continent = africa }
+					limit = { is_africa = yes }
 
 					formable_decision_effect = yes
 				}
@@ -15034,7 +15224,7 @@ esicolor_formables = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_on_continent = africa
+				is_africa = yes
 			}
 		}
 
@@ -15061,6 +15251,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_asia"
 			clr_country_flag = can_form_ASI_UNITED
+			clr_country_flag = can_form_SOV_UNITED
 			clr_country_flag = can_form_SOA_UNITED
 			clr_country_flag = can_form_OCE_UNITED
 
@@ -15070,7 +15261,7 @@ esicolor_formables = {
 
 			hidden_effect = {
 				every_state = {
-					limit = { is_on_continent = asia }
+					limit = { is_asia = yes }
 
 					formable_decision_effect = yes
 				}
@@ -15080,7 +15271,7 @@ esicolor_formables = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_on_continent = asia
+				is_asia = yes
 			}
 		}
 
@@ -15107,6 +15298,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_middle_east"
 			clr_country_flag = can_form_MEA_UNITED
+			clr_country_flag = can_form_SOV_UNITED
 			clr_country_flag = can_form_EUR_UNITED
 			clr_country_flag = can_form_AFR_UNITED
 
@@ -15116,7 +15308,7 @@ esicolor_formables = {
 
 			hidden_effect = {
 				every_state = {
-					limit = { is_on_continent = middle_east }
+					limit = { is_middle_east = yes }
 
 					formable_decision_effect = yes
 				}
@@ -15126,7 +15318,14 @@ esicolor_formables = {
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_on_continent = middle_east
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_middle_east = yes
+				}
+				else = {
+					required_states_to_form_middle_east = yes
+				}
 			}
 		}
 

@@ -6786,6 +6786,14 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_SOV_UNITED
 	text = {
+		trigger = { has_country_leader = { character = IYS_lev_trotsky ruling_only = yes } }
+		localization_key = SOV_UNITED_LEFTCOM_communism_DEF
+	}
+	text = {
+		trigger = { has_country_leader = { character = AOE_metropolitan_meletius ruling_only = yes } }
+		localization_key = SOV_UNITED_ROME_neutrality_DEF
+	}
+	text = {
 		trigger = { has_government = neutrality }
 		localization_key = SOV_UNITED_neutrality_DEF
 	}

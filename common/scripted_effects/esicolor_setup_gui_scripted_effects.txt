@@ -1193,6 +1193,9 @@ setup_gui_start_formables = {
 		set_variable = { global.formables_cost_25 = 0 }
 		set_variable = { global.formables_cost_50 = 0 }
 		set_variable = { global.formables_cost_100 = 0 }
+		set_variable = { global.formables_cost_150 = 0 }
+		set_variable = { global.formables_cost_200 = 0 }
+		set_variable = { global.formables_cost_300 = 0 }
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_formables = 2 } }
@@ -1207,6 +1210,9 @@ setup_gui_start_formables = {
 		set_variable = { global.formables_cost_25 = 50 }
 		set_variable = { global.formables_cost_50 = 100 }
 		set_variable = { global.formables_cost_100 = 200 }
+		set_variable = { global.formables_cost_150 = 300 }
+		set_variable = { global.formables_cost_200 = 400 }
+		set_variable = { global.formables_cost_300 = 600 }
 	}
 }
 
