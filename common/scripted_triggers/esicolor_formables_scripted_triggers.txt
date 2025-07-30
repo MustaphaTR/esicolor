@@ -9608,6 +9608,105 @@ required_states_to_form_china = {
 	}
 }
 
+#### Korea ####
+can_form_korea = {
+	OR = {
+		original_tag = SZS
+		original_tag = SZF
+	}
+}
+
+is_korea = {
+	OR = {
+		state = 525
+		state = 527
+	}
+}
+
+has_states_to_form_korea = {
+	custom_trigger_tooltip = {
+		tooltip = form_korea_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 525 } } } owns_state = 525 }
+		if = { limit = { NOT = { OOO = { owns_state = 527 } } } owns_state = 527 }
+	}
+}
+
+#### Japan ####
+can_form_japan = {
+	OR = {
+		can_form_sakhalin = yes
+		original_tag = ZBZ
+		original_tag = SZL
+		original_tag = SZB
+		original_tag = SZY
+		original_tag = SEO
+		original_tag = SEI
+		original_tag = SEZ
+		original_tag = SEE
+		original_tag = SEA
+		original_tag = SES
+		original_tag = SEL
+		original_tag = LAS
+		original_tag = LAB
+	}
+}
+
+is_japan = {
+	OR = {
+		is_sakhalin = yes
+		state = 282
+		state = 526
+		state = 528
+		state = 529
+		state = 530
+		state = 531
+		state = 532
+		state = 533
+		state = 534
+		state = 535
+		state = 536
+		state = 645
+		state = 648
+	}
+}
+
+has_cosmetics_to_form_japan = {
+	has_country_flag = can_form_JAP_UNITED
+}
+has_states_to_form_japan = {
+	custom_trigger_tooltip = {
+		tooltip = form_japan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 282 } } } owns_state = 282 }
+		if = { limit = { NOT = { OOO = { owns_state = 528 } } } owns_state = 528 }
+		if = { limit = { NOT = { OOO = { owns_state = 529 } } } owns_state = 529 }
+		if = { limit = { NOT = { OOO = { owns_state = 530 } } } owns_state = 530 }
+		if = { limit = { NOT = { OOO = { owns_state = 531 } } } owns_state = 531 }
+		if = { limit = { NOT = { OOO = { owns_state = 532 } } } owns_state = 532 }
+		if = { limit = { NOT = { OOO = { owns_state = 533 } } } owns_state = 533 }
+		if = { limit = { NOT = { OOO = { owns_state = 534 } } } owns_state = 534 }
+		if = { limit = { NOT = { OOO = { owns_state = 535 } } } owns_state = 535 }
+		if = { limit = { NOT = { OOO = { owns_state = 536 } } } owns_state = 536 }
+	}
+}
+
+required_states_to_form_japan = {
+	OR = {
+		state = 282
+		state = 528
+		state = 529
+		state = 530
+		state = 531
+		state = 532
+		state = 533
+		state = 534
+		state = 535
+		state = 536
+	}
+
+}
+
 #### Arabia ####
 can_form_saudi_arabia = {
 	OR = {
