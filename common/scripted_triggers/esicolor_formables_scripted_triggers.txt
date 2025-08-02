@@ -9831,6 +9831,345 @@ required_states_to_form_afghanistan_pakistan = {
 	}
 }
 
+#### India ####
+can_form_rajputana = {
+	OR = {
+		original_tag = AEE
+		original_tag = YBY
+	}
+}
+
+can_form_central_india = {
+	OR = {
+		original_tag = AEF
+		original_tag = YYI
+	}
+}
+
+can_form_central_provinces = {
+	OR = {
+		original_tag = AEL
+		original_tag = YBA
+	}
+}
+
+can_form_madras = {
+	OR = {
+		original_tag = EZO
+		original_tag = AZE
+		original_tag = AZA
+		original_tag = YBZ
+	}
+}
+
+can_form_bombay = {
+	OR = {
+		original_tag = EZI
+		original_tag = AZB
+		original_tag = AZY
+		original_tag = AAE
+		original_tag = YBE
+	}
+}
+
+can_form_bengal = {
+	OR = {
+		original_tag = AEO
+		original_tag = AEI
+	}
+}
+
+can_form_assam = {
+	OR = {
+		original_tag = AEZ
+		original_tag = AEA
+		original_tag = YYO
+	}
+}
+
+can_form_bihar_and_orissa = {
+	OR = {
+		original_tag = AZL
+		original_tag = AES
+	}
+}
+
+can_form_india = {
+	OR = {
+		original_tag = AAI
+		original_tag = YBL
+		can_form_rajputana = yes
+		can_form_central_india = yes
+		can_form_central_provinces = yes
+		can_form_madras = yes
+		can_form_bombay = yes
+		can_form_bengal = yes
+		can_form_assam = yes
+		can_form_bihar_and_orissa = yes
+		original_tag = AZS
+		original_tag = AZF
+		original_tag = AEB
+		original_tag = AEY
+		original_tag = FEE
+		original_tag = YBS
+	}
+}
+
+can_form_hindustan = {
+	OR = {
+		can_form_pakistan = yes
+		can_form_india = yes
+		original_tag = ZBI
+		original_tag = AZZ
+		original_tag = FIO
+	}
+}
+
+is_rajputana = {
+	OR = {
+		state = 433
+		state = 989
+	}
+}
+
+is_central_india = {
+	OR = {
+		state = 437
+		state = 991
+	}
+}
+
+is_central_provinces = {
+	OR = {
+		state = 436
+		state = 984
+	}
+}
+
+is_madras = {
+	OR = {
+		state = 320
+		state = 423
+		state = 424
+		state = 982
+	}
+}
+
+is_bombay = {
+	OR = {
+		state = 321
+		state = 428
+		state = 429
+		state = 443
+		state = 983
+	}
+}
+
+is_bengal = {
+	OR = {
+		state = 430
+		state = 431
+	}
+}
+
+is_assam = {
+	OR = {
+		state = 432
+		state = 434
+		state = 990
+	}
+}
+
+is_bihar_and_orissa = {
+	OR = {
+		state = 426
+		state = 435
+	}
+}
+
+is_india = {
+	OR = {
+		is_kashmir = yes
+		state = 986
+		is_rajputana = yes
+		is_central_india = yes
+		is_central_provinces = yes
+		is_madras = yes
+		required_states_to_form_bombay = yes
+		is_bengal = yes
+		is_assam = yes
+		is_bihar_and_orissa = yes
+		state = 425
+		state = 427
+		state = 438
+		state = 439
+		state = 733
+		state = 985
+	}
+}
+
+is_hindustan = {
+	OR = {
+		is_pakistan = yes
+		is_india = yes
+		state = 281
+		state = 422
+		state = 710
+	}
+}
+
+has_states_to_form_rajputana = {
+	custom_trigger_tooltip = {
+		tooltip = form_rajputana_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 433 } } } owns_state = 433 }
+		if = { limit = { NOT = { OOO = { owns_state = 989 } } } owns_state = 989 }
+	}
+}
+
+has_states_to_form_central_india = {
+	custom_trigger_tooltip = {
+		tooltip = form_central_india_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 437 } } } owns_state = 437 }
+		if = { limit = { NOT = { OOO = { owns_state = 991 } } } owns_state = 991 }
+	}
+}
+
+has_states_to_form_central_provinces = {
+	custom_trigger_tooltip = {
+		tooltip = form_central_provinces_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 436 } } } owns_state = 436 }
+		if = { limit = { NOT = { OOO = { owns_state = 984 } } } owns_state = 984 }
+	}
+}
+
+has_states_to_form_madras = {
+	custom_trigger_tooltip = {
+		tooltip = form_madras_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 320 } } } owns_state = 320 }
+		if = { limit = { NOT = { OOO = { owns_state = 423 } } } owns_state = 423 }
+		if = { limit = { NOT = { OOO = { owns_state = 424 } } } owns_state = 424 }
+		if = { limit = { NOT = { OOO = { owns_state = 982 } } } owns_state = 982 }
+	}
+}
+
+has_states_to_form_bombay = {
+	custom_trigger_tooltip = {
+		tooltip = form_bombay_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 321 } } } owns_state = 321 }
+		if = { limit = { NOT = { OOO = { owns_state = 428 } } } owns_state = 428 }
+		if = { limit = { NOT = { OOO = { owns_state = 429 } } } owns_state = 429 }
+		if = { limit = { NOT = { OOO = { owns_state = 983 } } } owns_state = 983 }
+	}
+}
+
+has_states_to_form_bengal = {
+	custom_trigger_tooltip = {
+		tooltip = form_bengal_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 430 } } } owns_state = 430 }
+		if = { limit = { NOT = { OOO = { owns_state = 431 } } } owns_state = 431 }
+	}
+}
+
+has_states_to_form_assam = {
+	custom_trigger_tooltip = {
+		tooltip = form_assam_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 432 } } } owns_state = 432 }
+		if = { limit = { NOT = { OOO = { owns_state = 434 } } } owns_state = 434 }
+		if = { limit = { NOT = { OOO = { owns_state = 990 } } } owns_state = 990 }
+	}
+}
+
+has_states_to_form_bihar_and_orissa = {
+	custom_trigger_tooltip = {
+		tooltip = form_bihar_and_orissa_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 436 } } } owns_state = 426 }
+		if = { limit = { NOT = { OOO = { owns_state = 435 } } } owns_state = 435 }
+	}
+}
+
+has_cosmetics_to_form_india = {
+	has_country_flag = can_form_IND_UNITED
+}
+has_states_to_form_india = {
+	custom_trigger_tooltip = {
+		tooltip = form_india_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 986 } } } owns_state = 986 }
+		has_states_to_form_rajputana = yes
+		has_states_to_form_central_india = yes
+		has_states_to_form_central_provinces = yes
+		has_states_to_form_madras = yes
+		has_states_to_form_bombay = yes
+		if = { limit = { NOT = { OOO = { owns_state = 431 } } } owns_state = 431 }
+		has_states_to_form_assam = yes
+		has_states_to_form_bihar_and_orissa = yes
+		if = { limit = { NOT = { OOO = { owns_state = 425 } } } owns_state = 425 }
+		if = { limit = { NOT = { OOO = { owns_state = 427 } } } owns_state = 427 }
+		if = { limit = { NOT = { OOO = { owns_state = 438 } } } owns_state = 438 }
+		if = { limit = { NOT = { OOO = { owns_state = 439 } } } owns_state = 439 }
+	}
+}
+
+has_cosmetics_to_form_hindustan = {
+	has_country_flag = can_form_RAJ_UNITED
+}
+has_states_to_form_hindustan = {
+	custom_trigger_tooltip = {
+		tooltip = form_hindustan_has_states_tt
+
+		has_states_to_form_kashmir = yes
+		has_states_to_form_pakistan = yes
+		has_states_to_form_india = yes
+		if = { limit = { NOT = { OOO = { owns_state = 430 } } } owns_state = 430 }
+		if = { limit = { NOT = { OOO = { owns_state = 985 } } } owns_state = 985 }
+	}
+}
+
+required_states_to_form_bombay = {
+	OR = {
+		state = 321
+		state = 428
+		state = 429
+		state = 983
+	}
+}
+
+required_states_to_form_india = {
+	OR = {
+		state = 986
+		is_rajputana = yes
+		is_central_india = yes
+		is_central_provinces = yes
+		is_madras = yes
+		required_states_to_form_bombay = yes
+		state = 431
+		is_assam = yes
+		is_bihar_and_orissa = yes
+		state = 425
+		state = 427
+		state = 438
+		state = 439
+	}
+}
+
+required_states_to_form_hindustan = {
+	OR = {
+		is_kashmir = yes
+		required_states_to_form_pakistan = yes
+		required_states_to_form_india = yes
+		state = 430
+		state = 985
+	}
+}
+
 #### Arabia ####
 can_form_saudi_arabia = {
 	OR = {

@@ -6932,6 +6932,313 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetIdeologyDef_IND_RAJPUTANA
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = IND_RAJPUTANA_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = IND_RAJPUTANA_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = IND_RAJPUTANA_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = IND_RAJPUTANA_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_IND_CENTRAL
+	text = {
+		trigger = { has_country_leader = { character = AEY_lord_linlithgow ruling_only = yes } }
+		localization_key = IND_CENTRAL_BRITISH_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = IND_CENTRAL_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = IND_CENTRAL_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = IND_CENTRAL_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = IND_CENTRAL_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_IND_CENTRALPROV
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = IND_CENTRALPROV_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = IND_CENTRALPROV_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = IND_CENTRALPROV_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = IND_CENTRALPROV_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_IND_MADRAS
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = IND_MADRAS_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = IND_MADRAS_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = IND_MADRAS_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = IND_MADRAS_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_IND_BOMBAY
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = IND_BOMBAY_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = IND_BOMBAY_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = IND_BOMBAY_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = IND_BOMBAY_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_IND_BENGAL
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = IND_BENGAL_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = IND_BENGAL_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = IND_BENGAL_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = IND_BENGAL_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_IND_ASSAM
+	text = {
+		trigger = {
+			has_government = neutrality
+			original_tag = YYO
+		}
+		localization_key = IND_ASSAM_MANIPUR_neutrality_DEF
+	}
+	text = {
+		trigger = {
+			has_government = democratic
+			original_tag = YYO
+		}
+		localization_key = IND_ASSAM_MANIPUR_democratic_DEF
+	}
+	text = {
+		trigger = {
+			has_government = fascism
+			original_tag = YYO
+		}
+		localization_key = IND_ASSAM_MANIPUR_fascism_DEF
+	}
+	text = {
+		trigger = {
+			has_government = communism
+			original_tag = YYO
+		}
+		localization_key = IND_ASSAM_MANIPUR_communism_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = IND_ASSAM_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = IND_ASSAM_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = IND_ASSAM_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = IND_ASSAM_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_IND_BIHAR
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = IND_BIHAR_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = IND_BIHAR_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = IND_BIHAR_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = IND_BIHAR_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_IND_UNITED
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = { character = AEY_lord_linlithgow ruling_only = yes }
+				has_country_leader = { character = AEY_freeman_freeman_thomas ruling_only = yes }
+			}
+		}
+		localization_key = IND_UNITED_BRITISH_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = IND_UNITED_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = IND_UNITED_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = IND_UNITED_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = IND_UNITED_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_RAJ_UNITED
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = { character = AZZ_james_fownes_somerville ruling_only = yes }
+				has_country_leader = { character = AEY_lord_linlithgow ruling_only = yes }
+				has_country_leader = { character = AEY_freeman_freeman_thomas ruling_only = yes }
+			}
+		}
+		localization_key = RAJ_UNITED_BRITISH_neutrality_DEF
+	}
+	text = {
+		trigger = {
+			has_government = neutrality
+			can_form_pakistan = yes
+		}
+		localization_key = RAJ_UNITED_PAKISTAN_neutrality_DEF
+	}
+	text = {
+		trigger = {
+			has_government = democratic
+			can_form_pakistan = yes
+		}
+		localization_key = RAJ_UNITED_PAKISTAN_democratic_DEF
+	}
+	text = {
+		trigger = {
+			has_government = fascism
+			can_form_pakistan = yes
+		}
+		localization_key = RAJ_UNITED_PAKISTAN_fascism_DEF
+	}
+	text = {
+		trigger = {
+			has_government = communism
+			can_form_pakistan = yes
+		}
+		localization_key = RAJ_UNITED_PAKISTAN_communism_DEF
+	}
+	text = {
+		trigger = {
+			has_government = neutrality
+			can_form_india = no
+		}
+		localization_key = RAJ_UNITED_GENERIC_neutrality_DEF
+	}
+	text = {
+		trigger = {
+			has_government = democratic
+			can_form_india = no
+		}
+		localization_key = RAJ_UNITED_GENERIC_democratic_DEF
+	}
+	text = {
+		trigger = {
+			has_government = fascism
+			can_form_india = no
+		}
+		localization_key = RAJ_UNITED_GENERIC_fascism_DEF
+	}
+	text = {
+		trigger = {
+			has_government = communism
+			can_form_india = no
+		}
+		localization_key = RAJ_UNITED_GENERIC_communism_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = RAJ_UNITED_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = RAJ_UNITED_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = RAJ_UNITED_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = RAJ_UNITED_communism_DEF
+	}
+}
+
+defined_text = {
 	name = GetIdeologyDef_SOV_UNITED
 	text = {
 		trigger = { has_country_leader = { character = IYS_lev_trotsky ruling_only = yes } }

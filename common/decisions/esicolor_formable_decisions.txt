@@ -12651,6 +12651,8 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_kashmir"
 			set_country_flag = can_form_HIM_UNITED
+			set_country_flag = can_form_PAK_UNITED
+			set_country_flag = can_form_IND_UNITED
 
 			set_cosmetic_tag = HIM_KASHMIR
 
@@ -12693,6 +12695,8 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_himalayas"
 			clr_country_flag = can_form_HIM_UNITED
+			clr_country_flag = can_form_PAK_UNITED
+			clr_country_flag = can_form_IND_UNITED
 
 			set_country_flag = can_form_ASI_UNITED
 
@@ -15080,6 +15084,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_punjab"
 			set_country_flag = can_form_PAK_UNITED
+			set_country_flag = can_form_IND_UNITED
 
 			set_cosmetic_tag = PAK_PUNJAB
 
@@ -15123,6 +15128,7 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_pakistan"
 			clr_country_flag = can_form_PAK_UNITED
 			clr_country_flag = can_form_PER_UNITED
+			clr_country_flag = can_form_HIM_UNITED
 
 			set_country_flag = can_form_APK_UNITED
 
@@ -15214,6 +15220,517 @@ esicolor_formables = {
 		}
 
 		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_rajputana = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_rajputana = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_rajputana = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_rajputana"
+			set_country_flag = can_form_IND_UNITED
+
+			set_cosmetic_tag = IND_RAJPUTANA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_rajputana = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_rajputana = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_central_india = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_central_india = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_central_india = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_central_india"
+			set_country_flag = can_form_IND_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = AEY_lord_linlithgow ruling_only = yes } }
+
+				set_cosmetic_tag = IND_CENTRAL_BRITISH
+
+				else = {
+					set_cosmetic_tag = IND_CENTRAL
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_india = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_central_india = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_central_provinces = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_central_provinces = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_central_provinces = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_central_provinces"
+			set_country_flag = can_form_IND_UNITED
+
+			set_cosmetic_tag = IND_CENTRALPROV
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_provinces = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_central_provinces = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_madras = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_madras = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_madras = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_madras"
+			set_country_flag = can_form_IND_UNITED
+
+			set_cosmetic_tag = IND_MADRAS
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_madras = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_madras = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_bombay = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_bombay = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_bombay = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_bombay"
+			clr_country_flag = can_form_PAK_UNITED
+
+			set_country_flag = can_form_IND_UNITED
+
+			set_cosmetic_tag = IND_BOMBAY
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_bombay = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_bombay_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_bombay = yes
+				}
+				else = {
+					required_states_to_form_bombay = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_bengal = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_bengal = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_bengal = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_bengal"
+			clr_country_flag = can_form_PAK_UNITED
+
+			set_country_flag = can_form_IND_UNITED
+
+			set_cosmetic_tag = IND_BENGAL
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_bengal = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_bengal = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_assam = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_assam = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_assam = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_assam"
+			set_country_flag = can_form_IND_UNITED
+
+			set_cosmetic_tag = IND_ASSAM
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_assam = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_assam = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_bihar_and_orissa = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_bihar_and_orissa = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_bihar_and_orissa = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_bihar_and_orissa"
+			set_country_flag = can_form_IND_UNITED
+
+			set_cosmetic_tag = IND_BIHAR
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_bihar_and_orissa = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_bihar_and_orissa = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_india = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_india = yes
+		}
+		visible = {
+			has_cosmetics_to_form_india = yes
+		}
+		available = {
+			has_states_to_form_india = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_india"
+			clr_country_flag = can_form_IND_UNITED
+			clr_country_flag = can_form_HIM_UNITED
+
+			set_country_flag = can_form_RAJ_UNITED
+
+			if = {
+				limit = {
+					OR = {
+						has_country_leader = { character = AEY_lord_linlithgow ruling_only = yes }
+						has_country_leader = { character = AEY_freeman_freeman_thomas ruling_only = yes }
+					}
+				}
+
+				set_cosmetic_tag = IND_UNITED_BRITISH
+
+				else = {
+					set_cosmetic_tag = IND_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_india = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_india_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_india = yes
+				}
+				else = {
+					required_states_to_form_india = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_hindustan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_hindustan = yes
+		}
+		visible = {
+			has_cosmetics_to_form_hindustan = yes
+		}
+		available = {
+			has_states_to_form_hindustan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_hindustan"
+			clr_country_flag = can_form_RAJ_UNITED
+			clr_country_flag = can_form_APK_UNITED
+
+			set_country_flag = can_form_ASI_UNITED
+
+			if = {
+				limit = {
+					OR = {
+						has_country_leader = { character = AZZ_james_fownes_somerville ruling_only = yes }
+						has_country_leader = { character = AEY_lord_linlithgow ruling_only = yes }
+						has_country_leader = { character = AEY_freeman_freeman_thomas ruling_only = yes }
+					}
+				}
+
+				set_cosmetic_tag = RAJ_UNITED_BRITISH
+			}
+			else_if = {
+				limit = { can_form_pakistan = yes }
+
+				set_cosmetic_tag = RAJ_UNITED_PAKISTAN
+			}
+			else_if = {
+				limit = { can_form_india = no }
+
+				set_cosmetic_tag = RAJ_UNITED_GENERIC
+
+				else = {
+					set_cosmetic_tag = RAJ_UNITED
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_hindustan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_hindustan_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_hindustan = yes
+				}
+				else = {
+					required_states_to_form_hindustan = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_150?150
 
 		fire_only_once = yes
 
