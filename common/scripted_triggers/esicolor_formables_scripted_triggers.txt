@@ -5754,6 +5754,90 @@ required_states_to_form_nile = {
 	}
 }
 
+#### Madagascar ####
+can_form_madagascar = {
+	OR = {
+		original_tag = SAE
+		original_tag = FOL
+		original_tag = FOF
+		original_tag = FOB
+		original_tag = FOY
+		original_tag = FIE
+	}
+}
+
+is_egypt = {
+	OR = {
+		state = 543
+		state = 706
+		state = 707
+		state = 708
+		state = 709
+		state = 713
+	}
+}
+
+has_states_to_form_madagascar = {
+	custom_trigger_tooltip = {
+		tooltip = form_madagascar_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 543 } } } owns_state = 543 }
+		if = { limit = { NOT = { OOO = { owns_state = 706 } } } owns_state = 706 }
+		if = { limit = { NOT = { OOO = { owns_state = 708 } } } owns_state = 708 }
+	}
+}
+
+required_states_to_form_madagascar = {
+	OR = {
+		state = 543
+		state = 706
+		state = 708
+	}
+}
+
+#### South Atlantic ####
+can_form_south_atlantic = {
+	OR = {
+		original_tag = ZYY
+		original_tag = FOZ
+		original_tag = FOE
+		original_tag = FOA
+		original_tag = FOS
+		original_tag = FZO
+	}
+}
+
+is_south_atlantic = {
+	OR = {
+		state = 299
+		state = 702
+		state = 703
+		state = 704
+		state = 705
+		state = 720
+	}
+}
+
+has_states_to_form_south_atlantic = {
+	custom_trigger_tooltip = {
+		tooltip = form_south_atlantic_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 299 } } } owns_state = 299 }
+		if = { limit = { NOT = { OOO = { owns_state = 703 } } } owns_state = 703 }
+		if = { limit = { NOT = { OOO = { owns_state = 704 } } } owns_state = 704 }
+		if = { limit = { NOT = { OOO = { owns_state = 720 } } } owns_state = 720 }
+	}
+}
+
+required_states_to_form_south_atlantic = {
+	OR = {
+		state = 299
+		state = 703
+		state = 704
+		state = 720
+	}
+}
+
 #### Canada ####
 can_form_british_columbia = {
 	OR = {

@@ -15739,6 +15739,115 @@ esicolor_formables = {
 		}
 	}
 
+	form_madagascar = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_madagascar = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_madagascar = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_madagascar"
+			set_country_flag = can_form_AFR_UNITED
+
+			set_cosmetic_tag = MAD_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_madagascar = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_madagascar_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_madagascar = yes
+				}
+				else = {
+					required_states_to_form_madagascar = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_south_atlantic = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_south_atlantic = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_south_atlantic = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_south_atlantic"
+			set_country_flag = can_form_AFR_UNITED
+			set_country_flag = can_form_SOA_UNITED
+
+			set_cosmetic_tag = SAT_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_south_atlantic = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_south_atlantic_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_south_atlantic = yes
+				}
+				else = {
+					required_states_to_form_south_atlantic = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
 	form_ussr = {
 		icon = generic_form_nation
 		allowed = {
