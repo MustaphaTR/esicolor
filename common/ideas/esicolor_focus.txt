@@ -130,6 +130,23 @@ ideas = {
 			}
 		}
 
+		HOA_warfare_from_afar = {
+			picture = generic_research_bonus
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_artillery_combat_factor = 0.1
+				unit_artillery_brigade_design_cost_factor = -0.80
+				unit_artillery_design_cost_factor = -0.80
+			}
+		}
+
 		HOA_a_change_in_course_idea_neutrality = {
 			name = ENG_a_change_in_course
 			picture = eng_a_change_in_course

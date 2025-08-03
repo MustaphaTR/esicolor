@@ -853,20 +853,21 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
+			set_technology = { 
+				irregular_infantry = 1
+				popup = no
+			}
 			division_template = {
 				name = "Irregulars"
-				is_locked = yes
 				regiments = {
 					irregular_infantry = { x = 0 y = 0 }
-					irregular_infantry = { x = 0 y = 1 }
-					irregular_infantry = { x = 0 y = 2 }
 				}
 			}
 			capital_scope = {
 				create_unit = {
 					division = "name = \"Irregular Infantry\" division_template = \"Irregulars\" start_experience_factor = 0.05 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = ROOT
-					count = 2
+					count = 1
 				}
 			}
 		}
@@ -886,14 +887,6 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_units_to_division_template = {
-				template_name = "Irregulars" 
-				regiments = {
-					irregular_infantry = 1
-					irregular_infantry = 1
-					irregular_infantry = 1
-				}
-			}
 			add_ideas = HOA_improved_irregulars_idea
 		}
 	}
@@ -1147,79 +1140,31 @@ focus_tree = {
 		id = HOA_the_steel_lions
 		icon = GFX_focus_generic_army_tanks2
 		prerequisite = { focus = HOA_metal_beasts }
+		mutually_exclusive = { focus = HOA_warfare_from_afar focus = HOA_modern_infantry }
 
 		x = 0
 		y = 1
 		relative_position_id = HOA_metal_beasts
 		cost = 8
 		available = {
-			IF = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				has_tech = gwtank_chassis
-			}
-			IF = {
-				limit = {
-					NOT = {
-						has_dlc = "No Step Back"
-					}
-				}
-				has_tech = gwtank
-			}
 		}
 
 		search_filters = {}
 
 		completion_reward = {
-			division_template = {
-				name = "Steel Lions"
-				is_locked = no
-				regiments = {
-					light_armor = { x = 0 y = 0 }
-					light_armor = { x = 0 y = 1 }
-				}
+			add_doctrine_cost_reduction = {
+				name = HOA_the_steel_lions
+				cost_reduction = 0.5
+				uses = 1
+				category = cat_mobile_warfare
 			}
-
-			hidden_effect = {
-				IF = {
-					limit = {
-						has_dlc = "No Step Back"
-					}
-					create_equipment_variant = {
-						name = "Roaring Thunder"
-						type = light_tank_chassis_0
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_heavy_machine_gun
-							turret_type_slot = tank_light_one_man_tank_turret
-							suspension_type_slot = tank_bogie_suspension
-							armor_type_slot = tank_riveted_armor
-							engine_type_slot = tank_gasoline_engine
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 1
-							tank_nsb_armor_upgrade = 1
-						}
-						icon = "GFX_gwtank_medium"
-					}
-				}
-			}
-
-			capital_scope = {
-				create_unit = {
-					division = "name = \"Steel Lions Brigade\" division_template = \"Steel Lions\" start_experience_factor = 0.05 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-					count = 1
-				}
-			}
-
 		}
 	}
 	focus = {
 		id = HOA_warfare_from_afar
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = HOA_the_roars_of_thunder }
+		mutually_exclusive = { focus = HOA_the_steel_lions focus = HOA_modern_infantry }
 
 		x = 0
 		y = 1
@@ -1231,21 +1176,21 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_units_to_division_template = {
-				template_name = "Irregulars" 
-				support = {
-					artillery = 0 
-				}
-				regiments = {
-					artillery_brigade = 2 
-				}
+			add_doctrine_cost_reduction = {
+				name = HOA_warfare_from_afar
+				cost_reduction = 0.5
+				uses = 1
+				category = cat_superior_firepower
+				category = cat_grand_battle_plan
 			}
+			#add_ideas = HOA_warfare_from_afar
 		}
 	}
 	focus = {
 		id = HOA_modern_infantry
 		icon = GFX_focus_ETH_peacekeeping_forces
 		prerequisite = { focus = HOA_develop_indigenous_models }
+		mutually_exclusive = { focus = HOA_the_steel_lions focus = HOA_warfare_from_afar }
 
 		x = 0
 		y = 1
@@ -1257,24 +1202,12 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			division_template = {
-				name = "Regular Infantry"
-				is_locked = no
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
-					infantry = { x = 1 y = 2 }
-				}
-			}
-			capital_scope = {
-				create_unit = {
-					division = "name = \"Regular Infantry Division\" division_template = \"Regular Infantry\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-					count = 2
-				}
+			add_doctrine_cost_reduction = {
+				name = HOA_modern_infantry
+				cost_reduction = 0.5
+				uses = 1
+				category = cat_grand_battle_plan
+				category = cat_mass_assault
 			}
 		}
 	}
@@ -2532,19 +2465,17 @@ focus_tree = {
 		completion_reward = {
 			division_template = {
 				name = "Bodyguards"
-				is_locked = yes
 				regiments = {
 					infantry = { x = 0 y = 0 }
 					infantry = { x = 0 y = 1 }
 					infantry = { x = 0 y = 2 }
-					infantry = { x = 0 y = 3 }
 				}
 			}
 			capital_scope = {
 				create_unit = {
 					division = "name = \"Bodyguards\" division_template = \"Bodyguards\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = ROOT
-					count = 2
+					count = 1
 				}
 			}
 		}
