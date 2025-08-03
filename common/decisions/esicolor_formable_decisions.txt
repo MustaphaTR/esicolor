@@ -5648,6 +5648,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_antilles"
 			clr_country_flag = can_form_ANT_UNITED
+			clr_country_flag = can_form_USA_UNITED
 
 			set_country_flag = can_form_NOA_UNITED
 			set_country_flag = can_form_SOA_UNITED
@@ -8504,6 +8505,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_hawaii"
 			set_country_flag = can_form_PLY_UNITED
+			set_country_flag = can_form_USA_WEST
 
 			set_cosmetic_tag = PLY_HAWAII
 
@@ -8800,6 +8802,7 @@ esicolor_formables = {
 			clr_country_flag = can_form_PLY_UNITED
 			clr_country_flag = can_form_CHI_EAST
 			clr_country_flag = can_form_JAP_UNITED
+			clr_country_flag = can_form_USA_WEST
 
 			if = {
 				limit = { can_form_rapa_nui = yes }
@@ -15840,6 +15843,766 @@ esicolor_formables = {
 		}
 
 		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_virginia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_virginia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_virginia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_virginia"
+			set_country_flag = can_form_USA_ATLANTIC
+			set_country_flag = can_form_USA_DIXIE
+
+			set_cosmetic_tag = USA_VIRGINIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_virginia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_virginia = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_carolina = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_carolina = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_carolina = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_carolina"
+			set_country_flag = can_form_USA_DIXIE
+
+			set_cosmetic_tag = USA_CAROLINA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_carolina = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_carolina = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_dakota = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_dakota = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_dakota = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_dakota"
+			set_country_flag = can_form_USA_MIDWEST
+
+			set_cosmetic_tag = USA_DAKOTA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_dakota = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_dakota = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_appalachia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_appalachia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_appalachia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_appalachia"
+			clr_country_flag = can_form_USA_DIXIE
+
+			set_country_flag = can_form_USA_CONFEDERACY
+			set_country_flag = can_form_USA_UNION
+
+			set_cosmetic_tag = USA_APPALACHIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_appalachia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_appalachia = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_great_lakes = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_great_lakes = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_great_lakes = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_great_lakes"
+			set_country_flag = can_form_USA_UNION
+
+			set_cosmetic_tag = USA_LAKES
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_great_lakes = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_great_lakes_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_great_lakes = yes
+				}
+				else = {
+					required_states_to_form_great_lakes = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_mid_atlantic = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_mid_atlantic = yes
+		}
+		visible = {
+			has_cosmetics_to_form_mid_atlantic = yes
+		}
+		available = {
+			has_states_to_form_mid_atlantic = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_mid_atlantic"
+			clr_country_flag = can_form_USA_ATLANTIC
+
+			set_country_flag = can_form_USA_UNION
+
+			set_cosmetic_tag = USA_ATLANTIC
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_mid_atlantic = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_mid_atlantic_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_mid_atlantic = yes
+				}
+				else = {
+					required_states_to_form_mid_atlantic = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_dixie = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_dixie = yes
+		}
+		visible = {
+			has_cosmetics_to_form_dixie = yes
+		}
+		available = {
+			has_states_to_form_dixie = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_dixie"
+			clr_country_flag = can_form_USA_DIXIE
+
+			set_country_flag = can_form_USA_CONFEDERACY
+
+			set_cosmetic_tag = USA_DIXIE
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_dixie = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_dixie_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_dixie = yes
+				}
+				else = {
+					required_states_to_form_dixie = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_texas = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_texas = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_texas = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_texas"
+			set_country_flag = can_form_USA_CONFEDERACY
+
+			set_cosmetic_tag = USA_TEXAS
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_texas = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_texas_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_texas = yes
+				}
+				else = {
+					required_states_to_form_texas = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_midwest = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_midwest = yes
+		}
+		visible = {
+			has_cosmetics_to_form_midwest = yes
+		}
+		available = {
+			has_states_to_form_midwest = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_midwest"
+			clr_country_flag = can_form_USA_MIDWEST
+
+			set_country_flag = can_form_USA_UNION
+
+			set_cosmetic_tag = USA_MIDWEST
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_midwest = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_midwest = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_rockies = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_rockies = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_rockies = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_rockies"
+			set_country_flag = can_form_USA_WEST
+
+			set_cosmetic_tag = USA_ROCKIES
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_rockies = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_rockies = yes
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_pacific = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_pacific = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_pacific = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_pacific"
+			set_country_flag = can_form_USA_WEST
+
+			set_cosmetic_tag = USA_PACIFIC
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_pacific = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_pacific_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_pacific = yes
+				}
+				else = {
+					required_states_to_form_pacific = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_50?50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_west_usa = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_west_usa = yes
+		}
+		visible = {
+			has_cosmetics_to_form_west_usa = yes
+		}
+		available = {
+			has_states_to_form_west_usa = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_west_usa"
+			clr_country_flag = can_form_USA_WEST
+			clr_country_flag = can_form_PLY_UNITED
+
+			set_country_flag = can_form_USA_UNITED
+
+			set_cosmetic_tag = USA_WEST
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_west_usa = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_west_usa_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_west_usa = yes
+				}
+				else = {
+					required_states_to_form_west_usa = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_csa = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_csa = yes
+		}
+		visible = {
+			has_cosmetics_to_form_csa = yes
+		}
+		available = {
+			has_states_to_form_csa = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_csa"
+			clr_country_flag = can_form_USA_CONFEDERACY
+			clr_country_flag = can_form_USA_UNION
+
+			set_country_flag = can_form_USA_UNITED
+
+			set_cosmetic_tag = USA_CONFEDERACY
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_csa = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_csa_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_csa = yes
+				}
+				else = {
+					required_states_to_form_csa = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_union = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_union = yes
+		}
+		visible = {
+			has_cosmetics_to_form_union = yes
+		}
+		available = {
+			has_states_to_form_union = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_union"
+			clr_country_flag = can_form_USA_UNION
+			clr_country_flag = can_form_USA_DIXIE
+
+			set_country_flag = can_form_USA_UNITED
+
+			set_cosmetic_tag = USA_UNION
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_union = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_union_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_union = yes
+				}
+				else = {
+					required_states_to_form_union = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	form_usa = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_usa = yes
+		}
+		visible = {
+			has_cosmetics_to_form_usa = yes
+		}
+		available = {
+			has_states_to_form_usa = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_usa"
+			clr_country_flag = can_form_USA_UNITED
+			clr_country_flag = can_form_ANT_UNITED
+
+			set_country_flag = can_form_NOA_UNITED
+
+			set_cosmetic_tag = USA_UNITED
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_usa = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_usa_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_usa = yes
+				}
+				else = {
+					required_states_to_form_usa = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_100?100
 
 		fire_only_once = yes
 

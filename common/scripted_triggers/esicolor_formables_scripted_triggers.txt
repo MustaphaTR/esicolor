@@ -5766,7 +5766,7 @@ can_form_madagascar = {
 	}
 }
 
-is_egypt = {
+is_madagascar = {
 	OR = {
 		state = 543
 		state = 706
@@ -6426,6 +6426,563 @@ has_states_to_form_mexico = {
 		has_states_to_form_northwest_mexico = yes
 		has_states_to_form_central_mexico = yes
 		has_states_to_form_south_mexico = yes
+	}
+}
+
+#### United States ####
+can_form_virginia = {
+	OR = {
+		original_tag = ELZ
+		original_tag = BIL
+	}
+}
+
+can_form_carolina = {
+	OR = {
+		original_tag = ELE
+		original_tag = ELA
+	}
+}
+
+can_form_dakota = {
+	OR = {
+		original_tag = EBY
+		original_tag = EYO
+	}
+}
+
+can_form_appalachia = {
+	OR = {
+		original_tag = ELY
+		original_tag = ELB
+		original_tag = BIL
+	}
+}
+
+can_form_great_lakes = {
+	OR = {
+		original_tag = ZLI
+		original_tag = EYI
+		original_tag = EYE
+		original_tag = EYA
+		original_tag = EYS
+		original_tag = EYL
+	}
+}
+
+can_form_mid_atlantic = {
+	OR = {
+		original_tag = ESF
+		original_tag = ESB
+		original_tag = ESY
+		original_tag = ELO
+		original_tag = ELI
+		can_form_virginia = yes
+	}
+}
+
+can_form_dixie = {
+	OR = {
+		original_tag = ELZ
+		can_form_carolina = yes
+		original_tag = FMT # ELS
+		original_tag = ELL
+		original_tag = ELF
+		original_tag = ELB
+		original_tag = EFO
+	}
+}
+
+can_form_texas = {
+	OR = {
+		original_tag = EFI
+		original_tag = EFZ
+		original_tag = EFA
+		original_tag = EFS
+		original_tag = EFL
+	}
+}
+
+can_form_midwest = {
+	OR = {
+		original_tag = EFE
+		original_tag = EBE
+		original_tag = EBA
+		can_form_dakota = yes
+		original_tag = EYI
+		original_tag = EYZ
+	}
+}
+
+can_form_rockies = {
+	OR = {
+		original_tag = EFL
+		original_tag = EFF
+		original_tag = EBO
+		original_tag = EBI
+		original_tag = EBZ
+		original_tag = EBF
+		original_tag = EBB
+	}
+}
+
+can_form_pacific = {
+	OR = {
+		original_tag = EFB
+		original_tag = EFY
+		original_tag = EBS
+		original_tag = EBL
+		original_tag = ALE
+		original_tag = LSO
+	}
+}
+
+can_form_west_usa = {
+	OR = {
+		can_form_hawaii = yes
+		can_form_rockies = yes
+		can_form_pacific = yes
+	}
+}
+
+can_form_csa = {
+	OR = {
+		original_tag = ELY
+		can_form_dixie = yes
+		can_form_texas = yes
+	}
+}
+
+can_form_union = {
+	OR = {
+		original_tag = ELY
+		can_form_great_lakes = yes
+		can_form_mid_atlantic = yes
+		can_form_midwest = yes
+	}
+}
+
+can_form_usa = {
+	OR = {
+		can_form_west_usa = yes
+		can_form_csa = yes
+		can_form_union = yes
+		original_tag = LBL
+	}
+}
+
+is_virginia = {
+	OR = {
+		state = 362
+		state = 816
+	}
+}
+
+is_carolina = {
+	OR = {
+		state = 363
+		state = 364
+	}
+}
+
+is_dakota = {
+	OR = {
+		state = 389
+		state = 390
+	}
+}
+
+is_appalachia = {
+	OR = {
+		state = 368
+		state = 369
+		state = 816
+	}
+}
+
+is_great_lakes = {
+	OR = {
+		state = 261
+		state = 391
+		state = 393
+		state = 394
+		state = 395
+		state = 396
+	}
+}
+
+is_mid_atlantic = {
+	OR = {
+		state = 357
+		state = 358
+		state = 359
+		state = 360
+		state = 361
+		is_virginia = yes
+	}
+}
+
+is_dixie = {
+	OR = {
+		state = 362
+		is_carolina = yes
+		state = 365
+		state = 366
+		state = 367
+		state = 368
+		state = 370
+	}
+}
+
+is_texas = {
+	OR = {
+		state = 371
+		state = 372
+		state = 374
+		state = 375
+		state = 376
+	}
+}
+
+is_midwest = {
+	OR = {
+		state = 373
+		state = 383
+		state = 384
+		is_dakota = yes
+		state = 391
+		state = 392
+	}
+}
+
+is_rockies = {
+	OR = {
+		state = 376
+		state = 377
+		state = 380
+		state = 381
+		state = 382
+		state = 387
+		state = 388
+	}
+}
+
+is_pacific = {
+	OR = {
+		state = 378
+		state = 379
+		state = 385
+		state = 386
+		state = 463
+		state = 650
+	}
+}
+
+is_west_usa = {
+	OR = {
+		is_hawaii = yes
+		is_rockies = yes
+		is_pacific = yes
+	}
+}
+
+is_csa = {
+	OR = {
+		is_dixie = yes
+		is_texas = yes
+		state = 369
+		state = 373
+	}
+}
+
+is_union = {
+	OR = {
+		is_great_lakes = yes
+		state = 357
+		state = 358
+		state = 359
+		state = 360
+		state = 361
+		state = 816
+		is_midwest = yes
+		state = 369
+		state = 374
+	}
+}
+
+is_usa = {
+	OR = {
+		is_west_usa = yes
+		is_csa = yes
+		is_union = yes
+		state = 686
+	}
+}
+
+has_states_to_form_virginia = {
+	custom_trigger_tooltip = {
+		tooltip = form_virginia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 362 } } } owns_state = 362 }
+		if = { limit = { NOT = { OOO = { owns_state = 816 } } } owns_state = 816 }
+	}
+}
+
+has_states_to_form_carolina = {
+	custom_trigger_tooltip = {
+		tooltip = form_virginia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 363 } } } owns_state = 363 }
+		if = { limit = { NOT = { OOO = { owns_state = 364 } } } owns_state = 364 }
+	}
+}
+
+has_states_to_form_dakota = {
+	custom_trigger_tooltip = {
+		tooltip = form_dakota_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 389 } } } owns_state = 389 }
+		if = { limit = { NOT = { OOO = { owns_state = 390 } } } owns_state = 390 }
+	}
+}
+
+has_states_to_form_appalachia = {
+	custom_trigger_tooltip = {
+		tooltip = form_appalachia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 368 } } } owns_state = 368 }
+		if = { limit = { NOT = { OOO = { owns_state = 369 } } } owns_state = 369 }
+		if = { limit = { NOT = { OOO = { owns_state = 816 } } } owns_state = 816 }
+	}
+}
+
+has_states_to_form_great_lakes = {
+	custom_trigger_tooltip = {
+		tooltip = form_great_lakes_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 261 } } } owns_state = 261 }
+		if = { limit = { NOT = { OOO = { owns_state = 393 } } } owns_state = 393 }
+		if = { limit = { NOT = { OOO = { owns_state = 394 } } } owns_state = 394 }
+		if = { limit = { NOT = { OOO = { owns_state = 395 } } } owns_state = 395 }
+		if = { limit = { NOT = { OOO = { owns_state = 396 } } } owns_state = 396 }
+	}
+}
+
+has_cosmetics_to_form_mid_atlantic = {
+	has_country_flag = can_form_USA_ATLANTIC
+}
+has_states_to_form_mid_atlantic = {
+	custom_trigger_tooltip = {
+		tooltip = form_mid_atlantic_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 357 } } } owns_state = 357 }
+		if = { limit = { NOT = { OOO = { owns_state = 358 } } } owns_state = 358 }
+		if = { limit = { NOT = { OOO = { owns_state = 359 } } } owns_state = 359 }
+		if = { limit = { NOT = { OOO = { owns_state = 360 } } } owns_state = 360 }
+		if = { limit = { NOT = { OOO = { owns_state = 361 } } } owns_state = 361 }
+	}
+}
+
+has_cosmetics_to_form_dixie = {
+	has_country_flag = can_form_USA_DIXIE
+}
+has_states_to_form_dixie = {
+	custom_trigger_tooltip = {
+		tooltip = form_dixie_has_states_tt
+
+		has_states_to_form_carolina = yes
+		if = { limit = { NOT = { OOO = { owns_state = 365 } } } owns_state = 365 }
+		if = { limit = { NOT = { OOO = { owns_state = 366 } } } owns_state = 366 }
+		if = { limit = { NOT = { OOO = { owns_state = 367 } } } owns_state = 367 }
+		if = { limit = { NOT = { OOO = { owns_state = 370 } } } owns_state = 370 }
+	}
+}
+
+has_states_to_form_texas = {
+	custom_trigger_tooltip = {
+		tooltip = form_texas_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 371 } } } owns_state = 371 }
+		if = { limit = { NOT = { OOO = { owns_state = 372 } } } owns_state = 372 }
+		if = { limit = { NOT = { OOO = { owns_state = 374 } } } owns_state = 374 }
+		if = { limit = { NOT = { OOO = { owns_state = 375 } } } owns_state = 375 }
+	}
+}
+
+has_cosmetics_to_form_midwest = {
+	has_country_flag = can_form_USA_MIDWEST
+}
+has_states_to_form_midwest = {
+	custom_trigger_tooltip = {
+		tooltip = form_midwest_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 373 } } } owns_state = 373 }
+		if = { limit = { NOT = { OOO = { owns_state = 383 } } } owns_state = 383 }
+		if = { limit = { NOT = { OOO = { owns_state = 384 } } } owns_state = 384 }
+		has_states_to_form_dakota = yes
+		if = { limit = { NOT = { OOO = { owns_state = 391 } } } owns_state = 391 }
+		if = { limit = { NOT = { OOO = { owns_state = 392 } } } owns_state = 392 }
+	}
+}
+
+has_states_to_form_rockies = {
+	custom_trigger_tooltip = {
+		tooltip = form_rockies_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 376 } } } owns_state = 376 }
+		if = { limit = { NOT = { OOO = { owns_state = 377 } } } owns_state = 377 }
+		if = { limit = { NOT = { OOO = { owns_state = 380 } } } owns_state = 380 }
+		if = { limit = { NOT = { OOO = { owns_state = 381 } } } owns_state = 381 }
+		if = { limit = { NOT = { OOO = { owns_state = 382 } } } owns_state = 382 }
+		if = { limit = { NOT = { OOO = { owns_state = 387 } } } owns_state = 387 }
+		if = { limit = { NOT = { OOO = { owns_state = 388 } } } owns_state = 388 }
+	}
+}
+
+has_states_to_form_pacific = {
+	custom_trigger_tooltip = {
+		tooltip = form_pacific_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 378 } } } owns_state = 378 }
+		if = { limit = { NOT = { OOO = { owns_state = 379 } } } owns_state = 379 }
+		if = { limit = { NOT = { OOO = { owns_state = 385 } } } owns_state = 385 }
+		if = { limit = { NOT = { OOO = { owns_state = 386 } } } owns_state = 386 }
+	}
+}
+
+has_cosmetics_to_form_west_usa = {
+	has_country_flag = can_form_USA_WEST
+}
+has_states_to_form_west_usa = {
+	custom_trigger_tooltip = {
+		tooltip = form_usa_has_states_tt
+
+		has_states_to_form_rockies = yes
+		has_states_to_form_pacific = yes
+	}
+}
+
+has_cosmetics_to_form_csa = {
+	has_country_flag = can_form_USA_CONFEDERACY
+}
+has_states_to_form_csa = {
+	custom_trigger_tooltip = {
+		tooltip = form_csa_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 362 } } } owns_state = 362 }
+		has_states_to_form_dixie = yes
+		if = { limit = { NOT = { OOO = { owns_state = 368 } } } owns_state = 368 }
+		has_states_to_form_texas = yes
+	}
+}
+
+has_cosmetics_to_form_union = {
+	has_country_flag = can_form_USA_UNION
+}
+has_states_to_form_union = {
+	custom_trigger_tooltip = {
+		tooltip = form_union_has_states_tt
+
+		has_states_to_form_mid_atlantic = yes
+		if = { limit = { NOT = { OOO = { owns_state = 816 } } } owns_state = 816 }
+		has_states_to_form_great_lakes = yes
+		has_states_to_form_midwest = yes
+	}
+}
+
+has_cosmetics_to_form_usa = {
+	has_country_flag = can_form_USA_UNITED
+}
+has_states_to_form_usa = {
+	custom_trigger_tooltip = {
+		tooltip = form_usa_has_states_tt
+
+		has_states_to_form_west_usa = yes
+		has_states_to_form_csa = yes
+		has_states_to_form_union = yes
+		if = { limit = { NOT = { OOO = { owns_state = 369 } } } owns_state = 369 }
+	}
+}
+
+required_states_to_form_great_lakes = {
+	OR = {
+		state = 261
+		state = 393
+		state = 394
+		state = 395
+		state = 396
+	}
+}
+
+required_states_to_form_mid_atlantic = {
+	OR = {
+		state = 357
+		state = 358
+		state = 359
+		state = 360
+		state = 361
+	}
+}
+
+required_states_to_form_dixie = {
+	OR = {
+		is_carolina = yes
+		state = 365
+		state = 366
+		state = 367
+		state = 370
+	}
+}
+
+required_states_to_form_texas = {
+	OR = {
+		state = 371
+		state = 372
+		state = 374
+		state = 375
+	}
+}
+
+required_states_to_form_pacific = {
+	OR = {
+		state = 378
+		state = 379
+		state = 385
+		state = 386
+	}
+}
+
+required_states_to_form_west_usa = {
+	OR = {
+		is_rockies = yes
+		required_states_to_form_pacific = yes
+	}
+}
+
+required_states_to_form_csa = {
+	OR = {
+		state = 362
+		required_states_to_form_dixie = yes
+		state = 368
+		required_states_to_form_texas = yes
+	}
+}
+
+required_states_to_form_union = {
+	OR = {
+		required_states_to_form_great_lakes = yes
+		required_states_to_form_mid_atlantic = yes
+		state = 816
+		is_midwest = yes
+	}
+}
+
+required_states_to_form_usa = {
+	OR = {
+		required_states_to_form_west_usa = yes
+		required_states_to_form_csa = yes
+		required_states_to_form_union = yes
+		state = 369
 	}
 }
 
@@ -11108,6 +11665,7 @@ is_north_america = {
 		is_on_continent = north_america
 		is_central_america = yes
 		required_states_to_form_antilles = yes
+		state = 650
 	}
 }
 
@@ -11121,6 +11679,7 @@ has_states_to_form_north_america = {
 				is_on_continent = north_america
 				is_central_america = yes
 				required_states_to_form_antilles = yes
+				state = 650
 			}
 			is_owned_by = PREV
 			is_owned_by = OOO
@@ -11198,7 +11757,10 @@ has_states_to_form_africa = {
 
 #### Asia ####
 is_asia = {
-	is_on_continent = asia
+	OR = {
+		is_on_continent = asia
+		required_states_to_form_balochistan = yes
+	}
 	NOT = {
 		required_states_to_form_ussr = yes
 		required_states_to_form_polynesia = yes
@@ -11207,6 +11769,7 @@ is_asia = {
 		is_indonesia = yes
 		is_philippines = yes
 		state = 333
+		state = 650
 	}
 }
 
@@ -11216,7 +11779,10 @@ has_cosmetics_to_form_asia = {
 has_states_to_form_asia = {
 	all_state = {
 		OR = {
-			NOT = { is_on_continent = asia }
+			NOT = {
+				is_on_continent = asia
+				required_states_to_form_balochistan = yes
+			}
 			required_states_to_form_ussr = yes
 			required_states_to_form_polynesia = yes
 			is_afghanistan = yes
@@ -11224,6 +11790,7 @@ has_states_to_form_asia = {
 			is_indonesia = yes
 			is_philippines = yes
 			state = 333
+			state = 650
 			is_owned_by = PREV
 			is_owned_by = OOO
 		}
