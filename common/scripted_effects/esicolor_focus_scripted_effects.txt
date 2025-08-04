@@ -320,3 +320,54 @@ war_goal_effect_on_random_neighbour = {
 		}
 	}
 }
+
+setup_utilize_our_strengths_effects = {
+	clr_country_flag = gets_HOA_our_strength_fighting_idea
+	clr_country_flag = gets_HOA_our_strength_production_idea
+	clr_country_flag = gets_HOA_our_strength_research_idea
+
+	if = {
+		limit = {
+			OR = {
+				original_tag = BAE
+				original_tag = YOB
+
+				original_tag = BAZ
+
+				original_tag = BEF
+			}
+		}
+		set_country_flag = gets_HOA_our_strength_fighting_idea
+	}
+	else_if = {
+		limit = {
+			OR = {
+				original_tag = ZFI
+				original_tag = CFM # BEL
+
+				original_tag = BEB
+
+				original_tag = BEY
+				original_tag = BAO
+			}
+		}
+		set_country_flag = gets_HOA_our_strength_production_idea
+	}
+	else_if = {
+		limit = {
+			OR = {
+				original_tag = BES
+
+				original_tag = BAI
+			}
+		}
+		set_country_flag = gets_HOA_our_strength_research_idea
+	}
+	else = {
+		random_list = {
+			1 = { set_country_flag = gets_HOA_our_strength_fighting_idea }
+			1 = { set_country_flag = gets_HOA_our_strength_production_idea }
+			1 = { set_country_flag = gets_HOA_our_strength_research_idea }
+		}
+	}
+}

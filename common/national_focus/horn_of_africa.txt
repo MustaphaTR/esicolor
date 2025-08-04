@@ -942,40 +942,18 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = {
-					OR = {
-						original_tag = BAE
-						original_tag = YOB
+				limit = { has_country_flag = gets_HOA_our_strength_fighting_idea }
 
-						original_tag = BAZ
-
-						original_tag = BEF
-					}
-				}
 				add_ideas = HOA_our_strength_fighting_idea
 			}
 			else_if = {
-				limit = {
-					OR = {
-						original_tag = ZFI
-						original_tag = CFM # BEL
+				limit = { has_country_flag = gets_HOA_our_strength_production_idea }
 
-						original_tag = BEB
-
-						original_tag = BEY
-						original_tag = BAO
-					}
-				}
 				add_ideas = HOA_our_strength_production_idea
 			}
 			else_if = {
-				limit = {
-					OR = {
-						original_tag = BES
-						
-						original_tag = BAI
-					}
-				}
+				limit = { has_country_flag = gets_HOA_our_strength_research_idea }
+
 				add_ideas = HOA_our_strength_research_idea
 			}
 			else = {
@@ -1159,6 +1137,19 @@ focus_tree = {
 				category = cat_mobile_warfare
 			}
 		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+
+				OR = {
+					has_tech = superior_firepower
+					has_tech = grand_battle_plan
+					has_tech = mass_assault
+				}
+			}
+		}
 	}
 	focus = {
 		id = HOA_warfare_from_afar
@@ -1185,6 +1176,18 @@ focus_tree = {
 			}
 			#add_ideas = HOA_warfare_from_afar
 		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+
+				OR = {
+					has_tech = mobile_warfare
+					has_tech = mass_assault
+				}
+			}
+		}
 	}
 	focus = {
 		id = HOA_modern_infantry
@@ -1208,6 +1211,18 @@ focus_tree = {
 				uses = 1
 				category = cat_grand_battle_plan
 				category = cat_mass_assault
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+
+				OR = {
+					has_tech = mobile_warfare
+					has_tech = superior_firepower
+				}
 			}
 		}
 	}
