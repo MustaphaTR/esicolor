@@ -17,7 +17,7 @@ esicolor_formables = {
 			always = yes
 		}
 		visible = {
-			NOT = { has_global_flag = formables_visual_only }
+			NOT = { has_global_flag = formables_visual }
 			NOT = { has_global_flag = formables_highlight_affected }
 			NOT = { has_country_flag = formed_EAR_UNITED }
 		}
@@ -5651,7 +5651,11 @@ esicolor_formables = {
 			clr_country_flag = can_form_USA_UNITED
 
 			set_country_flag = can_form_NOA_UNITED
-			set_country_flag = can_form_SOA_UNITED
+			if = {
+				limit = { NOT = { original_tag = LYL } }
+
+				set_country_flag = can_form_SOA_UNITED
+			}
 
 			set_cosmetic_tag = ANT_UNITED
 
@@ -16721,7 +16725,12 @@ esicolor_formables = {
 					formable_decision_effect = yes
 				}
 			}
-			formable_decision_effect_tooltip_default = yes
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_europe_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
 		}
 
 		highlight_states = {
@@ -16828,12 +16837,24 @@ esicolor_formables = {
 					formable_decision_effect = yes
 				}
 			}
-			formable_decision_effect_tooltip_default = yes
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_south_america_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
 		}
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_south_america = yes
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_south_america = yes
+				}
+				else = {
+					required_states_to_form_south_america = yes
+				}
 			}
 		}
 
@@ -16874,12 +16895,24 @@ esicolor_formables = {
 					formable_decision_effect = yes
 				}
 			}
-			formable_decision_effect_tooltip_default = yes
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_oceania_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
 		}
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_oceania = yes
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_oceania = yes
+				}
+				else = {
+					required_states_to_form_oceania = yes
+				}
 			}
 		}
 
@@ -16919,12 +16952,24 @@ esicolor_formables = {
 					formable_decision_effect = yes
 				}
 			}
-			formable_decision_effect_tooltip_default = yes
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_africa_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
 		}
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_africa = yes
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_africa = yes
+				}
+				else = {
+					required_states_to_form_africa = yes
+				}
 			}
 		}
 
@@ -17013,7 +17058,12 @@ esicolor_formables = {
 					formable_decision_effect = yes
 				}
 			}
-			formable_decision_effect_tooltip_default = yes
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_middle_east_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
 		}
 
 		highlight_states = {

@@ -12486,13 +12486,18 @@ has_cosmetics_to_form_europe = {
 	has_country_flag = can_form_EUR_UNITED
 }
 has_states_to_form_europe = {
-	all_state = {
-		OR = {
-			NOT = { is_on_continent = europe }
-			required_states_to_form_ussr = yes
-			is_marmara = yes
-			is_owned_by = PREV
-			is_owned_by = OOO
+	custom_trigger_tooltip = {
+		tooltip = form_europe_has_states_tt
+
+		all_state = {
+			OR = {
+				NOT = { is_on_continent = europe }
+				required_states_to_form_ussr = yes
+				is_marmara = yes
+				state = 698
+				is_owned_by = PREV
+				is_owned_by = OOO
+			}
 		}
 	}
 }
@@ -12502,6 +12507,7 @@ required_states_to_form_europe = {
 	NOT = {
 		required_states_to_form_ussr = yes
 		is_marmara = yes
+		state = 698
 	}
 }
 
@@ -12519,23 +12525,30 @@ has_cosmetics_to_form_north_america = {
 	has_country_flag = can_form_NOA_UNITED
 }
 has_states_to_form_north_america = {
-	all_state = {
-		OR = {
-			NOT = {
-				is_on_continent = north_america
-				is_central_america = yes
-				required_states_to_form_antilles = yes
-				state = 650
+	custom_trigger_tooltip = {
+		tooltip = form_north_america_has_states_tt
+
+		all_state = {
+			OR = {
+				NOT = {
+					is_on_continent = north_america
+					is_central_america = yes
+					required_states_to_form_antilles = yes
+					state = 650
+				}
+				is_owned_by = PREV
+				is_owned_by = OOO
 			}
-			is_owned_by = PREV
-			is_owned_by = OOO
 		}
 	}
 }
 
 #### South America ####
 is_south_america = {
-	is_on_continent = south_america
+	OR = {
+		is_on_continent = south_america
+		is_rapa_nui = yes
+	}
 	NOT = {
 		is_central_america = yes
 		required_states_to_form_antilles = yes
@@ -12546,14 +12559,26 @@ has_cosmetics_to_form_south_america = {
 	has_country_flag = can_form_SOA_UNITED
 }
 has_states_to_form_south_america = {
-	all_state = {
-		OR = {
-			NOT = { is_on_continent = south_america }
-			is_central_america = yes
-			required_states_to_form_antilles = yes
-			is_owned_by = PREV
-			is_owned_by = OOO
+	custom_trigger_tooltip = {
+		tooltip = form_south_america_has_states_tt
+
+		all_state = {
+			OR = {
+				NOT = { is_on_continent = south_america }
+				is_central_america = yes
+				required_states_to_form_antilles = yes
+				is_owned_by = PREV
+				is_owned_by = OOO
+			}
 		}
+	}
+}
+
+required_states_to_form_south_america = {
+	is_on_continent = south_america
+	NOT = {
+		is_central_america = yes
+		required_states_to_form_antilles = yes
 	}
 }
 
@@ -12561,8 +12586,11 @@ has_states_to_form_south_america = {
 is_oceania = {
 	OR = {
 		is_on_continent = australia
-		required_states_to_form_polynesia = yes
+		is_polynesia = yes
 		is_australian_iot = yes
+		is_indonesia = yes
+		is_philippines = yes
+		state = 333
 	}
 }
 
@@ -12570,34 +12598,74 @@ has_cosmetics_to_form_oceania = {
 	has_country_flag = can_form_OCE_UNITED
 }
 has_states_to_form_oceania = {
-	all_state = {
-		OR = {
-			NOT = {
-				is_on_continent = australia
-				required_states_to_form_polynesia = yes
-				is_australian_iot = yes
+	custom_trigger_tooltip = {
+		tooltip = form_oceania_has_states_tt
+
+		all_state = {
+			OR = {
+				NOT = {
+					is_on_continent = australia
+					required_states_to_form_polynesia = yes
+					is_australian_iot = yes
+					is_indonesia = yes
+					is_philippines = yes
+					state = 333
+				}
+				is_rapa_nui = yes
+				is_owned_by = PREV
+				is_owned_by = OOO
 			}
-			is_owned_by = PREV
-			is_owned_by = OOO
 		}
 	}
+}
+
+required_states_to_form_oceania = {
+	OR = {
+		is_on_continent = australia
+		required_states_to_form_polynesia = yes
+		is_australian_iot = yes
+		is_indonesia = yes
+		is_philippines = yes
+		state = 333
+	}
+	NOT = { is_rapa_nui = yes }
 }
 
 #### Africa ####
 is_africa = {
 	is_on_continent = africa
+	OR = {
+		state = 446
+		state = 453
+	}
 }
 
 has_cosmetics_to_form_africa = {
 	has_country_flag = can_form_AFR_UNITED
 }
 has_states_to_form_africa = {
-	all_state = {
-		OR = {
-			NOT = { is_on_continent = africa }
-			is_owned_by = PREV
-			is_owned_by = OOO
+	custom_trigger_tooltip = {
+		tooltip = form_africa_has_states_tt
+
+		all_state = {
+			OR = {
+				NOT = { is_on_continent = africa }
+				state = 178
+				state = 697
+				state = 906
+				is_owned_by = PREV
+				is_owned_by = OOO
+			}
 		}
+	}
+}
+
+required_states_to_form_africa = {
+	is_on_continent = africa
+	NOT = {
+		state = 178
+		state = 697
+		state = 906
 	}
 }
 
@@ -12605,7 +12673,7 @@ has_states_to_form_africa = {
 is_asia = {
 	OR = {
 		is_on_continent = asia
-		required_states_to_form_balochistan = yes
+		state = 988
 	}
 	NOT = {
 		required_states_to_form_ussr = yes
@@ -12623,22 +12691,26 @@ has_cosmetics_to_form_asia = {
 	has_country_flag = can_form_ASI_UNITED
 }
 has_states_to_form_asia = {
-	all_state = {
-		OR = {
-			NOT = {
-				is_on_continent = asia
-				required_states_to_form_balochistan = yes
+	custom_trigger_tooltip = {
+		tooltip = form_asia_has_states_tt
+
+		all_state = {
+			OR = {
+				NOT = {
+					is_on_continent = asia
+					state = 988
+				}
+				required_states_to_form_ussr = yes
+				required_states_to_form_polynesia = yes
+				is_afghanistan = yes
+				is_australian_iot = yes
+				is_indonesia = yes
+				is_philippines = yes
+				state = 333
+				state = 650
+				is_owned_by = PREV
+				is_owned_by = OOO
 			}
-			required_states_to_form_ussr = yes
-			required_states_to_form_polynesia = yes
-			is_afghanistan = yes
-			is_australian_iot = yes
-			is_indonesia = yes
-			is_philippines = yes
-			state = 333
-			state = 650
-			is_owned_by = PREV
-			is_owned_by = OOO
 		}
 	}
 }
@@ -12653,22 +12725,28 @@ is_middle_east = {
 		state = 183
 		state = 906
 	}
+	NOT = { state = 988 }
 }
 
 has_cosmetics_to_form_middle_east = {
 	has_country_flag = can_form_MEA_UNITED
 }
 has_states_to_form_middle_east = {
-	all_state = {
-		OR = {
-			NOT = {
-				is_on_continent = middle_east
-				is_afghanistan = yes
-				is_marmara = yes
+	custom_trigger_tooltip = {
+		tooltip = form_middle_east_has_states_tt
+
+		all_state = {
+			OR = {
+				NOT = {
+					is_on_continent = middle_east
+					is_afghanistan = yes
+					is_marmara = yes
+				}
+				required_states_to_form_transcaucasia = yes
+				state = 988
+				is_owned_by = PREV
+				is_owned_by = OOO
 			}
-			required_states_to_form_transcaucasia = yes
-			is_owned_by = PREV
-			is_owned_by = OOO
 		}
 	}
 }
@@ -12679,7 +12757,10 @@ required_states_to_form_middle_east = {
 		is_afghanistan = yes
 		is_marmara = yes
 	}
-	NOT = { required_states_to_form_transcaucasia = yes }
+	NOT = {
+		required_states_to_form_transcaucasia = yes
+		state = 988
+	}
 }
 
 #### Earth ####
