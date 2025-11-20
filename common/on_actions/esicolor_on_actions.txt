@@ -189,7 +189,10 @@ on_actions = {
 			if = {
 				limit = {
 					is_army_leader = yes
-					NOT = { has_dlc = "By Blood Alone" }
+					OR = {
+						var:creator = { is_ai = yes }
+						NOT = { has_dlc = "By Blood Alone" }
+					}
 				}
 
 				handle_special_generals = yes

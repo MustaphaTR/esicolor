@@ -52,28 +52,6 @@ esicolor_general_recruitment = {
 					}
 
 					var:original_owner = {
-						# Workaround for the bug preventing AI from getting special generals and racial traits.
-						if = {
-							limit = { has_dlc = "No Step Back" }
-
-							for_each_scope_loop = {
-								array = THIS.army_leaders
-
-								if = {
-									limit = {
-										NOT = {
-											has_character_flag = special_general
-											has_character_flag = NSB_general_workaround_applied
-										}
-									}
-
-									owner = { set_temp_variable = { creator = THIS } }
-									handle_special_generals = yes
-									set_character_flag = NSB_general_workaround_applied
-								}
-							}
-						}
-
 						for_each_scope_loop = {
 							array = THIS.army_leaders
 
@@ -190,28 +168,6 @@ esicolor_general_recruitment = {
 					}
 
 					var:original_owner = {
-						# Workaround for the bug preventing AI from getting special generals and racial traits.
-						if = {
-							limit = { has_dlc = "No Step Back" }
-
-							for_each_scope_loop = {
-								array = THIS.army_leaders
-
-								if = {
-									limit = {
-										NOT = {
-											has_character_flag = special_general
-											has_character_flag = NSB_general_workaround_applied
-										}
-									}
-
-									owner = { set_temp_variable = { creator = THIS } }
-									handle_special_generals = yes
-									set_character_flag = NSB_general_workaround_applied
-								}
-							}
-						}
-
 						for_each_scope_loop = {
 							array = THIS.army_leaders
 
