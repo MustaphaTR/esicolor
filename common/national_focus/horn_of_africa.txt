@@ -29,19 +29,14 @@ focus_tree = {
 	focus = {
 		id = HOA_develop_capitalstate
 		icon = GFX_focus_generic_industry_1
-		#prerequisite = { focus = }
 
 		x = 3
 		y = 0
-		#relative_position_id = 
 		cost = 8
-		available = {
-		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			
 			capital_scope = {
 				ETH_upgrade_state_category = yes 
 				add_extra_state_shared_building_slots = 1
@@ -50,6 +45,17 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 15
+
+				NOT = { arms_factory < 1 }
+				industrial_complex < 1
 			}
 		}
 	}
@@ -174,7 +180,7 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = { 
 			esicolor_add_random_civ_factory_effect = yes
@@ -293,7 +299,7 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -513,7 +519,7 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			navy_experience = 25
@@ -534,7 +540,7 @@ focus_tree = {
 		relative_position_id = HOA_a_steamboat_fleet
 		cost = 8
 		
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { }
 
 		available_if_capitulated = yes
 
@@ -603,7 +609,7 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -657,7 +663,7 @@ focus_tree = {
 		relative_position_id = HOA_study_naval_doctrines
 		cost = 8
 		
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
@@ -718,7 +724,7 @@ focus_tree = {
 		relative_position_id = HOA_study_air_tactics
 		cost = 8
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
@@ -777,12 +783,12 @@ focus_tree = {
 		cost = 8
 		available = {
 			OR = {
-				industrial_complex > 24
-				dockyard > 24
+				num_of_civilian_factories > 24
+				num_of_naval_factories > 24
 			}
 		}
 
-		search_filters = {} 
+		search_filters = { FOCUS_FILTER_RESEARCH } 
 
 		completion_reward = {
 			if = {
@@ -817,14 +823,10 @@ focus_tree = {
 	focus = {
 		id = HOA_the_adjective_armed_forces
 		icon = GFX_goal_generic_small_arms
-		#prerequisite = { focus = }
 
 		x = 8 
 		y = 0
-		#relative_position_id =
 		cost = 4
-		available = {
-		}
 
 		search_filters = {}
 
@@ -837,6 +839,16 @@ focus_tree = {
 				category = land_doctrine
 			}
 		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 15
+
+				arms_factory < 1
+			}
+		}
 	}
 	focus = {
 		id = HOA_warrior_tradition
@@ -847,8 +859,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = HOA_the_adjective_armed_forces
 		cost = 8
-		available = {
-		}
 
 		search_filters = {}
 
@@ -871,6 +881,16 @@ focus_tree = {
 				}
 			}
 		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 15
+
+				arms_factory < 1
+			}
+		}
 	}
 	focus = {
 		id = HOA_strengthen_the_irregulars
@@ -881,13 +901,21 @@ focus_tree = {
 		y = 1
 		relative_position_id = HOA_warrior_tradition
 		cost = 8
-		available = {
-		}
 
 		search_filters = {}
 
 		completion_reward = {
 			add_ideas = HOA_improved_irregulars_idea
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 30
+
+				arms_factory < 1
+			}
 		}
 	}
 	focus = {
@@ -902,10 +930,20 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
 			add_ideas = HOA_every_man_a_warrior_idea
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 30
+
+				arms_factory < 1
+			}
 		}
 	}
 	focus = {
@@ -964,6 +1002,16 @@ focus_tree = {
 				}
 			}
 		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 30
+
+				arms_factory < 1
+			}
+		}
 	}
 	focus = {
 		id = HOA_reform_the_conscription
@@ -977,11 +1025,11 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
 			add_war_support = 0.1
-			IF = {
+			if = {
 				limit = { 
 					NOT = { has_idea = extensive_conscription }
 					NOT = { has_idea = service_by_requirement }
@@ -990,7 +1038,6 @@ focus_tree = {
 				}
 				add_ideas = extensive_conscription
 			}
-
 		}
 	}
 	focus = {
@@ -1040,11 +1087,21 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			esicolor_add_random_mil_factory_effect = yes
 			esicolor_add_random_mil_factory_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 15
+
+				arms_factory < 1
+			}
 		}
 	}
 	focus = {
@@ -1058,7 +1115,7 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1080,7 +1137,7 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1103,7 +1160,7 @@ focus_tree = {
 		available = {
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1236,10 +1293,10 @@ focus_tree = {
 		relative_position_id = HOA_warfare_from_afar
 		cost = 8
 		available = {
-			arms_factory > 24
+			num_of_military_factories > 24
 		}
 
-		search_filters = {} 
+		search_filters = { FOCUS_FILTER_RESEARCH } 
 
 		completion_reward = {
 			if = {
@@ -1639,7 +1696,7 @@ focus_tree = {
 			is_subject = no
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
 			add_stability = 0.15
@@ -1727,7 +1784,7 @@ focus_tree = {
 			is_subject = no
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			set_technology = {
@@ -1800,7 +1857,7 @@ focus_tree = {
 			is_subject = yes 
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1825,7 +1882,7 @@ focus_tree = {
 			is_subject = yes 
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -2274,7 +2331,7 @@ focus_tree = {
 
 		cost = 8
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
 			add_political_power = 120
@@ -2336,7 +2393,7 @@ focus_tree = {
 		cost = 8
 		available = {}
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
 			add_political_power = 60

@@ -895,6 +895,15 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 3
+
+			modifier = {
+				factor = 10
+
+				OR = {
+					arms_factory < 1
+					industrial_complex < 1
+				}
+			}
 		}
 	}
 
@@ -913,6 +922,13 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
+
+			modifier = {
+				factor = 15
+
+				NOT = { arms_factory < 1 }
+				industrial_complex < 1
+			}
 		}
 
 		bypass = {
@@ -958,6 +974,12 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
+
+			modifier = {
+				factor = 15
+
+				arms_factory < 1
+			}
 		}
 
 		bypass = {
@@ -1431,8 +1453,8 @@ focus_tree = {
 		prerequisite = { focus = extra_tech_slot }
 		available = {
 			OR = {
-				arms_factory > 24
-				dockyard > 24
+				num_of_military_factories > 24
+				num_of_naval_factories > 24
 			}
 		}
 		cancel_if_invalid = no
@@ -1471,7 +1493,7 @@ focus_tree = {
 		icon = GFX_focus_research2
 		prerequisite = { focus = extra_tech_slot }
 		available = {
-			industrial_complex > 24
+			num_of_civilian_factories > 24
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
