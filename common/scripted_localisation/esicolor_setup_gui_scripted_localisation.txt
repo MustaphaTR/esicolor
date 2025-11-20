@@ -850,6 +850,25 @@ defined_text = {
 }
 
 defined_text = {
+	name = esicolor_setup_focus_factories_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_focus_factories = 0 }
+		}
+		localization_key = esicolor_setup_focus_factories_onmap
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_focus_factories = 1 }
+		}
+		localization_key = esicolor_setup_focus_factories_mixed
+	}
+	text = {
+		localization_key = esicolor_setup_focus_factories_offmap
+	}
+}
+
+defined_text = {
 	name = esicolor_setup_research_slots_loc
 	text = {
 		trigger = {

@@ -38,13 +38,32 @@ focus_tree = {
 
 		completion_reward = {
 			capital_scope = {
-				ETH_upgrade_state_category = yes 
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+				ETH_upgrade_state_category = yes
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = focus_factories_offmap
+							has_global_flag = focus_factories_mixed
+						}
+					}
+
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
 				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = focus_factories_offmap
+						has_global_flag = focus_factories_mixed
+					}
+				}
+
+				add_offsite_building = { type = industrial_complex level = 1 }
 			}
 		}
 
@@ -162,7 +181,7 @@ focus_tree = {
 
 					hidden_effect = { add_dynamic_modifier = { modifier = ETH_state_development_dynamic_modifier } }
 				}
-				
+
 				add_to_variable = { ETH_state_development_production_speed = 0.15 }
 				add_to_variable = { ETH_state_development_local_building_slots_factor = 0.15 }		
 			}	
@@ -182,9 +201,57 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		completion_reward = { 
-			esicolor_add_random_civ_factory_effect = yes
-			esicolor_add_random_civ_factory_effect = yes
+		complete_tooltip = {
+			if = {
+				limit = {
+					has_global_flag = focus_factories_offmap
+				}
+
+				add_offsite_building = { type = industrial_complex level = 2 }
+			}
+			else_if = {
+				limit = {
+					has_global_flag = focus_factories_mixed
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			else = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_global_flag = focus_factories_offmap
+				}
+
+				add_offsite_building = { type = industrial_complex level = 2 }
+			}
+			else_if = {
+				limit = {
+					has_global_flag = focus_factories_mixed
+				}
+
+				add_1_industrial_complex_in_random_state = yes
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			else = {
+				add_1_industrial_complex_in_random_state = yes
+				add_1_industrial_complex_in_random_state = yes
+			}
 		}
 	}
 	focus = {
@@ -333,11 +400,33 @@ focus_tree = {
 
 		complete_tooltip = {
 			navy_experience = 25
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = dockyard
-				level = 3
-				instant_build = yes
+			if = {
+				limit = {
+					has_global_flag = focus_factories_offmap
+				}
+
+				add_offsite_building = { type = dockyard level = 3 }
+			}
+			else_if = {
+				limit = {
+					has_global_flag = focus_factories_mixed
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_offsite_building = { type = dockyard level = 2 }
+			}
+			else = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = { 
 				type = convoy
@@ -351,71 +440,23 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus naval_effort"
 			navy_experience = 25
-			random_controlled_state = {
+			if = {
 				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-					if = {
-						limit = {
-							controller = {
-								any_owned_state = {
-									is_coastal = yes
-									free_building_slots = {
-										building = dockyard
-										size > 2
-										include_locked = yes
-									}
-									is_controlled_by = ROOT
-									is_core_of = ROOT
-								}
-							}
-						}
-						is_owned_by = ROOT
-						is_core_of = ROOT ## Prioritise owned cores.
-					}
-					else_if = {
-						limit = {
-							controller = {
-								any_controlled_state = {
-									is_coastal = yes
-									free_building_slots = {
-										building = dockyard
-										size > 2
-										include_locked = yes
-									}
-									is_core_of = ROOT
-								}
-							}
-						}
-						is_core_of = ROOT ## Then controlled cores.
-					}
-					else_if = {
-						limit = {
-							controller = {
-								any_owned_state = {
-									is_coastal = yes
-									free_building_slots = {
-										building = dockyard
-										size > 2
-										include_locked = yes
-									}
-									is_controlled_by = ROOT
-								}
-							}
-						}
-						is_owned_by = ROOT ## Then owned non-cores, if this fails too it goes to a random state.
-					}
+					has_global_flag = focus_factories_offmap
 				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
+
+				add_offsite_building = { type = dockyard level = 3 }
+			}
+			else_if = {
+				limit = {
+					has_global_flag = focus_factories_mixed
 				}
+
+				add_1_dockyard_in_random_state = yes
+				add_offsite_building = { type = dockyard level = 2 }
+			}
+			else = {
+				add_3_dockyard_in_random_state = yes
 			}
 			add_equipment_to_stockpile = { 
 				type = convoy
@@ -1084,14 +1125,61 @@ focus_tree = {
 		y = 1
 		relative_position_id = HOA_utilize_our_strengths
 		cost = 8
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
+
+		complete_tooltip = {
+			if = {
+				limit = {
+					has_global_flag = focus_factories_offmap
+				}
+
+				add_offsite_building = { type = arms_factory level = 2 }
+			}
+			else_if = {
+				limit = {
+					has_global_flag = focus_factories_mixed
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_offsite_building = { type = arms_factory level = 1 }
+			}
+			else = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
 		completion_reward = {
-			esicolor_add_random_mil_factory_effect = yes
-			esicolor_add_random_mil_factory_effect = yes
+			if = {
+				limit = {
+					has_global_flag = focus_factories_offmap
+				}
+
+				add_offsite_building = { type = arms_factory level = 2 }
+			}
+			else_if = {
+				limit = {
+					has_global_flag = focus_factories_mixed
+				}
+
+				add_1_arms_factory_in_random_state = yes
+				add_offsite_building = { type = arms_factory level = 1 }
+			}
+			else = {
+				add_1_arms_factory_in_random_state = yes
+				add_1_arms_factory_in_random_state = yes
+			}
 		}
 
 		ai_will_do = {
@@ -1483,7 +1571,7 @@ focus_tree = {
 			is_subject = yes 
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
 			capital_scope = {
@@ -1866,7 +1954,16 @@ focus_tree = {
 				uses = 1
 				category = industry 
 			}
-			esicolor_add_random_civ_factory_effect = yes
+			if = {
+				limit = {
+					has_global_flag = focus_factories_offmap
+				}
+
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			else = {
+				add_1_industrial_complex_in_random_state = yes
+			}
 		}
 	}
 	focus = {
@@ -2041,7 +2138,7 @@ focus_tree = {
 			is_subject = yes 
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			if = {
@@ -2071,7 +2168,7 @@ focus_tree = {
 			is_subject = yes 
 		}
 
-		search_filters = {}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
 			add_war_support = 0.1
@@ -2415,7 +2512,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			esicolor_add_random_civ_factory_effect = yes
+			if = {
+				limit = {
+					has_global_flag = focus_factories_offmap
+				}
+
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			else = {
+				add_1_industrial_complex_in_random_state = yes
+			}
 		}
 	}
 
@@ -2604,7 +2710,19 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = ETH_underground_wargames_idea
-			add_offsite_building = { type = arms_factory level = 1 }
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = focus_factories_offmap
+						has_global_flag = focus_factories_mixed
+					}
+				}
+
+				add_offsite_building = { type = arms_factory level = 1 }
+			}
+			else = {
+				add_1_arms_factory_in_random_state = yes
+			}
 		}
 	}
 

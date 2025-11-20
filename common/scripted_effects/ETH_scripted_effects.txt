@@ -1,10 +1,24 @@
 ETH_upgrade_state_category = {
 	if = {
-		limit = { has_state_category = wasteland }
+		limit = { has_state_category = tiny_island }
+		set_state_category = small_island
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_state_category = wasteland
+				has_state_category = enclave
+			}
+		}
 		set_state_category = pastoral
 	}
 	else_if = {
-		limit = { has_state_category = pastoral }
+		limit = {
+			OR = {
+				has_state_category = pastoral
+				has_state_category = small_island
+			}
+		}
 		set_state_category = rural
 	}
 	else_if = {
