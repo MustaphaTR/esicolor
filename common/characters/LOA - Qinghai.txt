@@ -1,0 +1,39 @@
+characters={
+	LOA_ma_lin = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=QHM_ma_lin
+			portraits={
+				civilian={
+					large=GFX_portrait_QHM_ma_lin
+					small=GFX_portrait_QHM_ma_lin_small
+				}
+			}
+			country_leader={
+				traits={ XSM_devout_leader }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=QHM_ma_lin
+			portraits={
+				civilian={
+					large=GFX_portrait_asia_generic_land_11
+				}
+			}
+			country_leader={
+				traits={ XSM_devout_leader }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

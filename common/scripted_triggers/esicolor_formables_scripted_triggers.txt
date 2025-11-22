@@ -10419,8 +10419,16 @@ can_form_qinghai = {
 can_form_gansu = {
 	OR = {
 		original_tag = ZBE
-		original_tag = LIL
 		original_tag = FSL
+		original_tag = NAA
+	}
+}
+
+can_form_ningxia = {
+	OR = {
+		original_tag = LIL
+		original_tag = NAO
+		original_tag = NAS
 	}
 }
 
@@ -10428,6 +10436,7 @@ can_form_ma_clique = {
 	OR = {
 		can_form_qinghai = yes
 		can_form_gansu = yes
+		can_form_ningxia = yes
 		original_tag = FSE
 	}
 }
@@ -10436,6 +10445,8 @@ can_form_shaanxi = {
 	OR = {
 		original_tag = LZZ
 		original_tag = FAA
+		original_tag = NEZ
+		original_tag = NAL
 	}
 }
 
@@ -10452,6 +10463,7 @@ can_form_zhili = {
 		original_tag = LOB
 		original_tag = LOY
 		original_tag = LIA
+		original_tag = NEY
 	}
 }
 
@@ -10508,6 +10520,13 @@ can_form_southwest_china = {
 	}
 }
 
+can_form_hubei = {
+	OR = {
+		original_tag = LZO
+		original_tag = NEL
+	}
+}
+
 can_form_hunnan = {
 	OR = {
 		original_tag = LOZ
@@ -10517,9 +10536,9 @@ can_form_hunnan = {
 
 can_form_central_china = {
 	OR = {
-		can_form_hunnan = yes
 		original_tag = LOF
-		original_tag = LZO
+		can_form_hunnan = yes
+		can_form_hubei = yes
 	}
 }
 
@@ -10535,6 +10554,7 @@ can_form_guangdong = {
 		original_tag = SYZ
 		original_tag = SYE
 		original_tag = FZB
+		original_tag = NEE
 	}
 }
 
@@ -10559,6 +10579,8 @@ can_form_jiangsu = {
 	OR = {
 		original_tag = SYB
 		original_tag = LIE
+		original_tag = NEA
+		original_tag = NES
 	}
 }
 
@@ -10566,6 +10588,7 @@ can_form_shandong = {
 	OR = {
 		original_tag = SYF
 		original_tag = FAE
+		original_tag = NEB
 	}
 }
 
@@ -10605,8 +10628,16 @@ is_qinghai = {
 is_gansu = {
 	OR = {
 		state = 283
-		state = 616
 		state = 756
+		state = 1044
+	}
+}
+
+is_ningxia = {
+	OR = {
+		state = 616
+		state = 1040
+		state = 1045
 	}
 }
 
@@ -10614,6 +10645,7 @@ is_ma_clique = {
 	OR = {
 		is_qinghai = yes
 		is_gansu = yes
+		is_ningxia = yes
 		state = 753
 	}
 }
@@ -10622,6 +10654,8 @@ is_shaanxi = {
 	OR = {
 		state = 622
 		state = 744
+		state = 1032
+		state = 1046
 	}
 }
 
@@ -10638,6 +10672,7 @@ is_zhili = {
 		state = 608
 		state = 609
 		state = 614
+		state = 1039
 	}
 }
 
@@ -10706,6 +10741,7 @@ is_guangdong = {
 		state = 592
 		state = 593
 		state = 728
+		state = 1033
 	}
 }
 
@@ -10719,6 +10755,13 @@ is_south_china = {
 	}
 }
 
+is_hubei = {
+	OR = {
+		state = 620
+		state = 1036
+	}
+}
+
 is_hunnan = {
 	OR = {
 		state = 602
@@ -10728,9 +10771,9 @@ is_hunnan = {
 
 is_central_china = {
 	OR = {
-		is_hunnan = yes
 		state = 607
-		state = 620
+		is_hunnan = yes
+		is_hubei = yes
 	}
 }
 
@@ -10745,6 +10788,8 @@ is_jiangsu = {
 	OR = {
 		state = 598
 		state = 613
+		state = 1034
+		state = 1035
 	}
 }
 
@@ -10752,6 +10797,7 @@ is_shandong = {
 	OR = {
 		state = 597
 		state = 743
+		state = 1038
 	}
 }
 
@@ -10797,8 +10843,18 @@ has_states_to_form_gansu = {
 		tooltip = form_gansu_has_states_tt
 
 		if = { limit = { NOT = { OOO = { owns_state = 283 } } } owns_state = 283 }
-		if = { limit = { NOT = { OOO = { owns_state = 616 } } } owns_state = 616 }
 		if = { limit = { NOT = { OOO = { owns_state = 756 } } } owns_state = 756 }
+		if = { limit = { NOT = { OOO = { owns_state = 1044 } } } owns_state = 1044 }
+	}
+}
+
+has_states_to_form_ningxia = {
+	custom_trigger_tooltip = {
+		tooltip = form_ningxia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 616 } } } owns_state = 616 }
+		if = { limit = { NOT = { OOO = { owns_state = 1040 } } } owns_state = 1040 }
+		if = { limit = { NOT = { OOO = { owns_state = 1045 } } } owns_state = 1045 }
 	}
 }
 
@@ -10811,6 +10867,7 @@ has_states_to_form_ma_clique = {
 
 		has_states_to_form_qinghai = yes
 		has_states_to_form_gansu = yes
+		has_states_to_form_ningxia = yes
 	}
 }
 
@@ -10820,6 +10877,8 @@ has_states_to_form_shaanxi = {
 
 		if = { limit = { NOT = { OOO = { owns_state = 622 } } } owns_state = 622 }
 		if = { limit = { NOT = { OOO = { owns_state = 744 } } } owns_state = 744 }
+		if = { limit = { NOT = { OOO = { owns_state = 1032 } } } owns_state = 1032 }
+		if = { limit = { NOT = { OOO = { owns_state = 1046 } } } owns_state = 1046 }
 	}
 }
 
@@ -10840,6 +10899,7 @@ has_states_to_form_zhili = {
 		if = { limit = { NOT = { OOO = { owns_state = 608 } } } owns_state = 608 }
 		if = { limit = { NOT = { OOO = { owns_state = 609 } } } owns_state = 609 }
 		if = { limit = { NOT = { OOO = { owns_state = 614 } } } owns_state = 614 }
+		if = { limit = { NOT = { OOO = { owns_state = 1039 } } } owns_state = 1039 }
 	}
 }
 
@@ -10915,6 +10975,15 @@ has_states_to_form_southwest_china = {
 	}
 }
 
+has_states_to_form_hubei = {
+	custom_trigger_tooltip = {
+		tooltip = form_hubei_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 620 } } } owns_state = 620 }
+		if = { limit = { NOT = { OOO = { owns_state = 1036 } } } owns_state = 1036 }
+	}
+}
+
 has_states_to_form_hunnan = {
 	custom_trigger_tooltip = {
 		tooltip = form_hunnan_has_states_tt
@@ -10931,9 +11000,9 @@ has_states_to_form_central_china = {
 	custom_trigger_tooltip = {
 		tooltip = form_central_china_has_states_tt
 
-		has_states_to_form_hunnan = yes
 		if = { limit = { NOT = { OOO = { owns_state = 607 } } } owns_state = 607 }
-		if = { limit = { NOT = { OOO = { owns_state = 620 } } } owns_state = 620 }
+		has_states_to_form_hunnan = yes
+		has_states_to_form_hubei = yes
 	}
 }
 
@@ -10953,6 +11022,7 @@ has_states_to_form_guangdong = {
 		if = { limit = { NOT = { OOO = { owns_state = 592 } } } owns_state = 592 }
 		if = { limit = { NOT = { OOO = { owns_state = 593 } } } owns_state = 593 }
 		if = { limit = { NOT = { OOO = { owns_state = 728 } } } owns_state = 728 }
+		if = { limit = { NOT = { OOO = { owns_state = 1033 } } } owns_state = 1033 }
 	}
 }
 
@@ -10984,6 +11054,8 @@ has_states_to_form_jiangsu = {
 
 		if = { limit = { NOT = { OOO = { owns_state = 598 } } } owns_state = 598 }
 		if = { limit = { NOT = { OOO = { owns_state = 613 } } } owns_state = 613 }
+		if = { limit = { NOT = { OOO = { owns_state = 1034 } } } owns_state = 1034 }
+		if = { limit = { NOT = { OOO = { owns_state = 1035 } } } owns_state = 1035 }
 	}
 }
 
@@ -10993,6 +11065,7 @@ has_states_to_form_shandong = {
 
 		if = { limit = { NOT = { OOO = { owns_state = 597 } } } owns_state = 597 }
 		if = { limit = { NOT = { OOO = { owns_state = 743 } } } owns_state = 743 }
+		if = { limit = { NOT = { OOO = { owns_state = 1038 } } } owns_state = 1038 }
 	}
 }
 
@@ -11042,6 +11115,7 @@ required_states_to_form_ma_clique = {
 	OR = {
 		is_qinghai = yes
 		is_gansu = yes
+		is_ningxia = yes
 	}
 }
 
