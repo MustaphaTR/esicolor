@@ -1,0 +1,351 @@
+JAP_imperial_influence_decision_cat = {
+	JAP_army_faction_demands_conscription_law_change = {
+		priority = 1
+
+		icon = GFX_decision_JAP_army_faction
+
+		allowed = { always = no }
+
+		visible = {
+		}
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 90
+
+		is_good = no
+
+		#fire_only_once = yes
+
+		#cancel_if_not_visible = yes
+		cancel_trigger = {
+			IF = {
+				limit = {
+					has_country_flag = JAP_in_on_disarmed_nation_flag 
+				}
+				OR = {
+					has_idea = volunteer_only
+					has_idea = limited_conscription
+					has_idea = extensive_conscription
+					has_idea = service_by_requirement
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_country_flag = JAP_in_on_volunteer_only_flag
+				}
+				OR = {
+					has_idea = limited_conscription
+					has_idea = extensive_conscription
+					has_idea = service_by_requirement
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_country_flag = JAP_in_on_limited_conscription_flag
+				}
+				OR = {
+					has_idea = extensive_conscription
+					has_idea = service_by_requirement
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_country_flag = JAP_in_on_extensive_conscription_flag
+				}
+				OR = {
+					has_idea = service_by_requirement
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_country_flag = JAP_in_on_service_by_requirement_flag
+				}
+				OR = {
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_country_flag = JAP_in_on_all_adults_serve_flag
+				}
+				has_idea = scraping_the_barrel
+			}
+		}
+
+		cancel_effect = {
+			add_command_power = 10
+			army_experience = 10
+
+			clr_country_flag = JAP_military_demands_conscription_law_change
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = JAP_in_on_disarmed_nation_flag
+					}
+					clr_country_flag = JAP_in_on_disarmed_nation_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_volunteer_only_flag
+					}
+					clr_country_flag = JAP_in_on_volunteer_only_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_limited_conscription_flag
+					}
+					clr_country_flag = JAP_in_on_limited_conscription_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_extensive_conscription_flag
+					}
+					clr_country_flag = JAP_in_on_extensive_conscription_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_service_by_requirement_flag
+					}
+					clr_country_flag = JAP_in_on_service_by_requirement_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_all_adults_serve_flag
+					}
+					clr_country_flag = JAP_in_on_all_adults_serve_flag
+				}
+			}
+		}
+
+		timeout_effect = { #Fails
+			clr_country_flag = JAP_military_demands_conscription_law_change
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = JAP_in_on_disarmed_nation_flag
+					}
+					clr_country_flag = JAP_in_on_disarmed_nation_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_volunteer_only_flag
+					}
+					clr_country_flag = JAP_in_on_volunteer_only_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_limited_conscription_flag
+					}
+					clr_country_flag = JAP_in_on_limited_conscription_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_extensive_conscription_flag
+					}
+					clr_country_flag = JAP_in_on_extensive_conscription_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_service_by_requirement_flag
+					}
+					clr_country_flag = JAP_in_on_service_by_requirement_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_all_adults_serve_flag
+					}
+					clr_country_flag = JAP_in_on_all_adults_serve_flag
+				}
+			}
+		}
+	}
+
+	JAP_naval_faction_demands_conscription_law_change = {
+		priority = 1
+
+		icon = GFX_decision_JAP_naval_faction
+
+		allowed = { always = no }
+
+		visible = {
+		}
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 90
+
+		is_good = no
+
+		#fire_only_once = yes
+
+		#cancel_if_not_visible = yes
+		cancel_trigger = {
+			IF = {
+				limit = {
+					has_country_flag = JAP_in_on_disarmed_nation_flag 
+				}
+				OR = {
+					has_idea = volunteer_only
+					has_idea = limited_conscription
+					has_idea = extensive_conscription
+					has_idea = service_by_requirement
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_country_flag = JAP_in_on_volunteer_only_flag
+				}
+				OR = {
+					has_idea = limited_conscription
+					has_idea = extensive_conscription
+					has_idea = service_by_requirement
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_country_flag = JAP_in_on_limited_conscription_flag
+				}
+				OR = {
+					has_idea = extensive_conscription
+					has_idea = service_by_requirement
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_country_flag = JAP_in_on_extensive_conscription_flag
+				}
+				OR = {
+					has_idea = service_by_requirement
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_country_flag = JAP_in_on_service_by_requirement_flag
+				}
+				OR = {
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_country_flag = JAP_in_on_all_adults_serve_flag
+				}
+				has_idea = scraping_the_barrel
+			}
+		}
+
+		cancel_effect = {
+			add_command_power = 10
+			navy_experience = 10
+
+			clr_country_flag = JAP_military_demands_conscription_law_change
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = JAP_in_on_disarmed_nation_flag
+					}
+					clr_country_flag = JAP_in_on_disarmed_nation_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_volunteer_only_flag
+					}
+					clr_country_flag = JAP_in_on_volunteer_only_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_limited_conscription_flag
+					}
+					clr_country_flag = JAP_in_on_limited_conscription_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_extensive_conscription_flag
+					}
+					clr_country_flag = JAP_in_on_extensive_conscription_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_service_by_requirement_flag
+					}
+					clr_country_flag = JAP_in_on_service_by_requirement_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_all_adults_serve_flag
+					}
+					clr_country_flag = JAP_in_on_all_adults_serve_flag
+				}
+			}
+		}
+
+		timeout_effect = { #Fails
+			clr_country_flag = JAP_military_demands_conscription_law_change
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_flag = JAP_in_on_disarmed_nation_flag
+					}
+					clr_country_flag = JAP_in_on_disarmed_nation_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_volunteer_only_flag
+					}
+					clr_country_flag = JAP_in_on_volunteer_only_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_limited_conscription_flag
+					}
+					clr_country_flag = JAP_in_on_limited_conscription_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_extensive_conscription_flag
+					}
+					clr_country_flag = JAP_in_on_extensive_conscription_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_service_by_requirement_flag
+					}
+					clr_country_flag = JAP_in_on_service_by_requirement_flag
+				}
+				ELSE_IF = {
+					limit = {
+						has_country_flag = JAP_in_on_all_adults_serve_flag
+					}
+					clr_country_flag = JAP_in_on_all_adults_serve_flag
+				}
+			}
+		}
+	}
+}

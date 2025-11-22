@@ -36,9 +36,9 @@ NDefines.NFactions.FACTION_INTELLIGENCE_ALLOWED_ADVISOR_TRAIT = {
 	"PHI_intelligence_bureau_chief",
 	"HUN_stalinist_agent",
 	"JAP_tokko_chief",
-	"CHI_spymaster"
+	"CHI_spymaster",
 
 	-- ESI
-	"code_breaker"
+	"code_breaker",
 	"encryption_expert"
 }

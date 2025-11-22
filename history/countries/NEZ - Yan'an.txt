@@ -1,0 +1,43 @@
+1032 = {
+	remove_core_of = PRC
+	remove_core_of = CHI
+}
+1936.1.1.12 = {
+	1032 = {
+		remove_core_of = XIC
+
+		transfer_state_to = NEZ
+		add_core_of = NEZ
+	}
+}
+1938.10.25.12 = {
+	1032 = {
+		transfer_state_to = NEZ
+	}
+}
+
+capital = 1032
+oob = "1032_1007"
+
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 5
+set_popularities = {
+	democratic = 25
+	fascism = 25
+	communism = 25
+	neutrality = 25
+}
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}

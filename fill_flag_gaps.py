@@ -4,7 +4,7 @@ import shutil
 ooo_flag = r'C:\Users\musta\Documents\Paradox Interactive\Hearts of Iron IV\mod\esicolor\gfx\flags\OOO.tga'
 folder = r'C:\Users\musta\Documents\Paradox Interactive\Hearts of Iron IV\mod\esicolor\gfx\flags\\'
 i = 1
-while i < 1017:
+while i < 1047:
     name = str(i)
     if i < 10:
         name = "00" + name
@@ -52,6 +52,7 @@ while i < 1017:
     if name.endswith("BYA"): name = name.replace("BYA", "CZB")
     if name.endswith("YES"): name = name.replace("YES", "ZFT")
     if name.endswith("NOA"): name = name.replace("NOA", "OPB")
+    if name.endswith("NZL"): name = name.replace("NZL", "OAM")
 
     new_name = folder + name
     new_name_dot_tga = new_name + ".tga"

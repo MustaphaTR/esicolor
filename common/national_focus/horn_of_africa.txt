@@ -722,14 +722,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus submarine_effort"
+			log = "[GetDateText]: [Root.GetName]: Focus HOA_expand_naval_variety"
 			add_tech_bonus = {
 				name = HOA_expand_naval_variety
 				bonus = 1.0
 				ahead_reduction = 2
 				uses = 1
 				category = ss_tech
-				category = cl_tech
 				category = ca_tech
 				category = bc_tech
 				category = bb_tech
@@ -1289,9 +1288,9 @@ focus_tree = {
 				factor = 0
 
 				OR = {
-					has_tech = superior_firepower
-					has_tech = grand_battle_plan
-					has_tech = mass_assault
+					has_doctrine = superior_firepower
+					has_doctrine = grand_battleplan
+					has_doctrine = mass_assault
 				}
 			}
 		}
@@ -1328,8 +1327,8 @@ focus_tree = {
 				factor = 0
 
 				OR = {
-					has_tech = mobile_warfare
-					has_tech = mass_assault
+					has_doctrine = new_mobile_warfare
+					has_doctrine = mass_assault
 				}
 			}
 		}
@@ -1365,8 +1364,8 @@ focus_tree = {
 				factor = 0
 
 				OR = {
-					has_tech = mobile_warfare
-					has_tech = superior_firepower
+					has_doctrine = new_mobile_warfare
+					has_doctrine = superior_firepower
 				}
 			}
 		}

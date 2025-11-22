@@ -1,0 +1,44 @@
+1045 = {
+	remove_core_of = XSM
+	remove_core_of = CHI
+	remove_core_of = PRC
+}
+1936.1.1.12 = {
+	1045 = {
+		remove_core_of = NXM
+
+		transfer_state_to = NAS
+		add_core_of = NAS
+	}
+}
+1938.10.25.12 = {
+	1045 = {
+		transfer_state_to = NAS
+	}
+}
+
+capital = 1045
+oob = "1045_1007"
+
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 5
+set_popularities = {
+	democratic = 25
+	fascism = 25
+	communism = 25
+	neutrality = 25
+}
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}

@@ -166,6 +166,94 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = CHI_sea_dare_to_die_corps
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_dare_to_die_corps
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_know_thy_enemy
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_sea_dare_to_die_corps
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = JAP_advance_one_hundred_million_fireballs
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_know_thy_enemy
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = JAP_tennoheika_banzai
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = JAP_advance_one_hundred_million_fireballs
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = JAP_issue_the_senjinkun_military_code
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = JAP_tennoheika_banzai
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = JAP_the_art_of_warfare
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = JAP_issue_the_senjinkun_military_code
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = JAP_indoctrination_in_the_military_academy
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = JAP_the_art_of_warfare
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = PHI_utang_na_loob
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = JAP_indoctrination_in_the_military_academy
+
+		completion_reward = { }
+	}
+
 	# Laws and War Support Scrpited Triggers
 	focus = {
 		id = SWE_totalforsvar
@@ -173,7 +261,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = CHI_dare_to_die_corps
+		relative_position_id = PHI_utang_na_loob
 
 		completion_reward = { }
 	}
@@ -1727,6 +1815,28 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = CHI_tungsten_and_antimony_extraction
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = wuw_HUN_tap_newfound_oil_deposits
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_grow_the_coal_industry
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_tungsten_and_antimony_extraction
+
+		completion_reward = { }
+	}
+
 	# Stability and War Support Decisions
 	focus = {
 		id = GRE_request_communist_support
@@ -1734,7 +1844,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = wuw_HUN_tap_newfound_oil_deposits
+		relative_position_id = CHI_grow_the_coal_industry
 
 		completion_reward = { }
 	}
@@ -3020,6 +3130,17 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = JAP_sea_greater_east_asian_co_properity_sphere
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = POR_the_return_of_duarte
+
+		completion_reward = { }
+	}
+
 	# MIO Policies
 	focus = {
 		id = NOR_norwegian_engineering
@@ -3027,7 +3148,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = POR_the_return_of_duarte
+		relative_position_id = JAP_sea_greater_east_asian_co_properity_sphere
 
 		completion_reward = { }
 	}
