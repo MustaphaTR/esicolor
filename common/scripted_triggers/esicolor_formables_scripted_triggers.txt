@@ -11100,6 +11100,10 @@ can_form_korea = {
 	OR = {
 		original_tag = SZS
 		original_tag = SZF
+		original_tag = NZB
+		original_tag = NZY
+		original_tag = NEO
+		original_tag = NEI
 	}
 }
 
@@ -11107,6 +11111,10 @@ is_korea = {
 	OR = {
 		state = 525
 		state = 527
+		state = 1028
+		state = 1029
+		state = 1030
+		state = 1031
 	}
 }
 
@@ -11116,6 +11124,10 @@ has_states_to_form_korea = {
 
 		if = { limit = { NOT = { OOO = { owns_state = 525 } } } owns_state = 525 }
 		if = { limit = { NOT = { OOO = { owns_state = 527 } } } owns_state = 527 }
+		if = { limit = { NOT = { OOO = { owns_state = 1028 } } } owns_state = 1028 }
+		if = { limit = { NOT = { OOO = { owns_state = 1029 } } } owns_state = 1029 }
+		if = { limit = { NOT = { OOO = { owns_state = 1030 } } } owns_state = 1030 }
+		if = { limit = { NOT = { OOO = { owns_state = 1031 } } } owns_state = 1031 }
 	}
 }
 

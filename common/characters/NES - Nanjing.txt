@@ -1,0 +1,38 @@
+characters={
+	NES_chiang_kaishek = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=CHI_chiang_kaishek
+			portraits={
+				civilian={
+					large=GFX_portrait_CHI_chiang_kai_shek
+				}
+			}
+			country_leader={
+				traits={ CHI_generallissimo_sea blue_shirt_connections_0 }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=CHI_chiang_kaishek
+			portraits={
+				civilian={
+					large=GFX_portrait_CHI_chiang_kaishek
+				}
+			}
+			country_leader={
+				traits={ CHI_generallissimo_sea blue_shirt_connections_0 }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
