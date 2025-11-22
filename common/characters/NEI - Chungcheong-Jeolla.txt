@@ -1,17 +1,39 @@
 characters={
-	NEI_pak_hon_yong={
-		name=KOR_pak_hon_yong
-		portraits={
-			civilian={
-				large=GFX_portrait_KOR_pak_hon_yong
-				small=GFX_portrait_KOR_pak_hon_yong_civilian_small
+	NEI_pak_hon_yong = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=KOR_pak_hon_yong
+			portraits={
+				civilian={
+					large=GFX_portrait_KOR_pak_hon_yong
+					small=GFX_portrait_KOR_pak_hon_yong_civilian_small
+				}
+			}
+			country_leader={
+				traits={ JAP_socialist_revolutionary }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			traits={ JAP_socialist_revolutionary }
-			ideology=stalinism
-			expire="1965.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=KOR_pak_hon_yong
+			portraits={
+				civilian={
+					large=GFX_Portrait_Asia_Generic_1
+				}
+			}
+			country_leader={
+				traits={ JAP_socialist_revolutionary }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }

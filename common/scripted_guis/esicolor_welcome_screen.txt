@@ -1319,7 +1319,7 @@ scripted_gui = {
 			esicolor_welcome_screen_tab_1_page_3_max_plus_5_click = {
 				set_variable = { global.setup_resource_types = 1 }
 				if = {
-					limit = { check_variable = { global.setup_resource_types_max < 6 } }
+					limit = { check_variable = { global.setup_resource_types_max < 7 } }
 
 					add_to_variable = { global.setup_resource_types_max = 1 }
 				}
@@ -2142,6 +2142,143 @@ scripted_gui = {
 					clamp_variable = {
 						var = global.setup_resource_chromium_max
 						min = global.setup_resource_chromium_min
+						max = 250
+					}
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_3_min_minus_12_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_coal_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_coal_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_12_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_coal_min < global.setup_resource_coal_max } }
+
+					add_to_variable = { global.setup_resource_coal_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_12_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_coal_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_coal_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_coal_min
+						min = 1
+						max = global.setup_resource_coal_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_12_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_coal_min < global.setup_resource_coal_max } }
+
+					add_to_variable = { global.setup_resource_coal_min = 5 }
+					clamp_variable = {
+						var = global.setup_resource_coal_min
+						min = 1
+						max = global.setup_resource_coal_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_minus_12_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_coal_min > 1 } }
+
+					subtract_from_variable = { global.setup_resource_coal_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_coal_min
+						min = 1
+						max = global.setup_resource_coal_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_min_plus_12_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_coal_min < global.setup_resource_coal_max } }
+
+					add_to_variable = { global.setup_resource_coal_min = 10 }
+					clamp_variable = {
+						var = global.setup_resource_coal_min
+						min = 1
+						max = global.setup_resource_coal_max
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_12_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_coal_max > global.setup_resource_coal_min } }
+
+					subtract_from_variable = { global.setup_resource_coal_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_12_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_coal_max < 250 } }
+
+					add_to_variable = { global.setup_resource_coal_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_12_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_coal_max > global.setup_resource_coal_min } }
+
+					subtract_from_variable = { global.setup_resource_coal_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_coal_max
+						min = global.setup_resource_coal_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_12_control_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_coal_max < 250 } }
+
+					add_to_variable = { global.setup_resource_coal_max = 5 }
+					clamp_variable = {
+						var = global.setup_resource_coal_max
+						min = global.setup_resource_coal_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_minus_12_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_coal_max > global.setup_resource_coal_min } }
+
+					subtract_from_variable = { global.setup_resource_coal_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_coal_max
+						min = global.setup_resource_coal_min
+						max = 250
+					}
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_3_max_plus_12_shift_click = {
+				set_variable = { global.setup_resource_types = 1 }
+				if = {
+					limit = { check_variable = { global.setup_resource_coal_max < 250 } }
+
+					add_to_variable = { global.setup_resource_coal_max = 10 }
+					clamp_variable = {
+						var = global.setup_resource_coal_max
+						min = global.setup_resource_coal_min
 						max = 250
 					}
 				}

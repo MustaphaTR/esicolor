@@ -1,17 +1,39 @@
 characters={
-	SZF_kim_il_sung={
-		name=KOR_kim_il_sung
-		portraits={
-			civilian={
-				large = GFX_portrait_KOR_kim_il_sung
-				small = GFX_portrait_KOR_kim_il_sung_small
+	SZF_kim_il_sung = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=KOR_kim_il_sung
+			portraits={
+				civilian={
+					large=GFX_portrait_KOR_kim_il_sung
+					small=GFX_portrait_KOR_kim_il_sung_small
+				}
+			}
+			country_leader={
+				traits={ KOR_suryong }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			traits = { KOR_suryong }
-			ideology=stalinism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=KOR_kim_il_sung
+			portraits={
+				civilian={
+					large=GFX_Portrait_Japan_Generic_1
+				}
+			}
+			country_leader={
+				traits={ KOR_suryong }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }

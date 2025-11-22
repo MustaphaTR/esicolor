@@ -6,4 +6,4 @@ for filename in glob.glob(os.path.join(folder, '*.txt')):
     with open(os.path.join(os.getcwd(), filename), 'r') as f:
         content = f.read()
         if content.find("victory_point") == -1:
-            print("state = " + filename[len(folder) - 1:filename.find("-")])
+            print("state = " + filename[len(folder) - 1:filename.find("-")].strip())

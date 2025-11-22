@@ -996,6 +996,10 @@ log_resources = {
 	set_variable = { starting_chromium = resource@chromium }
 	set_variable = { starting_chromium_minus = starting_chromium }
 	multiply_variable = { starting_chromium_minus = -1 }
+
+	set_variable = { starting_coal = resource@coal }
+	set_variable = { starting_coal_minus = starting_coal }
+	multiply_variable = { starting_coal_minus = -1 }
 }
 remove_starting_resources = {
 	add_resource = {
@@ -1021,6 +1025,10 @@ remove_starting_resources = {
 	add_resource = {
 		type = chromium
 		amount = starting_chromium_minus
+	}
+	add_resource = {
+		type = coal
+		amount = starting_coal_minus
 	}
 }
 
@@ -1686,6 +1694,59 @@ clear_landmarks = {
 			province = { all_provinces = yes }
 			instant_build = yes
 		}
+		set_building_level = {
+			type = landmark_forbidden_city
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_nanjing_presidential_palace
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_nanjing_presidential_palace_prc
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_nanjing_presidential_palace_gen
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_great_wall_section
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		remove_province_modifier = {
+			static_modifiers = { the_great_wall }
+
+			province = { all_provinces = yes }
+		}
+		set_building_level = {
+			type = landmark_tokyo_imperial_palace
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_national_diet
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_hakko_ichiu
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
 	}
 }
 
@@ -1735,6 +1796,13 @@ clear_resources = {
 		add_resource = {
 			type = chromium
 			amount = chromiumhere
+		}
+		set_temp_variable = { coalhere = resource@coal }
+		divide_temp_variable = { coalhere = infrahere }
+		multiply_temp_variable = { coalhere = -1 }
+		add_resource = {
+			type = coal
+			amount = coalhere
 		}
 	}
 }
@@ -1790,6 +1858,14 @@ setup_default_resources = {
 					amount = starting_chromium
 				}
 			}
+			if = {
+				limit = { check_variable = { starting_coal > 0 } }
+
+				add_resource = {
+					type = coal
+					amount = starting_coal
+				}
+			}
 		}
 	}
 }
@@ -1819,6 +1895,10 @@ setup_equal_resources = {
 		add_resource = {
 			type = chromium
 			amount = 2
+		}
+		add_resource = {
+			type = coal
+			amount = 10
 		}
 	}
 }
@@ -1954,6 +2034,28 @@ randomise_resources = {
 
 				add_resource = {
 					type = chromium
+					amount = resourcetoadd
+				}
+			}
+		}
+		15 = {
+			modifier = {
+				factor = 0
+
+				coal > 0
+			}
+			custom_effect_tooltip = esicolor.8.e_tt7
+			hidden_effect = {
+				set_temp_variable = { resourcetoadd = 2 }
+				randomize_temp_variable = {
+					var = resourcetoadd
+					distribution = uniform
+					min = global.setup_resource_coal_min
+					max = global.setup_resource_coal_max
+				}
+
+				add_resource = {
+					type = coal
 					amount = resourcetoadd
 				}
 			}
@@ -10361,6 +10463,7 @@ clear_province_modifiers = {
 		if = { limit = { has_dynamic_modifier = { modifier = COG_state_loyal_to_free_congo_modifier } } remove_dynamic_modifier = { modifier = COG_state_loyal_to_free_congo_modifier } }
 		if = { limit = { has_dynamic_modifier = { modifier = BRA_neglected_state_dynamic_modifier } } remove_dynamic_modifier = { modifier = BRA_neglected_state_dynamic_modifier } }
 		if = { limit = { has_dynamic_modifier = { modifier = idea_PAR_river_navy } } remove_dynamic_modifier = { modifier = idea_PAR_river_navy } }
+		if = { limit = { has_dynamic_modifier = { modifier = CHI_shanghai_international_settlement } } remove_dynamic_modifier = { modifier = CHI_shanghai_international_settlement } }
 	}
 }
 
@@ -10445,6 +10548,8 @@ add_province_modifiers = {
 	325 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Dali
 
 	323 = { add_dynamic_modifier = { modifier = dense_rural_infrastructure } } #Nepal
+
+	613 = { add_dynamic_modifier = { modifier = CHI_shanghai_international_settlement } } #Shanghai
 }
 
 setup_strat_regions_game = {
