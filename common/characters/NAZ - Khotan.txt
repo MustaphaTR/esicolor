@@ -1,0 +1,39 @@
+characters={
+	NAZ_ma_hushan = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=KHM_ma_hushan
+			portraits={
+				civilian={
+					large=GFX_portrait_KHM_ma_hushan
+					small=GFX_portrait_KHM_ma_hushan_small
+				}
+			}
+			country_leader={
+				traits={ KHM_padishah }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=KHM_ma_hushan
+			portraits={
+				civilian={
+					large=GFX_Portrait_Asia_Generic_warlord1
+				}
+			}
+			country_leader={
+				traits={ KHM_padishah }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

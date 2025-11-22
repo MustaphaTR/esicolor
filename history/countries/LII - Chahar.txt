@@ -1,14 +1,19 @@
-612 = {
+611 = {
 	remove_core_of = MEN
 	remove_core_of = CHI
 	remove_core_of = PRC
 
-	transfer_state_to = LIZ
-	add_core_of = LIZ
+	transfer_state_to = LII
+	add_core_of = LII
+}
+1936.1.1.12 = {
+	611 = {
+		remove_core_of = HBC
+	}
 }
 
-capital = 612
-oob = "612_1007"
+capital = 611
+oob = "611_1007"
 
 set_research_slots = 3
 set_technology = {
@@ -17,17 +22,19 @@ set_technology = {
 
 set_convoys = 5
 set_popularities = {
-	democratic = 15
-	fascism = 15
-	communism = 15
-	neutrality = 55
+	democratic = 0
+	fascism = 80
+	communism = 0
+	neutrality = 20
 }
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = fascism
 	last_election = "1935.10.10"
 	election_frequency = 36
 	elections_allowed = no
 }
+
+recruit_character = LII_prince_demchugdongrub
 
 set_rule = {
 	can_generate_female_aces = yes
