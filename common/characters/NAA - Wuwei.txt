@@ -1,0 +1,39 @@
+characters={
+	NAA_ma_buqing = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=XSM_ma_buqing
+			portraits={
+				civilian={
+					large=GFX_portrait_GSM_ma_buqing
+					small=GFX_portrait_GSM_ma_buqing_small
+				}
+			}
+			country_leader={
+				traits={ GSM_staunch_anti_communist }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=XSM_ma_buqing
+			portraits={
+				civilian={
+					large=GFX_portrait_asia_generic_land_8
+				}
+			}
+			country_leader={
+				traits={ GSM_staunch_anti_communist }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

@@ -1,0 +1,132 @@
+ideas = {
+	industrial_concern = {
+		EZF_railway_company = {
+			name = PHI_manila_railroad_company
+			picture = PHI_manilla_railroad_company
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = EZF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 327
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					327 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
+		}
+
+		EZF_telephone_company = {
+			name = PHI_philippine_long_distance_telephone_company
+			picture = PHI_philippine_long_distance_telephone_company
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = telephone_company_disabled }
+				OR = {
+					original_tag = EZF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 327
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					327 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.06
+				radar_tech = 0.10
+			}
+			traits = { telephone_company }
+		}
+	}
+
+	naval_manufacturer = { 
+		designer = yes
+
+		EZF_repair_and_refurbishment_plant = {
+			name = PHI_cavite_naval_base_organization
+			picture = GFX_idea_PHI_cavite_naval_base
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = repair_and_refurbishment_plant_disabled }
+				OR = {
+					original_tag = EZF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 327
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					327 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { repair_and_refurbishment_plant_esicolor }
+		}
+
+		LZB_convoy_escort_naval_manufacturer = {
+			name = PHI_compania_maritima_de_cebu
+			picture = PHI_compania_maritima
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = LZB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 628
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					628 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+}

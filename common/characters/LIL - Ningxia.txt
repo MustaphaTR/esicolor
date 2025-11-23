@@ -1,0 +1,39 @@
+characters={
+	LIL_ma_hongkui = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=XSM_ma_hongkui
+			portraits={
+				civilian={
+					large=GFX_portrait_NXM_ma_hongkui
+					small=GFX_portrait_NXM_ma_hongkui_small
+				}
+			}
+			country_leader={
+				traits={ NXM_king_of_ningxia }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=XSM_ma_hongkui
+			portraits={
+				civilian={
+					large=GFX_portrait_asia_generic_land_14
+				}
+			}
+			country_leader={
+				traits={ NXM_king_of_ningxia }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

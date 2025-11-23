@@ -578,7 +578,7 @@ get_total_manpower = {
 		add_to_array = { global.populations = state_population_k }
 	}
 	set_variable = { global.per_state_pop = global.total_pop }
-	divide_variable = { global.per_state_pop = 1016 }
+	divide_variable = { global.per_state_pop = 1046 }
 	multiply_variable = { global.per_state_pop = 1000 }
 	round_variable = global.per_state_pop
 }
@@ -3005,7 +3005,7 @@ randomise_intelligence_agency = {
 
 			create_intelligence_agency = yes
 		}
-		1016 = {
+		1046 = {
 			modifier = { add = intelligence_agency_minus }
 		}
 	}
@@ -10283,12 +10283,14 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = committed_anti_fascist_no_lar } remove_country_leader_trait = committed_anti_fascist_no_lar }
 	if = { limit = { has_country_leader_with_trait = pragmatic_socialist } remove_country_leader_trait = pragmatic_socialist }
 	if = { limit = { has_country_leader_with_trait = backed_by_political_coalition } remove_country_leader_trait = backed_by_political_coalition }
+	if = { limit = { has_country_leader_with_trait = JAP_chairman_of_the_jcp_trait } remove_country_leader_trait = JAP_chairman_of_the_jcp_trait }
 	if = { limit = { has_country_leader_with_trait = JAP_governor_general_of_korea } remove_country_leader_trait = JAP_governor_general_of_korea }
 	if = { limit = { has_country_leader_with_trait = JAP_socialist_revolutionary } remove_country_leader_trait = JAP_socialist_revolutionary }
 	if = { limit = { has_country_leader_with_trait = KOR_unam } remove_country_leader_trait = KOR_unam }
 	if = { limit = { has_country_leader_with_trait = KOR_suryong } remove_country_leader_trait = KOR_suryong }
 	if = { limit = { has_country_leader_with_trait = KOR_highness_yi_of_changdeokgung } remove_country_leader_trait = KOR_highness_yi_of_changdeokgung }
 	if = { limit = { has_country_leader_with_trait = KOR_mongyang } remove_country_leader_trait = KOR_mongyang }
+	if = { limit = { has_country_leader_with_trait = MAN_japanese_puppet } remove_country_leader_trait = MAN_japanese_puppet }
 	if = { limit = { has_country_leader_with_trait = MEN_borjigin_descendant } remove_country_leader_trait = MEN_borjigin_descendant }
 	if = { limit = { has_country_leader_with_trait = MEN_educated_ulanqb_nobleman } remove_country_leader_trait = MEN_educated_ulanqb_nobleman }
 	if = { limit = { has_country_leader_with_trait = MEN_nationalist_education_enthusiast } remove_country_leader_trait = MEN_nationalist_education_enthusiast }
@@ -10297,11 +10299,14 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = KHM_padishah } remove_country_leader_trait = KHM_padishah }
 	if = { limit = { has_country_leader_with_trait = KUM_wild_horse } remove_country_leader_trait = KUM_wild_horse }
 	if = { limit = { has_country_leader_with_trait = XSM_devout_leader } remove_country_leader_trait = XSM_devout_leader }
+	if = { limit = { has_country_leader_with_trait = NXM_king_of_ningxia } remove_country_leader_trait = NXM_king_of_ningxia }
+	if = { limit = { has_country_leader_with_trait = SIC_reckless_commander } remove_country_leader_trait = SIC_reckless_commander }
 	if = { limit = { has_country_leader_with_trait = XIC_young_marshall } remove_country_leader_trait = XIC_young_marshall }
 	if = { limit = { has_country_leader_with_trait = SHX_model_governor } remove_country_leader_trait = SHX_model_governor }
 	if = { limit = { has_country_leader_with_trait = YUN_king_of_yunnan } remove_country_leader_trait = YUN_king_of_yunnan }
 	if = { limit = { has_country_leader_with_trait = GXC_fierce_leader } remove_country_leader_trait = GXC_fierce_leader }
 	if = { limit = { has_country_leader_with_trait = GDC_king_of_the_southern_skies } remove_country_leader_trait = GDC_king_of_the_southern_skies }
+	if = { limit = { has_country_leader_with_trait = CHI_the_northern_bastion_trait } remove_country_leader_trait = CHI_the_northern_bastion_trait }
 	if = { limit = { has_country_leader_with_trait = CHI_generallissimo_sea } remove_country_leader_trait = CHI_generallissimo_sea }
 	if = { limit = { has_country_leader_with_trait = blue_shirt_connections_0 } remove_country_leader_trait = blue_shirt_connections_0 }
 	if = { limit = { has_country_leader_with_trait = PRC_the_general_secretary } remove_country_leader_trait = PRC_the_general_secretary }
@@ -10321,6 +10326,7 @@ clear_leader_traits = {
 
 	if = { limit = { has_country_leader_with_trait = popular_figurehead } remove_country_leader_trait = popular_figurehead }
 	if = { limit = { has_country_leader_with_trait = popular_figurehead2 } remove_country_leader_trait = popular_figurehead2 }
+	if = { limit = { has_country_leader_with_trait = popular_figurehead3 } remove_country_leader_trait = popular_figurehead3 }
 	if = { limit = { has_country_leader_with_trait = propaganda_expert } remove_country_leader_trait = propaganda_expert }
 	if = { limit = { has_country_leader_with_trait = silent_workhorse } remove_country_leader_trait = silent_workhorse }
 	if = { limit = { has_country_leader_with_trait = prince_of_terror } remove_country_leader_trait = prince_of_terror }

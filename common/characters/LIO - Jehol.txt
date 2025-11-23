@@ -1,0 +1,39 @@
+characters={
+	LIO_zhao_shangzhi = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=MAN_zhao_shangzhi
+			portraits={
+				civilian={
+					large=GFX_portrait_MAN_zhao_shangzhi
+					small=GFX_portrait_MAN_zhao_shangzhi_small
+				}
+			}
+			country_leader={
+				traits={ guerilla_warfare_expert staunch_stalinist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=MAN_zhao_shangzhi
+			portraits={
+				civilian={
+					large=GFX_Portrait_Asia_Generic_navy_1
+				}
+			}
+			country_leader={
+				traits={ guerilla_warfare_expert staunch_stalinist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

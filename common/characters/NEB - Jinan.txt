@@ -1,0 +1,39 @@
+characters={
+	NEB_han_fuju = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=SND_han_fuju
+			portraits={
+				civilian={
+					large=GFX_portrait_SND_han_fuju
+					small=GFX_portrait_SND_han_fuju_small
+				}
+			}
+			country_leader={
+				traits={ SND_unreliable_opportunist }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=SND_han_fuju
+			portraits={
+				civilian={
+					large=GFX_Portrait_Asia_Generic_land_3
+				}
+			}
+			country_leader={
+				traits={ SND_unreliable_opportunist }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

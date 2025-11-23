@@ -1,0 +1,37 @@
+characters={
+	FSY_ma_hongbin = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=XSM_ma_hongbin
+			portraits={
+				civilian={
+					large=GFX_portrait_NXM_ma_hongbin
+					small=GFX_portrait_NXM_ma_hongbin_small
+				}
+			}
+			country_leader={
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=XSM_ma_hongbin
+			portraits={
+				civilian={
+					large=GFX_portrait_asia_generic_land_12
+				}
+			}
+			country_leader={
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

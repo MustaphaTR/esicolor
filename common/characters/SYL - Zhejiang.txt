@@ -1,0 +1,81 @@
+characters={
+	SYL_dai_li = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+				has_dlc = "La Resistance"
+			}
+			name = CHI_dai_li
+			portraits = {
+				civilian = {
+					large=GFX_portrait_CHI_dai_li
+					small=GFX_portrait_CHI_dai_li_small 
+				}
+			}
+			country_leader={
+				traits={ spymaster }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name = CHI_dai_li
+			portraits = {
+				civilian = {
+					large=GFX_portrait_CHI_dai_li
+					small=GFX_portrait_CHI_dai_li_small 
+				}
+			}
+			country_leader={
+				ideology=fascism_ideology
+				traits={ spymaster_no_lar }
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT =  { has_dlc = "No Compromise, No Surrender" }
+				has_dlc = "La Resistance"
+			}
+			name = CHI_dai_li
+			portraits = {
+				civilian = {
+					large=GFX_portrait_asia_generic_land_10
+					small=GFX_idea_CHI_dai_li
+				}
+			}
+			country_leader={
+				traits={ spymaster }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name = CHI_dai_li
+			portraits = {
+				civilian = {
+					large=GFX_portrait_asia_generic_land_10
+					small=GFX_idea_CHI_dai_li
+				}
+			}
+			country_leader={
+				ideology=fascism_ideology
+				traits={ spymaster_no_lar }
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

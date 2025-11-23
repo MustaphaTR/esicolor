@@ -1,0 +1,39 @@
+characters={
+	NEF_liu_xiang = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=SIC_liu_xiang
+			portraits={
+				civilian={
+					large=GFX_portrait_SIC_liu_xiang
+					small=GFX_portrait_SIC_liu_xiang_small
+				}
+			}
+			country_leader={
+				traits={ SIC_reckless_commander }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=SIC_liu_xiang
+			portraits={
+				civilian={
+					large=GFX_portrait_asia_generic_land_13
+				}
+			}
+			country_leader={
+				traits={ SIC_reckless_commander }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

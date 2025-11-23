@@ -1,0 +1,39 @@
+characters={
+	LZE_artemio_ricarte = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=PHI_artemio_ricarte
+			portraits={
+				civilian={
+					large=GFX_portrait_PHI_artemio_ricarte
+					small=GFX_portrait_PHI_artemio_ricarte_small
+				}
+			}
+			country_leader={
+				traits={ PHI_philippine_nationalist_leader }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=PHI_artemio_ricarte
+			portraits={
+				civilian={
+					large=GFX_portrait_se_asia_generic_land_3
+				}
+			}
+			country_leader={
+				traits={ PHI_philippine_nationalist_leader }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

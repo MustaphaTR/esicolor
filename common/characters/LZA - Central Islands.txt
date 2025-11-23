@@ -1,0 +1,51 @@
+characters={
+	LZA_emilio_aguinaldo = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=PHI_emilio_aguinaldo
+			portraits={
+				civilian={
+					large=GFX_portrait_PHI_emilio_aguinaldo
+					small=GFX_portrait_PHI_emilio_aguinaldo_small
+				}
+			}
+			country_leader={
+				traits={ PHI_revolutionary_president }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ PHI_revolutionary_president }
+				ideology=falangism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=PHI_emilio_aguinaldo
+			portraits={
+				civilian={
+					large=GFX_Portrait_Asia_Generic_democracy
+				}
+			}
+			country_leader={
+				traits={ PHI_revolutionary_president }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ PHI_revolutionary_president }
+				ideology=falangism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+characters={
+	NZF_cristanto_evangelista = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=PHI_cristanto_evangelista
+			portraits={
+				civilian={
+					large=GFX_portrait_PHI_cristanto_evangelista
+					small=GFX_portrait_PHI_cristanto_evangelista_small
+				}
+			}
+			country_leader={
+				traits={ PHI_radical_leader }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=PHI_cristanto_evangelista
+			portraits={
+				civilian={
+					large=GFX_Portrait_Asia_Generic_1
+				}
+			}
+			country_leader={
+				traits={ PHI_radical_leader }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

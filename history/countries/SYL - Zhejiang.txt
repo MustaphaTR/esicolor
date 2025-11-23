@@ -21,17 +21,19 @@ set_technology = {
 
 set_convoys = 5
 set_popularities = {
-	democratic = 25
-	fascism = 25
-	communism = 25
-	neutrality = 25
+	democratic = 15
+	fascism = 50
+	communism = 0
+	neutrality = 35
 }
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = fascism
 	last_election = "1935.10.10"
 	election_frequency = 36
 	elections_allowed = no
 }
+
+recruit_character = SYL_dai_li
 
 set_rule = {
 	can_generate_female_aces = yes

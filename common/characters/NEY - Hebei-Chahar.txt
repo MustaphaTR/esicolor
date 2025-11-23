@@ -1,0 +1,39 @@
+characters={
+	NEY_song_zheyuan = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=CHI_song_zheyuan
+			portraits={
+				civilian={
+					large=GFX_portrait_CHI_song_zheyuan
+					small=GFX_portrait_CHI_song_zheyuan_small
+				}
+			}
+			country_leader={
+				traits={ CHI_the_northern_bastion_trait }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=CHI_song_zheyuan
+			portraits={
+				civilian={
+					large=GFX_Portrait_Asia_Generic_land_2
+				}
+			}
+			country_leader={
+				traits={ CHI_the_northern_bastion_trait }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
