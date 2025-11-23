@@ -9037,6 +9037,9 @@ can_form_philippines = {
 		original_tag = LZL
 		original_tag = LZF
 		original_tag = LZB
+		original_tag = NZS
+		original_tag = OAM # NZL
+		original_tag = NZF
 	}
 }
 
@@ -9090,6 +9093,9 @@ is_philippines = {
 		state = 626
 		state = 627
 		state = 628
+		state = 1025
+		state = 1026
+		state = 1027
 	}
 }
 
@@ -9146,6 +9152,9 @@ has_states_to_form_philippines = {
 		if = { limit = { NOT = { OOO = { owns_state = 625 } } } owns_state = 626 }
 		if = { limit = { NOT = { OOO = { owns_state = 627 } } } owns_state = 627 }
 		if = { limit = { NOT = { OOO = { owns_state = 628 } } } owns_state = 628 }
+		if = { limit = { NOT = { OOO = { owns_state = 1025 } } } owns_state = 1025 }
+		if = { limit = { NOT = { OOO = { owns_state = 1026 } } } owns_state = 1026 }
+		if = { limit = { NOT = { OOO = { owns_state = 1027 } } } owns_state = 1027 }
 	}
 }
 
@@ -9653,6 +9662,7 @@ can_form_vietnam = {
 	OR = {
 		original_tag = ZBL
 		original_tag = LFI
+		original_tag = NIF
 	}
 }
 
@@ -9694,6 +9704,7 @@ is_vietnam = {
 	OR = {
 		state = 286
 		state = 671
+		state = 1017
 	}
 }
 
@@ -9737,6 +9748,7 @@ has_states_to_form_vietnam = {
 
 		if = { limit = { NOT = { OOO = { owns_state = 286 } } } owns_state = 286 }
 		if = { limit = { NOT = { OOO = { owns_state = 671 } } } owns_state = 671 }
+		if = { limit = { NOT = { OOO = { owns_state = 1017 } } } owns_state = 1017 }
 	}
 }
 
@@ -11206,41 +11218,97 @@ has_states_to_form_korea = {
 }
 
 #### Japan ####
-can_form_japan = {
+can_form_honshu = {
 	OR = {
-		can_form_sakhalin = yes
 		original_tag = ZBZ
-		original_tag = SZL
-		original_tag = SZB
 		original_tag = SZY
-		original_tag = SEO
 		original_tag = SEI
 		original_tag = SEZ
 		original_tag = SEE
 		original_tag = SEA
 		original_tag = SES
+		original_tag = NIY
+		original_tag = NZO
+	}
+}
+
+can_form_kyushu_and_shikoku = {
+	OR = {
+		original_tag = SZL
+		original_tag = SZB
+		original_tag = SEO
+		original_tag = NIB
+	}
+}
+
+can_form_japan = {
+	OR = {
+		can_form_sakhalin = yes
+		can_form_kyushu_and_shikoku = yes
+		can_form_honshu = yes
 		original_tag = SEL
 		original_tag = LAS
 		original_tag = LAB
 	}
 }
 
-is_japan = {
+is_honshu = {
 	OR = {
-		is_sakhalin = yes
 		state = 282
-		state = 526
-		state = 528
 		state = 529
-		state = 530
 		state = 531
 		state = 532
 		state = 533
 		state = 534
 		state = 535
+		state = 1019
+		state = 1020
+	}
+}
+
+is_kyushu_and_shikoku = {
+	OR = {
+		state = 526
+		state = 528
+		state = 530
+		state = 1018
+	}
+}
+
+is_japan = {
+	OR = {
+		is_sakhalin = yes
+		is_honshu = yes
+		is_kyushu_and_shikoku = yes
 		state = 536
 		state = 645
 		state = 648
+	}
+}
+
+has_states_to_form_honshu = {
+	custom_trigger_tooltip = {
+		tooltip = form_honshu_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 282 } } } owns_state = 282 }
+		if = { limit = { NOT = { OOO = { owns_state = 529 } } } owns_state = 529 }
+		if = { limit = { NOT = { OOO = { owns_state = 531 } } } owns_state = 531 }
+		if = { limit = { NOT = { OOO = { owns_state = 532 } } } owns_state = 532 }
+		if = { limit = { NOT = { OOO = { owns_state = 533 } } } owns_state = 533 }
+		if = { limit = { NOT = { OOO = { owns_state = 534 } } } owns_state = 534 }
+		if = { limit = { NOT = { OOO = { owns_state = 535 } } } owns_state = 535 }
+		if = { limit = { NOT = { OOO = { owns_state = 1019 } } } owns_state = 1019 }
+		if = { limit = { NOT = { OOO = { owns_state = 1020 } } } owns_state = 1020 }
+	}
+}
+
+has_states_to_form_kyushu_and_shikoku = {
+	custom_trigger_tooltip = {
+		tooltip = form_kyushu_and_shikoku_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 528 } } } owns_state = 528 }
+		if = { limit = { NOT = { OOO = { owns_state = 530 } } } owns_state = 530 }
+		if = { limit = { NOT = { OOO = { owns_state = 1018 } } } owns_state = 1018 }
 	}
 }
 
@@ -11251,30 +11319,24 @@ has_states_to_form_japan = {
 	custom_trigger_tooltip = {
 		tooltip = form_japan_has_states_tt
 
-		if = { limit = { NOT = { OOO = { owns_state = 282 } } } owns_state = 282 }
-		if = { limit = { NOT = { OOO = { owns_state = 528 } } } owns_state = 528 }
-		if = { limit = { NOT = { OOO = { owns_state = 529 } } } owns_state = 529 }
-		if = { limit = { NOT = { OOO = { owns_state = 530 } } } owns_state = 530 }
-		if = { limit = { NOT = { OOO = { owns_state = 531 } } } owns_state = 531 }
-		if = { limit = { NOT = { OOO = { owns_state = 532 } } } owns_state = 532 }
-		if = { limit = { NOT = { OOO = { owns_state = 533 } } } owns_state = 533 }
-		if = { limit = { NOT = { OOO = { owns_state = 534 } } } owns_state = 534 }
-		if = { limit = { NOT = { OOO = { owns_state = 535 } } } owns_state = 535 }
+		has_states_to_form_honshu = yes
+		has_states_to_form_kyushu_and_shikoku = yes
 		if = { limit = { NOT = { OOO = { owns_state = 536 } } } owns_state = 536 }
+	}
+}
+
+required_states_to_form_kyushu_and_shikoku = {
+	OR = {
+		state = 528
+		state = 530
+		state = 1018
 	}
 }
 
 required_states_to_form_japan = {
 	OR = {
-		state = 282
-		state = 528
-		state = 529
-		state = 530
-		state = 531
-		state = 532
-		state = 533
-		state = 534
-		state = 535
+		is_honshu = yes
+		required_states_to_form_kyushu_and_shikoku = yes
 		state = 536
 	}
 }

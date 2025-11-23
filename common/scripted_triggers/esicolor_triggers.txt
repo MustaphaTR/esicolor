@@ -556,39 +556,19 @@ is_neighboring_control_special_case_state = {
 			524 = { is_controlled_by = ROOT }
 		}
 
-		# Cebu-Cental Islands/Samar/Mindanao
-		AND = {
-			THIS = { state = 628 }
-			OR = {
-				624 = { is_controlled_by = ROOT }
-				625 = { is_controlled_by = ROOT }
-				627 = { is_controlled_by = ROOT }
-			}
-		}
-		AND = {
-			THIS = {
-				OR = {
-					state = 624
-					state = 625
-					state = 627
-				}
-			}
-			628 = { is_controlled_by = ROOT }
-		}
-
-		# Palawan-Cental Islands/North Borneo
+		# Palawan-Manila/Sabah
 		AND = {
 			THIS = { state = 626 }
 			OR = {
-				333 = { is_controlled_by = ROOT }
-				624 = { is_controlled_by = ROOT }
+				327 = { is_controlled_by = ROOT }
+				1024 = { is_controlled_by = ROOT }
 			}
 		}
 		AND = {
 			THIS = {
 				OR = {
-					state = 333
-					state = 624
+					state = 327
+					state = 1024
 				}
 			}
 			626 = { is_controlled_by = ROOT }
@@ -930,14 +910,22 @@ is_neighboring_control_special_case_state = {
 			334 = { is_controlled_by = ROOT }
 		}
 
-		# Sumatra-Singapore
-		AND = {
-			THIS = { state = 336 }
-			672 = { is_controlled_by = ROOT }
-		}
+		# Sumatra-Singapore/Malaya
 		AND = {
 			THIS = { state = 672 }
-			336 = { is_controlled_by = ROOT }
+			OR = {
+				336 = { is_controlled_by = ROOT }
+				1024 = { is_controlled_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 336
+					state = 1024
+				}
+			}
+			672 = { is_controlled_by = ROOT }
 		}
 
 		# Andaman-Burma/Sumatra
@@ -1722,39 +1710,19 @@ is_neighboring_ownership_special_case_state = {
 			524 = { is_owned_by = ROOT }
 		}
 
-		# Cebu-Cental Islands/Samar/Mindanao
-		AND = {
-			THIS = { state = 628 }
-			OR = {
-				624 = { is_owned_by = ROOT }
-				625 = { is_owned_by = ROOT }
-				627 = { is_owned_by = ROOT }
-			}
-		}
-		AND = {
-			THIS = {
-				OR = {
-					state = 624
-					state = 625
-					state = 627
-				}
-			}
-			628 = { is_owned_by = ROOT }
-		}
-
-		# Palawan-Cental Islands/North Borneo
+		# Palawan-Manila/Sabah
 		AND = {
 			THIS = { state = 626 }
 			OR = {
-				333 = { is_owned_by = ROOT }
-				624 = { is_owned_by = ROOT }
+				327 = { is_owned_by = ROOT }
+				1024 = { is_owned_by = ROOT }
 			}
 		}
 		AND = {
 			THIS = {
 				OR = {
-					state = 333
-					state = 624
+					state = 327
+					state = 1024
 				}
 			}
 			626 = { is_owned_by = ROOT }
@@ -2096,14 +2064,22 @@ is_neighboring_ownership_special_case_state = {
 			334 = { is_owned_by = ROOT }
 		}
 
-		# Sumatra-Singapore
-		AND = {
-			THIS = { state = 336 }
-			672 = { is_owned_by = ROOT }
-		}
+		# Sumatra-Singapore/Malaya
 		AND = {
 			THIS = { state = 672 }
-			336 = { is_owned_by = ROOT }
+			OR = {
+				336 = { is_owned_by = ROOT }
+				1021 = { is_owned_by = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 336
+					state = 1024
+				}
+			}
+			672 = { is_owned_by = ROOT }
 		}
 
 		# Andaman-Burma/Sumatra
@@ -2888,39 +2864,19 @@ is_neighboring_core_special_case_state = {
 			524 = { is_core_of = ROOT }
 		}
 
-		# Cebu-Cental Islands/Samar/Mindanao
-		AND = {
-			THIS = { state = 628 }
-			OR = {
-				624 = { is_core_of = ROOT }
-				625 = { is_core_of = ROOT }
-				627 = { is_core_of = ROOT }
-			}
-		}
-		AND = {
-			THIS = {
-				OR = {
-					state = 624
-					state = 625
-					state = 627
-				}
-			}
-			628 = { is_core_of = ROOT }
-		}
-
-		# Palawan-Cental Islands/North Borneo
+		# Palawan-Manila/Saban
 		AND = {
 			THIS = { state = 626 }
 			OR = {
-				333 = { is_core_of = ROOT }
-				624 = { is_core_of = ROOT }
+				327 = { is_core_of = ROOT }
+				1024 = { is_core_of = ROOT }
 			}
 		}
 		AND = {
 			THIS = {
 				OR = {
-					state = 333
-					state = 624
+					state = 327
+					state = 1024
 				}
 			}
 			626 = { is_core_of = ROOT }
@@ -3262,14 +3218,22 @@ is_neighboring_core_special_case_state = {
 			334 = { is_core_of = ROOT }
 		}
 
-		# Sumatra-Singapore
-		AND = {
-			THIS = { state = 336 }
-			672 = { is_core_of = ROOT }
-		}
+		# Sumatra-Singapore/Malaya
 		AND = {
 			THIS = { state = 672 }
-			336 = { is_core_of = ROOT }
+			OR = {
+				336 = { is_core_of = ROOT }
+				1024 = { is_core_of = ROOT }
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					state = 336
+					state = 1024
+				}
+			}
+			672 = { is_core_of = ROOT }
 		}
 
 		# Andaman-Burma/Sumatra
@@ -4098,43 +4062,21 @@ is_neighboring_control_special_case_country = {
 			ROOT = { controls_state = 524 }
 		}
 
-		# Cebu-Cental Islands/Samar/Mindanao
-		AND = {
-			THIS = { controls_state = 628 }
-			ROOT = {
-				OR = {
-					controls_state = 624
-					controls_state = 625
-					controls_state = 627
-				}
-			}
-		}
-		AND = {
-			THIS = {
-				OR = {
-					controls_state = 624
-					controls_state = 625
-					controls_state = 627
-				}
-			}
-			ROOT = { controls_state = 628 }
-		}
-
-		# Palawan-Cental Islands/North Borneo
+		# Palawan-Manila/Sabah
 		AND = {
 			THIS = { controls_state = 626 }
 			ROOT = {
 				OR = {
-					controls_state = 333
-					controls_state = 624
+					controls_state = 327
+					controls_state = 1024
 				}
 			}
 		}
 		AND = {
 			THIS = {
 				OR = {
-					controls_state = 333
-					controls_state = 624
+					controls_state = 327
+					controls_state = 1024
 				}
 			}
 			ROOT = { controls_state = 626 }
@@ -4508,14 +4450,24 @@ is_neighboring_control_special_case_country = {
 			ROOT = { controls_state = 334 }
 		}
 
-		# Sumatra-Singapore
-		AND = {
-			THIS = { controls_state = 336 }
-			ROOT = { controls_state = 672 }
-		}
+		# Sumatra-Singapore/Malaya
 		AND = {
 			THIS = { controls_state = 672 }
-			ROOT = { controls_state = 336 }
+			ROOT = {
+				OR = {
+					controls_state = 336
+					controls_state = 1024
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 336
+					controls_state = 1024
+				}
+			}
+			ROOT = { controls_state = 672 }
 		}
 
 		# Andaman-Burma/Sumatra
@@ -5366,43 +5318,21 @@ is_neighboring_control_special_case_country_this_from = {
 			FROM = { controls_state = 524 }
 		}
 
-		# Cebu-Cental Islands/Samar/Mindanao
-		AND = {
-			THIS = { controls_state = 628 }
-			FROM = {
-				OR = {
-					controls_state = 624
-					controls_state = 625
-					controls_state = 627
-				}
-			}
-		}
-		AND = {
-			THIS = {
-				OR = {
-					controls_state = 624
-					controls_state = 625
-					controls_state = 627
-				}
-			}
-			FROM = { controls_state = 628 }
-		}
-
-		# Palawan-Cental Islands/North Borneo
+		# Palawan-Manila/Sabah
 		AND = {
 			THIS = { controls_state = 626 }
 			FROM = {
 				OR = {
-					controls_state = 333
-					controls_state = 624
+					controls_state = 327
+					controls_state = 1024
 				}
 			}
 		}
 		AND = {
 			THIS = {
 				OR = {
-					controls_state = 333
-					controls_state = 624
+					controls_state = 327
+					controls_state = 1024
 				}
 			}
 			FROM = { controls_state = 626 }
@@ -5776,14 +5706,24 @@ is_neighboring_control_special_case_country_this_from = {
 			FROM = { controls_state = 334 }
 		}
 
-		# Sumatra-Singapore
-		AND = {
-			THIS = { controls_state = 336 }
-			FROM = { controls_state = 672 }
-		}
+		# Sumatra-Singapore/Malaya
 		AND = {
 			THIS = { controls_state = 672 }
-			FROM = { controls_state = 336 }
+			FROM = {
+				OR = {
+					controls_state = 336
+					controls_state = 1024
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					controls_state = 336
+					controls_state = 1024
+				}
+			}
+			FROM = { controls_state = 672 }
 		}
 
 		# Andaman-Burma/Sumatra
@@ -6634,43 +6574,21 @@ is_neighboring_ownership_special_case_country = {
 			ROOT = { owns_state = 524 }
 		}
 
-		# Cebu-Cental Islands/Samar/Mindanao
-		AND = {
-			THIS = { owns_state = 628 }
-			ROOT = {
-				OR = {
-					owns_state = 624
-					owns_state = 625
-					owns_state = 627
-				}
-			}
-		}
-		AND = {
-			THIS = {
-				OR = {
-					owns_state = 624
-					owns_state = 625
-					owns_state = 627
-				}
-			}
-			ROOT = { owns_state = 628 }
-		}
-
-		# Palawan-Cental Islands/North Borneo
+		# Palawan-Manila/Sabah
 		AND = {
 			THIS = { owns_state = 626 }
 			ROOT = {
 				OR = {
-					owns_state = 333
-					owns_state = 624
+					owns_state = 327
+					owns_state = 1024
 				}
 			}
 		}
 		AND = {
 			THIS = {
 				OR = {
-					owns_state = 333
-					owns_state = 624
+					owns_state = 327
+					owns_state = 1024
 				}
 			}
 			ROOT = { owns_state = 626 }
@@ -7044,14 +6962,24 @@ is_neighboring_ownership_special_case_country = {
 			ROOT = { owns_state = 334 }
 		}
 
-		# Sumatra-Singapore
-		AND = {
-			THIS = { owns_state = 336 }
-			ROOT = { owns_state = 672 }
-		}
+		# Sumatra-Singapore/Malaya
 		AND = {
 			THIS = { owns_state = 672 }
-			ROOT = { owns_state = 336 }
+			ROOT = {
+				OR = {
+					owns_state = 336
+					owns_state = 1024
+				}
+			}
+		}
+		AND = {
+			THIS = {
+				OR = {
+					owns_state = 336
+					owns_state = 1024
+				}
+			}
+			ROOT = { owns_state = 672 }
 		}
 
 		# Andaman-Burma/Sumatra
