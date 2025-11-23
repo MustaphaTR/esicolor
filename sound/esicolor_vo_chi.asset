@@ -301,6 +301,96 @@ category = {
 		FLO_infantry_positive_combat
 		FLO_infantry_retreat
 		FLO_infantry_move_out
+
+		NEZ_infantry_idle
+		NEZ_infantry_neutral_combat
+		NEZ_infantry_positive_combat
+		NEZ_infantry_retreat
+		NEZ_infantry_move_out
+
+		NEE_infantry_idle
+		NEE_infantry_neutral_combat
+		NEE_infantry_positive_combat
+		NEE_infantry_retreat
+		NEE_infantry_move_out
+
+		NEA_infantry_idle
+		NEA_infantry_neutral_combat
+		NEA_infantry_positive_combat
+		NEA_infantry_retreat
+		NEA_infantry_move_out
+
+		NES_infantry_idle
+		NES_infantry_neutral_combat
+		NES_infantry_positive_combat
+		NES_infantry_retreat
+		NES_infantry_move_out
+
+		NEL_infantry_idle
+		NEL_infantry_neutral_combat
+		NEL_infantry_positive_combat
+		NEL_infantry_retreat
+		NEL_infantry_move_out
+
+		NEF_infantry_idle
+		NEF_infantry_neutral_combat
+		NEF_infantry_positive_combat
+		NEF_infantry_retreat
+		NEF_infantry_move_out
+
+		NEB_infantry_idle
+		NEB_infantry_neutral_combat
+		NEB_infantry_positive_combat
+		NEB_infantry_retreat
+		NEB_infantry_move_out
+
+		NEY_infantry_idle
+		NEY_infantry_neutral_combat
+		NEY_infantry_positive_combat
+		NEY_infantry_retreat
+		NEY_infantry_move_out
+
+		NAO_infantry_idle
+		NAO_infantry_neutral_combat
+		NAO_infantry_positive_combat
+		NAO_infantry_retreat
+		NAO_infantry_move_out
+
+		NAI_infantry_idle
+		NAI_infantry_neutral_combat
+		NAI_infantry_positive_combat
+		NAI_infantry_retreat
+		NAI_infantry_move_out
+
+		NAZ_infantry_idle
+		NAZ_infantry_neutral_combat
+		NAZ_infantry_positive_combat
+		NAZ_infantry_retreat
+		NAZ_infantry_move_out
+
+		NAE_infantry_idle
+		NAE_infantry_neutral_combat
+		NAE_infantry_positive_combat
+		NAE_infantry_retreat
+		NAE_infantry_move_out
+
+		NAA_infantry_idle
+		NAA_infantry_neutral_combat
+		NAA_infantry_positive_combat
+		NAA_infantry_retreat
+		NAA_infantry_move_out
+
+		NAS_infantry_idle
+		NAS_infantry_neutral_combat
+		NAS_infantry_positive_combat
+		NAS_infantry_retreat
+		NAS_infantry_move_out
+
+		NAL_infantry_idle
+		NAL_infantry_neutral_combat
+		NAL_infantry_positive_combat
+		NAL_infantry_retreat
+		NAL_infantry_move_out
 	}
 	compressor = {
 		enabled = yes
@@ -7904,6 +7994,2286 @@ soundeffect =
 soundeffect = 
 {
     name = "FLO_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NEZ ###
+
+soundeffect = 
+{
+    name = "NEZ_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEZ_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEZ_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEZ_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEZ_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NEE ###
+
+soundeffect = 
+{
+    name = "NEE_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEE_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEE_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEE_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEE_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NEA ###
+
+soundeffect = 
+{
+    name = "NEA_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEA_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEA_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEA_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEA_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NES ###
+
+soundeffect = 
+{
+    name = "NES_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NES_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NES_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NES_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NES_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NEL ###
+
+soundeffect = 
+{
+    name = "NEL_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEL_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEL_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEL_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEL_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NEF ###
+
+soundeffect = 
+{
+    name = "NEF_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEF_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEF_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEF_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEF_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NEB ###
+
+soundeffect = 
+{
+    name = "NEB_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEB_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEB_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEB_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEB_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NEY ###
+
+soundeffect = 
+{
+    name = "NEY_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEY_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEY_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEY_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NEY_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NAO ###
+
+soundeffect = 
+{
+    name = "NAO_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAO_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAO_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAO_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAO_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NAI ###
+
+soundeffect = 
+{
+    name = "NAI_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAI_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAI_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAI_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAI_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NAZ ###
+
+soundeffect = 
+{
+    name = "NAZ_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAZ_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAZ_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAZ_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAZ_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NAE ###
+
+soundeffect = 
+{
+    name = "NAE_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAE_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAE_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAE_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAE_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NAA ###
+
+soundeffect = 
+{
+    name = "NAA_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAA_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAA_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAA_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAA_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NAS ###
+
+soundeffect = 
+{
+    name = "NAS_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAS_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAS_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAS_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAS_infantry_move_out"
+    sounds = {
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+### NAL ###
+
+soundeffect = 
+{
+    name = "NAL_infantry_idle"
+    sounds = {
+        sound = ch_Idle_001
+        sound = ch_Idle_002
+        sound = ch_Idle_003
+        sound = ch_Idle_004
+        sound = ch_Idle_005
+        sound = ch_Idle_006
+        sound = ch_Idle_007
+        sound = ch_Idle_008
+        sound = ch_Idle_009
+        sound = ch_Idle_010
+        sound = ch_Idle_011
+        sound = ch_Idle_012
+        sound = ch_Idle_013
+        sound = ch_Idle_014
+        sound = ch_Idle_015
+        sound = ch_Idle_016
+        sound = ch_Idle_017
+        sound = ch_Idle_018
+        sound = ch_Idle_019
+        sound = ch_Idle_020
+		sound = ch_Idle_021
+        sound = ch_Idle_022
+        sound = ch_Idle_023
+        sound = ch_Idle_024
+        sound = ch_Idle_025
+        sound = ch_Idle_026
+        sound = ch_Idle_027
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAL_infantry_neutral_combat"
+    sounds = {
+        sound = ch_Neutral_001
+        sound = ch_Neutral_002
+        sound = ch_Neutral_003
+        sound = ch_Neutral_004
+        sound = ch_Neutral_005
+        sound = ch_Neutral_006
+        sound = ch_Neutral_007
+        sound = ch_Neutral_008
+        sound = ch_Neutral_009
+        sound = ch_Neutral_010
+        sound = ch_Neutral_011
+        sound = ch_Neutral_012
+        sound = ch_Neutral_013
+        sound = ch_Neutral_014
+        sound = ch_Neutral_015
+        sound = ch_Neutral_016
+        sound = ch_Neutral_017
+        sound = ch_Neutral_018
+        sound = ch_Neutral_019
+        sound = ch_Neutral_020
+		sound = ch_Neutral_021
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAL_infantry_positive_combat"
+    sounds = {
+        sound = ch_Positive_001
+        sound = ch_Positive_002
+        sound = ch_Positive_003
+        sound = ch_Positive_004
+        sound = ch_Positive_005
+        sound = ch_Positive_006
+        sound = ch_Positive_007
+        sound = ch_Positive_008
+        sound = ch_Positive_009
+        sound = ch_Positive_010
+        sound = ch_Positive_011
+        sound = ch_Positive_012
+        sound = ch_Positive_013
+        sound = ch_Positive_014
+        sound = ch_Positive_015
+        sound = ch_Positive_016
+        sound = ch_Positive_017
+        sound = ch_Positive_018
+        sound = ch_Positive_019
+        sound = ch_Positive_020
+        sound = ch_Positive_021
+        sound = ch_Positive_022
+        sound = ch_Positive_023
+        sound = ch_Positive_024
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAL_infantry_retreat"
+    sounds = {
+        sound = ch_Retreat_001
+        sound = ch_Retreat_002
+        sound = ch_Retreat_003
+        sound = ch_Retreat_004
+        sound = ch_Retreat_005
+        sound = ch_Retreat_006
+        sound = ch_Retreat_007
+        sound = ch_Retreat_008
+        sound = ch_Retreat_009
+        sound = ch_Retreat_010
+        sound = ch_Retreat_011
+        sound = ch_Retreat_012
+        sound = ch_Retreat_013
+        sound = ch_Retreat_014
+        sound = ch_Retreat_015
+        sound = ch_Retreat_016
+        sound = ch_Retreat_017
+        sound = ch_Retreat_018
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.55
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NAL_infantry_move_out"
     sounds = {
         sound = ch_Positive_010
         sound = ch_Positive_011
