@@ -27,6 +27,7 @@ has_custom_fast_tank_manufacturer = {
 		original_tag = ZBA
 		original_tag = ZBS
 		original_tag = EYL
+		original_tag = LIE
 	}
 }
 
@@ -40,6 +41,7 @@ has_custom_medium_tank_manufacturer = {
 		original_tag = ZFS
 		original_tag = EYE
 		original_tag = SOI
+		original_tag = LZI
 		AND = {
 			NOT = { has_dlc = "Arms Against Tyranny" }
 			original_tag = OOE
@@ -91,6 +93,7 @@ has_custom_pacific_fleet_naval_manufacturer = {
 		original_tag = ABS
 		original_tag = SZI
 		original_tag = FZE
+		original_tag = FAS
 		original_tag = BOF
 		original_tag = BIZ
 		AND = {
@@ -307,6 +310,7 @@ has_custom_light_aircraft_manufacturer = {
 		original_tag = BMC # ALB
 		original_tag = SOI
 		original_tag = SIF
+		original_tag = SYL
 		original_tag = BOB
 		original_tag = YSB
 		AND = {
@@ -322,6 +326,7 @@ has_custom_light_aircraft_manufacturer = {
 has_custom_agility_focused_aircraft_manufacturer = {
 	OR = {
 		original_tag = ZBZ
+		original_tag = FIL
 		AND = {
 			has_dlc = "Arms Against Tyranny"
 			original_tag = IZF
@@ -357,7 +362,7 @@ has_custom_medium_aircraft_manufacturer = {
 		original_tag = ZFL
 		original_tag = EAB
 		original_tag = EFB
-		original_tag = SYL
+		original_tag = LOO
 	}
 }
 
@@ -378,6 +383,7 @@ has_custom_multi_role_aircraft_manufacturer = {
 		original_tag = OAE
 		original_tag = OLI
 		original_tag = ISY
+		original_tag = EZB
 		original_tag = NII
 	}
 }
@@ -446,7 +452,6 @@ has_custom_infantry_equipment_manufacturer = {
 		original_tag = AZY
 		original_tag = AEI
 		original_tag = SOZ
-		original_tag = LZO
 		original_tag = FIL
 		original_tag = FYZ
 		original_tag = BIZ
@@ -454,6 +459,7 @@ has_custom_infantry_equipment_manufacturer = {
 		original_tag = YZI
 		original_tag = NOL
 		original_tag = NII
+		original_tag = NEL
 	}
 }
 
@@ -469,7 +475,9 @@ has_custom_support_equipment_manufacturer = {
 		original_tag = ZYI
 		original_tag = ZYS
 		original_tag = SOI
+		original_tag = LIS
 		original_tag = FYZ
+		original_tag = NES
 	}
 }
 
@@ -605,8 +613,8 @@ has_custom_electronics_concern = {
 		original_tag = ESB
 		original_tag = BMC # ALB
 		original_tag = SEI
-		original_tag = LIE
 		original_tag = YZF
+		original_tag = NES
 	}
 }
 
@@ -621,6 +629,7 @@ has_custom_refinery_concern = {
 		original_tag = ESY
 		original_tag = EFB
 		original_tag = SZB
+		original_tag = LOB
 		original_tag = FIL
 		original_tag = FYF
 		original_tag = BSZ
@@ -633,6 +642,12 @@ has_custom_telephone_company = {
 		original_tag = OAF
 		original_tag = IAI
 		original_tag = EZF
+	}
+}
+
+has_custom_energy_supply_company = {
+	OR = {
+		original_tag = LIE
 	}
 }
 

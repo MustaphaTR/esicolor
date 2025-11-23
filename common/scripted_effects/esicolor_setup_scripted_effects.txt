@@ -9580,6 +9580,15 @@ remove_industrial_concern = {
 			}
 		}
 		20 = {
+			set_country_flag = energy_supply_company_disabled
+
+			modifier = {
+				factor = 0
+				
+				has_country_flag = energy_supply_company_disabled
+			}
+		}
+		20 = {
 			set_country_flag = forestry_company_disabled
 
 			modifier = {
@@ -9670,6 +9679,7 @@ randomise_designers = {
 		remove_materiel_designer = yes
 	}
 
+	remove_industrial_concern = yes
 	remove_industrial_concern = yes
 	remove_industrial_concern = yes
 	remove_industrial_concern = yes
@@ -9820,6 +9830,7 @@ setup_default_companies = {
 	set_country_flag = helicopter_manufacturer_disabled
 
 	set_country_flag = telephone_company_disabled
+	set_country_flag = energy_supply_company_disabled
 	set_country_flag = forestry_company_disabled
 	set_country_flag = construction_company_disabled
 	set_country_flag = mining_company_disabled
@@ -9853,7 +9864,8 @@ setup_basegame_companies = {
 	set_country_flag = helicopter_manufacturer_disabled
 
 	set_country_flag = refinery_concern_disabled
-	set_country_flag = telephoone_company_disabled
+	set_country_flag = telephone_company_disabled
+	set_country_flag = energy_supply_company_disabled
 	set_country_flag = forestry_company_disabled
 	set_country_flag = construction_company_disabled
 	set_country_flag = mining_company_disabled
@@ -9992,6 +10004,7 @@ clear_company_disabled_flags = {
 	clr_country_flag = electronics_concern_disabled
 	clr_country_flag = refinery_concern_disabled
 	clr_country_flag = telephone_company_disabled
+	clr_country_flag = energy_supply_company_disabled
 	clr_country_flag = forestry_company_disabled
 	clr_country_flag = construction_company_disabled
 	clr_country_flag = mining_company_disabled

@@ -1,0 +1,194 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+LZI_medium_tank_organization = {
+	name = PRC_factory_617_organization
+	include = esicolor_generic_medium_tank_organization
+	icon = GFX_idea_PRC_factory_617
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+			OR = {
+				original_tag = LZI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 621
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				621 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+FAS_task_force_ship_organization = {
+	name = PRC_dalian_shipbuilding_company_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_PRC_dalian_shipbuilding_company
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = FAS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 745
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				745 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+FIL_high_agility_fighter_aircraft_organization = {
+	name = PRC_shenyang_aircraft_corporation_organization
+	include = esicolor_generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_PRC_shenyang_aircraft_corporation
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = agility_focused_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = FIL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 716
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				716 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+EZB_multi_role_aircraft_organization = {
+	name = PRC_harbin_aircraft_industry_group_organization
+	include = esicolor_generic_multi_role_aircraft_organization
+	icon = GFX_idea_PRC_harbin_aircraft
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = EZB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 328
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				328 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+LIS_support_equipment_organization = {
+	name = PRC_huangyadong_arsenal_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_PRC_huangyadong_arsenal
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = LIS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 615
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				615 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

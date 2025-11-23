@@ -9011,6 +9011,9 @@ can_form_malaysia = {
 	OR = {
 		original_tag = EEE
 		original_tag = EEL
+		original_tag = NZI
+		original_tag = NZE
+		original_tag = NZA
 	}
 }
 
@@ -9025,6 +9028,7 @@ can_form_indonesia = {
 		original_tag = LFE
 		original_tag = FZI
 		original_tag = FEB
+		original_tag = NZZ
 	}
 }
 
@@ -9067,6 +9071,9 @@ is_malaysia = {
 		state = 333
 		state = 336
 		state = 724
+		state = 1021
+		state = 1023
+		state = 1024
 	}
 }
 
@@ -9081,6 +9088,7 @@ is_indonesia = {
 		state = 673
 		state = 721
 		state = 738
+		state = 1022
 	}
 }
 
@@ -9124,6 +9132,7 @@ has_states_to_form_malaysia = {
 
 		if = { limit = { NOT = { OOO = { owns_state = 333 } } } owns_state = 333 }
 		if = { limit = { NOT = { OOO = { owns_state = 336 } } } owns_state = 336 }
+		if = { limit = { NOT = { OOO = { owns_state = 1024 } } } owns_state = 1024 }
 	}
 }
 
@@ -9138,6 +9147,7 @@ has_states_to_form_indonesia = {
 		if = { limit = { NOT = { OOO = { owns_state = 672 } } } owns_state = 672 }
 		if = { limit = { NOT = { OOO = { owns_state = 673 } } } owns_state = 673 }
 		if = { limit = { NOT = { OOO = { owns_state = 738 } } } owns_state = 738 }
+		if = { limit = { NOT = { OOO = { owns_state = 1022 } } } owns_state = 1022 }
 	}
 }
 
@@ -9182,6 +9192,8 @@ has_states_to_form_nusantara = {
 		if = { limit = { NOT = { OOO = { owns_state = 669 } } } owns_state = 669 }
 		if = { limit = { NOT = { OOO = { owns_state = 721 } } } owns_state = 721 }
 		if = { limit = { NOT = { OOO = { owns_state = 979 } } } owns_state = 979 }
+		if = { limit = { NOT = { OOO = { owns_state = 1023 } } } owns_state = 1021 }
+		if = { limit = { NOT = { OOO = { owns_state = 1023 } } } owns_state = 1023 }
 	}
 }
 
@@ -9189,6 +9201,7 @@ required_states_to_form_malaysia = {
 	OR = {
 		state = 333
 		state = 336
+		state = 1024
 	}
 }
 
@@ -9201,6 +9214,7 @@ required_states_to_form_indonesia = {
 		state = 672
 		state = 673
 		state = 738
+		state = 1022
 	}
 }
 
@@ -9221,6 +9235,8 @@ required_states_to_form_nusantara = {
 		state = 669
 		state = 721
 		state = 979
+		state = 1021
+		state = 1023
 	}
 }
 

@@ -1,0 +1,207 @@
+ideas = {
+	tank_manufacturer = {
+		designer = yes
+
+		LZI_medium_tank_manufacturer = {
+			name = PRC_factory_617_organization
+			picture = PRC_factory_617
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+				OR = {
+					original_tag = LZI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 621
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					621 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { medium_tank_manufacturer }
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		FAS_pacific_fleet_naval_manufacturer = {
+			name = PRC_dalian_shipbuilding_company
+			picture = PRC_dalian_shipbuilding_company
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+				OR = {
+					original_tag = FAS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 745
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					745 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		# Original was light_aircraft_manufacturer, but MIO version uses generic_high_agility_fighter_aircraft_organization, so making them match.
+		FIL_agility_focused_aircraft_manufacturer = {
+			name = PRC_shenyang_aircraft_corporation
+			picture = PRC_shenyang_aircraft_corporation
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = agility_focused_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = FIL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 716
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					716 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { agility_focused_aircraft_manufacturer }
+		}
+
+		EZB_multi_role_aircraft_manufacturer = {
+			name = PRC_harbin_aircraft
+			picture = PRC_harbin_aircraft
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = EZB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 328
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					328 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { multi_role_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		LIS_support_equipment_manufacturer = {
+			name = PRC_huangyadong_arsenal
+			picture = PRC_huangyadong_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = LIS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 615
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					615 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		LOB_refinery_concern = {
+			name = PRC_sinochem
+			picture = PRC_sinochem
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = refinery_concern_disabled }
+				OR = {
+					original_tag = LOB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 608
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					608 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+	}
+}

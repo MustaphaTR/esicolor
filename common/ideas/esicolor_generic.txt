@@ -709,6 +709,26 @@ ideas = {
 			traits = { telephone_company }
 		}
 
+		generic_energy_supply_company = {
+			picture = generic_industrial_concern_3
+
+			allowed = {
+				has_custom_energy_supply_company = no
+			}
+			visible = {
+				NOT = {
+					has_global_flag = custom_designers_only
+					has_country_flag = energy_supply_company_disabled
+				}
+			}
+
+			research_bonus = {
+				industry = 0.04
+				electronics = 0.04
+			}
+			traits = { energy_supply_company_esicolor }
+		}
+
 		generic_forestry_company = {
 			picture = generic_electronics_concern_3
 
@@ -767,7 +787,7 @@ ideas = {
 		}
 
 		generic_railway_company = {
-			picture = generic_industrial_concern_3
+			picture = generic_build_infrastructure
 
 			allowed = {
 				has_custom_railway_company = no

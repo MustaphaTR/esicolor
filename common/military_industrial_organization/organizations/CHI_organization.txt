@@ -1,5 +1,47 @@
 #####################
 
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+# Original is a fully custom MIO, but the designer version uses fast_tank_manufacturer, so keeping that here.
+LIE_mobile_tank_organization = {
+	name = CHI_shanghai_arsenal
+	include = esicolor_generic_mobile_tank_organization
+	icon = GFX_idea_CHI_shanghai_arsenal
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			OR = {
+				original_tag = LIE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 613
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				613 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#####################
+
  ## #  # ### ###   ## 
 #   #  #  #  #  # #   
  #  ####  #  ###   #  
@@ -9,9 +51,9 @@
 #####################
 
 LIE_task_force_ship_organization = {
-	name = CHI_jiangnan_shipyard_group_organization
+	name = CHI_kiangnan_shipyard_group_organization_sea
 	include = esicolor_generic_task_force_ship_organization
-	icon = GFX_idea_harland_wolff # GFX_idea_generic_naval_manufacturer_3
+	icon = GFX_idea_CHI_kiangnan
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -42,7 +84,7 @@ LIE_task_force_ship_organization = {
 LOB_raider_ship_organization = {
 	name = CHI_dagu_shipyard_organization
 	include = esicolor_generic_raider_ship_organization
-	icon = GFX_idea_generic_naval_manufacturer_1 # GFX_idea_generic_naval_manufacturer_3
+	icon = GFX_idea_CHI_dagu
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -80,17 +122,17 @@ LOB_raider_ship_organization = {
 
 ###########################
 
-SYL_medium_aircraft_organization = {
-	name = CHI_camco_organization
-	include = esicolor_generic_medium_aircraft_organization
-	icon = GFX_idea_CHI_camco
+SYL_light_aircraft_organization = {
+	name = CHI_camco_organization_sea
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_CHI_camco_sea
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
 		owner = {
-			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
 			OR = {
 				original_tag = SYL
 				AND = {
@@ -111,6 +153,37 @@ SYL_medium_aircraft_organization = {
 	}
 }
 
+LOO_medium_aircraft_organization = {
+	name = CHI_sinaw_organization_sea
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_CHI_SINAW
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = LOO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 600
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				600 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
 ################################### 
 
 #   #  ##  ### ### ###  ### ### #   
@@ -121,10 +194,10 @@ SYL_medium_aircraft_organization = {
 
 ###################################
 
-LZO_infantry_equipment_organization = {
+NEL_infantry_equipment_organization = {
 	name = CHI_hanyan_arsenal_organization
 	include = esicolor_generic_infantry_equipment_organization
-	icon = GFX_idea_generic_infantry_equipment_manufacturer_3 # GFX_idea_generic_infantry_equipment_manufacturer_1
+	icon = GFX_idea_CHI_hanyang
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -133,10 +206,10 @@ LZO_infantry_equipment_organization = {
 		owner = {
 			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
 			OR = {
-				original_tag = LZO
+				original_tag = NEL
 				AND = {
 					has_global_flag = custom_designers_only
-					owns_state = 620
+					owns_state = 1036
 				}
 			}
 		}
@@ -146,7 +219,7 @@ LZO_infantry_equipment_organization = {
 			limit = { has_global_flag = custom_designers_only }
 
 			owner = {
-				620 = { state_designer_availabile = yes }
+				1036 = { state_designer_availabile = yes }
 			}
 		}
 	}
@@ -155,7 +228,7 @@ LZO_infantry_equipment_organization = {
 FIL_infantry_equipment_organization = {
 	name = CHI_mukden_arsenal_organization
 	include = esicolor_generic_infantry_equipment_organization
-	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+	icon = GFX_idea_CHI_mukden
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -178,6 +251,37 @@ FIL_infantry_equipment_organization = {
 
 			owner = {
 				716 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+NES_support_equipment_organization = {
+	name = CHI_jinling_arsenal_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_CHI_jinling
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = NES
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 1035
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				1035 = { state_designer_availabile = yes }
 			}
 		}
 	}
@@ -217,7 +321,7 @@ LIS_artillery_organization = {
 FIS_motorized_mechanized_organization = {
 	name = CHI_liaoning_arsenal_organization
 	include = esicolor_generic_motorized_mechanized_organization
-	icon = GFX_idea_generic_motorized_equipment_manufacturer_1
+	icon = GFX_idea_CHI_liaoning
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"

@@ -1,10 +1,43 @@
 ideas = {
+	tank_manufacturer = {
+		LIE_fast_tank_manufacturer = {
+			name = CHI_shanghai_arsenal
+			picture = CHI_shanghai_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+				OR = {
+					original_tag = LIE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 613
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					613 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { fast_tank_manufacturer }
+		}
+	}
+
 	naval_manufacturer = { 
 		designer = yes
 
 		LIE_coastal_defence_naval_manufacturer = {
-			name = jiangnan_shipyard_group
-			picture = sasebo_naval_arsenal # generic_naval_manufacturer_3
+			name = CHI_kiangnan_shipyard_group_organization_sea
+			picture = CHI_kiangnan
 
 			allowed = {
 				always = yes
@@ -35,7 +68,7 @@ ideas = {
 
 		LOB_raiding_fleet_naval_manufacturer = {
 			name = dagu_shipyard
-			picture = generic_naval_manufacturer_1 # generic_naval_manufacturer_3
+			picture = CHI_dagu
 
 			allowed = {
 				always = yes
@@ -66,17 +99,17 @@ ideas = {
 	}
 
 	aircraft_manufacturer = {
-		designer = yes		
+		designer = yes
 
-		SYL_medium_aircraft_manufacturer = {
-			name = CHI_camco_1
-			picture = CHI_camco
+		SYL_light_aircraft_manufacturer = {
+			name = CHI_camco_SEA
+			picture = CHI_camco_sea
 
 			allowed = {
 				always = yes
 			}
 			visible = {
-				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
 				OR = {
 					original_tag = SYL
 					AND = {
@@ -96,27 +129,23 @@ ideas = {
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			traits = { medium_aircraft_manufacturer }
+			traits = { light_aircraft_manufacturer }
 		}
-	}
 
-	materiel_manufacturer = { 
-		designer = yes
-
-		LSO_infantry_equipment_manufacturer = {
-			name = CHI_hanyan_arsenal
-			picture = generic_infantry_equipment_manufacturer_3 # generic_infantry_equipment_manufacturer_1
+		LOO_medium_aircraft_manufacturer = {
+			name = CHI_sinaw
+			picture = CHI_SINAW
 
 			allowed = {
 				always = yes
 			}
 			visible = {
-				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
 				OR = {
-					original_tag = LZO
+					original_tag = LOO
 					AND = {
 						has_global_flag = custom_designers_only
-						owns_state = 620
+						owns_state = 600
 					}
 				}
 			}
@@ -124,7 +153,42 @@ ideas = {
 				if = {
 					limit = { has_global_flag = custom_designers_only }
 
-					620 = { state_designer_availabile = yes }
+					600 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = { 
+		designer = yes
+
+		NEL_infantry_equipment_manufacturer = {
+			name = CHI_hanyan_arsenal
+			picture = CHI_hanyang
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = NEL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1036
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1036 = { state_designer_availabile = yes }
 				}
 			}
 
@@ -136,7 +200,7 @@ ideas = {
 
 		FIL_infantry_equipment_manufacturer = {
 			name = CHI_mukden_arsenal
-			picture = generic_infantry_equipment_manufacturer_2
+			picture = CHI_mukden
 
 			allowed = {
 				always = yes
@@ -163,6 +227,37 @@ ideas = {
 				infantry_weapons = 0.15
 			}
 			traits = { infantry_equipment_manufacturer }
+		}
+
+		NES_support_equipment_manufacturer = {
+			name = CHI_jinling_arsenal_organization
+			picture = CHI_jinling
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = NES
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1035
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1035 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
 		}
 
 		LIS_artillery_manufacturer = {
@@ -198,7 +293,7 @@ ideas = {
 
 		FIS_motorized_equipment_manufacturer = {
 			name = CHI_liaoning_arsenal
-			picture = generic_motorized_equipment_manufacturer_1
+			picture = CHI_liaoning
 
 			allowed = {
 				always = yes
@@ -232,7 +327,7 @@ ideas = {
 	industrial_concern = {
 		FIL_industrial_concern = {
 			name = MAN_showa_steel_works
-			picture = generic_industrial_concern_1
+			picture = JAP_japan_steel_works
 
 			allowed = {
 				always = yes
@@ -261,15 +356,46 @@ ideas = {
 			traits = { industrial_concern }
 		}
 
-		LIE_electronics_concern = {
-			name = shanghai_electronics
-			picture = generic_electronics_concern_1
+		NES_electronics_concern = {
+			name = PRC_nanjing_wireless_electronics_plant
+			picture = PRC_nanjing_wireless_electronics_plant
 
 			allowed = {
 				always = yes
 			}
 			visible = {
 				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = NES
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1035
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1035 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
+		LIE_energy_supply_company = {
+			name = CHI_shanghai_power_company
+			picture = CHI_shanghai_power_company
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = energy_supply_company_disabled }
 				OR = {
 					original_tag = LIE
 					AND = {
@@ -287,9 +413,10 @@ ideas = {
 			}
 
 			research_bonus = {
-				electronics = 0.15
+				industry = 0.04
+				electronics = 0.04
 			}
-			traits = { electronics_concern }
+			traits = { energy_supply_company_esicolor }
 		}
 
 		FIL_refinery_concern = {
