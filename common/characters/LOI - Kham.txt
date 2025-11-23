@@ -1,0 +1,39 @@
+characters={
+	LOI_phuntsok_wangyal = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=TIB_phuntsok_wangyal
+			portraits={
+				civilian={
+					large=GFX_portrait_TIB_phuntsok_wangyal
+					small=GFX_portrait_TIB_phuntsok_wangyal_small
+				}
+			}
+			country_leader={
+				traits={ inexperienced_socialist }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=TIB_phuntsok_wangyal
+			portraits={
+				civilian={
+					large=GFX_Portrait_Asia_Generic_land_5
+				}
+			}
+			country_leader={
+				traits={ inexperienced_socialist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

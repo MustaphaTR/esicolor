@@ -2523,7 +2523,10 @@ esicolor_formables = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_sinkiang"
+			clr_country_flag = can_form_MON_UNITED
+
 			set_country_flag = can_form_TKS_UNITED
+			set_country_flag = can_form_CHI_UNITED
 
 			if = {
 				limit = { has_country_leader = { character = LIY_khoja_niyaz ruling_only = yes } }
@@ -11285,6 +11288,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_baikal"
 			set_country_flag = can_form_SBR_CENTRAL
+			set_country_flag = can_form_MON_UNITED
 
 			if = {
 				limit = { original_tag = SLA }
@@ -11433,6 +11437,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_central_siberia"
 			clr_country_flag = can_form_SBR_CENTRAL
+			clr_country_flag = can_form_MON_UNITED
 
 			set_country_flag = can_form_SBR_UNITED
 
@@ -12540,12 +12545,24 @@ esicolor_formables = {
 					formable_decision_effect = yes
 				}
 			}
-			formable_decision_effect_tooltip_default = yes
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_inner_mongolia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
 		}
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_inner_mongolia = yes
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_inner_mongolia = yes
+				}
+				else = {
+					required_states_to_form_inner_mongolia = yes
+				}
 			}
 		}
 
@@ -12572,6 +12589,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_mongolia"
 			clr_country_flag = can_form_MON_UNITED
+			clr_country_flag = can_form_SBR_CENTRAL
 
 			set_country_flag = can_form_ASI_UNITED
 
@@ -12584,12 +12602,24 @@ esicolor_formables = {
 					formable_decision_effect = yes
 				}
 			}
-			formable_decision_effect_tooltip_default = yes
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_mongolia_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
 		}
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_mongolia = yes
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_mongolia = yes
+				}
+				else = {
+					required_states_to_form_mongolia = yes
+				}
 			}
 		}
 
@@ -14942,7 +14972,15 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_korea"
 			set_country_flag = can_form_ASI_UNITED
 
-			set_cosmetic_tag = KOR_UNITED
+			if = {
+				limit = { has_country_leader = { character = NEO_jiro_minami ruling_only = yes } }
+
+				set_cosmetic_tag = KOR_UNITED_JAPAN
+
+				else = {
+					set_cosmetic_tag = KOR_UNITED
+				}
+			}
 
 			hidden_effect = {
 				every_state = {

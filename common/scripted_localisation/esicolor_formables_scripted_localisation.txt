@@ -6806,6 +6806,10 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_KOR_UNITED
 	text = {
+		trigger = { has_country_leader = { character = NEO_jiro_minami ruling_only = yes } }
+		localization_key = KOR_UNITED_JAPAN_neutrality_DEF
+	}
+	text = {
 		trigger = { has_government = neutrality }
 		localization_key = KOR_UNITED_neutrality_DEF
 	}

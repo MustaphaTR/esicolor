@@ -10250,6 +10250,8 @@ can_form_inner_mongolia = {
 	OR = {
 		original_tag = LII
 		original_tag = LIZ
+		original_tag = FLI
+		original_tag = NAE
 	}
 }
 
@@ -10257,6 +10259,8 @@ can_form_mongolia = {
 	OR = {
 		can_form_outer_mongolia = yes
 		can_form_inner_mongolia = yes
+		original_tag = SLA
+		original_tag = FLO
 	}
 }
 
@@ -10274,9 +10278,13 @@ is_inner_mongolia = {
 	OR = {
 		state = 611
 		state = 612
+		state = 616
 		state = 621
 		state = 746
 		state = 761
+		state = 1039
+		state = 1040
+		state = 1043
 	}
 }
 
@@ -10284,6 +10292,13 @@ is_mongolia = {
 	OR = {
 		is_outer_mongolia = yes
 		is_inner_mongolia = yes
+		state = 329
+		state = 563
+		state = 564
+		state = 566
+		state = 654
+		state = 756
+		state = 760
 	}
 }
 
@@ -10305,9 +10320,7 @@ has_states_to_form_inner_mongolia = {
 
 		if = { limit = { NOT = { OOO = { owns_state = 611 } } } owns_state = 611 }
 		if = { limit = { NOT = { OOO = { owns_state = 612 } } } owns_state = 612 }
-		if = { limit = { NOT = { OOO = { owns_state = 621 } } } owns_state = 621 }
-		if = { limit = { NOT = { OOO = { owns_state = 746 } } } owns_state = 746 }
-		if = { limit = { NOT = { OOO = { owns_state = 761 } } } owns_state = 761 }
+		if = { limit = { NOT = { OOO = { owns_state = 612 } } } owns_state = 1043 }
 	}
 }
 
@@ -10320,6 +10333,21 @@ has_states_to_form_mongolia = {
 
 		has_states_to_form_outer_mongolia = yes
 		has_states_to_form_inner_mongolia = yes
+	}
+}
+
+required_states_to_form_inner_mongolia = {
+	OR = {
+		state = 611
+		state = 612
+		state = 1043
+	}
+}
+
+required_states_to_form_mongolia = {
+	OR = {
+		is_outer_mongolia = yes
+		required_states_to_form_inner_mongolia = yes
 	}
 }
 

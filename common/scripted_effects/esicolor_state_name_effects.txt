@@ -55,6 +55,7 @@ adjust_state_names = {
 	adjust_state_name_542 = yes
 	adjust_state_name_545 = yes
 	adjust_state_name_555 = yes
+	adjust_state_name_601 = yes
 	adjust_state_name_653 = yes
 	adjust_state_name_664 = yes
 	adjust_state_name_718 = yes
@@ -344,6 +345,10 @@ adjust_state_names_on_state_core_changed = {
 	else_if = {
 		limit = { FROM.FROM = { state = 555 } }
 		adjust_state_name_555 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 601 } }
+		adjust_state_name_601 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 653 } }
@@ -723,6 +728,10 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 555 }
 		adjust_state_name_555 = yes
+	}
+	if = {
+		limit = { owns_state = 601 }
+		adjust_state_name_601 = yes
 	}
 	if = {
 		limit = { owns_state = 538 }
@@ -3016,6 +3025,17 @@ adjust_state_name_555 = {
 			id = 1399
 			name = VICTORY_POINTS_1399
 		}
+	}
+}
+
+adjust_state_name_601 = {
+	if = {
+		limit = { 601 = { owner = { state_originally_from_TIB = yes } } }
+
+		601 = { set_state_name = TIB_STATE_601 }
+	}
+	else = {
+		601 = { set_state_name = STATE_601 }
 	}
 }
 
