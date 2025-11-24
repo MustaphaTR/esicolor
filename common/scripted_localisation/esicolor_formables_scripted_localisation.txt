@@ -5799,6 +5799,15 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_CHI_QINGHAI
 	text = {
+		trigger = {
+			OR = {
+				has_country_leader = { character = LOA_ma_lin ruling_only = yes }
+				has_country_leader = { character = GTB_ma_bufang ruling_only = yes }
+			}
+		}
+		localization_key = CHI_QINGHAI_MA_neutrality_DEF
+	}
+	text = {
 		trigger = { has_government = neutrality }
 		localization_key = CHI_QINGHAI_neutrality_DEF
 	}
@@ -5819,6 +5828,12 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_CHI_GANSU
 	text = {
+		trigger = {
+			has_country_leader = { character = NAA_ma_muqing ruling_only = yes }
+		}
+		localization_key = CHI_GANSU_MA_neutrality_DEF
+	}
+	text = {
 		trigger = { has_government = neutrality }
 		localization_key = CHI_GANSU_neutrality_DEF
 	}
@@ -5838,6 +5853,12 @@ defined_text = {
 
 defined_text = {
 	name = GetIdeologyDef_CHI_NINGXIA
+	text = {
+		trigger = {
+			has_country_leader = { character = LIL_ma_hongkui ruling_only = yes }
+		}
+		localization_key = CHI_NINGXIA_MA_neutrality_DEF
+	}
 	text = {
 		trigger = { has_government = neutrality }
 		localization_key = CHI_NINGXIA_neutrality_DEF
@@ -5861,8 +5882,12 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
-				has_country_leader = { character = ZBE_ma_hongbin ruling_only = yes }
+				has_country_leader = { character = LOA_ma_lin ruling_only = yes }
+				has_country_leader = { character = LIL_ma_hongkui ruling_only = yes }
 				has_country_leader = { character = GTB_ma_bufang ruling_only = yes }
+				has_country_leader = { character = FSY_ma_hongbin ruling_only = yes }
+				has_country_leader = { character = NAZ_ma_hushan ruling_only = yes }
+				has_country_leader = { character = NAA_ma_muqing ruling_only = yes }
 			}
 		}
 		localization_key = CHI_HUI_MA_neutrality_DEF

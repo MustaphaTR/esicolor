@@ -12935,7 +12935,20 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_qinghai"
 			set_country_flag = can_form_CHI_HUI
 
-			set_cosmetic_tag = CHI_QINGHAI
+			if = {
+				limit = {
+					OR = {
+						has_country_leader = { character = LOA_ma_lin ruling_only = yes }
+						has_country_leader = { character = GTB_ma_bufang ruling_only = yes }
+					}
+				}
+
+				set_cosmetic_tag = CHI_QINGHAI_MA
+
+				else = {
+					set_cosmetic_tag = CHI_QINGHAI
+				}
+			}
 
 			hidden_effect = {
 				every_state = {
@@ -12977,7 +12990,15 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_gansu"
 			set_country_flag = can_form_CHI_HUI
 
-			set_cosmetic_tag = CHI_GANSU
+			if = {
+				limit = { has_country_leader = { character = NAA_ma_muqing ruling_only = yes } }
+
+				set_cosmetic_tag = CHI_GANSU_MA
+
+				else = {
+					set_cosmetic_tag = CHI_GANSU
+				}
+			}
 
 			hidden_effect = {
 				every_state = {
@@ -12992,6 +13013,56 @@ esicolor_formables = {
 		highlight_states = {
 			highlight_states_trigger = {
 				is_gansu = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
+	form_ningxia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_ningxia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_ningxia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_ningxia"
+			set_country_flag = can_form_CHI_HUI
+
+			if = {
+				limit = { has_country_leader = { character = LIL_ma_hongkui ruling_only = yes } }
+
+				set_cosmetic_tag = CHI_NINGXIA_MA
+
+				else = {
+					set_cosmetic_tag = CHI_NINGXIA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_ningxia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_ningxia = yes
 			}
 		}
 
@@ -13024,8 +13095,12 @@ esicolor_formables = {
 			if = {
 				limit = {
 					OR = {
-						has_country_leader = { character = ZBE_ma_hongbin ruling_only = yes }
+						has_country_leader = { character = LOA_ma_lin ruling_only = yes }
+						has_country_leader = { character = LIL_ma_hongkui ruling_only = yes }
 						has_country_leader = { character = GTB_ma_bufang ruling_only = yes }
+						has_country_leader = { character = FSY_ma_hongbin ruling_only = yes }
+						has_country_leader = { character = NAZ_ma_hushan ruling_only = yes }
+						has_country_leader = { character = NAA_ma_muqing ruling_only = yes }
 					}
 				}
 
@@ -13139,12 +13214,24 @@ esicolor_formables = {
 					formable_decision_effect = yes
 				}
 			}
-			formable_decision_effect_tooltip_default = yes
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_shanxi_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
 		}
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_shanxi = yes
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_shanxi = yes
+				}
+				else = {
+					required_states_to_form_shanxi = yes
+				}
 			}
 		}
 

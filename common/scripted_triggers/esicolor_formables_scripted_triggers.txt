@@ -10609,6 +10609,8 @@ can_form_sichuan = {
 		original_tag = FSI
 		original_tag = FSZ
 		original_tag = FSE
+		original_tag = NEF
+		original_tag = NAI
 	}
 }
 
@@ -10779,6 +10781,7 @@ is_shanxi = {
 		state = 615
 		state = 621
 		state = 746
+		state = 1043
 	}
 }
 
@@ -10819,6 +10822,8 @@ is_sichuan = {
 		state = 751
 		state = 752
 		state = 753
+		state = 1037
+		state = 1041
 	}
 }
 
@@ -11056,6 +11061,8 @@ has_states_to_form_sichuan = {
 		if = { limit = { NOT = { OOO = { owns_state = 751 } } } owns_state = 751 }
 		if = { limit = { NOT = { OOO = { owns_state = 752 } } } owns_state = 752 }
 		if = { limit = { NOT = { OOO = { owns_state = 753 } } } owns_state = 753 }
+		if = { limit = { NOT = { OOO = { owns_state = 1037 } } } owns_state = 1037 }
+		if = { limit = { NOT = { OOO = { owns_state = 1041 } } } owns_state = 1041 }
 	}
 }
 
@@ -11207,7 +11214,8 @@ has_states_to_form_china = {
 	custom_trigger_tooltip = {
 		tooltip = form_china_has_states_tt
 
-		has_states_to_form_ma_clique = yes
+		has_states_to_form_qinghai = yes
+		has_states_to_form_gansu = yes
 		has_states_to_form_shaanxi = yes
 		if = { limit = { NOT = { OOO = { owns_state = 615 } } } owns_state = 615 }
 		has_states_to_form_zhili = yes
@@ -11234,12 +11242,20 @@ required_states_to_form_ma_clique = {
 	}
 }
 
+required_states_to_form_shanxi = {
+	OR = {
+		state = 615
+		state = 621
+		state = 746
+	}
+}
+
 required_states_to_form_north_china = {
 	OR = {
 		state = 611
 		state = 612
 		is_shaanxi = yes
-		is_shanxi = yes
+		required_states_to_form_shanxi = yes
 		is_zhili = yes
 	}
 }
@@ -11274,7 +11290,8 @@ required_states_to_form_east_china = {
 
 required_states_to_form_china = {
 	OR = {
-		required_states_to_form_ma_clique = yes
+		is_qinghai = yes
+		is_gansu = yes
 		is_shaanxi = yes
 		state = 615
 		is_zhili = yes
