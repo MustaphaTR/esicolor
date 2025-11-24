@@ -3,7 +3,7 @@ armor_generic = {
 	blocked_for = {
 		OOS OAZ OSO OSI OSZ OSE OSA OSS OSL OSF OSB OSY OLO OLI OLZ OLE OLA OLS OLL OLF OBS IBB FLE YOY YFB
 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 
 		IZE IZS IZL IZF IZB IZY IEO IEI IEZ EEB YEI YEZ
 		IZO IZI IEE IEL YEE
@@ -40,6 +40,8 @@ armor_generic = {
 		EZY
 
 		OAE ISA ISS YFE YFA
+
+		ZBY FZA BLB BLY
 	}
 
 	role = armor
@@ -284,7 +286,7 @@ garrison_generic = {
 	blocked_for = {
 		OOS OAZ OSO OSI OSZ OSE OSA OSS OSL OSF OSB OSY OLO OLI OLZ OLE OLA OLS OLL OLF OBS IBB FLE YOY YFB
 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 
 		IZE IZS IZL IZF IZB IZY IEO IEI IEZ EEB YEI YEZ
 		IZO IZI IEE IEL YEE
@@ -321,6 +323,8 @@ garrison_generic = {
 		EZY
 
 		OAE ISA ISS YFE YFA
+
+		ZBY FZA BLB BLY
 	}
 	
 	role = garrison
@@ -362,7 +366,9 @@ garrison_generic = {
 suppression_generic = {
 	
 	role = suppression
-	
+	blocked_for = {
+		ZBY FZA BLB BLY
+	}
 	upgrade_prio = {
 		base = 0.5
 
@@ -412,7 +418,7 @@ infantry_generic = {
 	blocked_for = {
 		OOS OAZ OSO OSI OSZ OSE OSA OSS OSL OSF OSB OSY OLO OLI OLZ OLE OLA OLS OLL OLF OBS IBB FLE YOY YFB
 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 
 		IZE IZS IZL IZF IZB IZY IEO IEI IEZ EEB YEI YEZ
 		IZO IZI IEE IEL YEE
@@ -445,20 +451,31 @@ infantry_generic = {
 		AOS SBS BZE BEO BEI
 		FAZ
 		FEZ
-		
+
 		EZY
 
 		OAE ISA ISS YFE YFA
 
-		SZA SYS SYL SYF SYB LOO LOZ LOE LOS LOL LOF LOB LOY LIE LIA LZO FAE FAA FAB FAY FSO FSI FSZ
-		LZZ
-		EZL SYI SYZ SYE SYA SYY FZB FZY
+		SZA SYS SYL SYB LOO LOZ LOE LOL LOF LIE LZO FAB FAY FSO NEA NES NEL
+		LZZ NEZ NAL
+		SYA SYY
 		EZS FAF
 		LIS LZI FAL
-		ZBE LOA LIL FSE GTB FSS FSL
-		ZBF LIF MJC LIY FSY FLO
-		LII LIZ
+		LOA GTB FSS
+		LIF MJC LIY 
 		EZB LIO FIA FIS FIL FIF FAS FLI
+		LII LIZ NAE
+		EZL SYI SYZ SYE FZB FZY NEE
+		SYF FAE NEB
+		LOS FSI FSZ FSE NEF NAI
+		LIL NAO NAS
+		ZBE FSL NAA
+		FAA
+		ZBF FSY NAZ
+		FLO
+		LOB LOY LIA NEY
+
+		ZBY FZA BLB BLY
 	}
 
 	role = infantry
@@ -532,7 +549,7 @@ mountaineers_generic = {
 	blocked_for = {
 		OOS OAZ OSO OSI OSZ OSE OSA OSS OSL OSF OSB OSY OLO OLI OLZ OLE OLA OLS OLL OLF OBS IBB FLE YOY YFB
 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 
 		IZE IZS IZL IZF IZB IZY IEO IEI IEZ EEB YEI YEZ
 		IZO IZI IEE IEL YEE
@@ -567,6 +584,8 @@ mountaineers_generic = {
 		FEZ
 		
 		EZY
+
+		ZBY FZA BLB BLY
 	}
 
 	role = mountaineers
@@ -614,7 +633,7 @@ marines_generic = {
 	blocked_for = {
 		OOS OAZ OSO OSI OSZ OSE OSA OSS OSL OSF OSB OSY OLO OLI OLZ OLE OLA OLS OLL OLF OBS IBB FLE YOY YFB
 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 
 		IZE IZS IZL IZF IZB IZY IEO IEI IEZ EEB YEI YEZ
 		IZO IZI IEE IEL YEE
@@ -736,7 +755,7 @@ paratrooper_generic = {
 	blocked_for = {
 		OOS OAZ OSO OSI OSZ OSE OSA OSS OSL OSF OSB OSY OLO OLI OLZ OLE OLA OLS OLL OLF OBS IBB FLE YOY YFB
 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 
 		IZE IZS IZL IZF IZB IZY IEO IEI IEZ EEB YEI YEZ
 		IZO IZI IEE IEL YEE
@@ -806,6 +825,138 @@ paratrooper_generic = {
 			
 			regiments = {
 				paratrooper = 9
+			}
+		}
+	}
+}
+
+rangers_generic = {
+
+	role = rangers_role
+	
+	upgrade_prio = {
+		base = 2
+
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = rangers_tech
+			}
+		}
+	}
+
+	rangers_default = {
+	
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 1
+			}
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				recon = 1
+				logistics_company = 1
+			}
+			
+			regiments = {
+				ranger_battalion = 8
+				artillery_brigade = 2
+			}
+		}
+	}
+}
+
+landcruiser_generic = {
+
+
+	role = mega_heavy_breakthrough_role
+	
+	upgrade_prio = {
+		base = 2
+
+		modifier = {
+			factor = 0
+			NOT = { is_special_project_completed = sp:sp_land_land_cruiser }
+		}
+	}
+	 
+	landcruiser_default = {
+	
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 1
+			}
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				land_cruiser = 1
+				anti_air = 1
+			}
+			
+			regiments = {
+				medium_armor = 2
+				heavy_armor = 1
+				motorized = 6
+			}
+		}
+	}
+}
+
+super_heavy_generic = {
+
+
+	role = super_heavy_breakthrough_role
+	
+	upgrade_prio = {
+		base = 0
+
+		modifier = {
+			add = 1
+			is_major = yes
+			num_of_military_factories > 150 # nly if we have loads of factories
+			date > 1943.6.1 # Lets wait until late war
+			NOT = { has_tech = main_battle_tank_chassis } # Abandon Super heavy projects if we start doing modern tanks instead
+			NOT = { has_government = democratic } # Let the authoritarian regimes spend money on this 
+		}
+
+		modifier = {
+			factor = 0
+			is_special_project_completed = sp:sp_land_land_cruiser # Lets stop this if and when we have landcruisers
+		}
+	}
+	 
+	super_heavy_default = {
+	
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 1
+			}
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				anti_air = 1
+				super_heavy_armor = 1
+			}
+			
+			regiments = {
+				medium_armor = 2
+				motorized = 6
 			}
 		}
 	}
