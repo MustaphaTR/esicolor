@@ -8,7 +8,7 @@ ITA_destroyers = {
 	available_for = { 
 		OOI OOZ OEY IIA IIS IIF ISL ISF ISB ISY ILO ILI ILZ FEL CBZ BSO BSZ
 	}
-	
+
 	roles = {
 		naval_screen
 	}
@@ -30,6 +30,7 @@ ITA_destroyers = {
 		}
 		role_icon_index = 2
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -68,6 +69,7 @@ ITA_destroyers = {
 		}
 		role_icon_index = 2
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -106,6 +108,7 @@ ITA_destroyers = {
 		}
 		role_icon_index = 2
 
+		history = yes
 		target_variant = {
 			match_value = 2500.0
 			
@@ -144,6 +147,7 @@ ITA_destroyers = {
 		}
 		role_icon_index = 2
 		
+		history = yes
 		target_variant = {
 			match_value = 2500.0
 			
@@ -182,6 +186,7 @@ ITA_destroyers = {
 		}
 		role_icon_index = 2
 		
+		history = yes
 		target_variant = {
 			match_value = 3500.0
 			
@@ -220,6 +225,7 @@ ITA_destroyers = {
 		}
 		role_icon_index = 2
 		
+		history = yes
 		target_variant = {
 			match_value = 3500.0
 			
@@ -262,6 +268,7 @@ ITA_destroyers = {
 		}
 		role_icon_index = 2
 		
+		history = yes
 		target_variant = {
 			match_value = 3500.0
 			
@@ -303,7 +310,7 @@ ITA_naval_light_cruiser = {
 	available_for = { 
 		OOI OOZ OEY IIA IIS IIF ISL ISF ISB ISY ILO ILI ILZ FEL CBZ BSO BSZ
 	}
-	
+
 	roles = {
 		naval_cruiser_light
 	}
@@ -321,6 +328,7 @@ ITA_naval_light_cruiser = {
 		}
 		role_icon_index = 2
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -362,6 +370,7 @@ ITA_naval_light_cruiser = {
 		}
 		role_icon_index = 2
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -407,6 +416,7 @@ ITA_naval_light_cruiser = {
 			has_tech = basic_dp_light_battery
 		}
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -448,6 +458,7 @@ ITA_naval_light_cruiser = {
 		}
 		role_icon_index = 2
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -491,6 +502,7 @@ ITA_naval_light_cruiser = {
 		}
 		role_icon_index = 2
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -530,6 +542,7 @@ ITA_naval_light_cruiser = {
 		}
 		role_icon_index = 2
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -570,6 +583,7 @@ ITA_naval_light_cruiser = {
 		}
 		role_icon_index = 2
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -613,7 +627,7 @@ ITA_naval_light_AA_cruiser = {
 	available_for = { 
 		OOI OOZ OEY IIA IIS IIF ISL ISF ISB ISY ILO ILI ILZ FEL CBZ BSO BSZ
 	}
-	
+
 	roles = {
 		naval_cruiser_light
 	}
@@ -643,6 +657,7 @@ ITA_naval_light_AA_cruiser = {
 			has_tech = advanced_dp_light_battery
 		}
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -685,7 +700,7 @@ ITA_naval_cruiser_heavy = {
 	available_for = { 
 		OOI OOZ OEY IIA IIS IIF ISL ISF ISB ISY ILO ILI ILZ FEL CBZ BSO BSZ
 	}
-	
+
 	roles = {
 		naval_cruiser_heavy
 	}
@@ -693,17 +708,51 @@ ITA_naval_cruiser_heavy = {
 	priority = {
 		factor = 1
 	}
+	coastal_defense_cruiser = {
+		priority = {
+			factor = 1
+		}
 
+		role_icon_index = 1
+		history = yes
+		target_variant = {
+			match_value = 2000
+
+			type = ship_hull_cruiser_coastal_defense_ship
+			modules = {
+				fixed_ship_battery_slot = ship_medium_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_1
+				fixed_ship_armor_slot = ship_armor_cruiser_2
+				fixed_ship_secondaries_slot = ship_secondaries_1
+				front_1_custom_slot = ship_anti_air_1
+				mid_1_custom_slot = ship_secondaries_1
+				mid_2_custom_slot = empty
+				rear_1_custom_slot = ship_torpedo_1
+			}			
+		}
+		allowed_modules = {
+			ship_anti_air
+			ship_medium_battery
+			ship_radar
+			ship_torpedo
+			ship_airplane_launcher
+			ship_secondaries
+		}
+	}
 	capital_cruiser_early = {
 	
 		priority = {
-			factor = 1
+			factor = 2
 			modifier = {
 				factor = 1
 			}
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -741,6 +790,7 @@ ITA_naval_cruiser_heavy = {
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -777,6 +827,7 @@ ITA_naval_cruiser_heavy = {
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -814,6 +865,7 @@ ITA_naval_cruiser_heavy = {
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -849,6 +901,7 @@ ITA_naval_cruiser_heavy = {
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -885,6 +938,7 @@ ITA_naval_cruiser_heavy = {
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -924,6 +978,7 @@ ITA_naval_cruiser_heavy = {
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -959,6 +1014,7 @@ ITA_naval_cruiser_heavy = {
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -999,7 +1055,7 @@ ITA_naval_capital_battleship = {
 	available_for = { 
 		OOI OOZ OEY IIA IIS IIF ISL ISF ISB ISY ILO ILI ILZ FEL CBZ BSO BSZ
 	}
-	
+
 	roles = {
 		naval_capital_bb
 	}
@@ -1019,6 +1075,7 @@ ITA_naval_capital_battleship = {
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -1059,6 +1116,7 @@ ITA_naval_capital_battleship = {
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -1096,6 +1154,7 @@ ITA_naval_capital_battleship = {
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -1137,6 +1196,7 @@ ITA_naval_capital_battleship = {
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -1173,6 +1233,7 @@ ITA_naval_capital_battleship = {
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -1213,6 +1274,7 @@ ITA_naval_capital_battleship = {
 		}
 		role_icon_index = 1
 		
+		history = yes
 		target_variant = {
 			match_value = 2000.0
 			
@@ -1253,7 +1315,7 @@ ITA_naval_carrier = {
 	available_for = { 
 		OOI OOZ OEY IIA IIS IIF ISL ISF ISB ISY ILO ILI ILZ FEL CBZ BSO BSZ
 	}
-	
+
 	roles = {
 		naval_carrier
 	}
@@ -1272,6 +1334,7 @@ ITA_naval_carrier = {
 		}
 		role_icon_index = 7
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -1310,6 +1373,7 @@ ITA_naval_carrier = {
 		}
 		role_icon_index = 7
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -1345,6 +1409,7 @@ ITA_naval_carrier = {
 		}
 		role_icon_index = 7
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -1378,6 +1443,7 @@ ITA_naval_carrier = {
 		}
 		role_icon_index = 7
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -1411,6 +1477,7 @@ ITA_naval_carrier = {
 		}
 		role_icon_index = 7
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -1439,6 +1506,68 @@ ITA_naval_carrier = {
 	}
 }
 
+ITA_naval_escort_carrier = {
+	
+	category = naval
+
+	blocked_for = {
+
+	}
+
+	available_for = { 
+		OOI OOZ OEY IIA IIS IIF ISL ISF ISB ISY ILO ILI ILZ FEL CBZ BSO BSZ
+	}
+
+	roles = {
+		naval_carrier_light
+	}
+
+	priority = {
+		factor = 1
+		modifier = {
+			factor = 10
+			is_major = yes
+		}
+	}
+
+	carrier_escort = {
+
+		priority = {
+			factor = 10
+		}
+		role_icon_index = 3
+
+		history = yes
+
+		target_variant = {
+			match_value = 1000.0
+		
+
+			type = ship_hull_escort_carrier
+			modules = {
+				fixed_ship_engine_slot = carrier_ship_engine_1
+				fixed_ship_deck_slot_1 = ship_escort_deck_space
+				fixed_ship_deck_slot_2 = ship_escort_deck_space
+				front_1_custom_slot = empty
+				mid_1_custom_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_secondaries_slot = empty
+				fixed_ship_armor_slot = empty
+				fixed_ship_anti_air_slot = ship_anti_air
+			}
+		}
+		allowed_modules = {
+			ship_secondaries
+			ship_anti_air
+			carrier_ship_engine
+			ship_radar
+			ship_escort_deck_space
+			ship_carrier_armor
+		}
+
+	}
+
+}
 
 ITA_naval_submarine = {
 	category = naval
@@ -1449,7 +1578,7 @@ ITA_naval_submarine = {
 	available_for = { 
 		OOI OOZ OEY IIA IIS IIF ISL ISF ISB ISY ILO ILI ILZ FEL CBZ BSO BSZ
 	}
-	
+
 	roles = {
 		naval_submarine
 	}
@@ -1472,6 +1601,7 @@ ITA_naval_submarine = {
 		}
 		role_icon_index = 6
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -1501,6 +1631,7 @@ ITA_naval_submarine = {
 		}
 		role_icon_index = 6
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -1530,6 +1661,7 @@ ITA_naval_submarine = {
 		}
 		role_icon_index = 6
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -1562,6 +1694,7 @@ ITA_naval_submarine = {
 		}
 		role_icon_index = 6
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -1594,7 +1727,7 @@ ITA_naval_mine_sweeper = {
 	available_for = { 
 		OOI OOZ OEY IIA IIS IIF ISL ISF ISB ISY ILO ILI ILZ FEL CBZ BSO BSZ
 	}
-	
+
 	roles = {
 		naval_mine_sweeper
 	}
@@ -1617,6 +1750,7 @@ ITA_naval_mine_sweeper = {
 		}
 		role_icon_index = 5
 		enable = { has_tech = improved_naval_mines }
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -1658,6 +1792,7 @@ ITA_naval_mine_sweeper = {
 			has_tech = improved_naval_mines
 		}
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			
@@ -1701,7 +1836,7 @@ ITA_naval_mine_layer = {
 	available_for = { 
 		OOI OOZ OEY IIA IIS IIF ISL ISF ISB ISY ILO ILI ILZ FEL CBZ BSO BSZ
 	}
-	
+
 	roles = {
 		naval_mine_layer
 	}
@@ -1725,6 +1860,7 @@ ITA_naval_mine_layer = {
 		}
 		role_icon_index = 4
 
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			 
@@ -1768,6 +1904,7 @@ ITA_naval_mine_layer = {
 		}
 		role_icon_index = 4
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			 
@@ -1805,6 +1942,7 @@ ITA_naval_mine_layer = {
 		}
 		role_icon_index = 4
 		
+		history = yes
 		target_variant = {
 			match_value = 1000.0
 			

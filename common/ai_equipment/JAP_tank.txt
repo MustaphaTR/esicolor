@@ -6,7 +6,7 @@ JAP_light_tanks = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -26,6 +26,7 @@ JAP_light_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = light_tank_chassis_0
@@ -70,6 +71,7 @@ JAP_light_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = light_tank_chassis_1
@@ -78,14 +80,14 @@ JAP_light_tanks = {
 				turret_type_slot = tank_light_one_man_tank_turret
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_riveted_armor
-				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = empty
-				special_type_slot_2 = empty
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = additional_machine_guns
+				special_type_slot_2 = additional_machine_guns
 				special_type_slot_3 = empty
 				special_type_slot_4 = empty
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 5
+				tank_nsb_engine_upgrade = 9
 				tank_nsb_armor_upgrade = {
 					base = 1
 					modifier = {
@@ -97,11 +99,12 @@ JAP_light_tanks = {
 		}
 
 		allowed_modules = {
+			additional_machine_guns
 			tank_heavy_machine_gun 
 			tank_light_one_man_tank_turret
 			tank_bogie_suspension
 			tank_riveted_armor
-			tank_gasoline_engine
+			tank_diesel_engine
 		}
 	}
 
@@ -114,6 +117,7 @@ JAP_light_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 3000
 			type = light_tank_chassis_2
@@ -127,14 +131,14 @@ JAP_light_tanks = {
 				turret_type_slot = tank_light_two_man_tank_turret 
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_riveted_armor 
-				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = empty
-				special_type_slot_2 = empty
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = additional_machine_guns
+				special_type_slot_2 = additional_machine_guns
 				special_type_slot_3 = empty
 				special_type_slot_4 = empty
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 5
+				tank_nsb_engine_upgrade = 9
 				tank_nsb_armor_upgrade = {
 					base = 2
 					modifier = {
@@ -152,9 +156,10 @@ JAP_light_tanks = {
 			tank_small_cannon_2 
 			tank_small_cannon 
 			tank_light_two_man_tank_turret
+			additional_machine_guns
 			tank_bogie_suspension
 			tank_riveted_armor
-			tank_gasoline_engine
+			tank_diesel_engine
 		}
 	}
 
@@ -163,6 +168,7 @@ JAP_light_tanks = {
 			factor = 100
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 4000
 			type = light_tank_chassis_3
@@ -176,14 +182,14 @@ JAP_light_tanks = {
 				turret_type_slot = tank_light_two_man_tank_turret
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_gasoline_engine
+				engine_type_slot = tank_diesel_engine
 				special_type_slot_1 = tank_radio_module
 				special_type_slot_2 = empty
 				special_type_slot_3 = empty
 				special_type_slot_4 = empty
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 3
+				tank_nsb_engine_upgrade = 9
 				tank_nsb_armor_upgrade = {
 					base = 2
 					modifier = {
@@ -204,7 +210,7 @@ JAP_light_tanks = {
 			tank_light_two_man_tank_turret
 			tank_bogie_suspension
 			tank_welded_armor
-			tank_gasoline_engine
+			tank_diesel_engine
 		}
 	}
 }
@@ -215,7 +221,7 @@ JAP_light_tank_destroyers = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -241,6 +247,7 @@ JAP_light_tank_destroyers = {
 			has_tech = interwar_antitank
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = light_tank_destroyer_chassis_1
@@ -249,7 +256,7 @@ JAP_light_tank_destroyers = {
 				turret_type_slot = tank_light_fixed_superstructure_turret
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_riveted_armor
-				engine_type_slot = tank_gasoline_engine
+				engine_type_slot = tank_diesel_engine
 				special_type_slot_1 = empty
 				special_type_slot_2 = empty
 				special_type_slot_3 = empty
@@ -272,7 +279,7 @@ JAP_light_tank_destroyers = {
 			tank_light_fixed_superstructure_turret
 			tank_bogie_suspension
 			tank_riveted_armor
-			tank_gasoline_engine
+			tank_diesel_engine
 		}
 	}
 	light_tank_destroyer_2 = {
@@ -287,6 +294,7 @@ JAP_light_tank_destroyers = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = light_tank_destroyer_chassis_2
@@ -302,7 +310,7 @@ JAP_light_tank_destroyers = {
 				turret_type_slot = tank_light_fixed_superstructure_turret
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_riveted_armor
-				engine_type_slot = tank_gasoline_engine
+				engine_type_slot = tank_diesel_engine
 				special_type_slot_1 = extra_ammo_storage
 				special_type_slot_2 = tank_radio_module
 				special_type_slot_3 = empty
@@ -343,7 +351,7 @@ JAP_light_tank_artillery = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -362,6 +370,7 @@ JAP_light_tank_artillery = {
 			has_tech = interwar_artillery
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = light_tank_artillery_chassis_1
@@ -405,6 +414,7 @@ JAP_light_tank_artillery = {
 				has_tech = interwar_artillery
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = light_tank_artillery_chassis_2
@@ -413,7 +423,7 @@ JAP_light_tank_artillery = {
 				turret_type_slot = tank_light_fixed_superstructure_turret
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_riveted_armor
-				engine_type_slot = tank_gasoline_engine
+				engine_type_slot = tank_diesel_engine
 				special_type_slot_1 = empty
 				special_type_slot_2 = empty
 				special_type_slot_3 = empty
@@ -436,7 +446,7 @@ JAP_light_tank_artillery = {
 			tank_light_fixed_superstructure_turret
 			tank_bogie_suspension
 			tank_riveted_armor
-			tank_gasoline_engine
+			tank_diesel_engine
 		}
 	}
 
@@ -449,6 +459,7 @@ JAP_light_tank_artillery = {
 			has_tech = artillery1
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = light_tank_artillery_chassis_3
@@ -492,7 +503,7 @@ JAP_light_tank_anti_air = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -518,6 +529,7 @@ JAP_light_tank_anti_air = {
 			has_tech = interwar_antiair
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = light_tank_aa_chassis_1
@@ -561,6 +573,7 @@ JAP_light_tank_anti_air = {
 			has_tech = antiair2
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = light_tank_aa_chassis_2
@@ -605,6 +618,7 @@ JAP_light_tank_anti_air = {
 			has_tech = antiair5
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2500
 			type = light_tank_aa_chassis_3
@@ -647,7 +661,7 @@ JAP_medium_tanks = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -667,6 +681,7 @@ JAP_medium_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = medium_tank_chassis_1
@@ -722,6 +737,7 @@ JAP_medium_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 3000
 			type = medium_tank_chassis_2
@@ -782,6 +798,7 @@ JAP_medium_tanks = {
 			factor = 100
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 4000
 			type = medium_tank_chassis_3
@@ -790,7 +807,7 @@ JAP_medium_tanks = {
 				turret_type_slot = tank_medium_three_man_tank_turret
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_gasoline_engine
+				engine_type_slot = tank_diesel_engine
 				special_type_slot_1 = tank_radio_module
 				special_type_slot_2 = smoke_launchers
 				special_type_slot_3 = empty
@@ -826,7 +843,7 @@ JAP_medium_tanks = {
 			tank_medium_three_man_tank_turret
 			tank_bogie_suspension
 			tank_welded_armor
-			tank_gasoline_engine
+			tank_diesel_engine
 			
 			tank_radio_3
 			tank_radio_2
@@ -842,7 +859,7 @@ JAP_medium_tank_destroyer = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -868,6 +885,7 @@ JAP_medium_tank_destroyer = {
 			has_tech = interwar_antitank
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = medium_tank_destroyer_chassis_1
@@ -922,6 +940,7 @@ JAP_medium_tank_destroyer = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = medium_tank_destroyer_chassis_2
@@ -982,6 +1001,7 @@ JAP_medium_tank_destroyer = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = medium_tank_destroyer_chassis_3
@@ -1041,7 +1061,7 @@ JAP_medium_tank_artillery = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -1060,6 +1080,7 @@ JAP_medium_tank_artillery = {
 			has_tech = interwar_artillery
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = medium_tank_artillery_chassis_1
@@ -1103,6 +1124,7 @@ JAP_medium_tank_artillery = {
 				has_tech = interwar_artillery
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = medium_tank_artillery_chassis_2
@@ -1147,6 +1169,7 @@ JAP_medium_tank_artillery = {
 			has_tech = artillery1
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = medium_tank_artillery_chassis_3
@@ -1190,7 +1213,7 @@ JAP_medium_tank_anti_air = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -1216,6 +1239,7 @@ JAP_medium_tank_anti_air = {
 			has_tech = interwar_antiair
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = medium_tank_aa_chassis_1
@@ -1259,6 +1283,7 @@ JAP_medium_tank_anti_air = {
 			has_tech = antiair2
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = medium_tank_aa_chassis_2
@@ -1303,6 +1328,7 @@ JAP_medium_tank_anti_air = {
 			has_tech = antiair5
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2500
 			type = medium_tank_aa_chassis_3
@@ -1345,7 +1371,7 @@ JAP_heavy_tanks = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -1370,6 +1396,7 @@ JAP_heavy_tanks = {
 			
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = heavy_tank_chassis_1
@@ -1385,7 +1412,7 @@ JAP_heavy_tanks = {
 				turret_type_slot = tank_heavy_two_man_tank_turret
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_riveted_armor
-				engine_type_slot = tank_gasoline_engine
+				engine_type_slot = tank_diesel_engine
 				special_type_slot_1 = tank_radio_module
 				special_type_slot_2 = secondary_turret_hmg
 				special_type_slot_3 = secondary_turret_hmg
@@ -1418,7 +1445,7 @@ JAP_heavy_tanks = {
 			tank_heavy_two_man_tank_turret
 			tank_bogie_suspension
 			tank_riveted_armor
-			tank_gasoline_engine
+			tank_diesel_engine
 			secondary_turret_hmg
 			tank_radio_3
 			tank_radio_2
@@ -1435,6 +1462,7 @@ JAP_heavy_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = heavy_tank_chassis_2
@@ -1456,7 +1484,7 @@ JAP_heavy_tanks = {
 				}
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_cast_armor
-				engine_type_slot = tank_gasoline_engine
+				engine_type_slot = tank_diesel_engine
 				special_type_slot_1 = tank_radio_module
 				special_type_slot_2 = empty
 				special_type_slot_3 = empty
@@ -1490,7 +1518,7 @@ JAP_heavy_tanks = {
 			tank_heavy_three_man_tank_turret
 			tank_bogie_suspension
 			tank_cast_armor
-			tank_gasoline_engine
+			tank_diesel_engine
 			tank_radio_3
 			tank_radio_2
 			tank_radio_1
@@ -1502,6 +1530,7 @@ JAP_heavy_tanks = {
 			factor = 10
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 4000
 			type = heavy_tank_chassis_3
@@ -1517,7 +1546,7 @@ JAP_heavy_tanks = {
 				turret_type_slot = tank_heavy_three_man_tank_turret
 				suspension_type_slot = tank_torsion_bar_suspension
 				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_gasoline_engine
+				engine_type_slot = tank_diesel_engine
 				special_type_slot_1 = tank_radio_module
 				special_type_slot_2 = sloped_armor
 				special_type_slot_3 = smoke_launchers
@@ -1555,7 +1584,7 @@ JAP_heavy_tanks = {
 			tank_heavy_three_man_tank_turret
 			tank_torsion_bar_suspension
 			tank_welded_armor
-			tank_gasoline_engine
+			tank_diesel_engine
 			tank_radio_3
 			tank_radio_2
 			tank_radio_1
@@ -1571,7 +1600,7 @@ JAP_heavy_tank_destroyer = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -1597,6 +1626,7 @@ JAP_heavy_tank_destroyer = {
 			has_tech = antitank2
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = heavy_tank_destroyer_chassis_1
@@ -1647,6 +1677,7 @@ JAP_heavy_tank_destroyer = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = heavy_tank_destroyer_chassis_2
@@ -1710,6 +1741,7 @@ JAP_heavy_tank_destroyer = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = heavy_tank_destroyer_chassis_3
@@ -1768,7 +1800,7 @@ JAP_heavy_tank_artillery = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -1787,6 +1819,7 @@ JAP_heavy_tank_artillery = {
 			has_tech = interwar_artillery
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = heavy_tank_artillery_chassis_1
@@ -1830,6 +1863,7 @@ JAP_heavy_tank_artillery = {
 				has_tech = interwar_artillery
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = heavy_tank_artillery_chassis_2
@@ -1875,6 +1909,7 @@ JAP_heavy_tank_artillery = {
 			has_tech = artillery5
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = heavy_tank_artillery_chassis_3
@@ -1918,7 +1953,7 @@ JAP_heavy_tank_anti_air = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -1944,6 +1979,7 @@ JAP_heavy_tank_anti_air = {
 			has_tech = interwar_antiair
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = heavy_tank_aa_chassis_1
@@ -1987,6 +2023,7 @@ JAP_heavy_tank_anti_air = {
 			has_tech = antiair2
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = heavy_tank_aa_chassis_2
@@ -2031,6 +2068,7 @@ JAP_heavy_tank_anti_air = {
 			has_tech = antiair5
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2500
 			type = heavy_tank_aa_chassis_3
@@ -2073,7 +2111,7 @@ JAP_super_heavy_tanks = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -2098,6 +2136,7 @@ JAP_super_heavy_tanks = {
 			
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = super_heavy_tank_chassis
@@ -2169,7 +2208,7 @@ JAP_modern_tanks = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -2189,6 +2228,7 @@ JAP_modern_tanks = {
 			factor = 10
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = modern_tank_chassis
@@ -2256,7 +2296,7 @@ JAP_modern_tank_destroyer = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -2277,6 +2317,7 @@ JAP_modern_tank_destroyer = {
 			
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = modern_tank_destroyer_chassis
@@ -2344,7 +2385,7 @@ JAP_amphibious_tanks = {
 	blocked_for = {}
 
 	available_for = { 
-		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS
+		ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
 	}
 
 	roles = {
@@ -2362,6 +2403,7 @@ JAP_amphibious_tanks = {
 			
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = amphibious_tank_chassis

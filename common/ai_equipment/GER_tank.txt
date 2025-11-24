@@ -26,6 +26,7 @@ GER_light_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = light_tank_chassis_0
@@ -70,6 +71,7 @@ GER_light_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = light_tank_chassis_1
@@ -113,7 +115,7 @@ GER_light_tanks = {
 
 	improved_light_tank_default = { #Panzer II
 	
-		visible = no #We'll use the later variant for historical designs
+		visible = no #We'll use the later variant for "Historical" designs
 	
 		priority = {
 			factor = 100
@@ -123,6 +125,7 @@ GER_light_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 3000
 			type = light_tank_chassis_2
@@ -194,6 +197,7 @@ GER_light_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 3500
 			type = light_tank_chassis_2
@@ -243,6 +247,7 @@ GER_light_tanks = {
 			factor = 10
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 4000
 			type = light_tank_chassis_3
@@ -319,6 +324,7 @@ GER_light_tank_destroyers = {
 			has_tech = interwar_antitank
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = light_tank_destroyer_chassis_1
@@ -368,6 +374,7 @@ GER_light_tank_destroyers = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = light_tank_destroyer_chassis_1
@@ -436,6 +443,7 @@ GER_light_tank_artillery = {
 			has_tech = interwar_artillery
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = light_tank_artillery_chassis_1
@@ -479,6 +487,7 @@ GER_light_tank_artillery = {
 				has_tech = interwar_artillery
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = light_tank_artillery_chassis_2
@@ -524,6 +533,7 @@ GER_light_tank_artillery = {
 			has_tech = artillery1
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = light_tank_artillery_chassis_3
@@ -592,6 +602,7 @@ GER_light_tank_anti_air = {
 			has_tech = interwar_antiair
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = light_tank_aa_chassis_1
@@ -636,6 +647,7 @@ GER_light_tank_anti_air = {
 			has_tech = antiair2
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = light_tank_aa_chassis_2
@@ -681,6 +693,7 @@ GER_light_tank_anti_air = {
 			has_tech = antiair5
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2500
 			type = light_tank_aa_chassis_3
@@ -717,6 +730,72 @@ GER_light_tank_anti_air = {
 	}
 }
 
+
+GER_light_tank_flame = {
+	category = land
+
+	blocked_for = {}
+
+	available_for = { 
+		OOS OAZ OSO OSI OSZ OSE OSA OSS OSL OSF OSB OSY OLO OLI OLZ OLE OLA OLS OLL OLF OBS IBB FLE YOY YFB
+	}
+
+	roles = {
+		land_light_tank_flame
+	}
+
+	priority = {
+		factor = 50
+	}
+	light_tank_flame_1 = { #Panzer II (Flamm)
+		priority = {
+			factor = 100
+		}
+		enable = {
+			is_special_project_completed = sp:sp_land_flamethrower_tank
+		}
+
+		target_variant = {
+			match_value = 1000
+			type = light_tank_flame_chassis
+			modules = {
+				main_armament_slot = flamethrower
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = additional_machine_guns
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+				
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = {
+					base = 1
+					modifier = {
+						add = 4
+						has_war = yes
+					}
+				}
+			}
+		}
+
+		allowed_modules = {
+			flamethrower
+			advanced_flamethrower
+			tank_light_one_man_tank_turret
+			tank_bogie_suspension
+			tank_riveted_armor
+			tank_gasoline_engine
+			tank_radio_module
+			additional_machine_guns
+		}
+	}
+	
+}
+
 GER_medium_tanks = {
 	category = land
 
@@ -743,6 +822,7 @@ GER_medium_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = medium_tank_chassis_1
@@ -803,6 +883,7 @@ GER_medium_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2500
 			type = medium_tank_chassis_2
@@ -865,6 +946,7 @@ GER_medium_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 3000
 			type = medium_tank_chassis_2
@@ -931,6 +1013,7 @@ GER_medium_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 4000
 			type = medium_tank_chassis_3
@@ -985,6 +1068,75 @@ GER_medium_tanks = {
 	}
 }
 
+
+GER_medium_tanks_flame = {
+	category = land
+
+	blocked_for = {}
+
+	available_for = { 
+		OOS OAZ OSO OSI OSZ OSE OSA OSS OSL OSF OSB OSY OLO OLI OLZ OLE OLA OLS OLL OLF OBS IBB FLE YOY YFB
+	}
+
+	roles = {
+		land_medium_tank_flame
+	}
+
+	priority = {
+		factor = 50
+	}
+
+	basic_medium_tank_flame = { #Flammpanzer III
+		priority = {
+			factor = 100
+		}
+
+		target_variant = {
+			match_value = 2000
+			type = medium_tank_flame_chassis
+			modules = {
+				main_armament_slot = advanced_flamethrower
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = additional_machine_guns
+				special_type_slot_3 = additional_machine_guns
+				special_type_slot_4 = smoke_launchers
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 5
+				tank_nsb_armor_upgrade = {
+					base = 3
+					modifier = {
+						add = 2
+						has_war = yes
+					}
+					modifier = {
+						any_enemy_country = {
+							is_major = yes
+						}
+						add = 3
+					}
+				}
+			}
+		}
+
+		allowed_modules = {
+			tank_high_velocity_cannon
+			tank_medium_two_man_tank_turret
+			tank_bogie_suspension
+			tank_riveted_armor
+			tank_gasoline_engine
+			additional_machine_guns
+			tank_radio_3
+			tank_radio_2
+			tank_radio_1
+		}
+	}
+}
+
 GER_medium_tank_destroyer = {
 	category = land
 
@@ -1028,6 +1180,7 @@ GER_medium_tank_destroyer = {
 			has_tech = interwar_antitank
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = medium_tank_destroyer_chassis_1
@@ -1086,6 +1239,7 @@ GER_medium_tank_destroyer = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = medium_tank_destroyer_chassis_2
@@ -1146,6 +1300,7 @@ GER_medium_tank_destroyer = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = medium_tank_destroyer_chassis_3
@@ -1224,6 +1379,7 @@ GER_medium_tank_artillery = {
 			has_tech = interwar_artillery
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = medium_tank_artillery_chassis_1
@@ -1270,6 +1426,7 @@ GER_medium_tank_artillery = {
 				has_tech = interwar_artillery
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = medium_tank_artillery_chassis_2
@@ -1317,6 +1474,7 @@ GER_medium_tank_artillery = {
 			has_tech = artillery1
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = medium_tank_artillery_chassis_3
@@ -1386,6 +1544,7 @@ GER_medium_tank_anti_air = {
 			has_tech = interwar_antiair
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = medium_tank_aa_chassis_1
@@ -1429,6 +1588,7 @@ GER_medium_tank_anti_air = {
 			has_tech = antiair2
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = medium_tank_aa_chassis_2
@@ -1473,6 +1633,7 @@ GER_medium_tank_anti_air = {
 			has_tech = antiair5
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2500
 			type = medium_tank_aa_chassis_3
@@ -1540,6 +1701,7 @@ GER_heavy_tanks = {
 			
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = heavy_tank_chassis_1
@@ -1594,6 +1756,7 @@ GER_heavy_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = heavy_tank_chassis_2
@@ -1644,6 +1807,7 @@ GER_heavy_tanks = {
 			factor = 100
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 4000
 			type = heavy_tank_chassis_3
@@ -1735,6 +1899,7 @@ GER_heavy_tank_destroyer = {
 			has_tech = antitank2
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = heavy_tank_destroyer_chassis_1
@@ -1792,6 +1957,7 @@ GER_heavy_tank_destroyer = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = heavy_tank_destroyer_chassis_2
@@ -1859,6 +2025,7 @@ GER_heavy_tank_destroyer = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = heavy_tank_destroyer_chassis_3
@@ -1934,6 +2101,7 @@ GER_heavy_tank_artillery = {
 			has_tech = interwar_artillery
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = heavy_tank_artillery_chassis_1
@@ -1977,6 +2145,7 @@ GER_heavy_tank_artillery = {
 				has_tech = interwar_artillery
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = heavy_tank_artillery_chassis_2
@@ -2022,6 +2191,7 @@ GER_heavy_tank_artillery = {
 			has_tech = artillery5
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2000
 			type = heavy_tank_artillery_chassis_3
@@ -2091,6 +2261,7 @@ GER_heavy_tank_anti_air = {
 			has_tech = interwar_antiair
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = heavy_tank_aa_chassis_1
@@ -2134,6 +2305,7 @@ GER_heavy_tank_anti_air = {
 			has_tech = antiair2
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1500
 			type = heavy_tank_aa_chassis_2
@@ -2178,6 +2350,7 @@ GER_heavy_tank_anti_air = {
 			has_tech = antiair5
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 2500
 			type = heavy_tank_aa_chassis_3
@@ -2249,6 +2422,7 @@ GER_super_heavy_tanks = {
 			}
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = super_heavy_tank_chassis
@@ -2331,6 +2505,7 @@ GER_modern_tanks = {
 			factor = 100
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = modern_tank_chassis
@@ -2420,6 +2595,7 @@ GER_modern_tank_destroyer = {
 			factor = 10
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = modern_tank_destroyer_chassis
@@ -2503,6 +2679,7 @@ GER_amphibious_tanks = {
 			factor = 10
 		}
 
+		history = yes
 		target_variant = {
 			match_value = 1000
 			type = amphibious_tank_chassis
