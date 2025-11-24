@@ -1,59 +1,27 @@
 characters={
 	AFL_manuel_avila_camacho = {
-		instance = {
-			allowed = {
-				has_dlc = "Man the Guns"
+		name=MEX_manuel_avila_camacho
+		portraits={
+			civilian={
+				large=GFX_portrait_MEX_avila_civil
+				small=GFX_portrait_MEX_manuel_avila_camacho_small
 			}
-			name=MEX_manuel_avila_camacho
-			portraits={
-				civilian={
-					large=GFX_portrait_MEX_avila_civil
-					small=GFX_portrait_MEX_manuel_avila_camacho_small
-				}
-				army={
-					large=GFX_portrait_MEX_avila_military
-					small=GFX_portrait_MEX_manuel_avila_camacho_small
-				}
-			}
-			country_leader={
-				traits={ the_gentleman_president }
-				ideology=conservatism
-				expire="1965.1.1.1"
-				id=-1
-			}
-			country_leader={
-				traits={ the_gentleman_president }
-				ideology=oligarchism
-				expire="1965.1.1.1"
-				id=-1
+			army={
+				large=GFX_portrait_MEX_avila_military
+				small=GFX_portrait_MEX_manuel_avila_camacho_small
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Man the Guns" }
-			}
-			name=MEX_manuel_avila_camacho
-			portraits={
-				civilian={
-					large=GFX_Portrait_South_America_Generic_2
-				}
-				army={
-					large=GFX_Portrait_South_America_Generic_land_1
-					small=GFX_Portrait_South_America_Generic_land_1_small
-				}
-			}
-			country_leader={
-				traits={ the_gentleman_president }
-				ideology=conservatism
-				expire="1965.1.1.1"
-				id=-1
-			}
-			country_leader={
-				traits={ the_gentleman_president }
-				ideology=oligarchism
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			traits={ the_gentleman_president }
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			traits={ the_gentleman_president }
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 }

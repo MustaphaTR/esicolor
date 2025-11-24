@@ -1,39 +1,17 @@
 characters={
 	ABI_jesus_degollado_guizar = {
-		instance = {
-			allowed = {
-				has_dlc = "Man the Guns"
-			}
-			name=MEX_jesus_degollado_guizar
-			portraits={
-				civilian={
-					large=GFX_portrait_MEX_jesus_degollado_guizar
-					small=GFX_portrait_MEX_jesus_degollado_guizar_small
-				}
-			}
-			country_leader={
-				traits={ cristero_general }
-				ideology=falangism
-				expire="1965.1.1.1"
-				id=-1
+		name=MEX_jesus_degollado_guizar
+		portraits={
+			civilian={
+				large=GFX_portrait_MEX_jesus_degollado_guizar
+				small=GFX_portrait_MEX_jesus_degollado_guizar_small
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Man the Guns" }
-			}
-			name=MEX_jesus_degollado_guizar
-			portraits={
-				civilian={
-					large=GFX_Portrait_South_America_Generic_6
-				}
-			}
-			country_leader={
-				traits={ cristero_general }
-				ideology=falangism
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			traits={ cristero_general }
+			ideology=falangism
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 }

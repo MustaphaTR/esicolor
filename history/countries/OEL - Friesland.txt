@@ -27,17 +27,7 @@ set_politics = {
 	elections_allowed = no
 }
 
-# No generic female portraits, so recruting a male character without DLC.
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	recruit_character = OEL_wilhelmina
-
-	else = {
-		recruit_character = OEL_willem_schermerhorn
-	}
-}
+recruit_character = OEL_wilhelmina
 
 set_rule = {
 	can_generate_female_aces = yes

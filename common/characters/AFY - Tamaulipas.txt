@@ -1,40 +1,17 @@
 characters={
 	AFY_saturnino_cedillo = {
-		instance = {
-			allowed = {
-				has_dlc = "Man the Guns"
-			}
-			name=MEX_saturnino_cedillo
-			portraits={
-				civilian={
-					large=GFX_portrait_MEX_saturnino_cedillo
-					small=GFX_portrait_MEX_saturnino_cedillo_small
-				}
-			}
-			country_leader={
-				traits={ fascist_militia_leader }
-				ideology=falangism
-				expire="1965.1.1.1"
-				id=-1
+		name=MEX_saturnino_cedillo
+		portraits={
+			civilian={
+				large=GFX_portrait_MEX_saturnino_cedillo
+				small=GFX_portrait_MEX_saturnino_cedillo_small
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Man the Guns" }
-			}
-			name=MEX_saturnino_cedillo
-			portraits={
-				civilian={
-					large=GFX_Portrait_South_America_Generic_land_3
-					small=GFX_Portrait_South_America_Generic_land_3_small
-				}
-			}
-			country_leader={
-				traits={ fascist_militia_leader }
-				ideology=falangism
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			traits={ fascist_militia_leader }
+			ideology=falangism
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 }

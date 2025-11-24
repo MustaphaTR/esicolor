@@ -7389,96 +7389,82 @@ ETH_get_ships_from_country = { #MOved this here from event in ETH. This works wi
 				state_originally_from_UKD = yes
 			}
 		}
-		if = {
-			limit = {
-				has_dlc = "Man the Guns"
+		FROM = {
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "S Class"
+				creator = FROM
+				name = "S Class I"
 			}
-			FROM = {
-				create_ship = {
-					type = ship_hull_light_1
-					equipment_variant = "S Class"
-					creator = FROM
-					name = "S Class I"
-				}
-				create_ship = {
-					type = ship_hull_light_1
-					equipment_variant = "S Class"
-					creator = FROM
-					name = "S Class II"
-				}
-				create_ship = {
-					type = ship_hull_light_1
-					equipment_variant = "S Class"
-					creator = FROM
-					name = "S Class III"
-				}
-				create_ship = {
-					type = ship_hull_light_1
-					equipment_variant = "S Class"
-					creator = FROM
-					name = "S Class IV"
-				}
-				create_ship = {
-					type = ship_hull_light_1
-					equipment_variant = "S Class"
-					creator = FROM
-					name = "S Class V"
-				}
-				create_ship = {
-					type = ship_hull_light_1
-					equipment_variant = "S Class"
-					creator = FROM
-					name = "S Class VI"
-				}
-				
-			
-				#Transfer British Destroyers
-				transfer_ship={
-				  prefer_name = "S Class I"
-				  type = destroyer
-				  target = ROOT
-				  exclude_refitting = no
-				}
-				transfer_ship={
-				  prefer_name = "S Class II"
-				  type = destroyer
-				  target = ROOT
-				  exclude_refitting = no
-				}
-				transfer_ship={
-				  prefer_name = "S Class III"
-				  type = destroyer
-				  target = ROOT
-				  exclude_refitting = no
-				}
-				transfer_ship={
-				  prefer_name = "S Class IV"
-				  type = destroyer
-				  target = ROOT
-				  exclude_refitting = no
-				}
-				transfer_ship={
-				  prefer_name = "S Class V"
-				  type = destroyer
-				  target = ROOT
-				  exclude_refitting = no
-				}
-				transfer_ship={
-				  prefer_name = "S Class VI"
-				  type = destroyer
-				  target = ROOT
-				  exclude_refitting = no
-				}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "S Class"
+				creator = FROM
+				name = "S Class II"
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "S Class"
+				creator = FROM
+				name = "S Class III"
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "S Class"
+				creator = FROM
+				name = "S Class IV"
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "S Class"
+				creator = FROM
+				name = "S Class V"
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "S Class"
+				creator = FROM
+				name = "S Class VI"
+			}
+
+			#Transfer British Destroyers
+			transfer_ship={
+			  prefer_name = "S Class I"
+			  type = destroyer
+			  target = ROOT
+			  exclude_refitting = no
+			}
+			transfer_ship={
+			  prefer_name = "S Class II"
+			  type = destroyer
+			  target = ROOT
+			  exclude_refitting = no
+			}
+			transfer_ship={
+			  prefer_name = "S Class III"
+			  type = destroyer
+			  target = ROOT
+			  exclude_refitting = no
+			}
+			transfer_ship={
+			  prefer_name = "S Class IV"
+			  type = destroyer
+			  target = ROOT
+			  exclude_refitting = no
+			}
+			transfer_ship={
+			  prefer_name = "S Class V"
+			  type = destroyer
+			  target = ROOT
+			  exclude_refitting = no
+			}
+			transfer_ship={
+			  prefer_name = "S Class VI"
+			  type = destroyer
+			  target = ROOT
+			  exclude_refitting = no
 			}
 		}
-		ELSE = {
-			ROOT = {
-				create_ship = {
-					type = destroyer_1
-					creator = FROM
-				}
-			}
-		}	
 		FROM = { set_country_flag = sold_ships_to_us@ROOT }
 	}
 	else_if = {

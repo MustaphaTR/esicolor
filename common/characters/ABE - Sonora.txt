@@ -1,58 +1,26 @@
 characters={
 	ABE_plutarco_calles = {
-		instance = {
-			allowed = {
-				has_dlc = "Man the Guns"
+		name=MEX_plutarco_calles
+		portraits={
+			civilian={
+				large=GFX_portrait_MEX_calles_civil
 			}
-			name=MEX_plutarco_calles
-			portraits={
-				civilian={
-					large=GFX_portrait_MEX_calles_civil
-				}
-				army={
-					large=GFX_portrait_MEX_calles_military
-					small=GFX_idea_MEX_plutarco_calles
-				}
-			}
-			country_leader={
-				traits={ el_jefe_maximo }
-				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
-			}
-			country_leader={
-				traits={ el_jefe_maximo }
-				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=-1
+			army={
+				large=GFX_portrait_MEX_calles_military
+				small=GFX_idea_MEX_plutarco_calles
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Man the Guns" }
-			}
-			name=MEX_plutarco_calles
-			portraits={
-				civilian={
-					large=GFX_Portrait_South_America_Generic_2
-				}
-				army={
-					large=GFX_Portrait_South_America_Generic_land_1
-					small=GFX_Portrait_South_America_Generic_land_1_small
-				}
-			}
-			country_leader={
-				traits={ el_jefe_maximo }
-				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
-			}
-			country_leader={
-				traits={ el_jefe_maximo }
-				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			traits={ el_jefe_maximo }
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			traits={ el_jefe_maximo }
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 }
