@@ -1064,10 +1064,100 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetIdeologyDef_TKS_URUMQI
+	text = {
+		trigger = { has_country_leader = { character = LIY_khoja_niyaz ruling_only = yes } }
+		localization_key = TKS_URUMQI_TURK_neutrality_DEF
+	}
+	text = {
+		trigger = {
+			has_government = neutrality
+			original_tag = FLO
+		}
+		localization_key = TKS_URUMQI_KUMUL_neutrality_DEF
+	}
+	text = {
+		trigger = {
+			has_government = democratic
+			original_tag = FLO
+		}
+		localization_key = TKS_URUMQI_KUMUL_democratic_DEF
+	}
+	text = {
+		trigger = {
+			has_government = fascism
+			original_tag = FLO
+		}
+		localization_key = TKS_URUMQI_KUMUL_fascism_DEF
+	}
+	text = {
+		trigger = {
+			has_government = communism
+			original_tag = FLO
+		}
+		localization_key = TKS_URUMQI_KUMUL_communism_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = TKS_URUMQI_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = TKS_URUMQI_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = TKS_URUMQI_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = TKS_URUMQI_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_TKS_KHOTAN
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = { character = FSY_ma_hongbin ruling_only = yes }
+				has_country_leader = { character = NAZ_ma_hushan ruling_only = yes }
+			}
+		}
+		localization_key = TKS_KHOTAN_MA_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = TKS_KHOTAN_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = TKS_KHOTAN_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = TKS_KHOTAN_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = TKS_KHOTAN_communism_DEF
+	}
+}
+
+defined_text = {
 	name = GetIdeologyDef_TKS_SINKIANG
 	text = {
 		trigger = { has_country_leader = { character = LIY_khoja_niyaz ruling_only = yes } }
 		localization_key = TKS_SINKIANG_TURK_neutrality_DEF
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = { character = FSY_ma_hongbin ruling_only = yes }
+				has_country_leader = { character = NAZ_ma_hushan ruling_only = yes }
+			}
+		}
+		localization_key = TKS_SINKIANG_MA_neutrality_DEF
 	}
 	text = {
 		trigger = { has_government = neutrality }
@@ -5972,6 +6062,26 @@ defined_text = {
 	text = {
 		trigger = { has_government = communism }
 		localization_key = CHI_SOUTHWEST_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_CHI_HUBEI
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = CHI_HUBEI_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = CHI_HUBEI_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = CHI_HUBEI_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = CHI_HUBEI_communism_DEF
 	}
 }
 

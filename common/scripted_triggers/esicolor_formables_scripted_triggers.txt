@@ -9433,14 +9433,27 @@ can_form_altai = {
 	}
 }
 
-can_form_sinkiang = {
+can_form_urumqi = {
 	OR = {
-		original_tag = ZBF
 		original_tag = LIF
 		original_tag = MJC # LIB
 		original_tag = LIY
-		original_tag = FSY
 		original_tag = FLO
+	}
+}
+
+can_form_khotan = {
+	OR = {
+		original_tag = ZBF
+		original_tag = FSY
+		original_tag = NAZ
+	}
+}
+
+can_form_sinkiang = {
+	OR = {
+		can_form_urumqi = yes
+		can_form_khotan = yes
 	}
 }
 
@@ -9522,14 +9535,27 @@ is_altai = {
 	}
 }
 
-is_sinkiang = {
+is_urumqi = {
 	OR = {
-		state = 287
 		state = 617
 		state = 618
 		state = 619
-		state = 759
 		state = 760
+	}
+}
+
+is_khotan = {
+	OR = {
+		state = 287
+		state = 759
+		state = 1042
+	}
+}
+
+is_sinkiang = {
+	OR = {
+		is_urumqi = yes
+		is_khotan = yes
 	}
 }
 
@@ -9620,6 +9646,29 @@ has_states_to_form_altai = {
 	}
 }
 
+has_states_to_form_urumqi = {
+	custom_trigger_tooltip = {
+		tooltip = form_urumqi_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 617 } } } owns_state = 617 }
+		if = { limit = { NOT = { OOO = { owns_state = 618 } } } owns_state = 618 }
+		if = { limit = { NOT = { OOO = { owns_state = 619 } } } owns_state = 619 }
+	}
+}
+
+has_states_to_form_khotan = {
+	custom_trigger_tooltip = {
+		tooltip = form_khotan_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 287 } } } owns_state = 287 }
+		if = { limit = { NOT = { OOO = { owns_state = 759 } } } owns_state = 759 }
+		if = { limit = { NOT = { OOO = { owns_state = 1042 } } } owns_state = 1042 }
+	}
+}
+
+has_cosmetics_to_form_sinkiang = {
+	has_country_flag = can_form_TKS_SINKIANG
+}
 has_states_to_form_sinkiang = {
 	custom_trigger_tooltip = {
 		tooltip = form_sinkiang_has_states_tt
@@ -9660,6 +9709,14 @@ required_states_to_form_turkmenistan = {
 	OR = {
 		state = 584
 		state = 832
+	}
+}
+
+required_states_to_form_urumqi = {
+	OR = {
+		state = 617
+		state = 618
+		state = 619
 	}
 }
 
@@ -10490,6 +10547,7 @@ can_form_ningxia = {
 
 can_form_ma_clique = {
 	OR = {
+		can_form_khotan = yes
 		can_form_qinghai = yes
 		can_form_gansu = yes
 		can_form_ningxia = yes
@@ -10699,6 +10757,7 @@ is_ningxia = {
 
 is_ma_clique = {
 	OR = {
+		is_khotan = yes
 		is_qinghai = yes
 		is_gansu = yes
 		is_ningxia = yes
@@ -11185,10 +11244,19 @@ required_states_to_form_north_china = {
 	}
 }
 
+required_states_to_form_guangdong = {
+	OR = {
+		state = 592
+		state = 593
+		state = 728
+		state = 1033
+	}
+}
+
 required_states_to_form_south_china = {
 	OR = {
 		is_guangxi = yes
-		is_guangdong = yes
+		required_states_to_form_guangdong = yes
 		state = 591
 	}
 }

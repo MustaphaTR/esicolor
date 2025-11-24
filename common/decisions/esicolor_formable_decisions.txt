@@ -2510,20 +2510,146 @@ esicolor_formables = {
 		}
 	}
 
+	form_urumqi = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_urumqi = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_urumqi = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_urumqi"
+			clr_country_flag = can_form_MON_UNITED
+
+			set_country_flag = can_form_TKS_SINKIANG
+
+			if = {
+				limit = { has_country_leader = { character = LIY_khoja_niyaz ruling_only = yes } }
+
+				set_cosmetic_tag = TKS_URUMQI_TURK
+			}
+			else = {
+				limit = { original_tag = FLO }
+
+				set_cosmetic_tag = TKS_URUMQI_KUMUL
+
+				else = {
+					set_cosmetic_tag = TKS_URUMQI
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_urumqi = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_urumqi_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_urumqi = yes
+				}
+				else = {
+					required_states_to_form_urumqi = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
+	form_khotan = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_khotan = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_khotan = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_khotan"
+			set_country_flag = can_form_TKS_SINKIANG
+			set_country_flag = can_form_CHI_HUI
+
+			if = {
+				limit = {
+					OR = {
+						has_country_leader = { character = FSY_ma_hongbin ruling_only = yes }
+						has_country_leader = { character = NAZ_ma_hushan ruling_only = yes }
+					}
+				}
+
+				set_cosmetic_tag = TKS_KHOTAN_MA
+
+				else = {
+					set_cosmetic_tag = TKS_KHOTAN
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_khotan = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_khotan = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
 	form_sinkiang = {
 		icon = generic_form_nation
 		allowed = {
 			can_form_sinkiang = yes
 		}
 		visible = {
-			has_formed_a_formable = no
+			has_cosmetics_to_form_sinkiang = yes
 		}
 		available = {
 			has_states_to_form_sinkiang = yes
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_sinkiang"
-			clr_country_flag = can_form_MON_UNITED
+			clr_country_flag = can_form_TKS_SINKIANG
+			clr_country_flag = can_form_CHI_HUI
 
 			set_country_flag = can_form_TKS_UNITED
 			set_country_flag = can_form_CHI_UNITED
@@ -2532,6 +2658,16 @@ esicolor_formables = {
 				limit = { has_country_leader = { character = LIY_khoja_niyaz ruling_only = yes } }
 
 				set_cosmetic_tag = TKS_SINKIANG_TURK
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_leader = { character = FSY_ma_hongbin ruling_only = yes }
+						has_country_leader = { character = NAZ_ma_hushan ruling_only = yes }
+					}
+				}
+
+				set_cosmetic_tag = TKS_SINKIANG_MA
 
 				else = {
 					set_cosmetic_tag = TKS_SINKIANG
@@ -2554,7 +2690,7 @@ esicolor_formables = {
 			}
 		}
 
-		cost = global.formables_cost_25?25
+		cost = global.formables_cost_50?50
 
 		fire_only_once = yes
 
@@ -13333,6 +13469,48 @@ esicolor_formables = {
 		}
 	}
 
+	form_hubei = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_hubei = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_hubei = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_hubei"
+			set_country_flag = can_form_CHI_CENTRAL
+
+			set_cosmetic_tag = CHI_HUBEI
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_hubei = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_hubei = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
 	form_hunnan = {
 		icon = generic_form_nation
 		allowed = {
@@ -13485,12 +13663,24 @@ esicolor_formables = {
 					formable_decision_effect = yes
 				}
 			}
-			formable_decision_effect_tooltip_default = yes
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_guangdong_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
 		}
 
 		highlight_states = {
 			highlight_states_trigger = {
-				is_guangdong = yes
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_guangdong = yes
+				}
+				else = {
+					required_states_to_form_guangdong = yes
+				}
 			}
 		}
 
