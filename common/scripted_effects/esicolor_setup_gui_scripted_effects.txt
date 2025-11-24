@@ -32,6 +32,7 @@ default_preset_effects = {
 	set_variable = { global.setup_dams = -1 }
 	set_variable = { global.setup_facilities = -1 }
 	set_variable = { global.setup_landmarks = -1 }
+	set_variable = { global.setup_naval_headquarters = -1 }
 
 	set_variable = { global.setup_state_category = -1 }
 	set_variable = { global.setup_province_modifiers = -1 }
@@ -153,6 +154,7 @@ randomised_preset_effects = {
 	set_variable = { global.setup_dams = -1 }
 	set_variable = { global.setup_facilities = -1 }
 	set_variable = { global.setup_landmarks = -1 }
+	set_variable = { global.setup_naval_headquarters = -1 }
 
 	set_variable = { global.setup_state_category = 1 }
 	set_variable = { global.setup_state_category_min = 1 } # Pastoral
@@ -299,6 +301,7 @@ equalised_preset_effects = {
 	set_variable = { global.setup_dams = 0 }
 	set_variable = { global.setup_facilities = 0 }
 	set_variable = { global.setup_landmarks = 0 }
+	set_variable = { global.setup_naval_headquarters = 0 }
 
 	set_variable = { global.setup_state_category = 1 }
 	set_variable = { global.setup_state_category_min = 3 } # Town
@@ -436,6 +439,7 @@ developer_preset_effects = {
 	set_variable = { global.setup_dams = -1 }
 	set_variable = { global.setup_facilities = -1 }
 	set_variable = { global.setup_landmarks = -1 }
+	set_variable = { global.setup_naval_headquarters = -1 }
 
 	set_variable = { global.setup_state_category = -1 }
 	set_variable = { global.setup_province_modifiers = -1 }
@@ -542,6 +546,7 @@ setup_gui_start_general = {
 	setup_gui_start_dams = yes
 	setup_gui_start_facilities = yes
 	setup_gui_start_landmarks = yes
+	setup_gui_start_naval_headquarters = yes
 
 	setup_gui_start_population = yes
 	setup_gui_start_state_category = yes
@@ -723,6 +728,14 @@ setup_gui_start_landmarks = {
 		limit = { check_variable = { global.setup_landmarks > -1 } }
 
 		clear_landmarks = yes
+	}
+}
+
+setup_gui_start_naval_headquarters = {
+	if = {
+		limit = { check_variable = { global.setup_naval_headquarters > -1 } }
+
+		clear_naval_headquarters = yes
 	}
 }
 

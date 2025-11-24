@@ -339,14 +339,37 @@ scripted_gui = {
 			}
 
 			esicolor_welcome_screen_tab_1_page_2_eaw_data_13_locked_visible = {
-				NOT = { has_dlc = "Gotterdammerung" }
+				NOT = {
+					has_dlc = "Gotterdammerung"
+					has_dlc = "Graveyard of Empires"
+					has_dlc = "No Compromise, No Surrender"
+				}
 			}
 			esicolor_welcome_screen_tab_1_page_2_eaw_data_13_visible = {
-				has_dlc = "Gotterdammerung"
+				OR = {
+					has_dlc = "Gotterdammerung"
+					has_dlc = "Graveyard of Empires"
+					has_dlc = "No Compromise, No Surrender"
+				}
 			}
 			esicolor_welcome_screen_tab_1_page_2_eaw_data_13_selected_visible = {
-				has_dlc = "Gotterdammerung"
+				OR = {
+					has_dlc = "Gotterdammerung"
+					has_dlc = "Graveyard of Empires"
+					has_dlc = "No Compromise, No Surrender"
+				}
 				check_variable = { global.setup_landmarks = -1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_14_locked_visible = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_14_visible = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_14_selected_visible = {
+				has_dlc = "No Compromise, No Surrender"
+				check_variable = { global.setup_naval_headquarters = -1 }
 			}
 
 			esicolor_welcome_screen_tab_1_page_2_blocker_1_visible = {
@@ -914,6 +937,13 @@ scripted_gui = {
 			}
 			esicolor_welcome_screen_tab_1_page_2_eaw_data_13_selected_click = {
 				set_variable = { global.setup_landmarks = 0 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_14_click = {
+				set_variable = { global.setup_naval_headquarters = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_2_eaw_data_14_selected_click = {
+				set_variable = { global.setup_naval_headquarters = 0 }
 			}
 		}
 	}

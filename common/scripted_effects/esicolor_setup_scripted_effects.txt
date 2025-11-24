@@ -1750,6 +1750,17 @@ clear_landmarks = {
 	}
 }
 
+clear_naval_headquarters = {
+	every_state = {
+		set_building_level = {
+			type = naval_headquarters
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+	}
+}
+
 clear_resources = {
 	hidden_effect = {
 		set_temp_variable = { infrahere = building_level@infrastructure }

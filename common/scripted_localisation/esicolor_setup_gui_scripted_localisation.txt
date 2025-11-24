@@ -318,13 +318,36 @@ defined_text = {
 	name = esicolor_setup_landmarks_loc
 	text = {
 		trigger = {
-			NOT = { has_dlc = "Gotterdammerung" }
+			NOT = {
+				has_dlc = "Gotterdammerung"
+				has_dlc = "Graveyard of Empires"
+				has_dlc = "No Compromise, No Surrender"
+			}
 		}
-		localization_key = esicolor_setup_requires_wow
+		localization_key = esicolor_setup_requires_landmark_dlcs
 	}
 	text = {
 		trigger = {
 			check_variable = { global.setup_landmarks = -1 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		localization_key = esicolor_setup_disabled
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_naval_headquarters_loc
+	text = {
+		trigger = {
+			NOT = { has_dlc = "No Compromise, No Surrender" }
+		}
+		localization_key = esicolor_setup_requires_ncns
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_naval_headquarters = -1 }
 		}
 		localization_key = esicolor_setup_eaw_data
 	}
