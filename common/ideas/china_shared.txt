@@ -291,6 +291,38 @@ ideas = {
 			traits = { artillery_manufacturer }
 		}
 
+		LIE_motorized_equipment_manufacturer = {
+			name = CHI_china_automobile_corporation_organization
+			picture = CHI_cac
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = LIE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 613
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					613 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+
 		FIS_motorized_equipment_manufacturer = {
 			name = CHI_liaoning_arsenal
 			picture = CHI_liaoning

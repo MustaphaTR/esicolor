@@ -318,6 +318,37 @@ LIS_artillery_organization = {
 	}
 }
 
+LIE_motorized_mechanized_organization = {
+	name = CHI_china_automobile_corporation_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_CHI_cac
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = LIE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 613
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				613 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
 FIS_motorized_mechanized_organization = {
 	name = CHI_liaoning_arsenal_organization
 	include = esicolor_generic_motorized_mechanized_organization

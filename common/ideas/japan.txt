@@ -3,6 +3,99 @@ ideas = {
 		designer = yes
 
 		# Osaka Army Arsenal is a generic tank designer, plus is also an Artillery Designer, so excluding it.
+
+		ZBZ_armored_car_manufacturer = {
+			name = FRA_panhard
+			picture = FRA_panhard
+
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			visible = {
+				NOT = { has_country_flag = armored_car_manufacturer_disabled }
+				OR = {
+					original_tag = ZBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 282
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					282 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { armored_car_manufacturer }
+		}
+
+		ZBZ_assault_gun_manufacturer = {
+			name = hitachi_arms_department
+			picture = JAP_hitachi_arms
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = assault_gun_manufacturer_disabled }
+				OR = {
+					original_tag = ZBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 282
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					282 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { assault_gun_manufacturer }
+		}
+
+		ZBZ_medium_tank_manufacturer = {
+			name = sagami_army_arsenal
+			picture = JAP_sagami_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+				OR = {
+					original_tag = ZBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 282
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					282 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { medium_tank_manufacturer }
+		}
 	}
 
 	naval_manufacturer = {
@@ -68,6 +161,37 @@ ideas = {
 				naval_equipment = 0.15
 			}
 			traits = { battlefleet_designer }
+		}
+
+		SZY_repair_and_refurbishment_plant = {
+			name = hikari_naval_arsenal
+			picture = JAP_hikari_naval_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = repair_and_refurbishment_plant_disabled }
+				OR = {
+					original_tag = SZY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 529
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					529 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { repair_and_refurbishment_plant_esicolor }
 		}
 
 		SZB_coastal_defence_naval_manufacturer = {
@@ -136,6 +260,68 @@ ideas = {
 	aircraft_manufacturer = {
 		designer = yes
 
+		ZBZ_agility_focused_aircraft_manufacturer = {
+			name = mitsubishi
+			picture = mitsubishi
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = agility_focused_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ZBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 282
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					282 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { agility_focused_aircraft_manufacturer }
+		}
+
+		ZBZ_medium_aircraft_manufacturer = {
+			name = kawasaki_aircraft_industries
+			picture = JAP_kawasaki_aircraft
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = ZBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 282
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					282 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+		}
+
 		SEZ_fuel_efficient_aircraft_manufacturer = {
 			name = aichi
 			picture = aichi
@@ -167,20 +353,20 @@ ideas = {
 			traits = { fuel_efficient_aircraft_manufacturer }
 		}
 
-		ZBZ_agility_focused_aircraft_manufacturer = {
-			name = mitsubishi
-			picture = mitsubishi
+		SZY_multi_role_aircraft_manufacturer = {
+			name = kawanishi_aircraft_company
+			picture = JAP_kawanishi
 
 			allowed = {
 				always = yes
 			}
 			visible = {
-				NOT = { has_country_flag = agility_focused_aircraft_manufacturer_disabled }
+				NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
 				OR = {
-					original_tag = ZBZ
+					original_tag = SZY
 					AND = {
 						has_global_flag = custom_designers_only
-						owns_state = 282
+						owns_state = 529
 					}
 				}
 			}
@@ -188,14 +374,14 @@ ideas = {
 				if = {
 					limit = { has_global_flag = custom_designers_only }
 
-					282 = { state_designer_availabile = yes }
+					529 = { state_designer_availabile = yes }
 				}
 			}
 
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			traits = { agility_focused_aircraft_manufacturer }
+			traits = { multi_role_aircraft_manufacturer }
 		}
 
 		ZBZ_heavy_aircraft_manufacturer = {
@@ -264,8 +450,8 @@ ideas = {
 	materiel_manufacturer = {
 		designer = yes
 
-		ZBZ_infantry_equipment_manufacturer = {
-			name = tokyo_arsenal
+		SZB_infantry_equipment_manufacturer = {
+			name = kokura_arsenal
 			picture = tokyo_arsenal
 
 			allowed = {
@@ -274,10 +460,10 @@ ideas = {
 			visible = {
 				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
 				OR = {
-					original_tag = ZBZ
+					original_tag = SZB
 					AND = {
 						has_global_flag = custom_designers_only
-						owns_state = 282
+						owns_state = 528
 					}
 				}
 			}
@@ -285,7 +471,7 @@ ideas = {
 				if = {
 					limit = { has_global_flag = custom_designers_only }
 
-					282 = { state_designer_availabile = yes }
+					528 = { state_designer_availabile = yes }
 				}
 			}
 
@@ -293,6 +479,37 @@ ideas = {
 				infantry_weapons = 0.15
 			}
 			traits = { infantry_equipment_manufacturer }
+		}
+
+		SEZ_support_equipment_manufacturer = {
+			name = nagoya_arsenal
+			picture = JAP_nagoya_arsenal
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = SEZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 532
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					532 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
 		}
 
 		# Only exists as a MIO in basegame, but adding this here as well.
