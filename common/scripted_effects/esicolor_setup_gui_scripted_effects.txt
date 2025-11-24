@@ -733,9 +733,9 @@ setup_gui_start_landmarks = {
 
 setup_gui_start_naval_headquarters = {
 	if = {
-		limit = { check_variable = { global.setup_naval_headquarters > -1 } }
+		limit = { check_variable = { global.setup_naval_headquarters < 0 } }
 
-		clear_naval_headquarters = yes
+		setup_default_naval_headquarters = yes
 	}
 }
 
