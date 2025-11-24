@@ -121,6 +121,17 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = JAP_invest_in_senbu
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_princely_states_policy
+
+		completion_reward = { }
+	}
+
 	# Army Abilities
 	focus = {
 		id = SWE_winter_drill
@@ -128,7 +139,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = RAJ_princely_states_policy
+		relative_position_id = JAP_invest_in_senbu
 
 		completion_reward = { }
 	}
@@ -322,6 +333,18 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	# Infantry Technologies
+	focus = {
+		id = GER_fallschirmjager
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SAF_south_africa_first
+
+		completion_reward = { }
+	}
+
 	# Support Technologies
 	focus = {
 		id = AFG_expand_quami_template
@@ -329,7 +352,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = SAF_south_africa_first
+		relative_position_id = GER_fallschirmjager
 
 		completion_reward = { }
 	}
@@ -467,6 +490,29 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = JAP_the_ultimate_tank
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_expand_kummersdorfs_capacity
+
+		completion_reward = { }
+	}
+
+	# Electronics Technologies
+	focus = {
+		id = PHI_weapons_of_war
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = JAP_the_ultimate_tank
+
+		completion_reward = { }
+	}
+
 	# Industry Technologies
 	focus = {
 		id = FIN_tire_factory_at_nokia
@@ -474,7 +520,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = GER_expand_kummersdorfs_capacity
+		relative_position_id = PHI_weapons_of_war
 
 		completion_reward = { }
 	}
@@ -612,6 +658,50 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = JAP_sea_national_defense_state
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_raise_import_duties
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = JAP_prepare_for_the_final_war
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = JAP_sea_national_defense_state
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = PRC_promote_paper_bills
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = JAP_prepare_for_the_final_war
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = JAP_sea_state_general_mobilization_law
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = PRC_promote_paper_bills
+
+		completion_reward = { }
+	}
+
 	# Manpower Ideas
 	focus = {
 		id = AST_citizen_military_forces
@@ -619,7 +709,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = RAJ_raise_import_duties
+		relative_position_id = JAP_sea_state_general_mobilization_law
 
 		completion_reward = { }
 	}
@@ -1012,6 +1102,28 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = SIK_reaffirm_soviet_connections
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_tryst_with_destiny
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = JAP_sea_rekindle_the_old_alliance
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SIK_reaffirm_soviet_connections
+
+		completion_reward = { }
+	}
+
 	# Generic News Events
 	focus = {
 		id = GER_demand_memel
@@ -1019,7 +1131,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = RAJ_tryst_with_destiny
+		relative_position_id = JAP_sea_rekindle_the_old_alliance
 
 		completion_reward = { }
 	}
@@ -1413,6 +1525,50 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = MAN_tsr_the_two_emperors
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_holding_the_gates_of_india
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = MAN_tsr_claim_outer_manchuria
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = MAN_tsr_the_two_emperors
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = MAN_tsr_obedience
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = MAN_tsr_claim_outer_manchuria
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = MAN_tsr_assertiveness
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = MAN_tsr_obedience
+
+		completion_reward = { }
+	}
+
 	# Intelligence Operations
 	focus = {
 		id = SPR_regional_defense_council_of_aragon
@@ -1420,7 +1576,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = RAJ_holding_the_gates_of_india
+		relative_position_id = MAN_tsr_assertiveness
 
 		completion_reward = { }
 	}
@@ -1603,6 +1759,39 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = PRC_holding_half_the_sky
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = AFG_establish_radio_networks
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = PRC_promote_womens_suffrage
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = PRC_holding_half_the_sky
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = JAP_democratic_women_in_the_workforce
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = PRC_promote_womens_suffrage
+
+		completion_reward = { }
+	}
+
 	# Foreign Influence Decisions
 	focus = {
 		id = ENG_organize_the_blackshirts
@@ -1610,7 +1799,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = AFG_establish_radio_networks
+		relative_position_id = JAP_democratic_women_in_the_workforce
 
 		completion_reward = { }
 	}
@@ -3176,6 +3365,39 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = CHI_close_whampoa
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = NOR_officers_academy
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_end_military_primacy
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_close_whampoa
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_focus_on_meritocratic_principles
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_end_military_primacy
+
+		completion_reward = { }
+	}
+
 	# Götterdämmerung Dynamic Modifiers
 	focus = {
 		id = AUS_revolution
@@ -3183,7 +3405,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = NOR_officers_academy
+		relative_position_id = CHI_focus_on_meritocratic_principles
 
 		completion_reward = { }
 	}
@@ -3241,6 +3463,128 @@ focus_tree = {
 		y = 1
 		cost = 8
 		relative_position_id = RAJ_bathe_in_hellfire
+
+		completion_reward = { }
+	}
+
+	# Faction Goals
+	focus = {
+		id = JAP_the_great_spiritual_evil
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = RAJ_forward_bloc
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = JAP_strike_down_the_enemy_of_the_people
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = JAP_the_great_spiritual_evil
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ITA_italian_irredentism
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = JAP_strike_down_the_enemy_of_the_people
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_the_northern_mandate
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = ITA_italian_irredentism
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_the_southern_mandate
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_the_northern_mandate
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_the_greater_game
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_the_southern_mandate
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_from_many_to_one
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_the_greater_game
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = POL_sea_to_sea
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_from_many_to_one
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_tour_the_north
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = POL_sea_to_sea
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_tour_the_west
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_tour_the_north
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_tour_the_south
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_tour_the_west
 
 		completion_reward = { }
 	}

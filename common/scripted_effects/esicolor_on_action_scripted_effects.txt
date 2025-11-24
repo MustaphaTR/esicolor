@@ -917,3 +917,32 @@ setup_state_without_VP_array = {
 		add_to_array = { global.state_without_VP = THIS }
 	}
 }
+
+handle_fake_FIE = {
+	drop_cosmetic_tag = yes
+	set_popularities = {
+		neutrality = 100
+	}
+	OOO_nobody = {
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = anarchism
+			}
+		}
+	}
+
+	FIE = {
+		transfer_state = 713
+		load_oob = "713_1007"
+	}
+	if = {
+		limit = { is_ai = no }
+		FIE = {
+			set_variable = { esicolor_welcome_screen = 1 }
+			set_variable = { esicolor_setup_screen = 0 }
+			change_tag_from = PREV
+		}
+	}
+}

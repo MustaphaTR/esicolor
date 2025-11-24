@@ -668,18 +668,20 @@ clear_factories = {
 
 clear_civilian_factories = {
 	hidden_effect = {
-		remove_building = {
+		set_building_level = {
 			type = industrial_complex
-			level = 25
+			level = 0
+			instant_build = yes
 		}
 	}
 }
 
 clear_military_factories = {
 	hidden_effect = {
-		remove_building = {
+		set_building_level = {
 			type = arms_factory
-			level = 25
+			level = 0
+			instant_build = yes
 		}
 	}
 }
@@ -736,9 +738,10 @@ randomise_military_factories = {
 clear_dockyards = {
 	custom_effect_tooltip = esicolor.11.b_tt
 	hidden_effect = {
-		remove_building = {
+		set_building_level = {
 			type = dockyard
-			level = 25
+			level = 0
+			instant_build = yes
 		}
 	}
 }
@@ -771,9 +774,10 @@ clear_synthetic_refineries = {
 	custom_effect_tooltip = esicolor.16.b_tt
 	hidden_effect = {
 		every_state = {
-			remove_building = {
+			set_building_level = {
 				type = synthetic_refinery
-				level = 25
+				level = 0
+				instant_build = yes
 			}
 		}
 	}
@@ -812,9 +816,10 @@ randomise_synthetic_refineries = {
 clear_fuel_silos = {
 	custom_effect_tooltip = esicolor.17.b_tt
 	hidden_effect = {
-		remove_building = {
+		set_building_level = {
 			type = fuel_silo
-			level = 25
+			level = 0
+			instant_build = yes
 		}
 	}
 }

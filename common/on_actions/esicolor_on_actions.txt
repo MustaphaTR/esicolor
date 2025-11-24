@@ -3,6 +3,10 @@ on_actions = {
 		effect = {
 			log = "[GetDateText] MustaphaTR's Every State Independent main on_startup begin"
 
+			# Hiding the Wasteland tag under the floorboards.
+			# Replace it with the real Kerguelen after startup.
+			OOO = { handle_fake_FIE = yes }
+
 			every_country = {
 				if = {
 					limit = { is_ai = no }

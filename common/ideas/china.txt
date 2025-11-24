@@ -14,5 +14,24 @@ ideas = {
 
 			removal_cost = -1
 		}
+
+		# This is checked in faction goals file, which i don't want to override. So keeping it here.
+		idea_CHI_central_government_integration_pressure = {
+			picture = ast_classify_aliens
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				autonomy_gain = -2
+			}
+		}
 	}
 }
