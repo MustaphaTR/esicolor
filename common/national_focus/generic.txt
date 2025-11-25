@@ -65,6 +65,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus equipment_effort"
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				bonus = 1.0
@@ -139,6 +143,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus equipment_effort_2"
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				bonus = 1.0
@@ -170,9 +178,14 @@ focus_tree = {
 				uses = 1
 				category = motorized_equipment
 			}
-			add_equipment_to_stockpile = { 
-				type = motorized_equipment
-				amount = 1
+			IF = {
+				limit = {
+					has_tech = motorised_infantry
+				}
+				add_equipment_to_stockpile = { 
+					type = motorized_equipment
+					amount = 1
+				}
 			}
 		}
 	}
@@ -218,6 +231,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus equipment_effort_3"
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				ahead_reduction = 2
@@ -552,10 +569,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus rocket_effort"
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
 			add_tech_bonus = {
 				name = jet_rocket_bonus
 				ahead_reduction = 2
-				uses = 2
+				uses = 1 # was 2
 				category = rocketry
 				category = jet_technology
 			}
@@ -1599,9 +1620,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus nuclear_effort"
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.75
+			}
 			add_tech_bonus = {
 				name = nuclear_bonus
-				ahead_reduction = 2
+				ahead_reduction = 1 # was 2
 				category = nuclear
 			}
 		}
@@ -1743,14 +1768,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus secret_weapons"
-			add_tech_bonus = {
-				name = secret_bonus
-				bonus = 0.5
-				uses = 4
-				category = electronics
-				category = nuclear
-				category = rocketry
-			}
+			add_ideas = generic_secret_weapons_ns
+			#add_tech_bonus = {
+			#	name = secret_bonus
+			#	bonus = 0.5
+			#	uses = 4
+			#	category = electronics
+			#	category = nuclear
+			#	category = rocketry
+			#}
 		}
 
 		ai_will_do = {
