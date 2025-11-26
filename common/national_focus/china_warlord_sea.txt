@@ -2010,8 +2010,10 @@
 			modifier = {
 				factor = 15
 
-				NOT = { arms_factory < 1 }
-				industrial_complex < 1
+				OR = {
+					arms_factory < 1
+					industrial_complex < 1
+				}
 			}
 		}
 
@@ -2793,9 +2795,16 @@
 		cost = 8
 
 		prerequisite = { focus = CHI_sea_develop_capital }
-	
+
 		ai_will_do = {
-			base = 4
+			factor = 2
+
+			modifier = {
+				factor = 15
+
+				NOT = { arms_factory < 1 }
+				industrial_complex < 1
+			}
 		}
 
 		bypass = {
