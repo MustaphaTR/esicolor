@@ -56,6 +56,17 @@ country_event = {
 			type = annex_everything
 			target = FROM
 		}
+		if = {
+			limit = {
+				has_global_flag = claiming_declare_war
+				NOT = { has_war_with = FROM }
+			}
+
+			declare_war_on = {
+				type = annex_everything
+				target = FROM
+			}
+		}
 
 		ai_chance = {
 			base = 1
@@ -85,6 +96,17 @@ country_event = {
 		create_wargoal = {
 			type = annex_everything
 			target = FROM
+		}
+		if = {
+			limit = {
+				has_global_flag = claiming_declare_war
+				NOT = { has_war_with = FROM }
+			}
+
+			declare_war_on = {
+				type = annex_everything
+				target = FROM
+			}
 		}
 
 		ai_chance = {
