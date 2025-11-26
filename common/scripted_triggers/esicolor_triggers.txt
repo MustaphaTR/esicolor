@@ -518,22 +518,24 @@ is_neighboring_control_special_case_state = {
 			555 = { is_controlled_by = ROOT }
 		}
 
-		# Kyushu-South Korea/Okinawa
+		# Kitakyushu-Gyeongsang
 		AND = {
 			THIS = { state = 528 }
-			OR = {
-				525 = { is_controlled_by = ROOT }
-				526 = { is_controlled_by = ROOT }
-			}
+			1030 = { is_controlled_by = ROOT }
 		}
 		AND = {
-			THIS = {
-				OR = {
-					state = 525
-					state = 526
-				}
-			}
+			THIS = { state = 1030 }
 			528 = { is_controlled_by = ROOT }
+		}
+
+		# Minami Kyushu-Okinawa
+		AND = {
+			THIS = { state = 526 }
+			1018 = { is_controlled_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 1018 }
+			526 = { is_controlled_by = ROOT }
 		}
 
 		# Taiwan-Fujian/Okinawa/Luzon
@@ -1672,22 +1674,24 @@ is_neighboring_ownership_special_case_state = {
 			555 = { is_owned_by = ROOT }
 		}
 
-		# Kyushu-South Korea/Okinawa
+		# Kitakyushu-Gyeongsang
 		AND = {
 			THIS = { state = 528 }
-			OR = {
-				525 = { is_owned_by = ROOT }
-				526 = { is_owned_by = ROOT }
-			}
+			1030 = { is_owned_by = ROOT }
 		}
 		AND = {
-			THIS = {
-				OR = {
-					state = 525
-					state = 526
-				}
-			}
+			THIS = { state = 1030 }
 			528 = { is_owned_by = ROOT }
+		}
+
+		# Minami Kyushu-Okinawa
+		AND = {
+			THIS = { state = 526 }
+			1018 = { is_owned_by = ROOT }
+		}
+		AND = {
+			THIS = { state = 1018 }
+			526 = { is_owned_by = ROOT }
 		}
 
 		# Taiwan-Fujian/Okinawa/Luzon
@@ -2826,22 +2830,24 @@ is_neighboring_core_special_case_state = {
 			555 = { is_core_of = ROOT }
 		}
 
-		# Kyushu-South Korea/Okinawa
+		# Kitakyushu-Gyeongsang
 		AND = {
 			THIS = { state = 528 }
-			OR = {
-				525 = { is_core_of = ROOT }
-				526 = { is_core_of = ROOT }
-			}
+			1030 = { is_core_of = ROOT }
 		}
 		AND = {
-			THIS = {
-				OR = {
-					state = 525
-					state = 526
-				}
-			}
+			THIS = { state = 1030 }
 			528 = { is_core_of = ROOT }
+		}
+
+		# Minami Kyushu-Okinawa
+		AND = {
+			THIS = { state = 526 }
+			1018 = { is_core_of = ROOT }
+		}
+		AND = {
+			THIS = { state = 1018 }
+			526 = { is_core_of = ROOT }
 		}
 
 		# Taiwan-Fujian/Okinawa/Luzon
@@ -4020,24 +4026,24 @@ is_neighboring_control_special_case_country = {
 			ROOT = { controls_state = 555 }
 		}
 
-		# Kyushu-South Korea/Okinawa
+		# Kitakyushu-Gyeongsang
 		AND = {
 			THIS = { controls_state = 528 }
-			ROOT = {
-				OR = {
-					controls_state = 525
-					controls_state = 526
-				}
-			}
+			ROOT = { controls_state = 1030 }
 		}
 		AND = {
-			THIS = {
-				OR = {
-					controls_state = 525
-					controls_state = 526
-				}
-			}
+			THIS = { controls_state = 1030 }
 			ROOT = { controls_state = 528 }
+		}
+
+		# Minami Kyushu-Okinawa
+		AND = {
+			THIS = { controls_state = 526 }
+			ROOT = { controls_state = 1018 }
+		}
+		AND = {
+			THIS = { controls_state = 1018 }
+			ROOT = { controls_state = 526 }
 		}
 
 		# Taiwan-Fujian/Okinawa/Luzon
@@ -5276,24 +5282,24 @@ is_neighboring_control_special_case_country_this_from = {
 			FROM = { controls_state = 555 }
 		}
 
-		# Kyushu-South Korea/Okinawa
+		# Kitakyushu-Gyeongsang
 		AND = {
 			THIS = { controls_state = 528 }
-			FROM = {
-				OR = {
-					controls_state = 525
-					controls_state = 526
-				}
-			}
+			FROM = { controls_state = 1030 }
 		}
 		AND = {
-			THIS = {
-				OR = {
-					controls_state = 525
-					controls_state = 526
-				}
-			}
+			THIS = { controls_state = 1030 }
 			FROM = { controls_state = 528 }
+		}
+
+		# Minami Kyushu-Okinawa
+		AND = {
+			THIS = { controls_state = 526 }
+			FROM = { controls_state = 1018 }
+		}
+		AND = {
+			THIS = { controls_state = 1018 }
+			FROM = { controls_state = 526 }
 		}
 
 		# Taiwan-Fujian/Okinawa/Luzon
@@ -6532,24 +6538,24 @@ is_neighboring_ownership_special_case_country = {
 			ROOT = { owns_state = 555 }
 		}
 
-		# Kyushu-South Korea/Okinawa
+		# Kitakyushu-Gyeongsang
 		AND = {
 			THIS = { owns_state = 528 }
-			ROOT = {
-				OR = {
-					owns_state = 525
-					owns_state = 526
-				}
-			}
+			ROOT = { owns_state = 1030 }
 		}
 		AND = {
-			THIS = {
-				OR = {
-					owns_state = 525
-					owns_state = 526
-				}
-			}
+			THIS = { owns_state = 1030 }
 			ROOT = { owns_state = 528 }
+		}
+
+		# Minami Kyushu-Okinawa
+		AND = {
+			THIS = { owns_state = 526 }
+			ROOT = { owns_state = 1018 }
+		}
+		AND = {
+			THIS = { owns_state = 1018 }
+			ROOT = { owns_state = 526 }
 		}
 
 		# Taiwan-Fujian/Okinawa/Luzon
