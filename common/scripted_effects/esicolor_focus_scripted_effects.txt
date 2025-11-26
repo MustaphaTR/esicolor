@@ -389,6 +389,464 @@ war_goal_effect_on_random_neighbour = {
 		}
 	}
 }
+war_goal_effect_on_random_neighbour_communist_or_fascist = {
+	if = {
+		limit = {
+			any_neighbor_country = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+				}
+				NOT = {
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				any_owned_state = {
+					OR = {
+						has_global_flag = claiming_give_war_goals
+						has_global_flag = claiming_declare_war
+
+						NOT = { is_claimed_by = ROOT }
+					}
+
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+				}
+			}
+		}
+
+		random_neighbor_country = {
+			limit = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+				}
+				NOT = {
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { any_owned_state = { is_claimed_by = ROOT } }
+				}
+			}
+
+			random_owned_state = {
+				limit = {
+					OR = {
+						has_global_flag = claiming_give_war_goals
+						has_global_flag = claiming_declare_war
+
+						NOT = { is_claimed_by = ROOT }
+					}
+
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+				}
+
+				claim_action_effect = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			any_country = {
+				NOT = {
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { any_owned_state = { is_claimed_by = ROOT } }
+				}
+
+				is_neighboring_ownership_special_case_country = yes
+			}
+		}
+
+		random_country = {
+			limit = {
+				NOT = {
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { any_owned_state = { is_claimed_by = ROOT } }
+				}
+
+				is_neighboring_ownership_special_case_country = yes
+			}
+
+			random_owned_state = {
+				limit = {
+					is_neighboring_ownership_special_case_state = yes
+				}
+
+				claim_action_effect = yes
+			}
+		}
+	}
+}
+war_goal_effect_on_random_neighbour_non_communist = {
+	if = {
+		limit = {
+			any_neighbor_country = {
+				NOT = {
+					has_government = communism
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				any_owned_state = {
+					OR = {
+						has_global_flag = claiming_give_war_goals
+						has_global_flag = claiming_declare_war
+
+						NOT = { is_claimed_by = ROOT }
+					}
+
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+				}
+			}
+		}
+
+		random_neighbor_country = {
+			limit = {
+				NOT = {
+					has_government = communism
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { any_owned_state = { is_claimed_by = ROOT } }
+				}
+			}
+
+			random_owned_state = {
+				limit = {
+					OR = {
+						has_global_flag = claiming_give_war_goals
+						has_global_flag = claiming_declare_war
+
+						NOT = { is_claimed_by = ROOT }
+					}
+
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+				}
+
+				claim_action_effect = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			any_country = {
+				NOT = {
+					has_government = communism
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { any_owned_state = { is_claimed_by = ROOT } }
+				}
+
+				is_neighboring_ownership_special_case_country = yes
+			}
+		}
+
+		random_country = {
+			limit = {
+				NOT = {
+					has_government = communism
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { any_owned_state = { is_claimed_by = ROOT } }
+				}
+
+				is_neighboring_ownership_special_case_country = yes
+			}
+
+			random_owned_state = {
+				limit = {
+					is_neighboring_ownership_special_case_state = yes
+				}
+
+				claim_action_effect = yes
+			}
+		}
+	}
+}
+war_goal_effect_on_random_neighbour_different_ideology = {
+	if = {
+		limit = {
+			any_neighbor_country = {
+				NOT = {
+					has_government = ROOT
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				any_owned_state = {
+					OR = {
+						has_global_flag = claiming_give_war_goals
+						has_global_flag = claiming_declare_war
+
+						NOT = { is_claimed_by = ROOT }
+					}
+
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+				}
+			}
+		}
+
+		random_neighbor_country = {
+			limit = {
+				NOT = {
+					has_government = ROOT
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { any_owned_state = { is_claimed_by = ROOT } }
+				}
+			}
+
+			random_owned_state = {
+				limit = {
+					OR = {
+						has_global_flag = claiming_give_war_goals
+						has_global_flag = claiming_declare_war
+
+						NOT = { is_claimed_by = ROOT }
+					}
+
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+				}
+
+				claim_action_effect = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			any_country = {
+				NOT = {
+					has_government = ROOT
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { any_owned_state = { is_claimed_by = ROOT } }
+				}
+
+				is_neighboring_ownership_special_case_country = yes
+			}
+		}
+
+		random_country = {
+			limit = {
+				NOT = {
+					has_government = ROOT
+					original_tag = OOO
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					is_subject_of = ROOT.overlord
+					has_subject = ROOT
+					has_non_aggression_pact_with = ROOT
+					ROOT = { has_wargoal_against = PREV }
+				}
+
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { any_owned_state = { is_claimed_by = ROOT } }
+				}
+
+				is_neighboring_ownership_special_case_country = yes
+			}
+
+			random_owned_state = {
+				limit = {
+					is_neighboring_ownership_special_case_state = yes
+				}
+
+				claim_action_effect = yes
+			}
+		}
+	}
+}
+
+ask_random_neighbour_for_integration = {
+	if = {
+		limit = {
+			any_neighbor_country = {
+				has_government = ROOT
+				NOT = {
+					original_tag = OOO
+					is_in_faction = yes
+					is_subject = yes
+					num_subjects > 0
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		random_neighbor_country = {
+			limit = {
+				has_government = ROOT
+				NOT = {
+					original_tag = OOO
+					is_in_faction = yes
+					is_subject = yes
+					num_subjects > 0
+					has_war_with = ROOT
+				}
+			}
+
+			country_event = esicolor_china.1
+		}
+	}
+	else_if = {
+		limit = {
+			any_country = {
+				has_government = ROOT
+				NOT = {
+					original_tag = OOO
+					is_in_faction = yes
+					is_subject = yes
+					num_subjects > 0
+					has_war_with = ROOT
+				}
+
+				is_neighboring_ownership_special_case_country = yes
+			}
+		}
+
+		random_country = {
+			limit = {
+				has_government = ROOT
+				NOT = {
+					original_tag = OOO
+					is_in_faction = yes
+					is_subject = yes
+					num_subjects > 0
+					has_war_with = ROOT
+				}
+
+				is_neighboring_ownership_special_case_country = yes
+			}
+
+			country_event = esicolor_china.1
+		}
+	}
+}
 
 setup_utilize_our_strengths_effects = {
 	clr_country_flag = gets_HOA_our_strength_fighting_idea
@@ -437,6 +895,71 @@ setup_utilize_our_strengths_effects = {
 			1 = { set_country_flag = gets_HOA_our_strength_fighting_idea }
 			1 = { set_country_flag = gets_HOA_our_strength_production_idea }
 			1 = { set_country_flag = gets_HOA_our_strength_research_idea }
+		}
+	}
+}
+
+make_current_leader_democratic = {
+	random_character = {
+		limit = {
+			is_country_leader = yes
+			NOT = { has_ideology_group = democratic }
+		}
+
+		add_country_leader_role = {
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = socialism
+			}
+			promote_leader = yes
+		}
+	}
+}
+make_current_leader_communist = {
+	random_character = {
+		limit = {
+			is_country_leader = yes
+			NOT = { has_ideology_group = communism }
+		}
+
+		add_country_leader_role = {
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = anti_revisionism
+			}
+			promote_leader = yes
+		}
+	}
+}
+make_current_leader_fascist = {
+	random_character = {
+		limit = {
+			is_country_leader = yes
+			NOT = { has_ideology_group = fascism }
+		}
+
+		add_country_leader_role = {
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = rexism
+			}
+			promote_leader = yes
+		}
+	}
+}
+make_current_leader_non_aligned = {
+	random_character = {
+		limit = {
+			is_country_leader = yes
+			NOT = { has_ideology_group = neutrality }
+		}
+
+		add_country_leader_role = {
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = despotism
+			}
+			promote_leader = yes
 		}
 	}
 }

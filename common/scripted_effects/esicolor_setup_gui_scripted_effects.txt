@@ -892,6 +892,11 @@ setup_gui_start_focus_tree = {
 		load_focus_tree = horn_of_africa_tree
 		setup_utilize_our_strengths_effects = yes
 	}
+	else_if = {
+		limit = { check_variable = { global.setup_focus_tree > 1 } }
+
+		load_focus_tree = china_warlord_sea_focus
+	}
 }
 
 setup_gui_start_stability = {

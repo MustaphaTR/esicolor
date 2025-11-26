@@ -42,6 +42,137 @@ any_neighbour_valid_for_war_goal = {
 		}
 	}
 }
+any_neighbour_valid_for_war_goal_communist_or_fascist = {
+	custom_trigger_tooltip = {
+		tooltip = any_neighbour_valid_for_war_goal_tt
+
+		any_neighbor_country = {
+			OR = {
+				has_government = fascism
+				has_government = communism
+			}
+			NOT = {
+				original_tag = OOO
+				is_in_faction_with = ROOT
+				is_subject_of = ROOT
+				is_subject_of = ROOT.overlord
+				has_subject = ROOT
+				has_non_aggression_pact_with = ROOT
+				ROOT = { has_wargoal_against = PREV }
+			}
+
+			any_owned_state = {
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { is_claimed_by = ROOT }
+				}
+
+				OR = {
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+					is_neighboring_ownership_special_case_country = yes
+				}
+			}
+		}
+	}
+}
+any_neighbour_valid_for_war_goal_non_communist = {
+	custom_trigger_tooltip = {
+		tooltip = any_neighbour_valid_for_war_goal_tt
+
+		any_neighbor_country = {
+			NOT = {
+				has_government = communism
+				original_tag = OOO
+				is_in_faction_with = ROOT
+				is_subject_of = ROOT
+				is_subject_of = ROOT.overlord
+				has_subject = ROOT
+				has_non_aggression_pact_with = ROOT
+				ROOT = { has_wargoal_against = PREV }
+			}
+
+			any_owned_state = {
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { is_claimed_by = ROOT }
+				}
+
+				OR = {
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+					is_neighboring_ownership_special_case_country = yes
+				}
+			}
+		}
+	}
+}
+any_neighbour_valid_for_war_goal_different_ideology = {
+	custom_trigger_tooltip = {
+		tooltip = any_neighbour_valid_for_war_goal_tt
+
+		any_neighbor_country = {
+			NOT = {
+				has_government = ROOT
+				original_tag = OOO
+				is_in_faction_with = ROOT
+				is_subject_of = ROOT
+				is_subject_of = ROOT.overlord
+				has_subject = ROOT
+				has_non_aggression_pact_with = ROOT
+				ROOT = { has_wargoal_against = PREV }
+			}
+
+			any_owned_state = {
+				OR = {
+					has_global_flag = claiming_give_war_goals
+					has_global_flag = claiming_declare_war
+
+					NOT = { is_claimed_by = ROOT }
+				}
+
+				OR = {
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+					is_neighboring_ownership_special_case_country = yes
+				}
+			}
+		}
+	}
+}
+
+any_neighbour_valid_for_integration = {
+	custom_trigger_tooltip = {
+		tooltip = any_neighbour_valid_for_integration_tt
+
+		any_neighbor_country = {
+			has_government = ROOT
+			NOT = {
+				original_tag = OOO
+				is_in_faction = yes
+				is_subject = yes
+				num_subjects > 0
+				has_war_with = ROOT
+			}
+
+			any_owned_state = {
+				OR = {
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+					is_neighboring_ownership_special_case_country = yes
+				}
+			}
+		}
+	}
+}
 
 state_without_VP_at_start = {
 	OR = {

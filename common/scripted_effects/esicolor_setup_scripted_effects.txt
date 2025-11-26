@@ -3036,6 +3036,30 @@ load_continent_focus_trees = {
 		load_focus_tree = horn_of_africa_tree
 		setup_utilize_our_strengths_effects = yes
 	}
+	else_if = {
+		limit = {
+			OR = {
+				state_originally_from_YUN = yes
+				state_originally_from_SIK = yes
+				state_originally_from_GXC = yes
+				state_originally_from_SHX = yes
+				state_originally_from_XSM = yes
+				state_originally_from_GDC = yes
+				state_originally_from_XIC = yes
+				state_originally_from_SND = yes
+				state_originally_from_KHM = yes
+				state_originally_from_NXM = yes
+				state_originally_from_GSM = yes
+				state_originally_from_SIC = yes
+				state_originally_from_KUM = yes
+				state_originally_from_HBC = yes
+				state_originally_from_CHI = yes
+				state_originally_from_PRC = yes
+			}
+		}
+		
+		load_focus_tree = china_warlord_sea_focus
+	}
 	else = {
 		load_focus_tree = generic_focus
 	}
@@ -3044,12 +3068,15 @@ load_continent_focus_trees = {
 randomise_focus_trees = {
 	random_list = {
 		seed = random
-		50 = {
+		33 = {
 			load_focus_tree = generic_focus
 		}
-		50 = {
+		33 = {
 			load_focus_tree = horn_of_africa_tree
 			setup_utilize_our_strengths_effects = yes
+		}
+		33 = {
+			load_focus_tree = china_warlord_sea_focus
 		}
 	}
 }

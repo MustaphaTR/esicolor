@@ -1,0 +1,100 @@
+CHI_tsr_power_struggle_cat = {
+	CHI_warlord_propaganda_army = {
+		priority = 90
+
+		icon = GFX_decision_SWE_set_army_budget
+
+		visible = {
+			has_country_flag = tsr_warlord_propaganda
+		}	
+
+		available = {
+			is_subject = no
+			has_army_manpower = {
+				size > 174999
+			}
+		}	
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			army_experience = 25
+		}
+	}
+
+	CHI_warlord_propaganda_air = {
+		priority = 90
+
+		icon = GFX_decision_SWE_set_air_budget
+
+		visible = {
+			has_country_flag = tsr_warlord_propaganda
+		}	
+
+		available = {
+			is_subject = no
+			has_deployed_air_force_size = {
+				size > 99
+			}
+		}	
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			air_experience = 25
+		}
+	}
+
+	CHI_warlord_propaganda_navy = {
+		priority = 90
+
+		icon = GFX_decision_generic_naval
+
+		visible = {
+			has_country_flag = tsr_warlord_propaganda
+		}	
+
+		available = {
+			is_subject = no
+			has_navy_size = {
+				size > 9
+			}
+		}	
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			navy_experience = 25
+		}
+	}
+
+	CHI_warlord_propaganda_stable = {
+		priority = 90
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		visible = {
+			has_country_flag = tsr_warlord_propaganda
+		}	
+
+		available = {
+			is_subject = no
+			has_stability > 0.70
+		}	
+
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_war_support = 0.05	
+		}
+	}
+}
