@@ -2361,21 +2361,46 @@ setup_technology_option_1 = {
 
 randomise_technology = {
 	set_temp_variable = { mountaineers_paratroopers_marines_minus = 100 }
-	set_temp_variable = { mountaineers_paratroopers_marines_third = global.setup_technology_tech_mountaineers_paratroopers_marines }
-	subtract_from_temp_variable = { mountaineers_paratroopers_marines_minus = global.setup_technology_tech_mountaineers_paratroopers_marines }
-	divide_temp_variable = { mountaineers_paratroopers_marines_third = 3 }
-	random_list = {
-		seed = random
-		mountaineers_paratroopers_marines_third = {
-			set_technology = { marines = 1 }
+	if = {
+		limit = { has_dlc = "No Compromise, No Surrender" }
+
+		set_temp_variable = { mountaineers_paratroopers_marines_quarter = global.setup_technology_tech_mountaineers_paratroopers_marines }
+		subtract_from_temp_variable = { mountaineers_paratroopers_marines_minus = global.setup_technology_tech_mountaineers_paratroopers_marines }
+		divide_temp_variable = { mountaineers_paratroopers_marines_quarter = 4 }
+		random_list = {
+			seed = random
+			mountaineers_paratroopers_marines_quarter = {
+				set_technology = { marines = 1 }
+			}
+			mountaineers_paratroopers_marines_quarter = {
+				set_technology = { paratroopers = 1 }
+			}
+			mountaineers_paratroopers_marines_quarter = {
+				set_technology = { tech_mountaineers = 1 }
+			}
+			mountaineers_paratroopers_marines_quarter = {
+				set_technology = { rangers_tech = 1 }
+			}
+			mountaineers_paratroopers_marines_minus = { }
 		}
-		mountaineers_paratroopers_marines_third = {
-			set_technology = { paratroopers = 1 }
+	}
+	else = {
+		set_temp_variable = { mountaineers_paratroopers_marines_third = global.setup_technology_tech_mountaineers_paratroopers_marines }
+		subtract_from_temp_variable = { mountaineers_paratroopers_marines_minus = global.setup_technology_tech_mountaineers_paratroopers_marines }
+		divide_temp_variable = { mountaineers_paratroopers_marines_third = 3 }
+		random_list = {
+			seed = random
+			mountaineers_paratroopers_marines_third = {
+				set_technology = { marines = 1 }
+			}
+			mountaineers_paratroopers_marines_third = {
+				set_technology = { paratroopers = 1 }
+			}
+			mountaineers_paratroopers_marines_third = {
+				set_technology = { tech_mountaineers = 1 }
+			}
+			mountaineers_paratroopers_marines_minus = { }
 		}
-		mountaineers_paratroopers_marines_third = {
-			set_technology = { tech_mountaineers = 1 }
-		}
-		mountaineers_paratroopers_marines_minus = { }
 	}
 
 	set_temp_variable = { transport_1_minus = 100 }
