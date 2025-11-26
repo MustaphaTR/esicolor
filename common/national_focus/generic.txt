@@ -178,7 +178,7 @@ focus_tree = {
 				uses = 1
 				category = motorized_equipment
 			}
-			IF = {
+			if = {
 				limit = {
 					has_tech = motorised_infantry
 				}
@@ -2168,7 +2168,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus neutrality_focus"
-			add_ideas = neutral_ideals
+			add_timed_idea = {
+				idea = neutral_ideals
+				days = 720
+			}
 		}
 	}
 
