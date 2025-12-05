@@ -1,0 +1,68 @@
+# Logging and changing some state data.
+
+1936.1.1.12 = {
+	if = {
+		limit = { has_start_date < 1939.8.14.1 }
+
+		setup_state_ownerships = yes
+
+		every_state = {
+			log_buildings = yes
+			log_resources = yes
+			clear_airbases = yes
+
+			if = {
+				limit = { is_demilitarized_zone = yes }
+
+				set_demilitarized_zone = no
+			}
+			if = {
+				limit = { is_core_of = OOO }
+
+				remove_core_of = OOO
+			}
+			if = {
+				limit = { is_claimed_by = OOO }
+
+				remove_claim_by = OOO
+			}
+
+			if = {
+				limit = { NOT = { state = 713 } } # Done after game starts so i can hide OOO somewhere on the map during history setup.
+
+				transfer_state_to = THIS.original_owner
+			}
+		}
+	}
+}
+1939.8.14.12 = {
+	setup_state_ownerships = yes
+
+	every_state = {
+		log_buildings = yes
+		log_resources = yes
+		clear_airbases = yes
+
+		if = {
+			limit = { is_demilitarized_zone = yes }
+
+			set_demilitarized_zone = no
+		}
+		if = {
+			limit = { is_core_of = OOO }
+
+			remove_core_of = OOO
+		}
+		if = {
+			limit = { is_claimed_by = OOO }
+
+			remove_claim_by = OOO
+		}
+
+		if = {
+			limit = { NOT = { state = 713 } } # Done after game starts so i can hide OOO somewhere on the map during history setup.
+
+			transfer_state_to = THIS.original_owner
+		}
+	}
+}
