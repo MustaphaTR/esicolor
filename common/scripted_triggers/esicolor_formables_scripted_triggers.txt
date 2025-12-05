@@ -11347,6 +11347,14 @@ has_states_to_form_korea = {
 }
 
 #### Japan ####
+can_form_ainu = {
+	OR = {
+		original_tag = SEL
+		original_tag = SEF
+		original_tag = SSS
+	}
+}
+
 can_form_honshu = {
 	OR = {
 		original_tag = ZBZ
@@ -11373,11 +11381,19 @@ can_form_kyushu_and_shikoku = {
 can_form_japan = {
 	OR = {
 		can_form_sakhalin = yes
+		original_tag = SEL
 		can_form_kyushu_and_shikoku = yes
 		can_form_honshu = yes
-		original_tag = SEL
 		original_tag = LAS
 		original_tag = LAB
+	}
+}
+
+is_ainu = {
+	OR = {
+		state = 536
+		state = 537
+		state = 555
 	}
 }
 
@@ -11407,11 +11423,20 @@ is_kyushu_and_shikoku = {
 is_japan = {
 	OR = {
 		is_sakhalin = yes
+		state = 536
 		is_honshu = yes
 		is_kyushu_and_shikoku = yes
-		state = 536
 		state = 645
 		state = 648
+	}
+}
+
+has_states_to_form_ainu = {
+	custom_trigger_tooltip = {
+		tooltip = form_ainu_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 536 } } } owns_state = 536 }
+		if = { limit = { NOT = { OOO = { owns_state = 555 } } } owns_state = 555 }
 	}
 }
 
@@ -11448,9 +11473,16 @@ has_states_to_form_japan = {
 	custom_trigger_tooltip = {
 		tooltip = form_japan_has_states_tt
 
+		has_states_to_form_ainu = yes
 		has_states_to_form_honshu = yes
 		has_states_to_form_kyushu_and_shikoku = yes
-		if = { limit = { NOT = { OOO = { owns_state = 536 } } } owns_state = 536 }
+	}
+}
+
+required_states_to_form_ainu = {
+	OR = {
+		state = 536
+		state = 555
 	}
 }
 
@@ -11464,9 +11496,9 @@ required_states_to_form_kyushu_and_shikoku = {
 
 required_states_to_form_japan = {
 	OR = {
+		required_states_to_form_ainu = yes
 		is_honshu = yes
 		required_states_to_form_kyushu_and_shikoku = yes
-		state = 536
 	}
 }
 
