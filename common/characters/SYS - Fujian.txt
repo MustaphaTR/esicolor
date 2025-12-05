@@ -1,0 +1,51 @@
+characters={
+	SYS_chen_mingshu = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=CHI_chen_mingshu
+			portraits={
+				civilian={
+					large=GFX_portrait_CHI_chen_mingxu
+					small=GFX_portrait_CHI_chen_mingxu_military_small
+				}
+			}
+			country_leader={
+				traits={ anti_soviet_socialist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ anti_soviet_socialist }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=CHI_chen_mingshu
+			portraits={
+				civilian={
+					large=GFX_Portrait_Asia_Generic_communism
+				}
+			}
+			country_leader={
+				traits={ anti_soviet_socialist }
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ anti_soviet_socialist }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
