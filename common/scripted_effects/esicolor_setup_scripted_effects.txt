@@ -9354,6 +9354,25 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	48 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Georgi Ivanov Kyoseivanov
+				limit = {
+					has_trait = backroom_backstabber
+				}
+
+				remove_trait = {
+					slot = political_advisor
+					trait = backroom_backstabber
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = tsars_puppet
+				}
+			}
+		}
+	}
 	60 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -9395,6 +9414,43 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = marxist_academic_no_ideology
+				}
+			}
+		}
+	}
+	212 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Nikola Zhekov
+				limit = {
+					has_trait = ideological_crusader
+				}
+
+				remove_trait = {
+					slot = political_advisor
+					trait = ideological_crusader
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = fascist_demagogue
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = nazi_sympathizer_no_ideology
+				}
+			}
+			if = { # Aleksandar Tsankov
+				limit = {
+					has_trait = financial_expert
+				}
+
+				remove_trait = {
+					slot = political_advisor
+					trait = financial_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = statism_adept
 				}
 			}
 		}
@@ -9473,6 +9529,35 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = avid_turanist_no_ideology
+				}
+			}
+		}
+	}
+	801 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Nikola Petkov
+				limit = { has_trait = silent_workhorse }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = silent_workhorse
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = leader_of_the_agrarian_union
+				}
+			}
+			if = { # Stefan Stefanov
+				limit = { has_trait = captain_of_industry }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = captain_of_industry
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = industry_reformer
 				}
 			}
 		}

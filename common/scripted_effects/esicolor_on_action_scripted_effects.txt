@@ -866,6 +866,79 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = OAB }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = BUL_dobri_bozhilov
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_dobri_bozhilov
+				}
+				army = {
+					small = GFX_idea_bul_dobri_bozhilov
+				}
+				navy = {
+					small = GFX_idea_bul_dobri_bozhilov
+				}
+			}
+
+			48 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = backroom_backstabber
+			}
+
+			set_character_name = BUL_georgi_ivanov_kyoseivanov
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_georgi_kyoseivanov
+				}
+				army = {
+					small = GFX_idea_bul_georgi_kyoseivanov
+				}
+				navy = {
+					small = GFX_idea_bul_georgi_kyoseivanov
+				}
+			}
+
+			48 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = military_theorist
+			}
+
+			set_character_name = BUL_theodosi_daskalov
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_theodosi_daskalov
+				}
+				army = {
+					small = GFX_idea_bul_theodosi_daskalov
+				}
+				navy = {
+					small = GFX_idea_bul_theodosi_daskalov
+				}
+			}
+
+			48 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = OAY }
 
 		random_character = {
@@ -1134,6 +1207,183 @@ handle_special_advisors = {
 			}
 
 			186 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = ZII }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = BUL_vasil_kolarov
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_vasil_kolarov
+				}
+				army = {
+					small = GFX_idea_bul_vasil_kolarov
+				}
+				navy = {
+					small = GFX_idea_bul_vasil_kolarov
+				}
+			}
+
+			211 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = BUL_valko_chervenkov
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_valko_chervenkov
+				}
+				army = {
+					small = GFX_idea_bul_valko_chervenkov
+				}
+				navy = {
+					small = GFX_idea_bul_valko_chervenkov
+				}
+			}
+
+			211 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_entrenchment_1
+					has_trait = army_entrenchment_2
+					has_trait = army_entrenchment_3
+				}
+			}
+
+			set_character_name = BUL_ferdinand_kozovski
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_ferdinand_kozovski
+				}
+				army = {
+					small = GFX_idea_bul_ferdinand_kozovski
+				}
+				navy = {
+					small = GFX_idea_bul_ferdinand_kozovski
+				}
+			}
+
+			211 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_chief_ground_support_1
+					has_trait = air_chief_ground_support_2
+					has_trait = air_chief_ground_support_3
+				}
+			}
+
+			set_character_name = BUL_zachari_zachariev
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_zachari_zachariev
+				}
+				army = {
+					small = GFX_idea_bul_zachari_zachariev
+				}
+				navy = {
+					small = GFX_idea_bul_zachari_zachariev
+				}
+			}
+
+			211 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = ZIZ }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = fascist_demagogue
+			}
+
+			set_character_name = BUL_ivan_dochev
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_ivan_dochev
+				}
+				army = {
+					small = GFX_idea_bul_ivan_dochev
+				}
+				navy = {
+					small = GFX_idea_bul_ivan_dochev
+				}
+			}
+
+			212 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = ideological_crusader
+			}
+
+			set_character_name = BUL_nikola_zhekov
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_nikola_zhekov
+				}
+				army = {
+					small = GFX_idea_bul_nikola_zhekov
+				}
+				navy = {
+					small = GFX_idea_bul_nikola_zhekov
+				}
+			}
+
+			212 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = financial_expert
+			}
+
+			set_character_name = BUL_aleksandar_tsankov
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_aleksandar_tsankov
+				}
+				army = {
+					small = GFX_idea_bul_aleksandar_tsankov
+				}
+				navy = {
+					small = GFX_idea_bul_aleksandar_tsankov
+				}
+			}
+
+			212 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -1571,6 +1821,102 @@ handle_special_advisors = {
 			}
 
 			798 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = BOI }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = democratic_reformer
+			}
+
+			set_character_name = BUL_stoycho_mushanov
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_stoycho_mushanov
+				}
+				army = {
+					small = GFX_idea_bul_stoycho_mushanov
+				}
+				navy = {
+					small = GFX_idea_bul_stoycho_mushanov
+				}
+			}
+
+			801 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = silent_workhorse
+			}
+
+			set_character_name = BUL_nikola_petkov
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_nikola_petkov
+				}
+				army = {
+					small = GFX_idea_bul_nikola_petkov
+				}
+				navy = {
+					small = GFX_idea_bul_nikola_petkov
+				}
+			}
+
+			801 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = compassionate_gentleman
+			}
+
+			set_character_name = BUL_konstantin_muraviev
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_konstantin_muraviev
+				}
+				army = {
+					small = GFX_idea_bul_konstantin_muraviev
+				}
+				navy = {
+					small = GFX_idea_bul_konstantin_muraviev
+				}
+			}
+
+			801 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = BUL_stefan_stefanov
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_bul_stefan_stefanov
+				}
+				army = {
+					small = GFX_idea_bul_stefan_stefanov
+				}
+				navy = {
+					small = GFX_idea_bul_stefan_stefanov
+				}
+			}
+
+			801 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
