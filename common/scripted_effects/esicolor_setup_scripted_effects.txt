@@ -9408,6 +9408,35 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	266 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Karim Buzarjomehri
+				limit = { has_trait = captain_of_industry }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = captain_of_industry
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = PER_head_of_transport
+				}
+			}
+			if = { # Rokneddin Mokhtari
+				limit = { has_trait = head_of_intelligence }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = head_of_intelligence
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = PER_head_of_military_police
+				}
+			}
+		}
+	}
 	291 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -9488,6 +9517,23 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = revolutionary_author_no_ideology
+				}
+			}
+		}
+	}
+	411 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Abdolsamad Kambakhsh
+				limit = { has_trait = propaganda_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = propaganda_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = patriotic_socialist
 				}
 			}
 		}

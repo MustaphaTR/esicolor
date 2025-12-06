@@ -1387,6 +1387,90 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = ZLL }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = PER_karim_buzarjamehri
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Graveyard of Empires" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_PER_karim_buzarjamehri_small
+					}
+					army = {
+						small = GFX_portrait_PER_karim_buzarjamehri_small
+					}
+					navy = {
+						small = GFX_portrait_PER_karim_buzarjamehri_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_air_arab_2
+					}
+					army = {
+						small = GFX_idea_generic_air_arab_2
+					}
+					navy = {
+						small = GFX_idea_generic_air_arab_2
+					}
+				}
+			}
+
+			266 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = head_of_intelligence
+			}
+
+			set_character_name = PER_rokneddin_mokhtari
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Graveyard of Empires" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_PER_rokneddin_mokhtari_small
+					}
+					army = {
+						small = GFX_portrait_PER_rokneddin_mokhtari_small
+					}
+					navy = {
+						small = GFX_portrait_PER_rokneddin_mokhtari_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Arabia_Generic_land_1_small
+					}
+					army = {
+						small = GFX_Portrait_Arabia_Generic_land_1_small
+					}
+					navy = {
+						small = GFX_Portrait_Arabia_Generic_land_1_small
+					}
+				}
+			}
+
+			266 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = ZYI }
 
 		random_character = {
@@ -1701,6 +1785,50 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = AII }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = propaganda_expert
+			}
+
+			set_character_name = PER_abdolsamad_kambakhsh
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Graveyard of Empires" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_PER_abdolsamad_kambakhsh_small
+					}
+					army = {
+						small = GFX_portrait_PER_abdolsamad_kambakhsh_small
+					}
+					navy = {
+						small = GFX_portrait_PER_abdolsamad_kambakhsh_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_arabia_generic_land_7_small
+					}
+					army = {
+						small = GFX_portrait_arabia_generic_land_7_small
+					}
+					navy = {
+						small = GFX_portrait_arabia_generic_land_7_small
+					}
+				}
+			}
+
+			411 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = AIY }
 
 		random_character = {
@@ -1725,6 +1853,50 @@ handle_special_advisors = {
 			}
 
 			419 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = AZO }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = PER_ardeshir_ovanessian
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Graveyard of Empires" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_PER_ardeshir_ovanessian_small
+					}
+					army = {
+						small = GFX_portrait_PER_ardeshir_ovanessian_small
+					}
+					navy = {
+						small = GFX_portrait_PER_ardeshir_ovanessian_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_4
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_4
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_4
+					}
+				}
+			}
+
+			420 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
