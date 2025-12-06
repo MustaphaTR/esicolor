@@ -15,6 +15,44 @@
 @army_command_factor_3 = 0.86
 
 leader_traits = {
+	GER_proletarian_leader_no_ideology = { #Thälmann
+		random = no
+		sprite = 13 
+
+		political_power_factor = 0.05
+	}
+
+	revolutionary_author_no_ideology = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.15
+		stability_factor = 0.05
+		war_support_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	grand_vizier_nursi_no_ideology = {
+		random = no
+		sprite = 13
+
+		war_support_factor = 0.1
+		mobilization_laws_cost_factor = -0.33
+		justify_war_goal_time = -0.25
+		non_core_manpower = 0.05
+	}
+
+	avid_turanist_no_ideology = {
+		random = no
+		sprite = 13
+
+		war_support_factor = 0.1
+		non_core_manpower = 0.025
+	}
+
 	code_breaker = {
 		random = no
 		sprite = 15

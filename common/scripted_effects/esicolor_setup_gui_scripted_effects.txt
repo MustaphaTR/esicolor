@@ -571,10 +571,6 @@ setup_gui_start_general = {
 		setup_gui_start_trade_law = yes
 		setup_gui_start_economic_law = yes
 
-		setup_gui_start_advisors = yes
-		setup_gui_start_military_advisors = yes
-		setup_gui_start_mio_concern = yes
-
 		setup_gui_start_intelligence_agency = yes
 		
 		randomise_technology = yes
@@ -582,6 +578,14 @@ setup_gui_start_general = {
 
 	setup_gui_start_leader_traits = yes
 	setup_gui_start_focus_factories = yes
+
+	setup_gui_start_advisors = yes
+	if = {
+		limit = { check_variable = { global.setup_advisors < 1 } }
+
+		setup_gui_start_military_advisors = yes
+	}
+	setup_gui_start_mio_concern = yes
 
 	setup_gui_start_starting_regions = yes
 	setup_gui_start_islands = yes
@@ -998,25 +1002,45 @@ setup_gui_start_economic_law = {
 setup_gui_start_advisors = {
 	clear_advisor_disabled_flags = yes
 
+	clr_global_flag = custom_advisors_only
+	clr_global_flag = custom_advisors_only_core
+	clr_global_flag = custom_advisors_only_ownership
+
 	if = {
 		limit = { check_variable = { global.setup_advisors < -2 } }
 
-		randomise_advisors = yes
+		every_country = { randomise_advisors = yes }
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_advisors = -2 } }
 
-		setup_basegame_advisors = yes
+		every_country = { setup_basegame_advisors = yes }
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_advisors = -1 } }
 
-		setup_default_advisors = yes
+		every_country = { setup_default_advisors = yes }
 	}
 	else_if = {
-		limit = { check_variable = { global.setup_advisors > -1 } }
+		limit = { check_variable = { global.setup_advisors = 0 } }
 
-		enable_all_advisors = yes
+		every_country = { enable_all_advisors = yes }
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_advisors = 1 } }
+
+		every_country = { enable_all_advisors = yes }
+		set_global_flag = custom_advisors_only
+		set_global_flag = custom_advisors_only_ownership
+		adjust_named_advisor_traits = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_advisors > 1 } }
+
+		every_country = { enable_all_advisors = yes }
+		set_global_flag = custom_advisors_only
+		set_global_flag = custom_advisors_only_core
+		adjust_named_advisor_traits = yes
 	}
 }
 
@@ -1024,27 +1048,27 @@ setup_gui_start_military_advisors = {
 	if = {
 		limit = { check_variable = { global.setup_military_advisors < -1 } }
 
-		randomise_military_advisor_levels = yes
+		every_country = { randomise_military_advisor_levels = yes }
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_military_advisors = 0 } }
 
 		set_global_flag = military_advisor_levels_1
-		randomise_military_advisor_levels = yes
+		every_country = { randomise_military_advisor_levels = yes }
 		clr_global_flag = military_advisor_levels_1
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_military_advisors = 1 } }
 
 		set_global_flag = military_advisor_levels_2
-		randomise_military_advisor_levels = yes
+		every_country = { randomise_military_advisor_levels = yes }
 		clr_global_flag = military_advisor_levels_2
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_military_advisors > 1 } }
 
 		set_global_flag = military_advisor_levels_3
-		randomise_military_advisor_levels = yes
+		every_country = { randomise_military_advisor_levels = yes }
 		clr_global_flag = military_advisor_levels_3
 	}
 }
@@ -1059,17 +1083,17 @@ setup_gui_start_mio_concern = {
 	if = {
 		limit = { check_variable = { global.setup_mio_concern < -2 } }
 
-		randomise_designers = yes
+		every_country = { randomise_designers = yes }
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_mio_concern = -2 } }
 
-		setup_basegame_companies = yes
+		every_country = { setup_basegame_companies = yes }
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_mio_concern = -1 } }
 
-		setup_default_companies = yes
+		every_country = { setup_default_companies = yes }
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_mio_concern = 1 } }

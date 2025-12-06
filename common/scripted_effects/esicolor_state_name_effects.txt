@@ -4178,3 +4178,17 @@ adjust_state_name_975 = {
 		975 = { set_state_name = STATE_975 }
 	}
 }
+
+move_special_advisors = {
+	if = {
+		limit = {
+			has_global_flag = custom_advisors_only
+		}
+
+		for_each_scope_loop = {
+			array = FROM.FROM.state_advisors
+
+			set_nationality = ROOT
+		}
+	}
+}

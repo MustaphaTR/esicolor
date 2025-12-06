@@ -1578,22 +1578,34 @@ defined_text = {
 		trigger = {
 			check_variable = { global.setup_advisors = -2 }
 		}
-		localization_key = esicolor_setup_eaw_data
+		localization_key = esicolor_setup_mio_concern_generic_eaw
 	}
 	text = {
 		trigger = {
 			check_variable = { global.setup_advisors < -2 }
 		}
-		localization_key = esicolor_setup_random
+		localization_key = esicolor_setup_mio_concern_generic_random
 	}
 	text = {
 		trigger = {
 			check_variable = { global.setup_advisors = -1 }
 		}
-		localization_key = esicolor_setup_default
+		localization_key = esicolor_setup_mio_concern_generic_default
 	}
 	text = {
-		localization_key = esicolor_setup_all
+		trigger = {
+			check_variable = { global.setup_advisors = 0 }
+		}
+		localization_key = esicolor_setup_mio_concern_generic_all
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_advisors = 1 }
+		}
+		localization_key = esicolor_setup_mio_concern_named_ownership
+	}
+	text = {
+		localization_key = esicolor_setup_mio_concern_named_core
 	}
 }
 defined_text = {
@@ -1617,7 +1629,19 @@ defined_text = {
 		localization_key = esicolor_setup_advisors_list_default
 	}
 	text = {
+		trigger = {
+			check_variable = { global.setup_advisors = 0 }
+		}
 		localization_key = esicolor_setup_advisors_list_all
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_advisors = 1 }
+		}
+		localization_key = esicolor_setup_advisors_list_ownership
+	}
+	text = {
+		localization_key = esicolor_setup_advisors_list_core
 	}
 }
 defined_text = {

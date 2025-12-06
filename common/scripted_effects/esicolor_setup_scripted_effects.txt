@@ -8238,6 +8238,15 @@ remove_high_command_air = {
 			}
 		}
 		12 = {
+			set_country_flag = air_tactical_bombing_disabled
+
+			modifier = {
+				factor = 0
+				
+				has_country_flag = air_tactical_bombing_disabled
+			}
+		}
+		12 = {
 			set_country_flag = air_strategic_bombing_disabled
 
 			modifier = {
@@ -8719,6 +8728,119 @@ randomise_air_naval_strike_levels = {
 	}
 }
 
+randomise_air_tactical_bombing_levels = {
+	every_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_tactical_bombing_1
+				has_trait = air_tactical_bombing_2
+				has_trait = air_tactical_bombing_3
+			}
+		}
+
+		random_list = {
+			seed = random
+			30 = {
+				modifier = {
+					factor = 0
+
+					OR = {
+						has_global_flag = military_advisor_levels_2
+						has_global_flag = military_advisor_levels_3
+					}
+				}
+
+				if = {
+					limit = { NOT = { has_trait = air_tactical_bombing_1 } }
+
+					remove_advisor_role = { slot = high_command }
+					add_advisor_role = {
+						advisor = {
+							slot = high_command
+							idea_token = generic_air_tactical_bombing_esicolor
+							ledger = air
+							cost = 50
+							traits = { air_tactical_bombing_1 }
+
+							#visible = {
+							#	NOT = { has_country_flag = air_tactical_bombing_disabled }
+							#}
+							#available = {
+							#	hidden_trigger = { NOT = { has_country_flag = air_tactical_bombing_disabled } }
+							#}
+						}
+					}
+				}
+			}
+			40 = {
+				modifier = {
+					factor = 0
+
+					OR = {
+						has_global_flag = military_advisor_levels_1
+						has_global_flag = military_advisor_levels_3
+					}
+				}
+
+				if = {
+					limit = { NOT = { has_trait = air_tactical_bombing_2 } }
+
+					remove_advisor_role = { slot = high_command }
+					add_advisor_role = {
+						advisor = {
+							slot = high_command
+							idea_token = generic_air_tactical_bombing_esicolor
+							ledger = air
+							cost = 100
+							traits = { air_tactical_bombing_2 }
+
+							#visible = {
+							#	NOT = { has_country_flag = air_tactical_bombing_disabled }
+							#}
+							#available = {
+							#	hidden_trigger = { NOT = { has_country_flag = air_tactical_bombing_disabled } }
+							#}
+						}
+					}
+				}
+			}
+			20 = {
+				modifier = {
+					factor = 0
+
+					OR = {
+						has_global_flag = military_advisor_levels_1
+						has_global_flag = military_advisor_levels_2
+					}
+				}
+
+				if = {
+					limit = { NOT = { has_trait = air_tactical_bombing_3 } }
+
+					remove_advisor_role = { slot = high_command }
+					add_advisor_role = {
+						advisor = {
+							slot = high_command
+							idea_token = generic_air_tactical_bombing_esicolor
+							ledger = air
+							cost = 200
+							traits = { air_tactical_bombing_3 }
+
+							#visible = {
+							#	NOT = { has_country_flag = air_tactical_bombing_disabled }
+							#}
+							#available = {
+							#	hidden_trigger = { NOT = { has_country_flag = air_tactical_bombing_disabled } }
+							#}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 randomise_air_strategic_bombing_levels = {
 	every_character = {
 		limit = {
@@ -9153,6 +9275,7 @@ randomise_advisors = {
 	remove_high_command_air = yes
 	remove_high_command_air = yes
 	remove_high_command_air = yes
+	remove_high_command_air = yes
 }
 
 randomise_military_advisor_levels = {
@@ -9205,9 +9328,106 @@ randomise_military_advisor_levels = {
 	if = { limit = { NOT = { has_country_flag = air_bomber_interception_disabled } } randomise_air_bomber_interception_levels = yes }
 	if = { limit = { NOT = { has_country_flag = air_close_air_support_disabled } } randomise_air_close_air_support_levels = yes }
 	if = { limit = { NOT = { has_country_flag = air_naval_strike_disabled } } randomise_air_naval_strike_levels = yes }
+	if = { limit = { NOT = { has_country_flag = air_tactical_bombing_disabled } } randomise_air_tactical_bombing_levels = yes }
 	if = { limit = { NOT = { has_country_flag = air_strategic_bombing_disabled } } randomise_air_strategic_bombing_levels = yes }
 	if = { limit = { NOT = { has_country_flag = air_airborne_disabled } } randomise_air_airborne_levels = yes }
 	if = { limit = { NOT = { has_country_flag = air_air_combat_training_disabled } } randomise_air_air_combat_training_levels = yes }
+}
+
+adjust_named_advisor_traits = {
+	60 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Ernst Thälmann
+				limit = {
+					has_trait = communist_revolutionary
+				}
+
+				add_trait = {
+					slot = political_advisor
+					trait = GER_proletarian_leader_no_ideology
+				}
+			}
+		}
+	}
+	341 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Said-i Nursî
+				limit = {
+					has_trait = staunch_monarchist
+				}
+
+				add_trait = {
+					slot = political_advisor
+					trait = grand_vizier_nursi_no_ideology
+				}
+			}
+		}
+	}
+	354 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Nâzım Hikmet
+				limit = {
+					has_trait = silent_workhorse
+				}
+
+				remove_trait = {
+					slot = political_advisor
+					trait = silent_workhorse
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = revolutionary_author_no_ideology
+				}
+			}
+		}
+	}
+	#501 = { # His trait sucks, keep the generic/no-DLC one.
+	#	for_each_scope_loop = {
+	#		array = state_advisors
+	#		if = { # Washington Luis Pereira
+	#			limit = {
+	#				has_trait = backroom_backstabber
+	#			}
+	#
+	#			remove_trait = {
+	#				slot = political_advisor
+	#				trait = backroom_backstabber
+	#			}
+	#			add_trait = {
+	#				slot = political_advisor
+	#				trait = BRA_deposed_former_president
+	#			}
+	#		}
+	#	}
+	#}
+	798 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Nejdet Sançar
+				limit = { has_trait = propaganda_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = propaganda_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = fascist_demagogue
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = avid_turanist_no_ideology
+				}
+			}
+		}
+	}
 }
 
 remove_tank_designer = {
@@ -9771,6 +9991,7 @@ setup_default_advisors = {
 	set_country_flag = air_bomber_interception_disabled
 	set_country_flag = air_close_air_support_disabled
 	set_country_flag = air_naval_strike_disabled
+	set_country_flag = air_tactical_bombing_disabled
 	set_country_flag = air_strategic_bombing_disabled
 }
 
@@ -9837,6 +10058,7 @@ setup_basegame_advisors = {
 	set_country_flag = air_bomber_interception_disabled
 	set_country_flag = air_close_air_support_disabled
 	set_country_flag = air_naval_strike_disabled
+	set_country_flag = air_tactical_bombing_disabled
 	set_country_flag = air_strategic_bombing_disabled
 	set_country_flag = air_airborne_disabled
 }
@@ -9999,6 +10221,7 @@ clear_advisor_disabled_flags = {
 	clr_country_flag = air_bomber_interception_disabled
 	clr_country_flag = air_close_air_support_disabled
 	clr_country_flag = air_naval_strike_disabled
+	clr_country_flag = air_tactical_bombing_disabled
 	clr_country_flag = air_strategic_bombing_disabled
 	clr_country_flag = air_airborne_disabled
 	clr_country_flag = air_air_combat_training_disabled

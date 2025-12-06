@@ -1,10 +1,9 @@
 # Logging and changing some state data.
+setup_state_ownerships = yes
 
 1936.1.1.12 = {
 	if = {
 		limit = { has_start_date < 1939.8.14.1 }
-
-		setup_state_ownerships = yes
 
 		every_state = {
 			log_buildings = yes
@@ -36,8 +35,6 @@
 	}
 }
 1939.8.14.12 = {
-	setup_state_ownerships = yes
-
 	every_state = {
 		log_buildings = yes
 		log_resources = yes
