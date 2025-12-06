@@ -9339,9 +9339,7 @@ adjust_named_advisor_traits = {
 		for_each_scope_loop = {
 			array = state_advisors
 			if = { # Aristotle Onassis
-				limit = {
-					has_trait = captain_of_industry
-				}
+				limit = { has_trait = captain_of_industry }
 
 				remove_trait = {
 					slot = political_advisor
@@ -9358,9 +9356,7 @@ adjust_named_advisor_traits = {
 		for_each_scope_loop = {
 			array = state_advisors
 			if = { # Georgi Ivanov Kyoseivanov
-				limit = {
-					has_trait = backroom_backstabber
-				}
+				limit = { has_trait = backroom_backstabber }
 
 				remove_trait = {
 					slot = political_advisor
@@ -9377,9 +9373,7 @@ adjust_named_advisor_traits = {
 		for_each_scope_loop = {
 			array = state_advisors
 			if = { # Ernst Thälmann
-				limit = {
-					has_trait = communist_revolutionary
-				}
+				limit = { has_trait = communist_revolutionary }
 
 				add_trait = {
 					slot = political_advisor
@@ -9392,9 +9386,7 @@ adjust_named_advisor_traits = {
 		for_each_scope_loop = {
 			array = state_advisors
 			if = { # Xenophon Giosmas
-				limit = {
-					has_trait = fascist_demagogue
-				}
+				limit = { has_trait = fascist_demagogue }
 
 				add_trait = {
 					slot = political_advisor
@@ -9407,9 +9399,7 @@ adjust_named_advisor_traits = {
 		for_each_scope_loop = {
 			array = state_advisors
 			if = { # Dimitris Glinos
-				limit = {
-					has_trait = communist_revolutionary
-				}
+				limit = { has_trait = communist_revolutionary }
 
 				add_trait = {
 					slot = political_advisor
@@ -9418,13 +9408,28 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	291 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Ma'ruf al-Rusafi
+				limit = { has_trait = propaganda_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = propaganda_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = IRQ_poet_of_freedom
+				}
+			}
+		}
+	}
 	212 = {
 		for_each_scope_loop = {
 			array = state_advisors
 			if = { # Nikola Zhekov
-				limit = {
-					has_trait = ideological_crusader
-				}
+				limit = { has_trait = ideological_crusader }
 
 				remove_trait = {
 					slot = political_advisor
@@ -9440,9 +9445,7 @@ adjust_named_advisor_traits = {
 				}
 			}
 			if = { # Aleksandar Tsankov
-				limit = {
-					has_trait = financial_expert
-				}
+				limit = { has_trait = financial_expert }
 
 				remove_trait = {
 					slot = political_advisor
@@ -9459,9 +9462,7 @@ adjust_named_advisor_traits = {
 		for_each_scope_loop = {
 			array = state_advisors
 			if = { # Said-i Nursî
-				limit = {
-					has_trait = staunch_monarchist
-				}
+				limit = { has_trait = staunch_monarchist }
 
 				add_trait = {
 					slot = political_advisor
@@ -9474,9 +9475,7 @@ adjust_named_advisor_traits = {
 		for_each_scope_loop = {
 			array = state_advisors
 			if = { # Nâzım Hikmet
-				limit = {
-					has_trait = silent_workhorse
-				}
+				limit = { has_trait = silent_workhorse }
 
 				remove_trait = {
 					slot = political_advisor
@@ -9497,9 +9496,7 @@ adjust_named_advisor_traits = {
 	#	for_each_scope_loop = {
 	#		array = state_advisors
 	#		if = { # Washington Luis Pereira
-	#			limit = {
-	#				has_trait = backroom_backstabber
-	#			}
+	#			limit = { has_trait = backroom_backstabber }
 	#
 	#			remove_trait = {
 	#				slot = political_advisor
@@ -9512,6 +9509,40 @@ adjust_named_advisor_traits = {
 	#		}
 	#	}
 	#}
+	695 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Husain al-Rahhal
+				limit = { has_trait = smooth_talking_charmer }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = smooth_talking_charmer
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = IRQ_as_sahifah_editor
+				}
+			}
+		}
+	}
+	696 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Muhammad Amin Zaki
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = IRQ_kurdish_politician
+				}
+			}
+		}
+	}
 	798 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -9558,6 +9589,35 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = industry_reformer
+				}
+			}
+		}
+	}
+	1011 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Hikmat Sulayman
+				limit = { has_trait = silent_workhorse }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = silent_workhorse
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = IRQ_minister_of_the_interior
+				}
+			}
+			if = { # Sharaf bin Rajeh
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = IRQ_emir_of_taif
 				}
 			}
 		}
@@ -10638,6 +10698,7 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = IRQ_comrade_fahd } remove_country_leader_trait = IRQ_comrade_fahd }
 	if = { limit = { has_country_leader_with_trait = IRQ_pro_western_iraqi_nationalist } remove_country_leader_trait = IRQ_pro_western_iraqi_nationalist }
 	if = { limit = { has_country_leader_with_trait = IRQ_nationalist } remove_country_leader_trait = IRQ_nationalist }
+	if = { limit = { has_country_leader_with_trait = IRQ_the_grand_mufti_esicolor } remove_country_leader_trait = IRQ_the_grand_mufti_esicolor }
 	if = { limit = { has_country_leader_with_trait = hindu_nationalist } remove_country_leader_trait = hindu_nationalist }
 	if = { limit = { has_country_leader_with_trait = aloof_authority } remove_country_leader_trait = aloof_authority }
 	if = { limit = { has_country_leader_with_trait = seasoned_administrator } remove_country_leader_trait = seasoned_administrator }

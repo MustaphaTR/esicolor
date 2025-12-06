@@ -1387,6 +1387,50 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = ZYI }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = propaganda_expert
+			}
+
+			set_character_name = IRQ_maruf_al_rusafi
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Graveyard of Empires" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_IRQ_maruf_al_rusafi_small
+					}
+					army = {
+						small = GFX_portrait_IRQ_maruf_al_rusafi_small
+					}
+					navy = {
+						small = GFX_portrait_IRQ_maruf_al_rusafi_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_arabia_generic_land_7_small
+					}
+					army = {
+						small = GFX_portrait_arabia_generic_land_7_small
+					}
+					navy = {
+						small = GFX_portrait_arabia_generic_land_7_small
+					}
+				}
+			}
+
+			291 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = EEY }
 
 		random_character = {
@@ -1545,6 +1589,60 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = ESZ }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = fascist_demagogue
+			}
+
+			set_character_name = KUR_kamuran_ali_bedirxan
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small=GFX_idea_generic_political_advisor_arab_1
+				}
+				army = {
+					small=GFX_idea_generic_political_advisor_arab_1
+				}
+				navy = {
+					small=GFX_idea_generic_political_advisor_arab_1
+				}
+			}
+
+			352 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = ESE }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = democratic_reformer
+			}
+
+			set_character_name = KUR_nuri_dersimi
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small=GFX_idea_generic_political_advisor_arab_2
+				}
+				army = {
+					small=GFX_idea_generic_political_advisor_arab_2
+				}
+				navy = {
+					small=GFX_idea_generic_political_advisor_arab_2
+				}
+			}
+
+			353 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = ESA }
 
 		random_character = {
@@ -1603,6 +1701,33 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = AIY }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = KUR_haji_baba
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_Portrait_SYR_Generic_land_3_small
+				}
+				army = {
+					small = GFX_Portrait_SYR_Generic_land_3_small
+				}
+				navy = {
+					small = GFX_Portrait_SYR_Generic_land_3_small
+				}
+			}
+
+			419 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = SOI }
 
 		random_character = {
@@ -1647,6 +1772,77 @@ handle_special_advisors = {
 			}
 
 			501 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = LFS }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = smooth_talking_charmer
+			}
+
+			set_character_name = IRQ_husain_al_rahhal
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_political_advisor_arab_2
+				}
+				army = {
+					small = GFX_idea_generic_political_advisor_arab_2
+				}
+				navy = {
+					small = GFX_idea_generic_political_advisor_arab_2
+				}
+			}
+
+			695 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = LFL }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_name = IRQ_muhammad_amin_zaki
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Graveyard of Empires" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_IRQ_muhammad_amin_zaki_small
+					}
+					army = {
+						small = GFX_portrait_IRQ_muhammad_amin_zaki_small
+					}
+					navy = {
+						small = GFX_portrait_IRQ_muhammad_amin_zaki_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_arab_3
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_arab_3
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_arab_3
+					}
+				}
+			}
+
+			696 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -2029,6 +2225,93 @@ handle_special_advisors = {
 			}
 
 			943 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = NII }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = silent_workhorse
+			}
+
+			set_character_name = IRQ_hikmat_suleiman
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Graveyard of Empires" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_IRQ_hikmat_suleiman
+						small = GFX_portrait_IRQ_hikmat_suleiman_small
+					}
+					army = {
+						large = GFX_portrait_IRQ_hikmat_suleiman
+						small = GFX_portrait_IRQ_hikmat_suleiman_small
+					}
+					navy = {
+						large = GFX_portrait_IRQ_hikmat_suleiman
+						small = GFX_portrait_IRQ_hikmat_suleiman_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_fascist_demagogue_middle_eastern_2d
+					}
+					army = {
+						small = GFX_idea_generic_fascist_demagogue_middle_eastern_2d
+					}
+					navy = {
+						small = GFX_idea_generic_fascist_demagogue_middle_eastern_2d
+					}
+				}
+			}
+
+			1011 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_name = IRQ_sharaf_bin_rajeh
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Graveyard of Empires" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_IRQ_sharaf_bin_rajeh_small
+					}
+					army = {
+						small = GFX_portrait_IRQ_sharaf_bin_rajeh_small
+					}
+					navy = {
+						small = GFX_portrait_IRQ_sharaf_bin_rajeh_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_army_arab_2
+					}
+					army = {
+						small = GFX_idea_generic_army_arab_2
+					}
+					navy = {
+						small = GFX_idea_generic_army_arab_2
+					}
+				}
+			}
+
+			1011 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 }
