@@ -9335,6 +9335,25 @@ randomise_military_advisor_levels = {
 }
 
 adjust_named_advisor_traits = {
+	47 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Aristotle Onassis
+				limit = {
+					has_trait = captain_of_industry
+				}
+
+				remove_trait = {
+					slot = political_advisor
+					trait = captain_of_industry
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = gifted_shipping_magnate
+				}
+			}
+		}
+	}
 	60 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -9346,6 +9365,36 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = GER_proletarian_leader_no_ideology
+				}
+			}
+		}
+	}
+	182 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Xenophon Giosmas
+				limit = {
+					has_trait = fascist_demagogue
+				}
+
+				add_trait = {
+					slot = political_advisor
+					trait = national_socialist_paramilitarist_no_ideology
+				}
+			}
+		}
+	}
+	184 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Dimitris Glinos
+				limit = {
+					has_trait = communist_revolutionary
+				}
+
+				add_trait = {
+					slot = political_advisor
+					trait = marxist_academic_no_ideology
 				}
 			}
 		}

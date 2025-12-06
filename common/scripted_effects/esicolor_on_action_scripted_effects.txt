@@ -306,6 +306,54 @@ handle_special_generals = {
 	else_if = {
 		limit = {
 			var:creator = {
+				has_country_leader = { character = FEI_themistoklis_sofoulis ruling_only = yes }
+
+				NOT = { has_global_flag = stylianos_gonatas_created }
+			}
+		}
+
+		set_global_flag = stylianos_gonatas_created
+		set_character_name = GRE_stylianos_gonatas
+		set_character_flag = special_general
+
+		if = {
+			limit = { has_dlc = "Battle for the Bosporus" }
+
+			set_portraits = {
+				civilian = {
+					large=GFX_portrait_GRE_stylianos_gonatas
+					small=GFX_portrait_GRE_stylianos_gonatas_small
+				}
+				army = {
+					large=GFX_portrait_GRE_stylianos_gonatas
+					small=GFX_portrait_GRE_stylianos_gonatas_small
+				}
+				navy = {
+					large=GFX_portrait_GRE_stylianos_gonatas
+					small=GFX_portrait_GRE_stylianos_gonatas_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large = GFX_Portrait_Europe_Generic_land_5
+					small = GFX_Portrait_Europe_Generic_land_5_small
+				}
+				army = {
+					large = GFX_Portrait_Europe_Generic_land_5
+					small = GFX_Portrait_Europe_Generic_land_5_small
+				}
+				navy = {
+					large = GFX_Portrait_Europe_Generic_land_5
+					small = GFX_Portrait_Europe_Generic_land_5_small
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
 				has_country_leader = { character = LFL_ahmed_barzani ruling_only = yes }
 
 				NOT = { has_global_flag = mustafa_barzani_created }
@@ -379,6 +427,54 @@ handle_special_generals = {
 			}
 		}
 	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = OAF_ioannis_metaxas ruling_only = yes }
+
+				NOT = { has_global_flag = alexandros_papagos_created }
+			}
+		}
+
+		set_global_flag = alexandros_papagos_created
+		set_character_name = GRE_alexandros_papagos
+		set_character_flag = special_general
+
+		if = {
+			limit = { has_dlc = "Battle for the Bosporus" }
+
+			set_portraits = {
+				civilian = {
+					large=GFX_portrait_gre_alexandros_papagos
+					small=GFX_idea_gre_alexandros_papagos
+				}
+				army = {
+					large=GFX_portrait_gre_alexandros_papagos
+					small=GFX_idea_gre_alexandros_papagos
+				}
+				navy = {
+					large=GFX_portrait_gre_alexandros_papagos
+					small=GFX_idea_gre_alexandros_papagos
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large=GFX_portrait_europe_generic_land_16
+					small=GFX_portrait_europe_generic_land_16_small
+				}
+				army = {
+					large=GFX_portrait_europe_generic_land_16
+					small=GFX_portrait_europe_generic_land_16_small
+				}
+				navy = {
+					large=GFX_portrait_europe_generic_land_16
+					small=GFX_portrait_europe_generic_land_16_small
+				}
+			}
+		}
+	}
 }
 
 handle_special_admirals = {
@@ -426,6 +522,54 @@ handle_special_admirals = {
 				navy = {
 					large = GFX_Portrait_Europe_Generic_navy_2
 					small = GFX_Portrait_Europe_Generic_navy_2_small
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = IBL_george_ii ruling_only = yes }
+
+				NOT = { has_global_flag = dimitrios_oikonomou_created }
+			}
+		}
+
+		set_global_flag = dimitrios_oikonomou_created
+		set_character_name = GRE_dimitrios_oikonomou
+		set_character_flag = special_admiral
+
+		if = {
+			limit = { has_dlc = "Battle for the Bosporus" }
+
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_GRE_dimitrios_oikonomou
+					small = GFX_idea_gre_dimitrios_oikonomou
+				}
+				army = {
+					large = GFX_portrait_GRE_dimitrios_oikonomou
+					small = GFX_idea_gre_dimitrios_oikonomou
+				}
+				navy = {
+					large = GFX_portrait_GRE_dimitrios_oikonomou
+					small = GFX_idea_gre_dimitrios_oikonomou
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_europe_generic_navy_12
+					small = GFX_idea_gre_dimitrios_oikonomou
+				}
+				army = {
+					large = GFX_portrait_europe_generic_navy_12
+					small = GFX_idea_gre_dimitrios_oikonomou
+				}
+				navy = {
+					large = GFX_portrait_europe_generic_navy_12
+					small = GFX_idea_gre_dimitrios_oikonomou
 				}
 			}
 		}
@@ -675,6 +819,53 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = OAF }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = GRE_aristotle_onassis
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Battle for the Bosporus" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_GRE_aristotle_onassis
+						small = GFX_idea_gre_aristotle_onassis
+					}
+					army = {
+						large = GFX_portrait_GRE_aristotle_onassis
+						small = GFX_idea_gre_aristotle_onassis
+					}
+					navy = {
+						large = GFX_portrait_GRE_aristotle_onassis
+						small = GFX_idea_gre_aristotle_onassis
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_gre_aristotle_onassis
+					}
+					army = {
+						small = GFX_idea_gre_aristotle_onassis
+					}
+					navy = {
+						small = GFX_idea_gre_aristotle_onassis
+					}
+				}
+			}
+
+			47 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = OAY }
 
 		random_character = {
@@ -800,6 +991,149 @@ handle_special_advisors = {
 			}
 
 			69 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = IBZ }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = fascist_demagogue
+			}
+
+			set_character_name = GRE_xenophon_giosmas
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_gre_xenophon_giosmas
+				}
+				army = {
+					small = GFX_idea_gre_xenophon_giosmas
+				}
+				navy = {
+					small = GFX_idea_gre_xenophon_giosmas
+				}
+			}
+
+			182 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_offensive_1
+					has_trait = army_chief_offensive_2
+					has_trait = army_chief_offensive_3
+				}
+			}
+
+			set_character_name = GRE_georgios_tsolakoglou
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_gre_georgios_tsolakoglou
+				}
+				army = {
+					small = GFX_idea_gre_georgios_tsolakoglou
+				}
+				navy = {
+					small = GFX_idea_gre_georgios_tsolakoglou
+				}
+			}
+
+			182 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = IBA }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = GRE_dimitris_glinos
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_gre_dimitris_glinos
+				}
+				army = {
+					small = GFX_idea_gre_dimitris_glinos
+				}
+				navy = {
+					small = GFX_idea_gre_dimitris_glinos
+				}
+			}
+
+			184 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = IBS }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_regrouping_1
+					has_trait = army_regrouping_2
+					has_trait = army_regrouping_3
+				}
+			}
+
+			set_character_name = GRE_nikos_beloyannis
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_gre_nikos_beloyannis
+				}
+				army = {
+					small = GFX_idea_gre_nikos_beloyannis
+				}
+				navy = {
+					small = GFX_idea_gre_nikos_beloyannis
+				}
+			}
+
+			185 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = IBL }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = navy_chief_decisive_battle_1
+					has_trait = navy_chief_decisive_battle_2
+					has_trait = navy_chief_decisive_battle_3
+				}
+			}
+
+			set_character_name = GRE_alexandros_sakellariou
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_gre_alexandros_sakellariou
+				}
+				army = {
+					small = GFX_idea_gre_alexandros_sakellariou
+				}
+				navy = {
+					small = GFX_idea_gre_alexandros_sakellariou
+				}
+			}
+
+			186 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -1063,6 +1397,103 @@ handle_special_advisors = {
 			}
 
 			501 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = FEI }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = backroom_backstabber
+			}
+
+			set_character_name = GRE_sophoklis_venizelos
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_gre_sophoklis_venizelos
+				}
+				army = {
+					small = GFX_idea_gre_sophoklis_venizelos
+				}
+				navy = {
+					small = GFX_idea_gre_sophoklis_venizelos
+				}
+			}
+
+			731 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = grand_battle_plan_expert
+			}
+
+			set_character_name = GRE_konstantinos_ventiris
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_gre_konstantinos_ventiris
+				}
+				army = {
+					small = GFX_idea_gre_konstantinos_ventiris
+				}
+				navy = {
+					small = GFX_idea_gre_konstantinos_ventiris
+				}
+			}
+
+			731 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_maneuver_1
+					has_trait = army_chief_maneuver_2
+					has_trait = army_chief_maneuver_3
+				}
+			}
+
+			set_character_name = GRE_nikolaos_plastiras
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Battle for the Bosporus" }
+
+				set_portraits = {
+					civilian = {
+						large="GFX_portrait_gre_nikolaos_plastiras"
+						small="GFX_idea_gre_nikolaos_plastiras"
+					}
+					army = {
+						large="GFX_portrait_gre_nikolaos_plastiras"
+						small="GFX_idea_gre_nikolaos_plastiras"
+					}
+					navy = {
+						large="GFX_portrait_gre_nikolaos_plastiras"
+						small="GFX_idea_gre_nikolaos_plastiras"
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_gre_nikolaos_plastiras
+					}
+					army = {
+						small = GFX_idea_gre_nikolaos_plastiras
+					}
+					navy = {
+						small = GFX_idea_gre_nikolaos_plastiras
+					}
+				}
+			}
+
+			731 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
