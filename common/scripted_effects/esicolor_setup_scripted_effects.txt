@@ -9335,6 +9335,23 @@ randomise_military_advisor_levels = {
 }
 
 adjust_named_advisor_traits = {
+	45 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Slobodan Jovanović
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = constitutional_philosopher
+				}
+			}
+		}
+	}
 	47 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -9589,6 +9606,19 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	764 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Dimitrije Ljotić
+				limit = { has_trait = fascist_demagogue }
+
+				add_trait = {
+					slot = political_advisor
+					trait = harsh_propagandist_no_ideology
+				}
+			}
+		}
+	}
 	798 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -9635,6 +9665,32 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = industry_reformer
+				}
+			}
+		}
+	}
+	804 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Milovan Djilas
+				limit = { has_trait = democratic_reformer }
+
+				add_trait = {
+					slot = political_advisor
+					trait = democratic_firebrand_no_ideology
+				}
+			}
+		}
+	}
+	853 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Dimitrije Ljotić
+				limit = { has_trait = communist_revolutionary }
+
+				add_trait = {
+					slot = political_advisor
+					trait = communist_orator_no_ideology
 				}
 			}
 		}

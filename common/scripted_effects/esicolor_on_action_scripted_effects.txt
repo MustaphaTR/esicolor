@@ -819,6 +819,33 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = OAS }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_name = YUG_slobodan_jovanovic
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_YUG_slobodan_jovanovic
+				}
+				army = {
+					small = GFX_idea_YUG_slobodan_jovanovic
+				}
+				navy = {
+					small = GFX_idea_YUG_slobodan_jovanovic
+				}
+			}
+
+			45 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = OAF }
 
 		random_character = {
@@ -1064,6 +1091,149 @@ handle_special_advisors = {
 			}
 
 			69 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = IOF }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = military_theorist
+			}
+
+			set_character_name = YUG_ljubomir_maric
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_YUG_ljubomir_maric
+				}
+				army = {
+					small = GFX_idea_YUG_ljubomir_maric
+				}
+				navy = {
+					small = GFX_idea_YUG_ljubomir_maric
+				}
+			}
+
+			107 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_defensive_1
+					has_trait = army_chief_defensive_2
+					has_trait = army_chief_defensive_3
+				}
+			}
+
+			set_character_name = YUG_draza_mihailovic
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_YUG_draza_mihailovic
+				}
+				army = {
+					small = GFX_idea_YUG_draza_mihailovic
+				}
+				navy = {
+					small = GFX_idea_YUG_draza_mihailovic
+				}
+			}
+
+			107 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = IOB }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_chief_safety_1
+					has_trait = air_chief_safety_2
+					has_trait = air_chief_safety_3
+				}
+			}
+
+			set_character_name = YUG_dusan_simovic
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_YUG_dusan_simovic
+				}
+				army = {
+					small = GFX_idea_YUG_dusan_simovic
+				}
+				navy = {
+					small = GFX_idea_YUG_dusan_simovic
+				}
+			}
+
+			108 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_bomber_interception_1
+					has_trait = air_bomber_interception_2
+					has_trait = air_bomber_interception_3
+				}
+			}
+
+			set_character_name = YUG_borivoje_mirkovic
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_YUG_borivoje_mirkovic
+				}
+				army = {
+					small = GFX_idea_YUG_borivoje_mirkovic
+				}
+				navy = {
+					small = GFX_idea_YUG_borivoje_mirkovic
+				}
+			}
+
+			108 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = IOY }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_logistics_1
+					has_trait = army_logistics_2
+					has_trait = army_logistics_3
+				}
+			}
+
+			set_character_name = YUG_mihajlo_lukic
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_YUG_mihajlo_lukic
+				}
+				army = {
+					small = GFX_idea_YUG_mihajlo_lukic
+				}
+				navy = {
+					small = GFX_idea_YUG_mihajlo_lukic
+				}
+			}
+
+			109 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -2115,6 +2285,56 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = FLA }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = fascist_demagogue
+			}
+
+			set_character_name = YUG_dimitrije_ljotic
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_YUG_dimitrije_ljotic
+				}
+				army = {
+					small = GFX_idea_YUG_dimitrije_ljotic
+				}
+				navy = {
+					small = GFX_idea_YUG_dimitrije_ljotic
+				}
+			}
+
+			764 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = prince_of_terror
+			}
+
+			set_character_name = YUG_milan_nedic
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_YUG_milan_nedic
+				}
+				army = {
+					small = GFX_idea_YUG_milan_nedic
+				}
+				navy = {
+					small = GFX_idea_YUG_milan_nedic
+				}
+			}
+
+			764 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = FYF }
 
 		random_character = {
@@ -2288,6 +2508,64 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = BOE }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_entrenchment_1
+					has_trait = army_entrenchment_1
+					has_trait = army_entrenchment_3
+				}
+			}
+
+			set_character_name = YUG_arso_jovanovic
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_YUG_arso_jovanovic
+				}
+				army = {
+					small = GFX_idea_YUG_arso_jovanovic
+				}
+				navy = {
+					small = GFX_idea_YUG_arso_jovanovic
+				}
+			}
+
+			803 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = BOA }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = democratic_reformer
+			}
+
+			set_character_name = YUG_milovan_djilas
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_YUG_milovan_djilas
+				}
+				army = {
+					small = GFX_idea_YUG_milovan_djilas
+				}
+				navy = {
+					small = GFX_idea_YUG_milovan_djilas
+				}
+			}
+
+			804 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = BIS }
 
 		# Depending on the DLC, one is the leader, other is an advisor.
@@ -2350,6 +2628,56 @@ handle_special_advisors = {
 			}
 
 			815 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = BSE }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = YUG_ivo_lola_ribar
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_YUG_ivo_lola_ribar
+				}
+				army = {
+					small = GFX_idea_YUG_ivo_lola_ribar
+				}
+				navy = {
+					small = GFX_idea_YUG_ivo_lola_ribar
+				}
+			}
+
+			853 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = YUG_ivan_ribar
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_YUG_ivan_ribar
+				}
+				army = {
+					small = GFX_idea_YUG_ivan_ribar
+				}
+				navy = {
+					small = GFX_idea_YUG_ivan_ribar
+				}
+			}
+
+			853 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
