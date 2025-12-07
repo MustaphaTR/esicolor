@@ -846,6 +846,87 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = OAL }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = ROM_nicolae_malaxa
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_ROM_nicolae_malaxa
+				}
+				army = {
+					small = GFX_idea_ROM_nicolae_malaxa
+				}
+				navy = {
+					small = GFX_idea_ROM_nicolae_malaxa
+				}
+			}
+
+			46 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_commando_1
+					has_trait = army_commando_2
+					has_trait = army_commando_3
+				}
+			}
+
+			set_character_name = ROM_gheorghe_mihail
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_ROM_gheorghe_mihail
+				}
+				army = {
+					small = GFX_idea_ROM_gheorghe_mihail
+				}
+				navy = {
+					small = GFX_idea_ROM_gheorghe_mihail
+				}
+			}
+
+			46 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_strategic_bombing_1
+					has_trait = air_strategic_bombing_2
+					has_trait = air_strategic_bombing_3
+				}
+			}
+
+			set_character_name = ROM_paul_teodorescu
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_ROM_paul_teodorescu
+				}
+				army = {
+					small = GFX_idea_ROM_paul_teodorescu
+				}
+				navy = {
+					small = GFX_idea_ROM_paul_teodorescu
+				}
+			}
+
+			46 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = OAF }
 
 		random_character = {
@@ -1091,6 +1172,110 @@ handle_special_advisors = {
 			}
 
 			69 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OFB }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = ROM_gheorghe_gheorghiu_dej
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_ROM_gheorghe_gheorghiu_dej
+				}
+				army = {
+					small = GFX_idea_ROM_gheorghe_gheorghiu_dej
+				}
+				navy = {
+					small = GFX_idea_ROM_gheorghe_gheorghiu_dej
+				}
+			}
+
+			78 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = backroom_backstabber
+			}
+
+			set_character_name = ROM_petru_groza
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_ROM_petru_groza
+				}
+				army = {
+					small = GFX_idea_ROM_petru_groza
+				}
+				navy = {
+					small = GFX_idea_ROM_petru_groza
+				}
+			}
+
+			78 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OFY }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = fascist_demagogue
+			}
+
+			set_character_name = ROM_mihail_sturdza
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_ROM_mihail_sturdza
+				}
+				army = {
+					small = GFX_idea_ROM_mihail_sturdza
+				}
+				navy = {
+					small = GFX_idea_ROM_mihail_sturdza
+				}
+			}
+
+			79 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OBE }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = democratic_reformer
+			}
+
+			set_character_name = ROM_iuliu_maniu
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_ROM_iuliu_maniu
+				}
+				army = {
+					small = GFX_idea_ROM_iuliu_maniu
+				}
+				navy = {
+					small = GFX_idea_ROM_iuliu_maniu
+				}
+			}
+
+			83 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
