@@ -777,6 +777,122 @@ handle_special_advisors = {
 		random_character = {
 			limit = {
 				is_advisor = yes
+				has_trait = fascist_demagogue
+			}
+
+			set_character_name = HUN_gyula_gombos_de_jakfa
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_HUN_gyula_gombos_de_jakfa
+						small = GFX_portrait_HUN_gyula_gombos_de_jakfa_small
+					}
+					army = {
+						large = GFX_portrait_HUN_gyula_gombos_de_jakfa
+						small = GFX_portrait_HUN_gyula_gombos_de_jakfa_small
+					}
+					navy = {
+						large = GFX_portrait_HUN_gyula_gombos_de_jakfa
+						small = GFX_portrait_HUN_gyula_gombos_de_jakfa_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_HUN_gyula_gombos_de_jakfa
+					}
+					army = {
+						small = GFX_idea_HUN_gyula_gombos_de_jakfa
+					}
+					navy = {
+						small = GFX_idea_HUN_gyula_gombos_de_jakfa
+					}
+				}
+			}
+
+			43 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = silent_workhorse
+			}
+
+			set_character_name = HUN_magdolna_purgly
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_HUN_magdolna_purgly_small
+					}
+					army = {
+						small = GFX_portrait_HUN_magdolna_purgly_small
+					}
+					navy = {
+						small = GFX_portrait_HUN_magdolna_purgly_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_female_europe
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_female_europe
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_female_europe
+					}
+				}
+			}
+
+			43 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = { # Used for Miklós Horthy Jr., only applied with the named advisors only mode.
+			limit = {
+				is_advisor = yes
+				has_trait = editor
+			}
+
+			set_character_flag = special_advisor
+
+			43 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = smooth_talking_charmer
+			}
+
+			set_character_name = HUN_kalman_daranyi
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HUN_kalman_daranyi
+				}
+				army = {
+					small = GFX_idea_HUN_kalman_daranyi
+				}
+				navy = {
+					small = GFX_idea_HUN_kalman_daranyi
+				}
+			}
+
+			43 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
 				has_trait = war_industrialist
 			}
 
@@ -811,6 +927,123 @@ handle_special_advisors = {
 					}
 					navy = {
 						small = GFX_portrait_europe_generic_land_13_small
+					}
+				}
+			}
+
+			43 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = military_theorist
+			}
+
+			set_character_name = HUN_shvoy_kalman
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HUN_shvoy_kalman
+				}
+				army = {
+					small = GFX_idea_HUN_shvoy_kalman
+				}
+				navy = {
+					small = GFX_idea_HUN_shvoy_kalman
+				}
+			}
+
+			43 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = air_warfare_theorist
+			}
+
+			set_character_name = HUN_gyorgy_jendrassik
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HUN_gyorgy_jendrassik
+				}
+				army = {
+					small = GFX_idea_HUN_gyorgy_jendrassik
+				}
+				navy = {
+					small = GFX_idea_HUN_gyorgy_jendrassik
+				}
+			}
+
+			43 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_defensive_1
+					has_trait = army_chief_defensive_1
+					has_trait = army_chief_defensive_3
+				}
+			}
+
+			set_character_name = HUN_ferenc_szombathelyi
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HUN_ferenc_szombathelyi
+				}
+				army = {
+					small = GFX_idea_HUN_ferenc_szombathelyi
+				}
+				navy = {
+					small = GFX_idea_HUN_ferenc_szombathelyi
+				}
+			}
+
+			43 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = navy_chief_commerce_raiding_1
+					has_trait = navy_chief_commerce_raiding_2
+					has_trait = navy_chief_commerce_raiding_3
+				}
+			}
+
+			set_character_name = HUN_kalman_hardy
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_HUN_kalman_hardy_small
+					}
+					army = {
+						small = GFX_portrait_HUN_kalman_hardy_small
+					}
+					navy = {
+						small = GFX_portrait_HUN_kalman_hardy_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_europe_generic_land_16_small
+					}
+					army = {
+						small = GFX_portrait_europe_generic_land_16_small
+					}
+					navy = {
+						small = GFX_portrait_europe_generic_land_16_small
 					}
 				}
 			}
@@ -1419,6 +1652,197 @@ handle_special_advisors = {
 			}
 
 			109 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = ISA }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = HUN_imre_nagy
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_HUN_imre_nagy_small
+					}
+					army = {
+						small = GFX_portrait_HUN_imre_nagy_small
+					}
+					navy = {
+						small = GFX_portrait_HUN_imre_nagy_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_communist_revolutionary_western_european_2d
+					}
+					army = {
+						small = GFX_idea_generic_communist_revolutionary_western_european_2d
+					}
+					navy = {
+						small = GFX_idea_generic_communist_revolutionary_western_european_2d
+					}
+				}
+			}
+
+			154 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = head_of_intelligence
+			}
+
+			set_character_name = HUN_erno_gero
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_HUN_erno_gero_small
+					}
+					army = {
+						small = GFX_portrait_HUN_erno_gero_small
+					}
+					navy = {
+						small = GFX_portrait_HUN_erno_gero_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_europe_generic_communism_3_small
+					}
+					army = {
+						small = GFX_portrait_europe_generic_communism_3_small
+					}
+					navy = {
+						small = GFX_portrait_europe_generic_communism_3_small
+					}
+				}
+			}
+
+			154 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = ISS }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = democratic_reformer
+			}
+
+			set_character_name = HUN_zoltan_tildy
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HUN_zoltan_tildy
+				}
+				army = {
+					small = GFX_idea_HUN_zoltan_tildy
+				}
+				navy = {
+					small = GFX_idea_HUN_zoltan_tildy
+				}
+			}
+
+			155 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_name = HUN_zoltan_tildy
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_HUN_istvan_bethlen_small
+					}
+					army = {
+						small = GFX_portrait_HUN_istvan_bethlen_small
+					}
+					navy = {
+						small = GFX_portrait_HUN_istvan_bethlen_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_europe_generic_democratic_3_small
+					}
+					army = {
+						small = GFX_portrait_europe_generic_democratic_3_small
+					}
+					navy = {
+						small = GFX_portrait_europe_generic_democratic_3_small
+					}
+				}
+			}
+
+			155 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = silent_workhorse
+			}
+
+			set_character_name = HUN_jusztinian_seredi
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_HUN_jusztinian_seredi_small
+					}
+					army = {
+						small = GFX_portrait_HUN_jusztinian_seredi_small
+					}
+					navy = {
+						small = GFX_portrait_HUN_jusztinian_seredi_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+					army = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+					navy = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+				}
+			}
+
+			155 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -2700,7 +3124,7 @@ handle_special_advisors = {
 				is_advisor = yes
 				OR = {
 					has_trait = army_entrenchment_1
-					has_trait = army_entrenchment_1
+					has_trait = army_entrenchment_2
 					has_trait = army_entrenchment_3
 				}
 			}
@@ -2910,6 +3334,381 @@ handle_special_advisors = {
 			}
 
 			943 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = YFE }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = fascist_demagogue
+			}
+
+			set_character_name = HUN_fidel_palffy
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_HUN_fidel_palffy_small
+					}
+					army = {
+						small = GFX_portrait_HUN_fidel_palffy_small
+					}
+					navy = {
+						small = GFX_portrait_HUN_fidel_palffy_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Europe_Generic_4_small
+					}
+					army = {
+						small = GFX_Portrait_Europe_Generic_4_small
+					}
+					navy = {
+						small = GFX_Portrait_Europe_Generic_4_small
+					}
+				}
+			}
+
+			973 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = financial_expert
+			}
+
+			set_character_name = HUN_henrik_werth
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HUN_lajos_remenyi_schneller
+				}
+				army = {
+					small = GFX_idea_HUN_lajos_remenyi_schneller
+				}
+				navy = {
+					small = GFX_idea_HUN_lajos_remenyi_schneller
+				}
+			}
+
+			973 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_entrenchment_1
+					has_trait = army_entrenchment_2
+					has_trait = army_entrenchment_3
+				}
+			}
+
+			set_character_name = HUN_henrik_werth
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_HUN_henrik_werth
+						small = GFX_portrait_HUN_henrik_werth_small
+					}
+					army = {
+						large = GFX_portrait_HUN_henrik_werth
+						small = GFX_portrait_HUN_henrik_werth_small
+					}
+					navy = {
+						large = GFX_portrait_HUN_henrik_werth
+						small = GFX_portrait_HUN_henrik_werth_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_HUN_henrik_werth
+					}
+					army = {
+						small = GFX_idea_HUN_henrik_werth
+					}
+					navy = {
+						small = GFX_idea_HUN_henrik_werth
+					}
+				}
+			}
+
+			973 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_regrouping_1
+					has_trait = army_regrouping_2
+					has_trait = army_regrouping_3
+				}
+			}
+
+			set_character_name = HUN_dezso_laszlo
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_HUN_dezso_laszlo
+						small = GFX_portrait_HUN_dezso_laszlo_small
+					}
+					army = {
+						large = GFX_portrait_HUN_dezso_laszlo
+						small = GFX_portrait_HUN_dezso_laszlo_small
+					}
+					navy = {
+						large = GFX_portrait_HUN_dezso_laszlo
+						small = GFX_portrait_HUN_dezso_laszlo_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_HUN_dezso_laszlo
+					}
+					army = {
+						small = GFX_idea_HUN_dezso_laszlo
+					}
+					navy = {
+						small = GFX_idea_HUN_dezso_laszlo
+					}
+				}
+			}
+
+			973 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = YFA }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = HUN_laszlo_rajk
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HUN_laszlo_rajk
+				}
+				army = {
+					small = GFX_idea_HUN_laszlo_rajk
+				}
+				navy = {
+					small = GFX_idea_HUN_laszlo_rajk
+				}
+			}
+
+			974 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_name = HUN_janos_kadar
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_HUN_janos_kadar_small
+					}
+					army = {
+						small = GFX_portrait_HUN_janos_kadar_small
+					}
+					navy = {
+						small = GFX_portrait_HUN_janos_kadar_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_communist_revolutionary_western_european_2d
+					}
+					army = {
+						small = GFX_idea_generic_communist_revolutionary_western_european_2d
+					}
+					navy = {
+						small = GFX_idea_generic_communist_revolutionary_western_european_2d
+					}
+				}
+			}
+
+			974 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = financial_expert
+			}
+
+			set_character_name = HUN_sandor_garbai
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_HUN_sandor_garbai_small
+					}
+					army = {
+						small = GFX_portrait_HUN_sandor_garbai_small
+					}
+					navy = {
+						small = GFX_portrait_HUN_sandor_garbai_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_communist_revolutionary_southamerican_2d
+					}
+					army = {
+						small = GFX_idea_generic_communist_revolutionary_southamerican_2d
+					}
+					navy = {
+						small = GFX_idea_generic_communist_revolutionary_southamerican_2d
+					}
+				}
+			}
+
+			974 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = HUN_jozsef_kelen
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_HUN_jozsef_kelen_small
+					}
+					army = {
+						small = GFX_portrait_HUN_jozsef_kelen_small
+					}
+					navy = {
+						small = GFX_portrait_HUN_jozsef_kelen_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_europe_generic_communism_1_small
+					}
+					army = {
+						small = GFX_portrait_europe_generic_communism_1_small
+					}
+					navy = {
+						small = GFX_portrait_europe_generic_communism_1_small
+					}
+				}
+			}
+
+			974 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = YFS }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = staunch_monarchist
+			}
+
+			set_character_name = HUN_gusztav_gratz
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HUN_gusztav_gratz
+				}
+				army = {
+					small = GFX_idea_HUN_gusztav_gratz
+				}
+				navy = {
+					small = GFX_idea_HUN_gusztav_gratz
+				}
+			}
+
+			975 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = HUN_istvan_friedrich
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_HUN_istvan_friedrich_small
+					}
+					army = {
+						small = GFX_portrait_HUN_istvan_friedrich_small
+					}
+					navy = {
+						small = GFX_portrait_HUN_istvan_friedrich_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_europe_generic_democratic_1_small
+					}
+					army = {
+						small = GFX_portrait_europe_generic_democratic_1_small
+					}
+					navy = {
+						small = GFX_portrait_europe_generic_democratic_1_small
+					}
+				}
+			}
+
+			973 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {

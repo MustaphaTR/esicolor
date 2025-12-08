@@ -9335,6 +9335,101 @@ randomise_military_advisor_levels = {
 }
 
 adjust_named_advisor_traits = {
+	43 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Gyula Gömbös de Jákfa
+				limit = { has_trait = fascist_demagogue }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = fascist_demagogue
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = HUN_fascist_prime_minister
+				}
+			}
+			if = { # Magdolna Purgly
+				limit = { has_trait = silent_workhorse }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = silent_workhorse
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = HUN_her_serene_highness
+				}
+			}
+			if = { # Miklós Horthy Jr.
+				limit = { has_trait = editor }
+
+				set_character_name = HUN_miklos_horthy_jr
+				remove_trait = {
+					slot = political_advisor
+					trait = editor
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = modernizer_and_diplomat
+				}
+
+				if = {
+					limit = { has_dlc = "Gotterdammerung" }
+
+					set_portraits = {
+						civilian = {
+							small = GFX_portrait_HUN_miklos_horthy_jr_small
+						}
+						army = {
+							small = GFX_portrait_HUN_miklos_horthy_jr_small
+						}
+						navy = {
+							small = GFX_portrait_HUN_miklos_horthy_jr_small
+						}
+					}
+				}
+				else = {
+					set_portraits = {
+						civilian = {
+							small = GFX_portrait_europe_generic_fascism_3_small
+						}
+						army = {
+							small = GFX_portrait_europe_generic_fascism_3_small
+						}
+						navy = {
+							small = GFX_portrait_europe_generic_fascism_3_small
+						}
+					}
+				}
+			}
+			if = { # Kálmán Kánya
+				limit = { has_trait = compassionate_gentleman }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = compassionate_gentleman
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = HUN_irredentist_foreign_minister
+				}
+			}
+			if = { # Kálmán Kánya
+				limit = { has_trait = smooth_talking_charmer }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = smooth_talking_charmer
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = HUN_moderate_authoritarian
+				}
+			}
+		}
+	}
 	45 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -9392,9 +9487,71 @@ adjust_named_advisor_traits = {
 			if = { # Ernst Thälmann
 				limit = { has_trait = communist_revolutionary }
 
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
 				add_trait = {
 					slot = political_advisor
-					trait = GER_proletarian_leader_no_ideology
+					trait = GER_proletarian_leader
+				}
+			}
+		}
+	}
+	154 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Imre Nagy
+				limit = { has_trait = communist_revolutionary }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = HUN_internationalist_marxist
+				}
+			}
+			if = { # Ernő Gerő
+				limit = { has_trait = head_of_intelligence }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = head_of_intelligence
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = HUN_stalinist_agent
+				}
+			}
+		}
+	}
+	155 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # István Bethlen
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = HUN_popular_liberal
+				}
+			}
+			if = { # Jusztinián Serédi
+				limit = { has_trait = silent_workhorse }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = silent_workhorse
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = HUN_archbishop_of_esztergom
 				}
 			}
 		}
@@ -9405,9 +9562,13 @@ adjust_named_advisor_traits = {
 			if = { # Xenophon Giosmas
 				limit = { has_trait = fascist_demagogue }
 
+				remove_trait = {
+					slot = political_advisor
+					trait = fascist_demagogue
+				}
 				add_trait = {
 					slot = political_advisor
-					trait = national_socialist_paramilitarist_no_ideology
+					trait = national_socialist_paramilitarist
 				}
 			}
 		}
@@ -9418,9 +9579,13 @@ adjust_named_advisor_traits = {
 			if = { # Dimitris Glinos
 				limit = { has_trait = communist_revolutionary }
 
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
 				add_trait = {
 					slot = political_advisor
-					trait = marxist_academic_no_ideology
+					trait = marxist_academic
 				}
 			}
 		}
@@ -9483,11 +9648,7 @@ adjust_named_advisor_traits = {
 				}
 				add_trait = {
 					slot = political_advisor
-					trait = fascist_demagogue
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = nazi_sympathizer_no_ideology
+					trait = nazi_sympathizer
 				}
 			}
 			if = { # Aleksandar Tsankov
@@ -9510,9 +9671,13 @@ adjust_named_advisor_traits = {
 			if = { # Said-i Nursî
 				limit = { has_trait = staunch_monarchist }
 
+				remove_trait = {
+					slot = political_advisor
+					trait = staunch_monarchist
+				}
 				add_trait = {
 					slot = political_advisor
-					trait = grand_vizier_nursi_no_ideology
+					trait = grand_vizier_nursi
 				}
 			}
 		}
@@ -9529,11 +9694,7 @@ adjust_named_advisor_traits = {
 				}
 				add_trait = {
 					slot = political_advisor
-					trait = communist_revolutionary
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = revolutionary_author_no_ideology
+					trait = revolutionary_author
 				}
 			}
 		}
@@ -9612,9 +9773,13 @@ adjust_named_advisor_traits = {
 			if = { # Dimitrije Ljotić
 				limit = { has_trait = fascist_demagogue }
 
+				remove_trait = {
+					slot = political_advisor
+					trait = fascist_demagogue
+				}
 				add_trait = {
 					slot = political_advisor
-					trait = harsh_propagandist_no_ideology
+					trait = harsh_propagandist
 				}
 			}
 		}
@@ -9631,11 +9796,7 @@ adjust_named_advisor_traits = {
 				}
 				add_trait = {
 					slot = political_advisor
-					trait = fascist_demagogue
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = avid_turanist_no_ideology
+					trait = avid_turanist
 				}
 			}
 		}
@@ -9675,9 +9836,13 @@ adjust_named_advisor_traits = {
 			if = { # Milovan Djilas
 				limit = { has_trait = democratic_reformer }
 
+				remove_trait = {
+					slot = political_advisor
+					trait = democratic_reformer
+				}
 				add_trait = {
 					slot = political_advisor
-					trait = democratic_firebrand_no_ideology
+					trait = democratic_firebrand
 				}
 			}
 		}
@@ -9688,9 +9853,83 @@ adjust_named_advisor_traits = {
 			if = { # Dimitrije Ljotić
 				limit = { has_trait = communist_revolutionary }
 
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
 				add_trait = {
 					slot = political_advisor
-					trait = communist_orator_no_ideology
+					trait = communist_orator
+				}
+			}
+		}
+	}
+	973 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Fidél Pálffy
+				limit = { has_trait = fascist_demagogue }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = fascist_demagogue
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = nazi_sympathizer
+				}
+			}
+		}
+	}
+	974 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # László Rajk
+				limit = { has_trait = communist_revolutionary }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = marxist_philosopher
+				}
+			}
+			if = { # Sándor Garbai
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = HUN_goulash_communist
+				}
+			}
+			if = { # Sándor Garbai
+				limit = { has_trait = financial_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = financial_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = socialist_economist
+				}
+			}
+			if = { # József Kelen
+				limit = { has_trait = captain_of_industry }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = captain_of_industry
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = peoples_commisar_of_heavy_industries
 				}
 			}
 		}

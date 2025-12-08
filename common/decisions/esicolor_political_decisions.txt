@@ -10,9 +10,7 @@ neutrality_on_the_rise = {
 
 		visible = {
 			NOT = { has_country_flag = preparation_for_fascist_civil_war }
-			OR = {
-				has_idea_with_trait = staunch_monarchist
-			}
+			has_advisor_with_non_aligned_trait = yes
 			NOT = { has_government = neutrality }
 		}
 		
@@ -38,9 +36,7 @@ neutrality_on_the_rise = {
 				has_country_flag = preparation_for_neutrality_civil_war
 				has_country_flag = open_up_political_discourse_neutrality
 			}
-			OR = {
-				has_idea_with_trait = staunch_monarchist
-			}
+			has_advisor_with_non_aligned_trait = yes
 			NOT = { has_government = neutrality }
 		}
 
@@ -73,9 +69,7 @@ neutrality_on_the_rise = {
 
 		visible = {
 			has_country_flag = preparation_for_neutrality_civil_war
-			OR = {
-				has_idea_with_trait = staunch_monarchist
-			}
+			has_advisor_with_non_aligned_trait = yes
 			NOT = { has_government = neutrality }
 		}
 
@@ -130,9 +124,7 @@ neutrality_on_the_rise = {
 
 		visible = {
 			has_country_flag = preparation_for_neutrality_civil_war
-			OR = {
-				has_idea_with_trait = staunch_monarchist
-			}
+			has_advisor_with_non_aligned_trait = yes
 			NOT = { has_government = neutrality }
 			any_army_leader = {
 				is_field_marshal = no
@@ -163,9 +155,7 @@ neutrality_on_the_rise = {
 
 		visible = {
 			has_country_flag = preparation_for_neutrality_civil_war
-			OR = {
-				has_idea_with_trait = staunch_monarchist
-			}
+			has_advisor_with_non_aligned_trait = yes
 			NOT = { has_government = neutrality }
 			any_army_leader = {
 				NOT = { has_trait = hidden_sympathies }
@@ -202,9 +192,7 @@ neutrality_on_the_rise = {
 		visible = {
 			has_country_flag = preparation_for_neutrality_civil_war
 			has_country_flag = military_support_for_neutrality_civil_war
-			OR = {
-				has_idea_with_trait = staunch_monarchist
-			}
+			has_advisor_with_non_aligned_trait = yes
 			NOT = { has_government = neutrality }
 		}
 	
@@ -237,9 +225,7 @@ neutrality_on_the_rise = {
 
 		visible = {
 			has_country_flag = preparation_for_neutrality_civil_war
-			OR = {
-				has_idea_with_trait = staunch_monarchist
-			}
+			has_advisor_with_non_aligned_trait = yes
 			NOT = { has_government = neutrality }
 		}
 	
@@ -269,9 +255,7 @@ neutrality_on_the_rise = {
 
 		visible = {
 			has_country_flag = preparation_for_neutrality_civil_war
-			OR = {
-				has_idea_with_trait = staunch_monarchist
-			}
+			has_advisor_with_non_aligned_trait = yes
 			NOT = { has_government = neutrality }
 			check_variable = { num_owned_states = 1 }
 		}
@@ -302,9 +286,7 @@ neutrality_on_the_rise = {
 
 		visible = {
 			has_country_flag = preparation_for_neutrality_civil_war
-			OR = {
-				has_idea_with_trait = staunch_monarchist
-			}
+			has_advisor_with_non_aligned_trait = yes
 			NOT = { has_government = neutrality }
 			check_variable = { num_owned_states > 1 }
 		}
@@ -407,7 +389,6 @@ neutrality_on_the_rise = {
 	}
 
 	open_up_political_discourse_neutrality = {
-
 		icon = press_censorship
 
 		available = {
@@ -418,9 +399,7 @@ neutrality_on_the_rise = {
 		}
 
 		visible = {
-			OR = {
-				has_idea_with_trait = staunch_monarchist
-			}
+			has_advisor_with_non_aligned_trait = yes
 			NOT = { has_country_flag = open_up_political_discourse_neutrality }
 			NOT = { has_government = neutrality }
 		}
@@ -443,7 +422,6 @@ neutrality_on_the_rise = {
 	}
 	
 	discredit_government_neutrality = {
-
 		icon = press_censorship
 
 		available = {
@@ -451,9 +429,7 @@ neutrality_on_the_rise = {
 			democratic < 0.8
 			communism < 0.8
 			neutrality < 0.8
-			OR = {
-				has_idea_with_trait = staunch_monarchist
-			}
+			has_advisor_with_non_aligned_trait = yes
 		}
 
 		visible = {
@@ -506,7 +482,6 @@ neutrality_on_the_rise = {
 	}
 	
 	hold_the_neutrality_national_referendum = {
-
 		icon = press_censorship
 
 		available = {
@@ -519,9 +494,8 @@ neutrality_on_the_rise = {
 				neutrality > 0.6
 				has_country_flag = open_up_political_discourse_neutrality
 			}
-			check_has_focus_tree_to_switch_to_fascism = yes
 		}
-		
+
 		remove_trigger = {
 			has_government = neutrality
 		}

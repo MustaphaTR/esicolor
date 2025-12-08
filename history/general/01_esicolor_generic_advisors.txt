@@ -770,7 +770,17 @@ every_possible_country = {
 						}
 						available = {
 							hidden_trigger = {
-								NOT = { has_country_flag = smooth_talking_charmer } }
+								NOT = { has_country_flag = smooth_talking_charmer_disabled }
+								OR = {
+									NOT = { has_global_flag = custom_advisors_only }
+									has_character_flag = special_advisor
+								}
+							}
+							if = {
+								limit = { has_global_flag = custom_advisors_only_core }
+
+								[STATE] = { is_core_of =  ROOT }
+							}
 						}
 
 						ai_will_do = {
