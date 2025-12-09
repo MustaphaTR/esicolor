@@ -859,6 +859,145 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = OOY }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_defensive_1
+					has_trait = army_chief_defensive_2
+					has_trait = army_chief_defensive_3
+				}
+			}
+
+			set_character_name = CZE_ludvik_krejci
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_ludvik_krejci
+				}
+				army = {
+					small = GFX_idea_CZE_ludvik_krejci
+				}
+				navy = {
+					small = GFX_idea_CZE_ludvik_krejci
+				}
+			}
+
+			9 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_chief_ground_support_1
+					has_trait = air_chief_ground_support_2
+					has_trait = air_chief_ground_support_3
+				}
+			}
+
+			set_character_name = CZE_jaroslav_fajfr
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_jaroslav_fajfr
+				}
+				army = {
+					small = GFX_idea_CZE_jaroslav_fajfr
+				}
+				navy = {
+					small = GFX_idea_CZE_jaroslav_fajfr
+				}
+			}
+
+			9 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_logistics_1
+					has_trait = army_logistics_2
+					has_trait = army_logistics_3
+				}
+			}
+
+			set_character_name = CZE_frantisek_havel
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_frantisek_havel
+				}
+				army = {
+					small = GFX_idea_CZE_frantisek_havel
+				}
+				navy = {
+					small = GFX_idea_CZE_frantisek_havel
+				}
+			}
+
+			9 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_air_superiority_1
+					has_trait = air_air_superiority_2
+					has_trait = air_air_superiority_3
+				}
+			}
+
+			set_character_name = CZE_josef_frantisek
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_josef_frantisek
+				}
+				army = {
+					small = GFX_idea_CZE_josef_frantisek
+				}
+				navy = {
+					small = GFX_idea_CZE_josef_frantisek
+				}
+			}
+
+			9 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_air_combat_training_1
+					has_trait = air_air_combat_training_2
+					has_trait = air_air_combat_training_3
+				}
+			}
+
+			set_character_name = CZE_karel_kuttelwascher
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_karel_kuttelwascher
+				}
+				army = {
+					small = GFX_idea_CZE_karel_kuttelwascher
+				}
+				navy = {
+					small = GFX_idea_CZE_karel_kuttelwascher
+				}
+			}
+
+			9 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = OAE }
 
 		random_character = {
@@ -1492,6 +1631,341 @@ handle_special_advisors = {
 			}
 
 			69 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OFO }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = silent_workhorse
+			}
+
+			set_character_name = SLO_karol_sidor
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_political_advisor_europe_1
+				}
+				army = {
+					small = GFX_idea_generic_political_advisor_europe_1
+				}
+				navy = {
+					small = GFX_idea_generic_political_advisor_europe_1
+				}
+			}
+
+			70 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = prince_of_terror
+			}
+
+			set_character_name = CZE_vojtech_tuka
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_vojtech_tuka
+				}
+				army = {
+					small = GFX_idea_CZE_vojtech_tuka
+				}
+				navy = {
+					small = GFX_idea_CZE_vojtech_tuka
+				}
+			}
+
+			70 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = backroom_backstabber
+			}
+
+			set_character_name = SLO_stefan_tiso
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_political_advisor_europe_3
+				}
+				army = {
+					small = GFX_idea_generic_political_advisor_europe_3
+				}
+				navy = {
+					small = GFX_idea_generic_political_advisor_europe_3
+				}
+			}
+
+			70 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = quartermaster_general
+			}
+
+			set_character_name = CZE_ferdinand_catlos
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_ferdinand_catlos
+				}
+				army = {
+					small = GFX_idea_CZE_ferdinand_catlos
+				}
+				navy = {
+					small = GFX_idea_CZE_ferdinand_catlos
+				}
+			}
+
+			70 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_organizational_1
+					has_trait = army_chief_organizational_2
+					has_trait = army_chief_organizational_3
+				}
+			}
+
+			set_character_name = SLO_ferdinand_catlos
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_army_europe_2
+				}
+				army = {
+					small = GFX_idea_generic_army_europe_2
+				}
+				navy = {
+					small = GFX_idea_generic_army_europe_2
+				}
+			}
+
+			70 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = navy_chief_reform_1
+					has_trait = navy_chief_reform_2
+					has_trait = navy_chief_reform_3
+				}
+			}
+
+			set_character_name = SLO_jozef_turanec
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_navy_europe_1
+				}
+				army = {
+					small = GFX_idea_generic_navy_europe_1
+				}
+				navy = {
+					small = GFX_idea_generic_navy_europe_1
+				}
+			}
+
+			70 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_chief_ground_support_1
+					has_trait = air_chief_ground_support_2
+					has_trait = air_chief_ground_support_3
+				}
+			}
+
+			set_character_name = SLO_anton_pulanick
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_air_europe_2
+				}
+				army = {
+					small = GFX_idea_generic_air_europe_2
+				}
+				navy = {
+					small = GFX_idea_generic_air_europe_2
+				}
+			}
+
+			70 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OFI }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = democratic_reformer
+			}
+
+			set_character_name = CZE_stefan_osusky
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_stefan_osusky
+				}
+				army = {
+					small = GFX_idea_CZE_stefan_osusky
+				}
+				navy = {
+					small = GFX_idea_CZE_stefan_osusky
+				}
+			}
+
+			71 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = compassionate_gentleman
+			}
+
+			set_character_name = SLO_janko_jesensky
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_political_advisor_europe_6
+				}
+				army = {
+					small = GFX_idea_generic_political_advisor_europe_6
+				}
+				navy = {
+					small = GFX_idea_generic_political_advisor_europe_6
+				}
+			}
+
+			71 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_offensive_1
+					has_trait = army_chief_offensive_2
+					has_trait = army_chief_offensive_3
+				}
+			}
+
+			set_character_name = CZE_rudolf_viest
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_rudolf_viest
+				}
+				army = {
+					small = GFX_idea_CZE_rudolf_viest
+				}
+				navy = {
+					small = GFX_idea_CZE_rudolf_viest
+				}
+			}
+
+			71 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_regrouping_1
+					has_trait = army_regrouping_2
+					has_trait = army_regrouping_3
+				}
+			}
+
+			set_character_name = CZE_jan_golian
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_jan_golian
+				}
+				army = {
+					small = GFX_idea_CZE_jan_golian
+				}
+				navy = {
+					small = GFX_idea_CZE_jan_golian
+				}
+			}
+
+			71 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OFS }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = CZE_gustav_husak
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_gustav_husak
+				}
+				army = {
+					small = GFX_idea_CZE_gustav_husak
+				}
+				navy = {
+					small = GFX_idea_CZE_gustav_husak
+				}
+			}
+
+			75 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_morale_1
+					has_trait = army_chief_morale_2
+					has_trait = army_chief_morale_3
+				}
+			}
+
+			set_character_name = CZE_ludvik_svoboda
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_ludvik_svoboda
+				}
+				army = {
+					small = GFX_idea_CZE_ludvik_svoboda
+				}
+				navy = {
+					small = GFX_idea_CZE_ludvik_svoboda
+				}
+			}
+
+			75 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -2239,6 +2713,87 @@ handle_special_advisors = {
 			}
 
 			155 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = ILE }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = navy_chief_maneuver_1
+					has_trait = navy_chief_maneuver_2
+					has_trait = navy_chief_maneuver_3
+				}
+			}
+
+			set_character_name = CRO_duro_jakcin
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_CRO_duro_jakcin
+						small = GFX_portrait_CRO_duro_jakcin_small
+					}
+					army = {
+						large = GFX_portrait_CRO_duro_jakcin
+						small = GFX_portrait_CRO_duro_jakcin_small
+					}
+					navy = {
+						large = GFX_portrait_CRO_duro_jakcin
+						small = GFX_portrait_CRO_duro_jakcin_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_europe_generic_navy_12_small
+					}
+					army = {
+						small = GFX_portrait_europe_generic_navy_12_small
+					}
+					navy = {
+						small = GFX_portrait_europe_generic_navy_12_small
+					}
+				}
+			}
+
+			163 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_regrouping_1
+					has_trait = army_regrouping_2
+					has_trait = army_regrouping_3
+				}
+			}
+
+			set_character_name = CRO_slavko_kvaternik
+			set_character_flag = special_advisor
+
+			set_portraits = { # Generic portraits.
+				civilian = {
+					large = GFX_portrait_CRO_slavko_kvaternik
+					small = GFX_portrait_CRO_slavko_kvaternik_small
+				}
+				army = {
+					large = GFX_portrait_CRO_slavko_kvaternik
+					small = GFX_portrait_CRO_slavko_kvaternik_small
+				}
+				navy = {
+					large = GFX_portrait_CRO_slavko_kvaternik
+					small = GFX_portrait_CRO_slavko_kvaternik_small
+				}
+			}
+
+			163 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -3122,6 +3677,60 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = LLA }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_name = SLO_frano_kral
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_political_advisor_europe_5
+				}
+				army = {
+					small = GFX_idea_generic_political_advisor_europe_5
+				}
+				navy = {
+					small = GFX_idea_generic_political_advisor_europe_5
+				}
+			}
+
+			664 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_bomber_interception_1
+					has_trait = air_bomber_interception_2
+					has_trait = air_bomber_interception_3
+				}
+			}
+
+			set_character_name = SLO_cyril_kuchta
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_air_europe_1
+				}
+				army = {
+					small = GFX_idea_generic_air_europe_1
+				}
+				navy = {
+					small = GFX_idea_generic_air_europe_1
+				}
+			}
+
+			664 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = LFS }
 
 		random_character = {
@@ -3774,6 +4383,37 @@ handle_special_advisors = {
 			}
 
 			943 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = YFZ }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_chief_safety_1
+					has_trait = air_chief_safety_2
+					has_trait = air_chief_safety_3
+				}
+			}
+
+			set_character_name = CZE_karel_janousek
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_karel_janousek
+				}
+				army = {
+					small = GFX_idea_CZE_karel_janousek
+				}
+				navy = {
+					small = GFX_idea_CZE_karel_janousek
+				}
+			}
+
+			972 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
