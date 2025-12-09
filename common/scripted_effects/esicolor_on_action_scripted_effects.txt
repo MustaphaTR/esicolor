@@ -475,6 +475,54 @@ handle_special_generals = {
 			}
 		}
 	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = ISE_alfred_klahr ruling_only = yes }
+
+				NOT = { has_global_flag = julius_deutsch_created }
+			}
+		}
+
+		set_global_flag = julius_deutsch_created
+		set_character_name = AUS_julius_deutsch
+		set_character_flag = special_general
+
+		if = {
+			limit = { has_dlc = "Gotterdammerung" }
+
+			set_portraits = {
+				civilian = {
+					large=GFX_portrait_AUS_julius_deutsch
+					small=GFX_portrait_AUS_julius_deutsch_small
+				}
+				army = {
+					large=GFX_portrait_AUS_julius_deutsch
+					small=GFX_portrait_AUS_julius_deutsch_small
+				}
+				navy = {
+					large=GFX_portrait_AUS_julius_deutsch
+					small=GFX_portrait_AUS_julius_deutsch_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large=GFX_Portrait_Europe_Generic_land_5
+					small=GFX_Portrait_Europe_Generic_land_5_small
+				}
+				army = {
+					large=GFX_Portrait_Europe_Generic_land_5
+					small=GFX_Portrait_Europe_Generic_land_5_small
+				}
+				navy = {
+					large=GFX_Portrait_Europe_Generic_land_5
+					small=GFX_Portrait_Europe_Generic_land_5_small
+				}
+			}
+		}
+	}
 }
 
 handle_special_admirals = {
