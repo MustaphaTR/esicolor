@@ -9335,6 +9335,23 @@ randomise_military_advisor_levels = {
 }
 
 adjust_named_advisor_traits = {
+	4 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Gyula Gömbös de Jákfa
+				limit = { has_trait = propaganda_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = propaganda_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = AUS_prince_of_starhemberg
+				}
+			}
+		}
+	}
 	43 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -9494,6 +9511,52 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = GER_proletarian_leader
+				}
+			}
+		}
+	}
+	152 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Heimito von Doderer
+				limit = { has_trait = editor }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = editor
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = AUS_fascist_writer
+				}
+			}
+		}
+	}
+	153 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Heimito von Doderer
+				limit = { has_trait = communist_revolutionary }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = AUS_communist_revolutionary
+				}
+			}
+			if = { # Otto Bauer
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = AUS_the_father_of_austromarxism
 				}
 			}
 		}
@@ -9847,6 +9910,23 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	848 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Elizabet von Gutmann
+				limit = { has_trait = captain_of_industry }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = captain_of_industry
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = AUS_resourceful_princess
+				}
+			}
+		}
+	}
 	853 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -9930,6 +10010,67 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = peoples_commisar_of_heavy_industries
+				}
+			}
+		}
+	}
+	975 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Ludwig von Mises
+				limit = { has_trait = financial_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = financial_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = AUS_treasurer_of_the_monarchy
+				}
+			}
+		}
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Maximilian Ronge
+				limit = { has_trait = head_of_intelligence }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = head_of_intelligence
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = AUS_veteran_head_of_agency
+				}
+			}
+		}
+	}
+	976 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Marianne Pollak
+				limit = { has_trait = communist_revolutionary }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = ARG_socialist_feminist
+				}
+			}
+			if = { # Bruno Kreisky
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = AUS_meticulous_lawyer
 				}
 			}
 		}

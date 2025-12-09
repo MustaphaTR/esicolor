@@ -722,6 +722,93 @@ handle_special_admirals = {
 
 handle_special_advisors = {
 	if = {
+		limit = { original_tag = OOA }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = propaganda_expert
+			}
+
+			set_character_name = AUS_ernst_rudiger_starhemberg
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						large = "GFX_portrait_AUS_ernst_rudiger_starhemberg"
+						small = "GFX_portrait_AUS_ernst_rudiger_starhemberg_civilian_small"
+					}
+					army = {
+						large = "GFX_portrait_AUS_ernst_rudiger_starhemberg"
+						small = "GFX_portrait_AUS_ernst_rudiger_starhemberg_military_small"
+					}
+					navy = {
+						large = "GFX_portrait_AUS_ernst_rudiger_starhemberg"
+						small = "GFX_portrait_AUS_ernst_rudiger_starhemberg_military_small"
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Germany_Generic_land_9_small
+					}
+					army = {
+						small = GFX_Portrait_Germany_Generic_land_9_small
+					}
+					navy = {
+						small = GFX_Portrait_Germany_Generic_land_9_small
+					}
+				}
+			}
+
+			4 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = AUS_julius_raab
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = "GFX_portrait_AUS_julius_raab_small"
+					}
+					army = {
+						small = "GFX_portrait_AUS_julius_raab_small"
+					}
+					navy = {
+						small = "GFX_portrait_AUS_julius_raab_small"
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+				}
+			}
+
+			4 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = OOB }
 
 		random_character = {
@@ -1652,6 +1739,315 @@ handle_special_advisors = {
 			}
 
 			109 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = ISZ }
+
+		# random_character = {
+		#	limit = {
+		#		is_advisor = yes
+		#		has_trait = fascist_demagogue
+		#	}
+		#
+		#	set_character_name = AUS_franz_winkler
+		#	set_character_flag = special_advisor
+		#
+		#	if = {
+		#		limit = { has_dlc = "Gotterdammerung" }
+		#
+		#		set_portraits = {
+		#			civilian = {
+		#				small = GFX_portrait_AUS_franz_winkler_small
+		#			}
+		#			army = {
+		#				small = GFX_portrait_AUS_franz_winkler_small
+		#			}
+		#			navy = {
+		#				small = GFX_portrait_AUS_franz_winkler_small
+		#			}
+		#		}
+		#	}
+		#	else = {
+		#		set_portraits = {
+		#			civilian = {
+		#				small = GFX_Portrait_Europe_Generic_5_small
+		#			}
+		#			army = {
+		#				small = GFX_Portrait_Europe_Generic_5_small
+		#			}
+		#			navy = {
+		#				small = GFX_Portrait_Europe_Generic_5_small
+		#			}
+		#		}
+		#	}
+		#
+		#	152 = { add_to_array = { state_advisors = PREV } }
+		#}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = editor
+			}
+
+			set_character_name = AUS_heimito_von_doderer
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_AUS_heimito_von_doderer_small
+					}
+					army = {
+						small = GFX_portrait_AUS_heimito_von_doderer_small
+					}
+					navy = {
+						small = GFX_portrait_AUS_heimito_von_doderer_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Germany_Generic_2_small
+					}
+					army = {
+						small = GFX_Portrait_Germany_Generic_2_small
+					}
+					navy = {
+						small = GFX_Portrait_Germany_Generic_2_small
+					}
+				}
+			}
+
+			152 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				if = {
+					limit = { has_dlc = "La Resistance" }
+					has_trait = head_of_intelligence
+				}
+				else = {
+					OR = {
+						has_trait = army_chief_defensive_1
+						has_trait = army_chief_defensive_2
+						has_trait = army_chief_defensive_3
+					}
+				}
+			}
+
+			set_character_name = AUS_ernst_kaltenbrunner
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_AUS_ernst_kaltenbrunner_small
+					}
+					army = {
+						small = GFX_portrait_AUS_ernst_kaltenbrunner_small
+					}
+					navy = {
+						small = GFX_portrait_AUS_ernst_kaltenbrunner_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_europe_generic_8_small
+					}
+					army = {
+						small = GFX_portrait_europe_generic_8_small
+					}
+					navy = {
+						small = GFX_portrait_europe_generic_8_small
+					}
+				}
+			}
+
+			152 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_chief_reform_1
+					has_trait = air_chief_reform_2
+					has_trait = air_chief_reform_3
+				}
+			}
+
+			set_character_name = AUS_alexander_lohr
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_AUS_alexander_lohr_small
+					}
+					army = {
+						small = GFX_portrait_AUS_alexander_lohr_small
+					}
+					navy = {
+						small = GFX_portrait_AUS_alexander_lohr_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_air_europe_1
+					}
+					army = {
+						small = GFX_idea_generic_air_europe_1
+					}
+					navy = {
+						small = GFX_idea_generic_air_europe_1
+					}
+				}
+			}
+
+			152 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_commando_1
+					has_trait = army_commando_2
+					has_trait = army_commando_3
+				}
+			}
+
+			set_character_name = AUS_eugen_beyer
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						large = "GFX_portrait_AUS_eugen_beyer"
+						small = "GFX_portrait_AUS_eugen_beyer_small"
+					}
+					army = {
+						large = "GFX_portrait_AUS_eugen_beyer"
+						small = "GFX_portrait_AUS_eugen_beyer_small"
+					}
+					navy = {
+						large = "GFX_portrait_AUS_eugen_beyer"
+						small = "GFX_portrait_AUS_eugen_beyer_small"
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_army_europe_5
+					}
+					army = {
+						small = GFX_idea_generic_army_europe_5
+					}
+					navy = {
+						small = GFX_idea_generic_army_europe_5
+					}
+				}
+			}
+
+			152 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = ISE }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = AUS_franz_koritschoner
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_AUS_franz_koritschoner_small
+					}
+					army = {
+						small = GFX_portrait_AUS_franz_koritschoner_small
+					}
+					navy = {
+						small = GFX_portrait_AUS_franz_koritschoner_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_europe_generic_4_small
+					}
+					army = {
+						small = GFX_portrait_europe_generic_4_small
+					}
+					navy = {
+						small = GFX_portrait_europe_generic_4_small
+					}
+				}
+			}
+
+			153 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_name = AUS_otto_bauer
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_AUS_otto_bauer_small
+					}
+					army = {
+						small = GFX_portrait_AUS_otto_bauer_small
+					}
+					navy = {
+						small = GFX_portrait_AUS_otto_bauer_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_europe_generic_6_small
+					}
+					army = {
+						small = GFX_portrait_europe_generic_6_small
+					}
+					navy = {
+						small = GFX_portrait_europe_generic_6_small
+					}
+				}
+			}
+
+			153 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -3240,6 +3636,50 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = BAB }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = AUS_elizabet_von_gutmann
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_AUS_elisabeth_von_gutmann_small
+					}
+					army = {
+						small = GFX_portrait_AUS_elisabeth_von_gutmann_small
+					}
+					navy = {
+						small = GFX_portrait_AUS_elisabeth_von_gutmann_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_female_europe
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_female_europe
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_female_europe
+					}
+				}
+			}
+
+			848 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = BSE }
 
 		random_character = {
@@ -3673,6 +4113,46 @@ handle_special_advisors = {
 		random_character = {
 			limit = {
 				is_advisor = yes
+				has_trait = financial_expert
+			}
+
+			set_character_name = AUS_ludwig_von_mises
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_AUS_ludwig_von_mises_small
+					}
+					army = {
+						small = GFX_portrait_AUS_ludwig_von_mises_small
+					}
+					navy = {
+						small = GFX_portrait_AUS_ludwig_von_mises_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+					army = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+					navy = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+				}
+			}
+
+			975 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
 				has_trait = captain_of_industry
 			}
 
@@ -3708,7 +4188,262 @@ handle_special_advisors = {
 				}
 			}
 
-			973 = { add_to_array = { state_advisors = PREV } }
+			975 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = code_breaker
+			}
+
+			set_character_name = AUS_maximilian_ronge
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_AUS_maximilian_ronge_small
+					}
+					army = {
+						small = GFX_portrait_AUS_maximilian_ronge_small
+					}
+					navy = {
+						small = GFX_portrait_AUS_maximilian_ronge_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+					army = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+					navy = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+				}
+			}
+
+			975 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_air_combat_training_1
+					has_trait = air_air_combat_training_2
+					has_trait = air_air_combat_training_3
+				}
+			}
+
+			set_character_name = AUS_godwin_von_brumowski
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_AUS_godwin_von_brumowski_small
+					}
+					army = {
+						small = GFX_portrait_AUS_godwin_von_brumowski_small
+					}
+					navy = {
+						small = GFX_portrait_AUS_godwin_von_brumowski_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Europe_Generic_land_3_small
+					}
+					army = {
+						small = GFX_Portrait_Europe_Generic_land_3_small
+					}
+					navy = {
+						small = GFX_Portrait_Europe_Generic_land_3_small
+					}
+				}
+			}
+
+			975 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = YFL }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = AUS_marianne_pollak
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_AUS_marianne_pollak_small
+					}
+					army = {
+						small = GFX_portrait_AUS_marianne_pollak_small
+					}
+					navy = {
+						small = GFX_portrait_AUS_marianne_pollak_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_female_europe
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_female_europe
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_female_europe
+					}
+				}
+			}
+
+			976 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_name = AUS_bruno_kreisky
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_AUS_bruno_kreisky_small
+					}
+					army = {
+						small = GFX_portrait_AUS_bruno_kreisky_small
+					}
+					navy = {
+						small = GFX_portrait_AUS_bruno_kreisky_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+				}
+			}
+
+			976 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = silent_workhorse
+			}
+
+			set_character_name = AUS_adolf_scharf
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_AUS_adolf_scharf_small
+					}
+					army = {
+						small = GFX_portrait_AUS_adolf_scharf_small
+					}
+					navy = {
+						small = GFX_portrait_AUS_adolf_scharf_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_europe_generic_7_small
+					}
+					army = {
+						small = GFX_Portrait_europe_generic_7_small
+					}
+					navy = {
+						small = GFX_Portrait_europe_generic_7_small
+					}
+				}
+			}
+
+			976 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_concealment_1
+					has_trait = army_concealment_2
+					has_trait = army_concealment_3
+				}
+			}
+
+			set_character_name = AUS_theodor_korner
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						large = "GFX_portrait_AUS_theodor_korner"
+						small = "GFX_portrait_AUS_theodor_korner_small"
+					}
+					army = {
+						large = "GFX_portrait_AUS_theodor_korner"
+						small = "GFX_portrait_AUS_theodor_korner_small"
+					}
+					navy = {
+						large = "GFX_portrait_AUS_theodor_korner"
+						small = "GFX_portrait_AUS_theodor_korner_small"
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Germany_Generic_land_9_small
+					}
+					army = {
+						small = GFX_Portrait_Germany_Generic_land_9_small
+					}
+					navy = {
+						small = GFX_Portrait_Germany_Generic_land_9_small
+					}
+				}
+			}
+
+			976 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
