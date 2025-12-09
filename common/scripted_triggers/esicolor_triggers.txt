@@ -7235,54 +7235,62 @@ is_neighboring_ownership_special_case_country = {
 }
 
 has_advisor_with_communist_trait = {
-	OR = {
-		has_idea_with_trait = communist_revolutionary
-		has_idea_with_trait = ambitious_union_boss
-		has_idea_with_trait = ARG_communist_insurrectionist
-		has_idea_with_trait = communist_orator
-		has_idea_with_trait = marxist_philosopher
-		has_idea_with_trait = marxist_academic
-		has_idea_with_trait = GER_proletarian_leader
-		has_idea_with_trait = patriotic_socialist
-		has_idea_with_trait = revolutionary_author
-		has_idea_with_trait = HUN_internationalist_marxist
-		has_idea_with_trait = peoples_commisar_of_heavy_industries
-		has_idea_with_trait = ARG_socialist_feminist
-		has_idea_with_trait = AUS_communist_revolutionary
-		has_idea_with_trait = AUS_the_father_of_austromarxism
+	custom_trigger_tooltip = {
+		tooltip = has_communist_revolutionary
+
+		OR = {
+			has_idea_with_trait = communist_revolutionary
+			has_idea_with_trait = ambitious_union_boss
+			has_idea_with_trait = ARG_communist_insurrectionist
+			has_idea_with_trait = communist_orator
+			has_idea_with_trait = marxist_philosopher
+			has_idea_with_trait = marxist_academic
+			has_idea_with_trait = GER_proletarian_leader
+			has_idea_with_trait = patriotic_socialist
+			has_idea_with_trait = revolutionary_author
+			has_idea_with_trait = HUN_internationalist_marxist
+			has_idea_with_trait = ARG_socialist_feminist
+			has_idea_with_trait = AUS_communist_revolutionary
+		}
 	}
 }
 
 has_advisor_with_democratic_trait = {
-	OR = {
-		has_idea_with_trait = democratic_reformer
-		has_idea_with_trait = social_reformer
-		has_idea_with_trait = democratic_firebrand
-		has_idea_with_trait = HUN_popular_liberal
-		has_idea_with_trait = AUS_meticulous_lawyer
+	custom_trigger_tooltip = {
+		tooltip = has_democratic_reformer
+
+		OR = {
+			has_idea_with_trait = democratic_reformer
+			has_idea_with_trait = social_reformer
+			has_idea_with_trait = democratic_firebrand
+			has_idea_with_trait = HUN_popular_liberal
+		}
 	}
 }
 
 has_advisor_with_fascist_trait = {
-	OR = {
-		has_idea_with_trait = fascist_demagogue
-		has_idea_with_trait = syncretic_revanchist
-		has_idea_with_trait = GER_revolutionary_nationalist_advisor
-		has_idea_with_trait = harsh_propagandist
-		has_idea_with_trait = avid_turanist
-		has_idea_with_trait = nazi_sympathizer
-		has_idea_with_trait = national_socialist_paramilitarist
-		has_idea_with_trait = HUN_fascist_prime_minister
-		has_idea_with_trait = AUS_fascist_writer
+	custom_trigger_tooltip = {
+		tooltip = has_fascist_demagogue
+
+		OR = {
+			has_idea_with_trait = fascist_demagogue
+			has_idea_with_trait = syncretic_revanchist
+			has_idea_with_trait = GER_revolutionary_nationalist_advisor
+			has_idea_with_trait = harsh_propagandist
+			has_idea_with_trait = avid_turanist
+			has_idea_with_trait = nazi_sympathizer
+			has_idea_with_trait = national_socialist_paramilitarist
+		}
 	}
 }
 
 has_advisor_with_non_aligned_trait = {
-	OR = {
-		has_idea_with_trait = staunch_monarchist
-		has_idea_with_trait = grand_vizier_nursi
-		has_idea_with_trait = HUN_moderate_authoritarian
-		has_idea_with_trait = AUS_prince_of_starhemberg
-		has_idea_with_trait = AUS_treasurer_of_the_monarchy
+	custom_trigger_tooltip = {
+		tooltip = has_staunch_monarchist
+
+		OR = {
+			has_idea_with_trait = staunch_monarchist
+			has_idea_with_trait = grand_vizier_nursi
+		}
 	}
 }
