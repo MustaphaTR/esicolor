@@ -1207,6 +1207,7 @@ setup_gui_start_continents = {
 			OOO = {
 				transfer_state = PREV
 			}
+			if = { limit = { has_dynamic_modifier = { modifier = idea_PAR_river_navy } } remove_dynamic_modifier = { modifier = idea_PAR_river_navy } } # This increases resistance and causes Paraguay to rise up against the wasteland tag, remove it.
 		}
 		set_global_flag = south_america_removed
 	}
