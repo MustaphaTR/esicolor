@@ -2972,6 +2972,7 @@ load_continent_focus_trees = {
 				state_originally_from_KUM = yes
 				state_originally_from_HBC = yes
 				state_originally_from_CHI = yes
+				state_originally_from_FOR = yes
 				state_originally_from_PRC = yes
 			}
 		}
@@ -11909,5 +11910,1327 @@ randomise_research_slots = {
 			}
 			set_research_slots = 5
 		}
+	}
+}
+
+delete_default_template = {
+	every_country = {
+		delete_unit_template_and_units = {
+			division_template = "Infantry Brigade"
+		}
+	}
+}
+
+spawn_basgame_divisions = {
+	every_country = {
+		if = {
+			limit = { state_originally_from_AFA = yes }
+
+			load_oob = AFA_1936
+		}
+		else_if = {
+			limit = { state_originally_from_AFG = yes }
+
+			if = {
+				limit = { has_dlc = "No Step Back" }
+
+				load_oob = AFG_1936_nsb
+			}
+			else = {
+				load_oob = AFG_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_ALB = yes }
+
+			load_oob = ALB_1936
+		}
+		else_if = {
+			limit = { state_originally_from_ARG = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = ARG_1939
+			}
+			else = {
+				load_oob = ARG_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_AST = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = AST_1939
+			}
+			else = {
+				load_oob = AST_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_AUS = yes }
+
+			load_oob = AUS_ww_1936
+		}
+		else_if = {
+			limit = { state_originally_from_BEL = yes }
+
+			if = {
+				limit = { has_dlc = "La Resistance" }
+
+				if = {
+					limit = { has_dlc = "No Compromise, No Surrender" }
+
+					load_oob = BEL_WW_1936_lar_ncns
+				}
+				else = {
+					load_oob = BEL_WW_1936_lar
+				}
+			}
+			else = {
+				if = {
+					limit = { has_dlc = "No Compromise, No Surrender" }
+
+					load_oob = BEL_WW_1936_ncns
+				}
+				else = {
+					load_oob = BEL_WW_1936
+				}
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_BHU = yes }
+
+			load_oob = BHU_1936
+		}
+		else_if = {
+			limit = { state_originally_from_BOL = yes }
+
+			load_oob = BOL_1936
+		}
+		else_if = {
+			limit = { state_originally_from_BRA = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = BRA_1939
+			}
+			else = {
+				load_oob = BRA_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_BRM = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = BRM_1939
+			}
+			else = {
+				load_oob = BRM_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_BUL = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = BUL_1939_nsb
+				}
+				else = {
+					load_oob = BUL_1939
+				}
+			}
+			else = {
+				load_oob = BUL_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_CAN = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = CAN_1939
+			}
+			else = {
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = CAN_1936_nsb
+				}
+				else = {
+					load_oob = CAN_1936
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					state_originally_from_CHI = yes
+					original_tag = FAE
+				}
+			}
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = CHI_1939_sea
+			}
+			else = {
+				load_oob = CHI_1936_sea
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_CHL = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = CHL_TOA_1939
+			}
+			else = {
+				load_oob = CHL_TOA_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_COG = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = COG_1939
+			}
+			else = {
+				load_oob = COG_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_COL = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = COL_1939
+			}
+			else = {
+				load_oob = COL_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_COS = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = COS_1939
+			}
+			else = {
+				load_oob = COS_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_CUB = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = CUB_1939
+			}
+			else = {
+				load_oob = CUB_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_CZE = yes }
+
+			if = {
+				limit = { has_dlc = "No Step Back" }
+
+				load_oob = CZE_1936_nsb
+			}
+			else = {
+				load_oob = CZE_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_DEN = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = DEN_1939
+			}
+			else = {
+				load_oob = DEN_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_DOM = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = DOM_1939
+			}
+			else = {
+				load_oob = DOM_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_ECU = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = ECU_1939
+			}
+			else = {
+				load_oob = ECU_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_ELS = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = ELS_1939
+			}
+			else = {
+				load_oob = ELS_1936
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					state_originally_from_UKD = yes
+					state_originally_from_MLT = yes
+					state_originally_from_PAL = yes
+					state_originally_from_JOR = yes
+					state_originally_from_EGY = yes
+					state_originally_from_SUD = yes
+					state_originally_from_KEN = yes
+					state_originally_from_TZN = yes
+					state_originally_from_NGA = yes
+					state_originally_from_GHA = yes
+					state_originally_from_SRL = yes
+					original_tag = IIB
+				}
+			}
+
+			load_ENG_oob = yes
+		}
+		else_if = {
+			limit = { state_originally_from_EST = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = EST_1939
+			}
+			else = {
+				load_oob = EST_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_ETH = yes }
+
+			load_oob = ETH_1936_bba
+		}
+		else_if = {
+			limit = { state_originally_from_FIN = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = FIN_1939
+			}
+			else = {
+				load_oob = FIN_1936
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					state_originally_from_FRA = yes
+					state_originally_from_LEB = yes
+					state_originally_from_TUN = yes
+					state_originally_from_ALG = yes
+					state_originally_from_SEN = yes
+					state_originally_from_GAB = yes
+					state_originally_from_MAD = yes
+					state_originally_from_VIN = yes
+					state_originally_from_CAM = yes
+				}
+			}
+
+			load_FRA_oob = yes
+		}
+		else_if = {
+			limit = { state_originally_from_GDC = yes }
+
+			load_oob = GDC_1936_sea
+		}
+		else_if = {
+			limit = { state_originally_from_GER = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = GER_1939_nsb
+				}
+				else = {
+					load_oob = GER_1939
+				}
+			}
+			else = {
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = GER_1936_nsb
+				}
+				else = {
+					load_oob = GER_1936
+				}
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_GRE = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = GRE_1939
+			}
+			else = {
+				load_oob = GRE_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_GSM = yes }
+
+			load_oob = GSM_1936_sea
+		}
+		else_if = {
+			limit = { state_originally_from_GUA = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = GUA_1939
+			}
+			else = {
+				load_oob = GUA_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_GXC = yes }
+
+			load_oob = GXC_1936_sea
+		}
+		else_if = {
+			limit = { state_originally_from_HAI = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = HAI_1939
+			}
+			else = {
+				load_oob = HAI_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_HBC = yes }
+
+			if = {
+				limit = { original_tag = LOY }
+
+				load_JAP_oob = yes
+			}
+			else = {
+				load_oob = HBC_1936_sea
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_HOL = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = HOL_1939
+			}
+			else = {
+				load_oob = HOL_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_HON = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = HON_1939
+			}
+			else = {
+				load_oob = HON_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_HUN = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = HUN_1939_nsb
+				}
+				else = {
+					load_oob = HUN_1939
+				}
+			}
+			else = {
+				load_oob = HUN_wuw_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_ICE = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = ICE_1939
+			}
+			else = {
+				load_oob = ICE_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_INS = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = INS_1939
+			}
+			else = {
+				load_oob = INS_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_IRE = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = IRE_1939
+			}
+			else = {
+				load_oob = IRE_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_IRQ = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = IRQ_1939
+			}
+			else = {
+				load_oob = IRQ_1936
+			}
+			if = {
+				limit = { original_tag = ZYI }
+
+				load_ENG_oob = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					state_originally_from_ITA = yes
+					state_originally_from_ERI = yes
+					state_originally_from_SOM = yes
+					state_originally_from_LBA = yes
+				}
+			}
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = ITA_1939_nsb
+				}
+				else = {
+					load_oob = ITA_1939
+				}
+			}
+			else = {
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = ITA_1936_nsb
+				}
+				else = {
+					load_oob = ITA_1936
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					state_originally_from_JAP = yes
+					state_originally_from_KOR = yes
+					state_originally_from_FSM = yes
+					state_originally_from_FOR = yes
+				}
+			}
+
+			load_JAP_oob = yes
+		}
+		else_if = {
+			limit = { state_originally_from_KHM = yes }
+
+			load_oob = KHM_1936_sea
+		}
+		else_if = {
+			limit = { state_originally_from_KUM = yes }
+
+			load_oob = KUM_uprising
+		}
+		else_if = {
+			limit = { state_originally_from_LAT = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = LAT_1939
+			}
+			else = {
+				load_oob = LAT_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_LIB = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = LIB_1939
+			}
+			else = {
+				load_oob = LIB_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_LIT = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = LIT_1939
+			}
+			else = {
+				load_oob = LIT_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_LUX = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = LUX_1939
+			}
+			else = {
+				load_oob = LUX_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_MAL = yes }
+
+			load_oob = MAL_1936
+			if = {
+				limit = {
+					OR = {
+						original_tag = EEL
+						original_tag = NZI
+					}
+				}
+
+				load_ENG_oob = yes
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_MAN = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = MAN_1939
+			}
+			else = {
+				load_oob = MAN_1936
+			}
+			load_JAP_oob = yes
+		}
+		else_if = {
+			limit = { state_originally_from_MEN = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = MEN_1939
+			}
+			else = {
+				load_oob = MEN_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_MEX = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = MEX_1939
+			}
+			else = {
+				load_oob = MEX_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_MON = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = MON_1939
+			}
+			else = {
+				load_oob = MON_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_MOR = yes }
+
+			if = {
+				limit = { original_tag = ZYO }
+
+				load_SPR_oob = yes
+			}
+			else = {
+				load_FRA_oob = yes
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_NEP = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = NEP_1939
+			}
+			else = {
+				load_oob = NEP_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_NIC = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = NIC_1939
+			}
+			else = {
+				load_oob = NIC_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_NOR = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = NOR_1939
+			}
+			else = {
+				load_oob = NOR_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_NXM = yes }
+
+			load_oob = NXM_1936_sea
+		}
+		else_if = {
+			limit = { state_originally_from_NZL = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = NZL_1939
+			}
+			else = {
+				load_oob = NZL_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_OMA = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = OMA_1939
+			}
+			else = {
+				load_oob = OMA_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_PAN = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = PAN_1939
+				if = {
+					limit = { original_tag = LBS }
+
+					load_oob = USA_1939
+				}
+			}
+			else = {
+				load_oob = PAN_1936
+				if = {
+					limit = { original_tag = LBS }
+
+					load_oob = USA_1936
+				}
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_PAR = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = PAR_1939
+			}
+			else = {
+				load_oob = PAR_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_PER = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = PER_1939
+			}
+			else = {
+				load_oob = PER_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_PHI = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = PHI_1939
+				if = {
+					limit = { original_tag = EZF }
+
+					load_oob = USA_1939
+				}
+			}
+			else = {
+				load_oob = PHI_1936
+				if = {
+					limit = { original_tag = EZF }
+
+					load_oob = USA_1936
+				}
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_POL = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = POL_1939
+			}
+			else = {
+				load_oob = POL_1936
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					state_originally_from_POR = yes
+					state_originally_from_ANG = yes
+					state_originally_from_MZB = yes
+				}
+			}
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = POR_1939
+			}
+			else = {
+				load_oob = POR_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_PRC = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = PRC_1939_TSR
+			}
+			else = {
+				load_oob = PRC_1936_TSR
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_PRU = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = PRU_1939
+			}
+			else = {
+				load_oob = PRU_1936
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					state_originally_from_RAJ = yes
+					state_originally_from_PAK = yes
+				}
+			}
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = RAJ_1939
+			}
+			else = {
+				load_oob = RAJ_1936_GOE
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_ROM = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = ROM_1939_nsb
+				}
+				else = {
+					load_oob = ROM_1939
+				}
+			}
+			else = {
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = ROM_1936_nsb
+				}
+				else = {
+					load_oob = ROM_1936
+				}
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_SAF = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = SAF_1939
+			}
+			else = {
+				load_oob = SAF_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_SAU = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = SAU_1939
+			}
+			else = {
+				load_oob = SAU_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_SHX = yes }
+
+			load_oob = SHX_1936_sea
+		}
+		else_if = {
+			limit = { state_originally_from_SIA = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = SIA_1939
+			}
+			else = {
+				load_oob = SIA_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_SIC = yes }
+
+			load_oob = SIC_1936_sea
+		}
+		else_if = {
+			limit = { state_originally_from_SIK = yes }
+
+			load_oob = SIK_1936_sea
+		}
+		else_if = {
+			limit = { state_originally_from_SND = yes }
+
+			load_oob = SND_1936_sea
+		}
+		else_if = {
+			limit = { state_originally_from_SOV = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = SOV_1939_nsb
+				}
+				else = {
+					load_oob = SOV_1939
+				}
+			}
+			else = {
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = SOV_1936_nsb
+				}
+				else = {
+					load_oob = SOV_1936
+				}
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_SPR = yes }
+
+			load_SPR_oob = yes
+		}
+		else_if = {
+			limit = { state_originally_from_SWE = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = SWE_1939
+			}
+			else = {
+				load_oob = SWE_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_SWI = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = SWI_1939_BBA
+			}
+			else = {
+				load_oob = SWI_1936_BBA
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_TAN = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = TAN_1939
+			}
+			else = {
+				load_oob = TAN_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_TIB = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = TIB_1939
+			}
+			else = {
+				load_oob = TIB_1936
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					state_originally_from_TUR = yes
+					state_originally_from_KUR = yes
+				}
+			}
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = TUR_1939
+			}
+			else = {
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = TUR_1936_nsb
+				}
+				else = {
+					load_oob = TUR_1936
+				}
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_URG = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = URG_1939
+			}
+			else = {
+				load_oob = URG_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_USA = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = USA_1939
+			}
+			else = {
+				load_oob = USA_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_VEN = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				load_oob = VEN_1939
+			}
+			else = {
+				load_oob = VEN_1936
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_XIC = yes }
+
+			load_oob = XIC_1936_sea
+		}
+		else_if = {
+			limit = { state_originally_from_XSM = yes }
+
+			load_oob = XSM_1936_sea
+		}
+		else_if = {
+			limit = { state_originally_from_YEM = yes }
+
+			if = {
+				limit = { original_tag = LSY }
+
+				load_ENG_oob = yes
+			}
+			else = {
+				if = {
+					limit = { has_start_date > 1939.1.1 }
+
+					load_oob = YEM_1939
+				}
+				else = {
+					load_oob = YEM_1936
+				}
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_YUG = yes }
+
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = YUG_1939_nsb
+				}
+				else = {
+					load_oob = YUG_1939
+				}
+			}
+			else = {
+				if = {
+					limit = { has_dlc = "No Step Back" }
+
+					load_oob = YUG_1936_nsb
+				}
+				else = {
+					load_oob = YUG_1936
+				}
+			}
+		}
+		else_if = {
+			limit = { state_originally_from_YUN = yes }
+
+			load_oob = YUN_1936_sea
+		}
+
+		every_state = {
+			if = {
+				limit = { NOT = { is_owned_by = PREV } }
+
+				PREV = { delete_unit = { state = PREV } }
+			}
+		}
+	}
+}
+
+load_ENG_oob = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			load_oob = ENG_1939_nsb
+		}
+		else = {
+			load_oob = ENG_1939
+		}
+	}
+	else = {
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			if = {
+				limit = { has_dlc = "La Resistance" }
+
+				load_oob = ENG_1936_nsb_LaR
+			}
+			else = {
+				load_oob = ENG_1936_nsb
+			}
+		}
+		else = {
+			if = {
+				limit = { has_dlc = "La Resistance" }
+
+				load_oob = ENG_1936_LaR
+			}
+			else = {
+				load_oob = ENG_1936
+			}
+		}
+	}
+}
+
+load_FRA_oob = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			load_oob = FRA_1939_nsb
+		}
+		else = {
+			load_oob = FRA_1939
+		}
+	}
+	else = {
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			load_oob = FRA_1936_nsb
+		}
+		else = {
+			load_oob = FRA_1936
+		}
+	}
+}
+
+load_JAP_oob = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			load_oob = JAP_1939_nsb
+		}
+		else = {
+			load_oob = JAP_1939
+		}
+	}
+	else = {
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			load_oob = JAP_1936_nsb
+		}
+		else = {
+			load_oob = JAP_1936
+		}
+	}
+}
+
+load_SPR_oob = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		load_oob = SPA_1939
+	}
+	else = {
+		load_oob = SPR_1936
 	}
 }

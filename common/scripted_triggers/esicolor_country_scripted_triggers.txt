@@ -238,6 +238,12 @@ state_originally_from_UKD = {
 	}
 }
 
+state_originally_from_MLT = {
+	OR = {
+		original_tag = IIL
+	}
+}
+
 state_originally_from_AST = {
 	OR = {
 		original_tag = ZBS
@@ -293,6 +299,15 @@ state_originally_from_SAF = {
 		original_tag = ZFS
 		original_tag = LBI
 		original_tag = FIY
+	}
+}
+
+state_originally_from_NMB = {
+	OR = {
+		original_tag = SAI
+		original_tag = BYE
+		original_tag = CZN # BYA
+		original_tag = BYS
 	}
 }
 
@@ -620,16 +635,6 @@ state_originally_from_EST = {
 	}
 }
 
-state_originally_from_LIT = {
-	OR = {
-		original_tag = OII
-		original_tag = IBY
-		original_tag = FBA
-		original_tag = CJB # BIA
-		original_tag = BIS
-	}
-}
-
 state_originally_from_LAT = {
 	OR = {
 		original_tag = OIZ
@@ -637,6 +642,16 @@ state_originally_from_LAT = {
 		original_tag = BOB
 		original_tag = BOY
 		original_tag = BIO
+	}
+}
+
+state_originally_from_LIT = {
+	OR = {
+		original_tag = OII
+		original_tag = IBY
+		original_tag = FBA
+		original_tag = CJB # BIA
+		original_tag = BIS
 	}
 }
 
@@ -696,16 +711,18 @@ state_originally_from_USA = {
 	}
 }
 
-state_originally_from_CHL = {
+state_originally_from_GUM = {
 	OR = {
-		original_tag = ZFY
-		original_tag = TPM
-		original_tag = SOF
-		original_tag = YAB
-		original_tag = YAY
-		original_tag = YSO
-		original_tag = YSI
-		original_tag = YSZ
+		original_tag = MFC # LEB
+		original_tag = LAL
+	}
+}
+
+state_originally_from_FSM = {
+	OR = {
+		original_tag = LEE
+		original_tag = LAF
+		original_tag = MCB # LBA
 	}
 }
 
@@ -732,9 +749,46 @@ state_originally_from_JAP = {
 	}
 }
 
-state_originally_from_CHI = {
+state_originally_from_KOR = {
+	OR = {
+		original_tag = SZS
+		original_tag = SZF
+		original_tag = NZB
+		original_tag = NZY
+		original_tag = NEO
+		original_tag = NEI
+	}
+}
+
+state_originally_from_MAN = {
+	OR = {
+		original_tag = EZB
+		original_tag = LIO
+		original_tag = FIA
+		original_tag = FIS
+		original_tag = FIL
+		original_tag = FIF
+		original_tag = FAS
+		original_tag = FLI
+	}
+}
+
+state_originally_from_MEN = {
+	OR = {
+		original_tag = LII
+		original_tag = LIZ
+		original_tag = NAE
+	}
+}
+
+state_originally_from_FOR = {
 	OR = {
 		original_tag = SZA
+	}
+}
+
+state_originally_from_CHI = {
+	OR = {
 		original_tag = SYS
 		original_tag = SYL
 		original_tag = SYB
@@ -896,6 +950,15 @@ state_originally_from_CAM = {
 	}
 }
 
+state_originally_from_SIA = {
+	OR = {
+		original_tag = ZBY
+		original_tag = FZA
+		original_tag = BLB
+		original_tag = BLY
+	}
+}
+
 state_originally_from_MAL = {
 	OR = {
 		original_tag = EEE
@@ -903,6 +966,35 @@ state_originally_from_MAL = {
 		original_tag = NZI
 		original_tag = NZE
 		original_tag = NZA
+	}
+}
+
+state_originally_from_INS = {
+	OR = {
+		original_tag = EEA
+		original_tag = EES
+		original_tag = LLF
+		original_tag = LLB
+		original_tag = LLY
+		original_tag = LFZ
+		original_tag = LFE
+		original_tag = FEB
+		original_tag = NZZ
+	}
+}
+
+state_originally_from_PHI = {
+	OR = {
+		original_tag = EZF
+		original_tag = LZE
+		original_tag = LZA
+		original_tag = LZS
+		original_tag = LZL
+		original_tag = LZF
+		original_tag = LZB
+		original_tag = NZS
+		original_tag = OAM # NZL
+		original_tag = NZF
 	}
 }
 
@@ -1134,6 +1226,44 @@ state_originally_from_KUR = {
 	}
 }
 
+state_originally_from_IRQ = {
+	OR = {
+		original_tag = ZYI
+		original_tag = LFS
+		original_tag = LFL
+		original_tag = AIY
+		original_tag = NIO
+		original_tag = NII
+	}
+}
+
+state_originally_from_SYR = {
+	OR = {
+		original_tag = SSA
+		original_tag = LFF
+		original_tag = LBO
+		original_tag = FYY
+	}
+}
+
+state_originally_from_LEB = {
+	OR = {
+		original_tag = SSE
+	}
+}
+
+state_originally_from_PAL = {
+	OR = {
+		original_tag = ASA
+	}
+}
+
+state_originally_from_JOR = {
+	OR = {
+		original_tag = ASS
+	}
+}
+
 state_originally_from_EGY = {
 	OR = {
 		original_tag = AAL
@@ -1144,6 +1274,19 @@ state_originally_from_EGY = {
 		original_tag = ASF
 		original_tag = SSZ
 		original_tag = YOF
+	}
+}
+
+state_originally_from_SUD = {
+	OR = {
+		original_tag = SSI
+		original_tag = SAY
+		original_tag = FLF
+		original_tag = BBE
+		original_tag = BBA
+		original_tag = BBS
+		original_tag = BBL
+		original_tag = BBF
 	}
 }
 
@@ -1185,6 +1328,20 @@ state_originally_from_MOR = {
 	}
 }
 
+state_originally_from_SAU = {
+	OR = {
+		original_tag = ZYZ
+		original_tag = LFB
+		original_tag = LFY
+		original_tag = BSA
+		original_tag = BSS
+		original_tag = BSL
+		original_tag = BSF
+		original_tag = BSB
+		original_tag = BSY
+	}
+}
+
 state_originally_from_YEM = {
 	OR = {
 		original_tag = ZYE
@@ -1200,6 +1357,28 @@ state_originally_from_OMA = {
 		original_tag = NIE
 		original_tag = NIS
 		original_tag = NIL
+	}
+}
+
+state_originally_from_PER = {
+	OR = {
+		original_tag = ZLL
+		original_tag = AIO
+		original_tag = AII
+		original_tag = AIZ
+		original_tag = AIE
+		original_tag = AIA
+		original_tag = AIL
+		original_tag = AIF
+		original_tag = AIB
+		original_tag = AIY
+		original_tag = AZO
+		original_tag = AZI
+		original_tag = NOO
+		original_tag = NOI
+		original_tag = NOZ
+		original_tag = NOE
+		original_tag = OPB # NOA
 	}
 }
 
@@ -1253,6 +1432,90 @@ state_originally_from_SOM = {
 		original_tag = ZLY
 		original_tag = SSY
 		original_tag = BAA
+	}
+}
+
+state_originally_from_KEN = {
+	OR = {
+		original_tag = TBG # SAF
+		original_tag = YOE
+		original_tag = YOA
+		original_tag = YOS
+	}
+}
+
+state_originally_from_TZN = {
+	OR = {
+		original_tag = SAL
+	}
+}
+
+state_originally_from_COG = {
+	OR = {
+		original_tag = ZYS
+		original_tag = SEB
+		original_tag = FIB
+		original_tag = BBB
+		original_tag = BBY
+		original_tag = BYO
+	}
+}
+
+state_originally_from_SEN = {
+	OR = {
+		original_tag = ZFZ
+	}
+}
+
+state_originally_from_LIB = {
+	OR = {
+		original_tag = ZYB
+	}
+}
+
+state_originally_from_GHA = {
+	OR = {
+		original_tag = ZFA
+	}
+}
+
+state_originally_from_NGA = {
+	OR = {
+		original_tag = SSB
+		original_tag = YOO
+		original_tag = YOI
+		original_tag = YOZ
+	}
+}
+
+state_originally_from_GAB = {
+	OR = {
+		original_tag = SEY
+	}
+}
+
+state_originally_from_ANG = {
+	OR = {
+		original_tag = SAO
+		original_tag = FYL
+		original_tag = BYI
+		original_tag = BYZ
+	}
+}
+
+state_originally_from_MZB = {
+	OR = {
+		original_tag = SAA
+		original_tag = BYL
+		original_tag = BYF
+	}
+}
+
+state_originally_from_MAD = {
+	OR = {
+		original_tag = SAE
+		original_tag = YOL
+		original_tag = YOB
 	}
 }
 
@@ -1385,9 +1648,147 @@ state_originally_from_BRA = {
 	}
 }
 
+state_originally_from_ARG = {
+	OR = {
+		original_tag = ZFB
+		original_tag = SOB
+		original_tag = SOY
+		original_tag = SIO
+		original_tag = SII
+		original_tag = SIZ
+		original_tag = YSE
+		original_tag = YSA
+		original_tag = YSS
+		original_tag = YSL
+		original_tag = YSF
+		original_tag = YSB
+		original_tag = YSY
+		original_tag = YLO
+		
+	}
+}
+
+state_originally_from_CHL = {
+	OR = {
+		original_tag = ZFY
+		original_tag = TPM
+		original_tag = SOF
+		original_tag = YAB
+		original_tag = YAY
+		original_tag = YSO
+		original_tag = YSI
+		original_tag = YSZ
+	}
+}
+
 state_originally_from_PAR = {
 	OR = {
 		original_tag = EOI
 		original_tag = LBB
+	}
+}
+
+state_originally_from_URG = {
+	OR = {
+		original_tag = EOO
+		original_tag = YAS
+		original_tag = YAL
+	}
+}
+
+state_originally_from_BOL = {
+	OR = {
+		original_tag = EOZ
+		original_tag = ABF
+		
+	}
+}
+
+state_originally_from_PRU = {
+	OR = {
+		original_tag = EOE
+		original_tag = AYI
+		original_tag = AYZ
+		original_tag = AYA
+		original_tag = YAF
+	}
+}
+
+state_originally_from_ECU = {
+	OR = {
+		original_tag = EOS
+		original_tag = AYO
+		original_tag = LAY
+	}
+}
+
+state_originally_from_COL = {
+	OR = {
+		original_tag = EOL
+		original_tag = ABL
+		original_tag = AYE
+	}
+}
+
+state_originally_from_VEN = {
+	OR = {
+		original_tag = EOF
+		original_tag = ABB
+		original_tag = ABY
+	}
+}
+
+state_originally_from_PAN = {
+	OR = {
+		original_tag = EOA
+		original_tag = LBS
+	}
+}
+
+state_originally_from_COS = {
+	OR = {
+		original_tag = EIL
+	}
+}
+
+state_originally_from_NIC = {
+	OR = {
+		original_tag = EIF
+	}
+}
+
+state_originally_from_HON = {
+	OR = {
+		original_tag = EIZ
+	}
+}
+
+state_originally_from_ELS = {
+	OR = {
+		original_tag = EIA
+	}
+}
+
+state_originally_from_GUA = {
+	OR = {
+		original_tag = EIE
+	}
+}
+
+state_originally_from_CUB = {
+	OR = {
+		original_tag = EIS
+	}
+}
+
+state_originally_from_HAI = {
+	OR = {
+		original_tag = EIB
+	}
+}
+
+state_originally_from_DOM = {
+	OR = {
+		original_tag = EIY
 	}
 }
