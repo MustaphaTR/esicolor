@@ -9353,6 +9353,38 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	10 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Mieczysław Michałowicz
+				limit = { has_trait = democratic_reformer }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = democratic_reformer
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = socdem_reformist
+				}
+			}
+		}
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Marian Rejewski
+				limit = { has_trait = code_breaker }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = code_breaker
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = mastermind_code_cracker
+				}
+			}
+		}
+	}
 	43 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -9512,6 +9544,23 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = GER_proletarian_leader
+				}
+			}
+		}
+	}
+	87 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Jerzy Rutkowski
+				limit = { has_trait = prince_of_terror }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = prince_of_terror
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = falangist_militarist
 				}
 			}
 		}
@@ -11061,6 +11110,7 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = queen_of_the_people } remove_country_leader_trait = queen_of_the_people }
 	if = { limit = { has_country_leader_with_trait = polish_peasant_champion } remove_country_leader_trait = polish_peasant_champion }
 	if = { limit = { has_country_leader_with_trait = soviet_thaw } remove_country_leader_trait = soviet_thaw }
+	if = { limit = { has_country_leader_with_trait = unruly_falangist } remove_country_leader_trait = unruly_falangist }
 	if = { limit = { has_country_leader_with_trait = CAN_liberal_corporatist } remove_country_leader_trait = CAN_liberal_corporatist }
 	if = { limit = { has_country_leader_with_trait = CAN_canadian_fuhrer } remove_country_leader_trait = CAN_canadian_fuhrer }
 	if = { limit = { has_country_leader_with_trait = CAN_social_gospel } remove_country_leader_trait = CAN_social_gospel }
