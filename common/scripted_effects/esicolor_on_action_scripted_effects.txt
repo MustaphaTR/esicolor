@@ -3576,6 +3576,60 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = EZA }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = backroom_backstabber
+			}
+
+			set_character_name = BHU_sonam_tobgay_dorji
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_political_advisor_asia_3
+				}
+				army = {
+					small = GFX_idea_generic_political_advisor_asia_3
+				}
+				navy = {
+					small = GFX_idea_generic_political_advisor_asia_3
+				}
+			}
+
+			324 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_defensive_1
+					has_trait = army_chief_defensive_2
+					has_trait = army_chief_defensive_3
+				}
+			}
+
+			set_character_name = BHU_jigme_dorji_wangchuck
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_army_asia_1
+				}
+				army = {
+					small = GFX_idea_generic_army_asia_1
+				}
+				navy = {
+					small = GFX_idea_generic_army_asia_1
+				}
+			}
+
+			324 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = EEY }
 
 		random_character = {
