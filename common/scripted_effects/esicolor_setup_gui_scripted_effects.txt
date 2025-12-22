@@ -1345,6 +1345,16 @@ setup_gui_start_foreign_generals = {
 		limit = { check_variable = { global.setup_foreign_generals > 0 } }
 
 		clr_global_flag = general_recruitment_disabled
+		every_country = {
+			if = {
+				limit = { is_ai = no }
+
+				set_country_flag = foreign_generals_named_prioritised
+			}
+			else = {
+				set_country_flag = foreign_generals_no_priority
+			}
+		}
 	}
 }
 

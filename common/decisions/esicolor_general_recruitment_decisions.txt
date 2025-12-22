@@ -1,4 +1,46 @@
 esicolor_general_recruitment = {
+	foreign_generals_named_only = {
+		allowed = {
+			always = yes
+		}
+		visible = {
+			NOT = { has_country_flag = foreign_generals_named_only }
+		}
+		complete_effect = {
+			set_country_flag = foreign_generals_named_only
+			clr_country_flag = foreign_generals_named_prioritised
+			clr_country_flag = foreign_generals_no_priority
+		}
+	}
+
+	foreign_generals_named_prioritised = {
+		allowed = {
+			always = yes
+		}
+		visible = {
+			NOT = { has_country_flag = foreign_generals_named_prioritised }
+		}
+		complete_effect = {
+			clr_country_flag = foreign_generals_named_only
+			set_country_flag = foreign_generals_named_prioritised
+			clr_country_flag = foreign_generals_no_priority
+		}
+	}
+
+	foreign_generals_no_priority = {
+		allowed = {
+			always = yes
+		}
+		visible = {
+			NOT = { has_country_flag = foreign_generals_no_priority }
+		}
+		complete_effect = {
+			clr_country_flag = foreign_generals_named_only
+			clr_country_flag = foreign_generals_named_prioritised
+			set_country_flag = foreign_generals_no_priority
+		}
+	}
+
 	recruit_local_marshal = {
 		icon = generic_army_support
 
@@ -19,6 +61,10 @@ esicolor_general_recruitment = {
 						any_army_leader = {
 							is_field_marshal = yes
 							commander_unavailable_for_leader = no
+							OR = {
+								NOT = { ROOT = { has_country_flag = foreign_generals_named_only } }
+								has_character_flag = special_general
+							}
 						}
 					}
 				}
@@ -28,8 +74,6 @@ esicolor_general_recruitment = {
 		ai_will_do = {
 			base = 5
 		}
-
-		priority = 5
 
 		custom_cost_trigger = {
 			command_power > ROOT.marshal_recruitment_cost
@@ -60,12 +104,18 @@ esicolor_general_recruitment = {
 									is_field_marshal = yes
 									commander_unavailable_for_leader = no
 									OR = {
+										NOT = { ROOT = { has_country_flag = foreign_generals_named_only } }
+										has_character_flag = special_general
+									}
+									OR = {
 										check_variable = { ROOT.marshal_to_recruit = 0 }
 										AND = {
+											ROOT = { has_country_flag = foreign_generals_named_prioritised }
 											has_character_flag = special_general
 											ROOT = { var:marshal_to_recruit = { NOT = { has_character_flag = special_general } } }
 										}
 										AND = {
+											ROOT = { NOT = { has_country_flag = foreign_generals_no_priority } }
 											has_character_flag = special_general
 											ROOT = {
 												var:marshal_to_recruit = {
@@ -75,10 +125,16 @@ esicolor_general_recruitment = {
 											}
 										}
 										AND = {
-											NOT = { has_character_flag = special_general }
+											OR = {
+												NOT = { has_character_flag = special_general }
+												ROOT = { has_country_flag = foreign_generals_no_priority }
+											}
 											ROOT = {
 												var:marshal_to_recruit = {
-													NOT = { has_character_flag = special_general }
+													OR = {
+														NOT = { has_character_flag = special_general }
+														ROOT = { has_country_flag = foreign_generals_no_priority }
+													}
 													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
 												}
 											}
@@ -135,6 +191,10 @@ esicolor_general_recruitment = {
 						any_army_leader = {
 							is_corps_commander = yes
 							commander_unavailable_for_leader = no
+							OR = {
+								NOT = { ROOT = { has_country_flag = foreign_generals_named_only } }
+								has_character_flag = special_general
+							}
 						}
 					}
 				}
@@ -144,8 +204,6 @@ esicolor_general_recruitment = {
 		ai_will_do = {
 			base = 5
 		}
-
-		priority = 5
 
 		custom_cost_trigger = {
 			command_power > ROOT.general_recruitment_cost
@@ -176,12 +234,18 @@ esicolor_general_recruitment = {
 									is_corps_commander = yes
 									commander_unavailable_for_leader = no
 									OR = {
+										NOT = { ROOT = { has_country_flag = foreign_generals_named_only } }
+										has_character_flag = special_general
+									}
+									OR = {
 										check_variable = { ROOT.general_to_recruit = 0 }
 										AND = {
+											ROOT = { has_country_flag = foreign_generals_named_prioritised }
 											has_character_flag = special_general
 											ROOT = { var:general_to_recruit = { NOT = { has_character_flag = special_general } } }
 										}
 										AND = {
+											ROOT = { NOT = { has_country_flag = foreign_generals_no_priority } }
 											has_character_flag = special_general
 											ROOT = {
 												var:general_to_recruit = {
@@ -191,10 +255,16 @@ esicolor_general_recruitment = {
 											}
 										}
 										AND = {
-											NOT = { has_character_flag = special_general }
+											OR = {
+												NOT = { has_character_flag = special_general }
+												ROOT = { has_country_flag = foreign_generals_no_priority }
+											}
 											ROOT = {
 												var:general_to_recruit = {
-													NOT = { has_character_flag = special_general }
+													OR = {
+														NOT = { has_character_flag = special_general }
+														ROOT = { has_country_flag = foreign_generals_no_priority }
+													}
 													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
 												}
 											}
@@ -250,6 +320,10 @@ esicolor_general_recruitment = {
 
 						any_navy_leader = {
 							commander_unavailable_for_leader = no
+							OR = {
+								NOT = { ROOT = { has_country_flag = foreign_generals_named_only } }
+								has_character_flag = special_admiral
+							}
 						}
 					}
 				}
@@ -259,8 +333,6 @@ esicolor_general_recruitment = {
 		ai_will_do = {
 			base = 1
 		}
-
-		priority = 5
 
 		custom_cost_trigger = {
 			command_power > ROOT.admiral_recruitment_cost
@@ -290,12 +362,18 @@ esicolor_general_recruitment = {
 								limit = {
 									commander_unavailable_for_leader = no
 									OR = {
+										NOT = { ROOT = { has_country_flag = foreign_generals_named_only } }
+										has_character_flag = special_admiral
+									}
+									OR = {
 										check_variable = { ROOT.admiral_to_recruit = 0 }
 										AND = {
+											ROOT = { has_country_flag = foreign_generals_named_prioritised }
 											has_character_flag = special_admiral
 											ROOT = { var:admiral_to_recruit = { NOT = { has_character_flag = special_admiral } } }
 										}
 										AND = {
+											ROOT = { NOT = { has_country_flag = foreign_generals_no_priority } }
 											has_character_flag = special_admiral
 											ROOT = {
 												var:admiral_to_recruit = {
@@ -305,10 +383,16 @@ esicolor_general_recruitment = {
 											}
 										}
 										AND = {
-											NOT = { has_character_flag = special_admiral }
+											OR = {
+												NOT = { has_character_flag = special_admiral }
+												ROOT = { has_country_flag = foreign_generals_no_priority }
+											}
 											ROOT = {
 												var:admiral_to_recruit = {
-													NOT = { has_character_flag = special_admiral }
+													OR = {
+														NOT = { has_character_flag = special_admiral }
+														ROOT = { has_country_flag = foreign_generals_no_priority }
+													}
 													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
 												}
 											}

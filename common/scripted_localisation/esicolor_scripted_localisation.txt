@@ -112,6 +112,26 @@ defined_text = {
 	}
 }
 
+## Foreign Commander Recruitment localization
+defined_text = {
+	name = esicolor_general_recruitment_get_priority
+	text = {
+		trigger = {
+			has_country_flag = foreign_generals_named_only
+		}
+		localization_key = esicolor_general_recruitment_named_only_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = foreign_generals_named_prioritised
+		}
+		localization_key = esicolor_general_recruitment_named_prioritised_desc
+	}
+	text = {
+		localization_key = esicolor_general_recruitment_no_priority_desc
+	}
+}
+
 ## State Management GUI localization
 defined_text = { # Country
 	name = esicolor_action_get_completed_selected
