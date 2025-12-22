@@ -1,22 +1,51 @@
 ﻿characters={
-	OAE_miklos_horthy={
-		name=HUN_miklos_horthy
-		portraits={
-			civilian={
-				large=GFX_Portrait_hungary_miklos_horthy
+	OAE_miklos_horthy = {
+		instance = {
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			name=HUN_miklos_horthy
+			portraits={
+				civilian={
+					large = GFX_portrait_HUN_miklos_horthy
+					small = GFX_portrait_HUN_miklos_horthy_small
+				}
+			}
+			country_leader={
+				traits={ anti_communist }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ fascist_sympathies anti_communist HUN_the_regent }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			traits={ anti_communist }
-			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			traits={ fascist_sympathies anti_communist HUN_the_regent }
-			ideology=oligarchism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Gotterdammerung" }
+			}
+			name=HUN_miklos_horthy
+			portraits={
+				civilian={
+					large = GFX_Portrait_hungary_miklos_horthy
+				}
+			}
+			country_leader={
+				traits={ anti_communist }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ fascist_sympathies anti_communist HUN_the_regent }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }
