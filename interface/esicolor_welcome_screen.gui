@@ -3231,6 +3231,43 @@ guiTypes = {
 			position = { x = 25 y = 70 }
 			quadTextureSprite = "GFX_esicolor_setup_tech_connections"
 		}
+		instantTextboxType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_name_22"
+			position = { x=584 y=49 }
+			font = "hoi_24header"
+			text = "esicolor_setup_technology"
+			format = center
+			maxWidth = 200
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_eaw_data_25"
+			position = { x = 664 y = 100 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 1
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_eaw_data_25_selected"
+			position = { x = 664 y = 100 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 2
+			pdx_tooltip = "esicolor_setup_eaw_data_button_to_combined_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_eaw_data_25_combined"
+			position = { x = 664 y = 100 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 9
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_combined_tt"
+		}
+		buttonType = {
+			name = "esicolor_welcome_screen_tab_1_page_6_eaw_data_25_all"
+			position = { x = 664 y = 100 }
+			quadTextureSprite = "GFX_esicolor_setup_eaw_data_button"
+			frame = 7
+			pdx_tooltip = "esicolor_setup_eaw_data_button_from_all_tt"
+		}
+
 		iconType = {
 			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_2"
 			position = { x = 75 y = 70 }
@@ -3673,24 +3710,24 @@ guiTypes = {
 
 		iconType = {
 			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_13"
-			position = { x = 675 y = 70 }
+			position = { x = 825 y = 70 }
 			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
 		}
 		iconType = {
 			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_13"
-			position = { x = 625 y = 70 }
+			position = { x = 775 y = 70 }
 			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
 			pdx_tooltip = "esicolor_setup_technology_construction1_desc"
 		}
 		iconType = {
 			name = "esicolor_welcome_screen_tab_1_page_6_icon_13"
-			position = { x = 629 y = 78 }
+			position = { x = 779 y = 78 }
 			quadTextureSprite = "GFX_construction1_medium"
 			alwaystransparent = yes
 		}
 		instantTextboxType = {
 			name = "esicolor_welcome_screen_tab_1_page_6_max_num_13"
-			position = { x=695 y=94 }
+			position = { x=845 y=94 }
 			font = "hoi_20bs"
 			text = "esicolor_setup_technology_construction1_loc"
 			format = center
@@ -3698,14 +3735,14 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_13"
-			position = { x = 707 y = 115 }
+			position = { x = 857 y = 115 }
 			quadTextureSprite = "GFX_subtract_one"
 			font = "hoi_24header"
 			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
 		}
 		buttonType = {
 			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_13"
-			position = { x = 707 y = 70 }
+			position = { x = 857 y = 70 }
 			quadTextureSprite = "GFX_add_one"
 			font = "hoi_24header"
 			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"
@@ -3913,24 +3950,24 @@ guiTypes = {
 
 		iconType = {
 			name = "esicolor_welcome_screen_tab_1_page_6_max_bg_19"
-			position = { x = 825 y = 70 }
+			position = { x = 975 y = 70 }
 			quadTextureSprite = "GFX_technology_infantry_folder_small_unavailable_item_bg"
 		}
 		iconType = {
 			name = "esicolor_welcome_screen_tab_1_page_6_icon_bg_19"
-			position = { x = 775 y = 70 }
+			position = { x = 925 y = 70 }
 			quadTextureSprite = "GFX_technology_infantry_folder_small_available_item_bg"
 			pdx_tooltip = "esicolor_setup_technology_excavation1_desc"
 		}
 		iconType = {
 			name = "esicolor_welcome_screen_tab_1_page_6_icon_19"
-			position = { x = 777 y = 72 }
+			position = { x = 927 y = 72 }
 			quadTextureSprite = "GFX_excavation1_medium"
 			alwaystransparent = yes
 		}
 		instantTextboxType = {
 			name = "esicolor_welcome_screen_tab_1_page_6_max_num_19"
-			position = { x=845 y=94 }
+			position = { x=995 y=94 }
 			font = "hoi_20bs"
 			text = "esicolor_setup_technology_excavation1_loc"
 			format = center
@@ -3938,14 +3975,14 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "esicolor_welcome_screen_tab_1_page_6_max_minus_19"
-			position = { x = 857 y = 115 }
+			position = { x = 1007 y = 115 }
 			quadTextureSprite = "GFX_subtract_one"
 			font = "hoi_24header"
 			pdx_tooltip = "esicolor_welcome_screen_setup_button_decrease_modifiable"
 		}
 		buttonType = {
 			name = "esicolor_welcome_screen_tab_1_page_6_max_plus_19"
-			position = { x = 857 y = 70 }
+			position = { x = 1007 y = 70 }
 			quadTextureSprite = "GFX_add_one"
 			font = "hoi_24header"
 			pdx_tooltip = "esicolor_welcome_screen_setup_button_increase_modifiable"

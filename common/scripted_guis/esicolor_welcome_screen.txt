@@ -3017,6 +3017,15 @@ scripted_gui = {
 			esicolor_welcome_screen_tab_1_page_6_eaw_data_1_selected_visible = {
 				check_variable = { global.setup_research_slots = -1 }
 			}
+			esicolor_welcome_screen_tab_1_page_6_eaw_data_25_selected_visible = {
+				check_variable = { global.setup_technology = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_6_eaw_data_25_combined_visible = {
+				check_variable = { global.setup_technology = -2 }
+			}
+			esicolor_welcome_screen_tab_1_page_6_eaw_data_25_all_visible = {
+				check_variable = { global.setup_technology = -3 }
+			}
 
 			esicolor_welcome_screen_tab_1_page_6_blocker_1_visible = {
 				has_global_flag = esicolor_setup_complete
@@ -3067,6 +3076,19 @@ scripted_gui = {
 
 					add_to_variable = { global.setup_research_slots_max = 1 }
 				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_6_eaw_data_25_click = {
+				set_variable = { global.setup_technology = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_6_eaw_data_25_selected_click = {
+				set_variable = { global.setup_technology = -2 }
+			}
+			esicolor_welcome_screen_tab_1_page_6_eaw_data_25_combined_click = {
+				set_variable = { global.setup_technology = -3 }
+			}
+			esicolor_welcome_screen_tab_1_page_6_eaw_data_25_all_click = {
+				set_variable = { global.setup_technology = 1 }
 			}
 
 			esicolor_welcome_screen_tab_1_page_6_max_minus_2_click = {

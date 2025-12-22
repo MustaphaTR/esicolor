@@ -158,7 +158,7 @@ randomised_preset_selected = {
 	check_variable = { global.setup_focus_factories = 0 }
 
 	check_variable = { global.setup_intelligence_agency = 1 }
-	check_variable = { global.setup_intelligence_agency_chance = 1 }
+	check_variable = { global.setup_intelligence_agency_chance = 2 }
 
 	check_variable = { global.setup_conscription_law = 1 }
 	check_variable = { global.setup_conscription_law_min = 0 }
@@ -363,7 +363,7 @@ developer_preset_selected = {
 	check_variable = { global.setup_focus_factories = 1 }
 
 	check_variable = { global.setup_intelligence_agency = 1 }
-	check_variable = { global.setup_intelligence_agency_chance = 1 }
+	check_variable = { global.setup_intelligence_agency_chance = 2 }
 
 	check_variable = { global.setup_conscription_law = 1 }
 	check_variable = { global.setup_conscription_law_min = 0 }
@@ -405,6 +405,7 @@ developer_preset_selected = {
 }
 
 technology_option_none = {
+	check_variable = { global.setup_technology = 1 }
 	check_variable = { global.setup_technology_infantry_weapons1 = 0 }
 	check_variable = { global.setup_technology_support_weapons = 0 }
 	check_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines = 0 }
@@ -431,6 +432,7 @@ technology_option_none = {
 }
 
 technology_option_improved = {
+	check_variable = { global.setup_technology = 1 }
 	check_variable = { global.setup_technology_infantry_weapons1 = 0 }
 	check_variable = { global.setup_technology_support_weapons = 0 }
 	check_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines = 0 }
@@ -457,6 +459,7 @@ technology_option_improved = {
 }
 
 technology_option_default_random = {
+	check_variable = { global.setup_technology = 1 }
 	check_variable = { global.setup_technology_infantry_weapons1 = 60 }
 	check_variable = { global.setup_technology_support_weapons = 30 }
 	check_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines = 20 }

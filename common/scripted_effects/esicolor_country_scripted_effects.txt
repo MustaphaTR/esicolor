@@ -1,0 +1,8874 @@
+give_starting_tech_AFA = {
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_support = 1
+			tech_recon = 1
+			support_weapons = 1
+			gw_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_AFG = {
+	set_technology = {
+		gw_artillery = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				early_fighter = 1
+				CAS1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_ALB = {
+	set_technology = {
+		tech_trucks = 1
+		tech_support = 1
+		tech_recon = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			support_weapons = 1
+			gw_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_ALG = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_support = 1
+			tech_recon = 1
+			support_weapons = 1
+			gw_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_ANG = {
+	set_technology = {
+		tech_mountaineers = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_ARG = {
+	set_technology = {
+		tech_mountaineers = 1
+		tech_trucks = 1
+		motorised_infantry = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		basic_train = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			engines_1 = 1
+			early_bombs = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				CAS1 = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons1 = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			tech_support = 1
+			tech_engineers = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		set_technology = {
+			basic_light_battery = 1
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				iw_medium_airframe = 1
+				bba_early_transport_plane = 1
+			}
+			else = {
+				set_technology = {
+					early_bomber = 1
+					naval_bomber1 = 1
+					early_transport_plane = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_AST = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		basic_train = 1
+		fuel_silos = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				cv_early_fighter = 1
+				cv_naval_bomber1 = 1
+				naval_bomber1 = 1
+				early_bomber = 1
+				CAS1 = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antitank = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			support_weapons2 = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_refining = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				basic_light_tank_chassis = 1
+				improved_light_tank_chassis = 1
+				basic_medium_tank_chassis = 1
+				basic_heavy_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					basic_light_tank = 1
+					improved_light_tank = 1
+					basic_medium_tank = 1
+					basic_heavy_tank = 1
+				}
+			}
+		}
+
+		set_technology = {
+			basic_ship_hull_light = 1
+			basic_light_battery = 1
+			sonar = 1
+			improved_sonar = 1
+			improved_depth_charges = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				fighter1 = 1
+				tactical_bomber1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_AUS = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_recon = 1
+		tech_engineers = 1
+		tech_support = 1
+		tech_mountaineers = 1
+		tech_trucks = 1
+		basic_train = 1
+		gw_artillery = 1
+	}
+
+	if = {
+		limit = { has_dlc = "La Resistance" }
+
+		set_technology = {
+			armored_car1 = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_BAS = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_BEL = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_recon = 1
+		tech_engineers = 1
+		tech_trucks = 1
+		motorised_infantry = 1
+		fuel_silos = 1
+		fuel_refining = 1
+		basic_train = 1
+		gw_artillery = 1
+		interwar_antitank = 1
+		tech_mountaineers = 1
+
+		bicycle_infantry = 1
+	}
+	if = {
+		limit = { has_dlc = "No Compromise, No Surrender" }
+
+		set_technology = {
+			rangers_tech = 1
+			BEL_chasseurs_ardennais_ncns = 1
+		}
+		else = {
+			set_technology = {
+				BEL_chasseurs_ardennais = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_dlc = "La Resistance" }
+
+		set_technology = {
+			armored_car1 = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+				basic_light_td = 1
+			}
+		}
+	}
+
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_battery = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				cv_early_fighter = 1
+				cv_naval_bomber1 = 1
+				naval_bomber1 = 1
+				early_bomber = 1
+				CAS1 = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			gw_artillery = 1
+			interwar_artillery = 1
+			interwar_antitank = 1
+			interwar_antiair = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			synth_oil_experiments = 1
+			fuel_refining2 = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				fighter1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_BHR = {
+	set_technology = {
+		tech_trucks = 1
+	}
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_BHU = {
+	set_technology = {
+		tech_mountaineers = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			dispersed_industry = 1
+		}
+	}
+}
+
+give_starting_tech_BLZ = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_BOL = {
+	set_technology = {
+		tech_support = 1
+		tech_engineers = 1
+		gw_artillery = 1
+		tech_trucks = 1
+		fuel_silos = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons1 = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_refining = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_BOT = {
+	set_technology = {
+		tech_mountaineers = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_BRA = {
+	set_technology = {
+		tech_support = 1
+		tech_engineers = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		basic_train = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons1 = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		set_technology = {
+			basic_ship_hull_light = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_BRD = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_support = 1
+			tech_recon = 1
+			support_weapons = 1
+			gw_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_BRM = {
+	set_technology = {
+		tech_support = 1
+		tech_engineers = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_BUL = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_trucks = 1
+		motorised_infantry = 1
+		fuel_silos = 1
+		basic_train = 1
+		tech_mountaineers = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			gw_artillery = 1
+			interwar_artillery = 1
+			tech_recon = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_refining = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				gwtank_chassis = 1
+				basic_light_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					gwtank = 1
+					basic_light_tank = 1
+				}
+			}
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				bba_early_transport_plane = 1
+			}
+			else = {
+				set_technology = {
+					fighter1 = 1
+					early_bomber = 1
+					tactical_bomber1 = 1
+					early_transport_plane = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_CAN = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		basic_train = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				naval_bomber1 = 1
+				early_bomber = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antitank = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			support_weapons2 = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			dispersed_industry3 = 1
+		}
+
+		set_technology = {
+			sonar = 1
+			improved_sonar = 1
+			improved_depth_charges = 1
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				iw_medium_airframe = 1
+				early_bombs = 1
+			}
+			else = {
+				set_technology = {
+					fighter1 = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_CAR = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_CAY = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_CBV = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		tech_support = 1
+		tech_engineers = 1
+		basic_train = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_recon = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_CHA = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_CHI = {
+	set_technology = {
+		gw_artillery = 1
+		interwar_antiair = 1
+		basic_train = 1
+		tech_support = 1
+		tech_trucks = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			engines_1 = 1
+			iw_medium_airframe = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_bomber = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			motorised_infantry = 1
+			tech_support = 1
+			tech_recon = 1
+			tech_engineers = 1
+			tech_trucks = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+			basic_encryption = 1
+			basic_decryption = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_CHL = {
+	set_technology = {
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_mountaineers = 1
+		basic_train = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			iw_small_airframe = 1
+			early_bombs = 1
+			air_torpedoe_1 = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				cv_early_fighter = 1
+				early_bomber = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons1 = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				tactical_bomber1 = 1
+				CAS1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_CMR = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_COG = {
+	set_technology = {
+		tech_support = 1
+		tech_trucks = 1
+		basic_train = 1
+		gw_artillery = 1
+		interwar_antitank = 1
+		tech_engineers = 1
+	}
+
+	if = {
+		limit = { has_dlc = "La Resistance" }
+
+		set_technology = {
+			armored_car1 = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			infantry_weapons1 = 1
+			support_weapons = 1
+			motorised_infantry = 1
+			tech_recon = 1
+			tech_logistics_company = 1
+			tech_field_hospital = 1
+			antitank1 = 1
+			interwar_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			excavation1 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_COL = {
+	set_technology = {
+		tech_support = 1
+		tech_engineers = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons1 = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_COS = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			infantry_weapons1 = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_CRC = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_CUB = {
+	set_technology = {
+		tech_trucks = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			gw_artillery = 1
+			infantry_weapons1 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_CYP = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_CZE = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_recon = 1
+		tech_mountaineers = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		fuel_silos = 1
+		basic_train = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			improved_light_tank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+				improved_light_tank = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			early_bombs = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_bomber = 1
+				CAS1 = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_DAH = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_DEN = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_recon = 1
+		tech_engineers = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		basic_train = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			gw_artillery = 1
+			interwar_artillery = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			dispersed_industry3 = 1
+		}
+
+		set_technology = {
+			basic_ship_hull_submarine = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				early_bomber = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_DJI = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_DOM = {
+	set_technology = {
+		gw_artillery = 1
+		tech_trucks = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			infantry_weapons1 = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_ECU = {
+	set_technology = {
+		fuel_silos = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			gw_artillery = 1
+			infantry_weapons1 = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			tech_trucks = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_EGY = {
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_support = 1
+			tech_recon = 1
+			support_weapons = 1
+			gw_artillery = 1
+			tech_trucks = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_ELS = {
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			infantry_weapons1 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_ENG = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		tech_trucks = 1
+		motorised_infantry = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		basic_train = 1
+		electronic_mechanical_engineering = 1
+		radio = 1
+		fuel_silos = 1
+		fuel_refining = 1
+	}
+
+	if = {
+		limit = { has_dlc = "La Resistance" }
+
+		set_technology = {
+			armored_car1 = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		basic_fire_control_system = 1
+		basic_dp_light_battery = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_medium_airframe = 1
+			basic_small_airframe = 1
+			air_torpedoe_1 = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				cv_early_fighter = 1
+				cv_naval_bomber1 = 1
+				naval_bomber1 = 1
+				early_bomber = 1
+				CAS1 = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	complete_special_project = { project = sp:sp_air_radar }
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antitank = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			support_weapons2 = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			cavity_magnatron = 1
+			centimetric_radar = 1
+			mechanical_computing = 1
+			computing_machine = 1
+			basic_encryption = 1
+			basic_decryption = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			oil_processing = 1
+			fuel_refining2 = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			dispersed_industry3 = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				improved_light_tank_chassis = 1
+				basic_medium_tank_chassis = 1
+				basic_heavy_tank_chassis = 1
+				armor_tech_1 = 1
+				engine_tech_1 = 1
+			}
+			else = {
+				set_technology = {
+					improved_light_tank = 1
+					basic_medium_tank = 1
+					basic_heavy_tank = 1
+				}
+			}
+		}
+
+		set_technology = {
+			basic_ship_hull_submarine = 1
+			improved_ship_hull_submarine = 1
+			improved_ship_hull_light = 1
+			improved_ship_hull_cruiser = 1
+			improved_ship_hull_carrier = 1
+			advanced_dp_light_battery = 1
+			improved_sonar = 1
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				improved_small_airframe = 1
+				basic_large_airframe = 1
+				aa_cannon_1 = 1
+				engines_3 = 1
+				range_improvements = 1
+			}
+			else = {
+				set_technology = {
+					fighter1 = 1
+					fighter2 = 1
+					heavy_fighter1 = 1
+					heavy_fighter2 = 1
+					CAS2 = 1
+					naval_bomber2 = 1
+					tactical_bomber1 = 1
+					tactical_bomber2 = 1
+					strategic_bomber1 = 1
+					cv_CAS1 = 1
+					cv_fighter1 = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_naval_torpedo_cruiser }
+	}
+}
+
+give_starting_tech_EQG = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_ERI = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_EST = {
+	set_technology = {
+		infantry_weapons1 = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		tech_support = 1
+		basic_train = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_recon = 1	
+			tech_engineers = 1
+			interwar_artillery = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		set_technology = {
+			basic_ship_hull_submarine = 1
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				bba_early_transport_plane = 1
+			}
+			else = {
+				set_technology = {
+					fighter1 = 1
+					early_bomber = 1
+					CAS1 = 1
+					naval_bomber1 = 1
+					early_transport_plane = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_ETH = {
+	set_technology = {
+		tech_mountaineers = 1
+		tech_trucks = 1
+		basic_train = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_FIJ = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_FIN = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		tech_support = 1
+		tech_recon = 1
+		tech_engineers = 1
+		basic_train = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		coastal_defense_ships = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antitank = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			support_weapons2 = 1
+			motorised_infantry = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			dispersed_industry3 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				gwtank_chassis = 1
+				basic_light_tank_chassis = 1
+				improved_light_tank_chassis = 1
+				armor_tech_1 = 1
+				engine_tech_1 = 1
+			}
+			else = {
+				set_technology = {
+					gwtank = 1
+					basic_light_tank = 1
+					improved_light_tank = 1
+				}
+			}
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				iw_small_airframe = 1
+				basic_small_airframe = 1
+				aa_lmg = 1
+				engines_1 = 1
+				bba_early_transport_plane = 1
+			}
+			else = {
+				set_technology = {
+					early_fighter = 1
+					early_bomber = 1
+					CAS1 = 1
+					early_transport_plane = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_FOR = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_FRA = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		tech_mountaineers = 1
+		tech_trucks = 1
+		motorised_infantry = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		fuel_silos = 1
+		fuel_refining = 1
+		basic_train = 1
+		basic_fortification_tech = 1
+	}
+
+	if = {
+		limit = { has_dlc = "La Resistance" }
+
+		set_technology = {
+			armored_car1 = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			basic_heavy_tank_chassis = 1
+			improved_light_tank_chassis = 1
+			armor_tech_1 = 1
+			engine_tech_1 = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+				basic_heavy_tank = 1
+				improved_light_tank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_heavy_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_heavy_armor_scheme = 1
+		basic_cruiser_armor_scheme = 1
+		mtg_transport = 1
+		basic_dp_light_battery = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			air_torpedoe_1 = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				naval_bomber1 = 1
+				cv_early_fighter = 1
+				cv_naval_bomber1 = 1
+				early_bomber = 1
+				tactical_bomber1 = 1
+				CAS1 = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	complete_special_project = { project = sp:sp_naval_cruiser_submarine }
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antitank = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			support_weapons2 = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_refining2 = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			dispersed_industry3 = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				improved_light_tank_chassis = 1
+				basic_medium_tank_chassis = 1
+				basic_heavy_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					improved_light_tank = 1
+					basic_medium_tank = 1
+					basic_heavy_tank = 1
+				}
+			}
+		}
+
+		set_technology = {
+			improved_ship_hull_light = 1
+			improved_ship_hull_heavy = 1
+			basic_ship_hull_carrier = 1
+			improved_heavy_armor_scheme = 1
+			improved_light_battery = 1
+			improved_ship_torpedo_launcher = 1
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				basic_small_airframe = 1
+				improved_small_airframe = 1
+				basic_medium_airframe = 1
+				basic_large_airframe = 1
+				engines_3 = 1
+				improved_medium_airframe = 1
+			}
+			else = {
+				set_technology = {
+					fighter1 = 1
+					fighter2 = 1
+					heavy_fighter1 = 1
+					tactical_bomber2 = 1
+					strategic_bomber1 = 1
+					cv_fighter1 = 1
+					cv_CAS1 = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_land_stronghold_network }
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_FSM = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_GAB = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_GAM = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_GDC = {
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			iw_small_airframe = 1
+			engines_1 = 1
+			aa_lmg = 1
+			early_bombs = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_bomber = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_GDL = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_GER = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_recon = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_mountaineers = 1
+		tech_trucks = 1
+		motorised_infantry = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		basic_train = 1
+		synth_oil_experiments = 1
+		fuel_silos = 1
+		fuel_refining = 1
+	}
+
+	if = {
+		limit = { has_dlc = "La Resistance" }
+
+		set_technology = {
+			armored_car1 = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			improved_light_tank_chassis = 1
+			basic_heavy_tank_chassis = 1
+			engine_tech_1 = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+				improved_light_tank = 1
+				basic_heavy_tank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		panzerschiffe = 1
+		pre_dreadnoughts = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		mtg_transport = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_heavy_battery = 1
+		basic_depth_charges = 1
+		sonar = 1
+		basic_cruiser_armor_scheme = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_medium_airframe = 1
+			iw_large_airframe = 1
+			air_torpedoe_1 = 1
+			bba_early_transport_plane = 1
+		}
+		if = {
+			limit = { has_dlc = "La Resistance" }
+
+			set_technology = {
+				photo_reconnaisance = 1
+			}
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				fighter1 = 1
+				early_bomber = 1
+				tactical_bomber1 = 1
+				strategic_bomber1 = 1
+				CAS1 = 1
+				naval_bomber1 = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antitank = 1
+			infantry_weapons2 = 1
+			improved_infantry_weapons = 1
+			support_weapons = 1
+			support_weapons2 = 1
+			paratroopers = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			cavity_magnatron = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			oil_processing = 1
+			fuel_refining2 = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			construction4 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			dispersed_industry3 = 1
+			dispersed_industry4 = 1
+			basic_fortification_tech = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				basic_medium_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					basic_medium_tank = 1
+				}
+			}
+		}
+
+		set_technology = {
+			improved_ship_hull_cruiser = 1
+			basic_ship_hull_heavy = 1
+			early_ship_hull_carrier = 1
+			basic_ship_hull_carrier = 1
+			improved_heavy_battery = 1
+			basic_heavy_armor_scheme = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				CAS2 = 1
+				heavy_fighter1 = 1
+			}
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			complete_special_project = { project = sp:sp_land_flamethrower_tank }
+		}
+		complete_special_project = { project = sp:sp_naval_midget_submarine }
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_GHA = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_GNA = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_GNB = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_GRE = {
+	set_technology = {
+		tech_mountaineers = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		fuel_silos = 1
+		synth_oil_experiments = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+		pre_dreadnoughts = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_bomber = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_engineers2 = 1
+			interwar_artillery = 1
+			interwar_antitank = 1
+			infantry_weapons1 = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			dispersed_industry3 = 1
+		}
+
+		set_technology = {
+			basic_light_battery = 1
+			basic_depth_charges = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				CAS1 = 1
+				naval_bomber1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_GSM = {
+	set_technology = {
+		gw_artillery = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_GUA = {
+	set_technology = {
+		gw_artillery = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			infantry_weapons1 = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_GUM = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_GXC = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_GYA = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_HAI = {
+	give_starting_tech_COS = yes
+}
+
+give_starting_tech_HBC = {
+	give_starting_tech_GXC = yes
+}
+
+give_starting_tech_HOL = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_recon = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		fuel_silos = 1
+		fuel_refining = 1
+		marines = 1
+		basic_train = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			early_bombs = 1
+			bba_early_transport_plane = 1
+			air_torpedoe_1 = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_bomber = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_engineers = 1
+			motorised_infantry = 1
+			interwar_artillery = 1
+			interwar_antitank = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			marines = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			oil_processing = 1
+			fuel_refining2 = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+		}
+
+		set_technology = {
+			improved_ship_hull_submarine = 1
+			basic_ship_hull_light = 1
+			basic_light_battery = 1
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				engines_2 = 1
+				basic_medium_airframe = 1
+				basic_small_airframe = 1
+				aa_cannon_1 = 1
+			}
+			else = {
+				set_technology = {
+					fighter1 = 1
+					tactical_bomber1 = 1
+					naval_bomber1 = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_HON = {
+	give_starting_tech_COS = yes
+}
+
+give_starting_tech_HUN = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_recon = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		fuel_silos = 1
+		basic_train = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			iw_small_airframe = 1
+			engines_1 = 1
+			early_bombs = 1
+			aa_lmg = 1
+		}
+		if = {
+			limit = { has_dlc = "La Resistance" }
+
+			set_technology = {
+				photo_reconnaisance = 1
+			}
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				CAS1 = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antitank = 1
+			interwar_antiair = 1
+			tech_engineers = 1
+			tech_mountaineers = 1
+			paratroopers = 1
+			motorised_infantry = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			tech_logistics_company = 1
+			tech_signal_company = 1
+			tech_maintenance_company = 1
+			tech_field_hospital = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			fuel_refining = 1
+		}
+
+		if = {
+			limit = { has_dlc = "La Resistance" }
+
+			set_technology = {
+				armored_car1 = 1
+			}
+		}
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				basic_light_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					basic_light_tank = 1
+				}
+			}
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				basic_small_airframe = 1
+				aircraft_construction = 1
+				engines_2 = 1
+			}
+			else = {
+				set_technology = {
+					fighter1 = 1
+					early_bomber = 1
+					tactical_bomber1 = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_ICE = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_bomber = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			gw_artillery = 1
+			interwar_artillery = 1
+			interwar_antiair = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			tech_trucks = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_INS = {
+	set_technology = {
+		tech_support = 1
+		tech_recon = 1
+		fuel_silos = 1
+	}
+
+	set_technology = {
+		mtg_transport = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		basic_battery = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			gw_artillery = 1 # interwar_artillery in vanilla, but gw is missing. Reducing it instead to remove the gap.
+			interwar_antiair = 1
+			infantry_weapons1 = 1 # infantry_weapons2 in vanilla, but 1 is missing. Reducing it instead to remove the gap.
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_refining = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				gwtank_chassis = 1
+				basic_light_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					gwtank = 1
+					basic_light_tank = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_IRE = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		fuel_silos = 1
+		basic_train = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			gw_artillery = 1
+			interwar_antiair = 1
+			infantry_weapons2 = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			fuel_refining = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_IRQ = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		fuel_silos = 1
+	}
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_support = 1
+			tech_recon = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			gw_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_refining = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_ITA = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_mountaineers = 1
+		tech_trucks = 1
+		motorised_infantry = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		fuel_silos = 1
+		fuel_refining = 1
+		basic_train = 1
+	}
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	if = {
+		limit = { has_dlc = "La Resistance" }
+
+		set_technology = {
+			armored_car1 = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		basic_depth_charges = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_battery = 1
+		basic_light_battery = 1
+		basic_heavy_armor_scheme = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		mtg_transport = 1
+		coastal_defense_ships = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			engines_1 = 1
+			engines_2 = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_small_airframe = 1
+			basic_medium_airframe = 1
+			air_torpedoe_1 = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_bomber = 1
+				naval_bomber1 = 1
+				CAS1 = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antitank = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			support_weapons2 = 1
+			tech_recon = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_refining2 = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				improved_light_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					improved_light_tank = 1
+				}
+			}
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				aa_hmg = 1
+				improved_small_airframe = 1
+			}
+			else = {
+				set_technology = {
+					fighter1 = 1
+					fighter2 = 1
+					tactical_bomber1 = 1
+					tactical_bomber2 = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_naval_midget_submarine }
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_IVO = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_JAM = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_JAP = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_recon = 1
+		tech_engineers = 1
+		tech_trucks = 1
+		motorised_infantry = 1
+		marines  = 1
+		paratroopers = 1
+		gw_artillery = 1
+		bicycle_infantry = 1 # They start with it now 
+		JAP_silver_wheels = 1 # Small bicycle terrain boost 
+		JAP_lighter_tanks = 1 # Small tank terrain boost 
+		tech_military_police = 1
+
+		basic_train = 1
+		fuel_silos = 1
+		synth_oil_experiments = 1
+		fuel_refining = 1
+	}
+
+	if = {
+		limit = { has_dlc = "La Resistance" }
+
+		set_technology = {
+			armored_car1 = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			improved_light_tank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+				improved_light_tank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_heavy_battery = 1
+		improved_ship_torpedo_launcher = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		mtg_transport = 1
+		coastal_defense_ships = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_dp_light_battery = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_small_airframe = 1
+			air_torpedoe_1 = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				cv_early_fighter = 1
+				cv_CAS1 = 1
+				cv_naval_bomber1 = 1
+				early_fighter = 1
+				naval_bomber1 = 1
+				early_bomber = 1
+				CAS1 = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	complete_special_project = { project = sp:sp_naval_cruiser_submarine }
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			oil_processing = 1
+			fuel_refining2 = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		set_technology = {
+			improved_ship_hull_submarine = 1
+			basic_ship_hull_light = 1
+			improved_ship_hull_light = 1
+			improved_ship_hull_cruiser = 1
+			improved_ship_hull_carrier = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				basic_medium_tank = 1
+			}
+			else = {
+				set_technology = {
+					basic_medium_tank_chassis = 1
+				}
+			}
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				basic_medium_airframe = 1
+				range_improvements = 1
+			}
+			else = {
+				set_technology = {
+					cv_fighter1 = 1
+					fighter1 = 1
+					tactical_bomber1 = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_naval_torpedo_cruiser }
+		complete_special_project = { project = sp:sp_naval_super_heavy_battleship }
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_JOR = {
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	if = {
+		limit = { has_dlc = "La Resistance" }
+
+		set_technology = {
+			tech_trucks = 1
+			armored_car1 = 1 # ESI addition, there's a British Armored Car division in Jordan if you have LaR.
+		}
+		else = {
+			if = {
+				limit = { has_dlc = "No Step Back" }
+
+				set_technology = {
+					gwtank_chassis = 1
+				}
+				else = {
+					set_technology = {
+						gwtank = 1
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_support = 1
+			tech_recon = 1
+			support_weapons = 1
+			gw_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_KEN = {
+	set_technology = {
+		tech_mountaineers = 1
+		tech_trucks = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_KHM = {
+	set_technology = {
+		tech_mountaineers = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_KOR = {
+	set_technology = {
+		tech_trucks = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_KUR = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_mountaineers = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				fighter1 = 1
+				early_bomber = 1
+				tactical_bomber1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_KUW = {
+	give_starting_tech_BHR = yes
+}
+
+give_starting_tech_LAT = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		tech_support = 1
+		basic_train = 1
+	}
+
+	set_technology = {
+		basic_torpedo = 1
+		submarine_mine_laying = 1
+		early_ship_hull_submarine = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_engineers = 1
+			interwar_artillery = 1
+			interwar_antiair = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				fighter1 = 1
+				early_bomber = 1
+				tactical_bomber1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_LBA = {
+	give_starting_tech_EGY = yes
+}
+
+give_starting_tech_LEB = {
+	set_technology = {
+		tech_trucks = 1
+	}
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_support = 1
+			tech_recon = 1
+			support_weapons = 1
+			gw_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_LIB = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_LIT = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		tech_support = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_engineers = 1
+			interwar_artillery = 1
+			interwar_antiair = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				iw_small_airframe = 1
+				engines_1 = 1
+				engines_2 = 1
+				aa_lmg = 1
+				early_bombs = 1
+			}
+			else = {
+				set_technology = {
+					early_bomber = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_LUX = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		tech_support = 1
+		tech_engineers = 1
+		basic_train = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_recon = 1
+			interwar_artillery = 1
+			interwar_antiair = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				fighter1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_MAD = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_MAL = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		tech_trucks = 1
+		motorised_infantry = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		electronic_mechanical_engineering = 1
+		radio = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		mtg_transport = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_battery = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_medium_airframe = 1
+			basic_small_airframe = 1
+			air_torpedoe_1 = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				cv_early_fighter = 1
+				cv_naval_bomber1 = 1
+				naval_bomber1 = 1
+				early_bomber = 1
+				CAS1 = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	complete_special_project = { project = sp:sp_air_radar }
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antiair = 1
+			tech_recon = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+	}
+}
+
+give_starting_tech_MAN = {
+	set_technology = {
+		gw_artillery = 1
+		tech_trucks = 1
+		bicycle_infantry = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_MEN = {
+	set_technology = {
+		tech_mountaineers = 1
+		tech_support = 1
+		gw_artillery = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_MEX = {
+	set_technology = {
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		fuel_silos = 1
+		fuel_refining = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_battery = 1
+		coastal_defense_ships = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_bomber = 1
+				CAS1 = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons1 = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_refining2 = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			dispersed_industry3 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_MLD = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_MLI = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_MLT = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_MLW = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_MON = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			support_weapons = 1
+			gw_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_MOR = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_support = 1
+			tech_recon = 1
+			support_weapons = 1
+			gw_artillery = 1
+			tech_trucks = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_MRT = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_MZB = {
+	give_starting_tech_ANG = yes
+}
+
+give_starting_tech_NEP = {
+	set_technology = {
+		tech_mountaineers = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			gw_artillery = 1
+			tech_support = 1
+			tech_engineers = 1
+			infantry_weapons1 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_NGA = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_NGR = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_NIC = {
+	set_technology = {
+		tech_trucks = 1
+		gw_artillery = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons1 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_NMB = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_NOR = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		basic_train = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_bomber = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			support_weapons2 = 1 
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				gwtank_chassis = 1
+				basic_light_tank_chassis = 1
+				improved_light_tank_chassis = 1
+				armor_tech_1 = 1
+				engine_tech_1 = 1
+			}
+			else = {
+				set_technology = {
+					gwtank = 1
+					basic_light_tank = 1
+					improved_light_tank = 1
+				}
+			}
+		}
+
+		set_technology = {
+			basic_depth_charges = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_NXM = {
+	give_starting_tech_GSM = yes
+}
+
+give_starting_tech_NZL = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				naval_bomber1 = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antitank = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			support_weapons2 = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				basic_light_tank_chassis = 1
+				improved_light_tank_chassis = 1
+				basic_medium_tank_chassis = 1
+				basic_heavy_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					basic_light_tank = 1
+					improved_light_tank = 1
+					basic_medium_tank = 1
+					basic_heavy_tank = 1
+				}
+			}
+		}
+
+		set_technology = {
+			basic_ship_hull_light = 1
+			basic_ship_hull_cruiser = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				fighter1 = 1
+				early_bomber = 1
+				tactical_bomber1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_OMA = {
+	set_technology = {
+		tech_trucks = 1
+	}
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_PAL = {
+	give_starting_tech_LEB = yes
+}
+
+give_starting_tech_PAN = {
+	set_technology = {
+		tech_trucks = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			infantry_weapons1 = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_PAR = {
+	set_technology = {
+		tech_support = 1
+		tech_trucks = 1
+		gw_artillery = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antiair = 1
+			infantry_weapons1 = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				CAS1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_PER = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		tech_support = 1
+		gw_artillery = 1
+		tech_military_police = 1
+		tech_engineers = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_support = 1
+			tech_recon = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			gw_artillery = 1
+			interwar_antiair = 1
+			interwar_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				gwtank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					gwtank = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_PHI = {
+	set_technology = {
+		tech_trucks = 1
+		tech_support = 1
+		tech_recon = 1
+		tech_engineers = 1
+		gw_artillery = 1
+	}
+	if = {
+		limit = { has_dlc = "No Compromise, No Surrender" }
+
+		set_technology = {
+			rangers_tech = 1
+		}
+	}
+
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			infantry_weapons1 = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+		}
+
+		set_technology = {
+			basic_ship_hull_light = 1
+			basic_torpedo = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_PNG = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_POL = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_mountaineers = 1
+		tech_trucks = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		fuel_silos = 1
+		synth_oil_experiments = 1
+		basic_train = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			engines_1 = 1
+			early_bombs = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_bomber = 1
+				CAS1 = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			motorised_infantry = 1
+			support_weapons = 1
+			interwar_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			construction4 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+			concentrated_industry4 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				basic_light_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					basic_light_tank = 1
+				}
+			}
+		}
+
+		set_technology = {
+			basic_ship_hull_light = 1
+			basic_light_battery = 1
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				iw_medium_airframe = 1
+				basic_medium_airframe = 1
+				engines_2 = 1
+				improved_small_airframe = 1
+				bba_early_transport_plane = 1
+			}
+			else = {
+				set_technology = {
+					tactical_bomber1 = 1
+					early_transport_plane = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_POR = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		tech_support = 1
+		tech_engineers = 1
+		basic_train = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_PRC = {
+	set_technology = {
+		tech_trucks = 1
+		militia_tech = 1
+		gw_artillery = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_mountaineers = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			fuel_refining = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_PRU = {
+	set_technology = {
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons1 = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				tactical_bomber1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_QAT = {
+	give_starting_tech_BHR = yes
+}
+
+give_starting_tech_RAJ = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		fuel_silos = 1
+		fuel_refining = 1
+		basic_train = 1
+		gw_artillery = 1
+	}
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+		}
+		else = {
+			set_technology = {
+				CAS1 = 1
+				early_fighter = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			cavity_magnatron = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_refining2 = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			dispersed_industry3 = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				fighter1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_RCG = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_ROM = {
+	set_technology = {
+		tech_support = 1
+		tech_engineers = 1
+		tech_mountaineers = 1
+		tech_trucks = 1
+		motorised_infantry = 1
+		infantry_weapons1 = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		basic_train = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			engines_1 = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antitank = 1
+			tech_recon = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				engines_2 = 1
+				basic_small_airframe = 1
+				improved_small_airframe = 1
+			}
+			else = {
+				set_technology = {
+					fighter1 = 1
+					early_bomber = 1
+					tactical_bomber1 = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_RWA = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_SAF = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		gw_artillery = 1
+		fuel_silos = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			support_weapons2 = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_refining = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				improved_light_tank_chassis = 1
+				basic_medium_tank_chassis = 1
+				basic_heavy_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					improved_light_tank = 1
+					basic_medium_tank = 1
+					basic_heavy_tank = 1
+				}
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				fighter1 = 1
+				tactical_bomber1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_SAM = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_SAU = {
+	set_technology = {
+		tech_trucks = 1
+	}
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_support = 1
+			tech_recon = 1
+			support_weapons = 1
+			gw_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_SEN = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_SHX = {
+	give_starting_tech_GSM = yes
+}
+
+give_starting_tech_SIA = {
+	set_technology = {
+		gw_artillery = 1
+		interwar_antiair = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_support = 1
+			tech_recon = 1
+			support_weapons = 1
+			interwar_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				gwtank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					gwtank = 1
+				}
+			}
+		}
+
+		set_technology = {
+			early_ship_hull_submarine = 1
+			basic_ship_hull_submarine = 1
+			early_ship_hull_cruiser = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_SIC = {
+	give_starting_tech_GXC = yes
+}
+
+give_starting_tech_SIE = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_SIK = {
+	set_technology = {
+		gw_artillery = 1
+		tech_mountaineers = 1
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_SND = {
+	give_starting_tech_GXC = yes
+}
+
+give_starting_tech_SOL = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_SOM = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_SOV = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_recon = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_military_police = 1
+		tech_mountaineers = 1
+		tech_trucks = 1
+		motorised_infantry = 1
+		paratroopers = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		fuel_silos = 1
+		fuel_refining = 1
+		basic_train = 1
+		synth_oil_experiments = 1
+	}
+
+	if = {
+		limit = { has_dlc = "La Resistance" }
+
+		set_technology = {
+			armored_car1 = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			improved_light_tank_chassis = 1
+			engine_tech_1 = 1
+			engine_tech_2 = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			early_bombs = 1
+			engines_1 = 1
+			engines_2 = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_small_airframe = 1
+			basic_medium_airframe = 1
+			aircraft_construction = 1
+			air_torpedoe_1 = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				fighter1 = 1
+				early_bomber = 1
+				strategic_bomber1 = 1
+				naval_bomber1 = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antitank = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			support_weapons2 = 1
+			paratroopers = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			oil_processing = 1
+			fuel_refining2 = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+			concentrated_industry3 = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				basic_heavy_tank_chassis = 1
+				basic_medium_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					improved_light_tank = 1
+					basic_heavy_tank = 1
+					basic_medium_tank = 1 
+				}
+			}
+		}
+
+		set_technology = {
+			improved_ship_hull_light = 1
+			improved_ship_hull_submarine = 1
+			basic_ship_hull_cruiser = 1
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				basic_large_airframe = 1
+			}
+			else = {
+				set_technology = {
+					CAS1 = 1
+					tactical_bomber1 = 1
+				}
+			}
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			complete_special_project = { project = sp:sp_land_flamethrower_tank }
+		}
+		complete_special_project = { project = sp:sp_naval_cruiser_submarine }
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_SPR = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_recon = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_mountaineers = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		basic_train = 1
+	}
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_bomber = 1
+				naval_bomber1 = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_dlc = "Gotterdammerung" }
+
+		complete_special_project = { project = sp:sp_air_helicopter }
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antitank = 1
+			motorised_infantry = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			support_weapons2 = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			dispersed_industry3 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				gwtank_chassis = 1
+				basic_light_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					gwtank = 1
+					basic_light_tank = 1
+				}
+			}
+		}
+
+		set_technology = {
+			basic_light_battery = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				fighter1 = 1
+				CAS1 = 1
+				tactical_bomber1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_SRL = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_SUD = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_SUR = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_SWE = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		tech_recon = 1
+		tech_support = 1
+		tech_engineers = 1
+		basic_train = 1
+		interwar_antitank = 1
+	}
+
+	if = {
+		limit = { has_dlc = "La Resistance" }
+
+		set_technology = {
+			armored_car1 = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+		early_ship_hull_carrier = 1
+		early_ship_hull_heavy = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			engines_1 = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				CAS1 = 1
+				early_fighter = 1
+				naval_bomber1 = 1
+				cv_naval_bomber1 = 1
+				early_bomber = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			improved_oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				improved_light_tank_chassis = 1
+				basic_medium_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					improved_light_tank = 1
+					basic_medium_tank = 1
+				}
+			}
+		}
+
+		set_technology = {
+			basic_ship_hull_cruiser = 1
+			early_ship_hull_carrier = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				tactical_bomber1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_SWI = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		tech_mountaineers = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		fuel_silos = 1
+		basic_train = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			gw_artillery = 1
+			interwar_artillery = 1
+			interwar_antiair = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			fuel_refining = 1
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				fighter1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_SYR = {
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			tech_support = 1
+			tech_recon = 1
+			support_weapons = 1
+			gw_artillery = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_silos = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_TAH = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_TAN = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			infantry_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			concentrated_industry = 1
+			concentrated_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_TIB = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_TML = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_TOG = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_TRI = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_TUN = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_TUR = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_mountaineers = 1
+		tech_recon = 1
+		tech_support = 1
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		basic_train = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_bomber = 1
+				CAS1 = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		if = {
+			limit = { has_dlc = "No Step Back" }
+
+			set_technology = {
+				improved_light_tank_chassis = 1
+				basic_medium_tank_chassis = 1
+			}
+			else = {
+				set_technology = {
+					improved_light_tank = 1
+					basic_medium_tank = 1
+				}
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			set_technology = {
+				fighter1 = 1
+				tactical_bomber1 = 1
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_TZN = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_UAE = {
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_UGA = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_URG = {
+	set_technology = {
+		tech_trucks = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		tech_support = 1
+		tech_engineers = 1
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			infantry_weapons1 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_USA = {
+	set_technology = {
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		tech_recon = 1
+		tech_support = 1
+		tech_engineers = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		motorised_infantry = 1
+		fuel_silos = 1
+		fuel_refining = 1
+		marines = 1
+		basic_train = 1
+		engine_tech_1 = 1
+	}
+
+	if = {
+		limit = { has_dlc = "La Resistance" }
+
+		set_technology = {
+			armored_car1 = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		basic_dp_light_battery = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_medium_airframe = 1
+			engines_1 = 1
+			engines_2 = 1
+			aa_lmg = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			air_torpedoe_1 = 1
+			bba_early_transport_plane = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				cv_early_fighter = 1
+				cv_naval_bomber1 = 1
+				cv_CAS1 = 1
+				naval_bomber1 = 1
+				CAS1 = 1
+				early_bomber = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			interwar_antitank = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+			support_weapons2 = 1
+			marines = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			#industry
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			synth_oil_experiments = 1
+			oil_processing = 1
+			fuel_refining2 = 1
+			fuel_refining3 = 1
+			construction1 = 1
+			construction2 = 1
+			construction3 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+			dispersed_industry3 = 1
+		}
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			set_technology = {
+				basic_encryption = 1
+				basic_decryption = 1
+			}
+		}
+
+		set_technology = {
+			improved_ship_hull_light = 1
+			basic_ship_hull_heavy = 1
+			improved_ship_hull_heavy = 1
+			improved_sonar = 1
+			improved_ship_torpedo_launcher = 1
+			improved_heavy_battery = 1
+			advanced_dp_light_battery = 3
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				iw_large_airframe = 1
+				basic_large_airframe = 1
+				improved_small_airframe = 1
+				aa_hmg = 1
+				air_torpedoe_1 = 1
+			}
+			else = {
+				set_technology = {
+					fighter1 = 1
+					cv_fighter1 = 1
+					heavy_fighter1 = 1
+					tactical_bomber1 = 1
+					CAS2 = 1
+					strategic_bomber1 = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
+		complete_special_project = { project = sp:sp_naval_cruiser_submarine }
+		complete_special_project = { project = sp:sp_air_radar }
+		if = {
+			limit = { has_dlc = "Gotterdammerung" }
+
+			complete_special_project = { project = sp:sp_air_helicopter }
+		}
+	}
+}
+
+give_starting_tech_VEN = {
+	set_technology = {
+		tech_trucks = 1
+		gw_artillery = 1
+		fuel_silos = 1
+		fuel_refining = 1
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons1 = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			advanced_machine_tools = 1
+			fuel_refining2 = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_VOL = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_WES = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_XIC = {
+	give_starting_tech_GXC = yes
+}
+
+give_starting_tech_XSM = {
+	give_starting_tech_GSM = yes
+}
+
+give_starting_tech_YEM = {
+	if = {
+		limit = { has_dlc = "Battle for the Bosporus" }
+
+		set_technology = {
+			camelry = 1
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			construction1 = 1
+			construction2 = 1
+			dispersed_industry = 1
+			dispersed_industry2 = 1
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_YUG = {
+	set_technology = {
+		tech_support = 1
+		tech_engineers = 1
+		tech_mountaineers = 1
+		infantry_weapons1 = 1
+		tech_trucks = 1
+		interwar_antitank = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		basic_train = 1
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+			}
+		}
+	}
+
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+	}
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			bba_early_transport_plane = 1
+			engines_1 = 1
+			aa_lmg = 1
+			aa_cannon_1 = 1
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_transport_plane = 1
+			}
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		set_technology = {
+			interwar_artillery = 1
+			infantry_weapons2 = 1
+			support_weapons = 1
+
+			electronic_mechanical_engineering = 1
+			radio = 1
+			mechanical_computing = 1
+			computing_machine = 1
+
+			basic_machine_tools = 1
+			improved_machine_tools = 1
+			synth_oil_experiments = 1
+			fuel_silos = 1
+			oil_processing = 1
+			construction1 = 1
+			concentrated_industry = 1
+		}
+
+		set_technology = {
+			basic_light_battery = 1
+		}
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_technology = {
+				engines_2 = 1
+			}
+			else = {
+				set_technology = {
+					fighter1 = 1
+					early_bomber = 1
+					tactical_bomber1 = 1
+					CAS1 = 1
+					naval_bomber1 = 1
+				}
+			}
+		}
+
+		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+
+give_starting_tech_YUN = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech_ZAM = {
+	give_starting_tech_BRD = yes
+}
+
+give_starting_tech_ZIM = {
+	give_starting_tech_BAS = yes
+}
+
+give_starting_tech = {
+	if = {
+		limit = { state_originally_from_AFA = yes }
+
+		give_starting_tech_AFA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_AFG = yes }
+
+		give_starting_tech_AFG = yes
+	}
+	else_if = {
+		limit = { state_originally_from_ALB = yes }
+
+		give_starting_tech_ALB = yes
+	}
+	else_if = {
+		limit = { state_originally_from_ALG = yes }
+
+		give_starting_tech_ALG = yes
+	}
+	else_if = {
+		limit = { state_originally_from_ANG = yes }
+
+		give_starting_tech_ANG = yes
+	}
+	else_if = {
+		limit = { state_originally_from_ARG = yes }
+
+		give_starting_tech_ARG = yes
+	}
+	else_if = {
+		limit = { state_originally_from_AST = yes }
+
+		give_starting_tech_AST = yes
+	}
+	else_if = {
+		limit = { state_originally_from_AUS = yes }
+
+		give_starting_tech_AUS = yes
+	}
+	else_if = {
+		limit = { state_originally_from_BAS = yes }
+
+		give_starting_tech_BAS = yes
+	}
+	else_if = {
+		limit = { state_originally_from_BEL = yes }
+
+		give_starting_tech_BEL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_BHR = yes }
+
+		give_starting_tech_BHR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_BHU = yes }
+
+		give_starting_tech_BHU = yes
+	}
+	else_if = {
+		limit = { state_originally_from_BLZ = yes }
+
+		give_starting_tech_BLZ = yes
+	}
+	else_if = {
+		limit = { state_originally_from_BOL = yes }
+
+		give_starting_tech_BOL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_BOT = yes }
+
+		give_starting_tech_BOT = yes
+	}
+	else_if = {
+		limit = { state_originally_from_BRA = yes }
+
+		give_starting_tech_BRA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_BRD = yes }
+
+		give_starting_tech_BRD = yes
+	}
+	else_if = {
+		limit = { state_originally_from_BRM = yes }
+
+		give_starting_tech_BRM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_BUL = yes }
+
+		give_starting_tech_BUL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_CAN = yes }
+
+		give_starting_tech_CAN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_CAR = yes }
+
+		give_starting_tech_CAR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_CAY = yes }
+
+		give_starting_tech_CAY = yes
+	}
+	else_if = {
+		limit = { state_originally_from_CBV = yes }
+
+		give_starting_tech_CBV = yes
+	}
+	else_if = {
+		limit = { state_originally_from_CHA = yes }
+
+		give_starting_tech_CHA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_CHI = yes }
+
+		give_starting_tech_CHI = yes
+	}
+	else_if = {
+		limit = { state_originally_from_CHL = yes }
+
+		give_starting_tech_CHL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_CMR = yes }
+
+		give_starting_tech_CMR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_COG = yes }
+
+		give_starting_tech_COG = yes
+	}
+	else_if = {
+		limit = { state_originally_from_COL = yes }
+
+		give_starting_tech_COL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_COS = yes }
+
+		give_starting_tech_COS = yes
+	}
+	else_if = {
+		limit = { state_originally_from_CRC = yes }
+
+		give_starting_tech_CRC = yes
+	}
+	else_if = {
+		limit = { state_originally_from_CUB = yes }
+
+		give_starting_tech_CUB = yes
+	}
+	else_if = {
+		limit = { state_originally_from_CYP = yes }
+
+		give_starting_tech_CYP = yes
+	}
+	else_if = {
+		limit = { state_originally_from_CZE = yes }
+
+		give_starting_tech_CZE = yes
+	}
+	else_if = {
+		limit = { state_originally_from_DAH = yes }
+
+		give_starting_tech_DAH = yes
+	}
+	else_if = {
+		limit = { state_originally_from_DEN = yes }
+
+		give_starting_tech_DEN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_DJI = yes }
+
+		give_starting_tech_DJI = yes
+	}
+	else_if = {
+		limit = { state_originally_from_DOM = yes }
+
+		give_starting_tech_DOM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_ECU = yes }
+
+		give_starting_tech_ECU = yes
+	}
+	else_if = {
+		limit = { state_originally_from_EGY = yes }
+
+		give_starting_tech_EGY = yes
+	}
+	else_if = {
+		limit = { state_originally_from_ELS = yes }
+
+		give_starting_tech_ELS = yes
+	}
+	else_if = {
+		limit = { state_originally_from_UKD = yes }
+
+		give_starting_tech_ENG = yes
+	}
+	else_if = {
+		limit = { state_originally_from_EQG = yes }
+
+		give_starting_tech_EQG = yes
+	}
+	else_if = {
+		limit = { state_originally_from_ERI = yes }
+
+		give_starting_tech_ERI = yes
+	}
+	else_if = {
+		limit = { state_originally_from_EST = yes }
+
+		give_starting_tech_EST = yes
+	}
+	else_if = {
+		limit = { state_originally_from_ETH = yes }
+
+		give_starting_tech_ETH = yes
+	}
+	else_if = {
+		limit = { state_originally_from_FIJ = yes }
+
+		give_starting_tech_FIJ = yes
+	}
+	else_if = {
+		limit = { state_originally_from_FIN = yes }
+
+		give_starting_tech_FIN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_FOR = yes }
+
+		give_starting_tech_FOR = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				state_originally_from_FRA = yes
+				state_originally_from_CAM = yes
+				state_originally_from_LAO = yes
+				state_originally_from_VIN = yes
+			}
+		}
+
+		give_starting_tech_FRA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_FSM = yes }
+
+		give_starting_tech_FSM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GAB = yes }
+
+		give_starting_tech_GAB = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GAM = yes }
+
+		give_starting_tech_GAM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GDC = yes }
+
+		give_starting_tech_GDC = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GDL = yes }
+
+		give_starting_tech_GDL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GER = yes }
+
+		give_starting_tech_GER = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GHA = yes }
+
+		give_starting_tech_GHA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GNA = yes }
+
+		give_starting_tech_GNA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GNB = yes }
+
+		give_starting_tech_GNB = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GRE = yes }
+
+		give_starting_tech_GRE = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GSM = yes }
+
+		give_starting_tech_GSM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GUA = yes }
+
+		give_starting_tech_GUA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GUM = yes }
+
+		give_starting_tech_GUM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GXC = yes }
+
+		give_starting_tech_GXC = yes
+	}
+	else_if = {
+		limit = { state_originally_from_GYA = yes }
+
+		give_starting_tech_GYA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_HAI = yes }
+
+		give_starting_tech_HAI = yes
+	}
+	else_if = {
+		limit = { state_originally_from_HBC = yes }
+
+		give_starting_tech_HBC = yes
+	}
+	else_if = {
+		limit = { state_originally_from_HOL = yes }
+
+		give_starting_tech_HOL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_HON = yes }
+
+		give_starting_tech_HON = yes
+	}
+	else_if = {
+		limit = { state_originally_from_HUN = yes }
+
+		give_starting_tech_HUN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_ICE = yes }
+
+		give_starting_tech_ICE = yes
+	}
+	else_if = {
+		limit = { state_originally_from_INS = yes }
+
+		give_starting_tech_INS = yes
+	}
+	else_if = {
+		limit = { state_originally_from_IRE = yes }
+
+		give_starting_tech_IRE = yes
+	}
+	else_if = {
+		limit = { state_originally_from_IRQ = yes }
+
+		give_starting_tech_IRQ = yes
+	}
+	else_if = {
+		limit = { state_originally_from_ITA = yes }
+
+		give_starting_tech_ITA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_IVO = yes }
+
+		give_starting_tech_IVO = yes
+	}
+	else_if = {
+		limit = { state_originally_from_JAM = yes }
+
+		give_starting_tech_JAM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_JAP = yes }
+
+		give_starting_tech_JAP = yes
+	}
+	else_if = {
+		limit = { state_originally_from_JOR = yes }
+
+		give_starting_tech_JOR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_KEN = yes }
+
+		give_starting_tech_KEN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_KHM = yes }
+
+		give_starting_tech_KHM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_KOR = yes }
+
+		give_starting_tech_KOR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_KUR = yes }
+
+		give_starting_tech_KUR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_KUW = yes }
+
+		give_starting_tech_KUW = yes
+	}
+	else_if = {
+		limit = { state_originally_from_LAT = yes }
+
+		give_starting_tech_LAT = yes
+	}
+	else_if = {
+		limit = { state_originally_from_LBA = yes }
+
+		give_starting_tech_LBA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_LEB = yes }
+
+		give_starting_tech_LEB = yes
+	}
+	else_if = {
+		limit = { state_originally_from_LIB = yes }
+
+		give_starting_tech_LIB = yes
+	}
+	else_if = {
+		limit = { state_originally_from_LIT = yes }
+
+		give_starting_tech_LIT = yes
+	}
+	else_if = {
+		limit = { state_originally_from_LUX = yes }
+
+		give_starting_tech_LUX = yes
+	}
+	else_if = {
+		limit = { state_originally_from_MAD = yes }
+
+		give_starting_tech_MAD = yes
+	}
+	else_if = {
+		limit = { state_originally_from_MAL = yes }
+
+		give_starting_tech_MAL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_MAN = yes }
+
+		give_starting_tech_MAN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_MEN = yes }
+
+		give_starting_tech_MEN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_MEX = yes }
+
+		give_starting_tech_MEX = yes
+	}
+	else_if = {
+		limit = { state_originally_from_MLD = yes }
+
+		give_starting_tech_MLD = yes
+	}
+	else_if = {
+		limit = { state_originally_from_MLI = yes }
+
+		give_starting_tech_MLI = yes
+	}
+	else_if = {
+		limit = { state_originally_from_MLT = yes }
+
+		give_starting_tech_MLT = yes
+	}
+	else_if = {
+		limit = { state_originally_from_MLW = yes }
+
+		give_starting_tech_MLW = yes
+	}
+	else_if = {
+		limit = { state_originally_from_MON = yes }
+
+		give_starting_tech_MON = yes
+	}
+	else_if = {
+		limit = { state_originally_from_MOR = yes }
+
+		give_starting_tech_MOR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_MRT = yes }
+
+		give_starting_tech_MRT = yes
+	}
+	else_if = {
+		limit = { state_originally_from_MZB = yes }
+
+		give_starting_tech_MZB = yes
+	}
+	else_if = {
+		limit = { state_originally_from_NEP = yes }
+
+		give_starting_tech_NEP = yes
+	}
+	else_if = {
+		limit = { state_originally_from_NGA = yes }
+
+		give_starting_tech_NGA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_NGR = yes }
+
+		give_starting_tech_NGR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_NIC = yes }
+
+		give_starting_tech_NIC = yes
+	}
+	else_if = {
+		limit = { state_originally_from_NMB = yes }
+
+		give_starting_tech_NMB = yes
+	}
+	else_if = {
+		limit = { state_originally_from_NOR = yes }
+
+		give_starting_tech_NOR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_NXM = yes }
+
+		give_starting_tech_NXM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_NZL = yes }
+
+		give_starting_tech_NZL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_OMA = yes }
+
+		give_starting_tech_OMA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_PAL = yes }
+
+		give_starting_tech_PAL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_PAN = yes }
+
+		give_starting_tech_PAN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_PAR = yes }
+
+		give_starting_tech_PAR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_PER = yes }
+
+		give_starting_tech_PER = yes
+	}
+	else_if = {
+		limit = { state_originally_from_PHI = yes }
+
+		give_starting_tech_PHI = yes
+	}
+	else_if = {
+		limit = { state_originally_from_PNG = yes }
+
+		give_starting_tech_PNG = yes
+	}
+	else_if = {
+		limit = { state_originally_from_POL = yes }
+
+		give_starting_tech_POL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_POR = yes }
+
+		give_starting_tech_POR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_PRC = yes }
+
+		give_starting_tech_PRC = yes
+	}
+	else_if = {
+		limit = { state_originally_from_PRU = yes }
+
+		give_starting_tech_PRU = yes
+	}
+	else_if = {
+		limit = { state_originally_from_QAT = yes }
+
+		give_starting_tech_QAT = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				state_originally_from_RAJ = yes
+				state_originally_from_PAK = yes
+				state_originally_from_BAN = yes
+			}
+		}
+
+		give_starting_tech_RAJ = yes
+	}
+	else_if = {
+		limit = { state_originally_from_RCG = yes }
+
+		give_starting_tech_RCG = yes
+	}
+	else_if = {
+		limit = { state_originally_from_ROM = yes }
+
+		give_starting_tech_ROM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_RWA = yes }
+
+		give_starting_tech_RWA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SAF = yes }
+
+		give_starting_tech_SAF = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SAM = yes }
+
+		give_starting_tech_SAM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SAU = yes }
+
+		give_starting_tech_SAU = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SEN = yes }
+
+		give_starting_tech_SEN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SHX = yes }
+
+		give_starting_tech_SHX = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SIA = yes }
+
+		give_starting_tech_SIA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SIC = yes }
+
+		give_starting_tech_SIC = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SIE = yes }
+
+		give_starting_tech_SIE = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				state_originally_from_SIK = yes
+				state_originally_from_KUM = yes
+			}
+		}
+
+		give_starting_tech_SIK = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SND = yes }
+
+		give_starting_tech_SND = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SOL = yes }
+
+		give_starting_tech_SOL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SOM = yes }
+
+		give_starting_tech_SOM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SOV = yes }
+
+		give_starting_tech_SOV = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SPR = yes }
+
+		give_starting_tech_SPR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SRL = yes }
+
+		give_starting_tech_SRL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SUD = yes }
+
+		give_starting_tech_SUD = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SUR = yes }
+
+		give_starting_tech_SUR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SWE = yes }
+
+		give_starting_tech_SWE = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SWI = yes }
+
+		give_starting_tech_SWI = yes
+	}
+	else_if = {
+		limit = { state_originally_from_SYR = yes }
+
+		give_starting_tech_SYR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_TAH = yes }
+
+		give_starting_tech_TAH = yes
+	}
+	else_if = {
+		limit = { state_originally_from_TAN = yes }
+
+		give_starting_tech_TAN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_TIB = yes }
+
+		give_starting_tech_TIB = yes
+	}
+	else_if = {
+		limit = { state_originally_from_TML = yes }
+
+		give_starting_tech_TML = yes
+	}
+	else_if = {
+		limit = { state_originally_from_TOG = yes }
+
+		give_starting_tech_TOG = yes
+	}
+	else_if = {
+		limit = { state_originally_from_TRI = yes }
+
+		give_starting_tech_TRI = yes
+	}
+	else_if = {
+		limit = { state_originally_from_TUN = yes }
+
+		give_starting_tech_TUN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_TUR = yes }
+
+		give_starting_tech_TUR = yes
+	}
+	else_if = {
+		limit = { state_originally_from_TZN = yes }
+
+		give_starting_tech_TZN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_UAE = yes }
+
+		give_starting_tech_UAE = yes
+	}
+	else_if = {
+		limit = { state_originally_from_UGA = yes }
+
+		give_starting_tech_UGA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_URG = yes }
+
+		give_starting_tech_URG = yes
+	}
+	else_if = {
+		limit = { state_originally_from_USA = yes }
+
+		give_starting_tech_USA = yes
+	}
+	else_if = {
+		limit = { state_originally_from_VEN = yes }
+
+		give_starting_tech_VEN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_VOL = yes }
+
+		give_starting_tech_VOL = yes
+	}
+	else_if = {
+		limit = { state_originally_from_WES = yes }
+
+		give_starting_tech_WES = yes
+	}
+	else_if = {
+		limit = { state_originally_from_XIC = yes }
+
+		give_starting_tech_XIC = yes
+	}
+	else_if = {
+		limit = { state_originally_from_XSM = yes }
+
+		give_starting_tech_XSM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_YEM = yes }
+
+		give_starting_tech_YEM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_YUG = yes }
+
+		give_starting_tech_YUG = yes
+	}
+	else_if = {
+		limit = { state_originally_from_YUN = yes }
+
+		give_starting_tech_YUN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_ZAM = yes }
+
+		give_starting_tech_ZAM = yes
+	}
+	else_if = {
+		limit = { state_originally_from_ZIM = yes }
+
+		give_starting_tech_ZIM = yes
+	}
+	else_if = {
+		limit = { NOT = { original_tag = OOO } } # There are likely some random islands left. Give them basic 1939 tech too.
+
+		give_starting_tech_BLZ = yes
+	}
+}
+
+give_combined_tech = {
+	give_starting_tech_AFA = yes
+	give_starting_tech_AFG = yes
+	give_starting_tech_ALB = yes
+	give_starting_tech_ALG = yes
+	give_starting_tech_ANG = yes
+	give_starting_tech_ARG = yes
+	give_starting_tech_AST = yes
+	give_starting_tech_AUS = yes
+	give_starting_tech_BAS = yes
+	give_starting_tech_BEL = yes
+	give_starting_tech_BHR = yes
+	give_starting_tech_BHU = yes
+	give_starting_tech_BLZ = yes
+	give_starting_tech_BOL = yes
+	give_starting_tech_BOT = yes
+	give_starting_tech_BOT = yes
+	give_starting_tech_BRA = yes
+	give_starting_tech_BRD = yes
+	give_starting_tech_BRM = yes
+	give_starting_tech_BUL = yes
+	give_starting_tech_CAN = yes
+	give_starting_tech_CAR = yes
+	give_starting_tech_CAY = yes
+	give_starting_tech_CBV = yes
+	give_starting_tech_CHA = yes
+	give_starting_tech_CHI = yes
+	give_starting_tech_CHL = yes
+	give_starting_tech_CMR = yes
+	give_starting_tech_COG = yes
+	give_starting_tech_COL = yes
+	give_starting_tech_COS = yes
+	give_starting_tech_CRC = yes
+	give_starting_tech_CUB = yes
+	give_starting_tech_CYP = yes
+	give_starting_tech_CZE = yes
+	give_starting_tech_DAH = yes
+	give_starting_tech_DEN = yes
+	give_starting_tech_DJI = yes
+	give_starting_tech_DOM = yes
+	give_starting_tech_ECU = yes
+	give_starting_tech_EGY = yes
+	give_starting_tech_ELS = yes
+	give_starting_tech_ENG = yes
+	give_starting_tech_EQG = yes
+	give_starting_tech_ERI = yes
+	give_starting_tech_EST = yes
+	give_starting_tech_ETH = yes
+	give_starting_tech_FIJ = yes
+	give_starting_tech_FIN = yes
+	give_starting_tech_FOR = yes
+	give_starting_tech_FRA = yes
+	give_starting_tech_FSM = yes
+	give_starting_tech_GAB = yes
+	give_starting_tech_GAM = yes
+	give_starting_tech_GDC = yes
+	give_starting_tech_GDL = yes
+	give_starting_tech_GER = yes
+	give_starting_tech_GHA = yes
+	give_starting_tech_GNA = yes
+	give_starting_tech_GNB = yes
+	give_starting_tech_GSM = yes
+	give_starting_tech_GUA = yes
+	give_starting_tech_GXC = yes
+	give_starting_tech_GYA = yes
+	give_starting_tech_HAI = yes
+	give_starting_tech_HBC = yes
+	give_starting_tech_HOL = yes
+	give_starting_tech_HON = yes
+	give_starting_tech_HUN = yes
+	give_starting_tech_ICE = yes
+	give_starting_tech_INS = yes
+	give_starting_tech_IRE = yes
+	give_starting_tech_IRQ = yes
+	give_starting_tech_ITA = yes
+	give_starting_tech_IVO = yes
+	give_starting_tech_JAM = yes
+	give_starting_tech_JAP = yes
+	give_starting_tech_JOR = yes
+	give_starting_tech_KEN = yes
+	give_starting_tech_KHM = yes
+	give_starting_tech_KOR = yes
+	give_starting_tech_KUR = yes
+	give_starting_tech_KUW = yes
+	give_starting_tech_LAT = yes
+	give_starting_tech_LBA = yes
+	give_starting_tech_LEB = yes
+	give_starting_tech_LIB = yes
+	give_starting_tech_LIT = yes
+	give_starting_tech_LUX = yes
+	give_starting_tech_MAD = yes
+	give_starting_tech_MAL = yes
+	give_starting_tech_MAN = yes
+	give_starting_tech_MEN = yes
+	give_starting_tech_MEX = yes
+	give_starting_tech_MLD = yes
+	give_starting_tech_MLI = yes
+	give_starting_tech_MLT = yes
+	give_starting_tech_MLW = yes
+	give_starting_tech_MON = yes
+	give_starting_tech_MOR = yes
+	give_starting_tech_MRT = yes
+	give_starting_tech_MZB = yes
+	give_starting_tech_NEP = yes
+	give_starting_tech_NGA = yes
+	give_starting_tech_NGR = yes
+	give_starting_tech_NIC = yes
+	give_starting_tech_NMB = yes
+	give_starting_tech_NOR = yes
+	give_starting_tech_NXM = yes
+	give_starting_tech_NZL = yes
+	give_starting_tech_OMA = yes
+	give_starting_tech_PAL = yes
+	give_starting_tech_PAN = yes
+	give_starting_tech_PAR = yes
+	give_starting_tech_PER = yes
+	give_starting_tech_PHI = yes
+	give_starting_tech_PNG = yes
+	give_starting_tech_POL = yes
+	give_starting_tech_POR = yes
+	give_starting_tech_PRC = yes
+	give_starting_tech_PRU = yes
+	give_starting_tech_QAT = yes
+	give_starting_tech_RAJ = yes
+	give_starting_tech_RCG = yes
+	give_starting_tech_ROM = yes
+	give_starting_tech_RWA = yes
+	give_starting_tech_SAF = yes
+	give_starting_tech_SAM = yes
+	give_starting_tech_SAU = yes
+	give_starting_tech_SEN = yes
+	give_starting_tech_SHX = yes
+	give_starting_tech_SIA = yes
+	give_starting_tech_SIC = yes
+	give_starting_tech_SIE = yes
+	give_starting_tech_SIK = yes
+	give_starting_tech_SND = yes
+	give_starting_tech_SOL = yes
+	give_starting_tech_SOM = yes
+	give_starting_tech_SOV = yes
+	give_starting_tech_SPR = yes
+	give_starting_tech_SRL = yes
+	give_starting_tech_SUD = yes
+	give_starting_tech_SUR = yes
+	give_starting_tech_SWE = yes
+	give_starting_tech_SWI = yes
+	give_starting_tech_SYR = yes
+	give_starting_tech_TAH = yes
+	give_starting_tech_TAN = yes
+	give_starting_tech_TIB = yes
+	give_starting_tech_TML = yes
+	give_starting_tech_TOG = yes
+	give_starting_tech_TRI = yes
+	give_starting_tech_TUN = yes
+	give_starting_tech_TUR = yes
+	give_starting_tech_TZN = yes
+	give_starting_tech_UAE = yes
+	give_starting_tech_UGA = yes
+	give_starting_tech_URG = yes
+	give_starting_tech_USA = yes
+	give_starting_tech_VEN = yes
+	give_starting_tech_VOL = yes
+	give_starting_tech_WES = yes
+	give_starting_tech_XIC = yes
+	give_starting_tech_XSM = yes
+	give_starting_tech_YEM = yes
+	give_starting_tech_YUG = yes
+	give_starting_tech_YUN = yes
+	give_starting_tech_ZAM = yes
+	give_starting_tech_ZIM = yes
+}
+
+give_all_tech = {
+	# Infantry Folder
+	set_technology = {
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		improved_infantry_weapons = 1
+		improved_infantry_weapons_2 = 1
+		infantry_at = 1
+		infantry_at2 = 1
+		advanced_infantry_weapons = 1
+		advanced_infantry_weapons2 = 1
+
+		paratroopers = 1
+		paratroopers2 = 1
+		paratroopers3 = 1
+
+		marines = 1
+		marines2 = 1
+		marines3 = 1
+
+		tech_mountaineers = 1
+		tech_mountaineers2 = 1
+		tech_mountaineers3 = 1
+	}
+	if = {
+		limit = { has_dlc = "No Compromise, No Surrender" }
+
+		set_technology = {
+			rangers_tech = 1
+			rangers_tech2 = 1
+			rangers_tech3 = 1
+		}
+	}
+	if = {
+		limit = { NOT = { has_dlc = "Arms Against Tyranny" } }
+
+		set_technology = {
+			tech_special_forces = 1
+		}
+		random_list = {
+			seed = random
+			50 = {
+				set_technology = {
+					advanced_special_forces = 1
+					extreme_environment_training = 1
+				}
+			}
+			50 = {
+				set_technology = {
+					improved_special_forces = 1
+					survival_training = 1
+				}
+			}
+		}
+		set_technology = {
+			elite_forces = 1
+		}
+	}
+	set_technology = {
+		night_vision = 1
+		night_vision2 = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		support_weapons3 = 1
+		support_weapons4 = 1
+
+		tech_trucks = 1
+		motorised_infantry = 1
+		motorized_rocket_unit = 1
+	}
+	if = {
+		limit = { has_dlc = "La Resistance" }
+
+		set_technology = {
+			armored_car1 = 1
+			armored_car2 = 1
+			armored_car3 = 1
+			armored_car_at_upgrade = 1
+		}
+	}
+	set_technology = {
+		mechanised_infantry = 1
+		amphibious_mechanized_infantry = 1
+		amphibious_mechanized_infantry_2 = 1
+		mechanised_infantry2 = 1
+		mechanised_infantry3 = 1
+	}
+
+	# Support Folder
+	set_technology = {
+		tech_support = 1
+
+		tech_engineers = 1
+		tech_engineers2 = 1
+		tech_engineers3 = 1
+		tech_engineers4 = 1
+
+		tech_recon = 1
+		tech_recon2 = 1
+		tech_recon3 = 1
+		tech_recon4 = 1
+
+		tech_military_police = 1
+		tech_military_police2 = 1
+		tech_military_police3 = 1
+		tech_military_police4 = 1
+
+		tech_maintenance_company = 1
+		tech_maintenance_company2 = 1
+		tech_maintenance_company3 = 1
+		tech_maintenance_company4 = 1
+
+		tech_field_hospital = 1
+		tech_field_hospital2 = 1
+		tech_field_hospital3 = 1
+		tech_field_hospital4 = 1
+
+		tech_logistics_company = 1
+		tech_logistics_company2 = 1
+		tech_logistics_company3 = 1
+		tech_logistics_company4 = 1
+
+		tech_signal_company = 1
+		tech_signal_company2 = 1
+		tech_signal_company3 = 1
+		tech_signal_company4 = 1
+
+		basic_train = 1
+		railway_gun = 1
+		wartime_train = 1
+		armored_train = 1
+
+		sp_armored_engineer_tech = 1
+		sp_armored_maintenance_tech = 1
+		sp_armored_signal_tech = 1
+	}
+	if = {
+		limit = { has_dlc = "Gotterdammerung" }
+
+		set_technology = {
+			sp_helicopter_transport_pods_tech = 1
+			sp_helicopter_artillery_observers_tech = 1
+			sp_helicopter_med_evac_tech = 1
+			sp_armored_motorized_military_police_tech = 1
+		}
+	}
+
+	# Armor Folder
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			improved_light_tank_chassis = 1
+			advanced_light_tank_chassis = 1
+
+			amphibious_tank_chassis = 1
+			amphibious_drive = 1
+
+			basic_medium_tank_chassis = 1
+			improved_medium_tank_chassis = 1
+			advanced_medium_tank_chassis = 1
+
+			main_battle_tank_chassis = 1
+
+			basic_heavy_tank_chassis = 1
+			improved_heavy_tank_chassis = 1
+			advanced_heavy_tank_chassis = 1
+
+			super_heavy_tank_chassis = 1
+
+			armor_tech_1 = 1
+			armor_tech_2 = 1
+			armor_tech_3 = 1
+			armor_tech_4 = 1
+
+			engine_tech_1 = 1
+			engine_tech_2 = 1
+			engine_tech_3 = 1
+			engine_tech_4 = 1
+		}
+		if = {
+			limit = { has_dlc = "Gotterdammerung" }
+
+			set_technology = {
+				sp_armored_advanced_flamethrower_tech = 1
+				sp_armored_lc_naval_engine_conversion_tech = 1
+				sp_armored_lc_transmission_improvements_tech = 1
+				sp_armored_lc_specialized_field_manuals_tech = 1
+				sp_armored_lc_weapon_fire_control_tech = 1
+				sp_armored_lc_high_impact_obliterator_cannon_tech = 1
+			}
+		}
+		else = {
+			set_technology = {
+				gwtank = 1
+				basic_light_tank = 1
+				basic_light_td = 1
+				basic_light_art = 1
+				basic_light_spaa = 1
+				improved_light_tank = 1
+				improved_light_td = 1
+				improved_light_art = 1
+				improved_light_spaa = 1
+
+				amphibious_tank = 1
+				amphibious_tank_2 = 1
+
+				advanced_light_tank = 1
+				advanced_light_td = 1
+				advanced_light_art = 1
+				advanced_light_spaa = 1
+
+				basic_medium_tank = 1
+				basic_medium_td = 1
+				basic_medium_art = 1
+				basic_medium_spaa = 1
+				improved_medium_tank = 1
+				improved_medium_td = 1
+				improved_medium_art = 1
+				improved_medium_spaa = 1
+				advanced_medium_tank = 1
+				advanced_medium_td = 1
+				advanced_medium_art = 1
+				advanced_medium_spaa = 1
+
+				main_battle_tank = 1
+				modern_td = 1
+				modern_art = 1
+				modern_spaa = 1
+
+				basic_heavy_tank = 1
+				basic_heavy_td = 1
+				basic_heavy_art = 1
+				basic_heavy_spaa = 1
+				improved_heavy_tank = 1
+				improved_heavy_td = 1
+				improved_heavy_art = 1
+				improved_heavy_spaa = 1
+				advanced_heavy_tank = 1
+				advanced_heavy_td = 1
+				advanced_heavy_art = 1
+				advanced_heavy_spaa = 1
+
+				super_heavy_tank = 1
+				super_heavy_td = 1
+				super_heavy_art = 1
+				super_heavy_spaa = 1
+			}
+		}
+	}
+
+	# Artillery Folder
+	set_technology = {
+		gw_artillery = 1
+		interwar_artillery = 1
+		artillery1 = 1
+		artillery2 = 1
+		artillery3 = 1
+		artillery4 = 1
+		artillery5 = 1
+
+		rocket_artillery = 1
+		rocket_artillery2 = 1
+		rocket_artillery3 = 1
+		rocket_artillery4 = 1
+
+		interwar_antiair = 1
+		antiair1 = 1
+		antiair2 = 1
+		antiair3 = 1
+		antiair4 = 1
+		antiair5 = 1
+
+		interwar_antitank = 1
+		antitank1 = 1
+		antitank2 = 1
+		antitank3 = 1
+		antitank4 = 1
+		antitank5 = 1
+	}
+	if = {
+		limit = { has_dlc = "Gotterdammerung" }
+
+		set_technology = {
+			sp_artillery_rocket_assisted_projectiles_tech = 1
+			sp_artillery_purpose_built_gun_motor_carriages_tech = 1
+			sp_shock_hardening_techniques = 1
+			sp_variable_time_fuze_shells = 1
+		}
+	}
+
+	# Naval Folder
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		improved_ship_hull_light = 1
+		advanced_ship_hull_light = 1
+
+		smoke_generator = 1
+		basic_depth_charges = 1
+		improved_depth_charges = 1
+		advanced_depth_charges = 1
+		modern_depth_charges = 1
+		sonar = 1
+		improved_sonar = 1
+		advanced_sonar = 1
+		modern_sonar = 1
+
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		improved_ship_hull_cruiser = 1
+		advanced_ship_hull_cruiser = 1
+
+		basic_cruiser_armor_scheme = 1
+
+		pre_dreadnoughts = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		ship_hull_super_heavy = 1
+		improved_ship_hull_heavy = 1
+		advanced_ship_hull_heavy = 1
+
+		basic_heavy_armor_scheme = 1
+		improved_heavy_armor_scheme = 1
+
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		improved_ship_hull_carrier = 1
+		advanced_ship_hull_carrier = 1
+
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		improved_ship_hull_submarine = 1
+		advanced_ship_hull_submarine = 1
+
+		basic_submarine_snorkel = 1
+		improved_submarine_snorkel = 1
+	}
+	if = {
+		limit = { has_dlc = "Gotterdammerung" }
+
+		set_technology = {
+			sp_aip_engine_improved_tech = 1
+			sp_aip_engine_advanced_tech = 1
+			sp_refined_pykrete = 1
+			sp_ice_composite_runawayas = 1
+		}
+	}
+
+	# Naval Support Folder
+	set_technology = {
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_light_shell = 1
+		improved_light_battery = 1
+		improved_light_shell = 1
+		advanced_light_battery = 1
+		basic_heavy_battery = 1
+		improved_heavy_battery = 1
+		advanced_heavy_battery = 1
+		basic_heavy_shell = 1
+		improved_heavy_shell = 1
+		basic_dp_light_battery = 1
+		improved_dp_light_battery = 1
+		advanced_dp_light_battery = 1
+
+		basic_torpedo = 1
+		magnetic_detonator = 1
+		homing_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		advanced_ship_torpedo_launcher = 1
+		modern_ship_torpedo_launcher = 1
+
+		damage_control_1 = 1
+		damage_control_2 = 1
+		damage_control_3 = 1
+
+		fire_control_methods_1 = 1
+		fire_control_methods_2 = 1
+		fire_control_methods_3 = 1
+
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		improved_submarine_mine_laying = 1
+		improved_naval_mines = 1
+		degaussing = 1
+		advanced_naval_mines = 1
+	}
+	if = {
+		limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+		set_technology = {
+			airdrop_mines = 1
+			airsweep_mines = 1
+		}
+
+		else = {
+			set_technology = {
+				airdrop_mines_bba = 1
+				airsweep_mines_bba = 1
+			}
+		}
+	}
+	set_technology = {
+		mtg_transport = 1
+		mtg_landing_craft = 1
+		mtg_tank_landing_craft = 1
+	}
+	if = {
+		limit = {  has_dlc = "Gotterdammerung" }
+
+		set_technology = {
+			sp_multi_product_supply_ships = 1
+			sp_standard_tenshioned_replenishment_alongside_method = 1
+		}
+	}
+	if = {
+		limit = {  has_dlc = "No Compromise, No Surrender" }
+
+		set_technology = {
+			sp_improved_support_ship = 1
+			sp_improved_repair_ship = 1
+		}
+	}
+
+	# Air Folder
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			bba_early_transport_plane = 1
+			bba_improved_transport_plane = 1
+			bba_strategic_airlifter = 1
+
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			improved_small_airframe = 1
+			advanced_small_airframe = 1
+			modern_small_airframe = 1
+
+			iw_medium_airframe = 1
+			basic_medium_airframe = 1
+			improved_medium_airframe = 1
+			advanced_medium_airframe = 1
+			modern_medium_airframe = 1
+
+			iw_large_airframe = 1
+			basic_large_airframe = 1
+			improved_large_airframe = 1
+			advanced_large_airframe = 1
+			modern_large_airframe = 1
+
+			early_bombs = 1
+			heavy_bombs = 1
+			armor_piercing_bombs = 1
+		}
+		if = {
+			limit = { has_dlc = "La Resistance" }
+
+			set_technology = {
+				photo_reconnaisance = 1
+			}
+		}
+		set_technology = {
+			air_torpedoe_1 = 1
+			air_torpedoe_2 = 1
+			air_torpedoe_3 = 1
+
+			aa_lmg = 1
+
+			survivability_studies = 1
+
+			aa_hmg = 1
+			aa_cannon_1 = 1
+			aa_cannon_2 = 1
+			aa_cannon_3 = 1
+
+			engines_1 = 1
+			engines_2 = 1
+			engines_3 = 1
+			engines_4 = 1
+
+			range_improvements = 1
+			aircraft_construction = 1
+		}
+		if = {
+			limit = { has_dlc = "Gotterdammerung" }
+
+			set_technology = {
+				sp_centrifugal_jet_tech = 1
+				reinforced_wings_mothership = 1
+				miniature_fighters = 1
+				aerial_hangars = 1
+			}
+		}
+		else = {
+			set_technology = {
+				early_transport_plane = 1
+				improved_transport_plane = 1
+				strategic_airlifter = 1
+
+				early_fighter = 1
+				cv_early_fighter = 1
+				fighter1 = 1
+				cv_fighter1 = 1
+				fighter2 = 1
+				cv_fighter2 = 1
+				fighter3 = 1
+				cv_fighter3 = 1
+				jet_fighter1 = 1
+				jet_fighter2 = 1
+			}
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_technology = {
+					supersonic_fighter1 = 1
+				}
+			}
+			set_technology = {
+				CAS1 = 1
+				cv_CAS1 = 1
+				CAS2 = 1
+				cv_CAS2 = 1
+				CAS3 = 1
+				cv_CAS3 = 1
+
+				naval_bomber1 = 1
+				cv_naval_bomber1 = 1
+				naval_bomber2 = 1
+				cv_naval_bomber2 = 1
+				naval_bomber3 = 1
+				cv_naval_bomber3 = 1
+
+				early_bomber = 1
+				heavy_fighter1 = 1
+				heavy_fighter2 = 1
+				heavy_fighter3 = 1
+			}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+
+				set_technology = {
+					scout_plane1 = 1
+					scout_plane2 = 1
+				}
+			}
+			set_technology = {
+				tactical_bomber1 = 1
+				tactical_bomber2 = 1
+				tactical_bomber3 = 1
+				jet_tactical_bomber1 = 1
+				jet_tactical_bomber2 = 1
+
+				strategic_bomber1 = 1
+				strategic_bomber2 = 1
+				strategic_bomber3 = 1
+
+				jet_strategic_bomber1 = 1
+			}
+		}
+	}
+
+	# Electronics Folder
+	set_technology = {
+		electronic_mechanical_engineering = 1
+
+		radio = 1
+		improved_radio = 1
+		advanced_radio = 1
+
+		radio_detection = 1
+		cavity_magnatron = 1
+		centimetric_radar = 1
+		phased_array = 1
+		monopulse_radar = 1
+
+		mechanical_computing = 1
+		computing_machine = 1
+		improved_computing_machine = 1
+		advanced_computing_machine = 1
+	}
+	if = {
+		limit = { NOT = { has_dlc = "La Resistance" } }
+
+		set_technology = {
+			basic_encryption = 1
+			improved_encryption = 1
+			advanced_encryption = 1
+
+			basic_decryption = 1
+			improved_decryption = 1
+			advanced_decryption = 1
+		}
+	}
+	set_technology = {
+		basic_fire_control_system = 1
+		improved_fire_control_system = 1
+		advanced_fire_control_system = 1
+
+		basic_fortification_tech = 1
+		land_fort_tech_1 = 1
+		land_fort_tech_2 = 1
+		coastal_fort_tech_1 = 1
+		coastal_fort_tech_2 = 1
+
+		experimental_rockets = 1
+		rocket_engines = 1
+		sp_rockets_improved_guidance = 1
+	}
+	if = {
+		limit = {  has_dlc = "By Blood Alone" }
+
+		set_technology = {
+			sp_rockets_rocket_bomber = 1
+			sp_rockets_improved_rocket_bomber = 1
+		}
+	}
+	set_technology = {
+		improved_rocket_engines = 1
+		advanced_rocket_engines = 1
+		jet_engines = 1
+
+		atomic_research = 1
+
+		sp_rockets_dual_chamber_rocket_engine_1 = 1
+		sp_rockets_dual_chamber_rocket_engine_2 = 1
+	}
+
+	# Industry Folder
+	set_technology = {
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		assembly_line_production = 1
+	}
+	random_list = {
+		seed = random
+		50 = {
+			set_technology = {
+				flexible_line = 1
+			}
+		}
+		50 = {
+			set_technology = {
+				streamlined_line = 1
+			}
+		}
+	}
+	set_technology = {
+		improved_equipment_conversion = 1
+		advanced_equipment_conversion = 1
+	}
+	random_list = {
+		seed = random
+		50 = {
+			set_technology = {
+				concentrated_industry = 1
+				concentrated_industry2 = 1
+				concentrated_industry3 = 1
+				concentrated_industry4 = 1
+				concentrated_industry5 = 1
+			}
+		}
+		50 = {
+			set_technology = {
+				dispersed_industry = 1
+				dispersed_industry2 = 1
+				dispersed_industry3 = 1
+				dispersed_industry4 = 1
+				dispersed_industry5 = 1
+			}
+		}
+	}
+	set_technology = {
+		fuel_silos = 1
+		fuel_refining = 1
+		fuel_refining2 = 1
+		fuel_refining3 = 1
+		fuel_refining4 = 1
+		fuel_refining5 = 1
+
+		synth_oil_experiments = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		advanced_oil_processing = 1
+		modern_oil_processing = 1
+		rubber_processing = 1
+		improved_rubber_processing = 1
+		advanced_rubber_processing = 1
+		modern_rubber_processing = 1
+
+		construction1 = 1
+		excavation1 = 1
+		construction2 = 1
+		excavation2 = 1
+		construction3 = 1
+		excavation3 = 1
+		construction4 = 1
+		excavation4 = 1
+		construction5 = 1
+		excavation5 = 1
+	}
+
+	# Air Projects
+	if = {
+		limit = { has_dlc = "Gotterdammerung" }
+
+		complete_special_project = { project = sp:sp_air_bouncing_bomb }
+		complete_special_project = { project = sp:sp_air_earthshaker_bomb }
+		complete_special_project = { project = sp:sp_air_intercontinental_bomber }
+		complete_special_project = { project = sp:sp_air_mothership_aircraft }
+		complete_special_project = { project = sp:sp_air_supersonic_jet }
+		complete_special_project = { project = sp:sp_air_helicopter }
+	}
+	complete_special_project = { project = sp:sp_air_jet_engine }
+	complete_special_project = { project = sp:sp_air_axial_jet_engine }
+
+	# Land Projects
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		complete_special_project = { project = sp:sp_land_flamethrower_tank }
+		complete_special_project = { project = sp:sp_land_super_heavy_railway_gun }
+	}
+	if = {
+		limit = { has_dlc = "Gotterdammerung" }
+
+		complete_special_project = { project = sp:sp_land_land_cruiser }
+		complete_special_project = { project = sp:sp_land_super_heavy_howitzer }
+		complete_special_project = { project = sp:sp_land_self_propelled_super_heavy_howitzer }
+		complete_special_project = { project = sp:sp_land_multi_charge_large_caliber_gun }
+		complete_special_project = { project = sp:sp_land_stronghold_network }
+	}
+	complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
+
+	# Naval Projects
+	if = {
+		limit = { has_dlc = "Gotterdammerung" }
+
+		complete_special_project = { project = sp:sp_naval_nuclear_submarine }
+		complete_special_project = { project = sp:sp_naval_rocket_launching_submarine }
+		complete_special_project = { project = sp:sp_naval_nuclear_missile_submarine }
+		complete_special_project = { project = sp:sp_naval_nuclear_torpedo }
+		complete_special_project = { project = sp:sp_naval_aip_engine }
+		complete_special_project = { project = sp:sp_naval_anechoic_tiles }
+		complete_special_project = { project = sp:sp_naval_modern_battleship }
+		complete_special_project = { project = sp:sp_naval_modern_carrier }
+		complete_special_project = { project = sp:sp_naval_ice_carrier }
+		complete_special_project = { project = sp:sp_naval_underway_replenishment }
+		complete_special_project = { project = sp:sp_naval_proximity_fuze }
+	}
+	if = {
+		limit = { has_dlc = "No Compromise, No Surrender" }
+
+		complete_special_project = { project = sp:sp_naval_submarine_carrier }
+		complete_special_project = { project = sp:sp_naval_support_ships }
+		complete_special_project = { project = sp:sp_naval_escort_carrier }
+	}
+	complete_special_project = { project = sp:sp_naval_cruiser_submarine }
+	complete_special_project = { project = sp:sp_naval_fleet_submarine }
+	complete_special_project = { project = sp:sp_naval_midget_submarine }
+	complete_special_project = { project = sp:sp_naval_torpedo_cruiser }
+	complete_special_project = { project = sp:sp_naval_super_heavy_battleship }
+
+	# Nuclear Projects
+	if = {
+		limit = { has_dlc = "Gotterdammerung" }
+
+		complete_special_project = { project = sp:sp_commercial_nuclear_reactor }
+		complete_special_project = { project = sp:sp_thermo_nuclear_bomb }
+		complete_special_project = { project = sp:sp_nuclear_warheads }
+	}
+	complete_special_project = { project = sp:sp_nuclear_reactor }
+	complete_special_project = { project = sp:sp_nuclear_engines }
+	complete_special_project = { project = sp:sp_nuclear_bomb }
+
+	# Radar Projects
+	complete_special_project = { project = sp:sp_air_radar }
+
+	# Rocket Projects
+	if = {
+		limit = { has_dlc = "Gotterdammerung" }
+
+		complete_special_project = { project = sp:sp_rockets_long_range_ballistic_missile }
+		complete_special_project = { project = sp:sp_rockets_ground_to_air_missile }
+	}
+	complete_special_project = { project = sp:sp_rockets_flying_bomb }
+	complete_special_project = { project = sp:sp_rockets_ballistic_missile }
+	complete_special_project = { project = sp:sp_rockets_medium_range_ballistic_missile }
+	complete_special_project = { project = sp:sp_rocket_interceptor }
+
+	set_research_slots = 5
+}

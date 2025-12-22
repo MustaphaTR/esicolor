@@ -75,6 +75,7 @@ default_preset_effects = {
 	set_variable = { global.setup_research_slots_min = 3 }
 	set_variable = { global.setup_research_slots_max = 3 }
 
+	set_variable = { global.setup_technology = 1 }
 	set_variable = { global.setup_technology_infantry_weapons1 = 0 }
 	set_variable = { global.setup_technology_support_weapons = 0 }
 	set_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines = 0 }
@@ -202,7 +203,7 @@ randomised_preset_effects = {
 	set_variable = { global.setup_focus_factories = 0 }
 
 	set_variable = { global.setup_intelligence_agency = 1 }
-	set_variable = { global.setup_intelligence_agency_chance = 1 }
+	set_variable = { global.setup_intelligence_agency_chance = 2 }
 
 	set_variable = { global.setup_conscription_law = 1 }
 	set_variable = { global.setup_conscription_law_min = 0 }
@@ -222,6 +223,7 @@ randomised_preset_effects = {
 	set_variable = { global.setup_research_slots_min = 1 }
 	set_variable = { global.setup_research_slots_max = 4 }
 
+	set_variable = { global.setup_technology = 1 }
 	set_variable = { global.setup_technology_infantry_weapons1 = 60 }
 	set_variable = { global.setup_technology_support_weapons = 30 }
 	set_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines = 20 }
@@ -376,6 +378,7 @@ equalised_preset_effects = {
 	set_variable = { global.setup_research_slots_min = 3 }
 	set_variable = { global.setup_research_slots_max = 3 }
 
+	set_variable = { global.setup_technology = 1 }
 	set_variable = { global.setup_technology_infantry_weapons1 = 0 }
 	set_variable = { global.setup_technology_support_weapons = 0 }
 	set_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines = 0 }
@@ -462,7 +465,7 @@ developer_preset_effects = {
 	set_variable = { global.setup_focus_factories = 1 }
 
 	set_variable = { global.setup_intelligence_agency = 1 }
-	set_variable = { global.setup_intelligence_agency_chance = 1 }
+	set_variable = { global.setup_intelligence_agency_chance = 2 }
 
 	set_variable = { global.setup_conscription_law = 1 }
 	set_variable = { global.setup_conscription_law_min = 0 }
@@ -482,6 +485,7 @@ developer_preset_effects = {
 	set_variable = { global.setup_research_slots_min = 1 }
 	set_variable = { global.setup_research_slots_max = 4 }
 
+	set_variable = { global.setup_technology = 1 }
 	set_variable = { global.setup_technology_infantry_weapons1 = 60 }
 	set_variable = { global.setup_technology_support_weapons = 30 }
 	set_variable = { global.setup_technology_tech_mountaineers_paratroopers_marines = 20 }
@@ -572,8 +576,8 @@ setup_gui_start_general = {
 		setup_gui_start_economic_law = yes
 
 		setup_gui_start_intelligence_agency = yes
-		
-		randomise_technology = yes
+
+		setup_gui_start_technology = yes
 	}
 
 	setup_gui_start_leader_traits = yes
@@ -921,6 +925,29 @@ setup_gui_start_research_slots = {
 		limit = { check_variable = { global.setup_research_slots > -1 } }
 
 		randomise_research_slots = yes
+	}
+}
+
+setup_gui_start_technology = {
+	if = {
+		limit = { check_variable = { global.setup_technology < -2 } }
+
+		give_all_tech = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_technology < -1 } }
+
+		give_combined_tech = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_technology = -1 } }
+
+		give_starting_tech = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_technology > -1 } }
+
+		randomise_technology = yes
 	}
 }
 
