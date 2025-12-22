@@ -364,18 +364,66 @@ handle_special_generals = {
 		set_character_name = IRQ_mustafa_barzani
 		set_character_flag = special_general
 
+		if = {
+			limit = { has_dlc = "Graveyard of Empires" }
+
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_IRQ_mustafa_barzani
+					small = GFX_portrait_IRQ_mustafa_barzani_small
+				}
+				army = {
+					large = GFX_portrait_IRQ_mustafa_barzani
+					small = GFX_portrait_IRQ_mustafa_barzani_small
+				}
+				navy = {
+					large = GFX_portrait_IRQ_mustafa_barzani
+					small = GFX_portrait_IRQ_mustafa_barzani_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large = GFX_Portrait_Arabia_Generic_land_2
+					small = GFX_Portrait_Arabia_Generic_land_2_small
+				}
+				army = {
+					large = GFX_Portrait_Arabia_Generic_land_2
+					small = GFX_Portrait_Arabia_Generic_land_2_small
+				}
+				navy = {
+					large = GFX_Portrait_Arabia_Generic_land_2
+					small = GFX_Portrait_Arabia_Generic_land_2_small
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = EES_a_t_van_starkenborgh_stachouwer ruling_only = yes }
+
+				NOT = { has_global_flag = hein_ter_poorten_created }
+			}
+		}
+
+		set_global_flag = hein_ter_poorten_created
+		set_character_name = HOL_hein_ter_poorten
+		set_character_flag = special_general
+
 		set_portraits = {
 			civilian = {
-				large = GFX_portrait_IRQ_mustafa_barzani
-				small = GFX_portrait_IRQ_mustafa_barzani_small
+				large = "GFX_portrait_hol_hein_ter_poorten"
+				small = "GFX_idea_HOL_hein_ter_poorten"
 			}
 			army = {
-				large = GFX_portrait_IRQ_mustafa_barzani
-				small = GFX_portrait_IRQ_mustafa_barzani_small
+				large = "GFX_portrait_hol_hein_ter_poorten"
+				small = "GFX_idea_HOL_hein_ter_poorten"
 			}
 			navy = {
-				large = GFX_portrait_IRQ_mustafa_barzani
-				small = GFX_portrait_IRQ_mustafa_barzani_small
+				large = "GFX_portrait_hol_hein_ter_poorten"
+				small = "GFX_idea_HOL_hein_ter_poorten"
 			}
 		}
 	}
@@ -857,6 +905,79 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = OOF }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = democratic_reformer
+			}
+
+			set_character_name = HOL_willem_schermerhorn
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HOL_willem_schermerhorn
+				}
+				army = {
+					small = GFX_idea_HOL_willem_schermerhorn
+				}
+				navy = {
+					small = GFX_idea_HOL_willem_schermerhorn
+				}
+			}
+
+			8 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = financial_expert
+			}
+
+			set_character_name = HOL_walraven_van_hall
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HOL_walraven_van_hall
+				}
+				army = {
+					small = GFX_idea_HOL_walraven_van_hall
+				}
+				navy = {
+					small = GFX_idea_HOL_walraven_van_hall
+				}
+			}
+
+			8 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = HOL_jan_goudriaan
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HOL_jan_goudriaan
+				}
+				army = {
+					small = GFX_idea_HOL_jan_goudriaan
+				}
+				navy = {
+					small = GFX_idea_HOL_jan_goudriaan
+				}
+			}
+
+			8 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = OOB }
 
 		random_character = {
@@ -1193,6 +1314,33 @@ handle_special_advisors = {
 			}
 
 			10 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OES }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = HOL_saul_de_groot
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HOL_saul_de_groot
+				}
+				army = {
+					small = GFX_idea_HOL_saul_de_groot
+				}
+				navy = {
+					small = GFX_idea_HOL_saul_de_groot
+				}
+			}
+
+			35 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -3576,6 +3724,33 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = EOY }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = HOL_anton_de_kom
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HOL_anton_de_kom
+				}
+				army = {
+					small = GFX_idea_HOL_anton_de_kom
+				}
+				navy = {
+					small = GFX_idea_HOL_anton_de_kom
+				}
+			}
+
+			309 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = EZA }
 
 		random_character = {
@@ -3627,6 +3802,37 @@ handle_special_advisors = {
 			}
 
 			324 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = EES }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_naval_strike_1
+					has_trait = air_naval_strike_1
+					has_trait = air_naval_strike_3
+				}
+			}
+
+			set_character_name = HOL_charles_douw_van_der_krap
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_HOL_charles_douw_van_der_krap
+				}
+				army = {
+					small = GFX_idea_HOL_charles_douw_van_der_krap
+				}
+				navy = {
+					small = GFX_idea_HOL_charles_douw_van_der_krap
+				}
+			}
+
+			335 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {

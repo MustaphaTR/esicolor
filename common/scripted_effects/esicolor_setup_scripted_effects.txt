@@ -9353,6 +9353,23 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	7 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Walraven van Hall
+				limit = { has_trait = financial_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = financial_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = resistance_banker
+				}
+			}
+		}
+	}
 	10 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -9774,6 +9791,23 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = statism_adept
+				}
+			}
+		}
+	}
+	309 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Anton de Kom
+				limit = { has_trait = communist_revolutionary }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = colonial_communist
 				}
 			}
 		}
