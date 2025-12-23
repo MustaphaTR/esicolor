@@ -52,6 +52,7 @@ default_preset_effects = {
 	set_variable = { global.setup_war_support_max = 50 }
 
 	set_variable = { global.setup_focus_tree = -1 }
+	set_variable = { global.setup_focus_times = 7 }
 	set_variable = { global.setup_focus_factories = 0 }
 
 	set_variable = { global.setup_intelligence_agency = 1 }
@@ -200,6 +201,7 @@ randomised_preset_effects = {
 	set_variable = { global.setup_war_support_max = 90 }
 
 	set_variable = { global.setup_focus_tree = -2 }
+	set_variable = { global.setup_focus_times = 7 }
 	set_variable = { global.setup_focus_factories = 0 }
 
 	set_variable = { global.setup_intelligence_agency = 1 }
@@ -355,6 +357,7 @@ equalised_preset_effects = {
 	set_variable = { global.setup_war_support_max = 50 }
 
 	set_variable = { global.setup_focus_tree = 0 }
+	set_variable = { global.setup_focus_times = 7 }
 	set_variable = { global.setup_focus_factories = 2 }
 
 	set_variable = { global.setup_intelligence_agency = 1 }
@@ -462,6 +465,7 @@ developer_preset_effects = {
 	set_variable = { global.setup_war_support_max = 90 }
 
 	set_variable = { global.setup_focus_tree = -1 }
+	set_variable = { global.setup_focus_times = 7 }
 	set_variable = { global.setup_focus_factories = 1 }
 
 	set_variable = { global.setup_intelligence_agency = 1 }
@@ -565,6 +569,7 @@ setup_gui_start_general = {
 		setup_gui_start_ai_change_ideology = yes
 
 		setup_gui_start_focus_tree = yes
+		setup_gui_start_focus_times = yes
 
 		setup_gui_start_stability = yes
 		setup_gui_start_war_support = yes
@@ -904,6 +909,90 @@ setup_gui_start_focus_tree = {
 		limit = { check_variable = { global.setup_focus_tree > 1 } }
 
 		load_focus_tree = china_warlord_sea_focus
+	}
+}
+
+setup_gui_start_focus_times = {
+	if = {
+		limit = { check_variable = { global.setup_focus_times < 1 } }
+
+		set_variable = { global.focus_length_5 = 32 }
+		set_variable = { global.focus_length_10 = 63 }
+		#set_variable = { global.focus_length_15 = 95 }
+		#set_variable = { global.focus_length_20 = 126 }
+		set_focus_durations = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_focus_times = 1 } }
+
+		set_variable = { global.focus_length_5 = 28 }
+		set_variable = { global.focus_length_10 = 56 }
+		set_variable = { global.focus_length_15 = 84 }
+		set_variable = { global.focus_length_20 = 112 }
+		set_focus_durations = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_focus_times = 2 } }
+
+		set_variable = { global.focus_length_5 = 24 }
+		set_variable = { global.focus_length_10 = 49 }
+		#set_variable = { global.focus_length_15 = 73 }
+		#set_variable = { global.focus_length_20 = 98 }
+		set_focus_durations = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_focus_times = 3 } }
+
+		set_variable = { global.focus_length_5 = 21 }
+		set_variable = { global.focus_length_10 = 42 }
+		#set_variable = { global.focus_length_15 = 63 }
+		#set_variable = { global.focus_length_20 = 84 }
+		set_focus_durations = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_focus_times = 4 } }
+
+		set_variable = { global.focus_length_5 = 18 }
+		set_variable = { global.focus_length_10 = 35 }
+		#set_variable = { global.focus_length_15 = 53 }
+		#set_variable = { global.focus_length_20 = 70 }
+		set_focus_durations = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_focus_times = 5 } }
+
+		set_variable = { global.focus_length_5 = 14 }
+		set_variable = { global.focus_length_10 = 28 }
+		#set_variable = { global.focus_length_15 = 42 }
+		#set_variable = { global.focus_length_20 = 56 }
+		set_focus_durations = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_focus_times = 6 } }
+
+		set_variable = { global.focus_length_5 = 11 }
+		set_variable = { global.focus_length_10 = 21 }
+		#set_variable = { global.focus_length_15 = 32 }
+		#set_variable = { global.focus_length_20 = 42 }
+		set_focus_durations = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_focus_times = 7 } }
+
+		set_variable = { global.focus_length_5 = 7 }
+		set_variable = { global.focus_length_10 = 14 }
+		#set_variable = { global.focus_length_15 = 21 }
+		#set_variable = { global.focus_length_20 = 28 }
+		set_focus_durations = yes
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_focus_times = 8 } }
+
+		set_variable = { global.focus_length_5 = 4 }
+		set_variable = { global.focus_length_10 = 7 }
+		#set_variable = { global.focus_length_15 = 11 }
+		#set_variable = { global.focus_length_20 = 14 }
+		set_focus_durations = yes
 	}
 }
 

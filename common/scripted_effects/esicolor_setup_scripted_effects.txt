@@ -3052,6 +3052,45 @@ randomise_focus_trees = {
 	}
 }
 
+set_focus_durations = {
+	meta_effect = {
+		text = {
+			reduce_focus_completion_cost = {
+				focus = { CHI_sea_new_model_province, CHI_sea_land_reform, CHI_sea_propaganda_campaigns, CHI_sea_gain_warlord_support, CHI_sea_rally_the_warlords, CHI_sea_land_redistribution, PRC_strengthen_the_central_party_school, CHI_sea_communist_administrators, CHI_sea_unified_army_structure, CHI_sea_labor_reform, CHI_sea_personal_leadership, CHI_sea_cult_of_personality, CHI_sea_rapid_mobilization, CHI_sea_seek_foreign_support, CHI_tsr_reestablish_xinhua_palace, CHI_tsr_outlaw_republicanism, CHI_tsr_coronation_at_the_temple_of_heaven, CHI_tsr_reinstate_the_new_imperial_code , PRC_aviation_infrastructure, CHI_sea_heavy_weapons_development, CHI_sea_uplift_the_cavalry_regiments, CHI_sea_uplift_the_mountain_brigades, CHI_sea_infantry_efforts, CHI_sea_brigade_specialization, HOA_the_adjective_armed_forces }
+				cost = [COST]
+			}
+		}
+		COST = "[?global.focus_length_5]"
+	}
+	meta_effect = {
+		text = {
+			reduce_focus_completion_cost = {
+				focus = { army_effort, equipment_effort, motorization_effort, doctrine_effort, equipment_effort_2, mechanization_effort, doctrine_effort_2, equipment_effort_3, armor_effort, special_forces, aviation_effort, fighter_focus, bomber_focus, aviation_effort_2, CAS_effort, rocket_effort, NAV_effort, naval_effort, flexible_navy, large_navy, submarine_effort, cruiser_effort, destroyer_effort, capital_ships_effort, industrial_effort, construction_effort, production_effort, construction_effort_2, production_effort_2, infrastructure_effort, production_effort_3, infrastructure_effort_2, construction_effort_3, nuclear_effort, extra_tech_slot, extra_tech_slot_mil, extra_tech_slot_civ, secret_weapons, political_effort, collectivist_ethos, nationalism_focus, internationalism_focus, liberty_ethos, militarism, political_correctness, democracy_focus, neutrality_focus, interventionism_focus, military_youth, strict_neutrality, deterrence, defence_of_our_land, volunteer_corps, paramilitarism, indoctrination_focus, foreign_expeditions, why_we_fight, political_commissars, ideological_fanaticism, technology_sharing, CHI_sea_secure_internal_politics, CHI_sea_cooperation_with_the_nationalists, CHI_sea_anti_opposition_campaigns, CHI_sea_root_out_corruption, CHI_sea_embrace_the_illicit_trade, CHI_sea_reform_the_administration, CHI_tsr_repoen_the_natioal_assembly, CHI_sea_constitutional_reform, CHI_sea_executive_yuan, CHI_sea_legislative_yuan, CHI_sea_judicial_yuan, CHI_sea_control_yuan, CHI_sea_examination_yuan, CHI_sea_technological_cooperation, CHI_sea_institute_a_dictatorship, CHI_sea_a_new_expedition, CHI_sea_battle_for_unification, CHI_sea_power_struggle, CHI_sea_cooperation_with_the_communists, CHI_sea_land_value_tax, CHI_sea_judiciary_reforms, CHI_sea_join_the_chinese_soviet, CHI_sea_ideological_education, CHI_sea_the_capital_incident, CHI_sea_opposition, CHI_sea_institute_cross_border_raids, CHI_sea_public_works, CHI_sea_rural_militias, CHI_sea_war_taxes, CHI_sea_provoke_border_clashes, CHI_sea_defensive_posture, CHI_sea_proclaim_rival_government, CHI_sea_establish_the_leader_university, CHI_tsr_form_a_preparatory_committee, CHI_tsr_legacy_of_the_hongxian_emperor, CHI_tsr_adopt_the_twelve_symbols, CHI_tsr_reclaim_the_mandate_of_heaven, CHI_tsr_tianxia , CHI_sea_industrial_research_projects, CHI_sea_develop_capital, CHI_sea_investment_into_shipbuilding, CHI_sea_light_cruiser_project, CHI_sea_heavy_cruiser_project, CHI_sea_naval_aviation, CHI_sea_carrier_air_wing, CHI_sea_order_destroyers, CHI_sea_train_marines, CHI_sea_modern_submarines, CHI_sea_coastal_patrol_planes, CHI_sea_camco, CHI_sea_local_fighter_production, CHI_sea_local_bomber_production, CHI_sea_sino_american_cooperative_organization, CHI_sea_the_chu_x_po, CHI_strike_at_what_is_weak, CHI_sea_the_hump, CHI_initiate_the_sky_projects, CHI_sea_further_industrial_investment, CHI_sea_develop_capital_arsenal, CHI_sea_small_arms_production, CHI_sea_rely_on_our_infantry, CHI_sea_modern_warfare, CHI_sea_mining_commission, CHI_sea_reform_the_national_bank, CHI_sea_long_term_economic_planning, PRC_establish_shorter_market_plans, CHI_sea_rural_reconstruction_movement, PRC_connecting_the_country, CHI_sea_expand_public_education, CHI_sea_capital_military_academy, CHI_sea_fund_research_projects, CHI_sea_strenghten_warlord_authority, CHI_sea_consolidate_our_rule, CHI_sea_fortification_efforts, CHI_sea_the_army, HOA_develop_capitalstate, HOA_the_state_bank_of_name , HOA_pave_the_roads, HOA_the_steam_locomotive, HOA_the_adjective_regional_development_fund, HOA_the_adjective_industrial_fund, HOA_exploit_national_resources, HOA_support_the_agrarians, HOA_promote_local_crafts, HOA_use_the_natural_harbors, HOA_the_capital_city_airport, HOA_a_steamboat_fleet, HOA_study_naval_doctrines, HOA_improved_irrigation_systems, HOA_the_adjective_air_fleet, HOA_study_air_tactics, HOA_expand_naval_variety, HOA_state-funded_projects, HOA_rocket_effort, HOA_reorganise_the_education_system, HOA_the_grand_university_of_capital , HOA_warrior_tradition, HOA_strengthen_the_irregulars, HOA_every_man_a_warrior, HOA_names_finest, HOA_utilize_our_strengths, HOA_reform_the_conscription, HOA_eyes_on_the_imperialists, HOA_encourage_local_arms_production, HOA_metal_beasts, HOA_the_roars_of_thunder, HOA_develop_indigenous_models, HOA_the_steel_lions, HOA_warfare_from_afar, HOA_modern_infantry, HOA_the_capital_military_academy, HOA_the_first_album, HOA_a_loyal_subject, HOA_political_stability, HOA_the_capital_railroad, HOA_invite_foreign_settlers, HOA_countryleader, HOA_securing_the_adjective_future, HOA_improving_the_educational_system, HOA_construct_great_monuments, HOA_the_adjective_volunteer_force, HOA_military_cooperation, HOA_that_which_is_rightfully_ours, HOA_commandos, HOA_a_jagged_alliance, HOA_observe_and_learn, HOA_foreign_investors, HOA_research_exchange_programmes, HOA_foreign_trained_officials, HOA_countryadjective_loyalist_advisors, HOA_expansion_effort_i, HOA_expansion_effort_ii, HOA_expansion_effort_iii, HOA_rallying_the_adjective_people, HOA_the_capital_school_of_technology, HOA_promote_countryadjective_nationalism, HOA_reunification_effort, HOA_proclaim_hegemony, HOA_a_change_in_course, ETH_military_communism, ETH_international_brigades_communist, ETH_peoples_army, ETH_local_committees, ETH_a_guiding_hand, ETH_seize_the_means, ETH_communal_agriculture, HOA_nationalism_focus, HOA_reinforce_dynamic_identity , ETH_expand_the_bodyguard, ETH_contact_the_exiles, ETH_underground_wargames, ETH_set_up_a_customs_barrier, HOA_ideological_fanaticism, HOA_democracy_focus, HOA_hold_elections, ETH_re-convene_the_parliament, ETH_empower_the_ras, ETH_empower_the_chambers, ETH_a_federal_empire, ETH_improve_the_administration, HOA_rally_around_na_leader, HOA_behind_the_forts, HOA_from_the_fields, ETH_the_king_of_kings, ETH_lord_of_lords, ETH_volunteers, HOA_strict_neutrality, HOA_why_we_fight, HOA_technology_sharing }
+				cost = [COST]
+			}
+		}
+		COST = "[?global.focus_length_10]"
+	}
+	#meta_effect = {
+	#	text = {
+	#		reduce_focus_completion_cost = {
+	#			focus = {  }
+	#			cost = [COST]
+	#		}
+	#	}
+	#	COST = "[?global.focus_length_15]"
+	#}
+	#meta_effect = {
+	#	text = {
+	#		reduce_focus_completion_cost = {
+	#			focus = {  }
+	#			cost = [COST]
+	#		}
+	#	}
+	#	COST = "[?global.focus_length_20]"
+	#}
+}
+
 randomise_stability = {
 	hidden_effect = {
 		set_temp_variable = { stabtoset = 50 }
@@ -12433,7 +12472,13 @@ spawn_basgame_divisions = {
 			load_oob = GDC_1936_sea
 		}
 		else_if = {
-			limit = { state_originally_from_GER = yes }
+			limit = {
+				state_originally_from_GER = yes
+				OR = {
+					has_start_date > 1939.1.1
+					NOT = { original_tag = IBB }
+				}
+			}
 
 			if = {
 				limit = { has_start_date > 1939.1.1 }
@@ -12692,7 +12737,12 @@ spawn_basgame_divisions = {
 			}
 		}
 		else_if = {
-			limit = { state_originally_from_LIT = yes }
+			limit = {
+				OR = {
+					state_originally_from_LIT = yes
+					original_tag = IBB
+				}
+			}
 
 			if = {
 				limit = { has_start_date > 1939.1.1 }
@@ -12925,7 +12975,12 @@ spawn_basgame_divisions = {
 			}
 		}
 		else_if = {
-			limit = { state_originally_from_POL = yes }
+			limit = {
+				OR = {
+					state_originally_from_POL = yes
+					state_originally_from_POL_BLR_UKR_DNZ = yes
+				}
+			}
 
 			if = {
 				limit = { has_start_date > 1939.1.1 }
