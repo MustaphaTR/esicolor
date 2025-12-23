@@ -1804,6 +1804,80 @@ defined_text = {
 }
 
 defined_text = {
+	name = esicolor_setup_starting_army_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_starting_army < 0 }
+		}
+		localization_key = esicolor_setup_eaw_data
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_starting_army = 0 }
+		}
+		localization_key = esicolor_setup_starting_army_mixed
+	}
+	text = {
+		localization_key = esicolor_setup_starting_army_default
+	}
+}
+defined_text = {
+	name = esicolor_setup_starting_army_type_get_name
+	text = {
+		trigger = {
+			check_variable = { global.setup_starting_army_type < 0 }
+		}
+		localization_key = esicolor_setup_random
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_starting_army_type = 0 }
+		}
+		localization_key = infantry
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_starting_army_type = 1 }
+		}
+		localization_key = militia
+	}
+	text = {
+		trigger = {
+			check_variable = { global.setup_starting_army_type = 2 }
+		}
+		localization_key = irregular_infantry
+	}
+	text = {
+		localization_key = cavalry
+	}
+}
+defined_text = {
+	name = esicolor_setup_starting_army_color
+	text = {
+		trigger = {
+			check_variable = { global.setup_starting_army < 0 }
+		}
+		localization_key = "esicolor_setup_color_gray"
+	}
+	text = {
+		localization_key = "esicolor_setup_color_white"
+	}
+}
+
+defined_text = {
+	name = esicolor_setup_starting_army_size_loc
+	text = {
+		trigger = {
+			check_variable = { global.setup_starting_army_size_min = global.setup_starting_army_size_max }
+		}
+		localization_key = esicolor_setup_starting_army_size_number
+	}
+	text = {
+		localization_key = esicolor_setup_starting_army_size_range
+	}
+}
+
+defined_text = {
 	name = esicolor_setup_mio_concern_title
 	text = {
 		trigger = {

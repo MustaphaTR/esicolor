@@ -72,6 +72,11 @@ default_preset_effects = {
 	set_variable = { global.setup_military_advisors = -1 }
 	set_variable = { global.setup_mio_concern = -1 }
 
+	set_variable = { global.setup_starting_army = 1 }
+	set_variable = { global.setup_starting_army_type = 0 }
+	set_variable = { global.setup_starting_army_size_min = 1 }
+	set_variable = { global.setup_starting_army_size_max = 1 }
+
 	set_variable = { global.setup_research_slots = 1 }
 	set_variable = { global.setup_research_slots_min = 3 }
 	set_variable = { global.setup_research_slots_max = 3 }
@@ -220,6 +225,11 @@ randomised_preset_effects = {
 	set_variable = { global.setup_advisors = -3 }
 	set_variable = { global.setup_military_advisors = -2 }
 	set_variable = { global.setup_mio_concern = -3 }
+
+	set_variable = { global.setup_starting_army = 1 }
+	set_variable = { global.setup_starting_army_type = -1 }
+	set_variable = { global.setup_starting_army_size_min = 1 }
+	set_variable = { global.setup_starting_army_size_max = 3 }
 
 	set_variable = { global.setup_research_slots = 1 }
 	set_variable = { global.setup_research_slots_min = 1 }
@@ -377,6 +387,11 @@ equalised_preset_effects = {
 	set_variable = { global.setup_military_advisors = 1 }
 	set_variable = { global.setup_mio_concern = 0 }
 
+	set_variable = { global.setup_starting_army = 1 }
+	set_variable = { global.setup_starting_army_type = 0 }
+	set_variable = { global.setup_starting_army_size_min = 1 }
+	set_variable = { global.setup_starting_army_size_max = 1 }
+
 	set_variable = { global.setup_research_slots = 1 }
 	set_variable = { global.setup_research_slots_min = 3 }
 	set_variable = { global.setup_research_slots_max = 3 }
@@ -484,6 +499,11 @@ developer_preset_effects = {
 	set_variable = { global.setup_advisors = -3 }
 	set_variable = { global.setup_military_advisors = -2 }
 	set_variable = { global.setup_mio_concern = 1 }
+
+	set_variable = { global.setup_starting_army = 1 }
+	set_variable = { global.setup_starting_army_type = 1 }
+	set_variable = { global.setup_starting_army_size_min = 1 }
+	set_variable = { global.setup_starting_army_size_max = 1 }
 
 	set_variable = { global.setup_research_slots = 1 }
 	set_variable = { global.setup_research_slots_min = 1 }
@@ -595,6 +615,8 @@ setup_gui_start_general = {
 		setup_gui_start_military_advisors = yes
 	}
 	setup_gui_start_mio_concern = yes
+
+	setup_gui_start_starting_army = yes
 
 	setup_gui_start_starting_regions = yes
 	setup_gui_start_islands = yes
@@ -1222,6 +1244,44 @@ setup_gui_start_mio_concern = {
 
 		set_global_flag = custom_designers_only
 		set_global_flag = custom_designers_only_core
+	}
+}
+
+setup_gui_start_starting_army = {
+	if = {
+		limit = { check_variable = { global.setup_starting_army > -1 } }
+
+		if = {
+			limit = { check_variable = { global.setup_starting_army_type < 1 } }
+
+			every_country = { randomise_starting_army_type = yes }
+		}
+		else_if = {
+			limit = { check_variable = { global.setup_starting_army_type = 0 } }
+
+			every_country = { adjust_default_template_size = yes }
+		}
+		else_if = {
+			limit = { check_variable = { global.setup_starting_army_type = 1 } }
+
+			every_country = { change_default_template_to_militia = yes }
+		}
+		else_if = {
+			limit = { check_variable = { global.setup_starting_army_type = 2 } }
+
+			every_country = { change_default_template_to_irregulars = yes }
+		}
+		else_if = {
+			limit = { check_variable = { global.setup_starting_army_type > 2 } }
+
+			every_country = { change_default_template_to_cavalry = yes }
+		}
+	}
+	if = {
+		limit = { check_variable = { global.setup_starting_army < 1 } }
+
+		spawn_basegame_divisions = yes
+		delete_default_template = yes
 	}
 }
 

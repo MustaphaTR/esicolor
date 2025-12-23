@@ -2843,6 +2843,13 @@ scripted_gui = {
 				check_variable = { global.setup_economic_law = -1 }
 			}
 
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_9_mixed_visible = {
+				check_variable = { global.setup_starting_army = 0 }
+			}
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_9_selected_visible = {
+				check_variable = { global.setup_starting_army = -1 }
+			}
+
 			esicolor_welcome_screen_tab_1_page_5_blocker_1_visible = {
 				has_global_flag = esicolor_setup_complete
 			}
@@ -3011,6 +3018,90 @@ scripted_gui = {
 					limit = { check_variable = { global.setup_military_advisors < 2 } }
 
 					add_to_variable = { global.setup_military_advisors = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_9_click = {
+				set_variable = { global.setup_starting_army = 0 }
+			}
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_9_mixed_click = {
+				set_variable = { global.setup_starting_army = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_9_selected_click = {
+				set_variable = { global.setup_starting_army = 1 }
+			}
+
+			esicolor_welcome_screen_tab_1_page_5_max_minus_9_click = {
+				if = {
+					limit = { check_variable = { global.setup_starting_army < 0 } }
+
+					set_variable = { global.setup_starting_army = 1 }
+				}
+				if = {
+					limit = { check_variable = { global.setup_starting_army_type > -1 } }
+
+					subtract_from_variable = { global.setup_starting_army_type = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_max_plus_9_click = {
+				if = {
+					limit = { check_variable = { global.setup_starting_army < 0 } }
+
+					set_variable = { global.setup_starting_army = 1 }
+				}
+				if = {
+					limit = { check_variable = { global.setup_starting_army_type < 3 } }
+
+					add_to_variable = { global.setup_starting_army_type = 1 }
+				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_5_min_minus_10_click = {
+				if = {
+					limit = { check_variable = { global.setup_starting_army < 0 } }
+
+					set_variable = { global.setup_starting_army = 1 }
+				}
+				if = {
+					limit = { check_variable = { global.setup_starting_army_size_min > 1 } }
+
+					subtract_from_variable = { global.setup_starting_army_size_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_min_plus_10_click = {
+				if = {
+					limit = { check_variable = { global.setup_starting_army < 0 } }
+
+					set_variable = { global.setup_starting_army = 1 }
+				}
+				if = {
+					limit = { check_variable = { global.setup_starting_army_size_min < global.setup_starting_army_size_max } }
+
+					add_to_variable = { global.setup_starting_army_size_min = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_max_minus_10_click = {
+				if = {
+					limit = { check_variable = { global.setup_starting_army < 0 } }
+
+					set_variable = { global.setup_starting_army = 1 }
+				}
+				if = {
+					limit = { check_variable = { global.setup_starting_army_size_max > global.setup_starting_army_size_min } }
+
+					subtract_from_variable = { global.setup_starting_army_size_max = 1 }
+				}
+			}
+			esicolor_welcome_screen_tab_1_page_5_max_plus_10_click = {
+				if = {
+					limit = { check_variable = { global.setup_starting_army < 0 } }
+
+					set_variable = { global.setup_starting_army = 1 }
+				}
+				if = {
+					limit = { check_variable = { global.setup_starting_army_size_max < 25 } }
+
+					add_to_variable = { global.setup_starting_army_size_max = 1 }
 				}
 			}
 		}

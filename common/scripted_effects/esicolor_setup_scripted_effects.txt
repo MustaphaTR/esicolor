@@ -12089,15 +12089,303 @@ randomise_research_slots = {
 	}
 }
 
-delete_default_template = {
-	every_country = {
-		delete_unit_template_and_units = {
-			division_template = "Infantry Brigade"
+randomise_starting_army_type = {
+	random_list = {
+		seed = random
+		25 = {
+			adjust_default_template_size = yes
+		}
+		25 = {
+			change_default_template_to_militia = yes
+		}
+		25 = {
+			change_default_template_to_irregulars = yes
+		}
+		25 = {
+			change_default_template_to_cavalry = yes
 		}
 	}
 }
 
-spawn_basgame_divisions = {
+calculate_template_size_variables = {
+	set_variable = { min_minus_one = global.setup_starting_army_size_min }
+	subtract_from_variable = { min_minus_one = 1 }
+	set_variable_to_random = {
+		var = divisionstoadd
+		min = min_minus_one
+		max = global.setup_starting_army_size_max
+		integer = yes
+	}
+
+	set_variable = { max_column = divisionstoadd }
+	divide_variable = { max_column = 5 }
+	subtract_from_variable = { max_column = 0.5 }
+	round_variable = max_column
+}
+adjust_default_template_size = {
+	calculate_template_size_variables = yes
+
+	for_loop_effect = {
+		start = 0
+		end = max_column
+		compare = less_than_or_equals
+		value = current_column
+
+		for_loop_effect = {
+			start = 0
+			end = 4
+			compare = less_than_or_equals
+			value = current_row
+
+			if = {
+				limit = { check_variable = { divisionstoadd < 1 } }
+
+				set_temp_variable = { break = 1 }
+			}
+
+			if = {
+				limit = {
+					AND = {
+						check_variable = { current_column = 0 }
+						check_variable = { current_row = 0 }
+					}
+				}
+			}
+			else = {
+				meta_effect = {
+					text = {
+						add_units_to_division_template = {
+							template_name = "Infantry Brigade"
+							regiments = {
+								infantry = [COLUMN]
+							}
+						}
+					}
+					COLUMN = "[?current_column]"
+				}
+
+				subtract_from_variable = { divisionstoadd = 1 }
+			}
+		}
+	}
+
+	delete_units = { division_template = "Infantry Brigade" }
+	capital_scope = {
+		create_unit = {
+			division = "division_template = \"Infantry Brigade\""
+			owner = PREV
+		}
+	}
+}
+change_default_template_to_militia = {
+	set_technology = { 
+		militia_tech = 1
+	}
+	delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+	division_template = {
+		name = "Militia Brigade"
+		regiments = {
+			militia = { x = 0 y = 0 }
+		}
+	}
+
+	calculate_template_size_variables = yes
+
+	for_loop_effect = {
+		start = 0
+		end = max_column
+		compare = less_than_or_equals
+		value = current_column
+
+		for_loop_effect = {
+			start = 0
+			end = 4
+			compare = less_than_or_equals
+			value = current_row
+
+			if = {
+				limit = { check_variable = { divisionstoadd < 1 } }
+
+				set_temp_variable = { break = 1 }
+			}
+
+			if = {
+				limit = {
+					AND = {
+						check_variable = { current_column = 0 }
+						check_variable = { current_row = 0 }
+					}
+				}
+			}
+			else = {
+				meta_effect = {
+					text = {
+						add_units_to_division_template = {
+							template_name = "Militia Brigade"
+							regiments = {
+								militia = [COLUMN]
+							}
+						}
+					}
+					COLUMN = "[?current_column]"
+				}
+
+				subtract_from_variable = { divisionstoadd = 1 }
+			}
+		}
+	}
+
+	capital_scope = {
+		create_unit = {
+			division = "division_template = \"Militia Brigade\""
+			owner = PREV
+		}
+	}
+}
+change_default_template_to_irregulars = {
+	set_technology = { 
+		irregular_infantry = 1
+	}
+	delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+	division_template = {
+		name = "Irregular Infantry Brigade"
+		regiments = {
+			irregular_infantry = { x = 0 y = 0 }
+		}
+	}
+
+	calculate_template_size_variables = yes
+
+	for_loop_effect = {
+		start = 0
+		end = max_column
+		compare = less_than_or_equals
+		value = current_column
+
+		for_loop_effect = {
+			start = 0
+			end = 4
+			compare = less_than_or_equals
+			value = current_row
+
+			if = {
+				limit = { check_variable = { divisionstoadd < 1 } }
+
+				set_temp_variable = { break = 1 }
+			}
+
+			if = {
+				limit = {
+					AND = {
+						check_variable = { current_column = 0 }
+						check_variable = { current_row = 0 }
+					}
+				}
+			}
+			else = {
+				meta_effect = {
+					text = {
+						add_units_to_division_template = {
+							template_name = "Irregular Infantry Brigade"
+							regiments = {
+								irregular_infantry = [COLUMN]
+							}
+						}
+					}
+					COLUMN = "[?current_column]"
+				}
+
+				subtract_from_variable = { divisionstoadd = 1 }
+			}
+		}
+	}
+
+	capital_scope = {
+		create_unit = {
+			division = "division_template = \"Irregular Infantry Brigade\""
+			owner = PREV
+		}
+	}
+}
+change_default_template_to_cavalry = {
+	delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+	division_template = {
+		name = "Cavalry Brigade"
+		regiments = {
+			cavalry = { x = 0 y = 0 }
+		}
+	}
+
+	calculate_template_size_variables = yes
+
+	for_loop_effect = {
+		start = 0
+		end = max_column
+		compare = less_than_or_equals
+		value = current_column
+
+		for_loop_effect = {
+			start = 0
+			end = 4
+			compare = less_than_or_equals
+			value = current_row
+
+			if = {
+				limit = { check_variable = { divisionstoadd < 1 } }
+
+				set_temp_variable = { break = 1 }
+			}
+
+			if = {
+				limit = {
+					AND = {
+						check_variable = { current_column = 0 }
+						check_variable = { current_row = 0 }
+					}
+				}
+			}
+			else = {
+				meta_effect = {
+					text = {
+						add_units_to_division_template = {
+							template_name = "Cavalry Brigade"
+							regiments = {
+								cavalry = [COLUMN]
+							}
+						}
+					}
+					COLUMN = "[?current_column]"
+				}
+
+				subtract_from_variable = { divisionstoadd = 1 }
+			}
+		}
+	}
+
+	capital_scope = {
+		create_unit = {
+			division = "division_template = \"Cavalry Brigade\""
+			owner = PREV
+		}
+	}
+}
+
+delete_default_template = {
+	every_country = {
+		limit = {
+			OR = {
+				check_variable = { global.setup_starting_army < 0 }
+				num_divisions > 1
+			}
+		}
+
+		delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+		delete_unit_template_and_units = { division_template = "Militia Brigade" }
+		delete_unit_template_and_units = { division_template = "Irregular Infantry Brigade" }
+		delete_unit_template_and_units = { division_template = "Cavalry Brigade" }
+	}
+}
+spawn_basegame_divisions = {
 	every_country = {
 		if = {
 			limit = { state_originally_from_AFA = yes }
@@ -12406,7 +12694,10 @@ spawn_basgame_divisions = {
 					state_originally_from_UKD = yes
 					state_originally_from_MLT = yes
 					state_originally_from_PAL = yes
-					state_originally_from_JOR = yes
+					AND = {
+						has_tech = armored_car1
+						state_originally_from_JOR = yes
+					}
 					state_originally_from_EGY = yes
 					state_originally_from_SUD = yes
 					state_originally_from_KEN = yes
@@ -12436,6 +12727,18 @@ spawn_basgame_divisions = {
 			limit = { state_originally_from_ETH = yes }
 
 			load_oob = ETH_1936_bba
+
+			set_division_template_lock = {
+				division_template = "Kebur Zabagna"
+				is_locked = no
+			}
+			set_division_template_lock = {
+				division_template = "Chitet Saferi"
+				is_locked = no
+			}
+			clear_division_template_cap = {
+				division_template = "Chitet Saferi"
+			}
 		}
 		else_if = {
 			limit = { state_originally_from_FIN = yes }
@@ -12652,7 +12955,10 @@ spawn_basgame_divisions = {
 				load_oob = IRQ_1936
 			}
 			if = {
-				limit = { original_tag = ZYI }
+				limit = {
+					has_tech = armored_car1
+					original_tag = ZYI
+				}
 
 				load_ENG_oob = yes
 			}
@@ -13379,6 +13685,17 @@ load_ENG_oob = {
 			}
 		}
 	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_tech = gwtank
+				has_tech = gwtank_chassis
+			}
+		}
+
+		delete_unit_template_and_units = { division_template = "Tank Brigade" }
+	}
 }
 
 load_FRA_oob = {
@@ -13403,6 +13720,17 @@ load_FRA_oob = {
 		else = {
 			load_oob = FRA_1936
 		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_tech = gwtank
+				has_tech = gwtank_chassis
+			}
+		}
+
+		delete_unit_template_and_units = { division_template = "Brigade de Chars de Combat" }
 	}
 }
 
