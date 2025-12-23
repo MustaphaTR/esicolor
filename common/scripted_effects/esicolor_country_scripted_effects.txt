@@ -83,6 +83,28 @@ give_starting_tech_AFG = {
 		complete_special_project = { project = sp:sp_air_radar }
 	}
 }
+give_tank_designs_AFG = {
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		create_equipment_variant = {
+			name = "FT mod. 31"
+			type = light_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 1
+				tank_nsb_armor_upgrade = 2
+			}
+		}
+	}
+}
 
 give_starting_tech_ALB = {
 	set_technology = {
@@ -1561,6 +1583,63 @@ give_starting_tech_CZE = {
 		complete_special_project = { project = sp:sp_air_radar }
 	}
 }
+give_tank_designs_CZE = {
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		create_equipment_variant = {
+			name = "Tancik vz. 33"
+			type = light_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 1
+				tank_nsb_armor_upgrade = 1
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "LT vz. 35"
+			type = light_tank_chassis_1
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 2
+			}
+		}
+		create_equipment_variant = {
+			name = "TNH"
+			type = light_tank_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 3
+			}
+		}
+	}
+}
 
 give_starting_tech_DAH = {
 	give_starting_tech_BRD = yes
@@ -2001,6 +2080,193 @@ give_starting_tech_ENG = {
 		complete_special_project = { project = sp:sp_naval_torpedo_cruiser }
 	}
 }
+give_tank_designs_ENG = {
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		create_equipment_variant = {
+			name = "Light Tank Mk. IV"
+			type = light_tank_chassis_1
+			parent_version = 0
+			show_position = no
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 1
+			}
+			icon = "GFX_ENG_basic_light_tank_medium"
+			obsolete = yes #used for oob
+		}
+		create_equipment_variant = {
+			name = "Light Tank Mk. VI"
+			type = light_tank_chassis_1
+			parent_version = 1
+			show_position = no
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = smoke_launchers
+			}
+			icon = "GFX_ENG_basic_light_tank_medium"
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 2
+			}
+		}
+		create_equipment_variant = {
+			name = "Medium Mk. II"
+			type = medium_tank_chassis_0
+			parent_version = 0
+			show_position = no
+			modules = {
+				main_armament_slot = tank_small_cannon
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 1
+				tank_nsb_engine_upgrade = 2
+			}
+			icon = "GFX_ENG_basic_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Vickers 6 ton A"
+			type = light_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = secondary_turret_hmg
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 3
+				tank_nsb_engine_upgrade = 2
+			}
+			icon = "GFX_ENG_light_BAB_camo"
+			obsolete = yes #export only
+		}
+		create_equipment_variant = {
+			name = "Vickers 6 ton B"
+			type = light_tank_chassis_0
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_small_cannon
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 3
+				tank_nsb_engine_upgrade = 2
+			}
+			icon = "GFX_ENG_light_BAB_camo"
+			obsolete = yes #export only
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		create_equipment_variant = {
+			name = "Matilda I"
+			type = light_tank_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 6
+			}
+			icon = "GFX_ENG_improved_light_tank_medium"
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Matilda II"
+			type = heavy_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_heavy_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = smoke_launchers
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 8
+			}
+			icon = "GFX_ENG_improved_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Cruiser Mk. I"
+			type = medium_tank_chassis_1
+			parent_version = 0
+			show_position = no
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = secondary_turret_hmg
+				special_type_slot_3 = secondary_turret_hmg
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 3
+				tank_nsb_armor_upgrade = 1
+			}
+			obsolete = yes
+			icon = "GFX_ENG_light_CCA_camo"
+		}
+		create_equipment_variant = {
+			name = "Cruiser Mk. IV"
+			type = medium_tank_chassis_1
+			parent_version = 1
+			show_position = no
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = smoke_launchers
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 7
+				tank_nsb_armor_upgrade = 3
+			}
+			icon = "GFX_ENG_light_CCA_camo"
+		}
+	}
+}
 
 give_starting_tech_EQG = {
 	give_starting_tech_BRD = yes
@@ -2410,6 +2676,162 @@ give_starting_tech_FRA = {
 		complete_special_project = { project = sp:sp_air_radar }
 	}
 }
+give_tank_designs_FRA = {
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		create_equipment_variant = {
+			name = "FT mod. 31"
+			type = light_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 1
+				tank_nsb_armor_upgrade = 2
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "FT Char Cannon"
+			type = light_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 1
+				tank_nsb_armor_upgrade = 2
+			}
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "H-35" #due to similar design this also covers R-35
+			type = light_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 4
+			}
+			icon = "GFX_FRA_basic_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Char B1"
+			type = heavy_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_medium_howitzer
+				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = secondary_turret_small_cannon
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 6
+				tank_nsb_armor_upgrade = 4
+			}
+			icon = "GFX_FRA_basic_heavy_tank_medium"
+		}
+
+		create_equipment_variant = {
+			name = "SOMUA S35"
+			type = medium_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_medium_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 5
+			}
+			icon = "GFX_FRA_improved_medium_tank_medium"
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		create_equipment_variant = {
+			name = "Char B1bis"
+			type = heavy_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_medium_howitzer
+				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = secondary_turret_small_cannon
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 6
+				tank_nsb_armor_upgrade = 6
+			}
+			icon = "GFX_FRA_basic_heavy_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "FCM 36"
+			type = light_tank_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = sloped_armor
+
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 4
+			}
+			icon = "GFX_FRA_improved_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "AMC 35"
+			type = medium_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_medium_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 3
+			}
+			icon = "GFX_FRA_basic_medium_tank_medium"
+		}
+	}
+}
 
 give_starting_tech_FSM = {
 	give_starting_tech_BAS = yes
@@ -2667,6 +3089,199 @@ give_starting_tech_GER = {
 		}
 		complete_special_project = { project = sp:sp_naval_midget_submarine }
 		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+give_tank_designs_GER = {
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		create_equipment_variant = {
+			name = "Leichttraktor"
+			type = light_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 2
+			}
+			obsolete = yes
+			icon = "GFX_GER_gwtank_medium"
+		}
+		create_equipment_variant = {
+			name = "Panzer I Ausf. A"
+			type = light_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 5
+				tank_nsb_armor_upgrade = 1
+			}
+			icon = "GFX_GER_basic_light_tank_medium"
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Neubaufahrzeug"
+			type = heavy_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_close_support_gun
+				turret_type_slot = tank_heavy_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = secondary_turret_hmg
+				special_type_slot_3 = secondary_turret_hmg
+				special_type_slot_4 = secondary_turret_hmg
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 6
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_GER_basic_heavy_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Panzer II Ausf. A"
+			type = light_tank_chassis_2
+			parent_version = 0
+			obsolete = yes
+			modules = {
+				main_armament_slot = tank_auto_cannon
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 3
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_GER_improved_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Panzer II"
+			type = light_tank_chassis_2
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_auto_cannon
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 3
+				tank_nsb_armor_upgrade = 3
+			}
+			icon = "GFX_GER_improved_light_tank_medium"
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		create_equipment_variant = {
+			name = "Panzer III Ausf. F"
+			type = medium_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = smoke_launchers
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 6
+				tank_nsb_armor_upgrade = 3
+			}
+			icon = "GFX_GER_basic_medium_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Panzer IV Ausf. C"
+			type = medium_tank_chassis_1
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_close_support_gun
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = smoke_launchers
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 6
+				tank_nsb_armor_upgrade = 3
+			}
+			icon = "GFX_GER_improved_medium_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Panzer 35(t)"
+			type = light_tank_chassis_1
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 3
+				tank_nsb_armor_upgrade = 2
+			}
+			obsolete = yes
+			icon = "GFX_CZE_basic_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Panzer 38(t)"
+			type = light_tank_chassis_2
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = smoke_launchers
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 3
+				tank_nsb_armor_upgrade = 3
+			}
+			
+			icon = "GFX_CZE_improved_light_tank_medium"
+		}
 	}
 }
 
@@ -3523,6 +4138,105 @@ give_starting_tech_ITA = {
 		complete_special_project = { project = sp:sp_air_radar }
 	}
 }
+give_tank_designs_ITA = {
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		create_equipment_variant = {
+			name = "Fiat 3000"
+			type = light_tank_chassis_0
+			parent_version = 0
+			obsolete = yes
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 1
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_gwtank_medium"
+		}
+		create_equipment_variant = {
+			name = "Fiat 3000B"
+			type = light_tank_chassis_0
+			parent_version = 1
+			obsolete = yes
+			modules = {
+				main_armament_slot = tank_small_cannon
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 1
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_gwtank_medium"
+		}
+		create_equipment_variant = {
+			name = "L3/35"
+			type = light_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 1
+				tank_nsb_armor_upgrade = 1
+			}
+			icon = "GFX_ITA_basic_light_tank_medium"
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		create_equipment_variant = {
+			name = "L6/40"
+			type = light_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_auto_cannon
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 4
+			}
+			icon = "GFX_ITA_improved_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "M11/39"
+			type = light_tank_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_light_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = secondary_turret_hmg
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 3
+			}
+			icon = "GFX_ITA_basic_medium_tank_medium"
+		}
+	}
+}
 
 give_starting_tech_IVO = {
 	give_starting_tech_BRD = yes
@@ -3676,11 +4390,11 @@ give_starting_tech_JAP = {
 			limit = { has_dlc = "No Step Back" }
 
 			set_technology = {
-				basic_medium_tank = 1
+				basic_medium_tank_chassis = 1
 			}
 			else = {
 				set_technology = {
-					basic_medium_tank_chassis = 1
+					basic_medium_tank = 1
 				}
 			}
 		}
@@ -3704,6 +4418,121 @@ give_starting_tech_JAP = {
 		complete_special_project = { project = sp:sp_naval_torpedo_cruiser }
 		complete_special_project = { project = sp:sp_naval_super_heavy_battleship }
 		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+give_tank_designs_JAP = {
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		create_equipment_variant = {
+			name = "Type 92 Tankette"
+			type = light_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = secondary_turret_hmg
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 0
+				tank_nsb_armor_upgrade = 0
+			}
+			obsolete = yes
+			icon = "GFX_JAP_basic_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Type 94 Tankette"
+			type = light_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine 
+				special_type_slot_1 = empty
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 0
+				tank_nsb_armor_upgrade = 0
+			}
+			obsolete = yes
+			icon = "GFX_JAP_basic_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Type 89 I-Go"
+			type = medium_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_close_support_gun
+				turret_type_slot = tank_medium_two_man_tank_turret 
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = additional_machine_guns
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 0
+			}
+			icon = "GFX_JAP_basic_medium_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Type 95 Ha-Go"
+			type = light_tank_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine 
+				special_type_slot_1 = additional_machine_guns
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_JAP_improved_light_tank_medium"
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		create_equipment_variant = {
+			name = "Type 97 Chi-Ha"
+			type = medium_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_close_support_gun
+				turret_type_slot = tank_medium_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_JAP_basic_medium_tank_medium"
+		}
 	}
 }
 
@@ -5547,6 +6376,29 @@ give_starting_tech_ROM = {
 		complete_special_project = { project = sp:sp_air_radar }
 	}
 }
+give_tank_designs_ROM = {
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		create_equipment_variant = {
+			name = "FT Char Cannon"
+			type = light_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 1
+				tank_nsb_armor_upgrade = 2
+			}
+			obsolete = yes
+		}
+	}
+}
 
 give_starting_tech_RWA = {
 	give_starting_tech_BRD = yes
@@ -6006,6 +6858,165 @@ give_starting_tech_SOV = {
 		}
 		complete_special_project = { project = sp:sp_naval_cruiser_submarine }
 		complete_special_project = { project = sp:sp_air_radar }
+	}
+}
+give_tank_designs_SOV = {
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		create_equipment_variant = {
+			name = "T-27"
+			type = light_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 1
+				tank_nsb_armor_upgrade = 1
+			}
+			obsolete = yes
+			icon = "GFX_gwtank_medium"
+		}
+		create_equipment_variant = {
+			name = "T-26TU mod. 1933"
+			type = light_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_SOV_basic_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "BT-5"
+			type = light_tank_chassis_1
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 8
+				tank_nsb_armor_upgrade = 1
+			}
+			icon = "GFX_SOV_improved_light_tank_medium" #More similar to BT-7 than to T-26
+			model = "SOV_light_armor_entity" #More similar to BT-7 than to T-26
+		}
+		create_equipment_variant = {
+			name = "BT-7"
+			type = light_tank_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 10
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_SOV_improved_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "T-28"
+			type = medium_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_close_support_gun
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = secondary_turret_hmg
+				special_type_slot_3 = secondary_turret_hmg
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 3
+				tank_nsb_engine_upgrade = 10
+			}
+			icon = "GFX_SOV_medium_gwtank_medium"
+			model = "SOV_medium_gw_armor_0_entity"
+		}
+		create_equipment_variant = {
+			name = "T-35"
+			type = heavy_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_close_support_gun
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = secondary_turret_hmg
+				special_type_slot_3 = secondary_turret_hmg
+				special_type_slot_4 = secondary_turret_small_cannon
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 3
+				tank_nsb_engine_upgrade = 10
+			}
+			icon = "GFX_SOV_basic_heavy_tank_medium"
+		}
+	}
+
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		create_equipment_variant = {
+			name = "A-20"
+			type = medium_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_medium_two_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = sloped_armor
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 8
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_SOV_basic_medium_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "KV-1"
+			type = heavy_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_medium_cannon
+				turret_type_slot = tank_heavy_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 10
+				tank_nsb_armor_upgrade = 9
+			}
+			icon = "GFX_SOV_improved_heavy_tank_medium"
+		}
 	}
 }
 
@@ -6556,6 +7567,30 @@ give_starting_tech_TUR = {
 		complete_special_project = { project = sp:sp_air_radar }
 	}
 }
+give_tank_designs_TUR = {
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		create_equipment_variant = {
+			name = "T-26TU mod. 1933"
+			type = light_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_SOV_basic_light_tank_medium"
+		}
+	}
+}
 
 give_starting_tech_TZN = {
 	give_starting_tech_BRD = yes
@@ -6820,6 +7855,49 @@ give_starting_tech_USA = {
 		}
 	}
 }
+give_tank_designs_USA = {
+	if = {
+		limit = { has_dlc = "No Step Back" }
+
+		create_equipment_variant = {
+			name = "M1 Combat Car"
+			type = light_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 2
+				tank_nsb_engine_upgrade = 5
+			}
+			icon = "GFX_USA_basic_light_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "M2A2"
+			type = light_tank_chassis_1
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = secondary_turret_hmg
+				special_type_slot_2 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_armor_upgrade = 2
+				tank_nsb_engine_upgrade = 4
+			}
+			icon = "GFX_USA_basic_light_tank_medium"
+		}
+	}
+}
 
 give_starting_tech_VEN = {
 	set_technology = {
@@ -7015,6 +8093,9 @@ give_starting_tech_YUG = {
 		complete_special_project = { project = sp:sp_air_radar }
 	}
 }
+give_tank_designs_YUG = {
+	give_tank_designs_AFG = yes
+}
 
 give_starting_tech_YUN = {
 	give_starting_tech_BAS = yes
@@ -7038,6 +8119,7 @@ give_starting_tech = {
 		limit = { state_originally_from_AFG = yes }
 
 		give_starting_tech_AFG = yes
+		give_tank_designs_AFG = yes
 	}
 	else_if = {
 		limit = { state_originally_from_ALB = yes }
@@ -7125,6 +8207,11 @@ give_starting_tech = {
 		give_starting_tech_BUL = yes
 	}
 	else_if = {
+		limit = { state_originally_from_CAM = yes }
+
+		give_starting_tech_FRA = yes
+	}
+	else_if = {
 		limit = { state_originally_from_CAN = yes }
 
 		give_starting_tech_CAN = yes
@@ -7198,6 +8285,7 @@ give_starting_tech = {
 		limit = { state_originally_from_CZE = yes }
 
 		give_starting_tech_CZE = yes
+		give_tank_designs_CZE = yes
 	}
 	else_if = {
 		limit = { state_originally_from_DAH = yes }
@@ -7238,6 +8326,7 @@ give_starting_tech = {
 		limit = { state_originally_from_UKD = yes }
 
 		give_starting_tech_ENG = yes
+		give_tank_designs_ENG = yes
 	}
 	else_if = {
 		limit = { state_originally_from_EQG = yes }
@@ -7275,16 +8364,10 @@ give_starting_tech = {
 		give_starting_tech_FOR = yes
 	}
 	else_if = {
-		limit = {
-			OR = {
-				state_originally_from_FRA = yes
-				state_originally_from_CAM = yes
-				state_originally_from_LAO = yes
-				state_originally_from_VIN = yes
-			}
-		}
+		limit = { state_originally_from_FRA = yes }
 
 		give_starting_tech_FRA = yes
+		give_tank_designs_FRA = yes
 	}
 	else_if = {
 		limit = { state_originally_from_FSM = yes }
@@ -7315,6 +8398,7 @@ give_starting_tech = {
 		limit = { state_originally_from_GER = yes }
 
 		give_starting_tech_GER = yes
+		give_tank_designs_GER = yes
 	}
 	else_if = {
 		limit = { state_originally_from_GHA = yes }
@@ -7410,6 +8494,7 @@ give_starting_tech = {
 		limit = { state_originally_from_ITA = yes }
 
 		give_starting_tech_ITA = yes
+		give_tank_designs_ITA = yes
 	}
 	else_if = {
 		limit = { state_originally_from_IVO = yes }
@@ -7425,6 +8510,7 @@ give_starting_tech = {
 		limit = { state_originally_from_JAP = yes }
 
 		give_starting_tech_JAP = yes
+		give_tank_designs_JAP = yes
 	}
 	else_if = {
 		limit = { state_originally_from_JOR = yes }
@@ -7455,6 +8541,11 @@ give_starting_tech = {
 		limit = { state_originally_from_KUW = yes }
 
 		give_starting_tech_KUW = yes
+	}
+	else_if = {
+		limit = { state_originally_from_LAO = yes }
+
+		give_starting_tech_FRA = yes
 	}
 	else_if = {
 		limit = { state_originally_from_LAT = yes }
@@ -7671,6 +8762,7 @@ give_starting_tech = {
 		limit = { state_originally_from_ROM = yes }
 
 		give_starting_tech_ROM = yes
+		give_tank_designs_ROM = yes
 	}
 	else_if = {
 		limit = { state_originally_from_RWA = yes }
@@ -7746,6 +8838,7 @@ give_starting_tech = {
 		limit = { state_originally_from_SOV = yes }
 
 		give_starting_tech_SOV = yes
+		give_tank_designs_SOV = yes
 	}
 	else_if = {
 		limit = { state_originally_from_SPR = yes }
@@ -7821,6 +8914,7 @@ give_starting_tech = {
 		limit = { state_originally_from_TUR = yes }
 
 		give_starting_tech_TUR = yes
+		give_tank_designs_TUR = yes
 	}
 	else_if = {
 		limit = { state_originally_from_TZN = yes }
@@ -7846,11 +8940,17 @@ give_starting_tech = {
 		limit = { state_originally_from_USA = yes }
 
 		give_starting_tech_USA = yes
+		give_tank_designs_USA = yes
 	}
 	else_if = {
 		limit = { state_originally_from_VEN = yes }
 
 		give_starting_tech_VEN = yes
+	}
+	else_if = {
+		limit = { state_originally_from_VIN = yes }
+
+		give_starting_tech_FRA = yes
 	}
 	else_if = {
 		limit = { state_originally_from_VOL = yes }
@@ -7881,6 +8981,7 @@ give_starting_tech = {
 		limit = { state_originally_from_YUG = yes }
 
 		give_starting_tech_YUG = yes
+		give_tank_designs_YUG = yes
 	}
 	else_if = {
 		limit = { state_originally_from_YUN = yes }
@@ -8074,6 +9175,92 @@ give_combined_tech = {
 	give_starting_tech_YUN = yes
 	give_starting_tech_ZAM = yes
 	give_starting_tech_ZIM = yes
+	
+	if = {
+		limit = { has_dlc = "No Step Back }
+
+		create_equipment_variant = {
+			name = "Improved Light Tank"
+			type = light_tank_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 5
+				tank_nsb_armor_upgrade = 3
+			}
+			icon = "GFX_generic_light_BAA_camo"
+		}
+		create_equipment_variant = {
+			name = "Inter-War Medium Tank"
+			type = medium_tank_chassis_0
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_auto_cannon
+				turret_type_slot = tank_medium_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = wet_ammo_storage
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 2
+			}
+			icon = "GFX_generic_gw_medium_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Basic Heavy Tank"
+			type = heavy_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon
+				turret_type_slot = tank_heavy_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = wet_ammo_storage
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 3
+				tank_nsb_armor_upgrade = 5
+			}
+			icon = "GFX_generic_heavy_CAA_camo"
+		}
+
+		if = {
+			limit = { has_start_date > 1939.1.1 }
+
+			create_equipment_variant = {
+				name = "Basic Medium Tank"
+				type = medium_tank_chassis_1
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_auto_cannon
+					turret_type_slot = tank_medium_one_man_tank_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_1
+					special_type_slot_2 = wet_ammo_storage
+					special_type_slot_3 = additional_machine_guns
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 4
+					tank_nsb_armor_upgrade = 4
+				}
+				icon = "GFX_generic_gw_medium_tank_medium"
+			}
+		}
+	}
 }
 
 give_all_tech = {
@@ -8269,6 +9456,129 @@ give_all_tech = {
 				sp_armored_lc_weapon_fire_control_tech = 1
 				sp_armored_lc_high_impact_obliterator_cannon_tech = 1
 			}
+		}
+		create_equipment_variant = {
+			name = "Advanced Light Tank"
+			type = light_tank_chassis_3
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_light_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = secondary_turret_hmg
+				special_type_slot_3 = additional_machine_guns
+				special_type_slot_4 = additional_machine_guns
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 10
+				tank_nsb_armor_upgrade = 8
+			}
+			icon = "GFX_generic_light_BAA_camo"
+		}
+		create_equipment_variant = {
+			name = "Advanced Medium Tank"
+			type = medium_tank_chassis_3
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = sloped_armor
+				special_type_slot_3 = smoke_launchers
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 6
+				tank_nsb_armor_upgrade = 4
+			}
+			icon = "GFX_generic_medium_CAA_camo"
+		}
+		create_equipment_variant = {
+			name = "Advanced Heavy Tank"
+			type = heavy_tank_chassis_3
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_cannon_2
+				turret_type_slot = tank_heavy_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = sloped_armor
+				special_type_slot_3 = smoke_launchers
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 8
+				tank_nsb_armor_upgrade = 6
+			}
+			icon = "GFX_generic_heavy_CAA_camo"
+		}
+		create_equipment_variant = {
+			name = "Super-Heavy Tank"
+			type = super_heavy_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_super_heavy_cannon
+				turret_type_slot = tank_super_heavy_four_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = secondary_turret_hmg
+				special_type_slot_2 = additional_machine_guns
+				special_type_slot_3 = squeezebore_adaptor
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 5
+				tank_nsb_armor_upgrade = 8
+			}
+			icon = "GFX_generic_super_heavy_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Modern Tank"
+			type = modern_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_auto_cannon_2
+				turret_type_slot = tank_modern_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_3
+				special_type_slot_2 = sloped_armor
+				special_type_slot_3 = smoke_launchers
+				special_type_slot_4 = easy_maintenance
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 8
+				tank_nsb_armor_upgrade = 6
+			}
+			icon = "GFX_generic_modern_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "Amphibious Tank"
+			type = amphibious_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_light_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = wet_ammo_storage
+				special_type_slot_3 = additional_machine_guns
+				special_type_slot_4 = additional_machine_guns
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 8
+				tank_nsb_armor_upgrade = 8
+			}
+			icon = "GFX_amphibious_tank_chassis_medium"
 		}
 		else = {
 			set_technology = {
