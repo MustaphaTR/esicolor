@@ -218,26 +218,34 @@ scripted_gui = {
 			}
 
 			preset_button_2_visible = {
-				randomised_preset_selected = no
+				basegame_preset_selected = no
 			}
 
 			preset_button_2_selected_visible = {
-				randomised_preset_selected = yes
+				basegame_preset_selected = yes
 			}
 
 			preset_button_3_visible = {
-				equalised_preset_selected = no
+				randomised_preset_selected = no
 			}
 
 			preset_button_3_selected_visible = {
-				equalised_preset_selected = yes
+				randomised_preset_selected = yes
 			}
 
 			preset_button_4_visible = {
-				developer_preset_selected = no
+				equalised_preset_selected = no
 			}
 
 			preset_button_4_selected_visible = {
+				equalised_preset_selected = yes
+			}
+
+			preset_button_5_visible = {
+				developer_preset_selected = no
+			}
+
+			preset_button_5_selected_visible = {
 				developer_preset_selected = yes
 			}
 
@@ -255,23 +263,30 @@ scripted_gui = {
 			}
 
 			preset_button_2_click = {
-				randomised_preset_effects = yes
+				basegame_preset_effects = yes
 			}
 			preset_button_2_selected_click = {
 				randomise_seed = yes
 			}
 
 			preset_button_3_click = {
-				equalised_preset_effects = yes
+				randomised_preset_effects = yes
 			}
 			preset_button_3_selected_click = {
 				randomise_seed = yes
 			}
 
 			preset_button_4_click = {
-				developer_preset_effects = yes
+				equalised_preset_effects = yes
 			}
 			preset_button_4_selected_click = {
+				randomise_seed = yes
+			}
+
+			preset_button_5_click = {
+				developer_preset_effects = yes
+			}
+			preset_button_5_selected_click = {
 				randomise_seed = yes
 			}
 		}

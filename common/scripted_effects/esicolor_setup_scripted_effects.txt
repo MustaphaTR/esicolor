@@ -12124,6 +12124,7 @@ calculate_template_size_variables = {
 }
 adjust_default_template_size = {
 	calculate_template_size_variables = yes
+	set_variable = { divisionstoaddstart = divisionstoadd }
 
 	for_loop_effect = {
 		start = 0
@@ -12169,11 +12170,16 @@ adjust_default_template_size = {
 		}
 	}
 
-	delete_units = { division_template = "Infantry Brigade" }
-	capital_scope = {
-		create_unit = {
-			division = "division_template = \"Infantry Brigade\""
-			owner = PREV
+	if = {
+		limit = { check_variable = { divisionstoaddstart > 0 } } # Don't respawn the division if we didn't add anything.
+
+		delete_units = { division_template = "Infantry Brigade" }
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"Infantry Brigade\""
+				owner = PREV
+			}
+			teleport_created_units_out_of_lakes = yes
 		}
 	}
 }
@@ -12240,6 +12246,7 @@ change_default_template_to_militia = {
 			division = "division_template = \"Militia Brigade\""
 			owner = PREV
 		}
+		teleport_created_units_out_of_lakes = yes
 	}
 }
 change_default_template_to_irregulars = {
@@ -12305,6 +12312,7 @@ change_default_template_to_irregulars = {
 			division = "division_template = \"Irregular Infantry Brigade\""
 			owner = PREV
 		}
+		teleport_created_units_out_of_lakes = yes
 	}
 }
 change_default_template_to_cavalry = {
@@ -12367,6 +12375,18 @@ change_default_template_to_cavalry = {
 			division = "division_template = \"Cavalry Brigade\""
 			owner = PREV
 		}
+		teleport_created_units_out_of_lakes = yes
+	}
+}
+teleport_created_units_out_of_lakes = {
+	if = {
+		limit = { state = 870 }
+
+		teleport_armies = {
+			limit = { original_tag = BFO }
+
+			to_province = 2201
+		}
 	}
 }
 
@@ -12420,6 +12440,28 @@ spawn_basegame_divisions = {
 			else = {
 				load_oob = ARG_1936
 			}
+
+			if = {
+				limit = { NOT = { has_tech = tech_mountaineers } }
+
+				division_template = {
+					name = "Brigada 'Montaña'"
+					division_names_group = SPAN_MNT_02
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+					}
+				}
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = mountaineers }
+
+					change_division_template = { division_template = "Brigada 'Montaña'" }
+				}
+				delete_unit_template_and_units = { division_template = "Brigada Montaña" }
+			}
 		}
 		else_if = {
 			limit = { state_originally_from_AST = yes }
@@ -12437,6 +12479,50 @@ spawn_basegame_divisions = {
 			limit = { state_originally_from_AUS = yes }
 
 			load_oob = AUS_ww_1936
+
+			if = {
+				limit = { NOT = { has_tech = tech_mountaineers } }
+
+				division_template = {
+					name = "'Alpenjäger' Division"
+					division_names_group = AUS_MNT_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+					}
+				}
+				if = {
+					limit = { has_tech = tech_engineers }
+
+					add_units_to_division_template = {
+						template_name = "'Alpenjäger' Division"
+
+						support = {
+							engineer = 0
+						}
+					}
+				}
+				if = {
+					limit = { has_tech = tech_recon }
+
+					add_units_to_division_template = {
+						template_name = "'Alpenjäger' Division"
+
+						support = {
+							recon = 0
+						}
+					}
+				}
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = mountaineers }
+
+					change_division_template = { division_template = "'Alpenjäger' Division" }
+				}
+				delete_unit_template_and_units = { division_template = "Alpenjäger Division" }
+			}
 		}
 		else_if = {
 			limit = { state_originally_from_BEL = yes }
@@ -12445,7 +12531,10 @@ spawn_basegame_divisions = {
 				limit = { has_dlc = "La Resistance" }
 
 				if = {
-					limit = { has_dlc = "No Compromise, No Surrender" }
+					limit = {
+						has_dlc = "No Compromise, No Surrender"
+						has_tech = rangers_tech
+					}
 
 					load_oob = BEL_WW_1936_lar_ncns
 				}
@@ -12455,7 +12544,10 @@ spawn_basegame_divisions = {
 			}
 			else = {
 				if = {
-					limit = { has_dlc = "No Compromise, No Surrender" }
+					limit = {
+						has_dlc = "No Compromise, No Surrender"
+						has_tech = rangers_tech
+					}
 
 					load_oob = BEL_WW_1936_ncns
 				}
@@ -12463,6 +12555,83 @@ spawn_basegame_divisions = {
 					load_oob = BEL_WW_1936
 				}
 			}
+
+			if = {
+				limit = {
+					NOT = {
+						has_tech = tech_mountaineers
+						has_tech = rangers_tech
+					}
+				}
+
+				division_template = {
+					name = "'Chasseurs' Ardennais"
+					division_names_group = BEL_Mnt_01
+					template_counter = 93
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								has_tech = gwtank_chassis
+								has_tech = interwar_antitank
+							}
+							has_tech = basic_light_td
+						}
+					}
+
+					add_units_to_division_template = {
+						template_name = "'Chasseurs' Ardennais"
+
+						regiments = {
+							light_tank_destroyer_brigade = 1
+						}
+					}
+				}
+				if = {
+					limit = { has_tech = tech_recon }
+
+					add_units_to_division_template = {
+						template_name = "'Chasseurs' Ardennais"
+
+						support = {
+							recon = 0
+						}
+					}
+				}
+				if = {
+					limit = { has_tech = gw_artillery }
+
+					add_units_to_division_template = {
+						template_name = "'Chasseurs' Ardennais"
+
+						support = {
+							artillery = 0
+						}
+					}
+				}
+
+				every_country_division = {
+					limit = {
+						OR = {
+							division_has_battalion_in_template = mountaineers
+							division_has_battalion_in_template = ranger_battalion
+						}
+					}
+
+					change_division_template = { division_template = "'Chasseurs' Ardennais" }
+				}
+				delete_unit_template_and_units = { division_template = "Chasseurs Ardennais" }
+			}
+
+			delete_unit_template_and_units = { division_template = "Force Publique" } # Appears as a colonial division from your own country, delete it.
 		}
 		else_if = {
 			limit = { state_originally_from_BHU = yes }
@@ -12639,6 +12808,17 @@ spawn_basegame_divisions = {
 			else = {
 				load_oob = CZE_1936
 			}
+
+			if = {
+				limit = { NOT = { has_tech = tech_mountaineers } }
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = mountaineers }
+
+					change_division_template = { division_template = "Pěší divize" }
+				}
+				delete_unit_template_and_units = { division_template = "Horská divize" }
+			}
 		}
 		else_if = {
 			limit = { state_originally_from_DEN = yes }
@@ -12733,11 +12913,22 @@ spawn_basegame_divisions = {
 				is_locked = no
 			}
 			set_division_template_lock = {
-				division_template = "Chitet Saferi"
+				division_template = "Chitet Sefari"
 				is_locked = no
 			}
 			clear_division_template_cap = {
-				division_template = "Chitet Saferi"
+				division_template = "Chitet Sefari"
+			}
+
+			if = {
+				limit = { NOT = { has_tech = tech_mountaineers } }
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = mountaineers }
+
+					change_division_template = { division_template = "Mehal Sefari" }
+				}
+				delete_unit_template_and_units = { division_template = "Mountain Division" }
 			}
 		}
 		else_if = {
@@ -12772,7 +12963,14 @@ spawn_basegame_divisions = {
 		else_if = {
 			limit = { state_originally_from_GDC = yes }
 
-			load_oob = GDC_1936_sea
+			if = {
+				limit = { original_tag = EZL }
+
+				load_ENG_oob = yes
+			}
+			else = {
+				load_oob = GDC_1936_sea
+			}
 		}
 		else_if = {
 			limit = {
@@ -12805,6 +13003,102 @@ spawn_basegame_divisions = {
 					load_oob = GER_1936
 				}
 			}
+
+			if = {
+				limit = { has_start_date > 1939.1.1 } # Doesn't exist in the 19369 OOB.
+
+				if = {
+					limit = { NOT = { has_tech = paratroopers } }
+
+					division_template = {
+						name = "'Fallschirmjäger'-Division"
+						division_names_group = GER_PAR_01
+
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+						}
+					}
+
+					every_country_division = {
+						limit = { division_has_battalion_in_template = paratrooper }
+
+						change_division_template = { division_template = "'Fallschirmjäger'-Division" }
+					}
+					delete_unit_template_and_units = { division_template = "Fallschirmjäger-Division" }
+				}
+			}
+			if = {
+				limit = { has_start_date > 1939.1.1 }
+
+				if = {
+					limit = { NOT = { has_tech = tech_mountaineers } }
+
+					division_template = {
+						name = "'Gebirgs'-Division"
+						division_names_group = GER_Mnt_01
+
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+						}
+					}
+					if = {
+						limit = { has_tech = tech_engineers }
+
+						add_units_to_division_template = {
+							template_name = "'Gebirgs'-Division"
+
+							support = {
+								engineer = 0
+							}
+						}
+					}
+
+					every_country_division = {
+						limit = { division_has_battalion_in_template = mountaineers }
+
+						change_division_template = { division_template = "'Gebirgs'-Division" }
+					}
+					delete_unit_template_and_units = { division_template = "Gebirgs-Division" }
+				}
+			}
+			else = {
+				if = {
+					limit = { NOT = { has_tech = tech_mountaineers } }
+
+					division_template = {
+						name = "'Gebirgs'-Brigade"
+						division_names_group = GER_Mnt_01
+
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+						}
+					}
+
+					every_country_division = {
+						limit = { division_has_battalion_in_template = mountaineers }
+
+						change_division_template = { division_template = "'Gebirgs'-Brigade" }
+					}
+					delete_unit_template_and_units = { division_template = "Gebirgs-Brigade" }
+				}
+			}
 		}
 		else_if = {
 			limit = { state_originally_from_GRE = yes }
@@ -12816,6 +13110,59 @@ spawn_basegame_divisions = {
 			}
 			else = {
 				load_oob = GRE_1936
+			}
+
+			if = {
+				limit = { NOT = { has_tech = tech_mountaineers } }
+
+				division_template = {
+					name = "'Oreinó' Pezikoú"
+					division_names_group = GRE_MNT_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+					}
+				}
+				if = {
+					limit = { has_start_date < 1939.1.1 } # No support companies in 1939 OOB.
+
+					if = {
+						limit = { has_tech = tech_engineers }
+
+						add_units_to_division_template = {
+							template_name = "'Oreinó' Pezikoú"
+
+							support = {
+								engineer = 0
+							}
+						}
+					}
+					if = {
+						limit = { has_tech = gw_artillery }
+
+						add_units_to_division_template = {
+							template_name = "'Oreinó' Pezikoú"
+
+							support = {
+								artillery = 0
+							}
+						}
+					}
+				}
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = mountaineers }
+
+					change_division_template = { division_template = "'Oreinó' Pezikoú" }
+				}
+				delete_unit_template_and_units = { division_template = "Tetrágono Pezikoú" }
 			}
 		}
 		else_if = {
@@ -12874,6 +13221,30 @@ spawn_basegame_divisions = {
 			}
 			else = {
 				load_oob = HOL_1936
+			}
+
+			if = {
+				limit = { NOT = { has_tech = marines } }
+
+				division_template = {
+					name = "'Mariniersdivisie'"
+					division_names_group = HOL_MAR_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					priority = 2
+				}
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = marine }
+
+					change_division_template = { division_template = "'Mariniersdivisie'" }
+				}
+				delete_unit_template_and_units = { division_template = "Mariniersdivisie" }
 			}
 		}
 		else_if = {
@@ -12995,6 +13366,45 @@ spawn_basegame_divisions = {
 					load_oob = ITA_1936
 				}
 			}
+
+			set_division_template_lock = {
+				division_template = "Camicie Nere"
+				is_locked = no
+			}
+			clear_division_template_cap = {
+				division_template = "Camicie Nere"
+			}
+			set_division_template_lock = {
+				division_template = "Banda Indigena Irregolare"
+				is_locked = no
+			}
+			set_division_template_lock = {
+				division_template = "Truppe Irregolari a Cavallo"
+				is_locked = no
+			}
+			set_division_template_lock = {
+				division_template = "Banda Irregolare Libica"
+				is_locked = no
+			}
+			set_division_template_lock = {
+				division_template = "Banda Irregolare Eritrea"
+				is_locked = no
+			}
+			set_division_template_lock = {
+				division_template = "Banda Irregolare Somala"
+				is_locked = no
+			}
+
+			if = {
+				limit = { NOT = { has_tech = tech_mountaineers } }
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = mountaineers }
+
+					change_division_template = { division_template = "Divisione di Fanteria" }
+				}
+				delete_unit_template_and_units = { division_template = "Divisione Alpina" }
+			}
 		}
 		else_if = {
 			limit = {
@@ -13003,6 +13413,7 @@ spawn_basegame_divisions = {
 					state_originally_from_KOR = yes
 					state_originally_from_FSM = yes
 					state_originally_from_FOR = yes
+					original_tag = LAL
 				}
 			}
 
@@ -13158,6 +13569,33 @@ spawn_basegame_divisions = {
 			else = {
 				load_oob = NEP_1936
 			}
+
+			if = {
+				limit = { NOT = { has_tech = tech_mountaineers } }
+
+				division_template = {
+					name = "'Parvatarohi' Dibhijana"
+					division_names_group = NEP_MTN_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+					}
+				}
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = mountaineers }
+
+					change_division_template = { division_template = "'Parvatarohi' Dibhijana" }
+				}
+				delete_unit_template_and_units = { division_template = "Paidala Dibhijana" }
+			}
 		}
 		else_if = {
 			limit = { state_originally_from_NIC = yes }
@@ -13216,21 +13654,18 @@ spawn_basegame_divisions = {
 			limit = { state_originally_from_PAN = yes }
 
 			if = {
-				limit = { has_start_date > 1939.1.1 }
+				limit = { original_tag = LBS }
 
-				load_oob = PAN_1939
-				if = {
-					limit = { original_tag = LBS }
-
-					load_oob = USA_1939
-				}
+				load_USA_oob = yes
 			}
 			else = {
-				load_oob = PAN_1936
 				if = {
-					limit = { original_tag = LBS }
+					limit = { has_start_date > 1939.1.1 }
 
-					load_oob = USA_1936
+					load_oob = PAN_1939
+				}
+				else = {
+					load_oob = PAN_1936
 				}
 			}
 		}
@@ -13265,19 +13700,14 @@ spawn_basegame_divisions = {
 				limit = { has_start_date > 1939.1.1 }
 
 				load_oob = PHI_1939
-				if = {
-					limit = { original_tag = EZF }
-
-					load_oob = USA_1939
-				}
 			}
 			else = {
 				load_oob = PHI_1936
-				if = {
-					limit = { original_tag = EZF }
+			}
+			if = {
+				limit = { original_tag = EZF }
 
-					load_oob = USA_1936
-				}
+				load_USA_oob = yes
 			}
 		}
 		else_if = {
@@ -13295,6 +13725,17 @@ spawn_basegame_divisions = {
 			}
 			else = {
 				load_oob = POL_1936
+			}
+
+			if = {
+				limit = { NOT = { has_tech = tech_mountaineers } }
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = mountaineers }
+
+					change_division_template = { division_template = "Dywizja Piechoty" }
+				}
+				delete_unit_template_and_units = { division_template = "Dywizja Piechoty Górskiej" }
 			}
 		}
 		else_if = {
@@ -13381,6 +13822,31 @@ spawn_basegame_divisions = {
 					load_oob = ROM_1936
 				}
 			}
+
+			if = {
+				limit = { NOT = { has_tech = tech_mountaineers } }
+
+				division_template = {
+					name = "Brigada de 'Munte'"
+					division_names_group = ROM_MTN_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = mountaineers }
+
+					change_division_template = { division_template = "Brigada de 'Munte'" }
+				}
+				delete_unit_template_and_units = { division_template = "Brigada de Munte" }
+			}
 		}
 		else_if = {
 			limit = { state_originally_from_SAF = yes }
@@ -13463,6 +13929,88 @@ spawn_basegame_divisions = {
 					load_oob = SOV_1936
 				}
 			}
+
+			set_division_template_lock = {
+				division_template = "NKVD Pogranichnaya Diviziya"
+				is_locked = no
+			}
+
+			if = {
+				limit = { has_start_date < 1939.1.1 } # Doesn't exist in the 1939 OOB.
+
+				if = {
+					limit = { NOT = { has_tech = paratroopers } }
+
+					division_template = {
+						name = "'Vozdushno-Desantnaya' Brigada"
+						division_names_group = SOV_PAR_01
+
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+						}
+					}
+
+					every_country_division = {
+						limit = { division_has_battalion_in_template = paratrooper }
+
+						change_division_template = { division_template = "'Vozdushno-Desantnaya' Brigada" }
+					}
+					delete_unit_template_and_units = { division_template = "Vozdushno-Desantnaya Brigada" }
+				}
+			}
+			if = {
+				limit = { NOT = { has_tech = tech_mountaineers } }
+
+				division_template = {
+					name = "'Gornostrelkovaya' Diviziya"
+					division_names_group = SOV_MNT_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+						infantry = { x = 3 y = 0 }
+						infantry = { x = 3 y = 1 }
+						infantry = { x = 3 y = 2 }
+					}
+				}
+				if = {
+					limit = { has_tech = tech_engineers }
+
+					add_units_to_division_template = {
+						template_name = "'Gornostrelkovaya' Diviziya"
+
+						support = {
+							engineer = 0
+						}
+					}
+				}
+				if = {
+					limit = { has_tech = gw_artillery }
+
+					add_units_to_division_template = {
+						template_name = "'Gornostrelkovaya' Diviziya"
+
+						support = {
+							artillery = 0
+						}
+					}
+				}
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = mountaineers }
+
+					change_division_template = { division_template = "'Gornostrelkovaya' Diviziya" }
+				}
+				delete_unit_template_and_units = { division_template = "Gornostrelkovaya Diviziya" }
+			}
 		}
 		else_if = {
 			limit = { state_originally_from_SPR = yes }
@@ -13540,6 +14088,17 @@ spawn_basegame_divisions = {
 					load_oob = TUR_1936
 				}
 			}
+
+			if = {
+				limit = { NOT = { has_tech = tech_mountaineers } }
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = mountaineers }
+
+					change_division_template = { division_template = "Bogazi Tugay" }
+				}
+				delete_unit_template_and_units = { division_template = "Dag Tugayi" }
+			}
 		}
 		else_if = {
 			limit = { state_originally_from_URG = yes }
@@ -13554,16 +14113,14 @@ spawn_basegame_divisions = {
 			}
 		}
 		else_if = {
-			limit = { state_originally_from_USA = yes }
-
-			if = {
-				limit = { has_start_date > 1939.1.1 }
-
-				load_oob = USA_1939
+			limit = {
+				OR = {
+					state_originally_from_USA = yes
+					original_tag = MFC # LEB
+				}
 			}
-			else = {
-				load_oob = USA_1936
-			}
+
+			load_USA_oob = yes
 		}
 		else_if = {
 			limit = { state_originally_from_VEN = yes }
@@ -13631,6 +14188,39 @@ spawn_basegame_divisions = {
 					load_oob = YUG_1936
 				}
 			}
+
+			if = {
+				limit = { NOT = { has_tech = tech_mountaineers } }
+
+				division_template = {
+					name = "'Gorska' Pesadija"
+					division_names_group = YUG_MTN_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+					}
+				}
+				if = {
+					limit = { has_tech = tech_engineers }
+
+					add_units_to_division_template = {
+						template_name = "'Gorska' Pesadija"
+
+						support = {
+							engineer = 0
+						}
+					}
+				}
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = mountaineers }
+
+					change_division_template = { division_template = "'Gorska' Pesadija" }
+				}
+				delete_unit_template_and_units = { division_template = "Gorska Pesadija" }
+			}
 		}
 		else_if = {
 			limit = { state_originally_from_YUN = yes }
@@ -13687,6 +14277,11 @@ load_ENG_oob = {
 	}
 
 	if = {
+		limit = { NOT = { has_tech = armored_car1 } }
+
+		delete_unit_template_and_units = { division_template = "Armoured Car Company" }
+	}
+	if = {
 		limit = {
 			NOT = {
 				has_tech = gwtank
@@ -13723,6 +14318,50 @@ load_FRA_oob = {
 	}
 
 	if = {
+		limit = { NOT = { has_tech = tech_mountaineers } }
+
+		division_template = {
+			name = "Division d'Infanterie 'Alpine'"
+			division_names_group = FRA_MNT_01
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+				infantry = { x = 3 y = 0 }
+				infantry = { x = 3 y = 1 }
+				infantry = { x = 3 y = 2 }
+			}
+		}
+		if = {
+			limit = {
+				has_start_date > 1939.1.1
+				has_tech = gw_artillery
+			}
+
+			add_units_to_division_template = {
+				template_name = "Division d'Infanterie 'Alpine'"
+
+				support = {
+					artillery = 0
+				}
+			}
+		}
+
+		every_country_division = {
+			limit = { division_has_battalion_in_template = mountaineers }
+
+			change_division_template = { division_template = "Division d'Infanterie 'Alpine'" }
+		}
+		delete_unit_template_and_units = { division_template = "Division d'Infanterie Alpine" }
+	}
+	if = {
 		limit = {
 			NOT = {
 				has_tech = gwtank
@@ -13757,6 +14396,43 @@ load_JAP_oob = {
 			load_oob = JAP_1936
 		}
 	}
+
+	if = {
+		limit = { NOT = { has_tech = marines } }
+
+		division_template = {
+			name = "'Rikusentai'"
+			division_names_group = JAP_MAR_01
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+			priority = 2
+		}
+		if = {
+			limit = { has_tech = tech_engineers }
+
+			add_units_to_division_template = {
+				template_name = "'Rikusentai'"
+
+				support = {
+					engineer = 0
+				}
+			}
+		}
+
+		every_country_division = {
+			limit = { division_has_battalion_in_template = marine }
+
+			change_division_template = { division_template = "'Rikusentai'" }
+		}
+		delete_unit_template_and_units = { division_template = "Rikusentai" }
+	}
 }
 
 load_SPR_oob = {
@@ -13767,5 +14443,89 @@ load_SPR_oob = {
 	}
 	else = {
 		load_oob = SPR_1936
+	}
+
+	if = {
+		limit = { has_start_date < 1939.1.1 } # Doesn't exist in 1939 OOB.
+
+		if = {
+			limit = { NOT = { has_tech = tech_mountaineers } }
+
+			division_template = {
+				name = "Brigada 'Montaña'"
+				division_names_group = SPR_MNT_01
+
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+			}
+			if = {
+				limit = { has_tech = gw_artillery }
+
+				add_units_to_division_template = {
+					template_name = "Brigada 'Montaña'"
+
+					support = {
+						artillery = 0
+					}
+				}
+			}
+
+			every_country_division = {
+				limit = { division_has_battalion_in_template = mountaineers }
+
+				change_division_template = { division_template = "Brigada 'Montaña'" }
+			}
+			delete_unit_template_and_units = { division_template = "Brigada Montaña" }
+		}
+	}
+}
+
+load_USA_oob = {
+	if = {
+		limit = { has_start_date > 1939.1.1 }
+
+		load_oob = USA_1939
+	}
+	else = {
+		load_oob = USA_1936
+	}
+
+	if = {
+		limit = { NOT = { has_tech = marines } }
+
+		division_template = {
+			name = "'Marine' Brigade"
+			division_names_group = USA_MAR_01
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+			}
+			priority = 2
+		}
+		if = {
+			limit = { has_tech = tech_engineers }
+
+			add_units_to_division_template = {
+				template_name = "'Marine' Brigade"
+
+				support = {
+					engineer = 0
+				}
+			}
+		}
+
+		every_country_division = {
+			limit = { division_has_battalion_in_template = marine }
+
+			change_division_template = { division_template = "'Marine' Brigade" }
+		}
+		delete_unit_template_and_units = { division_template = "Marine Brigade" }
 	}
 }

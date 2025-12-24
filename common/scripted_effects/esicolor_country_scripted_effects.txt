@@ -632,6 +632,55 @@ give_starting_tech_BEL = {
 		complete_special_project = { project = sp:sp_air_radar }
 	}
 }
+give_tank_designs_BEL = {
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+			has_dlc = "Gotterdammerung"
+		}
+
+		create_equipment_variant = {
+			name = "T13 B1"
+			type = light_tank_destroyer_chassis_1
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			icon = "GFX_BEL_basic_light_td_tank_medium"
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 2
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_dlc = "No Step Back"
+			NOT = { has_dlc = "Gotterdammerung" }
+		}
+
+		create_equipment_variant = {
+			name = "T13 B1"
+			type = light_tank_destroyer_chassis_1
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 2
+			}
+		}
+	}
+}
 
 give_starting_tech_BHR = {
 	set_technology = {
@@ -2715,7 +2764,7 @@ give_tank_designs_FRA = {
 			obsolete = yes
 		}
 		create_equipment_variant = {
-			name = "H-35" #due to similar design this also covers R-35
+			name = "H-35"
 			type = light_tank_chassis_1
 			parent_version = 0
 			modules = {
@@ -6397,6 +6446,23 @@ give_tank_designs_ROM = {
 			}
 			obsolete = yes
 		}
+		create_equipment_variant = {
+			name = "H-35"
+			type = light_tank_chassis_1
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_gasoline_engine
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 2
+				tank_nsb_armor_upgrade = 4
+			}
+			icon = "GFX_FRA_basic_light_tank_medium"
+		}
 	}
 }
 
@@ -8160,6 +8226,7 @@ give_starting_tech = {
 		limit = { state_originally_from_BEL = yes }
 
 		give_starting_tech_BEL = yes
+		give_tank_designs_BEL = yes
 	}
 	else_if = {
 		limit = { state_originally_from_BHR = yes }
@@ -9198,6 +9265,24 @@ give_combined_tech = {
 			icon = "GFX_generic_light_BAA_camo"
 		}
 		create_equipment_variant = {
+			name = "Improved Light Tank Destroyer"
+			type = light_tank_destroyer_chassis_2
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+			}
+			icon = "GFX_generic_light_ABB_camo"
+			upgrades = {
+				tank_nsb_engine_upgrade = 5
+				tank_nsb_armor_upgrade = 3
+			}
+		}
+		create_equipment_variant = {
 			name = "Inter-War Medium Tank"
 			type = medium_tank_chassis_0
 			parent_version = 0
@@ -9477,6 +9562,27 @@ give_all_tech = {
 				tank_nsb_armor_upgrade = 8
 			}
 			icon = "GFX_generic_light_BAA_camo"
+		}
+		create_equipment_variant = {
+			name = "Advanced Light Tank Destroyer"
+			type = light_tank_destroyer_chassis_3
+			parent_version = 1
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_1
+				special_type_slot_2 = secondary_turret_hmg
+				special_type_slot_3 = additional_machine_guns
+				special_type_slot_4 = additional_machine_guns
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 10
+				tank_nsb_armor_upgrade = 8
+			}
+			icon = "GFX_generic_light_ABB_camo"
 		}
 		create_equipment_variant = {
 			name = "Advanced Medium Tank"
