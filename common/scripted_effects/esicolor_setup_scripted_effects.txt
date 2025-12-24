@@ -14040,6 +14040,91 @@ spawn_basegame_divisions = {
 			else = {
 				load_oob = SWI_1936_BBA
 			}
+
+			division_template = { # Taken from their no-BBA OOB, which isn't used here, but they should start with a Infantry Division template.
+				name = "Infanterie-Division"
+				division_names_group = SWI_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			if = {
+				limit = { has_tech = tech_recon }
+
+				add_units_to_division_template = {
+					template_name = "Infanterie-Division"
+
+					support = {
+						recon = 0
+					}
+				}
+			}
+			if = {
+				limit = { has_tech = tech_engineers }
+
+				add_units_to_division_template = {
+					template_name = "Infanterie-Division"
+
+					support = {
+						engineer = 0
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { has_tech = tech_mountaineers } }
+
+				division_template = {
+					name = "'Gebirgsinfanterie'"
+					division_names_group = SWI_MNT_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+					}
+				}
+				if = {
+					limit = { has_tech = tech_recon }
+
+					add_units_to_division_template = {
+						template_name = "'Gebirgsinfanterie'"
+
+						support = {
+							recon = 0
+						}
+					}
+				}
+				if = {
+					limit = { has_tech = gw_artillery }
+
+					add_units_to_division_template = {
+						template_name = "'Gebirgsinfanterie'"
+
+						support = {
+							artillery = 0
+						}
+					}
+				}
+
+				every_country_division = {
+					limit = { division_has_battalion_in_template = mountaineers }
+
+					change_division_template = { division_template = "'Gebirgsinfanterie'" }
+				}
+				delete_unit_template_and_units = { division_template = "Gebirgsinfanterie" }
+				delete_unit_template_and_units = { division_template = "Infanterie de montagne" }
+				delete_unit_template_and_units = { division_template = "Fanteria di montagna" }
+			}
+
+			set_division_template_lock = {
+				division_template = "Leichte-Brigade"
+				is_locked = no
+			}
 		}
 		else_if = {
 			limit = { state_originally_from_TAN = yes }
