@@ -54,10 +54,13 @@ adjust_state_names = {
 	adjust_state_name_538 = yes
 	adjust_state_name_542 = yes
 	adjust_state_name_545 = yes
+	adjust_state_name_554 = yes
 	adjust_state_name_555 = yes
 	adjust_state_name_601 = yes
 	adjust_state_name_653 = yes
 	adjust_state_name_664 = yes
+	adjust_state_name_677 = yes
+	adjust_state_name_680 = yes
 	adjust_state_name_718 = yes
 	adjust_state_name_731 = yes
 	adjust_state_name_732 = yes
@@ -343,6 +346,10 @@ adjust_state_names_on_state_core_changed = {
 		adjust_state_name_545 = yes
 	}
 	else_if = {
+		limit = { FROM.FROM = { state = 554 } }
+		adjust_state_name_554 = yes
+	}
+	else_if = {
 		limit = { FROM.FROM = { state = 555 } }
 		adjust_state_name_555 = yes
 	}
@@ -357,6 +364,14 @@ adjust_state_names_on_state_core_changed = {
 	else_if = {
 		limit = { FROM.FROM = { state = 664 } }
 		adjust_state_name_664 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 677 } }
+		adjust_state_name_677 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 680 } }
+		adjust_state_name_680 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 718 } }
@@ -726,6 +741,10 @@ adjust_state_names_on_ruling_party_change = {
 		adjust_state_name_545 = yes
 	}
 	if = {
+		limit = { owns_state = 554 }
+		adjust_state_name_554 = yes
+	}
+	if = {
 		limit = { owns_state = 555 }
 		adjust_state_name_555 = yes
 	}
@@ -744,6 +763,14 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 664 }
 		adjust_state_name_664 = yes
+	}
+	if = {
+		limit = { owns_state = 677 }
+		adjust_state_name_677 = yes
+	}
+	if = {
+		limit = { owns_state = 680 }
+		adjust_state_name_680 = yes
 	}
 	if = {
 		limit = { owns_state = 718 }
@@ -3011,6 +3038,38 @@ adjust_state_name_545 = {
 	}
 }
 
+adjust_state_name_554 = {
+	if = {
+		limit = {
+			554 = {
+				owner = {
+					OR = {
+						state_originally_from_TUR = yes
+						state_originally_from_KUR = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_TUR_AKDENIZ
+						}
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 4111
+			name = VICTORY_POINTS_4111_TUR
+		}
+		554 = { set_state_name = VICTORY_POINTS_4111_TUR }
+	}
+	else = {
+		set_province_name = {
+			id = 4111
+			name = VICTORY_POINTS_4111
+		}
+		554 = { set_state_name = STATE_554 }
+	}
+}
+
 adjust_state_name_555 = {
 	if = {
 		limit = { 555 = { owner = { state_originally_from_SOV = yes } } }
@@ -3147,6 +3206,147 @@ adjust_state_name_664 = {
 			name = VICTORY_POINTS_6573
 		}
 		664 = { set_state_name = STATE_664 }
+	}
+}
+
+adjust_state_name_677 = {
+	if = {
+		limit = {
+			677 = {
+				owner = {
+					OR = {
+						state_originally_from_GRE = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_GRE_UNITED
+						}
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 1056
+			name = VICTORY_POINTS_1056_GRE
+		}
+		set_province_name = {
+			id = 12473
+			name = VICTORY_POINTS_12473
+		}
+		677 = { set_state_name = STATE_677 }
+	}
+	else_if = {
+		limit = {
+			677 = {
+				owner = {
+					OR = {
+						state_originally_from_TUR = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_TUR_AKDENIZ
+						}
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 1056
+			name = VICTORY_POINTS_1056_TUR
+		}
+		set_province_name = {
+			id = 12473
+			name = VICTORY_POINTS_12473_TUR
+		}
+		677 = { set_state_name = VICTORY_POINTS_12473_TUR }
+	}
+	else_if = {
+		limit = { 677 = { owner = { state_originally_from_KUR = yes } } }
+
+		set_province_name = {
+			id = 1056
+			name = VICTORY_POINTS_1056_KUR
+		}
+		set_province_name = {
+			id = 12473
+			name = VICTORY_POINTS_12473_KUR
+		}
+		677 = { set_state_name = VICTORY_POINTS_12473_KUR }
+	}
+	else = {
+		set_province_name = {
+			id = 1056
+			name = VICTORY_POINTS_1056
+		}
+		set_province_name = {
+			id = 12473
+			name = VICTORY_POINTS_12473
+		}
+		677 = { set_state_name = STATE_677 }
+	}
+}
+
+adjust_state_name_680 = {
+	if = {
+		limit = {
+			680 = {
+				owner = {
+					OR = {
+						state_originally_from_TUR = yes
+						AND = {
+							state_originally_from_CYP = yes
+							has_country_flag = has_formed_TUR_AKDENIZ
+						}
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 1549
+			name = VICTORY_POINTS_1549_TUR
+		}
+		set_province_name = {
+			id = 12473
+			name = VICTORY_POINTS_3942_TUR
+		}
+		set_province_name = {
+			id = 6883
+			name = VICTORY_POINTS_6883_TUR
+		}
+		680 = { set_state_name = VICTORY_POINTS_3942_TUR }
+	}
+	else_if = {
+		limit = { 680 = { owner = { state_originally_from_KUR = yes } } }
+
+		set_province_name = {
+			id = 1549
+			name = VICTORY_POINTS_1549_KUR
+		}
+		set_province_name = {
+			id = 3942
+			name = VICTORY_POINTS_3942_KUR
+		}
+		set_province_name = {
+			id = 6883
+			name = VICTORY_POINTS_6883_KUR
+		}
+		680 = { set_state_name = VICTORY_POINTS_3942_KUR }
+	}
+	else = {
+		set_province_name = {
+			id = 1549
+			name = VICTORY_POINTS_1549
+		}
+		set_province_name = {
+			id = 3942
+			name = VICTORY_POINTS_3942
+		}
+		set_province_name = {
+			id = 6883
+			name = VICTORY_POINTS_6883
+		}
+		680 = { set_state_name = STATE_680 }
 	}
 }
 
@@ -3633,6 +3833,15 @@ adjust_state_name_799 = {
 			name = VICTORY_POINTS_12029_GRE
 		}
 		799 = { set_state_name = VICTORY_POINTS_12029_GRE }
+	}
+	if = {
+		limit = { 340 = { owner = { state_originally_from_KUR = yes } } }
+
+		set_province_name = {
+			id = 12029
+			name = VICTORY_POINTS_12029_KUR
+		}
+		799 = { set_state_name = VICTORY_POINTS_12029_KUR }
 	}
 	else = {
 		set_province_name = {
