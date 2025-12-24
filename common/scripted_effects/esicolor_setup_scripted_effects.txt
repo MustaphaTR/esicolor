@@ -12399,10 +12399,24 @@ delete_default_template = {
 			}
 		}
 
-		delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+		if = {
+			limit = { has_template = "Infantry Brigade 2" } # Liberian OOB has a template called Infantry Brigade, remove the correct one.
+
+			delete_unit_template_and_units = { division_template = "Infantry Brigade 2" }
+		}
+		else = {
+			delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+		}
 		delete_unit_template_and_units = { division_template = "Militia Brigade" }
 		delete_unit_template_and_units = { division_template = "Irregular Infantry Brigade" }
-		delete_unit_template_and_units = { division_template = "Cavalry Brigade" }
+		if = {
+			limit = { has_template = "Cavalry Brigade 2" } # British OOB has a template called Infantry Brigade, remove the correct one.
+
+			delete_unit_template_and_units = { division_template = "Cavalry Brigade 2" }
+		}
+		else = {
+			delete_unit_template_and_units = { division_template = "Cavalry Brigade" }
+		}
 	}
 }
 spawn_basegame_divisions = {
