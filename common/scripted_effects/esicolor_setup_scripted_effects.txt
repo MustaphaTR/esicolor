@@ -9743,6 +9743,65 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	100 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Skúli Guðmundsson
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = ICE_minister_of_healthcare_and_finance
+				}
+			}
+			if = { # Olaf J Thorlacius
+				limit = { has_trait = backroom_backstabber }
+
+				set_character_name = HUN_miklos_horthy_jr
+				remove_trait = {
+					slot = political_advisor
+					trait = backroom_backstabber
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = ICE_progressive_doctor
+				}
+
+				if = {
+					limit = { has_dlc = "Gotterdammerung" }
+
+					set_portraits = {
+						civilian = {
+							small = GFX_portrait_ICE_olaf_j_thorlacius_small
+						}
+						army = {
+							small = GFX_portrait_ICE_olaf_j_thorlacius_small
+						}
+						navy = {
+							small = GFX_portrait_ICE_olaf_j_thorlacius_small
+						}
+					}
+				}
+				else = {
+					set_portraits = {
+						civilian = {
+							small = GFX_idea_generic_political_advisor_europe_5
+						}
+						army = {
+							small = GFX_idea_generic_political_advisor_europe_5
+						}
+						navy = {
+							small = GFX_idea_generic_political_advisor_europe_5
+						}
+					}
+				}
+			}
+		}
+	}
 	152 = {
 		for_each_scope_loop = {
 			array = state_advisors

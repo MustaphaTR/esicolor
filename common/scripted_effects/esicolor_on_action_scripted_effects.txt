@@ -2919,6 +2919,155 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = IOO }
+
+		if = {
+			limit = { has_dlc = "Arms Against Tyranny" } # Without AAT he is the leader of the state.
+
+			random_character = {
+				limit = {
+					is_advisor = yes
+					has_trait = economist
+				}
+
+				set_character_name = ICE_sveinn_bjornsson
+				set_character_flag = special_advisor
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_ICE_sveinn_bjornsson
+						small = GFX_portrait_ICE_sveinn_bjornsson_small
+					}
+					army = {
+						large = GFX_portrait_ICE_sveinn_bjornsson
+						small = GFX_portrait_ICE_sveinn_bjornsson_small
+					}
+					navy = {
+						large = GFX_portrait_ICE_sveinn_bjornsson
+						small = GFX_portrait_ICE_sveinn_bjornsson_small
+					}
+				}
+
+				100 = { add_to_array = { state_advisors = PREV } }
+			}
+		}
+		else = {
+			random_character = {
+				limit = {
+					is_advisor = yes
+					has_trait = democratic_reformer
+				}
+
+				set_character_name = ICE_hermann_jonasson
+				set_character_flag = special_advisor
+
+				set_portraits = {
+					civilian = {
+						small = idea_generic_political_advisor_europe_2
+					}
+					army = {
+						small = idea_generic_political_advisor_europe_2
+					}
+					navy = {
+						small = idea_generic_political_advisor_europe_2
+					}
+				}
+
+				100 = { add_to_array = { state_advisors = PREV } }
+			}
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_name = ICE_skuli_gudhmundsson
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_ICE_skuli_gudhmundsson_small 
+					}
+					army = {
+						small = GFX_portrait_ICE_skuli_gudhmundsson_small
+					}
+					navy = {
+						small = GFX_portrait_ICE_skuli_gudhmundsson_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_4
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_4
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_4
+					}
+				}
+			}
+
+			100 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = { # Used for Olaf J Thorlacius, only applied with the named advisors only mode.
+			limit = {
+				is_advisor = yes
+				has_trait = backroom_backstabber
+			}
+
+			set_character_flag = special_advisor
+
+			100 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = ICE_haraldur_gudhmundsson
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_ICE_haraldur_gudhmundsson_small 
+					}
+					army = {
+						small = GFX_portrait_ICE_haraldur_gudhmundsson_small
+					}
+					navy = {
+						small = GFX_portrait_ICE_haraldur_gudhmundsson_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_6
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_6
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_6
+					}
+				}
+			}
+
+			100 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = IOF }
 
 		random_character = {
