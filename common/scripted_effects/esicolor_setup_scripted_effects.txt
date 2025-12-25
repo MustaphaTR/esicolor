@@ -9493,6 +9493,59 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	37 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Vilhelm Buhl
+				limit = { has_trait = financial_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = financial_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = finansminister
+				}
+			}
+			if = { # Karl Kristian Steincke
+				limit = { has_trait = editor }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = editor
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = welfare_architect
+				}
+			}
+			if = { # Alsing Andersen
+				limit = { has_trait = war_industrialist }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = war_industrialist
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = forsvarsminister
+				}
+			}
+			if = { # Peter Horn
+				limit = { has_trait = air_warfare_theorist }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = air_warfare_theorist
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = dive_bomber
+				}
+			}
+		}
+	}
 	43 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -9669,6 +9722,23 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = falangist_militarist
+				}
+			}
+		}
+	}
+	99 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Peter Rochegune Munch
+				limit = { has_trait = smooth_talking_charmer }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = smooth_talking_charmer
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = disarmament_proponent
 				}
 			}
 		}

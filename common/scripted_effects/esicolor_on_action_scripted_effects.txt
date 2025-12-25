@@ -1344,6 +1344,242 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = OEF }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = backroom_backstabber
+			}
+
+			set_character_name = DEN_hans_hedtoft
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_DEN_hans_hedtoft_small
+					}
+					army = {
+						small = GFX_portrait_DEN_hans_hedtoft_small
+					}
+					navy = {
+						small = GFX_portrait_DEN_hans_hedtoft_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+					army = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+					navy = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+				}
+			}
+
+			37 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = editor
+			}
+
+			set_character_name = DEN_karl_kristian_steincke
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_DEN_hans_hedtoft_small
+					}
+					army = {
+						small = GFX_portrait_DEN_hans_hedtoft_small
+					}
+					navy = {
+						small = GFX_portrait_DEN_hans_hedtoft_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_1
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_1
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_1
+					}
+				}
+			}
+
+			37 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = financial_expert
+			}
+
+			set_character_name = DEN_vilhelm_buhl
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_DEN_vilhelm_buhl
+						small = GFX_portrait_DEN_vilhelm_buhl_small
+					}
+					army = {
+						large = GFX_portrait_DEN_vilhelm_buhl
+						small = GFX_portrait_DEN_vilhelm_buhl_small
+					}
+					navy = {
+						large = GFX_portrait_DEN_vilhelm_buhl
+						small = GFX_portrait_DEN_vilhelm_buhl_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_europe_generic_democratic_1
+						small = GFX_portrait_europe_generic_democratic_1_small
+					}
+					army = {
+						large = GFX_portrait_europe_generic_democratic_1
+						small = GFX_portrait_europe_generic_democratic_1_small
+					}
+					navy = {
+						large = GFX_portrait_europe_generic_democratic_1
+						small = GFX_portrait_europe_generic_democratic_1_small
+					}
+				}
+			}
+
+			37 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = war_industrialist
+			}
+
+			set_character_name = DEN_alsing_andersen
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_DEN_alsing_andersen_small
+					}
+					army = {
+						small = GFX_portrait_DEN_alsing_andersen_small
+					}
+					navy = {
+						small = GFX_portrait_DEN_alsing_andersen_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_4
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_4
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_4
+					}
+				}
+			}
+
+			37 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = air_warfare_theorist
+			}
+
+			set_character_name = DEN_peter_horn
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_DEN_peter_horn_small
+					}
+					army = {
+						small = GFX_portrait_DEN_peter_horn_small
+					}
+					navy = {
+						small = GFX_portrait_DEN_peter_horn_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_air_europe_3
+					}
+					army = {
+						small = GFX_idea_generic_air_europe_3
+					}
+					navy = {
+						small = GFX_idea_generic_air_europe_3
+					}
+				}
+			}
+
+			37 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = nuclear_scientist
+			}
+
+			set_character_name = DEN_niels_bohr
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_niels_bohr
+					small = GFX_portrait_DEN_niels_bohr_small
+				}
+				army = {
+					large = GFX_portrait_DEN_niels_bohr
+					small = GFX_portrait_DEN_niels_bohr_small
+				}
+				navy = {
+					large = GFX_portrait_DEN_niels_bohr
+					small = GFX_portrait_DEN_niels_bohr_small
+				}
+			}
+
+			37 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = OAE }
 
 		random_character = {
@@ -2549,6 +2785,137 @@ handle_special_advisors = {
 			}
 
 			92 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OYY }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = smooth_talking_charmer
+			}
+
+			set_character_name = DEN_peter_rochegune_munch
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_DEN_peter_rochegune_munch_small
+					}
+					army = {
+						small = GFX_portrait_DEN_peter_rochegune_munch_small
+					}
+					navy = {
+						small = GFX_portrait_DEN_peter_rochegune_munch_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_democratic_reformer_western_european_2d
+					}
+					army = {
+						small = GFX_idea_generic_democratic_reformer_western_european_2d
+					}
+					navy = {
+						small = GFX_idea_generic_democratic_reformer_western_european_2d
+					}
+				}
+			}
+
+			99 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = DEN_knud_kristensen
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_DEN_knud_kristensen
+						small = GFX_portrait_DEN_knud_kristensen_small
+					}
+					army = {
+						large = GFX_portrait_DEN_knud_kristensen
+						small = GFX_portrait_DEN_knud_kristensen_small
+					}
+					navy = {
+						large = GFX_portrait_DEN_knud_kristensen
+						small = GFX_portrait_DEN_knud_kristensen_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+				}
+			}
+
+			99 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_chief_ground_support_1
+					has_trait = air_chief_ground_support_2
+					has_trait = air_chief_ground_support_3
+				}
+			}
+
+			set_character_name = DEN_christian_forslev
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_DEN_christian_forslev_small 
+					}
+					army = {
+						small = GFX_portrait_DEN_christian_forslev_small
+					}
+					navy = {
+						small = GFX_portrait_DEN_christian_forslev_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_air_europe_1
+					}
+					army = {
+						small = GFX_idea_generic_air_europe_1
+					}
+					navy = {
+						small = GFX_idea_generic_air_europe_1
+					}
+				}
+			}
+
+			99 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -5032,6 +5399,192 @@ handle_special_advisors = {
 			}
 
 			943 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = YIO }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = navy_chief_decisive_battle_1
+					has_trait = navy_chief_decisive_battle_2
+					has_trait = navy_chief_decisive_battle_3
+				}
+			}
+
+			set_character_name = DEN_prince_frederik
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_DEN_frederik_ix
+						small = GFX_portrait_DEN_frederik_ix_small
+					}
+					army = {
+						large = GFX_portrait_DEN_frederik_ix
+						small = GFX_portrait_DEN_frederik_ix_small
+					}
+					navy = {
+						large = GFX_portrait_DEN_frederik_ix
+						small = GFX_portrait_DEN_frederik_ix_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_air_europe_2
+					}
+					army = {
+						small = GFX_idea_generic_air_europe_2
+					}
+					navy = {
+						small = GFX_idea_generic_air_europe_2
+					}
+				}
+			}
+
+			910 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = YIZ }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = prince_of_terror
+			}
+
+			set_character_name = DEN_cay_lembcke
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_DEN_cay_lembcke
+						small = GFX_portrait_DEN_cay_lembcke_small
+					}
+					army = {
+						large = GFX_portrait_DEN_cay_lembcke
+						small = GFX_portrait_DEN_cay_lembcke_small
+					}
+					navy = {
+						large = GFX_portrait_DEN_cay_lembcke
+						small = GFX_portrait_DEN_cay_lembcke_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_6
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_6
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_6
+					}
+				}
+			}
+
+			912 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_artillery_1
+					has_trait = army_artillery_2
+					has_trait = army_artillery_3
+				}
+			}
+
+			set_character_name = DEN_hans_a_rolsted
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_DEN_hans_a_rolsted_small 
+					}
+					army = {
+						small = GFX_portrait_DEN_hans_a_rolsted_small
+					}
+					navy = {
+						small = GFX_portrait_DEN_hans_a_rolsted_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Germany_Generic_land_6_small
+					}
+					army = {
+						small = GFX_Portrait_Germany_Generic_land_6_small
+					}
+					navy = {
+						small = GFX_Portrait_Germany_Generic_land_6_small
+					}
+				}
+			}
+
+			912 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_air_combat_training_1
+					has_trait = air_air_combat_training_2
+					has_trait = air_air_combat_training_3
+				}
+			}
+
+			set_character_name = DEN_poul_sommer
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_DEN_poul_sommer_small 
+					}
+					army = {
+						small = GFX_portrait_DEN_poul_sommer_small
+					}
+					navy = {
+						small = GFX_portrait_DEN_poul_sommer_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Germany_Generic_navy_2_small
+					}
+					army = {
+						small = GFX_Portrait_Germany_Generic_navy_2_small
+					}
+					navy = {
+						small = GFX_Portrait_Germany_Generic_navy_2_small
+					}
+				}
+			}
+
+			912 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
