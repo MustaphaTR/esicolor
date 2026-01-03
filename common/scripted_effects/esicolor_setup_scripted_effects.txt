@@ -3031,6 +3031,20 @@ load_continent_focus_trees = {
 		
 		load_focus_tree = china_warlord_sea_focus
 	}
+	else_if = {
+		limit = {
+			OR = {
+				state_originally_from_ARG = yes
+				state_originally_from_BRA = yes
+				state_originally_from_CHL = yes
+				state_originally_from_PAR = yes
+				state_originally_from_URG = yes
+			}
+		}
+		
+		load_focus_tree = southern_south_america_focus
+		JUNO_set_shared_military_branch_defaults = yes
+	}
 	else = {
 		load_focus_tree = generic_focus
 	}
@@ -3039,15 +3053,19 @@ load_continent_focus_trees = {
 randomise_focus_trees = {
 	random_list = {
 		seed = random
-		33 = {
+		25 = {
 			load_focus_tree = generic_focus
 		}
-		33 = {
+		25 = {
 			load_focus_tree = horn_of_africa_tree
 			setup_utilize_our_strengths_effects = yes
 		}
-		33 = {
+		25 = {
 			load_focus_tree = china_warlord_sea_focus
+		}
+		25 = {
+			load_focus_tree = southern_south_america_focus
+			JUNO_set_shared_military_branch_defaults = yes
 		}
 	}
 }

@@ -1,0 +1,161 @@
+generic_purchase_old_ships_category_esicolor = {
+	purchase_destroyers = {
+		cost = 50
+		icon = GFX_decision_generic_naval
+
+		targets = {
+			IZE IZS IZL IZF IZB IZY IEO IEI IEZ EEB YEI YEZ
+			IZO IZI IEE IEL YEE
+			IZZ
+			IIY
+
+			ZLI ESF ESB ESY ELO ELI ELZ ELE ELA FMT ELL ELF ELB ELY EFO EFI EFZ EFE EFA EFS EFL EFF EFB EFY EBO EBI EBZ EBE EBA EBS EBL EBF EBB EBY EYO EYI EYZ EYE EYA EYS EYL BIL
+			ALE LSO
+			LZY
+		}
+
+		visible = {
+			FROM = {
+				any_owned_state = { is_coastal = yes }
+				NOT = {
+					has_country_flag = sold_ships_to_us@ROOT
+					has_country_flag = negotiating_ship_purchase_flag@ROOT
+				}
+			}
+			NOT = { has_war_with = FROM }
+		}
+		available = {
+			NOT = {
+				FROM = {
+					OR = {
+						has_civil_war = yes
+						has_capitulated = yes
+						has_opinion = {
+							target = ROOT
+							value < 30
+						}
+					}
+				}
+			}
+		}
+
+		days_remove = 14
+
+		remove_effect = {
+			FROM = {
+				country_event = {
+					id = generic_purchase_ships_events.01
+					hours = 1
+				}
+				set_country_flag = negotiating_ship_purchase_flag@ROOT
+			}
+		}
+	}
+
+	#purchase_battleships = {
+	#	cost = 50
+	#	icon = GFX_decision_generic_naval
+	#
+	#	targets = {
+	#		OAO IEF IYS ZOS ZOB ZOY ZIO ZIE ZIA ZIS ZIL ZIF ZIB ZIY ZZO ZZZ ZZE ZZA ZEZ ZEE ZEA ZES ZEL ZEF ZEB ZEY ZAO ZAZ ZAE ZAA ZAS ZAL ZAF ZAB ZAY ZSO ZSI ZSZ ZSE ZSA ZSS ZSL ZSF ZSB ZLO ZLZ ZLE ZLA ZLS ESI EYF EYB EYY AOO BPJ AOE AOB AOY TJM TMP SLI SLZ SLE SLA SLS SLL SLF SLB SLY SFO SFI SFZ SFE SFA SFS SFL SFF SFB SFY SBO SBI SBZ LEF LAA LSI LSZ LSE LSA LSS LSF BZI BZZ BZA BZS BZF BZB BZY BEE BFA BFS BFL BFF BFB BFY BBO
+	#		OFE OBO OBY OYI OYE IYZ IYL IYF IYB IYY ZOO ZOI ZOZ ZOE ZZI ZZS ZZL ZZF ZZB ZSY BEA
+	#		OYA OYS OYL IYA ZOA ZOL ZOF ZAI
+	#
+	#		ZZY
+	#		ZEO
+	#		ZEI BZL
+	#
+	#		AOZ AOA AOL AOF SBE SBL SBF SBB SBY SYO BBI BBZ
+	#		SBA BEZ
+	#		AOS SBS BZE BEO BEI
+	#		FAZ
+	#		FEZ
+	#
+	#		EZY
+	#	}
+	#
+	#	visible = {
+	#		FROM = {
+	#			any_owned_state = { is_coastal = yes }
+	#			NOT = {
+	#				has_country_flag = sold_ships_to_us@ROOT
+	#				has_country_flag = negotiating_ship_purchase_flag@ROOT
+	#			}
+	#		}
+	#		NOT = { has_war_with = FROM }
+	#	}
+	#	available = {
+	#		NOT = {
+	#			FROM = {
+	#				OR = {
+	#					has_civil_war = yes
+	#					has_capitulated = yes
+	#					has_opinion = {
+	#						target = ROOT
+	#						value < 30
+	#					}
+	#				}
+	#			}
+	#		}
+	#	}
+	#
+	#	days_remove = 14
+	#
+	#	remove_effect = {
+	#		FROM = {
+	#			country_event = {
+	#				id = generic_purchase_ships_events.01
+	#				hours = 1
+	#			}
+	#			set_country_flag = negotiating_ship_purchase_flag@ROOT
+	#		}
+	#	}
+	#}
+
+	purchase_submarines = {
+		cost = 50
+		icon = GFX_decision_generic_naval
+
+		targets = {
+			OOS OAZ OSO OSI OSZ OSE OSA OSS OSL OSF OSB OSY OLO OLI OLZ OLE OLA OLS OLL OLF OLB OBS IBB FLE YOY YFB
+		}
+
+		visible = {
+			FROM = {
+				any_owned_state = { is_coastal = yes }
+				NOT = {
+					has_country_flag = sold_ships_to_us@ROOT
+					has_country_flag = negotiating_ship_purchase_flag@ROOT
+				}
+
+			}
+			NOT = { has_war_with = FROM }
+		}
+		available = {
+			NOT = {
+				FROM = {
+					OR = {
+						has_civil_war = yes
+						has_capitulated = yes
+						has_opinion = {
+							target = ROOT
+							value < 30
+						}
+					}
+				}
+			}
+		}
+
+		days_remove = 14
+
+		remove_effect = {
+			FROM = {
+				country_event = {
+					id = generic_purchase_ships_events.01
+					hours = 1
+				}
+				set_country_flag = negotiating_ship_purchase_flag@ROOT
+			}
+		}
+	}
+}

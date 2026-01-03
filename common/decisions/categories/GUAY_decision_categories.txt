@@ -1,0 +1,23 @@
+GUAY_military_coup = {
+	icon = GFX_decision_category_military_operation
+	priority = 99
+
+	allowed = {
+		always = yes
+	}
+	visible = {
+		has_completed_focus = GUAY_coup_detat
+	}
+}
+
+GUAY_laissez_faire_cat = {
+	icon = GFX_decision_category_gre_paying_ifc_debt
+	priority = 50
+
+	allowed = {
+		always = yes
+	}
+	visible = {
+		has_completed_focus = GUAY_laissez_faire
+	}
+}

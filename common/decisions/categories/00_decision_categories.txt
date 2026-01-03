@@ -289,6 +289,22 @@ generic_purchase_old_ships_category = {
 	}
 	visible_when_empty = no
 }
+generic_purchase_old_ships_category_esicolor = {
+	icon = GFX_decision_category_MTG_naval_treaties
+	picture = GFX_decision_cat_picture_naval_treaties
+	
+	allowed = {
+		always = yes
+	}
+	visible = {
+		has_country_flag = generic_purchase_old_ships_flag
+	}
+	
+	priority = {
+		base = 8
+	}
+	visible_when_empty = no
+}
 
 generic_refit_civilian_ships_category = {
 	icon = GFX_decision_category_MTG_naval_treaties

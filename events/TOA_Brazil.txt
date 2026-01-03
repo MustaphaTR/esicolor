@@ -1,0 +1,39 @@
+###########################
+# Brazil Events
+###########################
+
+add_namespace = JUNO_brazil_events
+
+country_event = {
+	id = JUNO_brazil_events.14
+	title = JUNO_brazil_events.14.t
+	desc = JUNO_brazil_events.14.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = JUNO_brazil_events.14.a
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			state_originally_from_ARG = no
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = BRA_good_neighbor_policy
+		}
+	}
+	option = {
+		name = JUNO_brazil_events.14.b
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			state_originally_from_ARG = yes
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = BRA_good_neighbor_policy
+		}
+	}	
+}

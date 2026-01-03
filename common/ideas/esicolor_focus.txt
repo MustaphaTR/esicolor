@@ -306,5 +306,24 @@ ideas = {
 				coastal_bunker_max_level_terrain_limit = 1
 			}
 		}
+		
+		# Southern South America Generic Focus Tree
+		SMB_naval_arms_race_restarted = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_navy_bonus
+
+			modifier = {
+				production_speed_dockyard_factor = 0.4
+				industrial_capacity_dockyard = 0.15
+			}
+		}
 	}
 }

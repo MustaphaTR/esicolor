@@ -1,0 +1,2019 @@
+﻿	shared_focus =  {
+		id = GUAY_laissez_faire
+		icon = GFX_focus_generic_industry_3
+		x = 14
+		y = 0
+		mutually_exclusive = { focus =  GUAY_land_reforms }
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				has_government = communism
+				factor = 0 
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = GUAY_laissez_faire_tt
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_rekindle_old_gripes
+		icon = GFX_goal_generic_attack_allies
+		x = 0
+		y = 5
+		relative_position_id = GUAY_laissez_faire
+
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+			war_goal_effect_on_random_neighbour = yes
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_disperse_military_power
+		icon = GFX_focus_NOR_broken_gun_policies
+		mutually_exclusive = { focus =  GUAY_form_ties_with_the_military }
+		available = {
+			OR = {
+				has_government = democratic
+				has_idea = democratic_influence
+				has_advisor_with_democratic_trait = yes
+				has_government = neutrality
+				has_idea = neutrality_idea
+				has_idea = neutrality_influence
+				has_advisor_with_non_aligned_trait = yes
+			}
+		}
+
+		x = 4
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 95
+
+			modifier = {
+				factor = 0.1
+				any_neighbor_country = {
+					is_major = yes
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+				NOT = {
+					any_neighbor_country = {
+						is_major = yes
+						has_government = democratic
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				
+				OR = {
+					has_country_flag = ai_go_fascism
+					has_country_flag = ai_go_communism
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_restore_elections
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = GUAY_disperse_military_power }
+		mutually_exclusive = { focus =  GUAY_one_party_state }
+		available = {
+			OR = {
+				has_government = democratic
+				has_idea = democratic_influence
+				has_advisor_with_democratic_trait = yes
+			}
+		}
+		bypass = {
+			has_government = democratic
+			has_elections = yes
+		}
+
+		x = -1
+		y = 1
+		relative_position_id = GUAY_disperse_military_power
+		cost = 5
+
+		ai_will_do = {
+			factor = 95
+			modifier = {
+				factor = 0.1
+				any_neighbor_country = {
+					is_major = yes
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+				NOT = {
+					any_neighbor_country = {
+						is_major = yes
+						has_government = democratic
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+
+				NOT = {
+					has_government = democratic
+					has_country_flag = ai_go_democratic
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.05
+			set_politics = { ruling_party = democratic elections_allowed = yes }
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_one_party_state
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = GUAY_disperse_military_power }
+		mutually_exclusive = { focus =  GUAY_restore_elections }
+		available = {
+			OR = {
+				has_government = neutrality
+				has_idea = neutrality_idea
+				has_idea = neutrality_influence
+				has_advisor_with_non_aligned_trait = yes
+			}
+		}
+		bypass = {
+			has_government = neutrality
+		}
+
+		x = 1
+		y = 1
+		relative_position_id = GUAY_disperse_military_power
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+
+				NOT = {
+					has_global_flag = all_neutrality_starting
+					has_country_flag = ai_go_neutrality
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_nationalize_foreign_owned_companies
+		icon = GFX_focus_generic_annex_country_2
+		x = 1
+		y = 1
+
+		relative_position_id = GUAY_restore_elections
+		prerequisite = { focus = GUAY_restore_elections focus = GUAY_one_party_state }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_urbanization
+		icon = GFX_focus_SWE_urbanization
+		x = -1
+		y = 1
+
+		relative_position_id = GUAY_nationalize_foreign_owned_companies
+		prerequisite = { focus =  GUAY_nationalize_foreign_owned_companies }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRIAL }
+		completion_reward = {
+			capital_scope = {
+				ETH_upgrade_state_category = yes
+				ETH_upgrade_main_city = yes
+			}
+			random_core_state = {
+				limit = {
+					if = {
+						limit = { check_variable = { core_states^num > 1 } }
+
+						NOT = { is_capital = yes }
+					}
+				}
+
+				ETH_upgrade_state_category = yes
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_abolish_low_level_income_tax
+		icon = GFX_goal_generic_major_alliance
+		x = 2
+		y = 0
+
+		relative_position_id = GUAY_urbanization
+		prerequisite = { focus =  GUAY_nationalize_foreign_owned_companies }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 60
+			add_ideas = idea_GUAY_abolished_low_level_income_tax
+
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_free_seconday_schools
+		icon = GFX_focus_generic_military_academy
+		x = 1
+		y = 1
+
+		relative_position_id = GUAY_urbanization
+		prerequisite = { focus =  GUAY_urbanization focus =  GUAY_abolish_low_level_income_tax }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = idea_GUAY_free_seconday_schools
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_cooperation_in_the_americas
+		icon = GFX_focus_generic_league_of_nations
+		prerequisite = { 
+			focus =  GUAY_nationalize_foreign_owned_companies
+		}
+		x = -3
+		y = 1
+		relative_position_id = GUAY_nationalize_foreign_owned_companies
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			add_political_power = 100
+			every_other_country = {
+				limit = {
+					is_on_same_continent_as = ROOT
+				}
+				country_event = {
+					id = JUNO_brazil_events.14
+					hours = 1
+				}
+				event_option_tooltip = JUNO_brazil_events.14.a
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_defense_force
+		icon = GFX_focus_generic_manpower
+		prerequisite = { 
+			focus =  GUAY_cooperation_in_the_americas
+		}
+		x = 0
+		y = 1
+		relative_position_id = GUAY_cooperation_in_the_americas
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			every_unit_leader = {
+				add_defense = 1
+				add_logistics = 1
+			}
+			add_ideas = idea_GUAY_defense_force
+			add_manpower = 8200
+
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_specialized_terrain_training
+		icon = GFX_focus_eng_special_air_service
+		prerequisite = { 
+			focus =  GUAY_defense_force
+		}
+		x = -1
+		y = 1
+		relative_position_id = GUAY_defense_force
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			add_ideas = idea_GUYA_specialized_training
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_volunteers
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { 
+			focus =  GUAY_defense_force
+		}
+		x = 2
+		y = 0
+		relative_position_id = GUAY_specialized_terrain_training
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			add_ideas = idea_GUAY_volunteers
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_mass_drafts
+		icon = GFX_focus_SOV_mobilization_plan
+		prerequisite = { focus =  GUAY_specialized_terrain_training }
+		prerequisite = { focus =  GUAY_volunteers }
+		x = 1
+		y = 1
+		relative_position_id = GUAY_specialized_terrain_training
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			add_ideas = idea_GUAY_mass_drafts
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = why_we_fight_effect
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_idea = neutrality_idea } }
+					set_rule = { can_create_factions = yes }
+				}
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_form_ties_with_the_military
+		icon = GFX_focus_ITA_banda_carita
+		mutually_exclusive = { focus =  GUAY_disperse_military_power }
+		available = {
+			OR = {
+				has_government = fascism
+				has_idea = fascist_influence
+				has_advisor_with_fascist_trait = yes
+				has_government = communism
+				has_idea = communist_influence
+				has_advisor_with_communist_trait = yes
+			}
+		}
+		x = 5
+		y = 0
+		relative_position_id = GUAY_disperse_military_power
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_government = neutrality
+					}
+					has_idea = neutrality_idea
+				}
+				NOT = {
+					AND = {
+						has_global_flag = all_neutrality_starting
+						OR = {
+							has_country_flag = ai_go_fascism
+							has_country_flag = ai_go_communism
+						}
+					}
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.03
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_align_with_the_internationalists
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = GUAY_form_ties_with_the_military }
+		mutually_exclusive = { focus =  GUAY_align_with_the_nationalists }
+		available = {
+			OR = {
+				has_government = communism
+				has_idea = communist_influence
+				has_advisor_with_communist_trait = yes
+			}
+		}
+
+		x = -1
+		y = 1
+		relative_position_id = GUAY_form_ties_with_the_military
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = communism
+				}
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = {
+						has_government = communism
+						has_country_flag = ai_go_communism
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_timed_idea = {
+				idea = internationalism
+				days = 720
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_align_with_the_nationalists
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = GUAY_form_ties_with_the_military }
+		mutually_exclusive = { focus =  GUAY_align_with_the_internationalists }
+		available = {
+			OR = {
+				has_government = fascism
+				has_idea = fascist_influence
+				has_advisor_with_fascist_trait = yes
+			}
+		}
+
+		x = 1
+		y = 1
+		relative_position_id = GUAY_form_ties_with_the_military
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = {
+						has_government = fascism
+						AND = {
+							has_global_flag = all_neutrality_starting
+							has_country_flag = ai_go_fascism
+						}
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_place_opposition_leaders_in_house_arrest
+		icon = GFX_focus_mex_arrest_general_cedillo
+		x = 0
+		y = 1
+		relative_position_id = GUAY_align_with_the_internationalists
+		prerequisite = { focus =  GUAY_align_with_the_internationalists focus =  GUAY_align_with_the_nationalists }
+		cost = 10
+		ai_will_do = {
+			factor = 150
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.06
+
+			if = {
+				limit = { has_completed_focus = GUAY_align_with_the_internationalists }
+
+				if = {
+					limit = { has_completed_focus = GUAY_enact_martial_law }
+
+					set_politics = {
+						ruling_party = communism
+						elections_allowed = no
+					}
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.04
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.04
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.04
+				}
+			}
+			else_if = {
+				limit = { has_completed_focus = GUAY_align_with_the_nationalists }
+
+				if = {
+					limit = { has_completed_focus = GUAY_enact_martial_law }
+
+					set_politics = {
+						ruling_party = fascism
+						elections_allowed = no
+					}
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.04
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.04
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = -0.04
+				}
+			}
+			else = {
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.06
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.06
+				}
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_enact_martial_law
+		icon = GFX_focus_POL_riot_of_37
+		x = 0
+		y = 1
+		relative_position_id = GUAY_align_with_the_nationalists
+		prerequisite = { focus =  GUAY_align_with_the_internationalists focus =  GUAY_align_with_the_nationalists }
+		cost = 10
+		ai_will_do = {
+			factor = 150
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.06
+
+			if = {
+				limit = { has_completed_focus = GUAY_align_with_the_internationalists }
+
+				if = {
+					limit = { has_completed_focus = GUAY_place_opposition_leaders_in_house_arrest }
+
+					set_politics = {
+						ruling_party = communism
+						elections_allowed = no
+					}
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.12
+				}
+			}
+			else_if = {
+				limit = { has_completed_focus = GUAY_align_with_the_nationalists }
+
+				if = {
+					limit = { has_completed_focus = GUAY_place_opposition_leaders_in_house_arrest }
+
+					set_politics = {
+						ruling_party = fascism
+						elections_allowed = no
+					}
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.12
+				}
+			}
+			else = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.06
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.06
+				}
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_coup_detat
+		icon = GFX_focus_SWE_organize_a_putsch
+		x = 1
+		y = 2
+		relative_position_id = GUAY_align_with_the_internationalists
+		prerequisite = { focus =  GUAY_align_with_the_internationalists focus =  GUAY_align_with_the_nationalists }
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			OR = {
+				has_government = fascism
+				has_government = communism
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			add_war_support = 0.08
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.2
+			}
+
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_0
+				amount = 2150
+				producer = ROOT
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_appease_the_generals
+		icon = GFX_focus_generic_military_mission
+		x = 1
+		y = 1
+		relative_position_id = GUAY_coup_detat
+		prerequisite = { focus =  GUAY_coup_detat }
+		cost = 10
+		ai_will_do = {
+			factor = 500
+		}
+		available = {
+			#check_variable = { army_leaders > 5 }
+			#check_variable = { num_armies > 10 }
+			if = {
+				limit = {
+					is_ai = no
+				}
+				has_army_manpower = { size > 19999 }
+				custom_trigger_tooltip = {
+				 	tooltip = GER_anschluss_eq_trigger_tt
+				 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 2.5 }
+				}
+			}
+			else = {
+				has_army_manpower = { size > 9999 }
+			}
+
+
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea =  all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+			OR = {
+				has_idea = partial_economic_mobilisation
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			custom_effect_tooltip = GUAY_appease_the_generals_tt
+			country_event = { id = JUNO_guay_events.1 hours = 2 }
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_cult_of_personality
+		icon = GFX_focus_spa_fuse_the_parties
+		x = -1
+		y = 1
+		relative_position_id = GUAY_coup_detat
+		prerequisite = { focus =  GUAY_coup_detat }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			add_country_leader_trait = JUNO_cult_of_personality
+
+			hidden_effect = {
+				set_rule = { can_use_kamikaze_pilots = yes }
+				set_country_flag = kamikaze_flag
+			}
+			custom_effect_tooltip = kamikaze_focus_tooltip
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_adopt_minority_languages
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = GUAY_cult_of_personality
+		prerequisite = { focus =  GUAY_cult_of_personality focus =  GUAY_free_seconday_schools }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			if = {
+				limit = {
+					state_originally_from_PAR = yes
+				}
+				add_ideas = PAR_guarani_in_the_army
+			}
+			else = {
+				add_ideas = idea_URG_rioplatense_spanish_in_the_army
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_mythologize_the_father_of_the_nation
+		icon = GFX_focus_focus_fra_revolution_utmost
+		x = 1
+		y = 1
+		relative_position_id = GUAY_free_seconday_schools
+		prerequisite = { focus =  GUAY_cult_of_personality focus =  GUAY_free_seconday_schools } 
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			if = {
+				limit = {
+					state_originally_from_PAR = yes
+				}
+				add_ideas = idea_GUAY_father_of_the_nation_par
+			}
+			else = {
+				add_ideas = idea_GUAY_father_of_the_nation_urg
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_penal_battalions
+		icon = GFX_focus_SOV_penal_battalions
+		x = 2
+		y = 0
+		relative_position_id = GUAY_appease_the_generals
+		prerequisite = { focus =  GUAY_coup_detat }
+		cost = 10
+		ai_will_do = {
+			factor = 15
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			custom_effect_tooltip = GUAY_penal_battalions_tt
+			hidden_effect = {
+				set_technology = {
+				 	penal_infantry = 1
+				 	popup = no
+				}
+				division_template = {
+					name = "Batallón de Castigo"
+
+					regiments = {
+						penal_battalion = { x = 0 y = 0 }
+						penal_battalion = { x = 0 y = 1 }
+						penal_battalion = { x = 0 y = 2 }
+						penal_battalion = { x = 0 y = 3 }
+					}
+				}
+				if = {
+					limit = { has_tech = gw_artillery }
+
+					add_units_to_division_template = {
+						template_name = "Batallón de Castigo"
+
+						support = {
+							artillery = 0
+						}
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "division_template = \"Batallón de Castigo\" start_experience_factor = 0 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+						OWNER = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_the_permanent_leader
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 2
+		relative_position_id = GUAY_appease_the_generals
+		prerequisite = { focus =  GUAY_appease_the_generals }
+		prerequisite = { focus =  GUAY_cult_of_personality }
+		cost = 10
+		ai_will_do = {
+			factor = 50
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			add_country_leader_trait = JUNO_the_permanent_leader
+
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_mobalize_the_economy
+		icon = GFX_focus_DEN_heavy_regulations
+		x = 1
+		y = 1
+		relative_position_id = GUAY_appease_the_generals
+		prerequisite = { focus =  GUAY_coup_detat }
+		cost = 10
+		ai_will_do = {
+			factor = 80
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			add_war_support = 0.05
+			if = {
+				limit = {
+					OR = {
+						has_idea = low_economic_mobilisation
+						has_idea = civilian_economy
+					}
+				}
+				add_ideas = partial_economic_mobilisation
+			}
+			else_if = {
+				limit = {
+					has_idea = partial_economic_mobilisation
+				}
+				add_ideas = war_economy
+			}
+			else = {	
+				random_core_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+					}
+
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GUAY_technology_sharing
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = GUAY_the_permanent_leader focus = GUAY_mass_drafts }
+		available = {
+			has_war = yes
+			is_in_faction = yes
+			OR = {
+				num_of_factories > 50
+				any_other_country = {
+					is_in_faction_with = ROOT
+					num_of_factories > 50
+				}
+			}
+		}
+		x = 4
+		y = 1
+		relative_position_id = GUAY_mass_drafts
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GUAY_technology_sharing"
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
+			else = {
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 1.0
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 1.0
+					uses = 1
+					category = industry
+				}
+				add_tech_bonus = {
+					name = infantry_artillery_bonus
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_land_reforms
+		icon = GFX_focus_generic_mining_industry
+		x = 3
+		y = 0
+		relative_position_id = GUAY_laissez_faire
+		#prerequisite = { focus =  GUAY_coup_detat }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				original_tag = URG
+				factor = 0 
+			}
+		}
+
+		mutually_exclusive = { focus =  GUAY_laissez_faire }
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					infrastructure < 5
+					is_controlled_by = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_core_state = {
+				limit = {
+					infrastructure < 5
+					is_controlled_by = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_workers_rights
+		icon = GFX_focus_SWE_state_paid_vacation
+		x = 0
+		y = 1
+		relative_position_id = GUAY_land_reforms
+		prerequisite = { focus =  GUAY_land_reforms }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_stability = 0.12
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_agricultural_colonization
+		icon = GFX_focus_generic_industry_1
+		x = 1
+		y = 1
+		relative_position_id = GUAY_workers_rights
+		prerequisite = { focus =  GUAY_workers_rights focus =  GUAY_empower_the_land_owners }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				NOT = {
+					has_global_flag = focus_factories_offmap
+					has_global_flag = focus_factories_mixed
+				}
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = focus_factories_offmap
+						has_global_flag = focus_factories_mixed
+					}
+				}
+
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			else = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = focus_factories_offmap
+						has_global_flag = focus_factories_mixed
+					}
+				}
+
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			else = {
+				add_1_industrial_complex_in_random_state = yes
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_beef_and_hide_industry
+		icon = GFX_focus_ARG_capitalize_the_beef_industry
+		x = -1
+		y = 1
+		relative_position_id = GUAY_agricultural_colonization
+		prerequisite = { focus =  GUAY_agricultural_colonization }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				NOT = { has_global_flag = focus_factories_offmap }
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			if = {
+				limit = {
+					has_global_flag = focus_factories_offmap
+				}
+
+				add_offsite_building = { type = industrial_complex level = 2 }
+			}
+			else = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_global_flag = focus_factories_offmap
+				}
+
+				add_offsite_building = { type = industrial_complex level = 2 }
+			}
+			else = {
+				add_1_industrial_complex_in_random_state = yes
+				add_1_industrial_complex_in_random_state = yes
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_wool_makers
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = GUAY_beef_and_hide_industry
+		prerequisite = { focus =  GUAY_beef_and_hide_industry }
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			every_core_state = {
+				random_select_amount = 2
+				limit = {
+					is_controlled_by = ROOT
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_heavy_industry
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 1
+		relative_position_id = GUAY_agricultural_colonization
+		prerequisite = { focus =  GUAY_agricultural_colonization }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = idea_GUAY_heavy_industry
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_empower_the_land_owners
+		icon = GFX_focus_generic_industrialists
+		x = 0
+		y = 1
+		relative_position_id = GUAY_laissez_faire
+		prerequisite = { focus =  GUAY_laissez_faire }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = GUAY_empower_the_land_owners_desc_tt
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_river_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 0
+		y = 1
+		relative_position_id = GUAY_empower_the_land_owners
+		prerequisite = { focus =  GUAY_empower_the_land_owners focus =  GUAY_workers_rights }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 75
+			}
+
+			custom_effect_tooltip = GUAY_river_trade_esicolor_tt
+			every_neighbor_country = {
+				limit = {
+					num_of_civilian_factories > 0
+					has_opinion = {
+						target = ROOT
+						value > 49
+					}
+				}
+
+				ROOT = { add_offsite_building = { type = industrial_complex level = 1 } }
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_cash_crop_exports
+		icon = GFX_focus_generic_modernize_industry
+		x = -1
+		y = 1
+		relative_position_id = GUAY_river_trade
+		prerequisite = { focus =  GUAY_river_trade }
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = free_trade }
+				}
+				add_ideas = free_trade
+			}
+			else = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					NOT = { has_tech = basic_train }
+				}
+				set_technology = {
+					basic_train = 1
+					popup = no
+				}
+			}
+			add_equipment_to_stockpile = { 
+				type = train_equipment_1
+				amount = 8
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_export_focus
+		icon = GFX_goal_generic_trade
+		x = 1
+		y = 1
+		relative_position_id = GUAY_river_trade
+		prerequisite = { focus =  GUAY_river_trade }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = focus_factories_offmap
+						has_global_flag = focus_factories_mixed
+					}
+				}
+
+				add_offsite_building = { type = industrial_complex level = 1 }
+				add_1_building_slot_in_random_state = yes
+			}
+			else = {
+				add_1_industrial_complex_and_1_building_slot_in_random_state = yes
+			}
+		}
+	}
+
+
+	shared_focus =  {
+		id = GUAY_clamp_down_on_new_territories
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 1
+		relative_position_id = GUAY_rekindle_old_gripes
+		prerequisite = { focus =  GUAY_rekindle_old_gripes }
+		mutually_exclusive = { focus =  GUAY_develop_new_territories }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_ideas = idea_GUAY_clamping_down_on_new_territories
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_develop_new_territories
+		icon = GFX_focus_generic_self_management
+		x = 2
+		y = 0
+
+		relative_position_id = GUAY_clamp_down_on_new_territories
+		prerequisite = { focus =  GUAY_rekindle_old_gripes }
+		mutually_exclusive = { focus =  GUAY_clamp_down_on_new_territories }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+			add_ideas = idea_GUAY_developing_new_territories
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_no_second_american_colonization
+		icon = GFX_focus_generic_total_war
+		x = 0
+		y = 1
+
+		relative_position_id = GUAY_develop_new_territories
+		prerequisite = { focus =  GUAY_develop_new_territories focus =  GUAY_clamp_down_on_new_territories }
+		mutually_exclusive = { focus =  GUAY_a_deal_with_devil }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+			add_ideas = idea_GUAY_crusade_against_imperialism
+			set_rule = { can_join_factions = no }
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				leave_faction = yes
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_the_stuff_of_legends
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 0
+		y = 1
+
+		relative_position_id = GUAY_no_second_american_colonization
+		prerequisite = { focus =  GUAY_no_second_american_colonization }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GUAY_the_stuff_of_legends_cores_tt_bra
+				all_of_scopes = {
+					array = BRA.cores_at_game_start
+					is_controlled_by = ROOT
+				}
+			}
+			
+
+			custom_trigger_tooltip = {
+				tooltip = GUAY_the_stuff_of_legends_cores_tt_arg
+				all_of_scopes = {
+					array = ARG.cores_at_game_start
+					is_controlled_by = ROOT
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = GUAY_the_stuff_of_legends_cores_tt_bol
+				all_of_scopes = {
+					array = BOL.cores_at_game_start
+					is_controlled_by = ROOT
+				}
+			}
+
+
+
+			if = {
+				limit = {
+					original_tag = PAR
+				}
+				custom_trigger_tooltip = {
+					tooltip = GUAY_the_stuff_of_legends_cores_tt_urg
+					all_of_scopes = {
+						array = URG.cores_at_game_start
+						is_controlled_by = ROOT
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = GUAY_the_stuff_of_legends_cores_tt_par
+					all_of_scopes = {
+						array = PAR.cores_at_game_start
+						is_controlled_by = ROOT
+					}
+				}
+			}
+			687 = { is_controlled_by = ROOT }
+			309 = { is_controlled_by = ROOT }
+			310 = { is_controlled_by = ROOT }
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_on_continent = south_america
+					NOT = {
+						is_core_of = PAN
+						is_core_of = MEX
+						is_core_of = COS
+						is_core_of = NIC
+						is_core_of = HON
+						is_core_of = ELS
+						is_core_of = GUA
+						is_core_of = DOM
+						is_core_of = HAI
+						is_core_of = CUB
+
+					}
+				}
+				add_core_of = ROOT
+			}
+
+
+
+			if = {
+				limit = {
+					original_tag = PAR
+				}
+				set_cosmetic_tag = PAR_anti_imperialism
+			}
+			else = {
+				set_cosmetic_tag = URG_anti_imperialism_tag
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_a_deal_with_devil
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 1
+
+		relative_position_id = GUAY_clamp_down_on_new_territories
+		prerequisite = { focus =  GUAY_clamp_down_on_new_territories focus =  GUAY_develop_new_territories }
+		mutually_exclusive = { focus =  GUAY_no_second_american_colonization }
+		available_if_capitulated = no
+		available = {
+			is_in_faction = yes
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				army_experience = 25
+			}
+
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.35
+				uses = 2
+				category = land_doctrine
+			}
+			army_experience = 50
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_demand_a_seat_at_the_high_table
+		icon = GFX_focus_SWE_revoke_militia_law
+		x = 0
+		y = 1
+
+		relative_position_id = GUAY_a_deal_with_devil
+		prerequisite = { focus =  GUAY_a_deal_with_devil }
+		available_if_capitulated = no
+		available = {
+			is_in_faction = yes
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+
+		completion_reward = {
+			add_ideas = idea_GUAY_stewards_of_the_south
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_the_tag_economic_miracle
+		icon = GFX_focus_spa_the_spanish_miracle
+		x = 4
+		y = 0
+
+		relative_position_id = GUAY_land_reforms
+		available_if_capitulated = no
+		available = {
+			num_of_factories > 13
+
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 80
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_timed_idea = {
+				idea = idea_GUAY_the_tag_economic_miracle
+				days = 720
+			}
+
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_protect_domestic_industries
+		icon = GFX_goal_generic_construction
+		x = -1
+		y = 1
+
+		relative_position_id = GUAY_the_tag_economic_miracle
+		available_if_capitulated = no
+		prerequisite = { focus =  GUAY_the_tag_economic_miracle }
+		available = {
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 30
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus =  GUAY_agricultural_colonization
+				}
+				random_core_state = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = GUAY_protect_domestic_industries_agricultural
+			}
+
+			if = {
+				limit = {
+					has_completed_focus =  GUAY_beef_and_hide_industry
+				}
+				random_core_state = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = GUAY_protect_domestic_industries_beef
+			}
+
+			if = {
+				limit = {
+					has_completed_focus =  GUAY_wool_makers
+				}
+				random_core_state = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = GUAY_protect_domestic_industries_wool_makers
+			}
+
+			if = {
+				limit = {
+					has_completed_focus =  GUAY_cash_crop_exports
+				}
+				random_core_state = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = GUAY_protect_domestic_industries_cash_crop
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_exploit_mineral_wealth
+		icon = GFX_focus_generic_steel
+		x = 2
+		y = 0
+
+		relative_position_id = GUAY_protect_domestic_industries
+		available_if_capitulated = no
+		prerequisite = { focus =  GUAY_the_tag_economic_miracle }
+		available = {
+			any_owned_state = {
+				is_controlled_by = ROOT
+				has_any_resources = yes
+			}
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BRA_resource_extraction_bonus
+				bonus = 0.5
+				uses = 2
+				category = excavation_tech
+			}
+			add_more_resources_to_random_state = yes
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_national_academy_of_sciences
+		icon = GFX_focus_research
+		x = 1
+		y = 2
+
+		relative_position_id = GUAY_protect_domestic_industries
+		available_if_capitulated = no
+		prerequisite = { focus =  GUAY_protect_domestic_industries }
+		prerequisite = { focus =  GUAY_exploit_mineral_wealth }
+		prerequisite = { focus =  GUAY_agricultural_colonization }
+
+		cost = 10
+		ai_will_do = {
+			factor = 150
+		}
+		bypass = {
+			amount_research_slots > 4
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_national_academy_of_sciences_2
+		icon = GFX_focus_research2
+		x = 1
+		y = 1
+
+		relative_position_id = GUAY_national_academy_of_sciences
+		available_if_capitulated = yes
+		prerequisite = { focus =  GUAY_national_academy_of_sciences }
+		available = {
+			OR = {
+				num_of_military_factories > 24
+				num_of_naval_factories > 24
+			}
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 150
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
+			else = {
+				add_tech_bonus = {
+					name = infantry_artillery_bonus
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}
+			}
+		}
+	}
+
+	shared_focus =  {
+		id = GUAY_national_academy_of_sciences_3
+		icon = GFX_focus_ARG_universidad_de_buenos_aires
+		x = -1
+		y = 1
+
+		relative_position_id = GUAY_national_academy_of_sciences
+		available_if_capitulated = yes
+		prerequisite = { focus =  GUAY_national_academy_of_sciences }
+		available = {
+			num_of_civilian_factories > 24
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		cost = 10
+		ai_will_do = {
+			factor = 150
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
+			else = {
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 1.0
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 1.0
+					uses = 1
+					category = industry
+				}
+			}
+		}
+	}

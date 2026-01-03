@@ -273,63 +273,7 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					has_any_resources = yes
-				}
-
-				random_list = {
-					0 = {
-						modifier = { add = var:resource@oil }
-						add_resource = {
-							type = oil
-							amount = 8
-						}
-					}
-					0 = {
-						modifier = { add = var:resource@rubber }
-						add_resource = {
-							type = rubber
-							amount = 8
-						}
-					}
-					0 = {
-						modifier = { add = var:resource@steel }
-						add_resource = {
-							type = steel
-							amount = 8
-						}
-					}
-					0 = {
-						modifier = { add = var:resource@aluminium }
-						add_resource = {
-							type = aluminium
-							amount = 8
-						}
-					}
-					0 = {
-						modifier = { add = var:resource@tungsten }
-						add_resource = {
-							type = tungsten
-							amount = 8
-						}
-					}
-					0 = {
-						modifier = { add = var:resource@chromium }
-						add_resource = {
-							type = chromium
-							amount = 4
-						}
-					}
-					0 = {
-						modifier = { add = var:resource@coal }
-						add_resource = {
-							type = coal
-							amount = 8
-						}
-					}
-				}
-			}
+			add_more_resources_to_random_state = yes
 		}
 	}
 	focus = {

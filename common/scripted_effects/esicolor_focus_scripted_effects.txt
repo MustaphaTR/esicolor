@@ -67,6 +67,146 @@ add_1_dockyard_in_random_state = {
 	}
 }
 
+add_1_dockyard_and_1_naval_base_in_random_state = {
+	random_controlled_state = {
+		limit = {
+			is_coastal = yes
+			free_building_slots = {
+				building = dockyard
+				size > 0
+				include_locked = yes
+			}
+			if = {
+				limit = {
+					controller = {
+						any_owned_state = {
+							is_coastal = yes
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+							is_controlled_by = ROOT
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_owned_by = ROOT
+				is_core_of = ROOT ## Prioritise owned cores.
+			}
+			else_if = {
+				limit = {
+					controller = {
+						any_controlled_state = {
+							is_coastal = yes
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_core_of = ROOT ## Then controlled cores.
+			}
+			else_if = {
+				limit = {
+					controller = {
+						any_owned_state = {
+							is_coastal = yes
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+							is_controlled_by = ROOT
+						}
+					}
+				}
+				is_owned_by = ROOT ## Then owned non-cores, if this fails too it goes to a random state.
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = dockyard
+			level = 1
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = naval_base
+			level = 1
+			instant_build = yes
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				limit_to_naval_base = yes
+		    }
+		}
+	}
+}
+
+add_1_naval_base_in_random_state = {
+	random_controlled_state = {
+		limit = {
+			is_coastal = yes
+			naval_base > 1
+			naval_base < 9
+			if = {
+				limit = {
+					controller = {
+						any_owned_state = {
+							is_coastal = yes
+							naval_base > 1
+							naval_base < 9
+							is_controlled_by = ROOT
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_owned_by = ROOT
+				is_core_of = ROOT ## Prioritise owned cores.
+			}
+			else_if = {
+				limit = {
+					controller = {
+						any_controlled_state = {
+							is_coastal = yes
+							naval_base > 1
+							naval_base < 9
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_core_of = ROOT ## Then controlled cores.
+			}
+			else_if = {
+				limit = {
+					controller = {
+						any_owned_state = {
+							is_coastal = yes
+							naval_base > 1
+							naval_base < 9
+							is_controlled_by = ROOT
+						}
+					}
+				}
+				is_owned_by = ROOT ## Then owned non-cores, if this fails too it goes to a random state.
+			}
+		}
+		add_building_construction = {
+			type = naval_base
+			level = 1
+			instant_build = yes
+			province = {
+				all_provinces = yes
+				limit_to_coastal = yes
+				limit_to_naval_base = yes
+		    }
+		}
+	}
+}
+
 add_3_dockyard_in_random_state = {
 	random_controlled_state = {
 		limit = {
@@ -136,6 +276,46 @@ add_3_dockyard_in_random_state = {
 	}
 }
 
+add_1_building_slot_in_random_state = {
+	random_owned_controlled_state = {
+		limit = {
+			if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							is_in_home_area = yes
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_in_home_area = yes
+				is_core_of = ROOT ## Prioritise cores in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_core_of = ROOT ## Then cores not in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							is_in_home_area = yes
+						}
+					}
+				}
+				is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+	}
+}
+
 add_1_industrial_complex_in_random_state = {
 	random_owned_controlled_state = {
 		limit = {
@@ -193,6 +373,71 @@ add_1_industrial_complex_in_random_state = {
 			}
 		}
 		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+add_1_industrial_complex_and_1_building_slot_in_random_state = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+				building = industrial_complex
+				size > 0
+				include_locked = yes
+			}
+			if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+							is_in_home_area = yes
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_in_home_area = yes
+				is_core_of = ROOT ## Prioritise cores in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_core_of = ROOT ## Then cores not in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+							is_in_home_area = yes
+						}
+					}
+				}
+				is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+			}
+		}
+		add_extra_state_shared_building_slots = 2
 		add_building_construction = {
 			type = industrial_complex
 			level = 1
@@ -262,6 +507,258 @@ add_1_arms_factory_in_random_state = {
 			type = arms_factory
 			level = 1
 			instant_build = yes
+		}
+	}
+}
+
+add_1_arms_factory_and_1_air_base_in_random_state = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+				building = arms_factory
+				size > 0
+				include_locked = yes
+			}
+			if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+							is_in_home_area = yes
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_in_home_area = yes
+				is_core_of = ROOT ## Prioritise cores in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_core_of = ROOT ## Then cores not in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+							is_in_home_area = yes
+						}
+					}
+				}
+				is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+			}
+		}
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = air_base
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+add_1_air_base_in_random_state = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+				building = air_base
+				size > 0
+			}
+			if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = air_base
+								size > 0
+							}
+							is_in_home_area = yes
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_in_home_area = yes
+				is_core_of = ROOT ## Prioritise cores in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = air_base
+								size > 0
+							}
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_core_of = ROOT ## Then cores not in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = air_base
+								size > 0
+							}
+							is_in_home_area = yes
+						}
+					}
+				}
+				is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = air_base
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+add_2_air_base_in_random_state = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+				building = air_base
+				size > 1
+			}
+			if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+							is_in_home_area = yes
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_in_home_area = yes
+				is_core_of = ROOT ## Prioritise cores in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+							is_core_of = ROOT
+						}
+					}
+				}
+				is_core_of = ROOT ## Then cores not in home area.
+			}
+			else_if = {
+				limit = {
+					owner = {
+						any_owned_state = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+							is_in_home_area = yes
+						}
+					}
+				}
+				is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = air_base
+			level = 2
+			instant_build = yes
+		}
+	}
+}
+
+add_more_resources_to_random_state = {
+	random_owned_controlled_state = {
+		limit = {
+			has_any_resources = yes
+		}
+
+		random_list = {
+			0 = {
+				modifier = { add = var:resource@oil }
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+			0 = {
+				modifier = { add = var:resource@rubber }
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+			}
+			0 = {
+				modifier = { add = var:resource@steel }
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+			0 = {
+				modifier = { add = var:resource@aluminium }
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+			}
+			0 = {
+				modifier = { add = var:resource@tungsten }
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+			}
+			0 = {
+				modifier = { add = var:resource@chromium }
+				add_resource = {
+					type = chromium
+					amount = 4
+				}
+			}
+			0 = {
+				modifier = { add = var:resource@coal }
+				add_resource = {
+					type = coal
+					amount = 8
+				}
+			}
 		}
 	}
 }

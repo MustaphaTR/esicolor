@@ -1,0 +1,45 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = southern_south_america_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+
+			OR = {
+				state_originally_from_ARG = yes
+				state_originally_from_BRA = yes
+				state_originally_from_CHL = yes
+				state_originally_from_PAR = yes
+				state_originally_from_URG = yes
+			}
+		}
+	}
+
+	shared_focus = GUAY_disperse_military_power
+	shared_focus = GUAY_form_ties_with_the_military
+
+	shared_focus = GUAY_rekindle_old_gripes
+
+	shared_focus = GUAY_laissez_faire
+	shared_focus = GUAY_land_reforms
+
+	shared_focus = GUAY_the_tag_economic_miracle
+
+	shared_focus = SMB_army
+	shared_focus = SMB_air_force
+	shared_focus = SMB_navy
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1600 }
+}

@@ -306,3 +306,16 @@ state_without_VP_at_start = {
 		state = 1022
 	}
 }
+
+SMB_foreign_designs_subsidy_trigger = {
+	OR = {
+		state_originally_from_USA = yes
+		state_originally_from_JAP = yes
+		state_originally_from_ENG = yes
+		state_originally_from_FRA = yes
+		state_originally_from_ITA = yes
+		state_originally_from_GER = yes
+		state_originally_from_MEX = yes
+		state_originally_from_SOV = yes
+	}
+}

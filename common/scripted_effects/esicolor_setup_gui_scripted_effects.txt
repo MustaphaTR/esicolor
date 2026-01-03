@@ -1001,15 +1001,21 @@ setup_gui_start_focus_tree = {
 		load_focus_tree = generic_focus
 	}
 	else_if = {
-		limit = { check_variable = { global.setup_focus_tree > 0 } }
+		limit = { check_variable = { global.setup_focus_tree = 1 } }
 
 		load_focus_tree = horn_of_africa_tree
 		setup_utilize_our_strengths_effects = yes
 	}
 	else_if = {
-		limit = { check_variable = { global.setup_focus_tree > 1 } }
+		limit = { check_variable = { global.setup_focus_tree = 2 } }
 
 		load_focus_tree = china_warlord_sea_focus
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_focus_tree > 2 } }
+
+		load_focus_tree = southern_south_america_focus
+		JUNO_set_shared_military_branch_defaults = yes
 	}
 }
 
