@@ -15,6 +15,7 @@ generic_purchase_old_ships_category_esicolor = {
 		}
 
 		visible = {
+			has_country_flag = generic_purchase_old_ships_flag
 			FROM = {
 				any_owned_state = { is_coastal = yes }
 				NOT = {
@@ -25,15 +26,13 @@ generic_purchase_old_ships_category_esicolor = {
 			NOT = { has_war_with = FROM }
 		}
 		available = {
-			NOT = {
-				FROM = {
-					OR = {
-						has_civil_war = yes
-						has_capitulated = yes
-						has_opinion = {
-							target = ROOT
-							value < 30
-						}
+			FROM = {
+				has_civil_war = no
+				has_capitulated = no
+				NOT = {
+					has_opinion = {
+						target = ROOT
+						value < 30
 					}
 				}
 			}
@@ -75,6 +74,7 @@ generic_purchase_old_ships_category_esicolor = {
 	#	}
 	#
 	#	visible = {
+	#		has_country_flag = generic_purchase_old_ships_flag
 	#		FROM = {
 	#			any_owned_state = { is_coastal = yes }
 	#			NOT = {
@@ -85,15 +85,13 @@ generic_purchase_old_ships_category_esicolor = {
 	#		NOT = { has_war_with = FROM }
 	#	}
 	#	available = {
-	#		NOT = {
-	#			FROM = {
-	#				OR = {
-	#					has_civil_war = yes
-	#					has_capitulated = yes
-	#					has_opinion = {
-	#						target = ROOT
-	#						value < 30
-	#					}
+	#		FROM = {
+	#			has_civil_war = no
+	#			has_capitulated = no
+	#			NOT = {
+	#				has_opinion = {
+	#					target = ROOT
+	#					value < 30
 	#				}
 	#			}
 	#		}
@@ -121,6 +119,7 @@ generic_purchase_old_ships_category_esicolor = {
 		}
 
 		visible = {
+			has_country_flag = generic_purchase_old_ships_flag
 			FROM = {
 				any_owned_state = { is_coastal = yes }
 				NOT = {
@@ -132,15 +131,13 @@ generic_purchase_old_ships_category_esicolor = {
 			NOT = { has_war_with = FROM }
 		}
 		available = {
-			NOT = {
-				FROM = {
-					OR = {
-						has_civil_war = yes
-						has_capitulated = yes
-						has_opinion = {
-							target = ROOT
-							value < 30
-						}
+			FROM = {
+				has_civil_war = no
+				has_capitulated = no
+				NOT = {
+					has_opinion = {
+						target = ROOT
+						value < 30
 					}
 				}
 			}
@@ -155,6 +152,67 @@ generic_purchase_old_ships_category_esicolor = {
 					hours = 1
 				}
 				set_country_flag = negotiating_ship_purchase_flag@ROOT
+			}
+		}
+	}
+
+	purchase_dreadnoughts = {
+		cost = 100
+		icon = GFX_decision_generic_naval
+
+		targets = {
+			IZE IZS IZL IZF IZB IZY IEO IEI IEZ EEB YEI YEZ
+			IZO IZI IEE IEL YEE
+			IZZ
+			IIY
+
+			ZLI ESF ESB ESY ELO ELI ELZ ELE ELA FMT ELL ELF ELB ELY EFO EFI EFZ EFE EFA EFS EFL EFF EFB EFY EBO EBI EBZ EBE EBA EBS EBL EBF EBB EBY EYO EYI EYZ EYE EYA EYS EYL BIL
+			ALE LSO
+			LZY
+
+			OIA OIS PJM OIF OIB OIY OZO OZI OZZ OZE OZA OZS OZL OZF OZB OZY OEO OEI OEZ OEE FES FBS CPM BSI
+
+			OOI OOZ OEY IIA IIS IIF ISL ISF ISB ISY ILO ILI ILZ FEL CBZ BSO BSZ
+
+			OOS OAZ OSO OSI OSZ OSE OSA OSS OSL OSF OSB OSY OLO OLI OLZ OLE OLA OLS OLL OLF OLB OBS IBB FLE YOY YFB
+
+			ZBZ SZL SZB SZY SEO SEI SEZ SEE SEA SES SEL SEF SSS LAS NIB NIY NZO
+		}
+
+		visible = {
+			has_country_flag = generic_purchase_dreadnoughts_flag
+			FROM = {
+				any_owned_state = { is_coastal = yes }
+				NOT = { 
+					has_country_flag = sold_dreadnoughts_to_us@ROOT
+					has_country_flag = negotiating_ship_purchase_flag@ROOT  
+				}
+			}
+			NOT = { has_war_with = FROM }
+		}
+		available = {
+			FROM = {
+				has_civil_war = no
+				has_capitulated = no
+				NOT = {
+					has_opinion = {
+						target = ROOT
+						value < 50
+					}
+				}
+			}
+		}
+
+		days_remove = 14
+
+		remove_effect = {
+			SMB_purchase_dreadnoughts_tt_gen = yes
+			FROM = {
+				country_event = {
+					id = generic_purchase_ships_events.04
+					hours = 1
+				}
+				set_country_flag = negotiating_dreadnought_purchase_flag@ROOT
 			}
 		}
 	}

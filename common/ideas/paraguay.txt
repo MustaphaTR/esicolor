@@ -1,4 +1,49 @@
 ideas = {
+	country = {
+		PAR_guarani_in_the_army = {
+			picture = generic_reserve_divisions
+
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				civilian_intel_to_others = -0.25
+				army_intel_to_others = -25
+				airforce_intel_to_others = -25
+				navy_intel_to_others = -25
+				army_morale_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+		PAR_guarani_in_the_army_generic = { # Identical to above, different name in the loc
+			picture = generic_reserve_divisions
+
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				civilian_intel_to_others = -0.25
+				army_intel_to_others = -25
+				airforce_intel_to_others = -25
+				navy_intel_to_others = -25
+				army_morale_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+	}
+
 	industrial_concern = {
 		EOI_railway_company = {
 			name = PAR_president_carlos_antonio_lopez_railways

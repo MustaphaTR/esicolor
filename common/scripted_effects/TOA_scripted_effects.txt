@@ -464,3 +464,45 @@ SMB_get_dreadnoughts_from_country = {
 		}
 	}
 }
+
+SMB_purchase_dreadnoughts_tt_gen = {
+	custom_effect_tooltip = SMB_purchase_dreadnought_tt
+	custom_effect_tooltip = SMB_purchase_dreadnought_tt_2
+	effect_tooltip = {
+		add_timed_idea = {
+			idea = SMB_dreadnought_debt_fake_for_tooltip
+			days = 365
+		}
+	}
+}
+
+SMB_naval_jap_advisors_effect = {
+	add_to_variable = { JUNO_navy_spotting_chance = 0.05 tooltip = spotting_chance_tt }
+	add_to_variable = { JUNO_naval_morale_factor = 0.05 tooltip = naval_morale_factor_tt }
+}
+
+SMB_naval_usa_advisors_effect = {
+	add_to_variable = { JUNO_navy_navy_anti_air_attack_factor = 0.05 tooltip = navy_anti_air_attack_factor_tt }
+	add_to_variable = { JUNO_convoy_escort_efficiency = 0.05 tooltip = convoy_escort_efficiency_tt }
+}
+
+SMB_naval_eng_advisors_effect = {
+	add_to_variable = { JUNO_navy_capital_ship_defence_factor = 0.05 tooltip = navy_capital_ship_defense_factor_tt }
+	add_to_variable = { JUNO_navy_industrial_capacity_dockyard = 0.05 tooltip = industrial_capacity_dockyard_tt }
+}
+
+SMB_naval_fra_advisors_effect = {
+	add_to_variable = { JUNO_navy_screen_defence_factor = 0.05 tooltip = navy_screen_defence_factor_tt }
+}
+
+SMB_naval_ita_advisors_effect = {
+	add_to_variable = { JUNO_navy_convoy_retreat_speed = 0.05 tooltip = convoy_retreat_speed_tt }
+}
+
+SMB_naval_ger_advisors_effect = {
+	add_to_variable = { JUNO_navy_naval_coordination = 0.05 tooltip = naval_coordination_tt }
+}
+
+SMB_naval_sov_advisors_effect = {
+	add_to_variable = { production_speed_dockyard_factor_tt = 0.05 tooltip = spotting_chance_tt }
+}

@@ -1396,6 +1396,64 @@ setup_utilize_our_strengths_effects = {
 	}
 }
 
+setup_mythologize_the_father_of_the_nation_effects = {
+	clr_country_flag = gets_idea_GUAY_father_of_the_nation_par
+	clr_country_flag = gets_idea_GUAY_father_of_the_nation_par_generic
+	clr_country_flag = gets_idea_GUAY_father_of_the_nation_urg
+	clr_country_flag = gets_idea_GUAY_father_of_the_nation_urg_generic
+
+	if = {
+		limit = {
+			state_originally_from_PAR = yes
+		}
+		set_country_flag = gets_idea_GUAY_father_of_the_nation_par
+	}
+	else_if = {
+		limit = {
+			state_originally_from_URG = yes
+		}
+		set_country_flag = gets_idea_GUAY_father_of_the_nation_urg
+	}
+	else = {
+		random_list = {
+			1 = { set_country_flag = gets_idea_GUAY_father_of_the_nation_par_generic }
+			1 = { set_country_flag = gets_idea_GUAY_father_of_the_nation_urg_generic }
+		}
+	}
+}
+
+setup_adopt_minority_languages_effects = {
+	clr_country_flag = gets_PAR_guarani_in_the_army
+	clr_country_flag = gets_PAR_guarani_in_the_army_generic
+	clr_country_flag = gets_idea_URG_rioplatense_spanish_in_the_army
+	clr_country_flag = gets_idea_URG_rioplatense_spanish_in_the_army_generic
+
+	if = {
+		limit = {
+			OR = {
+				state_originally_from_PAR = yes
+
+				original_tag = YSF
+
+				original_tag = SOA
+			}
+		}
+		set_country_flag = gets_PAR_guarani_in_the_army
+	}
+	else_if = {
+		limit = {
+			state_originally_from_URG = yes
+		}
+		set_country_flag = gets_idea_URG_rioplatense_spanish_in_the_army
+	}
+	else = {
+		random_list = {
+			1 = { set_country_flag = gets_PAR_guarani_in_the_army_generic }
+			1 = { set_country_flag = gets_idea_URG_rioplatense_spanish_in_the_army_generic }
+		}
+	}
+}
+
 make_current_leader_democratic = {
 	random_character = {
 		limit = {

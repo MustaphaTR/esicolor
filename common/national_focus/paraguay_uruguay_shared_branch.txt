@@ -24,6 +24,11 @@
 	shared_focus =  {
 		id = GUAY_rekindle_old_gripes
 		icon = GFX_goal_generic_attack_allies
+		available = {
+			is_subject = no
+			any_neighbour_valid_for_war_goal = yes
+		}
+
 		x = 0
 		y = 5
 		relative_position_id = GUAY_laissez_faire
@@ -156,6 +161,10 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.06
+			}
 			set_politics = { ruling_party = democratic elections_allowed = yes }
 		}
 	}
@@ -200,6 +209,10 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.08
+			}
 			set_politics = { ruling_party = neutrality elections_allowed = no }
 		}
 	}
@@ -444,7 +457,7 @@
 		x = 1
 		y = 1
 		relative_position_id = GUAY_specialized_terrain_training
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 30
 		}
@@ -640,7 +653,7 @@
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 75
 			add_stability = -0.06
 
 			if = {
@@ -719,7 +732,7 @@
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 75
 			add_stability = -0.06
 
 			if = {
@@ -780,8 +793,14 @@
 		}
 		available = {
 			OR = {
-				has_government = fascism
-				has_government = communism
+				AND = {
+					has_completed_focus = GUAY_align_with_the_internationalists
+					has_government = communism
+				}
+				AND = {
+					has_completed_focus = GUAY_align_with_the_nationalists
+					has_government = fascism
+				}
 			}
 		}
 
@@ -809,18 +828,16 @@
 		y = 1
 		relative_position_id = GUAY_coup_detat
 		prerequisite = { focus =  GUAY_coup_detat }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 500
 		}
 		available = {
-			#check_variable = { army_leaders > 5 }
-			#check_variable = { num_armies > 10 }
 			if = {
 				limit = {
 					is_ai = no
 				}
-				has_army_manpower = { size > 19999 }
+				has_army_manpower = { size > 9999 }
 				custom_trigger_tooltip = {
 				 	tooltip = GER_anschluss_eq_trigger_tt
 				 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 2.5 }
@@ -829,7 +846,6 @@
 			else = {
 				has_army_manpower = { size > 9999 }
 			}
-
 
 			OR = {
 				has_idea = extensive_conscription
@@ -893,13 +909,30 @@
 
 		completion_reward = {
 			if = {
-				limit = {
-					state_originally_from_PAR = yes
-				}
+				limit = { has_country_flag = gets_PAR_guarani_in_the_army }
+
 				add_ideas = PAR_guarani_in_the_army
 			}
-			else = {
+			else_if = {
+				limit = { has_country_flag = gets_PAR_guarani_in_the_army_generic }
+
+				add_ideas = PAR_guarani_in_the_army_generic
+			}
+			else_if = {
+				limit = { has_country_flag = gets_idea_URG_rioplatense_spanish_in_the_army }
+
 				add_ideas = idea_URG_rioplatense_spanish_in_the_army
+			}
+			else_if = {
+				limit = { has_country_flag = gets_idea_URG_rioplatense_spanish_in_the_army_generic }
+
+				add_ideas = idea_URG_rioplatense_spanish_in_the_army_generic
+			}
+			else = {
+				random_list = {
+					1 = { add_ideas = PAR_guarani_in_the_army_generic }
+					1 = { add_ideas = idea_URG_rioplatense_spanish_in_the_army_generic }
+				}
 			}
 		}
 	}
@@ -920,13 +953,30 @@
 
 		completion_reward = {
 			if = {
-				limit = {
-					state_originally_from_PAR = yes
-				}
+				limit = { has_country_flag = gets_idea_GUAY_father_of_the_nation_par }
+
 				add_ideas = idea_GUAY_father_of_the_nation_par
 			}
-			else = {
+			else_if = {
+				limit = { has_country_flag = gets_idea_GUAY_father_of_the_nation_par_generic }
+
+				add_ideas = idea_GUAY_father_of_the_nation_par_generic
+			}
+			else_if = {
+				limit = { has_country_flag = gets_idea_GUAY_father_of_the_nation_urg }
+
 				add_ideas = idea_GUAY_father_of_the_nation_urg
+			}
+			else_if = {
+				limit = { has_country_flag = gets_idea_GUAY_father_of_the_nation_urg_generic }
+
+				add_ideas = idea_GUAY_father_of_the_nation_urg_generic
+			}
+			else = {
+				random_list = {
+					1 = { add_ideas = idea_GUAY_father_of_the_nation_par_generic }
+					1 = { add_ideas = idea_GUAY_father_of_the_nation_urg_generic }
+				}
 			}
 		}
 	}
@@ -946,7 +996,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			custom_effect_tooltip = GUAY_penal_battalions_tt
+			custom_effect_tooltip = GUAY_penal_battalions_esicolor_tt
 			hidden_effect = {
 				set_technology = {
 				 	penal_infantry = 1
