@@ -1,0 +1,95 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = {
+	name = GetContinent
+	text = {
+		trigger = {
+			is_on_continent = europe
+		}
+		localization_key = europe
+	}
+	text = {
+		trigger = {
+			is_on_continent = north_america
+		}
+		localization_key = north_america
+	}
+	text = {
+		trigger = {
+			is_on_continent = south_america
+		}
+		localization_key = south_america
+	}
+	text = {
+		trigger = {
+			is_on_continent = australia
+		}
+		localization_key = australia
+	}
+	text = {
+		trigger = {
+			is_on_continent = africa
+		}
+		localization_key = africa
+	}
+	text = {
+		trigger = {
+			is_on_continent = asia
+		}
+		localization_key = asia
+	}
+	text = {
+		localization_key = middle_east
+	}
+}
+
+defined_text = {
+	name = GetContinentAdj
+	text = {
+		trigger = {
+			is_on_continent = europe
+		}
+		localization_key = europe_adj
+	}
+	text = {
+		trigger = {
+			is_on_continent = north_america
+		}
+		localization_key = north_america_adj
+	}
+	text = {
+		trigger = {
+			is_on_continent = south_america
+		}
+		localization_key = south_america_adj
+	}
+	text = {
+		trigger = {
+			is_on_continent = australia
+		}
+		localization_key = australia_adj
+	}
+	text = {
+		trigger = {
+			is_on_continent = africa
+		}
+		localization_key = africa_adj
+	}
+	text = {
+		trigger = {
+			is_on_continent = asia
+		}
+		localization_key = asia_adj
+	}
+	text = {
+		localization_key = middle_east_adj
+	}
+}

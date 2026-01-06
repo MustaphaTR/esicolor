@@ -115,6 +115,34 @@
 				has_idea = democratic_influence
 				has_advisor_with_democratic_trait = yes
 			}
+			if = {
+				limit = { NOT = { has_government = democratic } }
+
+				if = {
+					limit = {
+						check_variable = { party_popularity@neutrality > party_popularity@communism }
+						check_variable = { party_popularity@neutrality > party_popularity@fascism }
+					}
+
+					democratic > party_popularity@neutrality
+				}
+				else_if = {
+					limit = {
+						check_variable = { party_popularity@fascism > party_popularity@communism }
+						check_variable = { party_popularity@fascism > party_popularity@neutrality }
+					}
+
+					democratic > party_popularity@fascism
+				}
+				else_if = {
+					limit = {
+						check_variable = { party_popularity@communism > party_popularity@neutrality }
+						check_variable = { party_popularity@communism > party_popularity@fascism }
+					}
+
+					democratic > party_popularity@communism
+				}
+			}
 		}
 		bypass = {
 			has_government = democratic
@@ -181,6 +209,11 @@
 				has_idea = neutrality_influence
 				has_advisor_with_non_aligned_trait = yes
 			}
+			if = {
+				limit = { NOT = { has_government = neutrality } }
+
+				neutrality > 0.25
+			}
 		}
 		bypass = {
 			has_government = neutrality
@@ -238,21 +271,9 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			random_core_state = {
-				limit = {
-					is_owned_and_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
+			add_timed_idea = {
+				idea = GUAY_seized_foreign_assets
+				days = 720
 			}
 		}
 	}
@@ -812,11 +833,9 @@
 				ideology = ROOT
 				popularity = 0.2
 			}
-
 			add_equipment_to_stockpile = { 
 				type = infantry_equipment_0
 				amount = 2150
-				producer = ROOT
 			}
 		}
 	}
@@ -839,7 +858,7 @@
 				}
 				has_army_manpower = { size > 9999 }
 				custom_trigger_tooltip = {
-				 	tooltip = GER_anschluss_eq_trigger_tt
+				 	tooltip = GUAY_appease_the_generals_eq_trigger_tt
 				 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 2.5 }
 				}
 			}
@@ -1088,18 +1107,14 @@
 				}
 				add_ideas = war_economy
 			}
-			else = {	
-				random_core_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-					}
+			else = {
+				if = {
+					limit = { has_global_flag = focus_factories_offmap }
 
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
+					add_offsite_building = { type = arms_factory level = 1 }
+				}
+				else = {
+					add_1_arms_factory_in_random_state = yes
 				}
 			}
 		}
@@ -1163,7 +1178,7 @@
 
 	shared_focus =  {
 		id = GUAY_land_reforms
-		icon = GFX_focus_generic_mining_industry
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 3
 		y = 0
 		relative_position_id = GUAY_laissez_faire
@@ -1171,9 +1186,20 @@
 		cost = 10
 		ai_will_do = {
 			factor = 30
-			modifier = {
-				original_tag = URG
-				factor = 0 
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
 			}
 		}
 
@@ -1181,35 +1207,8 @@
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			random_core_state = {
-				limit = {
-					infrastructure < 5
-					is_controlled_by = ROOT
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-
-			random_core_state = {
-				limit = {
-					infrastructure < 5
-					is_controlled_by = ROOT
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_core_state = {
-				limit = {
-					is_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-			}
+			add_1_infrastructure_and_building_slot_in_random_state = yes
+			add_2_infrastructure_and_building_slot_in_random_state = yes
 		}
 	}
 
@@ -1378,7 +1377,7 @@
 
 	shared_focus =  {
 		id = GUAY_wool_makers
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_generic_sheep
 		x = 0
 		y = 1
 		relative_position_id = GUAY_beef_and_hide_industry
@@ -1436,8 +1435,6 @@
 		cost = 10
 		ai_will_do = {
 			factor = 30
-		}
-		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1652,91 +1649,101 @@
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = GUAY_the_stuff_of_legends_cores_tt_bra
-				all_of_scopes = {
-					array = BRA.cores_at_game_start
-					is_controlled_by = ROOT
-				}
+				tooltip = GUAY_the_stuff_of_legends_trigger_tt
+				check_variable = { num_owned_states > 24 }
 			}
-			
-
-			custom_trigger_tooltip = {
-				tooltip = GUAY_the_stuff_of_legends_cores_tt_arg
-				all_of_scopes = {
-					array = ARG.cores_at_game_start
-					is_controlled_by = ROOT
-				}
-			}
-			
-			custom_trigger_tooltip = {
-				tooltip = GUAY_the_stuff_of_legends_cores_tt_bol
-				all_of_scopes = {
-					array = BOL.cores_at_game_start
-					is_controlled_by = ROOT
-				}
-			}
-
-
-
-			if = {
-				limit = {
-					original_tag = PAR
-				}
-				custom_trigger_tooltip = {
-					tooltip = GUAY_the_stuff_of_legends_cores_tt_urg
-					all_of_scopes = {
-						array = URG.cores_at_game_start
-						is_controlled_by = ROOT
-					}
-				}
-			}
-			else = {
-				custom_trigger_tooltip = {
-					tooltip = GUAY_the_stuff_of_legends_cores_tt_par
-					all_of_scopes = {
-						array = PAR.cores_at_game_start
-						is_controlled_by = ROOT
-					}
-				}
-			}
-			687 = { is_controlled_by = ROOT }
-			309 = { is_controlled_by = ROOT }
-			310 = { is_controlled_by = ROOT }
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			every_state = {
-				limit = {
-					is_on_continent = south_america
-					NOT = {
-						is_core_of = PAN
-						is_core_of = MEX
-						is_core_of = COS
-						is_core_of = NIC
-						is_core_of = HON
-						is_core_of = ELS
-						is_core_of = GUA
-						is_core_of = DOM
-						is_core_of = HAI
-						is_core_of = CUB
+			custom_effect_tooltip = GUAY_the_stuff_of_legends_effect_tt
+			hidden_effect = {
+				random_owned_controlled_state = {
+					limit = {
+						NOT = {
+							is_core_of = ROOT
 
+							is_in_array = { ROOT.states_being_cored_normal = THIS }
+							is_in_array = { ROOT.states_being_cored_formable = THIS }
+						}
+
+						OR = {
+							has_state_flag = is_formable_core_@ROOT
+							any_neighbor_state = { is_core_of = ROOT }
+							is_neighboring_core_special_case_state = yes
+						}
 					}
+					add_core_of = ROOT
 				}
-				add_core_of = ROOT
-			}
+				random_owned_controlled_state = {
+					limit = {
+						NOT = {
+							is_core_of = ROOT
 
+							is_in_array = { ROOT.states_being_cored_normal = THIS }
+							is_in_array = { ROOT.states_being_cored_formable = THIS }
+						}
 
-
-			if = {
-				limit = {
-					original_tag = PAR
+						OR = {
+							has_state_flag = is_formable_core_@ROOT
+							any_neighbor_state = { is_core_of = ROOT }
+							is_neighboring_core_special_case_state = yes
+						}
+					}
+					add_core_of = ROOT
 				}
-				set_cosmetic_tag = PAR_anti_imperialism
-			}
-			else = {
-				set_cosmetic_tag = URG_anti_imperialism_tag
+				random_owned_controlled_state = {
+					limit = {
+						NOT = {
+							is_core_of = ROOT
+
+							is_in_array = { ROOT.states_being_cored_normal = THIS }
+							is_in_array = { ROOT.states_being_cored_formable = THIS }
+						}
+
+						OR = {
+							has_state_flag = is_formable_core_@ROOT
+							any_neighbor_state = { is_core_of = ROOT }
+							is_neighboring_core_special_case_state = yes
+						}
+					}
+					add_core_of = ROOT
+				}
+				random_owned_controlled_state = {
+					limit = {
+						NOT = {
+							is_core_of = ROOT
+
+							is_in_array = { ROOT.states_being_cored_normal = THIS }
+							is_in_array = { ROOT.states_being_cored_formable = THIS }
+						}
+
+						OR = {
+							has_state_flag = is_formable_core_@ROOT
+							any_neighbor_state = { is_core_of = ROOT }
+							is_neighboring_core_special_case_state = yes
+						}
+					}
+					add_core_of = ROOT
+				}
+				random_owned_controlled_state = {
+					limit = {
+						NOT = {
+							is_core_of = ROOT
+
+							is_in_array = { ROOT.states_being_cored_normal = THIS }
+							is_in_array = { ROOT.states_being_cored_formable = THIS }
+						}
+
+						OR = {
+							has_state_flag = is_formable_core_@ROOT
+							any_neighbor_state = { is_core_of = ROOT }
+							is_neighboring_core_special_case_state = yes
+						}
+					}
+					add_core_of = ROOT
+				}
 			}
 		}
 	}
@@ -1837,6 +1844,12 @@
 		available_if_capitulated = no
 		prerequisite = { focus =  GUAY_the_tag_economic_miracle }
 		available = {
+			OR = {
+				has_completed_focus = GUAY_agricultural_colonization
+				has_completed_focus = GUAY_beef_and_hide_industry
+				has_completed_focus = GUAY_wool_makers
+				has_completed_focus = GUAY_cash_crop_exports
+			}
 		}
 		cost = 10
 		ai_will_do = {
@@ -1928,7 +1941,7 @@
 
 	shared_focus =  {
 		id = GUAY_exploit_mineral_wealth
-		icon = GFX_focus_generic_steel
+		icon = GFX_focus_generic_mining_industry
 		x = 2
 		y = 0
 
@@ -2027,7 +2040,7 @@
 	}
 
 	shared_focus =  {
-		id = GUAY_national_academy_of_sciences_3
+		id = GUAY_national_academy_of_sciences_4
 		icon = GFX_focus_ARG_universidad_de_buenos_aires
 		x = -1
 		y = 1
