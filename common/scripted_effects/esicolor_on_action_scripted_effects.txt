@@ -4240,6 +4240,50 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = EOO }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = smooth_talking_charmer
+			}
+
+			set_character_name = URG_jose_espalter
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_URG_jose_espalter_small
+					}
+					army = {
+						small = GFX_portrait_URG_jose_espalter_small
+					}
+					navy = {
+						small = GFX_portrait_URG_jose_espalter_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+					army = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+					navy = {
+						small = GFX_Portrait_Europe_Generic_3_small
+					}
+				}
+			}
+
+			300 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = EOY }
 
 		random_character = {
@@ -4734,6 +4778,47 @@ handle_special_advisors = {
 			}
 
 			420 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = ABF }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = air_warfare_theorist
+			}
+
+			set_character_name = BOL_bernardino_bilbao_rioja
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_air_south_america_1
+				}
+				army = {
+					small = GFX_idea_generic_air_south_america_1
+				}
+				navy = {
+					small = GFX_idea_generic_air_south_america_1
+				}
+			}
+
+			487 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = { # This is gonna be Bernardino Bilbao Rioja too, but only if named leaders are enabled.
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_chief_reform_1
+					has_trait = air_chief_reform_2
+					has_trait = air_chief_reform_3
+				}
+			}
+
+			set_character_flag = special_advisor
+
+			487 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -5548,6 +5633,50 @@ handle_special_advisors = {
 			}
 
 			943 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = YAS }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = financial_expert
+			}
+
+			set_character_name = URG_cesar_charlone
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_URG_cesar_charlone_small
+					}
+					army = {
+						small = GFX_portrait_URG_cesar_charlone_small
+					}
+					navy = {
+						small = GFX_portrait_URG_cesar_charlone_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+				}
+			}
+
+			945 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {

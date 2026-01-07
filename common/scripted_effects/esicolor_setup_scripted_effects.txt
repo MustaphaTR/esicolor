@@ -9784,7 +9784,7 @@ adjust_named_advisor_traits = {
 			if = { # Olaf J Thorlacius
 				limit = { has_trait = backroom_backstabber }
 
-				set_character_name = HUN_miklos_horthy_jr
+				set_character_name = ICE_olaf_j_thorlacius
 				remove_trait = {
 					slot = political_advisor
 					trait = backroom_backstabber
@@ -10038,6 +10038,33 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	300 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # José Espalter
+				limit = { has_trait = smooth_talking_charmer }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = smooth_talking_charmer
+				}
+				if = {
+					limit = { has_dlc = "La Resistance" }
+
+					add_trait = {
+						slot = political_advisor
+						trait = minister_of_the_interior_aregai
+					}
+				}
+				else = {
+					add_trait = {
+						slot = political_advisor
+						trait = minister_of_the_interior_aregai_no_lar
+					}
+				}
+			}
+		}
+	}
 	309 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -10102,6 +10129,34 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = patriotic_socialist
+				}
+			}
+		}
+	}
+	487 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Bernardino Bilbao Rioja
+				limit = {
+					OR = {
+						has_trait = air_chief_reform_1
+						has_trait = air_chief_reform_2
+						has_trait = air_chief_reform_3
+					}
+				}
+
+				set_character_name = BOL_bernardino_bilbao_rioja
+
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_air_south_america_1
+					}
+					army = {
+						small = GFX_idea_generic_air_south_america_1
+					}
+					navy = {
+						small = GFX_idea_generic_air_south_america_1
+					}
 				}
 			}
 		}
@@ -10267,6 +10322,23 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = communist_orator
+				}
+			}
+		}
+	}
+	945 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # César Charlone
+				limit = { has_trait = financial_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = financial_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JUNO_minister_of_finance
 				}
 			}
 		}
