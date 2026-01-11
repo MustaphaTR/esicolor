@@ -1,0 +1,39 @@
+characters={
+	ZFT_gustavo_barroso = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=BRA_gustavo_barroso
+			portraits={
+				civilian={
+					large=GFX_portrait_BRA_gustavo_barroso
+					small=GFX_portrait_BRA_gustavo_barroso_small
+				}
+			}
+			country_leader={
+				traits={ DEN_fascist_militarist }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=BRA_gustavo_barroso
+			portraits={
+				civilian={
+					large="GFX_Portrait_South_America_Generic_land_4"
+				}
+			}
+			country_leader={
+				traits={ DEN_fascist_militarist }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

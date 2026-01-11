@@ -10161,6 +10161,96 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	496 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Benedito Valadares
+				limit = { has_trait = silent_workhorse }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = silent_workhorse
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = BRA_political_fox
+				}
+			}
+		}
+	}
+	498 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Leôncio Basbaum
+				limit = { has_trait = communist_revolutionary }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = leftist_intellectual
+				}
+			}
+		}
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Olga Benário Prestes
+				limit = { has_trait = propaganda_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = propaganda_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = SWI_soviet_spy
+				}
+			}
+		}
+	}
+	500 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Francisco Campos
+				limit = { has_trait = ideological_crusader }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = ideological_crusader
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = BRA_right_wing_ideologue
+				}
+			}
+			if = { # Oswaldo Aranha
+				limit = { has_trait = compassionate_gentleman }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = compassionate_gentleman
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = BRA_renowned_ambassador
+				}
+			}
+			if = { # Filinto Müller
+				limit = { has_trait = head_of_intelligence }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = head_of_intelligence
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = BRA_head_of_political_police
+				}
+			}
+		}
+	}
 	#501 = { # His trait sucks, keep the generic/no-DLC one.
 	#	for_each_scope_loop = {
 	#		array = state_advisors
@@ -11512,6 +11602,7 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = DEN_venstre } remove_country_leader_trait = DEN_venstre }
 	if = { limit = { has_country_leader_with_trait = DEN_kommunist } remove_country_leader_trait = DEN_kommunist }
 	if = { limit = { has_country_leader_with_trait = DEN_fascist_populist } remove_country_leader_trait = DEN_fascist_populist }
+	if = { limit = { has_country_leader_with_trait = DEN_fascist_militarist } remove_country_leader_trait = DEN_fascist_militarist }
 	if = { limit = { has_country_leader_with_trait = DEN_the_king } remove_country_leader_trait = DEN_the_king }
 	if = { limit = { has_country_leader_with_trait = ICE_hot_tempered_reformer } remove_country_leader_trait = ICE_hot_tempered_reformer }
 	if = { limit = { has_country_leader_with_trait = ICE_the_strict_regent } remove_country_leader_trait = ICE_the_strict_regent }
