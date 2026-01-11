@@ -10178,6 +10178,23 @@ adjust_named_advisor_traits = {
 	#		}
 	#	}
 	#}
+	688 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Anselmo Jover Peralta
+				limit = { has_trait = compassionate_gentleman }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = compassionate_gentleman
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = SWE_minister_of_justice
+				}
+			}
+		}
+	}
 	695 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -10339,6 +10356,23 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = JUNO_minister_of_finance
+				}
+			}
+		}
+	}
+	946 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Teodomiro Varela de Andrade
+				limit = { has_trait = fascist_demagogue }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = fascist_demagogue
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = fascist_corporatist
 				}
 			}
 		}
