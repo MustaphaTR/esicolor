@@ -10067,6 +10067,71 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	279 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Ulk
+				limit = { has_trait = propaganda_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = propaganda_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = face_licker
+				}
+			}
+			if = { # Ernesto Barros Jarpa
+				limit = { has_trait = smooth_talking_charmer }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = smooth_talking_charmer
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JUNO_minister_of_foreign_affairs
+				}
+			}
+			if = { # Gustavo Ross Santa María
+				limit = { has_trait = financial_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = financial_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JUNO_minister_of_finance
+				}
+			}
+			if = { # Jorge Alessandri
+				limit = { has_trait = economist }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = economist
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JUNO_conservative_businessman
+				}
+			}
+			if = { # Benjamín Matte Larraín
+				limit = { has_trait = captain_of_industry }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = captain_of_industry
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = SWE_minister_of_agriculture
+				}
+			}
+		}
+	}
 	300 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -10492,6 +10557,129 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = fascist_corporatist
+				}
+			}
+		}
+	}
+	950 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Manuel Aburto Panguilef
+				limit = { has_trait = staunch_traditionalist }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = staunch_traditionalist
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JUNO_mapuche_traditionalist
+				}
+			}
+			if = { # Rayén Quitral
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JUNO_famous_soprano
+				}
+			}
+			if = { # Carlos Huayquiñir
+				limit = { has_trait = silent_workhorse }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = silent_workhorse
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JUNO_mapuche_journalist
+				}
+			}
+			if = { # Guido Beck
+				limit = { has_trait = compassionate_gentleman }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = compassionate_gentleman
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JUNO_apostlic_prefect_of_araucania
+				}
+			}
+			if = { # Esteban Romero Sandoval
+				limit = { has_trait = economist }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = economist
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JUNO_mapuche_economist
+				}
+			}
+		}
+	}
+	951 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Pablo Neruda
+				limit = { has_trait = communist_revolutionary }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = socialist_writer
+				}
+			}
+			if = { # Salvador Allende
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JUNO_reformist_minister_of_health
+				}
+			}
+		}
+	}
+	952 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Miguel Serrano
+				limit = { has_trait = fascist_demagogue }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = fascist_demagogue
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JUNO_national_socialist_occultist
+				}
+			}
+			if = { # Francisco Antonio Encina
+				limit = { has_trait = economist }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = economist
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JUNO_agricultural_national_socialist
 				}
 			}
 		}
@@ -11687,6 +11875,7 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = JUNO_defender_of_araucania } remove_country_leader_trait = JUNO_defender_of_araucania }
 	if = { limit = { has_country_leader_with_trait = JUNO_el_jefe } remove_country_leader_trait = JUNO_el_jefe }
 	if = { limit = { has_country_leader_with_trait = JUNO_president_of_victory } remove_country_leader_trait = JUNO_president_of_victory }
+	if = { limit = { has_country_leader_with_trait = JUNO_the_general_president } remove_country_leader_trait = JUNO_the_general_president }
 	if = { limit = { has_country_leader_with_trait = JUNO_unpopular } remove_country_leader_trait = JUNO_unpopular }
 	if = { limit = { has_country_leader_with_trait = JUNO_revolutionary_feberista_hero } remove_country_leader_trait = JUNO_revolutionary_feberista_hero }
 	if = { limit = { has_country_leader_with_trait = JUNO_unpopular_economist } remove_country_leader_trait = JUNO_unpopular_economist }

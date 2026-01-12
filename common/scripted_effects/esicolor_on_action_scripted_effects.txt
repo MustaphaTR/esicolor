@@ -4366,6 +4366,213 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = ZFY }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = propaganda_expert
+			}
+
+			set_character_name = CHL_ulk
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CHL_ulk_small
+					}
+					army = {
+						small = GFX_portrait_CHL_ulk_small
+					}
+					navy = {
+						small = GFX_portrait_CHL_ulk_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small=GFX_idea_unknown_advisor_dog
+					}
+					army = {
+						small=GFX_idea_unknown_advisor_dog
+					}
+					navy = {
+						small=GFX_idea_unknown_advisor_dog
+					}
+				}
+			}
+
+			279 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = smooth_talking_charmer
+			}
+
+			set_character_name = CHL_ernesto_jarpa
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CHL_ernesto_jarpa_small
+					}
+					army = {
+						small = GFX_portrait_CHL_ernesto_jarpa_small
+					}
+					navy = {
+						small = GFX_portrait_CHL_ernesto_jarpa_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small=GFX_Portrait_South_America_Generic_navy_1_small
+					}
+					army = {
+						small=GFX_Portrait_South_America_Generic_navy_1_small
+					}
+					navy = {
+						small=GFX_Portrait_South_America_Generic_navy_1_small
+					}
+				}
+			}
+
+			279 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = financial_expert
+			}
+
+			set_character_name = CHL_gustavo_ross_santa_maria
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_CHL_gustavo_ross_santa_maria
+						small = GFX_portrait_CHL_gustavo_ross_santa_maria_small
+					}
+					army = {
+						large = GFX_portrait_CHL_gustavo_ross_santa_maria
+						small = GFX_portrait_CHL_gustavo_ross_santa_maria_small
+					}
+					navy = {
+						large = GFX_portrait_CHL_gustavo_ross_santa_maria
+						small = GFX_portrait_CHL_gustavo_ross_santa_maria_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small=GFX_Portrait_South_America_Generic_land_4_small
+					}
+					army = {
+						small=GFX_Portrait_South_America_Generic_land_4_small
+					}
+					navy = {
+						small=GFX_Portrait_South_America_Generic_land_4_small
+					}
+				}
+			}
+
+			279 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = economist
+			}
+
+			set_character_name = CHL_jorge_alessandri
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CHL_jorge_alessandri_small
+					}
+					army = {
+						small = GFX_portrait_CHL_jorge_alessandri_small
+					}
+					navy = {
+						small = GFX_portrait_CHL_jorge_alessandri_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small=GFX_Portrait_South_America_Generic_navy_3_small
+					}
+					army = {
+						small=GFX_Portrait_South_America_Generic_navy_3_small
+					}
+					navy = {
+						small=GFX_Portrait_South_America_Generic_navy_3_small
+					}
+				}
+			}
+
+			279 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = CHL_benjamin_larrain
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CHL_benjamin_larrain_small
+					}
+					army = {
+						small = GFX_portrait_CHL_benjamin_larrain_small
+					}
+					navy = {
+						small = GFX_portrait_CHL_benjamin_larrain_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small=GFX_idea_generic_political_advisor_south_america_2
+					}
+					army = {
+						small=GFX_idea_generic_political_advisor_south_america_2
+					}
+					navy = {
+						small=GFX_idea_generic_political_advisor_south_america_2
+					}
+				}
+			}
+
+			279 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = ZYI }
 
 		random_character = {
@@ -5457,13 +5664,13 @@ handle_special_advisors = {
 			else = {
 				set_portraits = {
 					civilian = {
-						small=Portrait_South_America_Generic_land_5_small
+						small=GFX_Portrait_South_America_Generic_land_5_small
 					}
 					army = {
-						small=Portrait_South_America_Generic_land_5_small
+						small=GFX_Portrait_South_America_Generic_land_5_small
 					}
 					navy = {
-						small=Portrait_South_America_Generic_land_5_small
+						small=GFX_Portrait_South_America_Generic_land_5_small
 					}
 				}
 			}
@@ -6634,6 +6841,437 @@ handle_special_advisors = {
 			}
 
 			946 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = YSO }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = staunch_monarchist
+			}
+
+			set_character_name = CHL_manuel_panguilef
+			set_character_flag = special_advisor
+
+			remove_trait = {
+				slot = political_advisor
+				trait = staunch_monarchist
+			}
+			add_trait = {
+				slot = political_advisor
+				trait = staunch_traditionalist
+			}
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CHL_manuel_panguilef_small
+					}
+					army = {
+						small = GFX_portrait_CHL_manuel_panguilef_small
+					}
+					navy = {
+						small = GFX_portrait_CHL_manuel_panguilef_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_South_America_Generic_6_small
+					}
+					army = {
+						small = GFX_Portrait_South_America_Generic_6_small
+					}
+					navy = {
+						small = GFX_Portrait_South_America_Generic_6_small
+					}
+				}
+			}
+
+			950 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_name = CHL_rayen_quitral
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CHL_rayen_quitral_small
+					}
+					army = {
+						small = GFX_portrait_CHL_rayen_quitral_small
+					}
+					navy = {
+						small = GFX_portrait_CHL_rayen_quitral_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_female_south_america
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_female_south_america
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_female_south_america
+					}
+				}
+			}
+
+			950 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = compassionate_gentleman
+			}
+
+			set_character_name = CHL_guido_beck
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CHL_guido_beck_small
+					}
+					army = {
+						small = GFX_portrait_CHL_guido_beck_small
+					}
+					navy = {
+						small = GFX_portrait_CHL_guido_beck_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_south_america_3
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_south_america_3
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_south_america_3
+					}
+				}
+			}
+
+			950 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = silent_workhorse
+			}
+
+			set_character_name = CHL_carlos_huayquinir
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CHL_carlos_huayquinir_small
+					}
+					army = {
+						small = GFX_portrait_CHL_carlos_huayquinir_small
+					}
+					navy = {
+						small = GFX_portrait_CHL_carlos_huayquinir_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+				}
+			}
+
+			950 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = economist
+			}
+
+			set_character_name = CHL_esteban_romero_sandoval
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_CHL_esteban_romero_sandoval
+						small = GFX_portrait_CHL_esteban_romero_sandoval_small
+					}
+					army = {
+						large = GFX_portrait_CHL_esteban_romero_sandoval
+						small = GFX_portrait_CHL_esteban_romero_sandoval_small
+					}
+					navy = {
+						large = GFX_portrait_CHL_esteban_romero_sandoval
+						small = GFX_portrait_CHL_esteban_romero_sandoval_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+				}
+			}
+
+			950 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_offensive_1
+					has_trait = army_chief_offensive_2
+					has_trait = army_chief_offensive_3
+				}
+			}
+
+			set_character_name = CHL_venancio_huenchual
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_CHL_venancio_huenchual
+						small = GFX_portrait_CHL_venancio_huenchual_small
+					}
+					army = {
+						large = GFX_portrait_CHL_venancio_huenchual
+						small = GFX_portrait_CHL_venancio_huenchual_small
+					}
+					navy = {
+						large = GFX_portrait_CHL_venancio_huenchual
+						small = GFX_portrait_CHL_venancio_huenchual_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_South_America_Generic_land_1_small
+					}
+					army = {
+						small = GFX_Portrait_South_America_Generic_land_1_small
+					}
+					navy = {
+						small = GFX_Portrait_South_America_Generic_land_1_small
+					}
+				}
+			}
+
+			950 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = YSI }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = CHL_pablo_neruda
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CHL_pablo_neruda_small
+					}
+					army = {
+						small = GFX_portrait_CHL_pablo_neruda_small
+					}
+					navy = {
+						small = GFX_portrait_CHL_pablo_neruda_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_south_america_2
+					}
+				}
+			}
+
+			951 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_name = CHL_salvador_allende
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CHL_salvador_allende_small
+					}
+					army = {
+						small = GFX_portrait_CHL_salvador_allende_small
+					}
+					navy = {
+						small = GFX_portrait_CHL_salvador_allende_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_South_America_Generic_1_small
+					}
+					army = {
+						small = GFX_Portrait_South_America_Generic_1_small
+					}
+					navy = {
+						small = GFX_Portrait_South_America_Generic_1_small
+					}
+				}
+			}
+
+			951 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = YSZ }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = fascist_demagogue
+			}
+
+			set_character_name = CHL_miguel_serrano
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CHL_miguel_serrano_small
+					}
+					army = {
+						small = GFX_portrait_CHL_miguel_serrano_small
+					}
+					navy = {
+						small = GFX_portrait_CHL_miguel_serrano_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_South_America_Generic_land_2_small
+					}
+					army = {
+						small = GFX_Portrait_South_America_Generic_land_2_small
+					}
+					navy = {
+						small = GFX_Portrait_South_America_Generic_land_2_small
+					}
+				}
+			}
+
+			952 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = economist
+			}
+
+			set_character_name = CHL_francisco_encina
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Trial of Allegiance" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CHL_francisco_encina_small
+					}
+					army = {
+						small = GFX_portrait_CHL_francisco_encina_small
+					}
+					navy = {
+						small = GFX_portrait_CHL_francisco_encina_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_south_america_3
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_south_america_3
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_south_america_3
+					}
+				}
+			}
+
+			952 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {

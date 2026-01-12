@@ -15,6 +15,17 @@
 @army_command_factor_3 = 0.86
 
 leader_traits = {
+	staunch_traditionalist = { # Identical to Staunch Monarchist, different name.
+		random = no
+		sprite = 13
+
+		neutrality_drift = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	IRQ_the_grand_mufti_esicolor = { # Without the attack bonus against the Brits.
 		random = no
 		sprite = 13

@@ -8,10 +8,10 @@ set_technology = {
 
 set_convoys = 5
 set_popularities = {
-	democratic = 25
-	fascism = 25
-	communism = 25
-	neutrality = 25
+	democratic = 20
+	fascism = 10
+	communism = 10
+	neutrality = 55
 }
 set_politics = {
 	ruling_party = neutrality
@@ -20,6 +20,19 @@ set_politics = {
 	elections_allowed = no
 }
 
+recruit_character = TPM_carlos_ibanez
+
 set_rule = {
 	can_generate_female_aces = yes
+}
+
+set_party_name = {
+	ideology = neutrality
+	name = CHL_neutrality_party
+	long_name = CHL_neutrality_party
+}
+set_party_name = {
+	ideology = democratic
+	name = CHL_popular_freedom_alliance_party
+	long_name = CHL_popular_freedom_alliance_party_long
 }
