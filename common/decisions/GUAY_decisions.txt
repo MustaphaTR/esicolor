@@ -50,10 +50,15 @@ GUAY_laissez_faire_cat = {
 
 		timeout_effect = {
 			custom_effect_tooltip = GUAY_laissez_faire_stats
+			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_state = {
+			random_controlled_state = {
 				limit = {
-					is_controlled_by = ROOT
+					if = {
+						limit = { ROOT = { any_controlled_state = { is_core_of = ROOT } } }
+
+						is_core_of = ROOT
+					}
 					impassable = no
 				}
 				random_list = {
@@ -277,6 +282,8 @@ GUAY_laissez_faire_cat = {
 					}
 				}
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 			activate_mission = GUAY_land_owners_finding_funding
 		}
 	}
