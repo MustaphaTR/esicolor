@@ -1,0 +1,51 @@
+characters={
+	SIO_pedro_pablo_ramirez = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=ARG_pedro_pablo_ramirez
+			portraits={
+				civilian={
+					large=GFX_portrait_ARG_pedro_pablo_ramirez_fascist
+					small=GFX_portrait_ARG_pedro_pablo_ramirez_fascist_small
+				}
+			}
+			country_leader={
+				traits={ ARG_moderate_dictator }
+				ideology=gen_nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ ARG_moderate_dictator }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=ARG_pedro_pablo_ramirez
+			portraits={
+				civilian={
+					large="GFX_Portrait_South_America_Generic_land_2"
+				}
+			}
+			country_leader={
+				traits={ ARG_moderate_dictator }
+				ideology=gen_nazism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ ARG_moderate_dictator }
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

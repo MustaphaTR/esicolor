@@ -149,6 +149,44 @@ on_actions = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					has_dlc = "Trial of Allegiance"
+					has_character = SIO_pedro_pablo_ramirez
+				}
+
+				if = {
+					limit = { has_government = fascism }
+
+					SIO_pedro_pablo_ramirez = {
+						set_portraits = {
+							civilian = {
+								large=GFX_portrait_ARG_pedro_pablo_ramirez_fascist
+								small=GFX_portrait_ARG_pedro_pablo_ramirez_fascist_small
+							}
+							army = {
+								large=GFX_portrait_ARG_pedro_pablo_ramirez_fascist
+								small=GFX_portrait_ARG_pedro_pablo_ramirez_fascist_small
+							}
+						}
+					}
+
+					else = {
+						SIO_pedro_pablo_ramirez = {
+							set_portraits = {
+								civilian = {
+									large=GFX_portrait_ARG_pedro_pablo_ramirez_unaligned
+									small=GFX_portrait_ARG_pedro_pablo_ramirez_unaligned_military_small
+								}
+								army = {
+									large=GFX_portrait_ARG_pedro_pablo_ramirez_unaligned
+									small=GFX_portrait_ARG_pedro_pablo_ramirez_unaligned_military_small
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 

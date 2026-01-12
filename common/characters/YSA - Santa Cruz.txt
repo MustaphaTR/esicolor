@@ -1,0 +1,39 @@
+characters={
+	YSA_antonio_soto = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=ARG_antonio_soto
+			portraits={
+				civilian={
+					large=GFX_portrait_ARG_antonio_soto
+					small=GFX_portrait_ARG_antonio_soto_military_small
+				}
+			}
+			country_leader={
+				traits={ ARG_anarchosyndicalist }
+				ideology=anarchist_communism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=ARG_antonio_soto
+			portraits={
+				civilian={
+					large="Portrait_South_America_Generic_2"
+				}
+			}
+			country_leader={
+				traits={ ARG_anarchosyndicalist }
+				ideology=anarchist_communism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

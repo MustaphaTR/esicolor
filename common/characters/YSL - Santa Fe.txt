@@ -1,0 +1,39 @@
+characters={
+	YSL_enrique_mosca = {
+		instance = {
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+			}
+			name=ARG_enrique_mosca
+			portraits={
+				civilian={
+					large=GFX_portrait_ARG_enrique_mosca
+					small=GFX_portrait_ARG_enrique_mosca_small
+				}
+			}
+			country_leader={
+				traits={ ARG_prominent_centrist }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Trial of Allegiance" }
+			}
+			name=ARG_enrique_mosca
+			portraits={
+				civilian={
+					large="Portrait_South_America_Generic_2"
+				}
+			}
+			country_leader={
+				traits={ ARG_prominent_centrist }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

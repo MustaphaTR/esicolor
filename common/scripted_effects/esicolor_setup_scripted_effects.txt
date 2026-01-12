@@ -10038,6 +10038,35 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	278 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Roberto Marcelino Ortiz
+				limit = { has_trait = editor }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = editor
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_compliant_politician
+				}
+			}
+			if = { # Ramón Castillo
+				limit = { has_trait = smooth_talking_charmer }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = smooth_talking_charmer
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = sharp_tongued_lawyer
+				}
+			}
+		}
+	}
 	300 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -10463,6 +10492,23 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = fascist_corporatist
+				}
+			}
+		}
+	}
+	956 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Marcelo Torcuato de Alvear
+				limit = { has_trait = democratic_reformer }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = democratic_reformer
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = democratic_crusader
 				}
 			}
 		}
@@ -11631,6 +11677,8 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = ARG_fraudulent_industrialist } remove_country_leader_trait = ARG_fraudulent_industrialist }
 	if = { limit = { has_country_leader_with_trait = ARG_feminist_revolutionary } remove_country_leader_trait = ARG_feminist_revolutionary }
 	if = { limit = { has_country_leader_with_trait = ARG_prominent_centrist } remove_country_leader_trait = ARG_prominent_centrist }
+	if = { limit = { has_country_leader_with_trait = ARG_moderate_dictator } remove_country_leader_trait = ARG_moderate_dictator }
+	if = { limit = { has_country_leader_with_trait = ARG_anarchosyndicalist } remove_country_leader_trait = ARG_anarchosyndicalist }
 	if = { limit = { has_country_leader_with_trait = batllista_traditionalist } remove_country_leader_trait = batllista_traditionalist }
 	if = { limit = { has_country_leader_with_trait = pro_allied_politician } remove_country_leader_trait = pro_allied_politician }
 	if = { limit = { has_country_leader_with_trait = the_german_connection } remove_country_leader_trait = the_german_connection }

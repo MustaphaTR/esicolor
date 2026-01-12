@@ -6365,6 +6365,20 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_LAP_ARGLAP
 	text = {
+		trigger = {
+			has_government = neutrality
+			has_country_leader = { character = SIO_pedro_pablo_ramirez ruling_only = yes }
+		}
+		localization_key = LAP_ARGLAP_MILITARY_neutrality_DEF
+	}
+	text = {
+		trigger = {
+			has_government = fascism
+			has_country_leader = { character = SIO_pedro_pablo_ramirez ruling_only = yes }
+		}
+		localization_key = LAP_ARGLAP_MILITARY_fascism_DEF
+	}
+	text = {
 		trigger = { has_government = neutrality }
 		localization_key = LAP_ARGLAP_neutrality_DEF
 	}
@@ -6521,6 +6535,13 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_LAP_UNITED
 	text = {
+		trigger = {
+			has_government = fascism
+			has_country_leader = { character = SIO_pedro_pablo_ramirez ruling_only = yes }
+		}
+		localization_key = LAP_UNITED_ARGMILITARY_fascism_DEF
+	}
+	text = {
 		trigger = { has_government = neutrality }
 		localization_key = LAP_UNITED_neutrality_DEF
 	}
@@ -6571,6 +6592,13 @@ defined_text = {
 	text = {
 		trigger = { has_country_leader_ideology = marxism }
 		localization_key = LAP_ARGENTINA_MARXISM_communism_DEF
+	}
+	text = {
+		trigger = {
+			has_government = fascism
+			has_country_leader = { character = SIO_pedro_pablo_ramirez ruling_only = yes }
+		}
+		localization_key = LAP_ARGENTINA_MILITARY_fascism_DEF
 	}
 	text = {
 		trigger = { has_government = neutrality }
@@ -7874,6 +7902,13 @@ defined_text = {
 	text = {
 		trigger = { has_country_leader = { character = YSO_manuel_manquilef ruling_only = yes } }
 		localization_key = SOA_UNITED_AMERINDIA_neutrality_DEF
+	}
+	text = {
+		trigger = {
+			has_government = fascism
+			has_country_leader = { character = SIO_pedro_pablo_ramirez ruling_only = yes }
+		}
+		localization_key = SOA_UNITED_ARGMILITARY_fascism_DEF
 	}
 	text = {
 		trigger = { has_government = neutrality }

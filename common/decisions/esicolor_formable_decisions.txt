@@ -14208,7 +14208,15 @@ esicolor_formables = {
 			set_country_flag = can_form_LAP_UNITED
 			set_country_flag = can_form_LAP_ARGENTINA
 
-			set_cosmetic_tag = LAP_ARGLAP
+			if = {
+				limit = { has_country_leader = { character = SIO_pedro_pablo_ramirez ruling_only = yes } }
+
+				set_cosmetic_tag = LAP_ARGLAP_MILITARY
+
+				else = {
+					set_cosmetic_tag = LAP_ARGLAP
+				}
+			}
 
 			hidden_effect = {
 				every_state = {
@@ -14473,7 +14481,15 @@ esicolor_formables = {
 
 			set_country_flag = can_form_SOA_UNITED
 
-			set_cosmetic_tag = LAP_UNITED
+			if = {
+				limit = { has_country_leader = { character = SIO_pedro_pablo_ramirez ruling_only = yes } }
+
+				set_cosmetic_tag = LAP_UNITED_ARGMILITARY
+
+				else = {
+					set_cosmetic_tag = LAP_UNITED
+				}
+			}
 
 			hidden_effect = {
 				every_state = {
@@ -14540,6 +14556,11 @@ esicolor_formables = {
 				limit = { has_country_leader_ideology = marxism }
 
 				set_cosmetic_tag = LAP_ARGENTINA_MARXISM
+			}
+			else_if = {
+				limit = { has_country_leader = { character = SIO_pedro_pablo_ramirez ruling_only = yes } }
+
+				set_cosmetic_tag = LAP_ARGENTINA_MILITARY
 
 				else = {
 					set_cosmetic_tag = LAP_ARGENTINA
@@ -17289,6 +17310,11 @@ esicolor_formables = {
 				limit = { has_country_leader = { character = YSO_manuel_manquilef ruling_only = yes } }
 
 				set_cosmetic_tag = SOA_UNITED_AMERINDIA
+			}
+			else_if = {
+				limit = { has_country_leader = { character = SIO_pedro_pablo_ramirez ruling_only = yes } }
+
+				set_cosmetic_tag = SOA_UNITED_ARGMILITARY
 
 				else = {
 					set_cosmetic_tag = SOA_UNITED
