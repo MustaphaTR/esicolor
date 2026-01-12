@@ -1679,10 +1679,14 @@ shared_focus = {
 				}
 
 				add_offsite_building = { type = arms_factory level = 1 }
+				add_1_air_base_in_random_state = yes
 			}
 			else = {
-				add_1_arms_factory_in_random_state = yes
+				add_1_arms_factory_and_1_air_base_in_random_state = yes
 			}
+		}
+		else = {
+			add_1_air_base_in_random_state = yes
 		}
 
 		if = {
