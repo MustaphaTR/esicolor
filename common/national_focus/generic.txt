@@ -2406,8 +2406,13 @@ shared_focus = {
 	prerequisite = { focus = ideological_fanaticism focus = why_we_fight }
 	available = {
 		has_war = yes
-		is_in_faction = yes
-		num_faction_members > 1
+		OR = {
+			AND = {
+				is_in_faction = yes
+				num_faction_members > 0
+			}
+			num_subjects > 0
+		}
 		OR = {
 			num_of_factories > 50
 			any_other_country = {
