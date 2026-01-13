@@ -12679,18 +12679,21 @@ randomise_research_slots = {
 randomise_starting_army_type = {
 	random_list = {
 		seed = random
-		25 = {
+		20 = {
 			adjust_default_template_size = yes
 		}
-		25 = {
+		20 = {
 			change_default_template_to_militia = yes
 		}
-		25 = {
+		20 = {
 			change_default_template_to_irregulars = yes
 		}
-		25 = {
+		20 = {
 			change_default_template_to_cavalry = yes
 		}
+		#20 = {
+		#	change_default_template_to_bicycle = yes
+		#}
 	}
 }
 
@@ -12965,6 +12968,72 @@ change_default_template_to_cavalry = {
 		teleport_created_units_out_of_lakes = yes
 	}
 }
+change_default_template_to_bicycle = {
+	set_technology = { 
+		bicycle_infantry = 1
+	}
+	delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+	division_template = {
+		name = "Bicycle Brigade"
+		regiments = {
+			bicycle_battalion = { x = 0 y = 0 }
+		}
+	}
+
+	calculate_template_size_variables = yes
+
+	for_loop_effect = {
+		start = 0
+		end = max_column
+		compare = less_than_or_equals
+		value = current_column
+
+		for_loop_effect = {
+			start = 0
+			end = 4
+			compare = less_than_or_equals
+			value = current_row
+
+			if = {
+				limit = { check_variable = { divisionstoadd < 1 } }
+
+				set_temp_variable = { break = 1 }
+			}
+
+			if = {
+				limit = {
+					AND = {
+						check_variable = { current_column = 0 }
+						check_variable = { current_row = 0 }
+					}
+				}
+			}
+			else = {
+				meta_effect = {
+					text = {
+						add_units_to_division_template = {
+							template_name = "Bicycle Brigade"
+							regiments = {
+								bicycle_battalion = [COLUMN]
+							}
+						}
+					}
+					COLUMN = "[?current_column]"
+				}
+
+				subtract_from_variable = { divisionstoadd = 1 }
+			}
+		}
+	}
+
+	capital_scope = {
+		create_unit = {
+			division = "division_template = \"Bicycle Brigade\""
+			owner = PREV
+		}
+		teleport_created_units_out_of_lakes = yes
+	}
+}
 teleport_created_units_out_of_lakes = {
 	if = {
 		limit = { state = 870 }
@@ -13004,6 +13073,7 @@ delete_default_template = {
 		else = {
 			delete_unit_template_and_units = { division_template = "Cavalry Brigade" }
 		}
+		delete_unit_template_and_units = { division_template = "Bicycle Brigade" }
 	}
 }
 spawn_basegame_divisions = {

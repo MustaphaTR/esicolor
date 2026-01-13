@@ -1371,9 +1371,14 @@ setup_gui_start_starting_army = {
 			every_country = { change_default_template_to_irregulars = yes }
 		}
 		else_if = {
-			limit = { check_variable = { global.setup_starting_army_type > 2 } }
+			limit = { check_variable = { global.setup_starting_army_type = 3 } }
 
 			every_country = { change_default_template_to_cavalry = yes }
+		}
+		else_if = {
+			limit = { check_variable = { global.setup_starting_army_type > 3 } }
+
+			every_country = { change_default_template_to_bicycle = yes }
 		}
 	}
 	if = {

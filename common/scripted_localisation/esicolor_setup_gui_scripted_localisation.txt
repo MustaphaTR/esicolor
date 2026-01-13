@@ -1854,7 +1854,13 @@ defined_text = {
 		localization_key = irregular_infantry
 	}
 	text = {
+		trigger = {
+			check_variable = { global.setup_starting_army_type = 3 }
+		}
 		localization_key = cavalry
+	}
+	text = {
+		localization_key = bicycle_battalion
 	}
 }
 defined_text = {
