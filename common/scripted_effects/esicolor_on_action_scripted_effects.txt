@@ -4732,6 +4732,168 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = EIS }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = silent_workhorse
+			}
+
+			set_character_name = CUB_gerardo_machado
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_political_advisor_south_america_3
+				}
+				army = {
+					small = GFX_idea_generic_political_advisor_south_america_3
+				}
+				navy = {
+					small = GFX_idea_generic_political_advisor_south_america_3
+				}
+			}
+
+			315 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_offensive_1
+					has_trait = army_chief_offensive_2
+					has_trait = army_chief_offensive_3
+				}
+			}
+
+			set_character_name = CUB_fulgencio_batista
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_army_south_america_5
+				}
+				army = {
+					small = GFX_idea_generic_army_south_america_5
+				}
+				navy = {
+					small = GFX_idea_generic_army_south_america_5
+				}
+			}
+
+			315 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = EIB }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_defensive_1
+					has_trait = army_chief_defensive_2
+					has_trait = army_chief_defensive_3
+				}
+			}
+
+			set_character_name = HAI_franck_lavaud
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_army_african_2
+				}
+				army = {
+					small = GFX_idea_generic_army_african_2
+				}
+				navy = {
+					small = GFX_idea_generic_army_african_2
+				}
+			}
+
+			318 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_concealment_1
+					has_trait = army_concealment_2
+					has_trait = army_concealment_3
+				}
+			}
+
+			set_character_name = HAI_paul_magloire
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_army_african_5
+				}
+				army = {
+					small = GFX_idea_generic_army_african_5
+				}
+				navy = {
+					small = GFX_idea_generic_army_african_5
+				}
+			}
+
+			318 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = EIY }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = smooth_talking_charmer
+			}
+
+			set_character_name = DOM_jacinto_bienvenido_peynado
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_political_advisor_south_america_1
+				}
+				army = {
+					small = GFX_idea_generic_political_advisor_south_america_1
+				}
+				navy = {
+					small = GFX_idea_generic_political_advisor_south_america_1
+				}
+			}
+
+			319 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = armaments_organizer
+			}
+
+			set_character_name = DOM_manuel_de_jesus_troncoso
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_political_advisor_south_america_2
+				}
+				army = {
+					small = GFX_idea_generic_political_advisor_south_america_2
+				}
+				navy = {
+					small = GFX_idea_generic_political_advisor_south_america_2
+				}
+			}
+
+			319 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = EZA }
 
 		random_character = {
