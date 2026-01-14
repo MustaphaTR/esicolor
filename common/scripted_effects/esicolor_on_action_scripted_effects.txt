@@ -4196,6 +4196,106 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = ZFS }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = democratic_reformer
+			}
+
+			set_character_name = SAF_sir_patrick_duncan
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small="GFX_idea_SAF_sir_patrick_duncan"
+				}
+				army = {
+					small="GFX_idea_SAF_sir_patrick_duncan"
+				}
+				navy = {
+					small="GFX_idea_SAF_sir_patrick_duncan"
+				}
+			}
+
+			275 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = silent_workhorse
+			}
+
+			set_character_name = SAF_e_g_jansen
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small="GFX_idea_SAF_e_g_jansen"
+				}
+				army = {
+					small="GFX_idea_SAF_e_g_jansen"
+				}
+				navy = {
+					small="GFX_idea_SAF_e_g_jansen"
+				}
+			}
+
+			275 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = SAF_nicolaas_havenga
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small="GFX_idea_SAF_nicolaas_havenga"
+				}
+				army = {
+					small="GFX_idea_SAF_nicolaas_havenga"
+				}
+				navy = {
+					small="GFX_idea_SAF_nicolaas_havenga"
+				}
+			}
+
+			275 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_chief_ground_support_1
+					has_trait = air_chief_ground_support_2
+					has_trait = air_chief_ground_support_3
+				}
+			}
+
+			set_character_name = SAF_pierre_van_ryneveld
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small="GFX_idea_SAF_pierre_van_ryneveld"
+				}
+				army = {
+					small="GFX_idea_SAF_pierre_van_ryneveld"
+				}
+				navy = {
+					small="GFX_idea_SAF_pierre_van_ryneveld"
+				}
+			}
+
+			275 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = ZFB }
 
 		random_character = {
@@ -5963,6 +6063,33 @@ handle_special_advisors = {
 			}
 
 			676 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = LBI }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = SAF_abram_fischer
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small="GFX_idea_SAF_abram_fischer"
+				}
+				army = {
+					small="GFX_idea_SAF_abram_fischer"
+				}
+				navy = {
+					small="GFX_idea_SAF_abram_fischer"
+				}
+			}
+
+			681 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
