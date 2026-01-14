@@ -3,7 +3,6 @@
 		icon = GFX_focus_generic_industry_3
 		x = 14
 		y = 0
-		mutually_exclusive = { focus =  GUAY_land_reforms }
 		cost = 10
 
 		ai_will_do = {
@@ -1194,11 +1193,12 @@
 		x = 3
 		y = 0
 		relative_position_id = GUAY_laissez_faire
-		#prerequisite = { focus =  GUAY_coup_detat }
 		cost = 10
 		ai_will_do = {
 			factor = 30
 		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		complete_tooltip = {
 			add_extra_state_shared_building_slots = 1
@@ -1214,9 +1214,6 @@
 				instant_build = yes
 			}
 		}
-
-		mutually_exclusive = { focus =  GUAY_laissez_faire }
-		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
 			add_1_infrastructure_and_building_slot_in_random_state = yes
@@ -1401,8 +1398,22 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
 		completion_reward = {
-			add_1_infrastructure_and_building_slot_in_random_state = yes
 			add_1_infrastructure_and_building_slot_in_random_state = yes
 			add_1_infrastructure_and_building_slot_in_random_state = yes
 		}
