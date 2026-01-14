@@ -35,5 +35,5 @@ with open("focus_list_by_cost.txt", "w") as f:
     for x, y in dict.items():
         f.write(x + ": ")
         for z in y:
-            f.write(z + ", ")
+            f.write(z + " ")
         f.write("\n\n")

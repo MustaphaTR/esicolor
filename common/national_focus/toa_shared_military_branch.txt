@@ -1630,9 +1630,7 @@ shared_focus = {
 
 shared_focus = {
 	id = SMB_air_force
-	#icon = GFX_goal_generic_build_airforce
 	relative_position_id = SMB_army
-	#prerequisite = { focus = SMB_army }
 	x = 8
 	y = 0
 
@@ -2781,7 +2779,6 @@ shared_focus = {
 
 shared_focus = {
 	id = SMB_navy
-	#icon = GFX_goal_generic_build_navy
 	relative_position_id = SMB_air_force
 	x = 8
 	y = 0
@@ -3452,75 +3449,6 @@ shared_focus = {
 		add_to_variable = {
 			ROOT.JUNO_navy_repair_speed_factor = 0.25
 			tooltip = repair_speed_factor_tt
-		}
-	}
-}
-
-shared_focus = {
-	id = SMB_carrier_conversion
-	icon = GFX_focus_BRA_converted_carriers
-	allow_branch = { 
-		#state_originally_from_BRA = yes
-		always = no
-	}
-	prerequisite = { focus = SMB_expand_repair_yards }
-	relative_position_id = SMB_expand_repair_yards
-	x = 0
-	y = 1
-
-	cost = 10
-
-	available = {
-		has_tech = early_ship_hull_carrier
-	}
-
-	ai_will_do = {
-		factor = 20
-	}
-
-	completion_reward = {
-		add_breakthrough_progress = {
-			specialization = specialization_naval
-			value = 0.5
-		}
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		create_equipment_variant = {
-			name = "Minas Gerais Class"
-			type = ship_hull_carrier_conversion_ca
-			name_group = BRA_CV_HISTORICAL
-			parent_version = 0
-			allow_without_tech = yes
-			modules = {
-				fixed_ship_deck_slot_1 = ship_deck_space
-				fixed_ship_deck_slot_2 = ship_deck_space
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = cruiser_ship_engine_1
-				fixed_ship_secondaries_slot = ship_secondaries_1
-			}
-		}
-		add_equipment_production = {
-			equipment = {
-				type = ship_hull_carrier_conversion_ca
-				creator = ROOT
-				version_name = "Minas Gerais Class"
-			}
-			name = "NRB Belo Horizonte"
-			requested_factories = 2
-			progress = 0.5
-			amount = 1
-		}
-		add_equipment_production = {
-			equipment = {
-				type = ship_hull_carrier_conversion_ca
-				creator = ROOT
-				version_name = "Minas Gerais Class"
-			}
-			name = "NRB Congonhas"
-			requested_factories = 2
-			progress = 0.5
-			amount = 1
 		}
 	}
 }
