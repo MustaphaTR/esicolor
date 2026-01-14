@@ -326,6 +326,47 @@ ideas = {
 			}
 		}
 
+		idea_URG_rioplatense_spanish_in_the_army_generic = {
+			picture = generic_reserve_divisions
+
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				encryption_factor = 0.15
+				army_morale_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+
+		idea_GUAY_father_of_the_nation_urg_generic = {
+			picture = FRA_national_mobilization_focus
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+
+		idea_GUAY_father_of_the_nation_par_generic = {
+			picture = FRA_scw_intervention_nationalists_focus
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.2
+				conscription_factor = 0.15
+				consumer_goods_factor = 0.05
+			}
+		}
+
 		SMB_naval_arms_race_restarted = {
 			allowed = {
 				always = no
