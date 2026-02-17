@@ -3045,7 +3045,6 @@ adjust_state_name_554 = {
 				owner = {
 					OR = {
 						state_originally_from_TUR = yes
-						state_originally_from_KUR = yes
 						AND = {
 							state_originally_from_CYP = yes
 							has_country_flag = has_formed_TUR_AKDENIZ
@@ -3059,12 +3058,33 @@ adjust_state_name_554 = {
 			id = 4111
 			name = VICTORY_POINTS_4111_TUR
 		}
+		set_province_name = {
+			id = 4486
+			name = VICTORY_POINTS_4486_TUR
+		}
+		554 = { set_state_name = VICTORY_POINTS_4111_TUR }
+	}
+	else_if = {
+		limit = { 554 = { owner = { state_originally_from_KUR = yes } } }
+
+		set_province_name = {
+			id = 4111
+			name = VICTORY_POINTS_4111_TUR
+		}
+		set_province_name = {
+			id = 4486
+			name = VICTORY_POINTS_4486_KUR
+		}
 		554 = { set_state_name = VICTORY_POINTS_4111_TUR }
 	}
 	else = {
 		set_province_name = {
 			id = 4111
 			name = VICTORY_POINTS_4111
+		}
+		set_province_name = {
+			id = 4486
+			name = VICTORY_POINTS_4486
 		}
 		554 = { set_state_name = STATE_554 }
 	}
@@ -3233,6 +3253,10 @@ adjust_state_name_677 = {
 			id = 12473
 			name = VICTORY_POINTS_12473
 		}
+		set_province_name = {
+			id = 1088
+			name = VICTORY_POINTS_1088_GRE
+		}
 		677 = { set_state_name = STATE_677 }
 	}
 	else_if = {
@@ -3258,6 +3282,10 @@ adjust_state_name_677 = {
 			id = 12473
 			name = VICTORY_POINTS_12473_TUR
 		}
+		set_province_name = {
+			id = 1088
+			name = VICTORY_POINTS_1088_TUR
+		}
 		677 = { set_state_name = VICTORY_POINTS_12473_TUR }
 	}
 	else_if = {
@@ -3271,6 +3299,10 @@ adjust_state_name_677 = {
 			id = 12473
 			name = VICTORY_POINTS_12473_KUR
 		}
+		set_province_name = {
+			id = 1088
+			name = VICTORY_POINTS_1088
+		}
 		677 = { set_state_name = VICTORY_POINTS_12473_KUR }
 	}
 	else = {
@@ -3281,6 +3313,10 @@ adjust_state_name_677 = {
 		set_province_name = {
 			id = 12473
 			name = VICTORY_POINTS_12473
+		}
+		set_province_name = {
+			id = 1088
+			name = VICTORY_POINTS_1088
 		}
 		677 = { set_state_name = STATE_677 }
 	}
