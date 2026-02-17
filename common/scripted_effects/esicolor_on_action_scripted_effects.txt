@@ -619,6 +619,54 @@ handle_special_generals = {
 			}
 		}
 	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = LZI_fu_zuoyi ruling_only = yes }
+
+				NOT = { has_global_flag = wang_jingguo_created }
+			}
+		}
+
+		set_global_flag = wang_jingguo_created
+		set_character_name = SHX_wang_jingguo
+		set_character_flag = special_general
+
+		if = {
+			limit = { has_dlc = "No Compromise, No Surrender" }
+
+			set_portraits = {
+				civilian = {
+					large=GFX_portrait_SHX_wang_jingguo
+					small=GFX_portrait_SHX_wang_jingguo_small
+				}
+				army = {
+					large=GFX_portrait_SHX_wang_jingguo
+					small=GFX_portrait_SHX_wang_jingguo_small
+				}
+				navy = {
+					large=GFX_portrait_SHX_wang_jingguo
+					small=GFX_portrait_SHX_wang_jingguo_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large=GFX_Portrait_Asia_Generic_land_4
+					small=GFX_Portrait_Asia_Generic_land_4_small
+				}
+				army = {
+					large=GFX_Portrait_Asia_Generic_land_4
+					small=GFX_Portrait_Asia_Generic_land_4_small
+				}
+				navy = {
+					large=GFX_Portrait_Asia_Generic_land_4
+					small=GFX_Portrait_Asia_Generic_land_4_small
+				}
+			}
+		}
+	}
 }
 
 handle_special_admirals = {
