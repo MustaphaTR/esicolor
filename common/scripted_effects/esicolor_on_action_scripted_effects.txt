@@ -571,6 +571,54 @@ handle_special_generals = {
 			}
 		}
 	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = LIF_sheng_shicai ruling_only = yes }
+
+				NOT = { has_global_flag = sheng_shiqi_created }
+			}
+		}
+
+		set_global_flag = sheng_shiqi_created
+		set_character_name = SIK_sheng_shiqi
+		set_character_flag = special_general
+
+		if = {
+			limit = { has_dlc = "No Compromise, No Surrender" }
+
+			set_portraits = {
+				civilian = {
+					large=GFX_portrait_SIK_sheng_shiqi
+					small=GFX_portrait_SIK_sheng_shiqi_military_small
+				}
+				army = {
+					large=GFX_portrait_SIK_sheng_shiqi
+					small=GFX_portrait_SIK_sheng_shiqi_military_small
+				}
+				navy = {
+					large=GFX_portrait_SIK_sheng_shiqi
+					small=GFX_portrait_SIK_sheng_shiqi_military_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large=GFX_portrait_asia_generic_land_14
+					small=GFX_portrait_asia_generic_land_14_small
+				}
+				army = {
+					large=GFX_portrait_asia_generic_land_14
+					small=GFX_portrait_asia_generic_land_14_small
+				}
+				navy = {
+					large=GFX_portrait_asia_generic_land_14
+					small=GFX_portrait_asia_generic_land_14_small
+				}
+			}
+		}
+	}
 }
 
 handle_special_admirals = {
