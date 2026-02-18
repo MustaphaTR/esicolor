@@ -9868,6 +9868,23 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	117 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Gian Galeazzo Ciano
+				limit = { has_trait = compassionate_gentleman }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = compassionate_gentleman
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = hierarch_minister_of_foreign_affairs_no_bop
+				}
+			}
+		}
+	}
 	152 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -10549,6 +10566,23 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = AUS_resourceful_princess
+				}
+			}
+		}
+	}
+	849 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Ignazio Silone
+				limit = { has_trait = silent_workhorse }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = silent_workhorse
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = revolutionary_poet
 				}
 			}
 		}
@@ -11765,6 +11799,7 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = skillful_diplomat } remove_country_leader_trait = skillful_diplomat }
 	if = { limit = { has_country_leader_with_trait = conservative_grandee } remove_country_leader_trait = conservative_grandee }
 	if = { limit = { has_country_leader_with_trait = conservative_nationalist } remove_country_leader_trait = conservative_nationalist }
+	if = { limit = { has_country_leader_with_trait = conservative_communist } remove_country_leader_trait = conservative_communist }
 	if = { limit = { has_country_leader_with_trait = staunch_constitutionalist } remove_country_leader_trait = staunch_constitutionalist }
 	if = { limit = { has_country_leader_with_trait = staunch_stalinist } remove_country_leader_trait = staunch_stalinist }
 	if = { limit = { has_country_leader_with_trait = staunch_anti_fascist } remove_country_leader_trait = staunch_anti_fascist }
@@ -11886,7 +11921,6 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = ICE_hot_tempered_reformer } remove_country_leader_trait = ICE_hot_tempered_reformer }
 	if = { limit = { has_country_leader_with_trait = ICE_the_strict_regent } remove_country_leader_trait = ICE_the_strict_regent }
 	if = { limit = { has_country_leader_with_trait = member_of_the_suojeluskunta } remove_country_leader_trait = member_of_the_suojeluskunta }
-	if = { limit = { has_country_leader_with_trait = conservative_nationalist  } remove_country_leader_trait = conservative_nationalist  }
 	if = { limit = { has_country_leader_with_trait = sotamarsalkka } remove_country_leader_trait = sotamarsalkka }
 	if = { limit = { has_country_leader_with_trait = crown_prince_of_finland } remove_country_leader_trait = crown_prince_of_finland }
 	if = { limit = { has_country_leader_with_trait = grandpa_vainamoinen } remove_country_leader_trait = grandpa_vainamoinen }

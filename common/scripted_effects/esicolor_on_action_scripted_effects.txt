@@ -574,6 +574,54 @@ handle_special_generals = {
 	else_if = {
 		limit = {
 			var:creator = {
+				has_country_leader = { character = ILO_ferruccio_parri ruling_only = yes }
+
+				NOT = { has_global_flag = giuseppe_de_stefanis_created }
+			}
+		}
+
+		set_global_flag = giuseppe_de_stefanis_created
+		set_character_name = ITA_giuseppe_de_stefanis
+		set_character_flag = special_general
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			set_portraits = {
+				civilian = {
+					large=GFX_portrait_ITA_giuseppe_de_stefanis
+					small=GFX_portrait_ITA_giuseppe_de_stefanis_small
+				}
+				army = {
+					large=GFX_portrait_ITA_giuseppe_de_stefanis
+					small=GFX_portrait_ITA_giuseppe_de_stefanis_small
+				}
+				navy = {
+					large=GFX_portrait_ITA_giuseppe_de_stefanis
+					small=GFX_portrait_ITA_giuseppe_de_stefanis_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large=GFX_Portrait_Italy_Generic_land_3
+					small=GFX_Portrait_Italy_Generic_land_3_small
+				}
+				army = {
+					large=GFX_Portrait_Italy_Generic_land_3
+					small=GFX_Portrait_Italy_Generic_land_3_small
+				}
+				navy = {
+					large=GFX_Portrait_Italy_Generic_land_3
+					small=GFX_Portrait_Italy_Generic_land_3_small
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
 				has_country_leader = { character = LIF_sheng_shicai ruling_only = yes }
 
 				NOT = { has_global_flag = sheng_shiqi_created }
@@ -664,6 +712,62 @@ handle_special_generals = {
 					large=GFX_Portrait_Asia_Generic_land_4
 					small=GFX_Portrait_Asia_Generic_land_4_small
 				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = ASI_italo_balbo ruling_only = yes }
+
+				NOT = { has_global_flag = pietro_pintor_created }
+			}
+		}
+
+		set_global_flag = pietro_pintor_created
+		set_character_name = ITA_pietro_pintor
+		set_character_flag = special_general
+
+		set_portraits = {
+			civilian = {
+				large=GFX_portrait_ITA_pietro_pintor
+				small=GFX_portrait_ITA_pietro_pintor_small
+			}
+			army = {
+				large=GFX_portrait_ITA_pietro_pintor
+				small=GFX_portrait_ITA_pietro_pintor_small
+			}
+			navy = {
+				large=GFX_portrait_ITA_pietro_pintor
+				small=GFX_portrait_ITA_pietro_pintor_small
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = SSO_emilio_de_bono ruling_only = yes }
+
+				NOT = { has_global_flag = ettore_bastico_created }
+			}
+		}
+
+		set_global_flag = ettore_bastico_created
+		set_character_name = ITA_ettore_bastico
+		set_character_flag = special_general
+
+		set_portraits = {
+			civilian = {
+				large=GFX_portrait_ITA_ettore_bastico
+				small=GFX_portrait_ITA_ettore_bastico_small
+			}
+			army = {
+				large=GFX_portrait_ITA_ettore_bastico
+				small=GFX_portrait_ITA_ettore_bastico_small
+			}
+			navy = {
+				large=GFX_portrait_ITA_ettore_bastico
+				small=GFX_portrait_ITA_ettore_bastico_small
 			}
 		}
 	}
@@ -910,10 +1014,166 @@ handle_special_admirals = {
 			}
 		}
 	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = ISB_prince_amedeo ruling_only = yes }
+
+				NOT = { has_global_flag = prince_aimone_created }
+			}
+		}
+
+		set_global_flag = prince_aimone_created
+		set_character_name = ITA_prince_aimone
+		set_character_flag = special_admiral
+
+		set_portraits = {
+			civilian = {
+				large=GFX_portrait_ITA_prince_aimone
+				small=GFX_idea_prince_aimone
+			}
+			army = {
+				large=GFX_portrait_ITA_prince_aimone
+				small=GFX_idea_prince_aimone
+			}
+			navy = {
+				large=GFX_portrait_ITA_prince_aimone
+				small=GFX_idea_prince_aimone
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = IIF_benito_mussolini ruling_only = yes }
+
+				NOT = { has_global_flag = angelo_iachino_created }
+			}
+		}
+
+		set_global_flag = angelo_iachino_created
+		set_character_name = ITA_angelo_iachino
+		set_character_flag = special_admiral
+
+		set_portraits = {
+			civilian = {
+				large=GFX_portrait_ITA_angelo_iachino
+				small=GFX_idea_angelo_iachino
+			}
+			army = {
+				large=GFX_portrait_ITA_angelo_iachino
+				small=GFX_idea_angelo_iachino
+			}
+			navy = {
+				large=GFX_portrait_ITA_angelo_iachino
+				small=GFX_idea_angelo_iachino
+			}
+		}
+	}
 }
 
 handle_special_advisors = {
 	if = {
+		limit = { original_tag = OOZ }
+
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+
+			random_character = {
+				limit = {
+					is_advisor = yes
+					has_trait = staunch_monarchist
+				}
+
+				set_character_name = ITA_pietro_d_acquarone
+				set_character_flag = special_advisor
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_ITA_pietro_d_acquarone_small
+					}
+					army = {
+						small = GFX_portrait_ITA_pietro_d_acquarone_small
+					}
+					navy = {
+						small = GFX_portrait_ITA_pietro_d_acquarone_small
+					}
+				}
+
+				2 = { add_to_array = { state_advisors = PREV } }
+			}
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = ITA_alberto_beneduce
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_ITA_alberto_beneduce_small
+				}
+				army = {
+					small = GFX_portrait_ITA_alberto_beneduce_small
+				}
+				navy = {
+					small = GFX_portrait_ITA_alberto_beneduce_small
+				}
+			}
+
+			2 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = air_warfare_theorist
+			}
+
+			set_character_name = ITA_renato_sandalli
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_renato_sandalli
+				}
+				army = {
+					small = GFX_idea_renato_sandalli
+				}
+				navy = {
+					small = GFX_idea_renato_sandalli
+				}
+			}
+
+			2 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = assault_avaition
+			}
+
+			set_character_name = ITA_amedeo_mecozzi
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_amedeo_mecozzi
+				}
+				army = {
+					small = GFX_idea_amedeo_mecozzi
+				}
+				navy = {
+					small = GFX_idea_amedeo_mecozzi
+				}
+			}
+
+			2 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = OOA }
 
 		random_character = {
@@ -3307,6 +3567,87 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = IIA }
+
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+
+			random_character = {
+				limit = {
+					is_advisor = yes
+					has_trait = staunch_monarchist
+				}
+
+				set_character_name = ITA_pietro_d_acquarone
+				set_character_flag = special_advisor
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_ITA_pietro_d_acquarone_small
+					}
+					army = {
+						small = GFX_portrait_ITA_pietro_d_acquarone_small
+					}
+					navy = {
+						small = GFX_portrait_ITA_pietro_d_acquarone_small
+					}
+				}
+
+				114 = { add_to_array = { state_advisors = PREV } }
+			}
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = quartermaster_general
+			}
+
+			set_character_name = ITA_paolo_thaon_di_revel
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_ITA_paolo_thaon_di_revel_small
+				}
+				army = {
+					small = GFX_portrait_ITA_paolo_thaon_di_revel_small
+				}
+				navy = {
+					small = GFX_portrait_ITA_paolo_thaon_di_revel_small
+				}
+			}
+
+			117 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = IIF }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = compassionate_gentleman
+			}
+
+			set_character_name = ITA_gian_galeazzo_ciano
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_ITA_gian_galeazzo_ciano_small
+				}
+				army = {
+					small = GFX_portrait_ITA_gian_galeazzo_ciano_small
+				}
+				navy = {
+					small = GFX_portrait_ITA_gian_galeazzo_ciano_small
+				}
+			}
+
+			117 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = ISZ }
 
 		# random_character = {
@@ -3804,6 +4145,60 @@ handle_special_advisors = {
 			}
 
 			155 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = ILI }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = war_industrialist
+			}
+
+			set_character_name = ITA_giacomo_acerbo
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_ITA_giacomo_acerbo_small
+				}
+				army = {
+					small = GFX_portrait_ITA_giacomo_acerbo_small
+				}
+				navy = {
+					small = GFX_portrait_ITA_giacomo_acerbo_small
+				}
+			}
+
+			161 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = ILZ }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = ITA_amadeo_bordiga
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_amadeo_bordiga
+				}
+				army = {
+					small = GFX_idea_amadeo_bordiga
+				}
+				navy = {
+					small = GFX_idea_amadeo_bordiga
+				}
+			}
+
+			161 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -5560,6 +5955,37 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = ASI }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_chief_safety_1
+					has_trait = air_chief_safety_2
+					has_trait = air_chief_safety_3
+				}
+			}
+
+			set_character_name = ITA_rino_corso_fougier
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_rino_corso_fougier
+				}
+				army = {
+					small = GFX_idea_rino_corso_fougier
+				}
+				navy = {
+					small = GFX_idea_rino_corso_fougier
+				}
+			}
+
+			451 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = ABF }
 
 		random_character = {
@@ -6034,6 +6460,37 @@ handle_special_advisors = {
 			}
 
 			510 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = SSO }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_logistics_1
+					has_trait = army_logistics_2
+					has_trait = army_logistics_3
+				}
+			}
+
+			set_character_name = ITA_achille_starace
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_ITA_achille_starace_small
+				}
+				army = {
+					small = GFX_portrait_ITA_achille_starace_small
+				}
+				navy = {
+					small = GFX_portrait_ITA_achille_starace_small
+				}
+			}
+
+			550 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -6855,6 +7312,53 @@ handle_special_advisors = {
 			}
 
 			848 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = CBZ }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = silent_workhorse
+			}
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_ITA_ignazio_silone_small
+				}
+				army = {
+					small = GFX_portrait_ITA_ignazio_silone_small
+				}
+				navy = {
+					small = GFX_portrait_ITA_ignazio_silone_small
+				}
+			}
+
+			849 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = economist
+			}
+
+			set_character_name = ITA_antonio_pesenti
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_ITA_antonio_pesenti_small
+				}
+				army = {
+					small = GFX_portrait_ITA_antonio_pesenti_small
+				}
+				navy = {
+					small = GFX_portrait_ITA_antonio_pesenti_small
+				}
+			}
+
+			849 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {

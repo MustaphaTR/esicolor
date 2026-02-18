@@ -1,0 +1,81 @@
+characters={
+	ILI_dino_grandi = {
+		instance = {
+			allowed = {
+				has_dlc = "By Blood Alone"
+				has_dlc = "La Resistance"
+			}
+			name = ITA_dino_grandi
+			portraits = {
+				civilian = {
+					large=GFX_portrait_ITA_dino_grandi
+					small=GFX_portrait_ITA_dino_grandi_small 
+				}
+			}
+			country_leader={
+				traits={ silver_tongue }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				has_dlc = "By Blood Alone"
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name = ITA_dino_grandi
+			portraits = {
+				civilian = {
+					large=GFX_portrait_ITA_dino_grandi
+					small=GFX_portrait_ITA_dino_grandi_small 
+				}
+			}
+			country_leader={
+				ideology=fascism_ideology
+				traits={ silver_tongue }
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT =  { has_dlc = "By Blood Alone" }
+				has_dlc = "La Resistance"
+			}
+			name = ITA_dino_grandi
+			portraits = {
+				civilian = {
+					large=GFX_portrait_europe_generic_4
+					small=GFX_portrait_ITA_dino_grandi_small
+				}
+			}
+			country_leader={
+				traits={ silver_tongue_no_lar }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "By Blood Alone" }
+				NOT = { has_dlc = "La Resistance" }
+			}
+			name = ITA_dino_grandi
+			portraits = {
+				civilian = {
+					large=GFX_portrait_europe_generic_4
+					small=GFX_portrait_ITA_dino_grandi_small
+				}
+			}
+			country_leader={
+				ideology=fascism_ideology
+				traits={ silver_tongue_no_lar }
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
