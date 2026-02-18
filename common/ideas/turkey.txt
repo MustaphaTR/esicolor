@@ -361,6 +361,71 @@ ideas = {
 	}
 
 	industrial_concern = {
+		# Wiki says first factory was opened in Kayseri in September 1935.
+		# Had custom trait in basegame, but using Industrial Concern here.
+		EAB_industrial_concern = {
+			name = sumerbank
+			picture = tur_balkan_central_bank_wealthy_greece
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = industrial_concern_disabled }
+				OR = {
+					original_tag = EAB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 348
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					348 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+
+		# Had custom trait in basegame, but using Electronics Concern here.
+		FYF_electronics_concern = {
+			name = etibank
+			picture = PRC_nanjing_wireless_electronics_plant
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = electronics_concern_disabled }
+				OR = {
+					original_tag = FYF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 797
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					797 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+		}
+
 		# Formed in '41.
 		FYF_refinery_concern = {
 			name = petrol_ofisi
