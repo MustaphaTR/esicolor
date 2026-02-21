@@ -19,3 +19,25 @@ suitable_democratic_major_in_europe = {
 		NOT = { has_war_with = ROOT } 
 	}
 }
+
+suitable_fascist_major_on_same_continent = {
+	any_other_country = {
+		is_major = yes
+		is_on_same_continent_as = ROOT
+		exists = yes
+		has_capitulated = no
+		has_government = fascism
+		NOT = { has_war_with = ROOT }
+	}
+}
+
+suitable_democratic_major_same_continent = {
+	any_other_country = {
+		is_major = yes
+		is_on_same_continent_as = ROOT
+		exists = yes 
+		has_capitulated = no 
+		has_government = democratic
+		NOT = { has_war_with = ROOT } 
+	}
+}

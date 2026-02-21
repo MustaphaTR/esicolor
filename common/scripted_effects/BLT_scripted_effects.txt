@@ -1,0 +1,401 @@
+give_fascist_tank_licences = { #does not have to take non-dlc into account because everyone who gets the Baltic trees also has the tank designer!
+	if = {
+		limit = {
+			has_tech = main_battle_tank_chassis
+		}
+
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = modern_tank_chassis_1
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = modern_tank_chassis_1
+				amount = 360
+				producer = PREV
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = advanced_medium_tank_chassis
+		}
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = medium_tank_chassis_3
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = medium_tank_chassis_3
+				amount = 360
+				producer = PREV
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = improved_medium_tank_chassis
+		}
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = medium_tank_chassis_2
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = medium_tank_chassis_2
+				amount = 360
+				producer = PREV
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = basic_medium_tank_chassis
+		}
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = medium_tank_chassis_1
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = medium_tank_chassis_1
+				amount = 360
+				producer = PREV
+			}
+		}
+	}
+	else = {
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = light_tank_chassis_2
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = light_tank_chassis_2
+				amount = 360
+				producer = PREV
+			}
+		}
+	}
+}
+
+give_aircraft_and_licences = {	
+	if = {
+		limit = {
+			is_special_project_completed = sp:sp_air_axial_jet_engine
+		}
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = jet_fighter_equipment_2
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = jet_fighter_equipment_2
+				amount = 360
+				producer = PREV
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_special_project_completed = sp:sp_air_jet_engine
+		}
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = jet_fighter_equipment_1
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = jet_fighter_equipment_1
+				amount = 360
+				producer = PREV
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = fighter3
+		}
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = fighter_equipment_3
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_3
+				amount = 360
+				producer = PREV
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = fighter2
+		}
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = fighter_equipment_2
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_2
+				amount = 360
+				producer = PREV
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = fighter1
+		}
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = fighter_equipment_1
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_1
+				amount = 360
+				producer = PREV
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_dlc = "By Blood Alone"
+			}
+		}
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = fighter_equipment_0
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 360
+				producer = PREV
+			}
+		}
+	}
+	else = {
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = small_plane_airframe_0
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_0
+				amount = 360
+				producer = PREV
+			}
+		}
+	}
+}
+
+baltic_give_allied_equipment = {
+	if = {
+		limit = {
+			has_tech = advanced_infantry_weapons
+		}
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = infantry_equipment_3
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_3
+				amount = 2500
+				producer = PREV
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = improved_infantry_weapons
+		}
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = infantry_equipment_2
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_2
+				amount = 2500
+				producer = PREV
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = infantry_weapons1
+		}
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = infantry_equipment_1
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2500
+				producer = PREV
+			}
+		}
+	}
+	else = {
+		create_production_license = {
+			target = ROOT
+			equipment = {
+				type = infantry_equipment_0
+			}
+			cost_factor = 0
+		}
+		ROOT = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 2500
+				producer = PREV
+			}
+		}
+	}
+}
+
+BALTIC_save_communist_benefactor = {
+	hidden_effect = {
+		if = { # Soviet Majors
+			limit = {
+				any_other_country = {
+					has_government = communism
+					state_originally_from_SOV = yes
+					is_major = yes
+				}
+			}
+
+			every_other_country = {
+				if = {
+					limit = {
+						has_government = communism
+						state_originally_from_SOV = yes
+						is_major = yes
+						OR = {
+							check_variable = { ROOT.communist_benefactor = 0 }
+							capital_scope = { set_temp_variable = { distance_to_ROOT_capital = distance_to@ROOT.capital_scope } }
+							ROOT = {
+								var:communist_benefactor = {
+									capital_scope = {
+										check_variable = { distance_to_ROOT_capital < distance_to@ROOT.capital_scope }
+									}
+								}
+							}
+						}
+					}
+
+					ROOT = { set_variable = { communist_benefactor = PREV } }
+				}
+			}
+		}
+		else_if = { # Non-Soviet Majors
+			limit = {
+				any_other_country = {
+					has_government = communism
+					is_major = yes
+				}
+			}
+
+			every_other_country = {
+				if = {
+					limit = {
+						has_government = communism
+						is_major = yes
+						OR = {
+							check_variable = { ROOT.communist_benefactor = 0 }
+							capital_scope = { set_temp_variable = { distance_to_ROOT_capital = distance_to@ROOT.capital_scope } }
+							ROOT = {
+								var:communist_benefactor = {
+									capital_scope = {
+										check_variable = { distance_to_ROOT_capital < distance_to@ROOT.capital_scope }
+									}
+								}
+							}
+						}
+					}
+
+					ROOT = { set_variable = { communist_benefactor = PREV } }
+				}
+			}
+		}
+		else_if = { # Other Commies
+			limit = {
+				any_other_country = {
+					has_government = communism
+				}
+			}
+
+			every_other_country = {
+				if = {
+					limit = {
+						has_government = communism
+						OR = {
+							check_variable = { ROOT.communist_benefactor = 0 }
+							capital_scope = { set_temp_variable = { distance_to_ROOT_capital = distance_to@ROOT.capital_scope } }
+							ROOT = {
+								var:communist_benefactor = {
+									capital_scope = {
+										check_variable = { distance_to_ROOT_capital < distance_to@ROOT.capital_scope }
+									}
+								}
+							}
+						}
+					}
+
+					ROOT = { set_variable = { communist_benefactor = PREV } }
+				}
+			}
+		}
+	}
+}

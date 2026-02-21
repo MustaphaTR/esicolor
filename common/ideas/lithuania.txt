@@ -1,4 +1,55 @@
 ideas = {
+	country = {
+		LIT_agrarian_society = {
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = LIT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.06
+				conscription_factor = -0.5
+				industrial_capacity_factory	= -0.2
+			}
+		}
+
+		LIT_invested_in_farms = {
+			picture = LIT_invested_in_farms
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.03
+				conscription_factor = -0.25
+				industrial_capacity_factory	= -0.05
+			}
+		}
+
+		LIT_invested_in_farms_1 = {
+			picture = LIT_invested_in_farms
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+	}
+
 	aircraft_manufacturer = { 		
 		designer = yes
 

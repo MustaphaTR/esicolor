@@ -3048,6 +3048,18 @@ load_continent_focus_trees = {
 		setup_mythologize_the_father_of_the_nation_effects = yes
 		setup_adopt_minority_languages_effects = yes
 	}
+	#else_if = {
+	#	limit = {
+	#		OR = {
+	#			state_originally_from_EST = yes
+	#			state_originally_from_LAT = yes
+	#			state_originally_from_LIT = yes
+	#		}
+	#	}
+	#
+	#	load_focus_tree = baltic_focus
+	#	BALTIC_save_communist_benefactor = yes
+	#}
 	else = {
 		load_focus_tree = generic_focus
 	}
@@ -3056,22 +3068,26 @@ load_continent_focus_trees = {
 randomise_focus_trees = {
 	random_list = {
 		seed = random
-		25 = {
+		20 = {
 			load_focus_tree = generic_focus
 		}
-		25 = {
+		20 = {
 			load_focus_tree = horn_of_africa_tree
 			setup_utilize_our_strengths_effects = yes
 		}
-		25 = {
+		20 = {
 			load_focus_tree = china_warlord_sea_focus
 		}
-		25 = {
+		20 = {
 			load_focus_tree = southern_south_america_focus
 			JUNO_set_shared_military_branch_defaults = yes
 			setup_mythologize_the_father_of_the_nation_effects = yes
 			setup_adopt_minority_languages_effects = yes
 		}
+		#20 = {
+		#	load_focus_tree = baltic_focus
+		#	BALTIC_save_communist_benefactor = yes
+		#}
 	}
 }
 
