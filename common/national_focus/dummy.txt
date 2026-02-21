@@ -2015,6 +2015,17 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = BRA_federal_development
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_grow_the_coal_industry
+
+		completion_reward = { }
+	}
+
 	# Stability and War Support Decisions
 	focus = {
 		id = GRE_request_communist_support
@@ -2022,7 +2033,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = CHI_grow_the_coal_industry
+		relative_position_id = BRA_federal_development
 
 		completion_reward = { }
 	}
@@ -3321,12 +3332,34 @@ focus_tree = {
 
 	# WTT Warlord Scripted Effects
 	focus = {
-		id = XSM_send_ma_lin_on_hajj
+		id = CHI_ma_clique_collective
 		icon = GFX_goal_generic_demand_territory
 		x = 0
 		y = 1
 		cost = 8
 		relative_position_id = JAP_sea_greater_east_asian_co_properity_sphere
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = XSM_send_ma_lin_on_hajj
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_ma_clique_collective
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = KHM_shizangs_coup
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = XSM_send_ma_lin_on_hajj
 
 		completion_reward = { }
 	}
@@ -3338,7 +3371,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = XSM_send_ma_lin_on_hajj
+		relative_position_id = KHM_shizangs_coup
 
 		completion_reward = { }
 	}
