@@ -168,7 +168,39 @@ ideas = {
 			traits = { light_aircraft_manufacturer }
 		}
 
-		OOY_medium_aircraft_manufacturer = {
+		# Original was aircraft_production_plant, but MIO version uses generic_high_agility_fighter_aircraft_organization, so making them match.
+		OFS_agility_focused_aircraft_manufacturer = {
+			name = CZE_zlin_aircraft_organization
+			picture = CZE_zlin_aircraft
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = agility_focused_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OFS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 75
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					75 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { agility_focused_aircraft_manufacturer }
+		}
+
+		OOY_CAS_manufacturer = {
 			name = CZE_aero
 			picture = CZE_aero
 
@@ -176,7 +208,7 @@ ideas = {
 				always = yes
 			}
 			visible = {
-				NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+				NOT = { has_country_flag = CAS_manufacturer_disabled }
 				OR = {
 					original_tag = OOY
 					AND = {
@@ -196,7 +228,7 @@ ideas = {
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			traits = { medium_aircraft_manufacturer }
+			traits = { CAS_manufacturer }
 		}
 
 		OOY_heavy_aircraft_manufacturer = {
@@ -296,6 +328,37 @@ ideas = {
 			}
 			traits = { infantry_equipment_manufacturer }
 		}
+
+		#OFS_support_equipment_manufacturer = {
+		#	name = CZE_zbrojovka_vsetin_organization
+		#	picture = CZE_zbrojovka_vsetin
+		#
+		#	allowed = {
+		#		always = yes
+		#	}
+		#	visible = {
+		#		NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+		#		OR = {
+		#			original_tag = OFS
+		#			AND = {
+		#				has_global_flag = custom_designers_only
+		#				owns_state = 75
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_global_flag = custom_designers_only }
+		#
+		#			75 = { state_designer_availabile = yes }
+		#		}
+		#	}
+		#
+		#	research_bonus = {
+		#		support_tech = 0.15
+		#	}
+		#	traits = { support_equipment_manufacturer }
+		#}
 
 		# Skoda is doing 4 different things, let's keep it to 1.
 		#OOY_artillery_manufacturer = {
@@ -423,6 +486,132 @@ ideas = {
 				electronics = 0.15
 			}
 			traits = { electronics_concern }
+		}
+
+		OFO_refinery_concern = {
+			name = CZE_apollo
+			picture = CZE_apollo
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = refinery_concern_disabled }
+				OR = {
+					original_tag = OFO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 70
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					70 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+
+		OFO_energy_supply_company = {
+			name = CZE_zse
+			picture = CZE_zse
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = energy_supply_company_disabled }
+				OR = {
+					original_tag = OFO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 70
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					70 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.04
+				electronics = 0.04
+			}
+			traits = { energy_supply_company_esicolor }
+		}
+
+		OOY_construction_company = {
+			name = CZE_muller_and_kapsa
+			picture = CZE_muller_and_kapsa
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = construction_company_disabled }
+				OR = {
+					original_tag = OOY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 9
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					9 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+			}
+			traits = { construction_company }
+		}
+
+		OOY_railway_company = {
+			name = CZE_csd
+			picture = CZE_csd
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = OOY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 9
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					9 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
 		}
 	}
 }

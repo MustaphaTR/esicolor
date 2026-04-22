@@ -1,0 +1,30 @@
+OFI_support_equipment_organization = {
+	name = SLO_svit_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_1
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OFI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 71
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				71 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

@@ -185,9 +185,40 @@ OOY_light_aircraft_organization = {
 	}
 }
 
-OOY_medium_aircraft_organization = {
+OFS_high_agility_fighter_aircraft_organization = {
+	name = CZE_zlin_aircraft_organization
+	include = esicolor_generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_CZE_zlin_aircraft
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = agility_focused_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OFS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 75
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				75 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OOY_cas_aircraft_organization = {
 	name = CZE_aero_organization
-	include = esicolor_generic_medium_aircraft_organization
+	include = esicolor_generic_cas_aircraft_organization
 	icon = GFX_idea_CZE_aero
 
 	allowed = {
@@ -195,7 +226,7 @@ OOY_medium_aircraft_organization = {
 	}
 	visible = {
 		owner = {
-			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			NOT = { has_country_flag = CAS_manufacturer_disabled }
 			OR = {
 				original_tag = OOY
 				AND = {
@@ -217,7 +248,7 @@ OOY_medium_aircraft_organization = {
 }
 
 OOY_heavy_aircraft_organization = {
-	name = generic_heavy_aircraft_organization
+	name = CZE_letov_organization
 	include = esicolor_generic_heavy_aircraft_organization
 	icon = GFX_idea_CZE_letov
 
@@ -319,6 +350,37 @@ OFS_infantry_equipment_organization = {
 		}
 	}
 }
+
+#OFS_support_equipment_organization = {
+#	name = CZE_zbrojovka_vsetin_organization
+#	include = esicolor_generic_support_equipment_organization
+#	icon = GFX_idea_CZE_zbrojovka_vsetin
+#
+#	allowed = {
+#		has_dlc = "Arms Against Tyranny"
+#	}
+#	visible = {
+#		owner = {
+#			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+#			OR = {
+#				original_tag = OFS
+#				AND = {
+#					has_global_flag = custom_designers_only
+#					owns_state = 75
+#				}
+#			}
+#		}
+#	}
+#	available = {
+#		if = {
+#			limit = { has_global_flag = custom_designers_only }
+#
+#			owner = {
+#				75 = { state_designer_availabile = yes }
+#			}
+#		}
+#	}
+#}
 
 # Skoda is doing 4 different things, let's keep it to 1.
 #OOY_artillery_organization = {

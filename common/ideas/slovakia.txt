@@ -1,0 +1,36 @@
+ideas = {
+	materiel_manufacturer = {
+		designer = yes
+
+		OFI_support_equipment_manufacturer = {
+			name = SLO_svit_organization
+			picture = generic_infantry_equipment_manufacturer_1
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = OFI
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 71
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					71 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
+		}
+	}
+}

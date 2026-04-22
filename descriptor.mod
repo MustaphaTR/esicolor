@@ -1,4 +1,4 @@
-version="2.3.5"
+version="2.3.6"
 replace_path="common/ai_strategy_plans"
 replace_path="common/bookmarks"
 replace_path="common/bop"
@@ -16,5 +16,5 @@ tags={
 }
 picture="thumbnail.png"
 name="MustaphaTR's Every State Independent"
-supported_version="1.17.*"
+supported_version="1.18.*"
 remote_file_id="2449480038"
