@@ -1,0 +1,50 @@
+characters={
+	OFZ_karl_albrecht = {
+		instance = {
+			allowed = {
+				has_dlc = "No Step Back"
+			}
+			name=POL_karl_albrecht
+			portraits={
+				civilian={
+					large=GFX_portrait_POL_karl_albrecht
+				}
+			}
+			country_leader={
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Step Back" }
+			}
+			name=POL_karl_albrecht
+			portraits={
+				civilian={
+					large="GFX_Portrait_Europe_Generic_land_5"
+				}
+			}
+			country_leader={
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+	OFZ_karel_schwarzenberg={
+		name=CZE_karel_schwarzenberg
+		portraits={
+			civilian={
+				large=GFX_portrait_CZE_karel_schwarzenberg
+				small=GFX_idea_CZE_karel_schwarzenberg
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

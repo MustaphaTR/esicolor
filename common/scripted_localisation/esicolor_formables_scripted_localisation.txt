@@ -1540,6 +1540,15 @@ defined_text = {
 		localization_key = DNB_CZECHIA_GERMAN_fascism_DEF
 	}
 	text = {
+		trigger = {
+			OR = {
+				has_country_leader = { character = OFZ_karl_albrecht ruling_only = yes }
+				has_country_leader = { character = OFZ_karel_schwarzenberg ruling_only = yes }
+			}
+		}
+		localization_key = DNB_CZECHIA_MONARCHIST_neutrality_DEF
+	}
+	text = {
 		trigger = { has_government = neutrality }
 		localization_key = DNB_CZECHIA_neutrality_DEF
 	}
@@ -1606,6 +1615,15 @@ defined_text = {
 	text = {
 		trigger = { has_country_leader = { character = OLY_konstantin_von_neurath ruling_only = yes } }
 		localization_key = DNB_CZECHOSLOVAKIA_GERMAN_fascism_DEF
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = { character = OFZ_karl_albrecht ruling_only = yes }
+				has_country_leader = { character = OFZ_karel_schwarzenberg ruling_only = yes }
+			}
+		}
+		localization_key = DNB_CZECHOSLOVAKIA_MONARCHIST_neutrality_DEF
 	}
 	text = {
 		trigger = { has_government = neutrality }

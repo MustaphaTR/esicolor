@@ -3558,6 +3558,16 @@ esicolor_formables = {
 				limit = { has_country_leader = { character = OLY_konstantin_von_neurath ruling_only = yes } }
 
 				set_cosmetic_tag = DNB_CZECHIA_GERMAN
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_leader = { character = OFZ_karl_albrecht ruling_only = yes }
+						has_country_leader = { character = OFZ_karel_schwarzenberg ruling_only = yes }
+					}
+				}
+
+				set_cosmetic_tag = DNB_CZECHIA_MONARCHIST
 
 				else = {
 					set_cosmetic_tag = DNB_CZECHIA
@@ -3729,6 +3739,16 @@ esicolor_formables = {
 				limit = { has_country_leader = { character = OLY_konstantin_von_neurath ruling_only = yes } }
 
 				set_cosmetic_tag = DNB_CZECHOSLOVAKIA_GERMAN
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_leader = { character = OFZ_karl_albrecht ruling_only = yes }
+						has_country_leader = { character = OFZ_karel_schwarzenberg ruling_only = yes }
+					}
+				}
+
+				set_cosmetic_tag = DNB_CZECHOSLOVAKIA_MONARCHIST
 
 				else = {
 					set_cosmetic_tag = DNB_CZECHOSLOVAKIA

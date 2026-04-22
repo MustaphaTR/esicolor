@@ -20,6 +20,17 @@ set_politics = {
 	elections_allowed = no
 }
 
+if = {
+	limit = {
+		has_dlc = "Peace For Our Time"
+	}
+	recruit_character = OFZ_karel_schwarzenberg
+
+	else = {
+		recruit_character = OFZ_karl_albrecht
+	}
+}
+
 set_rule = {
 	can_generate_female_aces = yes
 }
