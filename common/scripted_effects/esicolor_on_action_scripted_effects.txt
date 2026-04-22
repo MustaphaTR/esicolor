@@ -1389,6 +1389,86 @@ handle_special_advisors = {
 		random_character = {
 			limit = {
 				is_advisor = yes
+				has_trait = smooth_talking_charmer
+			}
+
+			set_character_name = CZE_kamil_krofta
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Peace For Our Time" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_CZE_kamil_krofta
+					}
+					army = {
+						small = GFX_idea_CZE_kamil_krofta
+					}
+					navy = {
+						small = GFX_idea_CZE_kamil_krofta
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+				}
+			}
+
+			9 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = economist
+			}
+
+			set_character_name = CZE_hugo_vavrecka
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Peace For Our Time" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_CZE_hugo_vavrecka
+					}
+					army = {
+						small = GFX_idea_CZE_hugo_vavrecka
+					}
+					navy = {
+						small = GFX_idea_CZE_hugo_vavrecka
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_2
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_2
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_2
+					}
+				}
+			}
+
+			9 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
 				OR = {
 					has_trait = army_chief_defensive_1
 					has_trait = army_chief_defensive_2
@@ -2666,7 +2746,7 @@ handle_special_advisors = {
 
 			70 = { add_to_array = { state_advisors = PREV } }
 		}
-		random_character = {
+		random_character = { # This is gonna be Ferdinand Catlos too, but only if named leaders are enabled.
 			limit = {
 				is_advisor = yes
 				OR = {
@@ -2676,20 +2756,7 @@ handle_special_advisors = {
 				}
 			}
 
-			set_character_name = SLO_ferdinand_catlos
 			set_character_flag = special_advisor
-
-			set_portraits = {
-				civilian = {
-					small = GFX_idea_generic_army_europe_2
-				}
-				army = {
-					small = GFX_idea_generic_army_europe_2
-				}
-				navy = {
-					small = GFX_idea_generic_army_europe_2
-				}
-			}
 
 			70 = { add_to_array = { state_advisors = PREV } }
 		}
@@ -2703,18 +2770,18 @@ handle_special_advisors = {
 				}
 			}
 
-			set_character_name = SLO_jozef_turanec
+			set_character_name = SLO_julius_thorzo
 			set_character_flag = special_advisor
 
 			set_portraits = {
 				civilian = {
-					small = GFX_idea_generic_navy_europe_1
+					small = GFX_idea_generic_navy_europe_2
 				}
 				army = {
-					small = GFX_idea_generic_navy_europe_1
+					small = GFX_idea_generic_navy_europe_2
 				}
 				navy = {
-					small = GFX_idea_generic_navy_europe_1
+					small = GFX_idea_generic_navy_europe_2
 				}
 			}
 
@@ -2742,6 +2809,53 @@ handle_special_advisors = {
 				}
 				navy = {
 					small = GFX_idea_generic_air_europe_2
+				}
+			}
+
+			70 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_artillery_1
+					has_trait = army_artillery_2
+					has_trait = army_artillery_3
+				}
+			}
+
+			set_character_name = SLO_jozef_turanec
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Peace For Our Time" }
+
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_SLO_jozef_turanec
+						small = GFX_portrait_SLO_jozef_turanec_small
+					}
+					army = {
+						large = GFX_portrait_SLO_jozef_turanec
+						small = GFX_portrait_SLO_jozef_turanec_small
+					}
+					navy = {
+						large = GFX_portrait_SLO_jozef_turanec
+						small = GFX_portrait_SLO_jozef_turanec_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Europe_Generic_land_5_small
+					}
+					army = {
+						small = GFX_Portrait_Europe_Generic_land_5_small
+					}
+					navy = {
+						small = GFX_Portrait_Europe_Generic_land_5_small
+					}
 				}
 			}
 
