@@ -1670,6 +1670,18 @@ clear_landmarks = {
 			province = { all_provinces = yes }
 			instant_build = yes
 		}
+		set_building_level = {
+			type = landmark_prague_castle
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
+		set_building_level = {
+			type = landmark_bojnice_castle
+			level = 0
+			province = { all_provinces = yes }
+			instant_build = yes
+		}
 	}
 }
 
@@ -9791,6 +9803,23 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	69 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Konrad Henlein
+				limit = { has_trait = fascist_demagogue }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = fascist_demagogue
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = national_socialist_paramilitarist
+				}
+			}
+		}
+	}
 	87 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -12139,7 +12168,12 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = king_of_luang_prabang } remove_country_leader_trait = king_of_luang_prabang }
 	if = { limit = { has_country_leader_with_trait = king_father } remove_country_leader_trait = king_father }
 	if = { limit = { has_country_leader_with_trait = agrarian_old_guard } remove_country_leader_trait = agrarian_old_guard }
+	if = { limit = { has_country_leader_with_trait = SLO_nationalist_catholic_priest } remove_country_leader_trait = SLO_nationalist_catholic_priest }
 	if = { limit = { has_country_leader_with_trait = RUT_independence_minded_priest } remove_country_leader_trait = RUT_independence_minded_priest }
+	if = { limit = { has_country_leader_with_trait = de_facto_leader } remove_country_leader_trait = de_facto_leader }
+	if = { limit = { has_country_leader_with_trait = CZE_diplomatic_workhorse } remove_country_leader_trait = CZE_diplomatic_workhorse }
+	if = { limit = { has_country_leader_with_trait = CZE_2nd_prezident } remove_country_leader_trait = CZE_2nd_prezident }
+	if = { limit = { has_country_leader_with_trait = CZE_disoriented_minister_of_foreign_affairs } remove_country_leader_trait = CZE_disoriented_minister_of_foreign_affairs }
 
 	if = { limit = { has_country_leader_with_trait = likes_allies } remove_country_leader_trait = likes_allies }
 	if = { limit = { has_country_leader_with_trait = likes_germany } remove_country_leader_trait = likes_germany }
