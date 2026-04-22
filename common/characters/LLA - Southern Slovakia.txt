@@ -1,0 +1,39 @@
+characters={
+	LLA_karol_smidke = {
+		instance = {
+			allowed = {
+				has_dlc = "Peace For Our Time"
+			}
+			name=SLO_karol_smidke
+			portraits={
+				civilian={
+					large=GFX_portrait_SLO_karol_smidke
+					small=GFX_portrait_SLO_karol_smidke_small
+				}
+			}
+			country_leader={
+				traits={ veteran_communist }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Peace For Our Time" }
+			}
+			name=SLO_karol_smidke
+			portraits={
+				civilian={
+					large="GFX_Portrait_Soviet_Generic_1"
+				}
+			}
+			country_leader={
+				traits={ veteran_communist }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

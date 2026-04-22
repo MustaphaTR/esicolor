@@ -1,0 +1,39 @@
+characters={
+	OFI_jan_ursiny = {
+		instance = {
+			allowed = {
+				has_dlc = "Peace For Our Time"
+			}
+			name=SLO_jan_ursiny
+			portraits={
+				civilian={
+					large=GFX_portrait_SLO_jan_ursiny
+					small=GFX_portrait_SLO_jan_ursiny_small
+				}
+			}
+			country_leader={
+				traits={ agrarian_old_guard }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Peace For Our Time" }
+			}
+			name=SLO_jan_ursiny
+			portraits={
+				civilian={
+					large="GFX_portrait_europe_generic_6"
+				}
+			}
+			country_leader={
+				traits={ agrarian_old_guard }
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
