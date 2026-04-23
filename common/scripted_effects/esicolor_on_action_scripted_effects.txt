@@ -1389,6 +1389,86 @@ handle_special_advisors = {
 		random_character = {
 			limit = {
 				is_advisor = yes
+				has_trait = silent_workhorse
+			}
+
+			set_character_name = CZE_ferdinand_peroutka
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Peace For Our Time" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_CZE_ferdinand_peroutka
+					}
+					army = {
+						small = GFX_idea_CZE_ferdinand_peroutka
+					}
+					navy = {
+						small = GFX_idea_CZE_ferdinand_peroutka
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_6
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_6
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_6
+					}
+				}
+			}
+
+			9 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = editor
+			}
+
+			set_character_name = CZE_milada_horakova
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Peace For Our Time" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_CZE_milada_horakova
+					}
+					army = {
+						small = GFX_idea_CZE_milada_horakova
+					}
+					navy = {
+						small = GFX_idea_CZE_milada_horakova
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_female_europe
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_female_europe
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_female_europe
+					}
+				}
+			}
+
+			9 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
 				has_trait = smooth_talking_charmer
 			}
 
@@ -1420,6 +1500,46 @@ handle_special_advisors = {
 					}
 					navy = {
 						small = GFX_idea_generic_political_advisor_europe_3
+					}
+				}
+			}
+
+			9 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = financial_expert
+			}
+
+			set_character_name = CZE_josef_kalfus
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Peace For Our Time" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CZE_josef_kalfus_small
+					}
+					army = {
+						small = GFX_portrait_CZE_josef_kalfus_small
+					}
+					navy = {
+						small = GFX_portrait_CZE_josef_kalfus_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_europe_generic_4_small
+					}
+					army = {
+						small = GFX_portrait_europe_generic_4_small
+					}
+					navy = {
+						small = GFX_portrait_europe_generic_4_small
 					}
 				}
 			}
@@ -1476,18 +1596,35 @@ handle_special_advisors = {
 				}
 			}
 
-			set_character_name = CZE_ludvik_krejci
+			set_character_name = CZE_mikulas_dolezal
 			set_character_flag = special_advisor
 
-			set_portraits = {
-				civilian = {
-					small = GFX_idea_CZE_ludvik_krejci
+			if = {
+				limit = { has_dlc = "Peace For Our Time" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_CZE_mikulas_dolezal
+					}
+					army = {
+						small = GFX_idea_CZE_mikulas_dolezal
+					}
+					navy = {
+						small = GFX_idea_CZE_mikulas_dolezal
+					}
 				}
-				army = {
-					small = GFX_idea_CZE_ludvik_krejci
-				}
-				navy = {
-					small = GFX_idea_CZE_ludvik_krejci
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_europe_generic_land_18_small
+					}
+					army = {
+						small = GFX_portrait_europe_generic_land_18_small
+					}
+					navy = {
+						small = GFX_portrait_europe_generic_land_18_small
+					}
 				}
 			}
 
@@ -1524,6 +1661,33 @@ handle_special_advisors = {
 			limit = {
 				is_advisor = yes
 				OR = {
+					has_trait = army_infantry_1
+					has_trait = army_infantry_2
+					has_trait = army_infantry_3
+				}
+			}
+
+			set_character_name = CZE_ludvik_krejci
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_CZE_ludvik_krejci
+				}
+				army = {
+					small = GFX_idea_CZE_ludvik_krejci
+				}
+				navy = {
+					small = GFX_idea_CZE_ludvik_krejci
+				}
+			}
+
+			9 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
 					has_trait = army_logistics_1
 					has_trait = army_logistics_2
 					has_trait = army_logistics_3
@@ -1542,6 +1706,50 @@ handle_special_advisors = {
 				}
 				navy = {
 					small = GFX_idea_CZE_frantisek_havel
+				}
+			}
+
+			9 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_concealment_1
+					has_trait = army_concealment_2
+					has_trait = army_concealment_3
+				}
+			}
+
+			set_character_name = CZE_sergej_ingr
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Peace For Our Time" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CZE_sergej_ingr_small
+					}
+					army = {
+						small = GFX_portrait_CZE_sergej_ingr_small
+					}
+					navy = {
+						small = GFX_portrait_CZE_sergej_ingr_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_europe_generic_land_17_small
+					}
+					army = {
+						small = GFX_portrait_europe_generic_land_17_small
+					}
+					navy = {
+						small = GFX_portrait_europe_generic_land_17_small
+					}
 				}
 			}
 
@@ -2924,15 +3132,35 @@ handle_special_advisors = {
 			set_character_name = CZE_rudolf_viest
 			set_character_flag = special_advisor
 
-			set_portraits = {
-				civilian = {
-					small = GFX_idea_CZE_rudolf_viest
+			if = {
+				limit = { has_dlc = "Peace For Our Time" }
+
+				set_portraits = {
+					civilian = {
+						large=GFX_portrait_CZE_rudolf_viest
+						small=GFX_portrait_CZE_rudolf_viest_small
+					}
+					army = {
+						large=GFX_portrait_CZE_rudolf_viest
+						small=GFX_portrait_CZE_rudolf_viest_small
+					}
+					navy = {
+						large=GFX_portrait_CZE_rudolf_viest
+						small=GFX_portrait_CZE_rudolf_viest_small
+					}
 				}
-				army = {
-					small = GFX_idea_CZE_rudolf_viest
-				}
-				navy = {
-					small = GFX_idea_CZE_rudolf_viest
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_CZE_rudolf_viest
+					}
+					army = {
+						small = GFX_idea_CZE_rudolf_viest
+					}
+					navy = {
+						small = GFX_idea_CZE_rudolf_viest
+					}
 				}
 			}
 
@@ -2967,6 +3195,50 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = OFZ }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = economist
+			}
+
+			set_character_name = CZE_jan_ruckl
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Peace For Our Time" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CZE_jan_ruckl_small
+					}
+					army = {
+						small = GFX_portrait_CZE_jan_ruckl_small
+					}
+					navy = {
+						small = GFX_portrait_CZE_jan_ruckl_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_fascist_demagogue_western_european_2d
+					}
+					army = {
+						small = GFX_idea_generic_fascist_demagogue_western_european_2d
+					}
+					navy = {
+						small = GFX_idea_generic_fascist_demagogue_western_european_2d
+					}
+				}
+			}
+
+			72 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = OFS }
 
 		random_character = {
@@ -2989,6 +3261,96 @@ handle_special_advisors = {
 					small = GFX_idea_CZE_gustav_husak
 				}
 			}
+
+			75 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_name = CZE_vaclav_kopecky
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Peace For Our Time" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CZE_vaclav_kopecky_small
+					}
+					army = {
+						small = GFX_portrait_CZE_vaclav_kopecky_small
+					}
+					navy = {
+						small = GFX_portrait_CZE_vaclav_kopecky_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_communist_revolutionary_western_european_2d
+					}
+					army = {
+						small = GFX_idea_generic_communist_revolutionary_western_european_2d
+					}
+					navy = {
+						small = GFX_idea_generic_communist_revolutionary_western_european_2d
+					}
+				}
+			}
+
+			75 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = editor
+			}
+
+			set_character_name = CZE_pavel_reiman
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Peace For Our Time" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_CZE_pavel_reiman_small
+					}
+					army = {
+						small = GFX_portrait_CZE_pavel_reiman_small
+					}
+					navy = {
+						small = GFX_portrait_CZE_pavel_reiman_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_europe_generic_communism_3_small
+					}
+					army = {
+						small = GFX_portrait_europe_generic_communism_3_small
+					}
+					navy = {
+						small = GFX_portrait_europe_generic_communism_3_small
+					}
+				}
+			}
+
+			75 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = { # Used for Bozena Machacova-Dostalova, only applied with the named advisors only mode.
+			limit = {
+				is_advisor = yes
+				has_trait = war_industrialist
+			}
+
+			set_character_flag = special_advisor
 
 			75 = { add_to_array = { state_advisors = PREV } }
 		}
@@ -8367,6 +8729,59 @@ handle_special_advisors = {
 	else_if = {
 		limit = { original_tag = YFZ }
 
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = fortification_engineer
+			}
+
+			set_character_name = CZE_karel_husarek
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Peace For Our Time" }
+
+				set_portraits = {
+					civilian = {
+						large=GFX_portrait_CZE_karel_husarek
+						small=GFX_portrait_CZE_karel_husarek_military_small
+					}
+					army = {
+						large=GFX_portrait_CZE_karel_husarek
+						small=GFX_portrait_CZE_karel_husarek_military_small
+					}
+					navy = {
+						large=GFX_portrait_CZE_karel_husarek
+						small=GFX_portrait_CZE_karel_husarek_military_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_Portrait_Europe_Generic_land_2_small
+					}
+					army = {
+						small = GFX_Portrait_Europe_Generic_land_2_small
+					}
+					navy = {
+						small = GFX_Portrait_Europe_Generic_land_2_small
+					}
+				}
+			}
+
+			972 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = { # This is gonna be Karel Husárek too, but only if named leaders are enabled.
+			limit = {
+				is_advisor = yes
+				has_trait = army_chief_old_guard
+			}
+
+			set_character_flag = special_advisor
+
+			972 = { add_to_array = { state_advisors = PREV } }
+		}
 		random_character = {
 			limit = {
 				is_advisor = yes

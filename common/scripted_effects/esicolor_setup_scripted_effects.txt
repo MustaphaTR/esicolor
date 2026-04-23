@@ -9558,6 +9558,30 @@ adjust_named_advisor_traits = {
 	9 = {
 		for_each_scope_loop = {
 			array = state_advisors
+			if = { # Ferdinand Peroutka
+				limit = { has_trait = silent_workhorse }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = silent_workhorse
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = liberal_journalist
+				}
+			}
+			if = { # Milada Horáková
+				limit = { has_trait = editor }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = editor
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = womens_rights_activist
+				}
+			}
 			if = { # Kamil Krofta
 				limit = { has_trait = smooth_talking_charmer }
 
@@ -9568,6 +9592,18 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = CZE_minister_of_foreign_affairs
+				}
+			}
+			if = { # Josef Kalfus
+				limit = { has_trait = financial_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = financial_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = CZE_minister_of_finance
 				}
 			}
 		}
@@ -9890,6 +9926,98 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = democratic_crusader
+				}
+			}
+		}
+	}
+	72 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Jan Jiří Rückl
+				limit = { has_trait = economist }
+
+				add_trait = {
+					slot = political_advisor
+					trait = right_industrialist
+				}
+			}
+		}
+	}
+	75 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Václav Kopecký
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = veteran_communist
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_stern_communist
+				}
+			}
+			if = { # Pavel Reiman
+				limit = { has_trait = editor }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = editor
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = socialist_writer
+				}
+			}
+			if = { # Bozena Machacova-Dostalova
+				limit = { has_trait = war_industrialist }
+
+				set_character_name = CZE_bozena_machacova_dostalova
+				remove_trait = {
+					slot = political_advisor
+					trait = war_industrialist
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = socialist_firebrand
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = union_women
+				}
+
+				if = {
+					limit = { has_dlc = "Peace For Our Time" }
+
+					set_portraits = {
+						civilian = {
+							small = GFX_portrait_CZE_bozena_machacova_dostalova_small
+						}
+						army = {
+							small = GFX_portrait_CZE_bozena_machacova_dostalova_small
+						}
+						navy = {
+							small = GFX_portrait_CZE_bozena_machacova_dostalova_small
+						}
+					}
+				}
+				else = {
+					set_portraits = {
+						civilian = {
+							small = GFX_idea_generic_political_advisor_female_europe
+						}
+						army = {
+							small = GFX_idea_generic_political_advisor_female_europe
+						}
+						navy = {
+							small = GFX_idea_generic_political_advisor_female_europe
+						}
+					}
 				}
 			}
 		}
@@ -10893,6 +11021,48 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = democratic_crusader
+				}
+			}
+		}
+	}
+	972 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Karel Husárek
+				limit = { has_trait = army_chief_old_guard }
+
+				set_character_name = CZE_karel_husarek
+
+				if = {
+					limit = { has_dlc = "Peace For Our Time" }
+
+					set_portraits = {
+						civilian = {
+							large=GFX_portrait_CZE_karel_husarek
+							small=GFX_portrait_CZE_karel_husarek_military_small
+						}
+						army = {
+							large=GFX_portrait_CZE_karel_husarek
+							small=GFX_portrait_CZE_karel_husarek_military_small
+						}
+						navy = {
+							large=GFX_portrait_CZE_karel_husarek
+							small=GFX_portrait_CZE_karel_husarek_military_small
+						}
+					}
+				}
+				else = {
+					set_portraits = {
+						civilian = {
+							small = GFX_Portrait_Europe_Generic_land_2_small
+						}
+						army = {
+							small = GFX_Portrait_Europe_Generic_land_2_small
+						}
+						navy = {
+							small = GFX_Portrait_Europe_Generic_land_2_small
+						}
+					}
 				}
 			}
 		}
