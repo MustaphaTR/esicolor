@@ -1,5 +1,50 @@
 ideas = {
-	# TECHNOLOGY
+	country = {
+		# These are checked in economic ideas file, which i don't want to override. So keeping them here.
+		CZE_industrialists_veto = {
+			picture = CZE_industrialists_veto
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_lack_of_resource_penalty_factor = 0.10
+				factory_energy_consumption = 0.10
+				war_support_factor = -0.15
+				industrial_concern_cost_factor = -0.05
+			}
+		}
+
+		CZE_industrialists_veto_2 = {
+			picture = CZE_industrialists_veto
+			name = CZE_industrialists_veto
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.30
+				production_lack_of_resource_penalty_factor = 0.20
+				factory_energy_consumption = 0.20
+				war_support_factor = -0.15
+				industrial_concern_cost_factor = -0.10
+			}
+		}
+	}
+
 	tank_manufacturer = {
 		designer = yes
 
