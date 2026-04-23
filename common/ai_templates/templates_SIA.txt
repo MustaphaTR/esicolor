@@ -139,6 +139,30 @@ infantry_SIA = {
 	upgrade_prio = {
 		base = 5
 	}
+
+	infantry_first_year = {
+		custom_icon = 3
+
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 0
+
+				date > 1937.1.1
+			}
+		}
+
+		target_template = {
+			regiments = {
+				infantry = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = infantry_early
+		target_min_match = 0.401
+	}
 	
 	infantry_early = {
 	
@@ -148,6 +172,10 @@ infantry_SIA = {
 			modifier = {
 				factor = 2
 			}
+		}
+
+		enable = {
+			date > 1937.1.1
 		}
 		
 		target_template = {
@@ -178,6 +206,10 @@ infantry_SIA = {
 				factor = 3
 				date > 1941.1.1
 			}
+		}
+
+		enable = {
+			date > 1937.1.1
 		}
 		
 		target_template = {

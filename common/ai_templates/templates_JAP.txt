@@ -215,6 +215,30 @@ infantry_JAP = {
 		}
 	}
 
+	infantry_first_year_JAP = {
+		custom_icon = 3
+
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 0
+
+				date > 1937.1.1
+			}
+		}
+
+		target_template = {
+			regiments = {
+				infantry = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = infantry_default_JAP
+		target_min_match = 0.401
+	}
+
 	infantry_default_JAP = {
 	
 		upgrade_prio = {
@@ -228,7 +252,11 @@ infantry_JAP = {
 				}
 			}
 		}
-		
+
+		enable = {
+			date > 1937.1.1
+		}
+
 		target_template = {
 			
 			support = {
@@ -268,7 +296,7 @@ infantry_JAP = {
 		
 		# more expensive infantry template. we save it for later
 		enable = {
-			#date > 1940.1.1
+			date > 1937.1.1
 			CHI = {
 				OR = {
 					is_ai = no

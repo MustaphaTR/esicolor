@@ -13158,7 +13158,14 @@ change_default_template_to_militia = {
 	set_technology = { 
 		militia_tech = 1
 	}
-	delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+	if = {
+		limit = { is_ai = no }
+
+		delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+	}
+	else = {
+		delete_units = { division_template = "Infantry Brigade" }
+	}
 	division_template = {
 		name = "Militia Brigade"
 		regiments = {
@@ -13224,7 +13231,14 @@ change_default_template_to_irregulars = {
 	set_technology = { 
 		irregular_infantry = 1
 	}
-	delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+	if = {
+		limit = { is_ai = no }
+
+		delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+	}
+	else = {
+		delete_units = { division_template = "Infantry Brigade" }
+	}
 	division_template = {
 		name = "Irregular Infantry Brigade"
 		regiments = {
@@ -13287,7 +13301,14 @@ change_default_template_to_irregulars = {
 	}
 }
 change_default_template_to_cavalry = {
-	delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+	if = {
+		limit = { is_ai = no }
+
+		delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+	}
+	else = {
+		delete_units = { division_template = "Infantry Brigade" }
+	}
 	division_template = {
 		name = "Cavalry Brigade"
 		regiments = {
@@ -13353,7 +13374,14 @@ change_default_template_to_bicycle = {
 	set_technology = { 
 		bicycle_infantry = 1
 	}
-	delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+	if = {
+		limit = { is_ai = no }
+
+		delete_unit_template_and_units = { division_template = "Infantry Brigade" }
+	}
+	else = {
+		delete_units = { division_template = "Infantry Brigade" }
+	}
 	division_template = {
 		name = "Bicycle Brigade"
 		regiments = {

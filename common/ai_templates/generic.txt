@@ -483,6 +483,30 @@ infantry_generic = {
 	upgrade_prio = {
 		base = 5
 	}
+
+	infantry_first_year = {
+		custom_icon = 3
+
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 0
+
+				date > 1937.1.1
+			}
+		}
+
+		target_template = {
+			regiments = {
+				infantry = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = infantry_early
+		target_min_match = 0.401
+	}
 	
 	infantry_early = {
 	
@@ -493,7 +517,11 @@ infantry_generic = {
 				factor = 2
 			}
 		}
-		
+
+		enable = {
+			date > 1937.1.1
+		}
+
 		target_template = {
 			
 			support = {
@@ -525,7 +553,11 @@ infantry_generic = {
 				date > 1940.1.1
 			}
 		}
-		
+
+		enable = {
+			date > 1937.1.1
+		}
+
 		target_template = {
 			
 			support = {
@@ -867,6 +899,122 @@ rangers_generic = {
 			regiments = {
 				ranger_battalion = 8
 				artillery_brigade = 2
+			}
+		}
+	}
+}
+
+militia_generic = {
+	role = militias
+	
+	upgrade_prio = {
+		base = 2
+
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = militia_tech
+			}
+		}
+	}
+
+	militia_first_year = {
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 0
+
+				date > 1937.1.1
+			}
+		}
+
+		target_template = {
+			regiments = {
+				militia = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = militia_default
+		target_min_match = 0.401
+	}
+
+	militia_default = {
+		upgrade_prio = {
+			base = 1
+		}
+
+		enable = {
+			date > 1937.1.1
+		}
+
+		target_template = {
+			support = {
+				engineer = 1
+				artillery = 1
+			}
+
+			regiments = {
+				militia = 10
+			}
+		}
+	}
+}
+
+irregulars_generic = {
+	role = irregular_infantry
+
+	upgrade_prio = {
+		base = 2
+
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = irregular_infantry
+			}
+		}
+	}
+
+	irregulars_first_year = {
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 0
+
+				date > 1937.1.1
+			}
+		}
+
+		target_template = {
+			regiments = {
+				irregular_infantry = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = irregulars_default
+		target_min_match = 0.401
+	}
+
+	irregulars_default = {
+		upgrade_prio = {
+			base = 1
+		}
+
+		enable = {
+			date > 1937.1.1
+		}
+
+		target_template = {
+			support = {
+				engineer = 1
+				field_hospital = 1
+			}
+
+			regiments = {
+				irregular_infantry = 11
 			}
 		}
 	}

@@ -265,6 +265,30 @@ infantry_ITA = {
 		}
 	}
 
+	infantry_first_year_ITA = {
+		custom_icon = 3
+
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 0
+
+				date > 1937.1.1
+			}
+		}
+
+		target_template = {
+			regiments = {
+				infantry = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = infantry_early_ITA
+		target_min_match = 0.401
+	}
+
 	infantry_early_ITA = {
 	
 		upgrade_prio = {
@@ -274,7 +298,11 @@ infantry_ITA = {
 				factor = 2
 			}
 		}
-		
+
+		enable = {
+			date > 1937.1.1
+		}
+
 		target_template = {
 			
 			support = {
@@ -298,6 +326,10 @@ infantry_ITA = {
 				factor = 3
 				date > 1938.1.1
 			}
+		}
+
+		enable = {
+			date > 1937.1.1
 		}
 
 		target_template = {
