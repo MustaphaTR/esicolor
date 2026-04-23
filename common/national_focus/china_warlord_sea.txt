@@ -3710,4 +3710,33 @@
 			add_war_support = 0.1
 		}
 	}
+
+	focus = {
+		id = CHI_crackdown_on_looting
+		icon = GFX_focus_AUS_lawmaking_leniency
+		x = 0
+		y = 1
+
+		dynamic = yes 
+
+		cost = 5
+
+		prerequisite = { focus = CHI_sea_the_army }
+
+		relative_position_id = CHI_sea_the_army
+
+		ai_will_do = {
+			base = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {  }
+
+		completion_reward = {
+			add_ideas = CHI_warlord_looting_crackdown_idea
+		}
+	}
 }

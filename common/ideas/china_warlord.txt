@@ -67,6 +67,24 @@ ideas = {
 			}
 		}
 
+		CHI_warlord_looting_crackdown_idea = {
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CHI_neglected_countryside
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1 
+				production_speed_buildings_factor = 0.05
+				army_morale_factor = -0.05
+			}
+		}
+
 		# Industry
 		CHI_mining_commission = {
 			picture = generic_industrial_concern_2
@@ -1043,7 +1061,24 @@ ideas = {
 			}
 		}
 
+		CHI_warlord_looting_idea = {
+			allowed = { always = no }
 
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = CHI_neglected_countryside
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1 
+				production_speed_buildings_factor = -0.05
+				army_morale_factor = 0.05
+			}
+
+		}
 
  ##  ##  #   # ### ### ###     ### ###  ### ###  #  # ### ### 
 #   #  # #   #  #  #    #       #  #  #  #  #  # #  #  #  #   
