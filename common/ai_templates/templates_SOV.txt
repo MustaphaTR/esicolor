@@ -539,13 +539,17 @@ infantry_SOV = {
 		custom_icon = 3
 
 		upgrade_prio = {
-			factor = 2
+			base = 20
 
 			modifier = {
-				factor = 0
+				factor = 0.05
 
-				date > 1937.1.1
+				date > 1936.6.1
 			}
+		}
+
+		can_upgrade_in_field = {
+			date > 1936.6.1
 		}
 
 		target_template = {
@@ -567,10 +571,6 @@ infantry_SOV = {
 				factor = 2
 				date < 1939.6.1
 			}
-		}
-
-		enable = {
-			date > 1937.1.1
 		}
 
 		target_template = {
@@ -616,10 +616,6 @@ infantry_SOV = {
 				factor = 2
 				has_war_with_major = yes
 			}
-		}
-
-		enable = {
-			date > 1937.1.1
 		}
 
 		can_upgrade_in_field = {
@@ -671,10 +667,6 @@ infantry_SOV = {
 			}
 		}
 
-		enable = {
-			date > 1937.1.1
-		}
-
 		can_upgrade_in_field = {
 			has_equipment = {artillery_equipment > 4000}
 		}
@@ -711,10 +703,6 @@ infantry_SOV = {
 				has_war_with_major = yes
 				date > 1942.6.1
 			}
-		}
-
-		enable = {
-			date > 1937.1.1
 		}
 
 		can_upgrade_in_field = {

@@ -456,13 +456,17 @@ infantry_GER = {
 		custom_icon = 3
 
 		upgrade_prio = {
-			factor = 2
+			base = 20
 
 			modifier = {
-				factor = 0
+				factor = 0.05
 
-				date > 1937.1.1
+				date > 1936.6.1
 			}
+		}
+
+		can_upgrade_in_field = {
+			date > 1936.6.1
 		}
 
 		target_template = {
@@ -480,10 +484,6 @@ infantry_GER = {
 	
 		upgrade_prio = {
 			base = 2
-		}
-
-		enable = {
-			date > 1937.1.1
 		}
 
 		target_template = {
@@ -517,10 +517,6 @@ infantry_GER = {
 				factor = 3
 				date > 1938.1.1
 			}
-		}
-
-		enable = {
-			date > 1937.1.1
 		}
 
 		target_template = {
@@ -559,10 +555,6 @@ infantry_GER = {
 			}
 		}
 
-		enable = {
-			date > 1937.1.1
-		}
-
 		can_upgrade_in_field = {
 			has_equipment = {artillery_equipment > 500}
 		}
@@ -586,7 +578,7 @@ infantry_GER = {
 	}
 
 	infantry_Upgrade_3_GER = {
-	
+
 		upgrade_prio = {
 			base = 1
 
@@ -600,10 +592,6 @@ infantry_GER = {
 				has_war_with_major = yes
 				date > 1940.9.1
 			}
-		}
-
-		enable = {
-			date > 1937.1.1
 		}
 
 		target_template = {

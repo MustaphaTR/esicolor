@@ -335,13 +335,17 @@ infantry_ENG = {
 		custom_icon = 3
 
 		upgrade_prio = {
-			factor = 2
+			base = 20
 
 			modifier = {
-				factor = 0
+				factor = 0.05
 
-				date > 1937.1.1
+				date > 1936.6.1
 			}
+		}
+
+		can_upgrade_in_field = {
+			date > 1936.6.1
 		}
 
 		target_template = {
@@ -363,10 +367,6 @@ infantry_ENG = {
 			modifier = {
 				factor = 1
 			}
-		}
-		
-		enable = {
-			date > 1937.1.1
 		}
 
 		target_template = {
@@ -397,10 +397,6 @@ infantry_ENG = {
 			modifier = {
 				factor = 1
 			}
-		}
-		
-		enable = {
-			date > 1937.1.1
 		}
 
 		target_template = {

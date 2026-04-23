@@ -219,13 +219,17 @@ infantry_JAP = {
 		custom_icon = 3
 
 		upgrade_prio = {
-			factor = 2
+			base = 20
 
 			modifier = {
-				factor = 0
+				factor = 0.05
 
-				date > 1937.1.1
+				date > 1936.6.1
 			}
+		}
+
+		can_upgrade_in_field = {
+			date > 1936.6.1
 		}
 
 		target_template = {
@@ -251,10 +255,6 @@ infantry_JAP = {
 					country_exists = CHI
 				}
 			}
-		}
-
-		enable = {
-			date > 1937.1.1
 		}
 
 		target_template = {
@@ -296,7 +296,6 @@ infantry_JAP = {
 		
 		# more expensive infantry template. we save it for later
 		enable = {
-			date > 1937.1.1
 			CHI = {
 				OR = {
 					is_ai = no

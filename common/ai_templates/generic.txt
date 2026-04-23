@@ -488,13 +488,17 @@ infantry_generic = {
 		custom_icon = 3
 
 		upgrade_prio = {
-			factor = 2
+			base = 20
 
 			modifier = {
-				factor = 0
+				factor = 0.05
 
-				date > 1937.1.1
+				date > 1936.6.1
 			}
+		}
+
+		can_upgrade_in_field = {
+			date > 1936.6.1
 		}
 
 		target_template = {
@@ -509,21 +513,15 @@ infantry_generic = {
 	}
 	
 	infantry_early = {
-	
 		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 2
-			}
+			base = 2
 		}
 
-		enable = {
-			date > 1937.1.1
+		can_upgrade_in_field = {
+			date > 1940.1.1
 		}
 
 		target_template = {
-			
 			support = {
 				engineer = 1
 				recon = 1
@@ -531,7 +529,7 @@ infantry_generic = {
 				anti_air = 1
 				artillery = 1
 			}
-			
+
 			regiments = {
 				infantry = 9
 				artillery_brigade = 1
@@ -544,7 +542,6 @@ infantry_generic = {
 	}
 
 	infantry_mid = {
-
 		upgrade_prio = {
 			base = 1
 
@@ -554,12 +551,7 @@ infantry_generic = {
 			}
 		}
 
-		enable = {
-			date > 1937.1.1
-		}
-
 		target_template = {
-			
 			support = {
 				engineer = 1
 				recon = 1
@@ -920,13 +912,17 @@ militia_generic = {
 
 	militia_first_year = {
 		upgrade_prio = {
-			base = 1
+			base = 20
 
 			modifier = {
-				factor = 0
+				factor = 0.05
 
-				date > 1937.1.1
+				date > 1936.6.1
 			}
+		}
+
+		can_upgrade_in_field = {
+			date > 1936.6.1
 		}
 
 		target_template = {
@@ -937,16 +933,12 @@ militia_generic = {
 
 		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
 		replace_with = militia_default
-		target_min_match = 0.401
+		target_min_match = 0.25
 	}
 
 	militia_default = {
 		upgrade_prio = {
-			base = 1
-		}
-
-		enable = {
-			date > 1937.1.1
+			base = 2
 		}
 
 		target_template = {
@@ -978,13 +970,17 @@ irregulars_generic = {
 
 	irregulars_first_year = {
 		upgrade_prio = {
-			base = 1
+			base = 20
 
 			modifier = {
-				factor = 0
+				factor = 0.05
 
-				date > 1937.1.1
+				date > 1936.6.1
 			}
+		}
+
+		can_upgrade_in_field = {
+			date > 1936.6.1
 		}
 
 		target_template = {
@@ -995,16 +991,12 @@ irregulars_generic = {
 
 		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
 		replace_with = irregulars_default
-		target_min_match = 0.401
+		target_min_match = 0.25
 	}
 
 	irregulars_default = {
 		upgrade_prio = {
-			base = 1
-		}
-
-		enable = {
-			date > 1937.1.1
+			base = 2
 		}
 
 		target_template = {

@@ -335,13 +335,17 @@ infantry_USA = {
 		custom_icon = 3
 
 		upgrade_prio = {
-			factor = 2
+			base = 20
 
 			modifier = {
-				factor = 0
+				factor = 0.05
 
-				date > 1937.1.1
+				date > 1936.6.1
 			}
+		}
+
+		can_upgrade_in_field = {
+			date > 1936.6.1
 		}
 
 		target_template = {
@@ -359,10 +363,6 @@ infantry_USA = {
 
 		upgrade_prio = {
 			base = 2
-		}
-
-		enable = {
-			date > 1937.1.1
 		}
 
 		division_names_group = USA_INF_01
@@ -392,10 +392,6 @@ infantry_USA = {
 				factor = 3
 				date > 1939.10.1
 			}
-		}
-
-		enable = {
-			date > 1937.1.1
 		}
 
 		division_names_group = USA_INF_01
