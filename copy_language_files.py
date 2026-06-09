@@ -13,6 +13,9 @@ for language in languages:
         file_name = file_name.replace("english", language)
         new_name = new_folder + file_name
 
+        if old_name == new_name:
+            continue
+
         if not os.path.isfile(new_name):
             os.rename(old_name, new_name)
 
