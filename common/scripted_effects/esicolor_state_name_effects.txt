@@ -3,6 +3,7 @@ adjust_state_names = {
 	adjust_state_name_49 = yes
 	adjust_state_name_72 = yes
 	adjust_state_name_73 = yes
+	adjust_state_name_74 = yes
 	adjust_state_name_76 = yes
 	adjust_state_name_85 = yes
 	adjust_state_name_86 = yes
@@ -108,6 +109,10 @@ adjust_state_names_on_state_core_changed = {
 	else_if = {
 		limit = { FROM.FROM = { state = 73 } }
 		adjust_state_name_73 = yes
+	}
+	else_if = {
+		limit = { FROM.FROM = { state = 74 } }
+		adjust_state_name_74 = yes
 	}
 	else_if = {
 		limit = { FROM.FROM = { state = 76 } }
@@ -507,6 +512,10 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 73 }
 		adjust_state_name_73 = yes
+	}
+	if = {
+		limit = { owns_state = 74 }
+		adjust_state_name_74 = yes
 	}
 	if = {
 		limit = { owns_state = 76 }
@@ -1119,6 +1128,36 @@ adjust_state_name_73 = {
 			name = VICTORY_POINTS_3548
 		}
 		73 = { set_state_name = STATE_73 }
+	}
+}
+
+adjust_state_name_74 = {
+	if = {
+		limit = { 74 = { owner = { state_originally_from_CZE = yes } } }
+
+		74 = { set_state_name = CZE_STATE_74 }
+	}
+	else_if = {
+		limit = {
+			74 = {
+				owner = {
+					OR = {
+						state_originally_from_GER = yes
+						state_originally_from_AUS = yes
+					}
+				}
+			}
+		}
+
+		74 = { set_state_name = GER_STATE_74 }
+	}
+	else_if = {
+		limit = { 74 = { owner = { state_originally_from_POL = yes } } }
+
+		74 = { set_state_name = POL_STATE_74 }
+	}
+	else = {
+		74 = { set_state_name = STATE_74 }
 	}
 }
 
