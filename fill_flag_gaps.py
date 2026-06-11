@@ -4,7 +4,7 @@ import shutil
 ooo_flag = r'C:\Users\musta\Documents\Paradox Interactive\Hearts of Iron IV\mod\esicolor\gfx\flags\OOO.tga'
 folder = r'C:\Users\musta\Documents\Paradox Interactive\Hearts of Iron IV\mod\esicolor\gfx\flags\\'
 i = 1
-while i < 1047:
+while i < 1082:
     name = str(i)
     if i < 10:
         name = "00" + name
@@ -26,6 +26,7 @@ while i < 1047:
 
     if name.endswith("OIL"): name = name.replace("OIL", "PJM")
     if name.endswith("IAS"): name = name.replace("IAS", "JBT")
+    if name.endswith("EZO"): name = name.replace("EZO", "FAP")
     if name.endswith("ELS"): name = name.replace("ELS", "FMT")
     if name.endswith("AOI"): name = name.replace("AOI", "BPJ")
     if name.endswith("ASY"): name = name.replace("ASY", "BTZ")
@@ -36,6 +37,7 @@ while i < 1047:
     if name.endswith("SIA"): name = name.replace("SIA", "TJB")
     if name.endswith("SIL"): name = name.replace("SIL", "TJM")
     if name.endswith("SAF"): name = name.replace("SAF", "TBG")
+    if name.endswith("SAB"): name = name.replace("SAB", "TBC")
     if name.endswith("SLO"): name = name.replace("SLO", "TMP")
     if name.endswith("LIB"): name = name.replace("LIB", "MJC")
     if name.endswith("LEB"): name = name.replace("LEB", "MFC")
