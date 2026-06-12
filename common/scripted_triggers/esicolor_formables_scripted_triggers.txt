@@ -8797,7 +8797,6 @@ can_form_tahiti = {
 	OR = {
 		original_tag = LES
 		original_tag = LAI
-		original_tag = FEA
 	}
 }
 
@@ -8808,10 +8807,28 @@ can_form_rapa_nui = {
 	}
 }
 
+can_form_samoa = {
+	OR = {
+		original_tag = FZL
+		original_tag = NFZ
+	}
+}
+
+can_form_solomon_islands = {
+	OR = {
+		original_tag = LEA
+		original_tag = FEA
+		original_tag = NFO
+	}
+}
+
 can_form_new_zealand = {
 	OR = {
 		original_tag = ZBA
 		original_tag = FZE
+		original_tag = NFY
+		original_tag = NBO
+		original_tag = NBI
 	}
 }
 
@@ -8823,11 +8840,12 @@ can_form_polynesia = {
 		can_form_fiji = yes
 		can_form_tahiti = yes
 		can_form_rapa_nui = yes
+		can_form_samoa = yes
+		can_form_solomon_islands = yes
 		can_form_new_zealand = yes
 		original_tag = SZA
-		original_tag = LEA
 		original_tag = LAS
-		original_tag = FZL
+		original_tag = NFI
 	}
 }
 
@@ -8871,7 +8889,6 @@ is_tahiti = {
 	OR = {
 		state = 635
 		state = 641
-		state = 734
 	}
 }
 
@@ -8882,10 +8899,28 @@ is_rapa_nui = {
 	}
 }
 
+is_samoa = {
+	OR = {
+		state = 726
+		state = 1072
+	}
+}
+
+is_solomon_islands = {
+	OR = {
+		state = 634
+		state = 734
+		state = 1070
+	}
+}
+
 is_new_zealand = {
 	OR = {
 		state = 284
 		state = 723
+		state = 1079
+		state = 1080
+		state = 1081
 	}
 }
 
@@ -8897,11 +8932,12 @@ is_polynesia = {
 		is_fiji = yes
 		is_tahiti = yes
 		is_rapa_nui = yes
+		is_samoa = yes
+		is_solomon_islands = yes
 		is_new_zealand = yes
 		state = 524
-		state = 634
 		state = 645
-		state = 726
+		state = 1071
 	}
 }
 
@@ -8955,7 +8991,6 @@ has_states_to_form_tahiti = {
 
 		if = { limit = { NOT = { OOO = { owns_state = 635 } } } owns_state = 635 }
 		if = { limit = { NOT = { OOO = { owns_state = 641 } } } owns_state = 641 }
-		if = { limit = { NOT = { OOO = { owns_state = 734 } } } owns_state = 734 }
 	}
 }
 
@@ -8968,12 +9003,33 @@ has_states_to_form_rapa_nui = {
 	}
 }
 
+has_states_to_form_samoa = {
+	custom_trigger_tooltip = {
+		tooltip = form_samoa_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 726 } } } owns_state = 726 }
+		if = { limit = { NOT = { OOO = { owns_state = 1072 } } } owns_state = 1072 }
+	}
+}
+
+has_states_to_form_solomon_islands = {
+	custom_trigger_tooltip = {
+		tooltip = form_solomon_islands_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 634 } } } owns_state = 634 }
+		if = { limit = { NOT = { OOO = { owns_state = 734 } } } owns_state = 734 }
+	}
+}
+
 has_states_to_form_new_zealand = {
 	custom_trigger_tooltip = {
 		tooltip = form_new_zealand_has_states_tt
 
 		if = { limit = { NOT = { OOO = { owns_state = 284 } } } owns_state = 284 }
 		if = { limit = { NOT = { OOO = { owns_state = 723 } } } owns_state = 723 }
+		if = { limit = { NOT = { OOO = { owns_state = 1079 } } } owns_state = 1079 }
+		if = { limit = { NOT = { OOO = { owns_state = 1080 } } } owns_state = 1080 }
+		if = { limit = { NOT = { OOO = { owns_state = 1081 } } } owns_state = 1081 }
 	}
 }
 
@@ -8989,8 +9045,16 @@ has_states_to_form_polynesia = {
 		has_states_to_form_micronesia = yes
 		has_states_to_form_fiji = yes
 		has_states_to_form_tahiti = yes
+		has_states_to_form_samoa = yes
 		has_states_to_form_new_zealand = yes
-		if = { limit = { NOT = { OOO = { owns_state = 726 } } } owns_state = 726 }
+		if = { limit = { NOT = { OOO = { owns_state = 1071 } } } owns_state = 1071 }
+	}
+}
+
+required_states_to_form_solomon_islands = {
+	OR = {
+		state = 634
+		state = 734
 	}
 }
 
@@ -9001,8 +9065,9 @@ required_states_to_form_polynesia = {
 		is_micronesia = yes
 		is_fiji = yes
 		is_tahiti = yes
+		is_samoa = yes
 		is_new_zealand = yes
-		state = 726
+		state = 1071
 	}
 }
 
@@ -9333,6 +9398,7 @@ can_form_western_australia = {
 		original_tag = SZZ
 		original_tag = BFO
 		original_tag = BFI
+		original_tag = NFA
 	}
 }
 
@@ -9341,6 +9407,7 @@ can_form_queensland = {
 		original_tag = SZI
 		original_tag = BFZ
 		original_tag = BFE
+		original_tag = NFS
 	}
 }
 
@@ -9370,6 +9437,7 @@ is_western_australia = {
 		state = 522
 		state = 870
 		state = 871
+		state = 1074
 	}
 }
 
@@ -9378,6 +9446,7 @@ is_queensland = {
 		state = 521
 		state = 872
 		state = 873
+		state = 1075
 	}
 }
 
@@ -9411,6 +9480,7 @@ has_states_to_form_western_australia = {
 		if = { limit = { NOT = { OOO = { owns_state = 522 } } } owns_state = 522 }
 		if = { limit = { NOT = { OOO = { owns_state = 870 } } } owns_state = 870 }
 		if = { limit = { NOT = { OOO = { owns_state = 871 } } } owns_state = 871 }
+		if = { limit = { NOT = { OOO = { owns_state = 1074 } } } owns_state = 1074 }
 	}
 }
 
@@ -9421,6 +9491,7 @@ has_states_to_form_queensland = {
 		if = { limit = { NOT = { OOO = { owns_state = 521 } } } owns_state = 521 }
 		if = { limit = { NOT = { OOO = { owns_state = 872 } } } owns_state = 872 }
 		if = { limit = { NOT = { OOO = { owns_state = 873 } } } owns_state = 873 }
+		if = { limit = { NOT = { OOO = { owns_state = 1075 } } } owns_state = 1075 }
 	}
 }
 
