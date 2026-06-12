@@ -3892,6 +3892,90 @@ esicolor_formables = {
 		}
 	}
 
+	form_laos = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_laos = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_laos = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_laos"
+			set_country_flag = can_form_IDC_UNITED
+
+			set_cosmetic_tag = IDC_LAOS
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_laos = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_laos = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
+	form_cambodia = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_cambodia = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_cambodia = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_cambodia"
+			set_country_flag = can_form_IDC_UNITED
+
+			set_cosmetic_tag = IDC_CAMBODIA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_cambodia = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_cambodia = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
 	form_siam = {
 		icon = generic_form_nation
 		allowed = {
@@ -3998,6 +4082,7 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_indochina"
 			clr_country_flag = can_form_IDC_UNITED
+			clr_country_flag = can_form_MAJ_MALAYSIA
 
 			set_country_flag = can_form_ASI_UNITED
 
@@ -9016,13 +9101,130 @@ esicolor_formables = {
 		}
 	}
 
+	form_malaya = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_malaya = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_malaya = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_malaya"
+			set_country_flag = can_form_MAJ_MALAYSIA
+			set_country_flag = can_form_IDC_UNITED
+
+			if = {
+				limit = { has_country_leader = { character = EEL_shenton_thomas ruling_only = yes } }
+
+				set_cosmetic_tag = MAJ_MALAYA_BRITISH
+
+				else = {
+					set_cosmetic_tag = MAJ_MALAYA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_malaya = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_malaya_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_malaya = yes
+				}
+				else = {
+					required_states_to_form_malaya = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
+	form_north_borneo = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_north_borneo = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_north_borneo = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_north_borneo"
+			set_country_flag = can_form_MAJ_MALAYSIA
+
+			set_cosmetic_tag = MAJ_NBORNEO
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_north_borneo = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_north_borneo_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_north_borneo = yes
+				}
+				else = {
+					required_states_to_form_north_borneo = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
 	form_malaysia = {
 		icon = generic_form_nation
 		allowed = {
 			can_form_malaysia = yes
 		}
 		visible = {
-			has_formed_a_formable = no
+			has_cosmetics_to_form_malaysia = yes
 		}
 		available = {
 			has_states_to_form_malaysia = yes
@@ -9071,7 +9273,7 @@ esicolor_formables = {
 			}
 		}
 
-		cost = global.formables_cost_25?25
+		cost = global.formables_cost_50?50
 
 		fire_only_once = yes
 

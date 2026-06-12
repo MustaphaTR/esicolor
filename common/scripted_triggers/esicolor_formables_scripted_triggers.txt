@@ -9007,13 +9007,32 @@ required_states_to_form_polynesia = {
 }
 
 #### Nusantara ####
-can_form_malaysia = {
+can_form_malaya = {
 	OR = {
-		original_tag = EEE
 		original_tag = EEL
 		original_tag = NZI
+		original_tag = NLO
+		original_tag = NLI
+		original_tag = NLZ
+		original_tag = NLE
+		original_tag = NLA
+		original_tag = NLS
+	}
+}
+
+can_form_north_borneo = {
+	OR = {
+		original_tag = EEE
 		original_tag = NZE
 		original_tag = NZA
+		original_tag = NSY
+	}
+}
+
+can_form_malaysia = {
+	OR = {
+		can_form_malaya = yes
+		can_form_north_borneo = yes
 	}
 }
 
@@ -9066,14 +9085,32 @@ can_form_nusantara = {
 	}
 }
 
-is_malaysia = {
+is_malaya = {
+	OR = {
+		state = 336
+		state = 1021
+		state = 1060
+		state = 1061
+		state = 1062
+		state = 1063
+		state = 1064
+		state = 1065
+	}
+}
+
+is_north_borneo = {
 	OR = {
 		state = 333
-		state = 336
-		state = 724
-		state = 1021
 		state = 1023
 		state = 1024
+		state = 1059
+	}
+}
+
+is_malaysia = {
+	OR = {
+		is_malaya = yes
+		is_north_borneo = yes
 	}
 }
 
@@ -9126,13 +9163,38 @@ is_nusantara = {
 	}
 }
 
+has_states_to_form_malaya = {
+	custom_trigger_tooltip = {
+		tooltip = form_malaya_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 336 } } } owns_state = 336 }
+		if = { limit = { NOT = { OOO = { owns_state = 1060 } } } owns_state = 1060 }
+		if = { limit = { NOT = { OOO = { owns_state = 1061 } } } owns_state = 1061 }
+		if = { limit = { NOT = { OOO = { owns_state = 1062 } } } owns_state = 1062 }
+		if = { limit = { NOT = { OOO = { owns_state = 1063 } } } owns_state = 1063 }
+		if = { limit = { NOT = { OOO = { owns_state = 1064 } } } owns_state = 1064 }
+	}
+}
+
+has_states_to_form_north_borneo = {
+	custom_trigger_tooltip = {
+		tooltip = form_north_borneo_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 333 } } } owns_state = 333 }
+		if = { limit = { NOT = { OOO = { owns_state = 1024 } } } owns_state = 1024 }
+		if = { limit = { NOT = { OOO = { owns_state = 1059 } } } owns_state = 1059 }
+	}
+}
+
+has_cosmetics_to_form_malaysia = {
+	has_country_flag = can_form_MAJ_MALAYSIA
+}
 has_states_to_form_malaysia = {
 	custom_trigger_tooltip = {
 		tooltip = form_malaysia_has_states_tt
 
-		if = { limit = { NOT = { OOO = { owns_state = 333 } } } owns_state = 333 }
-		if = { limit = { NOT = { OOO = { owns_state = 336 } } } owns_state = 336 }
-		if = { limit = { NOT = { OOO = { owns_state = 1024 } } } owns_state = 1024 }
+		has_states_to_form_malaya = yes
+		has_states_to_form_north_borneo = yes
 	}
 }
 
@@ -9192,16 +9254,34 @@ has_states_to_form_nusantara = {
 		if = { limit = { NOT = { OOO = { owns_state = 669 } } } owns_state = 669 }
 		if = { limit = { NOT = { OOO = { owns_state = 721 } } } owns_state = 721 }
 		if = { limit = { NOT = { OOO = { owns_state = 979 } } } owns_state = 979 }
-		if = { limit = { NOT = { OOO = { owns_state = 1023 } } } owns_state = 1021 }
+		if = { limit = { NOT = { OOO = { owns_state = 1021 } } } owns_state = 1021 }
 		if = { limit = { NOT = { OOO = { owns_state = 1023 } } } owns_state = 1023 }
+	}
+}
+
+required_states_to_form_malaya = {
+	OR = {
+		state = 336
+		state = 1060
+		state = 1061
+		state = 1062
+		state = 1063
+		state = 1064
+	}
+}
+
+required_states_to_form_north_borneo = {
+	OR = {
+		state = 333
+		state = 1024
+		state = 1059
 	}
 }
 
 required_states_to_form_malaysia = {
 	OR = {
-		state = 333
-		state = 336
-		state = 1024
+		required_states_to_form_malaya = yes
+		required_states_to_form_north_borneo = yes
 	}
 }
 
@@ -9736,6 +9816,22 @@ can_form_vietnam = {
 		original_tag = ZBL
 		original_tag = LFI
 		original_tag = NIF
+		original_tag = NLL
+	}
+}
+
+can_form_laos = {
+	OR = {
+		original_tag = LFO
+		original_tag = NLB
+		original_tag = NLY
+	}
+}
+
+can_form_cambodia = {
+	OR = {
+		original_tag = FAI
+		original_tag = NLF
 	}
 }
 
@@ -9745,6 +9841,9 @@ can_form_siam = {
 		original_tag = FZA
 		original_tag = BLB
 		original_tag = BLY
+		original_tag = NFL
+		original_tag = NFF
+		original_tag = NFB
 	}
 }
 
@@ -9765,11 +9864,11 @@ can_form_burma = {
 can_form_indochina = {
 	OR = {
 		can_form_vietnam = yes
+		can_form_laos = yes
+		can_form_cambodia = yes
 		can_form_siam = yes
 		can_form_burma = yes
-		original_tag = EEL
-		original_tag = LFO
-		original_tag = FAI
+		can_form_malaya = yes
 	}
 }
 
@@ -9778,6 +9877,22 @@ is_vietnam = {
 		state = 286
 		state = 671
 		state = 1017
+		state = 1066
+	}
+}
+
+is_laos = {
+	OR = {
+		state = 670
+		state = 1068
+		state = 1069
+	}
+}
+
+is_cambodia = {
+	OR = {
+		state = 741
+		state = 1067
 	}
 }
 
@@ -9787,6 +9902,9 @@ is_siam = {
 		state = 724
 		state = 868
 		state = 869
+		state = 1076
+		state = 1077
+		state = 1078
 	}
 }
 
@@ -9806,12 +9924,12 @@ is_burma = {
 
 is_indochina = {
 	OR = {
-		is_netherlands = yes
+		is_vietnam = yes
+		is_laos = yes
+		is_cambodia = yes
 		is_siam = yes
 		is_burma = yes
-		state = 336
-		state = 670
-		state = 741
+		is_malaya = yes
 	}
 }
 
@@ -9822,6 +9940,26 @@ has_states_to_form_vietnam = {
 		if = { limit = { NOT = { OOO = { owns_state = 286 } } } owns_state = 286 }
 		if = { limit = { NOT = { OOO = { owns_state = 671 } } } owns_state = 671 }
 		if = { limit = { NOT = { OOO = { owns_state = 1017 } } } owns_state = 1017 }
+		if = { limit = { NOT = { OOO = { owns_state = 1066 } } } owns_state = 1066 }
+	}
+}
+
+has_states_to_form_laos = {
+	custom_trigger_tooltip = {
+		tooltip = form_laos_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 670 } } } owns_state = 670 }
+		if = { limit = { NOT = { OOO = { owns_state = 1068 } } } owns_state = 1068 }
+		if = { limit = { NOT = { OOO = { owns_state = 1069 } } } owns_state = 1069 }
+	}
+}
+
+has_states_to_form_cambodia = {
+	custom_trigger_tooltip = {
+		tooltip = form_cambodia_has_states_tt
+
+		if = { limit = { NOT = { OOO = { owns_state = 741 } } } owns_state = 741 }
+		if = { limit = { NOT = { OOO = { owns_state = 1067 } } } owns_state = 1067 }
 	}
 }
 
@@ -9833,6 +9971,9 @@ has_states_to_form_siam = {
 		if = { limit = { NOT = { OOO = { owns_state = 724 } } } owns_state = 724 }
 		if = { limit = { NOT = { OOO = { owns_state = 868 } } } owns_state = 868 }
 		if = { limit = { NOT = { OOO = { owns_state = 869 } } } owns_state = 869 }
+		if = { limit = { NOT = { OOO = { owns_state = 1076 } } } owns_state = 1076 }
+		if = { limit = { NOT = { OOO = { owns_state = 1077 } } } owns_state = 1077 }
+		if = { limit = { NOT = { OOO = { owns_state = 1078 } } } owns_state = 1078 }
 	}
 }
 
@@ -9860,20 +10001,20 @@ has_states_to_form_indochina = {
 		tooltip = form_indochina_has_states_tt
 
 		has_states_to_form_vietnam = yes
+		has_states_to_form_laos = yes
+		has_states_to_form_cambodia = yes
 		has_states_to_form_siam = yes
 		has_states_to_form_burma = yes
-		if = { limit = { NOT = { OOO = { owns_state = 670 } } } owns_state = 670 }
-		if = { limit = { NOT = { OOO = { owns_state = 741 } } } owns_state = 741 }
 	}
 }
 
 required_states_to_form_indochina = {
 	OR = {
 		is_vietnam = yes
+		is_laos = yes
+		is_cambodia = yes
 		is_siam = yes
 		is_burma = yes
-		state = 670
-		state = 741
 	}
 }
 
