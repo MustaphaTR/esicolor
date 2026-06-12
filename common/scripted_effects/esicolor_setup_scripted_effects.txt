@@ -10439,6 +10439,23 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	284 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Leslie Lefeaux
+				limit = { has_trait = economist }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = economist
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NZL_reserve_bank_governor
+				}
+			}
+		}
+	}
 	300 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -10716,6 +10733,23 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = IRQ_kurdish_politician
+				}
+			}
+		}
+	}
+	723 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # William Polson
+				limit = { has_trait = financial_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = financial_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = agrarian_nationalist
 				}
 			}
 		}
@@ -11223,6 +11257,35 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = IRQ_emir_of_taif
+				}
+			}
+		}
+	}
+	1097 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Alexander Galbraith
+				limit = { has_trait = communist_revolutionary }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = ICE_trade_unionist
+				}
+			}
+			if = { # Vic Wilcox
+				limit = { has_trait = economist }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = economist
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = soviet_economist
 				}
 			}
 		}

@@ -5640,6 +5640,56 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = ZBA }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = economist
+			}
+
+			set_character_name = NZL_leslie_lefeaux
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_political_advisor_europe_2
+				}
+				army = {
+					small = GFX_idea_generic_political_advisor_europe_2
+				}
+				navy = {
+					small = GFX_idea_generic_political_advisor_europe_2
+				}
+			}
+
+			284 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = armaments_organizer
+			}
+
+			set_character_name = NZL_walter_nash
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_NZL_walter_nash
+				}
+				army = {
+					small = GFX_idea_NZL_walter_nash
+				}
+				navy = {
+					small = GFX_idea_NZL_walter_nash
+				}
+			}
+
+			284 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = ZYI }
 
 		random_character = {
@@ -7243,6 +7293,83 @@ handle_special_advisors = {
 			}
 
 			688 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = FZE }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = financial_expert
+			}
+
+			set_character_name = NZL_william_polson
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_political_advisor_europe_3
+				}
+				army = {
+					small = GFX_idea_generic_political_advisor_europe_3
+				}
+				navy = {
+					small = GFX_idea_generic_political_advisor_europe_3
+				}
+			}
+
+			723 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = military_theorist
+			}
+
+			set_character_name = NZL_keith_j_holyoake
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_NZL_keith_j_holyoake
+				}
+				army = {
+					small = GFX_idea_NZL_keith_j_holyoake
+				}
+				navy = {
+					small = GFX_idea_NZL_keith_j_holyoake
+				}
+			}
+
+			723 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_chief_reform_1
+					has_trait = air_chief_reform_2
+					has_trait = air_chief_reform_3
+				}
+			}
+
+			set_character_name = NZL_a_j_stallworthy
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_NZL_a_j_stallworthy
+				}
+				army = {
+					small = GFX_idea_NZL_a_j_stallworthy
+				}
+				navy = {
+					small = GFX_idea_NZL_a_j_stallworthy
+				}
+			}
+
+			723 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -9565,6 +9692,56 @@ handle_special_advisors = {
 			}
 
 			1011 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = NFY }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = NZL_alexander_galbraith
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_political_advisor_europe_2
+				}
+				army = {
+					small = GFX_idea_generic_political_advisor_europe_2
+				}
+				navy = {
+					small = GFX_idea_generic_political_advisor_europe_2
+				}
+			}
+
+			1097 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = economist
+			}
+
+			set_character_name = NZL_vic_wilcox
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_generic_political_advisor_europe_3
+				}
+				army = {
+					small = GFX_idea_generic_political_advisor_europe_3
+				}
+				navy = {
+					small = GFX_idea_generic_political_advisor_europe_3
+				}
+			}
+
+			1097 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 }
