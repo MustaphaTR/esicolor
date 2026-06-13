@@ -8,10 +8,10 @@ set_technology = {
 
 set_convoys = 5
 set_popularities = {
-	democratic = 25
-	fascism = 25
-	communism = 25
-	neutrality = 25
+	democratic = 40
+	fascism = 15
+	communism = 0
+	neutrality = 45
 }
 set_politics = {
 	ruling_party = neutrality
@@ -20,6 +20,14 @@ set_politics = {
 	elections_allowed = no
 }
 
+recruit_character = BFO_earle_page
+
 set_rule = {
 	can_generate_female_aces = yes
+}
+
+set_party_name = {
+	ideology = neutrality
+	name = AST_neutrality_party
+	long_name = AST_neutrality_party_long
 }

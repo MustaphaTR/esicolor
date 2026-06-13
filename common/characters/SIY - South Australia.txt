@@ -1,15 +1,40 @@
 characters={
-	SIY_earle_page={
-		name=AST_earle_page
-		portraits={
-			civilian={
-				large=GFX_AST_earle_page
+	SIY_alexander_hore_ruthven = {
+		instance = {
+			allowed = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			name=AST_alexander_hore_ruthven
+			portraits={
+				civilian={
+					large=GFX_portrait_AST_alexander_hore_ruthven
+					small=GFX_portrait_AST_alexander_hore_ruthven_small
+				}
+			}
+			country_leader={
+				traits={ AST_governor_general }
+				ideology=centrism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			ideology=centrism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Thunder at Our Gates" }
+			}
+			name=AST_alexander_hore_ruthven
+			portraits={
+				civilian={
+					large=GFX_Portrait_Britain_Generic_land_1
+					small=GFX_idea_AST_alexander_hore_ruthven
+				}
+			}
+			country_leader={
+				traits={ AST_governor_general }
+				ideology=centrism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }

@@ -1,15 +1,39 @@
 characters={
-	BLB_plaek_phibunsongkhram={
-		name=BLB_plaek_phibunsongkhram
-		portraits={
-			civilian={
-				large=GFX_portrait_Plaek_Phibunsongkhram
+	BLB_plaek_phibunsongkhram = {
+		instance = {
+			allowed = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			name=SIA_plaek_phibunsongkhram
+			portraits={
+				civilian={
+					large=GFX_portrait_SIA_plaek_phibunsongkhram
+					small=GFX_portrait_SIA_plaek_phibunsongkhram_small
+				}
+			}
+			country_leader={
+				traits={ SIA_military_wing_leader }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			ideology=fascism_ideology
-			expire="1953.1.1.12"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Thunder at Our Gates" }
+			}
+			name=SIA_plaek_phibunsongkhram
+			portraits={
+				civilian={
+					large=GFX_portrait_Plaek_Phibunsongkhram
+				}
+			}
+			country_leader={
+				traits={ SIA_military_wing_leader }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }

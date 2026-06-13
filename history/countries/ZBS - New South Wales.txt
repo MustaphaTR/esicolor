@@ -20,14 +20,28 @@ set_politics = {
 	elections_allowed = yes
 }
 
-recruit_character = ZBS_john_curtin # Was not the prime minister in '36, not even in '39. He become PM '41. But again, portrait. Correct guy isn't in the game.
+if = {
+	limit = { has_dlc = "Thunder at Our Gates" }
+
+	recruit_character = ZBS_joseph_lyons
+
+	set_party_name = {
+		ideology = democratic
+		name = AST_democratic_party
+		long_name = AST_democratic_party_long
+	}
+
+	else = {
+		recruit_character = ZBS_john_curtin # Was not the prime minister in '36, not even in '39. He become PM '41. Correct guy is above, but i want someone with a proper portrait to lead the state. If DLC is enabled he goes to Western Australia.
+
+		set_party_name = {
+			ideology = democratic
+			name = AST_labor_party
+			long_name = AST_labor_party_long
+		}
+	}
+}
 
 set_rule = {
 	can_generate_female_aces = yes
-}
-
-set_party_name = {
-	ideology = democratic
-	name = AST_democratic_party
-	long_name = AST_democratic_party_long
 }

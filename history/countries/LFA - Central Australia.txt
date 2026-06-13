@@ -8,16 +8,28 @@ set_technology = {
 
 set_convoys = 5
 set_popularities = {
-	democratic = 25
-	fascism = 25
-	communism = 25
-	neutrality = 25
+	democratic = 20
+	fascism = 45
+	communism = 5
+	neutrality = 30
 }
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = fascism
 	last_election = "1935.10.10"
 	election_frequency = 36
 	elections_allowed = no
+}
+
+if = {
+	limit = { has_dlc = "Thunder at Our Gates" }
+
+	recruit_character = SIF_eric_campbell
+
+	set_party_name = {
+		ideology = fascism
+		name = AST_fascism_party
+		long_name = AST_fascism_party_long
+	}
 }
 
 set_rule = {

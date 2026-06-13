@@ -1,0 +1,39 @@
+characters={
+	BFE_percy_stephensen = {
+		instance = {
+			allowed = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			name=AST_percy_stephensen
+			portraits={
+				civilian={
+					large=GFX_portrait_AST_percy_stephensen
+					small=GFX_portrait_AST_percy_stephensen_small
+				}
+			}
+			country_leader={
+				traits={ AST_motherland_advocate_leader }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Thunder at Our Gates" }
+			}
+			name=AST_percy_stephensen
+			portraits={
+				civilian={
+					large=GFX_portrait_europe_generic_4
+				}
+			}
+			country_leader={
+				traits={ AST_motherland_advocate_leader }
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

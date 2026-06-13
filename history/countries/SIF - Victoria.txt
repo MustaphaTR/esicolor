@@ -20,14 +20,29 @@ set_politics = {
 	elections_allowed = no
 }
 
-recruit_character = SIF_eric_campbell
+if = {
+	limit = { has_dlc = "Thunder at Our Gates" }
+
+	recruit_character = SIF_adela_walsh
+
+	set_party_name = {
+		ideology = fascism
+		name = AST_australia_first_movement
+		long_name = AST_australia_first_movement_long
+	}
+
+	else = {
+		recruit_character = SIF_eric_campbell
+
+		set_party_name = {
+			ideology = fascism
+			name = AST_fascism_party
+			long_name = AST_fascism_party_long
+		}
+	}
+}
 
 set_rule = {
 	can_generate_female_aces = yes
 }
 
-set_party_name = {
-	ideology = fascism
-	name = AST_fascism_party
-	long_name = AST_fascism_party_long
-}

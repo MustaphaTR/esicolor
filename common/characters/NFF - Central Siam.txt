@@ -1,0 +1,39 @@
+characters={
+	NFF_pridi_banomyong = {
+		instance = {
+			allowed = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			name=SIA_pridi_banomyong
+			portraits={
+				civilian={
+					large=GFX_portrait_SIA_pridi_banomyong
+					small=GFX_portrait_SIA_pridi_banomyong_small
+				}
+			}
+			country_leader={
+				traits={ JUNO_minister_of_foreign_affairs }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Thunder at Our Gates" }
+			}
+			name=SIA_pridi_banomyong
+			portraits={
+				civilian={
+					large=GFX_portrait_asia_generic_democratic_2
+				}
+			}
+			country_leader={
+				traits={ JUNO_minister_of_foreign_affairs }
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

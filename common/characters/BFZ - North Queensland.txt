@@ -1,16 +1,38 @@
 characters={
-	BFZ_alan_vasey={
-		name=AST_alan_vasey
-		portraits={
-			army={
-				large=GFX_AST_alan_vasey
-				small=GFX_portrait_AST_alan_vasey_small
+	BFZ_alan_vasey = {
+		instance = {
+			allowed = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			name=AST_alan_vasey
+			portraits={
+				civilian={
+					large=GFX_portrait_AST_alan_vasey
+					small=GFX_portrait_AST_alan_vasey_small
+				}
+			}
+			country_leader={
+				ideology=oligarchism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			ideology=oligarchism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Thunder at Our Gates" }
+			}
+			name=AST_alan_vasey
+			portraits={
+				civilian={
+					large=GFX_AST_alan_vasey
+					small=GFX_portrait_AST_alan_vasey_small
+				}
+			}
+			country_leader={
+				ideology=oligarchism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }

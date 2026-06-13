@@ -1,15 +1,38 @@
 characters={
-	SZI_richard_dixon={
-		name=AST_richard_dixon
-		portraits={
-			civilian={
-				large=GFX_AST_richard_dixon
+	SZI_fred_paterson = {
+		instance = {
+			allowed = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			name=AST_fred_paterson
+			portraits={
+				civilian={
+					large=GFX_portrait_AST_fred_paterson
+				}
+			}
+			country_leader={
+				traits={ AST_voice_of_workers }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			ideology=stalinism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Thunder at Our Gates" }
+			}
+			name=AST_fred_paterson
+			portraits={
+				civilian={
+					large=GFX_portrait_europe_generic_communism_2
+				}
+			}
+			country_leader={
+				traits={ AST_voice_of_workers }
+				ideology=stalinism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }
