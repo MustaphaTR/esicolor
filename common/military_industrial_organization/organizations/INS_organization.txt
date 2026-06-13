@@ -1,0 +1,61 @@
+NSB_multi_role_aircraft_organization = {
+	name = INS_knilm_organization
+	include = esicolor_generic_multi_role_aircraft_organization
+	icon = GFX_idea_INS_knilm
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = NSB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 1058
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				1058 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+EES_support_equipment_organization = {
+	name = INS_bio_pharma_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_INS_bio_pharma
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = EES
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 335
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				335 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

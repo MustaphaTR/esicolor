@@ -813,5 +813,24 @@ ideas = {
 			}
 			traits = { railway_company }
 		}
+
+		generic_central_bank = {
+			picture = ARG_banco_central_de_la_republica_argentina
+
+			allowed = {
+				has_custom_central_bank = no
+			}
+			visible = {
+				NOT = {
+					has_global_flag = custom_designers_only
+					has_country_flag = central_bank_disabled
+				}
+			}
+
+			research_bonus = {
+				industry = 0.04
+			}
+			traits = { central_bank_esicolor }
+		}
 	}
 }

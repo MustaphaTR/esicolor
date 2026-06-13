@@ -1,0 +1,169 @@
+ideas = {
+	aircraft_manufacturer = {
+		designer = yes
+
+		# Original was civilian_airway_company, but MIO version uses generic_multi_role_aircraft_organization, so making them match.
+		NSB_multi_role_aircraft_manufacturer = {
+			name = knilm
+			picture = INS_knilm
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = NSB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1058
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1058 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { multi_role_aircraft_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		EES_support_equipment_manufacturer = {
+			name = bio_pharma
+			picture = bio_pharma
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = EES
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 335
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					335 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { support_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		NSB_central_bank = {
+			name = idea_INS_bank_of_java_concern
+			picture = INS_bank_of_java
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = central_bank_disabled }
+				OR = {
+					original_tag = NSB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1058
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1058 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.04
+			}
+			traits = { central_bank_esicolor }
+		}
+
+		NSB_telephone_company = {
+			name = idea_INS_telkom_indonesia_concern
+			picture = INS_telkom_indonesia
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = telephone_company_disabled }
+				OR = {
+					original_tag = NSB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1058
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1058 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.06
+				radar_tech = 0.10
+			}
+			traits = { telephone_company }
+		}
+
+		# Original was transport_company, but that's not a trait we use, so using railway_company instead.
+		EES_railway_company = {
+			name = idea_INS_staatspoorwegen_ss_concern
+			picture = INS_staatspoorwegen
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = railway_company_disabled }
+				OR = {
+					original_tag = EES
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 335
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					335 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+			}
+			traits = { railway_company }
+		}
+	}
+}

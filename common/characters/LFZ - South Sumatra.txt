@@ -1,16 +1,51 @@
 characters={
-	LFZ_amir_sjarifuddin_harahap={
-		name=INS_amir_sjarifuddin_harahap
-		portraits={
-			civilian={
-				large=GFX_portrait_INS_amir_sjarifuddin_harahap
+	LFZ_sukarno = {
+		instance = {
+			allowed = {
+				has_dlc = "Thunder at Our Gates"
+			}
+			name=INS_sukarno
+			portraits={
+				civilian={
+					large=GFX_portrait_INS_sukarno
+					small=GFX_portrait_INS_sukarno_small
+				}
+			}
+			country_leader={
+				traits={ INS_leader_of_the_people }
+				ideology=oligarchism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ INS_leader_of_the_people }
+				ideology=emperor_fascism
+				expire="1965.1.1.1"
+				id=-1
 			}
 		}
-		country_leader={
-			traits={ committed_anti_fascist }
-			ideology=marxism
-			expire="1965.1.1.1"
-			id=-1
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Thunder at Our Gates" }
+			}
+			name=INS_sukarno
+			portraits={
+				civilian={
+					large=GFX_portrait_INS_sukarno_generic
+				}
+			}
+			country_leader={
+				traits={ INS_staunch_imperialist }
+				ideology=oligarchism
+				expire="1965.1.1.1"
+				id=-1
+			}
+			country_leader={
+				traits={ INS_staunch_imperialist }
+				ideology=emperor_fascism
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }

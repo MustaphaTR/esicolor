@@ -11738,7 +11738,16 @@ remove_industrial_concern = {
 				has_country_flag = railway_company_disabled
 			}
 		}
-		20 = { }
+		20 = {
+			set_country_flag = central_bank_disabled
+
+			modifier = {
+				factor = 0
+				
+				has_country_flag = central_bank_disabled
+			}
+		}
+		25 = { }
 	}
 }
 
@@ -11793,6 +11802,7 @@ randomise_designers = {
 		remove_materiel_designer = yes
 	}
 
+	remove_industrial_concern = yes
 	remove_industrial_concern = yes
 	remove_industrial_concern = yes
 	remove_industrial_concern = yes
@@ -11951,6 +11961,7 @@ setup_default_companies = {
 	set_country_flag = construction_company_disabled
 	set_country_flag = mining_company_disabled
 	set_country_flag = railway_company_disabled
+	set_country_flag = central_bank_disabled
 }
 
 setup_basegame_companies = {
@@ -11986,6 +11997,7 @@ setup_basegame_companies = {
 	set_country_flag = construction_company_disabled
 	set_country_flag = mining_company_disabled
 	set_country_flag = railway_company_disabled
+	set_country_flag = central_bank_disabled
 }
 
 clear_advisor_disabled_flags = {
@@ -12126,6 +12138,7 @@ clear_company_disabled_flags = {
 	clr_country_flag = construction_company_disabled
 	clr_country_flag = mining_company_disabled
 	clr_country_flag = railway_company_disabled
+	set_country_flag = central_bank_disabled
 
 	clr_country_flag = infantry_equipment_manufacturer_disabled
 	clr_country_flag = support_equipment_manufacturer_disabled
@@ -12488,6 +12501,17 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = NZL_pro_american_nationalist_trait } remove_country_leader_trait = NZL_pro_american_nationalist_trait }
 	if = { limit = { has_country_leader_with_trait = NZL_new_zealand_legionare_trait } remove_country_leader_trait = NZL_new_zealand_legionare_trait }
 	if = { limit = { has_country_leader_with_trait = MAL_governor_of_the_straits_settlements_trait } remove_country_leader_trait = MAL_governor_of_the_straits_settlements_trait }
+	if = { limit = { has_country_leader_with_trait = TAOG_liberal_colonial_leader } remove_country_leader_trait = TAOG_liberal_colonial_leader }
+	if = { limit = { has_country_leader_with_trait = INS_staunch_imperialist } remove_country_leader_trait = INS_staunch_imperialist }
+	if = { limit = { has_country_leader_with_trait = INS_leader_of_the_people } remove_country_leader_trait = INS_leader_of_the_people }
+	if = { limit = { has_country_leader_with_trait = INS_compromising_centrist } remove_country_leader_trait = INS_compromising_centrist }
+	if = { limit = { has_country_leader_with_trait = INS_comintern_agent } remove_country_leader_trait = INS_comintern_agent }
+	if = { limit = { has_country_leader_with_trait = INS_sultan_of_the_kapuas_mouth } remove_country_leader_trait = INS_sultan_of_the_kapuas_mouth }
+	if = { limit = { has_country_leader_with_trait = INS_heir_to_the_rooster_of_the_east } remove_country_leader_trait = INS_heir_to_the_rooster_of_the_east }
+	if = { limit = { has_country_leader_with_trait = INS_kolano_of_the_spice_sea } remove_country_leader_trait = INS_kolano_of_the_spice_sea }
+	if = { limit = { has_country_leader_with_trait = INS_the_king_who_gave_his_crown } remove_country_leader_trait = INS_the_king_who_gave_his_crown }
+	if = { limit = { has_country_leader_with_trait = INS_sultan_in_the_hills } remove_country_leader_trait = INS_sultan_in_the_hills }
+	if = { limit = { has_country_leader_with_trait = INS_lord_of_the_nine_kingdoms } remove_country_leader_trait = INS_lord_of_the_nine_kingdoms }
 
 	if = { limit = { has_country_leader_with_trait = likes_allies } remove_country_leader_trait = likes_allies }
 	if = { limit = { has_country_leader_with_trait = likes_germany } remove_country_leader_trait = likes_germany }
