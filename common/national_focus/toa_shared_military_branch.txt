@@ -5,24 +5,17 @@ shared_focus = {
 	dynamic = yes
 
 	icon = {
-		trigger = {
+		GFX_focus_CHL_ejercito_de_chile = {
 			state_originally_from_CHL = yes
 		}
-		value = GFX_focus_CHL_ejercito_de_chile
-	}
-	icon = {
-		trigger = {
+		GFX_focus_ARG_army = {
 			state_originally_from_ARG = yes
 		}
-		value = GFX_focus_ARG_army
-	}
-	icon = {
-		trigger = {
+		GFX_focus_BRA_army = {
 			state_originally_from_BRA = yes
 		}
-		value = GFX_focus_BRA_army
+		GFX_goal_panzerwaffe = yes
 	}
-	icon = GFX_goal_panzerwaffe
 
 	x = 30
 	y = 0
@@ -448,13 +441,11 @@ shared_focus = {
 shared_focus = {
 	id = SMB_domestic_production
 	icon = {
-		trigger = {
+		GFX_focus_BRA_dec = {
 			state_originally_from_BRA = yes
 		}
-		value = GFX_focus_BRA_dec
+		GFX_goal_generic_amphibious_assault = yes
 	}
-	icon = GFX_goal_generic_amphibious_assault
-
 	mutually_exclusive = { focus = SMB_foreign_designs }
 	relative_position_id = SMB_tank_warfare
 	prerequisite = { focus = SMB_tank_warfare }
@@ -544,13 +535,11 @@ shared_focus = {
 shared_focus = {
 	id = SMB_army_academy
 	icon = {
-		trigger = {
+		GFX_focus_BRA_agulhas_negras = {
 			state_originally_from_BRA = yes
 		}
-		value = GFX_focus_BRA_agulhas_negras
+		GFX_focus_ETH_ecole_militaire_haile_selassie_1er = yes
 	}
-	icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er
-
 	relative_position_id = SMB_army
 	prerequisite = { focus = SMB_army }
 	x = 1
@@ -1130,19 +1119,11 @@ shared_focus = {
 shared_focus = {
 	id = SMB_special_forces_option_2
 	icon = {
-		trigger = {
+		GFX_focus_BRA_corpo_navais = {
 			state_originally_from_BRA = yes
 		}
-		value = GFX_focus_BRA_corpo_navais
+		GFX_goal_generic_amphibious_assault = yes
 	}
-	icon = {
-		trigger = {
-			NOT = {
-				state_originally_from_BRA = yes
-			}
-		}
-		value = GFX_goal_generic_amphibious_assault
-	} 
 	relative_position_id = SMB_special_forces
 	prerequisite = { focus = SMB_special_forces }
 	mutually_exclusive = { focus = SMB_special_forces_option_1 focus = SMB_special_forces_option_3 focus = SMB_special_forces_option_1_continuation }
@@ -1624,24 +1605,17 @@ shared_focus = {
 	dynamic = yes
 
 	icon = {
-		trigger = {
+		GFX_focus_CHL_fuerza_aerea_de_chile = {
 			state_originally_from_CHL = yes
 		}
-		value = GFX_focus_CHL_fuerza_aerea_de_chile
-	}
-	icon = {
-		trigger = {
+		GFX_focus_ARG_air_force = {
 			state_originally_from_ARG = yes
 		}
-		value = GFX_focus_ARG_air_force
-	}
-	icon = {
-		trigger = {
+		GFX_focus_BRA_air_force = {
 			state_originally_from_BRA = yes
 		}
-		value = GFX_focus_BRA_air_force
+		GFX_goal_generic_build_airforce = yes
 	}
-	icon = GFX_goal_generic_build_airforce
 
 	cost = 10
 
@@ -2773,24 +2747,17 @@ shared_focus = {
 	dynamic = yes
 
 	icon = {
-		trigger = {
+		GFX_focus_CHL_armada_de_chile = {
 			state_originally_from_CHL = yes
 		}
-		value = GFX_focus_CHL_armada_de_chile
-	}
-	icon = {
-		trigger = {
+		GFX_focus_ARG_navy = {
 			state_originally_from_ARG = yes
 		}
-		value = GFX_focus_ARG_navy
-	}
-	icon = {
-		trigger = {
+		GFX_focus_BRA_navy = {
 			state_originally_from_BRA = yes
 		}
-		value = GFX_focus_BRA_navy
+		GFX_goal_generic_build_navy = yes
 	}
-	icon = GFX_goal_generic_build_navy
 
 	cost = 10
 
