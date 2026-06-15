@@ -6,6 +6,7 @@ has_custom_infantry_tank_manufacturer = {
 		original_tag = IIO
 		original_tag = ISB
 		original_tag = IYS
+		original_tag = NFL
 	}
 }
 
@@ -93,11 +94,10 @@ has_custom_pacific_fleet_naval_manufacturer = {
 		original_tag = ELZ
 		original_tag = AEI
 		original_tag = ABS
-		original_tag = SZI
-		original_tag = FZE
 		original_tag = FAS
 		original_tag = BOF
 		original_tag = BIZ
+		original_tag = NBI
 		AND = {
 			has_dlc = "Arms Against Tyranny"
 			OR = {
@@ -177,6 +177,7 @@ has_custom_repair_and_refurbishment_plant = {
 		original_tag = OAE
 		original_tag = OSL
 		original_tag = IEF
+		original_tag = ZBS
 		original_tag = EZF
 		original_tag = SZY
 		AND = {
@@ -228,7 +229,7 @@ has_custom_raiding_fleet_naval_manufacturer = {
 		original_tag = IEB
 		original_tag = ISF
 		original_tag = IYS
-		original_tag = ZBS
+		original_tag = SZI
 		original_tag = LOB
 		original_tag = LSL
 		original_tag = FYZ
@@ -257,7 +258,6 @@ has_custom_convoy_escort_naval_manufacturer = {
 		original_tag = IIO
 		original_tag = IEE
 		original_tag = ZFB
-		original_tag = ZBA
 		original_tag = AZY
 		original_tag = ALA
 		original_tag = SOO
@@ -265,6 +265,8 @@ has_custom_convoy_escort_naval_manufacturer = {
 		original_tag = LZB
 		original_tag = YFF
 		original_tag = NII
+		original_tag = NFL
+		original_tag = NFY
 		AND = {
 			NOT = { has_dlc = "Arms Against Tyranny" }
 			OR = {
@@ -330,6 +332,7 @@ has_custom_agility_focused_aircraft_manufacturer = {
 	OR = {
 		original_tag = OFS
 		original_tag = ZBZ
+		original_tag = EEB
 		original_tag = FIL
 		AND = {
 			has_dlc = "Arms Against Tyranny"
@@ -347,6 +350,7 @@ has_custom_CAS_manufacturer = {
 		original_tag = ISY
 		original_tag = ZYI
 		original_tag = EFB
+		original_tag = SIF
 		original_tag = FYF
 	}
 }
@@ -365,6 +369,7 @@ has_custom_medium_aircraft_manufacturer = {
 		original_tag = ZIY
 		original_tag = ZFL
 		original_tag = ZBZ
+		original_tag = ZBS
 		original_tag = EAB
 		original_tag = EFB
 		original_tag = LOO
@@ -389,6 +394,7 @@ has_custom_multi_role_aircraft_manufacturer = {
 		original_tag = OLI
 		original_tag = ISY
 		original_tag = EZB
+		original_tag = ELE
 		original_tag = SZY
 		original_tag = NII
 		original_tag = NSB
@@ -540,6 +546,7 @@ has_custom_motorized_equipment_manufacturer = {
 		original_tag = EYE
 		original_tag = AZF
 		original_tag = SOO
+		original_tag = SIY
 		original_tag = LIE
 		original_tag = LFL
 		original_tag = FIS
@@ -548,6 +555,7 @@ has_custom_motorized_equipment_manufacturer = {
 		original_tag = CBT # BAS
 		original_tag = YII
 		original_tag = YFF
+		original_tag = NFL
 	}
 }
 
@@ -686,6 +694,7 @@ has_custom_construction_company = {
 		original_tag = IBF
 		original_tag = EZB
 		original_tag = FIB
+		original_tag = NFL
 	}
 }
 
@@ -721,7 +730,9 @@ has_custom_railway_company = {
 
 has_custom_central_bank = {
 	OR = {
+		original_tag = ZBA
 		original_tag = NSB
+		original_tag = NFL
 	}
 }
 

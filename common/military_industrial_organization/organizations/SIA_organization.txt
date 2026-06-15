@@ -1,0 +1,122 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+#####################
+
+NFL_infantry_tank_organization = {
+	name = SIA_chaiseri_organization
+	include = esicolor_generic_infantry_tank_organization
+	icon = GFX_idea_SIA_chaiseri
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+			OR = {
+				original_tag = NFL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 1076
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				1076 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+NFL_escort_ship_organization = {
+	name = SIA_bangkok_dock_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_SIA_bangkok_dock
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = NFL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 1076
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				1076 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+###################################
+
+NFL_motorized_mechanized_organization = {
+	name = SIA_thai_rung_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_SIA_thai_rung
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = NFL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 1076
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				1076 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}

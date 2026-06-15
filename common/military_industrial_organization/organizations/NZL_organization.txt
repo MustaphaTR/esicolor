@@ -80,7 +80,7 @@ FZE_heavy_tank_organization = {
  
 #####################
 
-FZE_task_force_ship_organization = {
+NBI_task_force_ship_organization = {
 	name = NZL_port_chalmers_shipbuilding
 	include = esicolor_generic_task_force_ship_organization
 	icon = GFX_idea_NZL_port_chalmers_shipbuilding
@@ -92,10 +92,10 @@ FZE_task_force_ship_organization = {
 		owner = {
 			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
 			OR = {
-				original_tag = FZE
+				original_tag = NBI
 				AND = {
 					has_global_flag = custom_designers_only
-					owns_state = 723
+					owns_state = 1081
 				}
 			}
 		}
@@ -105,13 +105,13 @@ FZE_task_force_ship_organization = {
 			limit = { has_global_flag = custom_designers_only }
 
 			owner = {
-				723 = { state_designer_availabile = yes }
+				1081 = { state_designer_availabile = yes }
 			}
 		}
 	}
 }
 
-ZBA_escort_ship_organization = {
+NFY_escort_ship_organization = {
 	name = NZL_st_mary_bay_ship_organization
 	include = esicolor_generic_escort_ship_organization
 	icon = GFX_idea_NZL_st_mary_bay_ship
@@ -123,10 +123,10 @@ ZBA_escort_ship_organization = {
 		owner = {
 			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
 			OR = {
-				original_tag = ZBA
+				original_tag = NFY
 				AND = {
 					has_global_flag = custom_designers_only
-					owns_state = 284
+					owns_state = 1079
 				}
 			}
 		}
@@ -136,7 +136,7 @@ ZBA_escort_ship_organization = {
 			limit = { has_global_flag = custom_designers_only }
 
 			owner = {
-				284 = { state_designer_availabile = yes }
+				1079 = { state_designer_availabile = yes }
 			}
 		}
 	}

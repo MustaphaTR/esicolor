@@ -1,0 +1,171 @@
+ideas = {
+	tank_manufacturer = {
+		designer = yes
+
+		NFL_infantry_tank_manufacturer = {
+			name = SIA_chaiseri_organization
+			picture = SIA_chaiseri
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+				OR = {
+					original_tag = NFL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1076
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1076 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { infantry_tank_manufacturer }
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		NFL_convoy_escort_naval_manufacturer = {
+			name = SIA_bangkok_dock_organization
+			picture = SIA_bangkok_dock
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = NFL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1076
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1076 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		NFL_motorized_equipment_manufacturer = {
+			name = SIA_thai_rung_organization
+			picture = SIA_thai_rung
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+				OR = {
+					original_tag = NFL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1076
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1076 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.50
+			}
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		NFL_construction_company = {
+			name = idea_SIA_siam_cement_group
+			picture = SIA_siam_cement_group
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = construction_company_disabled }
+				OR = {
+					original_tag = NFL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1076
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1076 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.08
+			}
+			traits = { construction_company }
+		}
+
+		NFL_central_bank = {
+			name = idea_SIA_bank_of_siam
+			picture = SIA_bank_of_thailand
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = central_bank_disabled }
+				OR = {
+					original_tag = NFL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 1076
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					1076 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.04
+			}
+			traits = { central_bank_esicolor }
+		}
+	}
+}

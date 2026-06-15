@@ -49,40 +49,9 @@ ZBS_mobile_tank_organization = {
  
 #####################
 
-SZI_task_force_ship_organization = {
-	name = AST_evans_deakin_co_organization
-	include = esicolor_generic_task_force_ship_organization
-	icon = GFX_idea_evans_deakin_co
-
-	allowed = {
-		has_dlc = "Arms Against Tyranny"
-	}
-	visible = {
-		owner = {
-			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
-			OR = {
-				original_tag = SZI
-				AND = {
-					has_global_flag = custom_designers_only
-					owns_state = 521
-				}
-			}
-		}
-	}
-	available = {
-		if = {
-			limit = { has_global_flag = custom_designers_only }
-
-			owner = {
-				521 = { state_designer_availabile = yes }
-			}
-		}
-	}
-}
-
-ZBS_raider_ship_organization = {
-	name = AST_cockatoo_doe_organization
-	include = esicolor_generic_raider_ship_organization
+ZBS_refurbishment_repair_organization = {
+	name = AST_cockatoo_docks_organization
+	include = esicolor_generic_refurbishment_repair_organization
 	icon = GFX_idea_Cockatoo_doe
 
 	allowed = {
@@ -90,7 +59,7 @@ ZBS_raider_ship_organization = {
 	}
 	visible = {
 		owner = {
-			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			NOT = { has_country_flag = repair_and_refurbishment_plant_disabled }
 			OR = {
 				original_tag = ZBS
 				AND = {
@@ -111,6 +80,36 @@ ZBS_raider_ship_organization = {
 	}
 }
 
+SZI_raider_ship_organization = {
+	name = AST_evans_deakin_co_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_evans_deakin_co
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = SZI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 521
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				521 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
 
 ###########################
 
@@ -153,6 +152,130 @@ SIF_light_aircraft_organization = {
 	}
 }
 
+EEB_high_agility_fighter_aircraft_organization = {
+	name = AST_gloster_aircraft_organization
+	include = esicolor_generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_AST_gloster_aircraft
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = agility_focused_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = EEB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 338
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				338 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+SIF_cas_aircraft_organization = {
+	name = AST_government_aircraft_factories_organization
+	include = esicolor_generic_cas_aircraft_organization
+	icon = GFX_idea_AST_government_aircraft_factories
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = CAS_manufacturer_disabled }
+			OR = {
+				original_tag = SIF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 517
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				517 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ZBS_medium_aircraft_organization = {
+	name = AST_de_havilland_australia_organization
+	include = esicolor_generic_medium_aircraft_organization
+	icon = GFX_idea_AST_da_havilland_australia
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = medium_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ZBS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 285
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				285 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+ELE_multi_role_aircraft_organization = {
+	name = AST_curtiss-wright_organization
+	include = esicolor_generic_multi_role_aircraft_organization
+	icon = GFX_idea_AST_curtiss-wright
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ELE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 363
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				363 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
 ################################### 
 
 #   #  ##  ### ### ###  ### ### #   
@@ -164,9 +287,9 @@ SIF_light_aircraft_organization = {
 ###################################
 
 ZBS_infantry_equipment_organization = {
-	name = AST_lithgow_saf_organization
+	name = AST_lithgow_arms_organization
 	include = esicolor_generic_infantry_equipment_organization
-	icon = GFX_idea_lithgow_saf
+	icon = GFX_idea_AST_lithgow_arms
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -195,7 +318,7 @@ ZBS_infantry_equipment_organization = {
 }
 
 ZBS_support_equipment_organization = {
-	name = AST_lysaghts_works_organization
+	name = AST_lysaght_organization
 	include = esicolor_generic_support_equipment_organization
 	icon = GFX_idea_lysaghts_works
 
@@ -220,6 +343,37 @@ ZBS_support_equipment_organization = {
 
 			owner = {
 				285 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+SIY_motorized_mechanized_organization = {
+ 	name = AST_holden_organization
+ 	include = esicolor_generic_motorized_mechanized_organization
+ 	icon = GFX_idea_AST_holden
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = SIY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 519
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				519 = { state_designer_availabile = yes }
 			}
 		}
 	}

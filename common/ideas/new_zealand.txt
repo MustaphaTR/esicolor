@@ -66,7 +66,7 @@ ideas = {
 	naval_manufacturer = {
 		designer = yes
 
-		FZE_pacific_fleet_naval_manufacturer = {
+		NBI_pacific_fleet_naval_manufacturer = {
 			name = NZL_port_chalmers_shipbuilding
 			picture = NZL_port_chalmers_shipbuilding
 
@@ -76,10 +76,10 @@ ideas = {
 			visible = {
 				NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
 				OR = {
-					original_tag = FZE
+					original_tag = NBI
 					AND = {
 						has_global_flag = custom_designers_only
-						owns_state = 723
+						owns_state = 1081
 					}
 				}
 			}
@@ -87,7 +87,7 @@ ideas = {
 				if = {
 					limit = { has_global_flag = custom_designers_only }
 
-					723 = { state_designer_availabile = yes }
+					1081 = { state_designer_availabile = yes }
 				}
 			}
 
@@ -97,7 +97,7 @@ ideas = {
 			traits = { pacific_fleet_naval_manufacturer }
 		}
 
-		ZBA_convoy_escort_naval_manufacturer = {
+		NFY_convoy_escort_naval_manufacturer = {
 			name = NZL_st_mary_bay_ship
 			picture = NZL_st_mary_bay_ship
 
@@ -107,10 +107,10 @@ ideas = {
 			visible = {
 				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
 				OR = {
-					original_tag = ZBA
+					original_tag = NFY
 					AND = {
 						has_global_flag = custom_designers_only
-						owns_state = 284
+						owns_state = 1079
 					}
 				}
 			}
@@ -118,7 +118,7 @@ ideas = {
 				if = {
 					limit = { has_global_flag = custom_designers_only }
 
-					284 = { state_designer_availabile = yes }
+					1079 = { state_designer_availabile = yes }
 				}
 			}
 
@@ -195,6 +195,37 @@ ideas = {
 				industry = 0.15
 			}
 			traits = { industrial_concern }
+		}
+
+		ZBA_central_bank = {
+			name = NZL_reserve_bank_of_new_zealand
+			picture = gre_schachtplan2
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = central_bank_disabled }
+				OR = {
+					original_tag = ZBA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 284
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					284 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.04
+			}
+			traits = { central_bank_esicolor }
 		}
 	}
 }
