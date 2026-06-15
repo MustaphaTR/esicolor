@@ -30,20 +30,20 @@
 #                                      where you choose the historical division name.
 #           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
 #                                      the current game version.
-GXC_INF_01 = 
+GDC_INF_01 = 
 {
 	name = "Infantry Unit"
 
-	for_countries = { SYA SYY }
+	for_countries = { EZL SYI SYZ SYE FZB FZY NEE }
 
 	can_use = { always = yes }
 
 	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { GXC_INF_01 }
+	#link_numbering_with = { GDC_INF_01 }
 
-	fallback_name = "%d Guangxi Juntuán"
+	fallback_name = "%d Guangdong Juntuán"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
@@ -59,34 +59,34 @@ GXC_INF_01 =
 		69 = { "%d Juntuán" }				
 		60 = { "%d Juntuán" }				
 		61 = { "%d Juntuán" }				
-		1 = { "%d Guangxi Juntuán" }		# fictional warlord corps
-		2 = { "%d Guangxi Juntuán" }
-		3 = { "%d Guangxi Juntuán" }
-		4 = { "%d Guangxi Juntuán" }
-		5 = { "%d Guangxi Juntuán" }
-		6 = { "%d Guangxi Juntuán" }
-		7 = { "%d Guangxi Juntuán" }
-		8 = { "%d Guangxi Juntuán" }
-		9 = { "%d Guangxi Juntuán" }
-		10 = { "%d Guangxi Juntuán" }
-		11 = { "%d Guangxi Juntuán" }
-		12 = { "%d Guangxi Juntuán" }
-		13 = { "%d Guangxi Juntuán" }
-		14 = { "%d Guangxi Juntuán" }
-		15 = { "%d Guangxi Juntuán" }
-		16 = { "%d Guangxi Juntuán" }
-		17 = { "%d Guangxi Juntuán" }
-		18 = { "%d Guangxi Juntuán" }
-		19 = { "%d Guangxi Juntuán" }
-		20 = { "%d Guangxi Juntuán" }
+		1 = { "%d Guangdong Juntuán" }		# fictional warlord corps
+		2 = { "%d Guangdong Juntuán" }
+		3 = { "%d Guangdong Juntuán" }
+		4 = { "%d Guangdong Juntuán" }
+		5 = { "%d Guangdong Juntuán" }
+		6 = { "%d Guangdong Juntuán" }
+		7 = { "%d Guangdong Juntuán" }
+		8 = { "%d Guangdong Juntuán" }
+		9 = { "%d Guangdong Juntuán" }
+		10 = { "%d Guangdong Juntuán" }
+		11 = { "%d Guangdong Juntuán" }
+		12 = { "%d Guangdong Juntuán" }
+		13 = { "%d Guangdong Juntuán" }
+		14 = { "%d Guangdong Juntuán" }
+		15 = { "%d Guangdong Juntuán" }
+		16 = { "%d Guangdong Juntuán" }
+		17 = { "%d Guangdong Juntuán" }
+		18 = { "%d Guangdong Juntuán" }
+		19 = { "%d Guangdong Juntuán" }
+		20 = { "%d Guangdong Juntuán" }
 	}
 }
 
-GXC_CAV_01 = 
+GDC_CAV_01 = 
 {
 	name = "Cavalry Unit"
 
-	for_countries = { SYA SYY }
+	for_countries = { EZL SYI SYZ SYE FZB FZY NEE }
 
 	can_use = { always = yes }
 
@@ -95,44 +95,44 @@ GXC_CAV_01 =
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { CHI_INF_01 }
 
-	fallback_name = "%d Guangxi Qibing Jun"
+	fallback_name = "%d Guangdong Qibing Jun"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		1 = { "%d Guangxi Qibing Jun" }			# All fictional warlord cavalry corps
-		2 = { "%d Guangxi Qibing Jun" }
-		3 = { "%d Guangxi Qibing Jun" }
-		4 = { "%d Guangxi Qibing Jun" }
-		6 = { "%d Guangxi Qibing Jun" }
-		5 = { "%d Guangxi Qibing Jun" }
-		7 = { "%d Guangxi Qibing Jun" }
-		8 = { "%d Guangxi Qibing Jun" }
-		9 = { "%d Guangxi Qibing Jun" }
-		10 = { "%d Guangxi Qibing Jun" }
-		11 = { "%d Guangxi Qibing Jun" }
-		12 = { "%d Guangxi Qibing Jun" }
-		13 = { "%d Guangxi Qibing Jun" }
-		14 = { "%d Guangxi Qibing Jun" }
-		15 = { "%d Guangxi Qibing Jun" }
+		1 = { "%d Guangdong Qibing Jun" }			# All fictional warlord cavalry corps
+		2 = { "%d Guangdong Qibing Jun" }
+		3 = { "%d Guangdong Qibing Jun" }
+		4 = { "%d Guangdong Qibing Jun" }
+		6 = { "%d Guangdong Qibing Jun" }
+		5 = { "%d Guangdong Qibing Jun" }
+		7 = { "%d Guangdong Qibing Jun" }
+		8 = { "%d Guangdong Qibing Jun" }
+		9 = { "%d Guangdong Qibing Jun" }
+		10 = { "%d Guangdong Qibing Jun" }
+		11 = { "%d Guangdong Qibing Jun" }
+		12 = { "%d Guangdong Qibing Jun" }
+		13 = { "%d Guangdong Qibing Jun" }
+		14 = { "%d Guangdong Qibing Jun" }
+		15 = { "%d Guangdong Qibing Jun" }
 	}
 }
 
-GXC_MOT_01 = 
+GDC_MOT_01 = 
 {
 	name = "Motorized Unit"
 
-	for_countries = { SYA SYY }
+	for_countries = { EZL SYI SYZ SYE FZB FZY NEE }
 
 	can_use = { always = yes }
 
 	division_types = { "motorized" }
 
 	# Number reservation system will tie to another group.
-	link_numbering_with = { GXC_INF_01 }
+	link_numbering_with = { GDC_INF_01 }
 
-	fallback_name = "%d Guangxi Juntuán"
+	fallback_name = "%d Guangdong Juntuán"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
@@ -148,43 +148,43 @@ GXC_MOT_01 =
 		69 = { "%d Juntuán" }				
 		60 = { "%d Juntuán" }				
 		61 = { "%d Juntuán" }				
-		1 = { "%d Guangxi Juntuán" }		# fictional warlord corps
-		2 = { "%d Guangxi Juntuán" }
-		3 = { "%d Guangxi Juntuán" }
-		4 = { "%d Guangxi Juntuán" }
-		5 = { "%d Guangxi Juntuán" }
-		6 = { "%d Guangxi Juntuán" }
-		7 = { "%d Guangxi Juntuán" }
-		8 = { "%d Guangxi Juntuán" }
-		9 = { "%d Guangxi Juntuán" }
-		10 = { "%d Guangxi Juntuán" }
-		11 = { "%d Guangxi Juntuán" }
-		12 = { "%d Guangxi Juntuán" }
-		13 = { "%d Guangxi Juntuán" }
-		14 = { "%d Guangxi Juntuán" }
-		15 = { "%d Guangxi Juntuán" }
-		16 = { "%d Guangxi Juntuán" }
-		17 = { "%d Guangxi Juntuán" }
-		18 = { "%d Guangxi Juntuán" }
-		19 = { "%d Guangxi Juntuán" }
-		20 = { "%d Guangxi Juntuán" }
+		1 = { "%d Guangdong Juntuán" }		# fictional warlord corps
+		2 = { "%d Guangdong Juntuán" }
+		3 = { "%d Guangdong Juntuán" }
+		4 = { "%d Guangdong Juntuán" }
+		5 = { "%d Guangdong Juntuán" }
+		6 = { "%d Guangdong Juntuán" }
+		7 = { "%d Guangdong Juntuán" }
+		8 = { "%d Guangdong Juntuán" }
+		9 = { "%d Guangdong Juntuán" }
+		10 = { "%d Guangdong Juntuán" }
+		11 = { "%d Guangdong Juntuán" }
+		12 = { "%d Guangdong Juntuán" }
+		13 = { "%d Guangdong Juntuán" }
+		14 = { "%d Guangdong Juntuán" }
+		15 = { "%d Guangdong Juntuán" }
+		16 = { "%d Guangdong Juntuán" }
+		17 = { "%d Guangdong Juntuán" }
+		18 = { "%d Guangdong Juntuán" }
+		19 = { "%d Guangdong Juntuán" }
+		20 = { "%d Guangdong Juntuán" }
 	}
 }
 
-GXC_MEC_01 = 
+GDC_MEC_01 = 
 {
 	name = "Mechanized Unit"
 
-	for_countries = { SYA SYY }
+	for_countries = { EZL SYI SYZ SYE FZB FZY NEE }
 
 	can_use = { always = yes }
 
 	division_types = { "mechanized" }
 
 	# Number reservation system will tie to another group.
-	link_numbering_with = { GXC_INF_01 }
+	link_numbering_with = { GDC_INF_01 }
 
-	fallback_name = "%d Guangxi Juntuán"
+	fallback_name = "%d Guangdong Juntuán"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
@@ -200,26 +200,26 @@ GXC_MEC_01 =
 		69 = { "%d Juntuán" }				
 		60 = { "%d Juntuán" }				
 		61 = { "%d Juntuán" }				
-		1 = { "%d Guangxi Juntuán" }		# fictional warlord corps
-		2 = { "%d Guangxi Juntuán" }
-		3 = { "%d Guangxi Juntuán" }
-		4 = { "%d Guangxi Juntuán" }
-		5 = { "%d Guangxi Juntuán" }
-		6 = { "%d Guangxi Juntuán" }
-		7 = { "%d Guangxi Juntuán" }
-		8 = { "%d Guangxi Juntuán" }
-		9 = { "%d Guangxi Juntuán" }
-		10 = { "%d Guangxi Juntuán" }
-		11 = { "%d Guangxi Juntuán" }
-		12 = { "%d Guangxi Juntuán" }
-		13 = { "%d Guangxi Juntuán" }
-		14 = { "%d Guangxi Juntuán" }
-		15 = { "%d Guangxi Juntuán" }
-		16 = { "%d Guangxi Juntuán" }
-		17 = { "%d Guangxi Juntuán" }
-		18 = { "%d Guangxi Juntuán" }
-		19 = { "%d Guangxi Juntuán" }
-		20 = { "%d Guangxi Juntuán" }
+		1 = { "%d Guangdong Juntuán" }		# fictional warlord corps
+		2 = { "%d Guangdong Juntuán" }
+		3 = { "%d Guangdong Juntuán" }
+		4 = { "%d Guangdong Juntuán" }
+		5 = { "%d Guangdong Juntuán" }
+		6 = { "%d Guangdong Juntuán" }
+		7 = { "%d Guangdong Juntuán" }
+		8 = { "%d Guangdong Juntuán" }
+		9 = { "%d Guangdong Juntuán" }
+		10 = { "%d Guangdong Juntuán" }
+		11 = { "%d Guangdong Juntuán" }
+		12 = { "%d Guangdong Juntuán" }
+		13 = { "%d Guangdong Juntuán" }
+		14 = { "%d Guangdong Juntuán" }
+		15 = { "%d Guangdong Juntuán" }
+		16 = { "%d Guangdong Juntuán" }
+		17 = { "%d Guangdong Juntuán" }
+		18 = { "%d Guangdong Juntuán" }
+		19 = { "%d Guangdong Juntuán" }
+		20 = { "%d Guangdong Juntuán" }
 	}
 }
 
@@ -227,20 +227,20 @@ GXC_MEC_01 =
 #CHI_PAR_01 -- airborne linked to CHI naming group 
 #CHI_MAR_01 -- marines linked to CHI naming group 
 
-GXC_MNT_01 = 
+GDC_MNT_01 = 
 {
 	name = "Mountain Unit"
 
-	for_countries = { SYA SYY }
+	for_countries = { EZL SYI SYZ SYE FZB FZY NEE }
 
 	can_use = { always = yes }
 
 	division_types = { "mountaineers" }
 
 	# Number reservation system will tie to another group.
-	link_numbering_with = { GXC_INF_01 }
+	link_numbering_with = { GDC_INF_01 }
 
-	fallback_name = "%d Guangxi Juntuán"
+	fallback_name = "%d Guangdong Juntuán"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
@@ -256,34 +256,34 @@ GXC_MNT_01 =
 		69 = { "%d Juntuán" }				
 		60 = { "%d Juntuán" }				
 		61 = { "%d Juntuán" }				
-		1 = { "%d Guangxi Juntuán" }		# fictional warlord corps
-		2 = { "%d Guangxi Juntuán" }
-		3 = { "%d Guangxi Juntuán" }
-		4 = { "%d Guangxi Juntuán" }
-		5 = { "%d Guangxi Juntuán" }
-		6 = { "%d Guangxi Juntuán" }
-		7 = { "%d Guangxi Juntuán" }
-		8 = { "%d Guangxi Juntuán" }
-		9 = { "%d Guangxi Juntuán" }
-		10 = { "%d Guangxi Juntuán" }
-		11 = { "%d Guangxi Juntuán" }
-		12 = { "%d Guangxi Juntuán" }
-		13 = { "%d Guangxi Juntuán" }
-		14 = { "%d Guangxi Juntuán" }
-		15 = { "%d Guangxi Juntuán" }
-		16 = { "%d Guangxi Juntuán" }
-		17 = { "%d Guangxi Juntuán" }
-		18 = { "%d Guangxi Juntuán" }
-		19 = { "%d Guangxi Juntuán" }
-		20 = { "%d Guangxi Juntuán" }
+		1 = { "%d Guangdong Juntuán" }		# fictional warlord corps
+		2 = { "%d Guangdong Juntuán" }
+		3 = { "%d Guangdong Juntuán" }
+		4 = { "%d Guangdong Juntuán" }
+		5 = { "%d Guangdong Juntuán" }
+		6 = { "%d Guangdong Juntuán" }
+		7 = { "%d Guangdong Juntuán" }
+		8 = { "%d Guangdong Juntuán" }
+		9 = { "%d Guangdong Juntuán" }
+		10 = { "%d Guangdong Juntuán" }
+		11 = { "%d Guangdong Juntuán" }
+		12 = { "%d Guangdong Juntuán" }
+		13 = { "%d Guangdong Juntuán" }
+		14 = { "%d Guangdong Juntuán" }
+		15 = { "%d Guangdong Juntuán" }
+		16 = { "%d Guangdong Juntuán" }
+		17 = { "%d Guangdong Juntuán" }
+		18 = { "%d Guangdong Juntuán" }
+		19 = { "%d Guangdong Juntuán" }
+		20 = { "%d Guangdong Juntuán" }
 	}
 }
 
-GXC_GAR_01 = 
+GDC_GAR_01 = 
 {
 	name = "Garrison Unit"
 
-	for_countries = { SYA SYY }
+	for_countries = { EZL SYI SYZ SYE FZB FZY NEE }
 
 	can_use = { always = yes }
 
@@ -292,7 +292,7 @@ GXC_GAR_01 =
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { CHI_INF_01 }
 
-	fallback_name = "%d Guangxi Jingbei"
+	fallback_name = "%d Guangdong Jingbei"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
@@ -320,16 +320,16 @@ GXC_GAR_01 =
 		135 = { "3 Guangdong Baoan Ke" }		
 		136 = { "2 Nanning Baoan Ke" }		
 		137 = { "3 Nanning Baoan Ke" }		
-		1 = { "%d Guangxi Jingbei" }		
-		2 = { "%d Guangxi Jingbei" }		
-		3 = { "%d Guangxi Jingbei" }		
-		4 = { "%d Guangxi Jingbei" }		
-		5 = { "%d Guangxi Jingbei" }		
-		6 = { "%d Guangxi Jingbei" }		
-		7 = { "%d Guangxi Jingbei" }		
-		8 = { "%d Guangxi Jingbei" }		
-		9 = { "%d Guangxi Jingbei" }		
-		10 = { "%d Guangxi Jingbei" }		
+		1 = { "%d Guangdong Jingbei" }		
+		2 = { "%d Guangdong Jingbei" }		
+		3 = { "%d Guangdong Jingbei" }		
+		4 = { "%d Guangdong Jingbei" }		
+		5 = { "%d Guangdong Jingbei" }		
+		6 = { "%d Guangdong Jingbei" }		
+		7 = { "%d Guangdong Jingbei" }		
+		8 = { "%d Guangdong Jingbei" }		
+		9 = { "%d Guangdong Jingbei" }		
+		10 = { "%d Guangdong Jingbei" }		
 	}
 }
 
