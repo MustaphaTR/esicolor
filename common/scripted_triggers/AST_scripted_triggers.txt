@@ -1,0 +1,49 @@
+AST_taog = {
+	always = no
+}
+
+AST_conscription_level_limited_conscription = {
+	if = {
+		limit = { NOT = { has_idea = limited_conscription } }
+		custom_trigger_tooltip = {
+			tooltip = AST_conscription_level_allowed_tt
+			check_variable = { AST_conscription_level_allowed > 0 }
+		}
+	}
+}
+AST_conscription_level_extensive_conscription = {
+	if = {
+		limit = { NOT = { has_idea = extensive_conscription } }
+		custom_trigger_tooltip = {
+			tooltip = AST_conscription_level_allowed_tt
+			check_variable = { AST_conscription_level_allowed > 1 }
+		}
+	}
+}
+AST_conscription_level_service_by_requirement = {
+	if = {
+		limit = { NOT = { has_idea = service_by_requirement } }
+		custom_trigger_tooltip = {
+			tooltip = AST_conscription_level_allowed_tt
+			check_variable = { AST_conscription_level_allowed > 2 }
+		}
+	}
+}
+AST_conscription_level_all_adults_serve = {
+	if = {
+		limit = { NOT = { has_idea = all_adults_serve } }
+		custom_trigger_tooltip = {
+			tooltip = AST_conscription_level_allowed_tt
+			check_variable = { AST_conscription_level_allowed > 3 }
+		}
+	}
+}
+AST_conscription_level_scraping_the_barrel = {
+	if = {
+		limit = { NOT = { has_idea = scraping_the_barrel } }
+		custom_trigger_tooltip = {
+			tooltip = AST_conscription_level_allowed_tt
+			check_variable = { AST_conscription_level_allowed > 4 }
+		}
+	}
+}

@@ -346,12 +346,23 @@ focus_tree = {
 
 	# Infantry Technologies
 	focus = {
-		id = GER_fallschirmjager
+		id = GER_anschluss
 		icon = GFX_goal_generic_demand_territory
 		x = 0
 		y = 1
 		cost = 8
 		relative_position_id = SAF_south_africa_first
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GER_fallschirmjager
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = GER_anschluss
 
 		completion_reward = { }
 	}
@@ -702,6 +713,17 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = AST_autarky
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = JAP_sea_state_general_mobilization_law
+
+		completion_reward = { }
+	}
+
 	# Manpower Ideas
 	focus = {
 		id = AST_citizen_military_forces
@@ -709,7 +731,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = JAP_sea_state_general_mobilization_law
+		relative_position_id = AST_autarky
 
 		completion_reward = { }
 	}
@@ -1124,6 +1146,28 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = PER_soviet_alignment
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = JAP_sea_rekindle_the_old_alliance
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = SIA_join_the_allies
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = PER_soviet_alignment
+
+		completion_reward = { }
+	}
+
 	# Generic News Events
 	focus = {
 		id = GER_demand_memel
@@ -1131,7 +1175,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = JAP_sea_rekindle_the_old_alliance
+		relative_position_id = SIA_join_the_allies
 
 		completion_reward = { }
 	}
@@ -1569,6 +1613,50 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = AST_ratify_westminster_adoption_act
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = MAN_tsr_assertiveness
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = AST_refuse_british_wars
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = AST_ratify_westminster_adoption_act
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = AST_the_ultimate_overseas_duty
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = AST_refuse_british_wars
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = AST_done_meddling
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = AST_the_ultimate_overseas_duty
+
+		completion_reward = { }
+	}
+
 	# Intelligence Operations
 	focus = {
 		id = SPR_regional_defense_council_of_aragon
@@ -1576,7 +1664,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = MAN_tsr_assertiveness
+		relative_position_id = AST_done_meddling
 
 		completion_reward = { }
 	}
@@ -2026,6 +2114,17 @@ focus_tree = {
 		completion_reward = { }
 	}
 
+	focus = {
+		id = SIA_domestic_tin_smelters
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = BRA_federal_development
+
+		completion_reward = { }
+	}
+
 	# Stability and War Support Decisions
 	focus = {
 		id = GRE_request_communist_support
@@ -2033,7 +2132,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 8
-		relative_position_id = BRA_federal_development
+		relative_position_id = SIA_domestic_tin_smelters
 
 		completion_reward = { }
 	}
@@ -3641,6 +3740,18 @@ focus_tree = {
 		y = 1
 		cost = 8
 		relative_position_id = CHI_tour_the_west
+
+		completion_reward = { }
+	}
+
+	# Infantry Subdoctrines
+	focus = {
+		id = INS_underground_revolution
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CHI_tour_the_south
 
 		completion_reward = { }
 	}
