@@ -1,0 +1,92 @@
+infantry_IRQ = {
+
+	available_for = {
+		ZYI LFS LFL AIY NIO NII
+	}
+
+	role = infantry
+
+	upgrade_prio = {
+		base = 5
+	}
+
+	infantry_first_year_IRQ = {
+		custom_icon = 3
+
+		upgrade_prio = {
+			base = 20
+
+			modifier = {
+				factor = 0.05
+
+				date > 1936.6.1
+			}
+		}
+
+		can_upgrade_in_field = {
+			date > 1936.6.1
+		}
+
+		target_template = {
+			regiments = {
+				infantry = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = infantry_early_IRQ
+		target_min_match = 0.401
+	}
+
+	infantry_early_IRQ = {
+
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 2
+			}
+		}
+
+		target_template = {
+
+			support = {
+				engineer = 1
+			}
+			
+			regiments = {
+				infantry = 6
+			}
+		}
+
+		replace_at_match = 1.5
+		replace_with = infantry_improved_IRQ
+		target_min_match = 0.9
+	}
+
+	infantry_improved_IRQ = {
+
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 3
+				date > 1941.6.1
+			}
+		}
+
+		target_template = {
+
+			support = {
+				engineer = 1
+				recon = 1
+				artillery = 1
+			}
+
+			regiments = {
+				infantry = 6
+				artillery_brigade = 1
+			}
+		}
+	}
+}
