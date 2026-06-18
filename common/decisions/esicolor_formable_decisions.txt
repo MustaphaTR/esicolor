@@ -9049,6 +9049,8 @@ esicolor_formables = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_solomon_islands"
+			clr_country_flag = can_form_MAJ_PAPUA
+
 			set_country_flag = can_form_PLY_UNITED
 
 			set_cosmetic_tag = PLY_SOLOMON
@@ -9378,23 +9380,431 @@ esicolor_formables = {
 		}
 	}
 
+	form_sumatra = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_sumatra = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_sumatra = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_sumatra"
+			set_country_flag = can_form_MAJ_INDONESIA
+
+			if = {
+				limit = { has_country_leader = { character = NAY_syarif_kasim ruling_only = yes } }
+
+				set_cosmetic_tag = MAJ_SUMATRA_SIAK
+
+				else = {
+					set_cosmetic_tag = MAJ_SUMATRA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_sumatra = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_sumatra = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
+	form_java = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_java = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_java = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_java"
+			set_country_flag = can_form_MAJ_INDONESIA
+
+			if = {
+				limit = { 
+					OR = {
+						has_country_leader = { character = EES_bonifacius_cornelis_de_jonge ruling_only = yes }
+						has_country_leader = { character = NSB_a_t_van_starkenborgh_stachouwer ruling_only = yes }
+					}
+				}
+
+				set_cosmetic_tag = MAJ_JAVA_DUTCH
+
+				else = {
+					set_cosmetic_tag = MAJ_JAVA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_java = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_java = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
+	form_timor = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_timor = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_timor = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_timor"
+			set_country_flag = can_form_MAJ_LSUNDA
+
+			if = {
+				limit = { original_tag = FZI }
+
+				set_cosmetic_tag = MAJ_TIMOR_PORTUGAL
+
+				else = {
+					set_cosmetic_tag = MAJ_TIMOR
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_timor = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_timor = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
+	form_lesser_sunda = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_lesser_sunda = yes
+		}
+		visible = {
+			has_cosmetics_to_form_lesser_sunda = yes
+		}
+		available = {
+			has_states_to_form_lesser_sunda = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_lesser_sunda"
+			set_country_flag = can_form_MAJ_INDONESIA
+
+			if = {
+				limit = { original_tag = FZI }
+
+				set_cosmetic_tag = MAJ_LSUNDA_PORTUGAL
+
+				else = {
+					set_cosmetic_tag = MAJ_LSUNDA
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_lesser_sunda = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_global_flag = formables_visual } }
+
+				custom_effect_tooltip = form_lesser_sunda_affected_states_tt
+				formable_decision_effect_tooltip = yes
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				if = {
+					limit = { has_global_flag = formables_highlight_affected }
+
+					is_lesser_sunda = yes
+				}
+				else = {
+					required_states_to_form_lesser_sunda = yes
+				}
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
+	form_south_borneo = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_south_borneo = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_south_borneo = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_south_borneo"
+			set_country_flag = can_form_MAJ_INDONESIA
+
+			set_cosmetic_tag = MAJ_SBORNEO
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_south_borneo = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_south_borneo = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
+	form_sulawesi = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_sulawesi = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_sulawesi = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_sulawesi"
+			set_country_flag = can_form_MAJ_INDONESIA
+
+			set_cosmetic_tag = MAJ_SULAWESI
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_sulawesi = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_sulawesi = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
+	form_maluku = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_maluku = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_maluku = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_maluku"
+			set_country_flag = can_form_MAJ_INDONESIA
+
+			set_cosmetic_tag = MAJ_MALUKU
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_maluku = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_maluku = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
+	form_west_papua = {
+		icon = generic_form_nation
+		allowed = {
+			can_form_west_papua = yes
+		}
+		visible = {
+			has_formed_a_formable = no
+		}
+		available = {
+			has_states_to_form_west_papua = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_west_papua"
+			set_country_flag = can_form_MAJ_INDONESIA
+			set_country_flag = can_form_MAJ_PAPUA
+
+			set_cosmetic_tag = MAJ_WPAPUA
+
+			hidden_effect = {
+				every_state = {
+					limit = { is_west_papua = yes }
+
+					formable_decision_effect = yes
+				}
+			}
+			formable_decision_effect_tooltip_default = yes
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				is_west_papua = yes
+			}
+		}
+
+		cost = global.formables_cost_25?25
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
 	form_indonesia = {
 		icon = generic_form_nation
 		allowed = {
 			can_form_indonesia = yes
 		}
 		visible = {
-			has_formed_a_formable = no
+			has_cosmetics_to_form_indonesia = yes
 		}
 		available = {
 			has_states_to_form_indonesia = yes
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_indonesia"
+			clr_country_flag = can_form_MAJ_INDONESIA
+			clr_country_flag = can_form_MAJ_PAPUA
+
 			set_country_flag = can_form_MAJ_UNITED
 
 			if = {
-				limit = { has_country_leader = { character = EES_a_t_van_starkenborgh_stachouwer ruling_only = yes } }
+				limit = {
+					OR = {
+						has_country_leader = { character = EEA_syarif_muhammad_alkadrie ruling_only = yes }
+						has_country_leader = { character = LLB_iskandar_sjah ruling_only = yes }
+						has_country_leader = { character = LFE_sultan_muhibuddin ruling_only = yes }
+						has_country_leader = { character = NAY_syarif_kasim ruling_only = yes }
+						has_country_leader = { character = NSO_alauddin_syah ruling_only = yes }
+						has_country_leader = { character = NSZ_dewa_geg ruling_only = yes }
+					}
+				}
+
+				set_cosmetic_tag = MAJ_INDONESIA_SULTANATE
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_leader = { character = EES_bonifacius_cornelis_de_jonge ruling_only = yes }
+						has_country_leader = { character = NSB_a_t_van_starkenborgh_stachouwer ruling_only = yes }
+					}
+				}
 
 				set_cosmetic_tag = MAJ_INDONESIA_DUTCH
 			}
@@ -9493,13 +9903,16 @@ esicolor_formables = {
 			can_form_papua = yes
 		}
 		visible = {
-			has_formed_a_formable = no
+			has_cosmetics_to_form_papua = yes
 		}
 		available = {
 			has_states_to_form_papua = yes
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_papua"
+			clr_country_flag = can_form_MAJ_PAPUA
+			clr_country_flag = can_form_MAJ_INDONESIA
+
 			set_country_flag = can_form_MAJ_UNITED
 
 			set_cosmetic_tag = MAJ_PAPUA

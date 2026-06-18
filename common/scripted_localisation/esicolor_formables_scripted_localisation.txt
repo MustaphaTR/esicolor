@@ -4108,9 +4108,257 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetIdeologyDef_MAJ_SUMATRA
+	text = {
+		trigger = { has_country_leader = { character = NAY_syarif_kasim ruling_only = yes } }
+		localization_key = MAJ_SUMATRA_SIAK_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = MAJ_SUMATRA_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = MAJ_SUMATRA_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = MAJ_SUMATRA_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = MAJ_SUMATRA_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_MAJ_JAVA
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = { character = EES_bonifacius_cornelis_de_jonge ruling_only = yes }
+				has_country_leader = { character = NSB_a_t_van_starkenborgh_stachouwer ruling_only = yes }
+			}
+		}
+		localization_key = MAJ_JAVA_DUTCH_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = MAJ_JAVA_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = MAJ_JAVA_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = MAJ_JAVA_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = MAJ_JAVA_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_MAJ_TIMOR
+	text = {
+		trigger = {
+			has_government = neutrality
+			original_tag = FZI
+		}
+		localization_key = MAJ_TIMOR_PORTUGAL_neutrality_DEF
+	}
+	text = {
+		trigger = {
+			has_government = democratic
+			original_tag = FZI
+		}
+		localization_key = MAJ_TIMOR_PORTUGAL_democratic_DEF
+	}
+	text = {
+		trigger = {
+			has_government = fascism
+			original_tag = FZI
+		}
+		localization_key = MAJ_TIMOR_PORTUGAL_fascism_DEF
+	}
+	text = {
+		trigger = {
+			has_government = communism
+			original_tag = FZI
+		}
+		localization_key = MAJ_TIMOR_PORTUGAL_communism_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = MAJ_TIMOR_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = MAJ_TIMOR_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = MAJ_TIMOR_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = MAJ_TIMOR_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_MAJ_LSUNDA
+	text = {
+		trigger = {
+			has_government = neutrality
+			original_tag = FZI
+		}
+		localization_key = MAJ_LSUNDA_PORTUGAL_neutrality_DEF
+	}
+	text = {
+		trigger = {
+			has_government = democratic
+			original_tag = FZI
+		}
+		localization_key = MAJ_LSUNDA_PORTUGAL_democratic_DEF
+	}
+	text = {
+		trigger = {
+			has_government = fascism
+			original_tag = FZI
+		}
+		localization_key = MAJ_LSUNDA_PORTUGAL_fascism_DEF
+	}
+	text = {
+		trigger = {
+			has_government = communism
+			original_tag = FZI
+		}
+		localization_key = MAJ_LSUNDA_PORTUGAL_communism_DEF
+	}
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = MAJ_LSUNDA_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = MAJ_LSUNDA_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = MAJ_LSUNDA_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = MAJ_LSUNDA_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_MAJ_SBORNEO
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = MAJ_SBORNEO_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = MAJ_SBORNEO_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = MAJ_SBORNEO_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = MAJ_SBORNEO_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_MAJ_SULAWESI
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = MAJ_SULAWESI_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = MAJ_SULAWESI_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = MAJ_SULAWESI_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = MAJ_SULAWESI_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_MAJ_MALUKU
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = MAJ_MALUKU_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = MAJ_MALUKU_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = MAJ_MALUKU_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = MAJ_MALUKU_communism_DEF
+	}
+}
+
+defined_text = {
+	name = GetIdeologyDef_MAJ_WPAPUA
+	text = {
+		trigger = { has_government = neutrality }
+		localization_key = MAJ_WPAPUA_neutrality_DEF
+	}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = MAJ_WPAPUA_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = MAJ_WPAPUA_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = MAJ_WPAPUA_communism_DEF
+	}
+}
+
+defined_text = {
 	name = GetIdeologyDef_MAJ_INDONESIA
 	text = {
-		trigger = { has_country_leader = { character = EES_a_t_van_starkenborgh_stachouwer ruling_only = yes } }
+		trigger = {
+			has_government = neutrality
+			OR = {
+				has_country_leader = { character = EEA_syarif_muhammad_alkadrie ruling_only = yes }
+				has_country_leader = { character = LLB_iskandar_sjah ruling_only = yes }
+				has_country_leader = { character = LFE_sultan_muhibuddin ruling_only = yes }
+				has_country_leader = { character = NAY_syarif_kasim ruling_only = yes }
+				has_country_leader = { character = NSO_alauddin_syah ruling_only = yes }
+				has_country_leader = { character = NSZ_dewa_geg ruling_only = yes }
+			}
+		}
+		localization_key = MAJ_INDONESIA_SULTANATE_neutrality_DEF
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = { character = EES_bonifacius_cornelis_de_jonge ruling_only = yes }
+				has_country_leader = { character = NSB_a_t_van_starkenborgh_stachouwer ruling_only = yes }
+			}
+		}
 		localization_key = MAJ_INDONESIA_DUTCH_democratic_DEF
 	}
 	text = {
