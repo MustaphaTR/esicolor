@@ -99,6 +99,7 @@ adjust_state_names = {
 	adjust_state_name_930 = yes
 	adjust_state_name_975 = yes
 	adjust_state_name_977 = yes
+	adjust_state_name_1058 = yes
 }
 
 adjust_state_names_on_state_core_changed = {
@@ -534,6 +535,10 @@ adjust_state_names_on_state_core_changed = {
 		limit = { FROM.FROM = { state = 977 } }
 		adjust_state_name_977 = yes
 	}
+	else_if = {
+		limit = { FROM.FROM = { state = 1058 } }
+		adjust_state_name_1058 = yes
+	}
 }
 
 adjust_state_names_on_ruling_party_change = {
@@ -968,6 +973,10 @@ adjust_state_names_on_ruling_party_change = {
 	if = {
 		limit = { owns_state = 977 }
 		adjust_state_name_977 = yes
+	}
+	if = {
+		limit = { owns_state = 1058 }
+		adjust_state_name_1058 = yes
 	}
 }
 
@@ -4823,6 +4832,35 @@ adjust_state_name_977 = {
 			name = VICTORY_POINTS_6598
 		}
 		977 = { set_state_name = STATE_977 }
+	}
+}
+
+adjust_state_name_1058 = {
+	if = {
+		limit = {
+			1058 = {
+				owner = {
+					OR = {
+						state_originally_from_HOL = yes
+						has_country_leader = { character = EES_bonifacius_cornelis_de_jonge ruling_only = yes }
+						has_country_leader = { character = NSB_a_t_van_starkenborgh_stachouwer ruling_only = yes }
+					}
+				}
+			}
+		}
+
+		set_province_name = {
+			id = 7381
+			name = VICTORY_POINTS_7381
+		}
+		1058 = { set_state_name = STATE_1058 }
+	}
+	else = {
+		set_province_name = {
+			id = 7381
+			name = VICTORY_POINTS_7381_indonesian
+		}
+		1058 = { set_state_name = STATE_1058_indonesian }
 	}
 }
 
