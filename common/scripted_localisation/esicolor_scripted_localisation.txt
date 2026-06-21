@@ -74,6 +74,24 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetDecisionCostCP30PP25
+	text = {
+		trigger = {
+			check_variable = {
+				var = command_power
+				value = 30
+				compare = greater_than_or_equals
+			}
+			has_political_power > 24
+		}
+		localization_key = decision_cost_CP_30_pp_25
+	}
+	text = {
+		localization_key = decision_cost_CP_30_pp_25_blocked
+	}
+}
+
+defined_text = {
 	name = GetDecisionCostCPMarshalRecruitment
 	text = {
 		trigger = {
