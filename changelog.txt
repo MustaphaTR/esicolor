@@ -330,6 +330,8 @@ Version 2.3.7 (XX.06.2026):
 - Added dummy localisation files for other languages so English text is shown instead of codenames when the mod is run with a non-English langauge.
 -- Although due to mod's heavy use of nested localisation, stuff like country names will be automatically translated.
 -- Minor extra translations have been done for Chinese, Japanese and Russian.
+- Reworked the oversea neigbourhood checks to use state scoped arrays instead of long sets of if checks.
+-- This should hopefully work better for the performance.
 - Added flags for some states in Argentina, Germany, Indonesia, Malaysia, Mexico, Netherlands, New Zealand and Siam.
 - Added flags for some formables in Argentina, Brazil, Canada, Chile, United States and Poland.
 - Added 7 special advisors across states in New Zealand.
