@@ -67,6 +67,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_slovenia"
 			set_country_flag = can_form_YUG_UNITED
 			set_country_flag = can_form_DNB_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_yugoslavia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = YUG_SLOVENIA
 
@@ -122,6 +129,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_croatia"
 			set_country_flag = can_form_YUG_UNITED
 			set_country_flag = can_form_DNB_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_yugoslavia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = YUG_CROATIA
 
@@ -177,6 +191,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_bosnia_herzegovina"
 			set_country_flag = can_form_YUG_UNITED
 			set_country_flag = can_form_DNB_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_yugoslavia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = YUG_BOSNIA
 
@@ -219,6 +240,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_serbia"
 			set_country_flag = can_form_YUG_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_yugoslavia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = YUG_SERBIA
 
@@ -273,6 +301,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_macedonia"
 			set_country_flag = can_form_YUG_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_yugoslavia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = YUG_MACEDONIA
 
@@ -318,6 +353,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_DNB_UNITED
 
 			set_country_flag = can_form_UBF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_balkans = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = YUG_UNITED
 
@@ -372,6 +414,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_albania"
 			set_country_flag = can_form_UBF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_balkans = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ALB_UNITED
 
@@ -426,6 +475,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_greek_mainland"
 			set_country_flag = can_form_GRE_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_greece = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GRE_MAINLAND
 
@@ -481,6 +537,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_greek_islands"
 			set_country_flag = can_form_GRE_UNITED
 			set_country_flag = can_form_MED_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_greece = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GRE_ISLANDS
 
@@ -538,6 +601,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MED_UNITED
 
 			set_country_flag = can_form_UBF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_balkans = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GRE_UNITED
 
@@ -595,6 +665,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_bulgaria"
 			set_country_flag = can_form_UBF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_balkans = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = BUL_UNITED
 
@@ -649,6 +726,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_wallachia"
 			set_country_flag = can_form_ROM_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_romania = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ROM_WALLACHIA
 
@@ -703,6 +787,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_moldavia"
 			set_country_flag = can_form_ROM_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_romania = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ROM_MOLDAVIA
 
@@ -758,6 +849,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_transylvania"
 			set_country_flag = can_form_ROM_UNITED
 			set_country_flag = can_form_DNB_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_romania = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ROM_TRANSYLVANIA
 
@@ -814,6 +912,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_ROM_UNITED
 
 			set_country_flag = can_form_UBF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_balkans = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ROM_UNITED
 
@@ -872,6 +977,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_ROM_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = EAI_halife_abdulmecid_efendi ruling_only = yes } }
@@ -937,6 +1049,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_UKD_UNITED
 
 			set_country_flag = can_form_CLT_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_celtic_union = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IRE_UNITED
 
@@ -994,6 +1113,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_UKD_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CLT_UNITED
 
@@ -1049,6 +1175,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_scotland"
 			set_country_flag = can_form_UKD_UNITED
 			set_country_flag = can_form_CLT_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_united_kingdom = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = UKD_SCOTLAND
 
@@ -1091,6 +1224,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_england"
 			set_country_flag = can_form_UKD_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_united_kingdom = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = UKD_ENGLAND
 
@@ -1136,6 +1276,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_CLT_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = UKD_UNITED
 
@@ -1179,6 +1326,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_estonia"
 			set_country_flag = can_form_BAL_UNITED
 			set_country_flag = can_form_FUG_ESTFIN
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_baltics = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = BAL_ESTONIA
 
@@ -1221,6 +1375,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_latvia"
 			set_country_flag = can_form_BAL_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_baltics = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = BIO_janis_balodis ruling_only = yes } }
@@ -1272,6 +1433,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_lithuania"
 			set_country_flag = can_form_BAL_UNITED
 			set_country_flag = can_form_PLC_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_baltics = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = {
@@ -1349,6 +1517,13 @@ esicolor_formables = {
 
 			set_country_flag = can_form_EUR_UNITED
 			set_country_flag = can_form_SOV_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = IBB_karl_gero ruling_only = yes } }
@@ -1411,6 +1586,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_netherlands"
 			set_country_flag = can_form_UNL_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_benelux = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = UNL_NETHERLANDS
 
@@ -1453,6 +1635,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_belgium"
 			set_country_flag = can_form_UNL_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_benelux = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = UNL_BELGIUM
 
@@ -1497,6 +1686,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_UNL_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = UNL_UNITED
 
@@ -1551,6 +1747,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_mauritania"
 			set_country_flag = can_form_MGR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_magreb = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MGR_MAURITANIA
 
@@ -1593,6 +1796,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_morocco"
 			set_country_flag = can_form_MGR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_magreb = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = ZYO }
@@ -1655,6 +1865,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_algeria"
 			set_country_flag = can_form_MGR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_magreb = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MGR_ALGERIA
 
@@ -1697,6 +1914,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_tunisia"
 			set_country_flag = can_form_MGR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_magreb = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MGR_TUNISIA
 
@@ -1739,6 +1963,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_libya"
 			set_country_flag = can_form_MGR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_magreb = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = ASI_italo_balbo ruling_only = yes } }
@@ -1791,6 +2022,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MGR_UNITED
 
 			set_country_flag = can_form_AFR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = ZYO }
@@ -1847,6 +2085,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_panama"
 			set_country_flag = can_form_GCO_UNITED
 			set_country_flag = can_form_USC_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_gran_colombia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GCO_PANAMA
 
@@ -1889,6 +2134,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_colombia"
 			set_country_flag = can_form_GCO_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_gran_colombia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GCO_COLOMBIA
 
@@ -1931,6 +2183,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_venezuela"
 			set_country_flag = can_form_GCO_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_gran_colombia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GCO_VENEZUELA
 
@@ -1985,6 +2244,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_ecuador"
 			set_country_flag = can_form_GCO_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_gran_colombia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GCO_ECUADOR
 
@@ -2040,6 +2306,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_peru"
 			set_country_flag = can_form_GCO_UNITED
 			set_country_flag = can_form_PRB_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_peru_bolivia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GCO_PERU
 
@@ -2098,6 +2371,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_USC_UNITED
 
 			set_country_flag = can_form_SOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_america = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GCO_UNITED
 
@@ -2152,6 +2432,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_guiana"
 			set_country_flag = can_form_SOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_america = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GUY_UNITED
 
@@ -2206,6 +2493,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_kazakhstan"
 			set_country_flag = can_form_TKS_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_turkestan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = TKS_KAZAKHSTAN
 
@@ -2248,6 +2542,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_uzbekistan"
 			set_country_flag = can_form_TKS_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_turkestan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = TKS_UZBEKISTAN
 
@@ -2302,6 +2603,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_bukhara"
 			set_country_flag = can_form_TKS_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_turkestan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = TKS_BUKHARA
 
@@ -2344,6 +2652,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_karakalpakstan"
 			set_country_flag = can_form_TKS_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_turkestan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = TKS_KARAKALPAKSTAN
 
@@ -2386,6 +2701,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_khiva"
 			set_country_flag = can_form_TKS_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_turkestan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = TKS_KHIVA
 
@@ -2428,6 +2750,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_turkmenistan"
 			set_country_flag = can_form_TKS_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_turkestan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = TKS_TURKMENISTAN
 
@@ -2482,6 +2811,14 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_altai"
 			set_country_flag = can_form_TKS_UNITED
+			set_country_flag = can_form_SBR_WEST
+			hidden_effect = {
+				every_state = {
+					limit = { is_western_siberia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = TKS_ALTAI
 
@@ -2526,6 +2863,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MON_UNITED
 
 			set_country_flag = can_form_TKS_SINKIANG
+			hidden_effect = {
+				every_state = {
+					limit = { is_sinkiang = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = LIY_khoja_niyaz ruling_only = yes } }
@@ -2594,6 +2938,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_khotan"
 			set_country_flag = can_form_TKS_SINKIANG
 			set_country_flag = can_form_CHI_HUI
+			hidden_effect = {
+				every_state = {
+					limit = { is_sinkiang = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = {
@@ -2653,6 +3004,24 @@ esicolor_formables = {
 
 			set_country_flag = can_form_TKS_UNITED
 			set_country_flag = can_form_CHI_UNITED
+			hidden_effect = {
+				if = {
+					limit = { has_country_leader = { character = LIY_khoja_niyaz ruling_only = yes } }
+
+					every_state = {
+						limit = { required_states_to_form_turkestan = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
+				else = {
+					every_state = {
+						limit = { required_states_to_form_china = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = LIY_khoja_niyaz ruling_only = yes } }
@@ -2713,8 +3082,17 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_turkestan"
 			clr_country_flag = can_form_TKS_UNITED
+			clr_country_flag = can_form_SBR_WEST
+			clr_country_flag = can_form_SBR_CENTRAL
 
 			set_country_flag = can_form_SOV_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ussr = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = TKS_UNITED
 
@@ -2769,6 +3147,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_portugal"
 			set_country_flag = can_form_IBR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_iberia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = IFY_dom_duarte_nuno ruling_only = yes } }
@@ -2831,6 +3216,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_andalusia"
 			set_country_flag = can_form_IBR_SPAIN
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_spain = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IBR_ANDALUSIA
 
@@ -2885,6 +3277,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_aragon"
 			set_country_flag = can_form_IBR_SPAIN
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_spain = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader_ideology = anarchism }
@@ -2935,6 +3334,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_basque_country"
 			set_country_flag = can_form_IBR_SPAIN
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_spain = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IBR_BASQUE
 
@@ -2989,6 +3395,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_castille_leon"
 			set_country_flag = can_form_IBR_SPAIN
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_spain = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IBR_CASTILLE_LEON
 
@@ -3033,6 +3446,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_IBR_SPAIN
 
 			set_country_flag = can_form_IBR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_iberia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = ILS_julian_gorkin ruling_only = yes } }
@@ -3117,6 +3537,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_IBR_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader_ideology = anarchism }
@@ -3179,6 +3606,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_saudi_arabia"
 			set_country_flag = can_form_ARA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_arabia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = ZYZ_abdulaziz_ibn_saud ruling_only = yes } }
@@ -3229,6 +3663,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_gulf_states"
 			set_country_flag = can_form_ARA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_arabia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ARA_GULF
 
@@ -3283,6 +3724,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_oman"
 			set_country_flag = can_form_ARA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_arabia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ARA_OMAN
 
@@ -3325,6 +3773,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_yemen"
 			set_country_flag = can_form_ARA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_arabia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ARA_YEMEN
 
@@ -3369,6 +3824,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_ARA_UNITED
 
 			set_country_flag = can_form_MEA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_middle_east = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ARA_UNITED
 
@@ -3424,6 +3886,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_austria"
 			set_country_flag = can_form_DNB_AUSTRIA_HUNGARY
 			set_country_flag = can_form_ALP_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_austria_hungary = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = YFS_otto_von_habsburg ruling_only = yes } }
@@ -3491,6 +3960,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_hungary"
 			set_country_flag = can_form_DNB_AUSTRIA_HUNGARY
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_austria_hungary = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = YFS_otto_von_habsburg ruling_only = yes } }
@@ -3553,6 +4029,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_czechia"
 			set_country_flag = can_form_DNB_CZECHOSLOVAKIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_czechoslovakia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = OLY_konstantin_von_neurath ruling_only = yes } }
@@ -3613,6 +4096,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_slovakia"
 			set_country_flag = can_form_DNB_CZECHOSLOVAKIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_czechoslovakia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = DNB_SLOVAKIA
 
@@ -3670,6 +4160,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_ALP_UNITED
 
 			set_country_flag = can_form_DNB_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_danubia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = BAB_alois_of_liechtenstein ruling_only = yes } }
@@ -3734,6 +4231,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_DNB_CZECHOSLOVAKIA
 
 			set_country_flag = can_form_DNB_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_danubia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = OLY_konstantin_von_neurath ruling_only = yes } }
@@ -3810,6 +4314,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_ROM_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = DNB_UNITED
 
@@ -3864,6 +4375,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_vietnam"
 			set_country_flag = can_form_IDC_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_indochina = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IDC_VIETNAM
 
@@ -3906,6 +4424,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_laos"
 			set_country_flag = can_form_IDC_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_indochina = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IDC_LAOS
 
@@ -3948,6 +4473,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_cambodia"
 			set_country_flag = can_form_IDC_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_indochina = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IDC_CAMBODIA
 
@@ -3990,6 +4522,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_siam"
 			set_country_flag = can_form_IDC_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_indochina = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IDC_SIAM
 
@@ -4032,6 +4571,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_burma"
 			set_country_flag = can_form_IDC_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_indochina = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = YYS_archibald_cochrane ruling_only = yes } }
@@ -4085,6 +4631,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MAJ_MALAYSIA
 
 			set_country_flag = can_form_ASI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_asia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IDC_UNITED
 
@@ -4139,6 +4692,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_kenya"
 			set_country_flag = can_form_EAF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_east_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = EAF_KENYA
 
@@ -4184,6 +4744,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_LAF_UNITED
 
 			set_country_flag = can_form_AFR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = EAF_UNITED
 
@@ -4229,9 +4796,23 @@ esicolor_formables = {
 				limit = { can_form_ethiopia = yes }
 
 				set_country_flag = can_form_HOA_ETHIOPIA
+				hidden_effect = {
+					every_state = {
+						limit = { required_states_to_form_ethiopia = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
 			}
 			else = {
 				set_country_flag = can_form_HOA_UNITED
+				hidden_effect = {
+					every_state = {
+						limit = { required_states_to_form_horn_of_africa = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
 			}
 
 			set_cosmetic_tag = HOA_AFAR
@@ -4287,6 +4868,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_oromia"
 			set_country_flag = can_form_HOA_ETHIOPIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ethiopia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = HOA_OROMIA
 
@@ -4342,6 +4930,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_benishangul_gumuz"
 			set_country_flag = can_form_HOA_ETHIOPIA
 			set_country_flag = can_form_NIL_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ethiopia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = HOA_BENISHANGUL
 
@@ -4383,7 +4978,14 @@ esicolor_formables = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_somalia"
-			set_country_flag = can_form_HOA_ETHIOPIA
+			set_country_flag = can_form_HOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_horn_of_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = HOA_SOMALIA
 
@@ -4441,6 +5043,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_NIL_UNITED
 
 			set_country_flag = can_form_HOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_horn_of_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = BAO_hailu_tekle_haymanot ruling_only = yes } }
@@ -4515,6 +5124,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_HOA_UNITED
 
 			set_country_flag = can_form_AFR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = SSO_emilio_de_bono ruling_only = yes } }
@@ -4577,6 +5193,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_chad"
 			set_country_flag = can_form_LAF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_latin_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = LAF_CHAD
 
@@ -4619,6 +5242,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_congo"
 			set_country_flag = can_form_LAF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_latin_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = ZYS_pierre_ryckmans ruling_only = yes } }
@@ -4696,6 +5326,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_angola"
 			set_country_flag = can_form_LAF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_latin_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = LAF_ANGOLA
 
@@ -4753,6 +5390,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_EAF_UNITED
 
 			set_country_flag = can_form_AFR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = LAF_UNITED
 
@@ -4807,6 +5451,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_bolivia"
 			set_country_flag = can_form_PRB_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_peru_bolivia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PRB_BOLIVIA
 
@@ -4864,6 +5515,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_GCO_UNITED
 
 			set_country_flag = can_form_SOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_america = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PRB_UNITED
 
@@ -4918,6 +5576,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_south_africa"
 			set_country_flag = can_form_MUT_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_mutapa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = ZFS_j_b_m_hertzog ruling_only = yes } }
@@ -4968,6 +5633,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_namibia"
 			set_country_flag = can_form_MUT_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_mutapa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MUT_NAMIBIA
 
@@ -5010,6 +5682,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_mozambique"
 			set_country_flag = can_form_MUT_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_mutapa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MUT_MOZAMBIQUE
 
@@ -5052,6 +5731,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_zambia"
 			set_country_flag = can_form_MUT_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_mutapa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = YBI }
@@ -5104,6 +5790,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MUT_UNITED
 
 			set_country_flag = can_form_AFR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MUT_UNITED
 
@@ -5146,6 +5839,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_switzerland"
 			set_country_flag = can_form_ALP_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_alpine_confederation = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ALP_SWITZERLAND
 
@@ -5204,6 +5904,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_FRA_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ALP_UNITED
 
@@ -5246,6 +5953,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_bavaria"
 			set_country_flag = can_form_GER_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_germany = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GER_BAVARIA
 
@@ -5288,6 +6002,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_bawu"
 			set_country_flag = can_form_GER_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_germany = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GER_BAWU
 
@@ -5330,6 +6051,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_rhineland"
 			set_country_flag = can_form_GER_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_germany = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GER_RHINELAND
 
@@ -5372,6 +6100,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_hannover"
 			set_country_flag = can_form_GER_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_germany = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GER_HANNOVER
 
@@ -5414,6 +6149,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_schleswig_holstein"
 			set_country_flag = can_form_GER_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_germany = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GER_SCHHOL
 
@@ -5468,6 +6210,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_silesia"
 			set_country_flag = can_form_GER_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_germany = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GER_SILESIA
 
@@ -5522,6 +6271,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_prussia"
 			set_country_flag = can_form_GER_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_germany = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GER_PRUSSIA
 
@@ -5576,6 +6332,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_mecklenburg_pommern"
 			set_country_flag = can_form_GER_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_germany = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GER_MECPOM
 
@@ -5618,6 +6381,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_brandenburg"
 			set_country_flag = can_form_GER_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_germany = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GER_BRANDENBURG
 
@@ -5660,6 +6430,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_central_germany"
 			set_country_flag = can_form_GER_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_germany = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = GER_CENTRAL
 
@@ -5704,6 +6481,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_GER_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = OSA_otto_strasser ruling_only = yes } }
@@ -5766,6 +6550,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_hispaniola"
 			set_country_flag = can_form_ANT_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_antilles = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ANT_HISPANIOLA
 
@@ -5808,6 +6599,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_bahamas"
 			set_country_flag = can_form_ANT_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_antilles = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ANT_BAHAMAS
 
@@ -5850,6 +6648,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_british_antilles"
 			set_country_flag = can_form_ANT_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_antilles = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ANT_BRITISH
 
@@ -5899,6 +6704,13 @@ esicolor_formables = {
 				limit = { NOT = { original_tag = LYL } }
 
 				set_country_flag = can_form_SOA_UNITED
+			}
+			hidden_effect = {
+				every_state = {
+					limit = { is_north_america = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
 			}
 
 			set_cosmetic_tag = ANT_UNITED
@@ -5954,6 +6766,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_british_columbia"
 			set_country_flag = can_form_CAN_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_canada = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = FEY }
@@ -6016,6 +6835,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_saskatchewan"
 			set_country_flag = can_form_CAN_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_canada = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CAN_SASKATCHEWAN
 
@@ -6058,6 +6884,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_manitoba"
 			set_country_flag = can_form_CAN_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_canada = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CAN_MANITOBA
 
@@ -6100,6 +6933,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_inuit_states"
 			set_country_flag = can_form_CAN_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_canada = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CAN_INUIT
 
@@ -6142,6 +6982,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_ontario"
 			set_country_flag = can_form_CAN_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_canada = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CAN_ONTARIO
 
@@ -6184,6 +7031,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_quebec"
 			set_country_flag = can_form_CAN_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_canada = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CAN_QUEBEC
 
@@ -6238,6 +7092,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_newfoundland_and_labrador"
 			set_country_flag = can_form_CAN_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_canada = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CAN_NFLLAB
 
@@ -6282,6 +7143,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_CAN_UNITED
 
 			set_country_flag = can_form_NOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_north_america = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { 
@@ -6350,6 +7218,24 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_azerbaijan"
 			set_country_flag = can_form_CAU_TRANS
 			set_country_flag = can_form_PER_IRAN
+			hidden_effect = {
+				if = {
+					limit = { can_form_iran = yes }
+
+					every_state = {
+						limit = { is_iran = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
+				else = {
+					every_state = {
+						limit = { required_states_to_form_transcaucasia = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
+			}
 
 			set_cosmetic_tag = CAU_AZERBAIJAN
 
@@ -6404,6 +7290,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_armenia"
 			set_country_flag = can_form_CAU_TRANS
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_transcaucasia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CAU_ARMENIA
 
@@ -6446,6 +7339,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_georgia"
 			set_country_flag = can_form_CAU_TRANS
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_transcaucasia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CAU_GEORGIA
 
@@ -6491,6 +7391,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_PER_IRAN
 
 			set_country_flag = can_form_CAU_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_caucasia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CAU_TRANS
 
@@ -6549,6 +7456,13 @@ esicolor_formables = {
 
 			set_country_flag = can_form_CAU_UNITED
 			set_country_flag = can_form_SRS_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_caucasia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CAU_CIS
 
@@ -6607,6 +7521,13 @@ esicolor_formables = {
 
 			set_country_flag = can_form_SOV_UNITED
 			set_country_flag = can_form_MEA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ussr = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CAU_UNITED
 
@@ -6661,6 +7582,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_nigeria"
 			set_country_flag = can_form_WAF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_west_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = WAF_NIGERIA
 
@@ -6703,6 +7631,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_sokoto"
 			set_country_flag = can_form_WAF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_west_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = WAF_SOKOTO
 
@@ -6745,6 +7680,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_niger"
 			set_country_flag = can_form_WAF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_west_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = WAF_NIGER
 
@@ -6787,6 +7729,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_mali"
 			set_country_flag = can_form_WAF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_west_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = WAF_MALI
 
@@ -6829,6 +7778,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_senegambia"
 			set_country_flag = can_form_WAF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_west_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = WAF_SENEGAMBIA
 
@@ -6873,6 +7829,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_WAF_UNITED
 
 			set_country_flag = can_form_AFR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = WAF_UNITED
 
@@ -6927,6 +7890,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_sardinia_piedmont"
 			set_country_flag = can_form_ITA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_italy = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ITA_SARDINIA
 
@@ -6981,6 +7951,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_lombardy_venice"
 			set_country_flag = can_form_ITA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_italy = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ITA_LOMVEN
 
@@ -7035,6 +8012,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_central_italy"
 			set_country_flag = can_form_ITA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_italy = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = OOZ_papa_pio_xi ruling_only = yes } }
@@ -7090,6 +8074,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_two_sicilies"
 			set_country_flag = can_form_ITA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_italy = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = ITA_SICILIES
 
@@ -7134,6 +8125,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_ITA_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = IIF_benito_mussolini ruling_only = yes } }
@@ -7196,6 +8194,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_norway"
 			set_country_flag = can_form_NDC_SCANDINAVIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_scandinavia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = YZZ_peder_anker_wedel_jarlsberg ruling_only = yes } }
@@ -7258,6 +8263,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_sweden"
 			set_country_flag = can_form_NDC_SCANDINAVIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_scandinavia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = NDC_SWEDEN
 
@@ -7312,6 +8324,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_denmark"
 			set_country_flag = can_form_NDC_SCANDINAVIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_scandinavia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = NDC_DENMARK
 
@@ -7367,6 +8386,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_finland"
 			set_country_flag = can_form_NDC_UNITED
 			set_country_flag = can_form_FUG_ESTFIN
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_nordic_council = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = YZB_otto_wille_kuusinen ruling_only = yes } }
@@ -7435,6 +8461,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_arctic"
 			set_country_flag = can_form_NDC_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_nordic_council = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = YIA_grand_admiral_johan_mayen ruling_only = yes } }
@@ -7499,6 +8532,13 @@ esicolor_formables = {
 			set_country_flag = can_form_NDC_UNITED
 			set_country_flag = can_form_FUG_UNITED
 			set_country_flag = can_form_SVR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_finno_ugria = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = NDC_KARELIA
 
@@ -7542,6 +8582,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_sapmi"
 			set_country_flag = can_form_NDC_UNITED
 			set_country_flag = can_form_FUG_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_nordic_council = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = NDC_SAPMI
 
@@ -7599,6 +8646,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_NDC_NORTHSEA
 
 			set_country_flag = can_form_NDC_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_nordic_council = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = NDC_SCANDINAVIA
 
@@ -7656,6 +8710,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_NDC_SCANDINAVIA
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = NDC_NORTHSEA
 
@@ -7714,6 +8775,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_SVR_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = YIA_grand_admiral_johan_mayen ruling_only = yes } }
@@ -7776,6 +8844,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_poland"
 			set_country_flag = can_form_PLC_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_poland_lithuania = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = OBB_stanislaw_mikolajczyk ruling_only = yes } }
@@ -7838,6 +8913,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_galicja"
 			set_country_flag = can_form_DNB_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_danubia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PLC_GALICJA
 
@@ -7893,6 +8975,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_belarus"
 			set_country_flag = can_form_EUR_UNITED
 			set_country_flag = can_form_SOV_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ussr = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PLC_BELARUS
 
@@ -7950,6 +9039,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_BAL_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PLC_UNITED
 
@@ -8004,6 +9100,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_egypt"
 			set_country_flag = can_form_NIL_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_nile = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = NIL_EGYPT
 
@@ -8046,6 +9149,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_sudan"
 			set_country_flag = can_form_NIL_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_nile = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = NIL_SUDAN
 
@@ -8095,6 +9205,23 @@ esicolor_formables = {
 				limit = { can_form_egypt = yes }
 
 				set_country_flag = can_form_MEA_UNITED
+
+				hidden_effect = {
+					every_state = {
+						limit = { required_states_to_form_middle_east = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
+			}
+			else = {
+				hidden_effect = {
+					every_state = {
+						limit = { required_states_to_form_africa = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
 			}
 
 			set_cosmetic_tag = NIL_UNITED
@@ -8150,6 +9277,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_white_sea"
 			set_country_flag = can_form_SVR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_severnaya = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = FUG_WHITE
 
@@ -8205,6 +9339,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_komi"
 			set_country_flag = can_form_FUG_UNITED
 			set_country_flag = can_form_SVR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_severnaya = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = FUG_KOMI
 
@@ -8248,6 +9389,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_yamalia"
 			set_country_flag = can_form_FUG_UNITED
 			set_country_flag = can_form_SBR_WEST
+			hidden_effect = {
+				every_state = {
+					limit = { is_western_siberia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = FUG_YAMALIA
 
@@ -8291,6 +9439,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_ostyak_vogul"
 			set_country_flag = can_form_FUG_UNITED
 			set_country_flag = can_form_SBR_WEST
+			hidden_effect = {
+				every_state = {
+					limit = { is_western_siberia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = FUG_OSTVOG
 
@@ -8337,6 +9492,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_NDC_UNITED
 
 			set_country_flag = can_form_FUG_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_finno_ugria = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = FUG_ESTFIN
 
@@ -8404,9 +9566,25 @@ esicolor_formables = {
 				}
 
 				set_country_flag = can_form_SOV_UNITED
+
+				hidden_effect = {
+					every_state = {
+						limit = { required_states_to_form_ussr = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
 			}
 			else = {
 				set_country_flag = can_form_EUR_UNITED
+
+				hidden_effect = {
+					every_state = {
+						limit = { required_states_to_form_europe = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
 			}
 
 			set_cosmetic_tag = FUG_UNITED
@@ -8462,6 +9640,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_don"
 			set_country_flag = can_form_SRS_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_russia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = SRS_DON
 
@@ -8504,6 +9689,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_kuban"
 			set_country_flag = can_form_SRS_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_russia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = SRS_KUBAN
 
@@ -8546,6 +9738,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_volgograd"
 			set_country_flag = can_form_SRS_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_russia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = ZIF_iosif_stalin ruling_only = yes } }
@@ -8596,6 +9795,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_kalmykia"
 			set_country_flag = can_form_SRS_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_russia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = ZEL }
@@ -8647,6 +9853,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_crimea"
 			set_country_flag = can_form_SRS_UNITED
 			set_country_flag = can_form_UKR_SOUTH
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ukraine = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = SRS_CRIMEA
 
@@ -8693,6 +9906,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_UKR_UNITED
 
 			set_country_flag = can_form_RUS_WEST
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_west_russia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = ZIF_iosif_stalin ruling_only = yes } }
@@ -8756,6 +9976,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_hawaii"
 			set_country_flag = can_form_PLY_UNITED
 			set_country_flag = can_form_USA_WEST
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_polynesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PLY_HAWAII
 
@@ -8798,6 +10025,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_mariana"
 			set_country_flag = can_form_PLY_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_polynesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PLY_MARIANA
 
@@ -8840,6 +10074,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_micronesia"
 			set_country_flag = can_form_PLY_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_polynesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PLY_MICRONESIA
 
@@ -8882,6 +10123,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_fiji"
 			set_country_flag = can_form_PLY_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_polynesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PLY_FIJI
 
@@ -8924,6 +10172,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_tahiti"
 			set_country_flag = can_form_PLY_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_polynesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PLY_TAHITI
 
@@ -8966,6 +10221,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_rapa_nui"
 			set_country_flag = can_form_PLY_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_polynesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PLY_RAPANUI
 
@@ -9008,6 +10270,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_samoa"
 			set_country_flag = can_form_PLY_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_polynesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PLY_SAMOA
 
@@ -9052,6 +10321,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MAJ_PAPUA
 
 			set_country_flag = can_form_PLY_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_polynesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PLY_SOLOMON
 
@@ -9106,6 +10382,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_new_zealand"
 			set_country_flag = can_form_PLY_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_polynesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PLY_ZEALAND
 
@@ -9159,6 +10442,13 @@ esicolor_formables = {
 			}
 			set_country_flag = can_form_OCE_UNITED
 			set_country_flag = can_form_ASI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_oceania = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PLY_UNITED
 
@@ -9214,6 +10504,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_malaya"
 			set_country_flag = can_form_MAJ_MALAYSIA
 			set_country_flag = can_form_IDC_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_malaysia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = EEL_shenton_thomas ruling_only = yes } }
@@ -9276,6 +10573,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_north_borneo"
 			set_country_flag = can_form_MAJ_MALAYSIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_malaysia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MAJ_NBORNEO
 
@@ -9332,6 +10636,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_IDC_UNITED
 
 			set_country_flag = can_form_MAJ_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_nusantara = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = EEL_shenton_thomas ruling_only = yes } }
@@ -9394,6 +10705,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_sumatra"
 			set_country_flag = can_form_MAJ_INDONESIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_indonesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = NAY_syarif_kasim ruling_only = yes } }
@@ -9444,6 +10762,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_java"
 			set_country_flag = can_form_MAJ_INDONESIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_indonesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { 
@@ -9499,6 +10824,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_timor"
 			set_country_flag = can_form_MAJ_LSUNDA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_lesser_sunda = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = FZI }
@@ -9549,6 +10881,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_lesser_sunda"
 			set_country_flag = can_form_MAJ_INDONESIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_indonesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = FZI }
@@ -9611,6 +10950,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_south_borneo"
 			set_country_flag = can_form_MAJ_INDONESIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_indonesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MAJ_SBORNEO
 
@@ -9653,6 +10999,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_sulawesi"
 			set_country_flag = can_form_MAJ_INDONESIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_indonesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MAJ_SULAWESI
 
@@ -9695,6 +11048,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_maluku"
 			set_country_flag = can_form_MAJ_INDONESIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_indonesia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MAJ_MALUKU
 
@@ -9738,6 +11098,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_west_papua"
 			set_country_flag = can_form_MAJ_INDONESIA
 			set_country_flag = can_form_MAJ_PAPUA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_papua = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MAJ_WPAPUA
 
@@ -9783,6 +11150,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MAJ_PAPUA
 
 			set_country_flag = can_form_MAJ_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_nusantara = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = {
@@ -9869,6 +11243,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_philippines"
 			set_country_flag = can_form_MAJ_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_nusantara = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MAJ_PHILIPPINES
 
@@ -9914,6 +11295,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MAJ_INDONESIA
 
 			set_country_flag = can_form_MAJ_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_nusantara = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MAJ_PAPUA
 
@@ -9972,6 +11360,13 @@ esicolor_formables = {
 
 			set_country_flag = can_form_OCE_UNITED
 			set_country_flag = can_form_ASI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_oceania = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MAJ_UNITED
 
@@ -10027,6 +11422,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_australian_iot"
 			set_country_flag = can_form_AST_UNITED
 			set_country_flag = can_form_MAJ_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_australia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = AST_INDIANOT
 
@@ -10069,6 +11471,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_western_australia"
 			set_country_flag = can_form_AST_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_australia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = AST_WESTERN
 
@@ -10111,6 +11520,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_queensland"
 			set_country_flag = can_form_AST_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_australia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = AST_QUEENSLAND
 
@@ -10156,6 +11572,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MAJ_UNITED
 
 			set_country_flag = can_form_OCE_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_oceania = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = AST_UNITED
 
@@ -10212,6 +11635,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MSP_KURD
 
 			set_country_flag = can_form_MSP_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_mesopotamia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MSP_IRAQ
 
@@ -10266,6 +11696,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_syria"
 			set_country_flag = can_form_MSP_LEVANT
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_levant = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MSP_SYRIA
 
@@ -10321,6 +11758,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_anatolian_kurdistan"
 			set_country_flag = can_form_MSP_KURD
 			set_country_flag = can_form_TUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_kurdistan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MSP_KURDTUR
 
@@ -10364,6 +11808,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_iranian_kurdistan"
 			set_country_flag = can_form_MSP_KURD
 			set_country_flag = can_form_PER_IRAN
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_kurdistan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MSP_KURDPER
 
@@ -10423,6 +11874,13 @@ esicolor_formables = {
 
 			set_country_flag = can_form_MSP_UNITED
 			set_country_flag = can_form_PER_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_mesopotamia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MSP_KURD
 
@@ -10479,6 +11937,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MSP_LEVANT
 
 			set_country_flag = can_form_MSP_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_mesopotamia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = ASS_abdullah_bin_al_hussein ruling_only = yes } }
@@ -10544,6 +12009,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_PER_UNITED
 
 			set_country_flag = can_form_MEA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_middle_east = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = {
@@ -10611,6 +12083,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_western_ukraine"
 			set_country_flag = can_form_UKR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ukraine = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = UKR_WEST
 
@@ -10665,6 +12144,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_central_ukraine"
 			set_country_flag = can_form_UKR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ukraine = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = UKR_CENTER
 
@@ -10707,6 +12193,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_eastern_ukraine"
 			set_country_flag = can_form_UKR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ukraine = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = UKR_EAST
 
@@ -10763,6 +12256,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_SRS_UNITED
 
 			set_country_flag = can_form_UKR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ukraine = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = UKR_SOUTH
 
@@ -10820,6 +12320,13 @@ esicolor_formables = {
 
 			set_country_flag = can_form_SOV_UNITED
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ussr = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = UKR_UNITED
 
@@ -10875,6 +12382,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_marmara"
 			set_country_flag = can_form_TUR_UNITED
 			set_country_flag = can_form_UBF_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_turkey = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = EAI_halife_abdulmecid_efendi ruling_only = yes } }
@@ -10937,6 +12451,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_karadeniz"
 			set_country_flag = can_form_TUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_turkey = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = TUR_KARADENIZ
 
@@ -10991,6 +12512,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_central_anatolia"
 			set_country_flag = can_form_TUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_turkey = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = TUR_CENTRAL
 
@@ -11033,6 +12561,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_aegea"
 			set_country_flag = can_form_TUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_turkey = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = TUR_AEGEA
 
@@ -11089,6 +12624,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MSP_LEVANT
 
 			set_country_flag = can_form_TUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_turkey = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = TUR_AKDENIZ
 
@@ -11151,6 +12693,13 @@ esicolor_formables = {
 
 			set_country_flag = can_form_EUR_UNITED
 			set_country_flag = can_form_MEA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_middle_east = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = EAI_halife_abdulmecid_efendi ruling_only = yes } }
@@ -11218,6 +12767,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_west_mediterranean"
 			set_country_flag = can_form_MED_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_mediterranean = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MED_WEST
 
@@ -11263,6 +12819,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_GRE_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MED_UNITED
 
@@ -11317,6 +12880,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_north_brazil"
 			set_country_flag = can_form_BRA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_brazil = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = BRA_NORTH
 
@@ -11359,6 +12929,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_northwest_brazil"
 			set_country_flag = can_form_BRA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_brazil = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = YEB_henry_ford ruling_only = yes } }
@@ -11423,6 +13000,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_LAP_UNITED
 
 			set_country_flag = can_form_BRA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_brazil = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = BRA_CENTRAL
 
@@ -11466,6 +13050,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_south_brazil"
 			set_country_flag = can_form_BRA_UNITED
 			set_country_flag = can_form_LAP_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_brazil = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = BRA_SOUTHEAST
 
@@ -11508,6 +13099,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_southeast_brazil"
 			set_country_flag = can_form_BRA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_brazil = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = BRA_SOUTHEAST
 
@@ -11553,6 +13151,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_LAP_UNITED
 
 			set_country_flag = can_form_SOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_america = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = YEF_lampiao ruling_only = yes } }
@@ -11625,6 +13230,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_upper_france"
 			set_country_flag = can_form_FRA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_france = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = FRA_NORTH
 
@@ -11667,6 +13279,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_grand_est"
 			set_country_flag = can_form_FRA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_france = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = FRA_EAST
 
@@ -11710,6 +13329,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_french_alps"
 			set_country_flag = can_form_FRA_UNITED
 			set_country_flag = can_form_ALP_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_france = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = FRA_ALPS
 
@@ -11752,6 +13378,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_occitania"
 			set_country_flag = can_form_FRA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_france = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = OZL_philippe_petain ruling_only = yes } }
@@ -11802,6 +13435,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_orleans"
 			set_country_flag = can_form_FRA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_france = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = FRA_ORLEANS
 
@@ -11846,6 +13486,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_CLT_UNITED
 
 			set_country_flag = can_form_FRA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_france = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = FRA_WEST
 
@@ -11902,6 +13549,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_FRA_UNITED
 
 			set_country_flag = can_form_EUR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_europe = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = OZA_jean_iii ruling_only = yes } }
@@ -11969,6 +13623,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_trans_urals"
 			set_country_flag = can_form_SBR_WEST
+			hidden_effect = {
+				every_state = {
+					limit = { is_western_siberia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = AOE_metropolitan_meletius ruling_only = yes } }
@@ -12021,6 +13682,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_SBR_WEST
 
 			set_country_flag = can_form_SBR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_siberia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = AOE_metropolitan_meletius ruling_only = yes } }
@@ -12073,6 +13741,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_SBR_KRASNOYARSK
 
 			set_country_flag = can_form_SBR_CENTRAL
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_siberia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = SBR_EVENKIA
 
@@ -12115,6 +13790,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_taymiria"
 			set_country_flag = can_form_SBR_KRASNOYARSK
+			hidden_effect = {
+				every_state = {
+					limit = { is_krasnoyarsk_krai = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = SBR_TAYMIRIA
 
@@ -12158,6 +13840,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_baikal"
 			set_country_flag = can_form_SBR_CENTRAL
 			set_country_flag = can_form_MON_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_siberia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = SLA }
@@ -12222,6 +13911,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_SBR_KRASNOYARSK
 
 			set_country_flag = can_form_SBR_CENTRAL
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_siberia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = SBR_KRASNOYARSK
 
@@ -12264,6 +13960,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_yakutia"
 			set_country_flag = can_form_SBR_CENTRAL
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_siberia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = SBR_YAKUTIA
 
@@ -12309,6 +14012,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MON_UNITED
 
 			set_country_flag = can_form_SBR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_siberia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = SBR_CENTRAL
 
@@ -12351,6 +14061,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_chukotka"
 			set_country_flag = can_form_SBR_EAST
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_far_eastern_republic = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = SBR_CHUKOTKA
 
@@ -12393,6 +14110,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_vladivostok"
 			set_country_flag = can_form_SBR_EAST
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_far_eastern_republic = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = SBR_VLADIVOSTOK
 
@@ -12436,6 +14160,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_sakhalin"
 			set_country_flag = can_form_SBR_EAST
 			set_country_flag = can_form_JAP_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_far_eastern_republic = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = LSS }
@@ -12500,6 +14231,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_SBR_EAST
 
 			set_country_flag = can_form_SBR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_siberia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = {
@@ -12569,6 +14307,14 @@ esicolor_formables = {
 			clr_country_flag = can_form_SBR_UNITED
 
 			set_country_flag = can_form_ASI_UNITED
+			set_country_flag = can_form_SOV_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ussr = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = AOE_metropolitan_meletius ruling_only = yes } }
@@ -12645,6 +14391,13 @@ esicolor_formables = {
 
 			set_country_flag = can_form_NOA_UNITED
 			set_country_flag = can_form_SOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_north_america = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USC_UNITED
 
@@ -12699,6 +14452,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_rio_grande"
 			set_country_flag = can_form_MEX_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_mexico = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MEX_RIOGRANDE
 
@@ -12741,6 +14501,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_northwest_mexico"
 			set_country_flag = can_form_MEX_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_mexico = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MEX_NORTHWEST
 
@@ -12783,6 +14550,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_central_mexico"
 			set_country_flag = can_form_MEX_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_mexico = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MEX_CENTRAL
 
@@ -12825,6 +14599,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_south_mexico"
 			set_country_flag = can_form_MEX_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_mexico = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = BGB }
@@ -12878,6 +14659,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_USC_UNITED
 
 			set_country_flag = can_form_NOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_north_america = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MEX_UNITED
 
@@ -12920,6 +14708,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_khorasan"
 			set_country_flag = can_form_PER_IRAN
+			hidden_effect = {
+				every_state = {
+					limit = { is_iran = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PER_KHORASAN
 
@@ -12962,6 +14757,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_north_iran"
 			set_country_flag = can_form_PER_IRAN
+			hidden_effect = {
+				every_state = {
+					limit = { is_iran = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PER_NORTH
 
@@ -13004,6 +14806,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_central_iran"
 			set_country_flag = can_form_PER_IRAN
+			hidden_effect = {
+				every_state = {
+					limit = { is_iran = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PER_CENTRAL
 
@@ -13046,6 +14855,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_south_iran"
 			set_country_flag = can_form_PER_IRAN
+			hidden_effect = {
+				every_state = {
+					limit = { is_iran = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PER_SOUTH
 
@@ -13105,6 +14921,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_SOV_UNITED
 
 			set_country_flag = can_form_PER_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_persia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = AIZ_mohammad_hassan_mirza ruling_only = yes } }
@@ -13156,6 +14979,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_afghanistan"
 			set_country_flag = can_form_PER_UNITED
 			set_country_flag = can_form_APK_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_persia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PER_AFGHANISTAN
 
@@ -13199,6 +15029,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_tajikistan"
 			set_country_flag = can_form_PER_UNITED
 			set_country_flag = can_form_SOV_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_persia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PER_TAJIKISTAN
 
@@ -13242,6 +15079,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_balochistan"
 			set_country_flag = can_form_PER_UNITED
 			set_country_flag = can_form_PAK_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_iran = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = NIZ }
@@ -13308,6 +15152,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_PAK_UNITED
 
 			set_country_flag = can_form_MEA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_middle_east = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PER_UNITED
 
@@ -13362,6 +15213,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_outer_mongolia"
 			set_country_flag = can_form_MON_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_mongolia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MON_OUTER
 
@@ -13404,6 +15262,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_inner_mongolia"
 			set_country_flag = can_form_MON_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_mongolia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MON_INNER
 
@@ -13461,6 +15326,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_SBR_CENTRAL
 
 			set_country_flag = can_form_ASI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_asia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MON_UNITED
 
@@ -13515,6 +15387,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_tibet"
 			set_country_flag = can_form_HIM_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_himalayas = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = HIM_TIBET
 
@@ -13559,6 +15438,13 @@ esicolor_formables = {
 			set_country_flag = can_form_HIM_UNITED
 			set_country_flag = can_form_PAK_UNITED
 			set_country_flag = can_form_IND_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_india = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = HIM_KASHMIR
 
@@ -13605,6 +15491,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_IND_UNITED
 
 			set_country_flag = can_form_ASI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_asia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = EZA }
@@ -13667,6 +15560,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_qinghai"
 			set_country_flag = can_form_CHI_HUI
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ma_clique = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = {
@@ -13722,6 +15622,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_gansu"
 			set_country_flag = can_form_CHI_HUI
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ma_clique = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = NAA_ma_muqing ruling_only = yes } }
@@ -13772,6 +15679,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_ningxia"
 			set_country_flag = can_form_CHI_HUI
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ma_clique = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = LIL_ma_hongkui ruling_only = yes } }
@@ -13824,6 +15738,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_CHI_HUI
 
 			set_country_flag = can_form_CHI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = {
@@ -13895,6 +15816,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_shaanxi"
 			set_country_flag = can_form_CHI_NORTH
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_north_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_SHAANXI
 
@@ -13937,6 +15865,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_shanxi"
 			set_country_flag = can_form_CHI_NORTH
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_north_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_SHANXI
 
@@ -13991,6 +15926,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_zhili"
 			set_country_flag = can_form_CHI_NORTH
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_north_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_ZHILI
 
@@ -14033,6 +15975,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_north_china"
 			clr_country_flag = can_form_CHI_NORTH
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_north_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_country_flag = can_form_CHI_UNITED
 
@@ -14089,6 +16038,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_manchuria"
 			set_country_flag = can_form_CHI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_MANCHURIA
 
@@ -14133,6 +16089,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_CHI_HUI
 
 			set_country_flag = can_form_CHI_SOUTHWEST
+			hidden_effect = {
+				every_state = {
+					limit = { is_southwest_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_SICHUAN
 
@@ -14175,6 +16138,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_guizhou"
 			set_country_flag = can_form_CHI_SOUTHWEST
+			hidden_effect = {
+				every_state = {
+					limit = { is_southwest_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_GUIZHOU
 
@@ -14217,6 +16187,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_yunnan"
 			set_country_flag = can_form_CHI_SOUTHWEST
+			hidden_effect = {
+				every_state = {
+					limit = { is_southwest_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_YUNNAN
 
@@ -14261,6 +16238,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_CHI_SOUTHWEST
 
 			set_country_flag = can_form_CHI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_SOUTHWEST
 
@@ -14303,6 +16287,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_hubei"
 			set_country_flag = can_form_CHI_CENTRAL
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_HUBEI
 
@@ -14345,6 +16336,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_hunnan"
 			set_country_flag = can_form_CHI_CENTRAL
+			hidden_effect = {
+				every_state = {
+					limit = { is_central_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_HUNNAN
 
@@ -14389,6 +16387,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_CHI_CENTRAL
 
 			set_country_flag = can_form_CHI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_CENTRAL
 
@@ -14431,6 +16436,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_guangxi"
 			set_country_flag = can_form_CHI_SOUTH
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_GUANGXI
 
@@ -14473,6 +16485,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_guangdong"
 			set_country_flag = can_form_CHI_SOUTH
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_GUANGDONG
 
@@ -14529,6 +16548,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_CHI_SOUTH
 
 			set_country_flag = can_form_CHI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_SOUTH
 
@@ -14583,6 +16609,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_anhui"
 			set_country_flag = can_form_CHI_EAST
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_east_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_ANHUI
 
@@ -14625,6 +16658,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_jiangsu"
 			set_country_flag = can_form_CHI_EAST
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_east_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_JIANGSU
 
@@ -14667,6 +16707,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_shandong"
 			set_country_flag = can_form_CHI_EAST
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_east_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_SHANDONG
 
@@ -14712,6 +16759,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_PLY_UNITED
 
 			set_country_flag = can_form_CHI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_china = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = CHI_EAST
 
@@ -14768,6 +16822,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_CHI_UNITED
 
 			set_country_flag = can_form_ASI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_asia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = EZB_aisin_gioro_puyi ruling_only = yes } }
@@ -14830,6 +16891,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_paraguay"
 			set_country_flag = can_form_LAP_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_la_plata = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = LAP_PARAGUAY
 
@@ -14884,6 +16952,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_uruguay"
 			set_country_flag = can_form_LAP_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_la_plata = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = EOO_gabriel_terra ruling_only = yes } }
@@ -14940,6 +17015,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_argentine_la_plata"
 			set_country_flag = can_form_LAP_UNITED
 			set_country_flag = can_form_LAP_ARGENTINA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_argentina = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = SIO_pedro_pablo_ramirez ruling_only = yes } }
@@ -14990,6 +17072,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_argentine_andes"
 			set_country_flag = can_form_LAP_ARGENTINA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_argentina = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = LAP_ARGAND
 
@@ -15033,6 +17122,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_argentine_patagonia"
 			set_country_flag = can_form_LAP_ARGENTINA
 			set_country_flag = can_form_LAP_PATAGONIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_argentina = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = ZYY }
@@ -15100,6 +17196,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_north_chile"
 			set_country_flag = can_form_LAP_CHILE
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_chile = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = LAP_NCHILE
 
@@ -15155,6 +17258,13 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_south_chile"
 			set_country_flag = can_form_LAP_CHILE
 			set_country_flag = can_form_LAP_PATAGONIA
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_chile = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = LAP_SCHILE
 
@@ -15213,6 +17323,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_LAP_ARGENTINA
 
 			set_country_flag = can_form_SOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_america = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = SIO_pedro_pablo_ramirez ruling_only = yes } }
@@ -15279,6 +17396,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_LAP_PATAGONIA
 
 			set_country_flag = can_form_SOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_america = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = ZYY }
@@ -15354,6 +17478,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_LAP_PATAGONIA
 
 			set_country_flag = can_form_SOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_america = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = LAP_CHILE
 
@@ -15412,6 +17543,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_LAP_CHILE
 
 			set_country_flag = can_form_SOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_south_america = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = YSO_manuel_manquilef ruling_only = yes } }
@@ -15484,6 +17622,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_saratov"
 			set_country_flag = can_form_PRV_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_privolzhsk = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = BZY }
@@ -15534,6 +17679,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_idel_ural"
 			set_country_flag = can_form_PRV_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_privolzhsk = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PRV_IDELURAL
 
@@ -15578,6 +17730,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_PRV_UNITED
 
 			set_country_flag = can_form_RUS_WEST
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_west_russia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PRV_UNITED
 
@@ -15620,6 +17779,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_leningrad"
 			set_country_flag = can_form_SVR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_severnaya = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = SVR_LENINGRAD
 
@@ -15662,6 +17828,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_pskov"
 			set_country_flag = can_form_SVR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_severnaya = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = SVR_PSKOV
 
@@ -15708,6 +17881,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_NDC_UNITED
 
 			set_country_flag = can_form_RUS_WEST
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_west_russia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = SVR_UNITED
 
@@ -15762,6 +17942,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_tver"
 			set_country_flag = can_form_MSC_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_muscovy = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MSC_TVER
 
@@ -15804,6 +17991,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_smolensk"
 			set_country_flag = can_form_MSC_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_muscovy = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MSC_SMOLENSK
 
@@ -15848,6 +18042,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_MSC_UNITED
 
 			set_country_flag = can_form_RUS_WEST
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_west_russia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MSC_UNITED
 
@@ -15892,6 +18093,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_RUS_WEST
 
 			set_country_flag = can_form_RUS_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_russia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = RUS_WEST
 
@@ -15948,6 +18156,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_RUS_UNITED
 
 			set_country_flag = can_form_SOV_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_ussr = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = RUS_UNITED
 
@@ -16002,6 +18217,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_korea"
 			set_country_flag = can_form_ASI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_asia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = NEO_jiro_minami ruling_only = yes } }
@@ -16052,6 +18274,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_honshu"
 			set_country_flag = can_form_JAP_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_japan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = JAP_HONSHU
 
@@ -16094,6 +18323,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_ainu"
 			set_country_flag = can_form_JAP_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_japan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = JAP_AINU
 
@@ -16148,6 +18384,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_kyushu_and_shikoku"
 			set_country_flag = can_form_JAP_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_japan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = JAP_KYUSHU
 
@@ -16206,6 +18449,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_SBR_EAST
 
 			set_country_flag = can_form_ASI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_asia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { original_tag = LSS }
@@ -16268,6 +18518,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_northwestern_provinces"
 			set_country_flag = can_form_PAK_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_pakistan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PAK_NORTHWEST
 
@@ -16311,6 +18568,24 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_punjab"
 			set_country_flag = can_form_PAK_UNITED
 			set_country_flag = can_form_IND_UNITED
+			hidden_effect = {
+				if = {
+					limit = { can_form_pakistan = yes }
+
+					every_state = {
+						limit = { required_states_to_form_pakistan = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
+				else = {
+					every_state = {
+						limit = { required_states_to_form_india = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
+			}
 
 			set_cosmetic_tag = PAK_PUNJAB
 
@@ -16357,6 +18632,14 @@ esicolor_formables = {
 			clr_country_flag = can_form_HIM_UNITED
 
 			set_country_flag = can_form_APK_UNITED
+			set_country_flag = can_form_RAJ_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_hindustan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = PAK_UNITED
 
@@ -16414,6 +18697,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_PER_UNITED
 
 			set_country_flag = can_form_ASI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_asia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = APK_UNITED
 
@@ -16468,6 +18758,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_rajputana"
 			set_country_flag = can_form_IND_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_india = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IND_RAJPUTANA
 
@@ -16510,6 +18807,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_central_india"
 			set_country_flag = can_form_IND_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_india = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = { has_country_leader = { character = AEY_lord_linlithgow ruling_only = yes } }
@@ -16560,6 +18864,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_central_provinces"
 			set_country_flag = can_form_IND_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_india = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IND_CENTRALPROV
 
@@ -16602,6 +18913,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_madras"
 			set_country_flag = can_form_IND_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_india = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IND_MADRAS
 
@@ -16646,6 +18964,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_PAK_UNITED
 
 			set_country_flag = can_form_IND_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_india = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IND_BOMBAY
 
@@ -16702,6 +19027,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_PAK_UNITED
 
 			set_country_flag = can_form_IND_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_india = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IND_BENGAL
 
@@ -16744,6 +19076,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_assam"
 			set_country_flag = can_form_IND_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_india = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IND_ASSAM
 
@@ -16786,6 +19125,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_bihar_and_orissa"
 			set_country_flag = can_form_IND_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_india = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = IND_BIHAR
 
@@ -16831,6 +19177,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_HIM_UNITED
 
 			set_country_flag = can_form_RAJ_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_hindustan = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = {
@@ -16901,6 +19254,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_APK_UNITED
 
 			set_country_flag = can_form_ASI_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_asia = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			if = {
 				limit = {
@@ -16979,6 +19339,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_madagascar"
 			set_country_flag = can_form_AFR_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_africa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = MAD_UNITED
 
@@ -17034,6 +19401,24 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_south_atlantic"
 			set_country_flag = can_form_AFR_UNITED
 			set_country_flag = can_form_SOA_UNITED
+			hidden_effect = {
+				if = {
+					limit = { is_on_continent = africa }
+
+					every_state = {
+						limit = { required_states_to_form_africa = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
+				else = {
+					every_state = {
+						limit = { required_states_to_form_south_america = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
+			}
 
 			set_cosmetic_tag = SAT_UNITED
 
@@ -17089,6 +19474,24 @@ esicolor_formables = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_virginia"
 			set_country_flag = can_form_USA_ATLANTIC
 			set_country_flag = can_form_USA_DIXIE
+			hidden_effect = {
+				if = {
+					limit = { can_form_dixie = yes }
+
+					every_state = {
+						limit = { required_states_to_form_dixie = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
+				else = {
+					every_state = {
+						limit = { required_states_to_form_mid_atlantic = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
+			}
 
 			set_cosmetic_tag = USA_VIRGINIA
 
@@ -17131,6 +19534,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_carolina"
 			set_country_flag = can_form_USA_DIXIE
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_dixie = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USA_CAROLINA
 
@@ -17173,6 +19583,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_dakota"
 			set_country_flag = can_form_USA_MIDWEST
+			hidden_effect = {
+				every_state = {
+					limit = { is_midwest = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USA_DAKOTA
 
@@ -17218,6 +19635,24 @@ esicolor_formables = {
 
 			set_country_flag = can_form_USA_CONFEDERACY
 			set_country_flag = can_form_USA_UNION
+			hidden_effect = {
+				if = {
+					limit = { can_form_csa = yes }
+
+					every_state = {
+						limit = { required_states_to_form_csa = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
+				else = {
+					every_state = {
+						limit = { required_states_to_form_union = yes }
+
+						set_state_flag = priority_claim_of_@PREV
+					}
+				}
+			}
 
 			set_cosmetic_tag = USA_APPALACHIA
 
@@ -17260,6 +19695,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_great_lakes"
 			set_country_flag = can_form_USA_UNION
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_union = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USA_LAKES
 
@@ -17316,6 +19758,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_USA_ATLANTIC
 
 			set_country_flag = can_form_USA_UNION
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_union = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USA_ATLANTIC
 
@@ -17372,6 +19821,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_USA_DIXIE
 
 			set_country_flag = can_form_USA_CONFEDERACY
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_csa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USA_DIXIE
 
@@ -17426,6 +19882,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_texas"
 			set_country_flag = can_form_USA_CONFEDERACY
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_csa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USA_TEXAS
 
@@ -17482,6 +19945,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_USA_MIDWEST
 
 			set_country_flag = can_form_USA_UNION
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_union = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USA_MIDWEST
 
@@ -17524,6 +19994,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_rockies"
 			set_country_flag = can_form_USA_WEST
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_west_usa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USA_ROCKIES
 
@@ -17566,6 +20043,13 @@ esicolor_formables = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision form_pacific"
 			set_country_flag = can_form_USA_WEST
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_west_usa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USA_PACIFIC
 
@@ -17623,6 +20107,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_PLY_UNITED
 
 			set_country_flag = can_form_USA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_usa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USA_WEST
 
@@ -17680,6 +20171,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_USA_UNION
 
 			set_country_flag = can_form_USA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_usa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USA_CONFEDERACY
 
@@ -17737,6 +20235,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_USA_DIXIE
 
 			set_country_flag = can_form_USA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { required_states_to_form_usa = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USA_UNION
 
@@ -17794,6 +20299,13 @@ esicolor_formables = {
 			clr_country_flag = can_form_ANT_UNITED
 
 			set_country_flag = can_form_NOA_UNITED
+			hidden_effect = {
+				every_state = {
+					limit = { is_north_america = yes }
+
+					set_state_flag = priority_claim_of_@PREV
+				}
+			}
 
 			set_cosmetic_tag = USA_UNITED
 

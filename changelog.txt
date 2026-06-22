@@ -332,6 +332,7 @@ Version 2.3.7 (XX.06.2026):
 -- Minor extra translations have been done for Chinese, Japanese and Russian.
 - Reworked the oversea neigbourhood checks to use state scoped arrays instead of long sets of if checks.
 -- This should hopefully work better for the performance.
+- AI will now focus on attacking states needed for formables, provided that they are enabled.
 - Added flags for some states in Argentina, Germany, Indonesia, Malaysia, Mexico, Netherlands, New Zealand and Siam.
 - Added flags for some formables in Argentina, Brazil, Canada, Chile, United States and Poland.
 - Added 7 special advisors across states in New Zealand.
@@ -343,3 +344,9 @@ Version 2.3.7 (XX.06.2026):
 - Added Curtis-Wright as a special designer in North Carolina.
 - Added Central Bank as a possible Industrial Designer trait you can get.
 - Fixed Alberta and Ontario being unable to form Canada.
+- Fixed Altai states being unable to form West Siberia.
+- Fixed Somalian states being unable to form Horn of Africa.
+- Fixed Pakistani states being unable to form Hindustan.
+- Fixed Tannu Tuva being able to form both Central Siberia and Turkestan at the same time.
+- Fixed Zambezia-Moçambique getting access to White Sea formable instead of Kargopol.
+- Fixed Serbia and Croatia formables showing wrong required states onmap.

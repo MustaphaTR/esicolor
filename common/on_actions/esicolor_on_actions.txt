@@ -3,21 +3,28 @@ on_actions = {
 		effect = {
 			log = "[GetDateText] MustaphaTR's Every State Independent main on_startup begin"
 
-			# Hiding the Wasteland tag under the floorboards.
-			# Replace it with the real Kerguelen after startup.
-			OOO = { handle_fake_FIE = yes }
+			OOO = {
+				randomised_preset_effects = yes # set min_max values to match the randomised preset so events work fine as well
+				default_preset_effects = yes
+				setup_other_setup_variables = yes
+				get_total_manpower = yes
+				set_variable = { global.og_per_state_pop = global.per_state_pop }
+				set_variable = { global.og_per_state_pop_half = global.per_state_pop }
+				divide_variable = { global.og_per_state_pop_half = 2 }
+
+				adjust_state_names = yes
+				setup_direct_level_one_plus_formable_visibilties = yes
+				setup_ai_formable_priorities = yes
+				setup_state_without_VP_array = yes
+
+				# Hiding the Wasteland tag under the floorboards.
+				# Replace it with the real Kerguelen after startup.
+				handle_fake_FIE = yes
+			}
 
 			every_country = {
 				if = {
 					limit = { is_ai = no }
-
-					randomised_preset_effects = yes # set min_max values to match the randomised preset so events work fine as well
-					default_preset_effects = yes
-					setup_other_setup_variables = yes
-					get_total_manpower = yes
-					set_variable = { global.og_per_state_pop = global.per_state_pop }
-					set_variable = { global.og_per_state_pop_half = global.per_state_pop }
-					divide_variable = { global.og_per_state_pop_half = 2 }
 
 					if = {
 						limit = { NOT = { original_tag = OOO } }
@@ -25,10 +32,6 @@ on_actions = {
 						set_variable = { esicolor_welcome_screen = 1 }
 						set_variable = { esicolor_setup_screen = 0 }
 					}
-
-					adjust_state_names = yes
-					setup_direct_level_one_plus_formable_visibilties = yes
-					setup_state_without_VP_array = yes
 				}
 
 				set_variable = { THIS.dynamic_pp_gain_modifier = 0 }

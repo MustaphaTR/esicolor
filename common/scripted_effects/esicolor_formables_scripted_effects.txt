@@ -294,3 +294,2603 @@ setup_direct_level_one_plus_formable_visibilties = {
 	EYZ = { set_country_flag = can_form_USA_MIDWEST }
 	LBL = { set_country_flag = can_form_USA_UNITED }
 }
+
+setup_ai_formable_priorities = {
+	every_country = {
+		# Initial formables.
+		if = {
+			limit = { can_form_slovenia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_slovenia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_croatia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_croatia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_bosnia_herzegovina = yes }
+
+			every_state = {
+				limit = { is_bosnia_herzegovina = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_serbia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_serbia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_macedonia = yes }
+
+			every_state = {
+				limit = { is_macedonia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_albania = yes }
+
+			every_state = {
+				limit = { required_states_to_form_albania = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_greek_mainland = yes }
+
+			every_state = {
+				limit = { required_states_to_form_greek_mainland = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_greek_islands = yes }
+
+			every_state = {
+				limit = { required_states_to_form_greek_islands = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_greek_islands = yes }
+
+			every_state = {
+				limit = { required_states_to_form_greek_islands = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_bulgaria = yes }
+
+			every_state = {
+				limit = { required_states_to_form_bulgaria = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_wallachia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_wallachia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_moldavia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_moldavia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_transylvania = yes }
+
+			every_state = {
+				limit = { required_states_to_form_transylvania = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_ireland = yes }
+
+			every_state = {
+				limit = { required_states_to_form_ireland = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_scotland = yes }
+
+			every_state = {
+				limit = { is_scotland = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_england = yes }
+
+			every_state = {
+				limit = { is_england = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_estonia = yes }
+
+			every_state = {
+				limit = { is_estonia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_latvia = yes }
+
+			every_state = {
+				limit = { is_latvia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_lithuania = yes }
+
+			every_state = {
+				limit = { required_states_to_form_lithuania = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_netherlands = yes }
+
+			every_state = {
+				limit = { is_netherlands = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_belgium = yes }
+
+			every_state = {
+				limit = { is_belgium = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_mauritania = yes }
+
+			every_state = {
+				limit = { is_mauritania = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_morocco = yes }
+
+			every_state = {
+				limit = { required_states_to_form_morocco = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_algeria = yes }
+
+			every_state = {
+				limit = { is_algeria = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_tunisia = yes }
+
+			every_state = {
+				limit = { is_tunisia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_libya = yes }
+
+			every_state = {
+				limit = { is_libya = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_panama = yes }
+
+			every_state = {
+				limit = { is_panama = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_colombia = yes }
+
+			every_state = {
+				limit = { is_colombia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_venezuela = yes }
+
+			every_state = {
+				limit = { required_states_to_form_venezuela = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_ecuador = yes }
+
+			every_state = {
+				limit = { required_states_to_form_ecuador = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_peru = yes }
+
+			every_state = {
+				limit = { required_states_to_form_peru = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_guiana = yes }
+
+			every_state = {
+				limit = { required_states_to_form_guiana = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_kazakhstan = yes }
+
+			every_state = {
+				limit = { is_kazakhstan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_uzbekistan = yes }
+
+			every_state = {
+				limit = { required_states_to_form_uzbekistan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_karakalpakstan = yes }
+
+			every_state = {
+				limit = { is_karakalpakstan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_turkmenistan = yes }
+
+			every_state = {
+				limit = { required_states_to_form_turkmenistan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_altai = yes }
+
+			every_state = {
+				limit = { is_altai = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_urumqi = yes }
+
+			every_state = {
+				limit = { required_states_to_form_urumqi = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_khotan = yes }
+
+			every_state = {
+				limit = { is_khotan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_portugal = yes }
+
+			every_state = {
+				limit = { required_states_to_form_portugal = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_andalusia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_andalusia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_aragon = yes }
+
+			every_state = {
+				limit = { is_aragon = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_basque_country = yes }
+
+			every_state = {
+				limit = { required_states_to_form_basque_country = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_castille_leon = yes }
+
+			every_state = {
+				limit = { is_castille_leon = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_saudi_arabia = yes }
+
+			every_state = {
+				limit = { is_saudi_arabia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_gulf_states = yes }
+
+			every_state = {
+				limit = { required_states_to_form_gulf_states = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_oman = yes }
+
+			every_state = {
+				limit = { is_oman = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_yemen = yes }
+
+			every_state = {
+				limit = { is_yemen = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_austria = yes }
+
+			every_state = {
+				limit = { required_states_to_form_austria = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_hungary = yes }
+
+			every_state = {
+				limit = { required_states_to_form_hungary = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_czechia = yes }
+
+			every_state = {
+				limit = { is_czechia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_slovakia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_slovakia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_vietnam = yes }
+
+			every_state = {
+				limit = { is_vietnam = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_laos = yes }
+
+			every_state = {
+				limit = { is_laos = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_cambodia = yes }
+
+			every_state = {
+				limit = { is_cambodia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_siam = yes }
+
+			every_state = {
+				limit = { is_siam = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_burma = yes }
+
+			every_state = {
+				limit = { is_burma = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_kenya = yes }
+
+			every_state = {
+				limit = { is_kenya = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_afar = yes }
+
+			every_state = {
+				limit = { required_states_to_form_afar = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_oromia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_oromia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_benishangul_gumuz = yes }
+
+			every_state = {
+				limit = { is_benishangul_gumuz = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_somalia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_somalia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_chad = yes }
+
+			every_state = {
+				limit = { is_chad = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_congo = yes }
+
+			every_state = {
+				limit = { required_states_to_form_congo = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_angola = yes }
+
+			every_state = {
+				limit = { required_states_to_form_angola = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_bolivia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_bolivia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_south_africa = yes }
+
+			every_state = {
+				limit = { is_south_africa = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_namibia = yes }
+
+			every_state = {
+				limit = { is_namibia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_mozambique = yes }
+
+			every_state = {
+				limit = { is_mozambique = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_zambia = yes }
+
+			every_state = {
+				limit = { is_zambia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_switzerland = yes }
+
+			every_state = {
+				limit = { required_states_to_form_switzerland = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_bavaria = yes }
+
+			every_state = {
+				limit = { is_bavaria = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_bawu = yes }
+
+			every_state = {
+				limit = { is_bawu = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_rhineland = yes }
+
+			every_state = {
+				limit = { is_rhineland = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_hannover = yes }
+
+			every_state = {
+				limit = { is_hannover = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_schleswig_holstein = yes }
+
+			every_state = {
+				limit = { required_states_to_form_schleswig_holstein = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_silesia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_silesia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_prussia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_prussia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_mecklenburg_pommern = yes }
+
+			every_state = {
+				limit = { is_mecklenburg_pommern = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_brandenburg = yes }
+
+			every_state = {
+				limit = { is_brandenburg = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_central_germany = yes }
+
+			every_state = {
+				limit = { is_central_germany = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_bahamas = yes }
+
+			every_state = {
+				limit = { is_bahamas = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_british_antilles = yes }
+
+			every_state = {
+				limit = { is_british_antilles = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_british_columbia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_british_columbia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_saskatchewan = yes }
+
+			every_state = {
+				limit = { is_saskatchewan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_manitoba = yes }
+
+			every_state = {
+				limit = { is_manitoba = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_inuit_states = yes }
+
+			every_state = {
+				limit = { is_inuit_states = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_ontario = yes }
+
+			every_state = {
+				limit = { is_ontario = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_quebec = yes }
+
+			every_state = {
+				limit = { required_states_to_form_quebec = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_newfoundland_and_labrador = yes }
+
+			every_state = {
+				limit = { is_newfoundland_and_labrador = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_azerbaijan = yes }
+
+			every_state = {
+				limit = { required_states_to_form_azerbaijan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_armenia = yes }
+
+			every_state = {
+				limit = { is_armenia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_georgia = yes }
+
+			every_state = {
+				limit = { is_georgia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_mountain_republic = yes }
+
+			every_state = {
+				limit = { required_states_to_form_mountain_republic = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_nigeria = yes }
+
+			every_state = {
+				limit = { is_nigeria = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_niger = yes }
+
+			every_state = {
+				limit = { is_niger = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_mali = yes }
+
+			every_state = {
+				limit = { is_mali = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_senegambia = yes }
+
+			every_state = {
+				limit = { is_senegambia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_sardinia_piedmont = yes }
+
+			every_state = {
+				limit = { required_states_to_form_sardinia_piedmont = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_lombardy_venice = yes }
+
+			every_state = {
+				limit = { required_states_to_form_lombardy_venice = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_central_italy = yes }
+
+			every_state = {
+				limit = { is_central_italy = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_two_sicilies = yes }
+
+			every_state = {
+				limit = { is_two_sicilies = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_norway = yes }
+
+			every_state = {
+				limit = { required_states_to_form_norway = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_sweden = yes }
+
+			every_state = {
+				limit = { required_states_to_form_sweden = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_denmark = yes }
+
+			every_state = {
+				limit = { required_states_to_form_denmark = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_finland = yes }
+
+			every_state = {
+				limit = { required_states_to_form_finland = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_arctic = yes }
+
+			every_state = {
+				limit = { required_states_to_form_arctic = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_karelia = yes }
+
+			every_state = {
+				limit = { is_karelia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_sapmi = yes }
+
+			every_state = {
+				limit = { required_states_to_form_sapmi = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_poland = yes }
+
+			every_state = {
+				limit = { required_states_to_form_poland = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_galicja = yes }
+
+			every_state = {
+				limit = { required_states_to_form_galicja = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_belarus = yes }
+
+			every_state = {
+				limit = { required_states_to_form_belarus = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_egypt = yes }
+
+			every_state = {
+				limit = { is_egypt = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_sudan = yes }
+
+			every_state = {
+				limit = { is_sudan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_white_sea = yes }
+
+			every_state = {
+				limit = { required_states_to_form_white_sea = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_komi = yes }
+
+			every_state = {
+				limit = { is_komi = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_yamalia = yes }
+
+			every_state = {
+				limit = { is_yamalia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_ostyak_vogul = yes }
+
+			every_state = {
+				limit = { is_ostyak_vogul = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_don = yes }
+
+			every_state = {
+				limit = { is_don = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_kuban = yes }
+
+			every_state = {
+				limit = { is_kuban = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_volgograd = yes }
+
+			every_state = {
+				limit = { is_volgograd = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_kalmykia = yes }
+
+			every_state = {
+				limit = { is_kalmykia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_crimea = yes }
+
+			every_state = {
+				limit = { is_crimea = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_hawaii = yes }
+
+			every_state = {
+				limit = { is_hawaii = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_mariana = yes }
+
+			every_state = {
+				limit = { is_mariana = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_micronesia = yes }
+
+			every_state = {
+				limit = { is_micronesia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_fiji = yes }
+
+			every_state = {
+				limit = { is_fiji = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_tahiti = yes }
+
+			every_state = {
+				limit = { is_tahiti = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_rapa_nui = yes }
+
+			every_state = {
+				limit = { is_rapa_nui = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_samoa = yes }
+
+			every_state = {
+				limit = { is_samoa = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_solomon_islands = yes }
+
+			every_state = {
+				limit = { required_states_to_form_solomon_islands = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_new_zealand = yes }
+
+			every_state = {
+				limit = { is_new_zealand = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_malaya = yes }
+
+			every_state = {
+				limit = { required_states_to_form_malaya = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_north_borneo = yes }
+
+			every_state = {
+				limit = { required_states_to_form_north_borneo = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_sumatra = yes }
+
+			every_state = {
+				limit = { is_sumatra = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_java = yes }
+
+			every_state = {
+				limit = { is_java = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_timor = yes }
+
+			every_state = {
+				limit = { is_timor = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_lesser_sunda = yes }
+
+			every_state = {
+				limit = { required_states_to_form_lesser_sunda = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_south_borneo = yes }
+
+			every_state = {
+				limit = { is_south_borneo = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_sulawesi = yes }
+
+			every_state = {
+				limit = { is_sulawesi = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_maluku = yes }
+
+			every_state = {
+				limit = { is_maluku = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_west_papua = yes }
+
+			every_state = {
+				limit = { is_west_papua = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_philippines = yes }
+
+			every_state = {
+				limit = { is_philippines = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_papua = yes }
+
+			every_state = {
+				limit = { required_states_to_form_papua = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_australian_iot = yes }
+
+			every_state = {
+				limit = { is_australian_iot = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_western_australia = yes }
+
+			every_state = {
+				limit = { is_western_australia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_queensland = yes }
+
+			every_state = {
+				limit = { is_queensland = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_iraq = yes }
+
+			every_state = {
+				limit = { required_states_to_form_iraq = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_syria = yes }
+
+			every_state = {
+				limit = { required_states_to_form_syria = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_anatolian_kurdistan = yes }
+
+			every_state = {
+				limit = { is_anatolian_kurdistan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_iranian_kurdistan = yes }
+
+			every_state = {
+				limit = { required_states_to_form_iranian_kurdistan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_western_ukraine = yes }
+
+			every_state = {
+				limit = { required_states_to_form_western_ukraine = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_central_ukraine = yes }
+
+			every_state = {
+				limit = { is_central_ukraine = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_eastern_ukraine = yes }
+
+			every_state = {
+				limit = { required_states_to_form_eastern_ukraine = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_southern_ukraine = yes }
+
+			every_state = {
+				limit = { required_states_to_form_southern_ukraine = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_marmara = yes }
+
+			every_state = {
+				limit = { required_states_to_form_marmara = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_karadeniz = yes }
+
+			every_state = {
+				limit = { required_states_to_form_karadeniz = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_central_anatolia = yes }
+
+			every_state = {
+				limit = { is_central_anatolia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_aegea = yes }
+
+			every_state = {
+				limit = { required_states_to_form_aegea = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_akdeniz = yes }
+
+			every_state = {
+				limit = { required_states_to_form_akdeniz = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_west_mediterranean = yes }
+
+			every_state = {
+				limit = { is_west_mediterranean = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_north_brazil = yes }
+
+			every_state = {
+				limit = { is_north_brazil = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_northwest_brazil = yes }
+
+			every_state = {
+				limit = { required_states_to_form_northwest_brazil = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_central_brazil = yes }
+
+			every_state = {
+				limit = { is_central_brazil = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_south_brazil = yes }
+
+			every_state = {
+				limit = { is_south_brazil = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_southeast_brazil = yes }
+
+			every_state = {
+				limit = { is_southeast_brazil = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_upper_france = yes }
+
+			every_state = {
+				limit = { is_upper_france = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_grand_est = yes }
+
+			every_state = {
+				limit = { is_grand_est = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_french_alps = yes }
+
+			every_state = {
+				limit = { is_french_alps = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_occitania = yes }
+
+			every_state = {
+				limit = { is_occitania = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_orleans = yes }
+
+			every_state = {
+				limit = { is_orleans = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_western_france = yes }
+
+			every_state = {
+				limit = { required_states_to_form_western_france = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_trans_urals = yes }
+
+			every_state = {
+				limit = { is_trans_urals = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_evenkia = yes }
+
+			every_state = {
+				limit = { is_evenkia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_taymiria = yes }
+
+			every_state = {
+				limit = { is_taymiria = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_baikal = yes }
+
+			every_state = {
+				limit = { required_states_to_form_baikal = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_krasnoyarsk_krai = yes }
+
+			every_state = {
+				limit = { is_krasnoyarsk_krai = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_yakutia = yes }
+
+			every_state = {
+				limit = { is_yakutia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_chukotka = yes }
+
+			every_state = {
+				limit = { is_chukotka = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_vladivostok = yes }
+
+			every_state = {
+				limit = { is_vladivostok = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_sakhalin = yes }
+
+			every_state = {
+				limit = { required_states_to_form_sakhalin = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_central_america = yes }
+
+			every_state = {
+				limit = { required_states_to_form_central_america = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_rio_grande = yes }
+
+			every_state = {
+				limit = { is_rio_grande = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_northwest_mexico = yes }
+
+			every_state = {
+				limit = { is_northwest_mexico = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_central_mexico = yes }
+
+			every_state = {
+				limit = { is_central_mexico = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_south_mexico = yes }
+
+			every_state = {
+				limit = { is_south_mexico = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_khorasan = yes }
+
+			every_state = {
+				limit = { is_khorasan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_north_iran = yes }
+
+			every_state = {
+				limit = { is_north_iran = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_central_iran = yes }
+
+			every_state = {
+				limit = { is_central_iran = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_south_iran = yes }
+
+			every_state = {
+				limit = { required_states_to_form_south_iran = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_afghanistan = yes }
+
+			every_state = {
+				limit = { is_afghanistan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_tajikistan = yes }
+
+			every_state = {
+				limit = { is_tajikistan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_balochistan = yes }
+
+			every_state = {
+				limit = { required_states_to_form_balochistan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_outer_mongolia = yes }
+
+			every_state = {
+				limit = { is_outer_mongolia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_inner_mongolia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_inner_mongolia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_tibet = yes }
+
+			every_state = {
+				limit = { is_tibet = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_kashmir = yes }
+
+			every_state = {
+				limit = { is_kashmir = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_qinghai = yes }
+
+			every_state = {
+				limit = { is_qinghai = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_gansu = yes }
+
+			every_state = {
+				limit = { is_gansu = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_ningxia = yes }
+
+			every_state = {
+				limit = { is_ningxia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_shaanxi = yes }
+
+			every_state = {
+				limit = { is_shaanxi = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_shanxi = yes }
+
+			every_state = {
+				limit = { required_states_to_form_shanxi = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_zhili = yes }
+
+			every_state = {
+				limit = { is_zhili = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_manchuria = yes }
+
+			every_state = {
+				limit = { is_manchuria = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_sichuan = yes }
+
+			every_state = {
+				limit = { is_sichuan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_guizhou = yes }
+
+			every_state = {
+				limit = { is_guizhou = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_yunnan = yes }
+
+			every_state = {
+				limit = { is_yunnan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_hubei = yes }
+
+			every_state = {
+				limit = { is_hubei = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_hunnan = yes }
+
+			every_state = {
+				limit = { is_hunnan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_guangxi = yes }
+
+			every_state = {
+				limit = { is_guangxi = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_guangdong = yes }
+
+			every_state = {
+				limit = { required_states_to_form_guangdong = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_anhui = yes }
+
+			every_state = {
+				limit = { is_anhui = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_jiangsu = yes }
+
+			every_state = {
+				limit = { is_jiangsu = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_shandong = yes }
+
+			every_state = {
+				limit = { is_shandong = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_paraguay = yes }
+
+			every_state = {
+				limit = { required_states_to_form_paraguay = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_uruguay = yes }
+
+			every_state = {
+				limit = { is_uruguay = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_argentine_la_plata = yes }
+
+			every_state = {
+				limit = { is_argentine_la_plata = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_argentine_andes = yes }
+
+			every_state = {
+				limit = { is_argentine_andes = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_argentine_patagonia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_argentine_patagonia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_north_chile = yes }
+
+			every_state = {
+				limit = { required_states_to_form_north_chile = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_south_chile = yes }
+
+			every_state = {
+				limit = { required_states_to_form_south_chile = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_saratov = yes }
+
+			every_state = {
+				limit = { is_saratov = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_idel_ural = yes }
+
+			every_state = {
+				limit = { is_idel_ural = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_leningrad = yes }
+
+			every_state = {
+				limit = { is_leningrad = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_pskov = yes }
+
+			every_state = {
+				limit = { is_pskov = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_tver = yes }
+
+			every_state = {
+				limit = { is_tver = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_smolensk = yes }
+
+			every_state = {
+				limit = { is_smolensk = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_korea = yes }
+
+			every_state = {
+				limit = { is_korea = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_honshu = yes }
+
+			every_state = {
+				limit = { is_honshu = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_ainu = yes }
+
+			every_state = {
+				limit = { required_states_to_form_ainu = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_kyushu_and_shikoku = yes }
+
+			every_state = {
+				limit = { required_states_to_form_kyushu_and_shikoku = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_northwestern_provinces = yes }
+
+			every_state = {
+				limit = { is_northwestern_provinces = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_punjab = yes }
+
+			every_state = {
+				limit = { is_punjab = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_rajputana = yes }
+
+			every_state = {
+				limit = { is_rajputana = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_central_india = yes }
+
+			every_state = {
+				limit = { is_central_india = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_central_provinces = yes }
+
+			every_state = {
+				limit = { is_central_provinces = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_madras = yes }
+
+			every_state = {
+				limit = { is_madras = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_bombay = yes }
+
+			every_state = {
+				limit = { required_states_to_form_bombay = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_bengal = yes }
+
+			every_state = {
+				limit = { is_bengal = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_assam = yes }
+
+			every_state = {
+				limit = { is_assam = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_bihar_and_orissa = yes }
+
+			every_state = {
+				limit = { is_bihar_and_orissa = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_madagascar = yes }
+
+			every_state = {
+				limit = { required_states_to_form_madagascar = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_south_atlantic = yes }
+
+			every_state = {
+				limit = { required_states_to_form_south_atlantic = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_virginia = yes }
+
+			every_state = {
+				limit = { is_virginia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_carolina = yes }
+
+			every_state = {
+				limit = { is_carolina = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_dakota = yes }
+
+			every_state = {
+				limit = { is_dakota = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_appalachia = yes }
+
+			every_state = {
+				limit = { is_appalachia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_great_lakes = yes }
+
+			every_state = {
+				limit = { required_states_to_form_great_lakes = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_mid_atlantic = yes }
+
+			every_state = {
+				limit = { required_states_to_form_mid_atlantic = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_dixie = yes }
+
+			every_state = {
+				limit = { required_states_to_form_dixie = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_texas = yes }
+
+			every_state = {
+				limit = { required_states_to_form_texas = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_midwest = yes }
+
+			every_state = {
+				limit = { is_midwest = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_rockies = yes }
+
+			every_state = {
+				limit = { is_rockies = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_pacific = yes }
+
+			every_state = {
+				limit = { required_states_to_form_pacific = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+
+		# Larger formables that has states that can directly form it.
+		else_if = {
+			limit = { can_form_benelux = yes }
+
+			every_state = {
+				limit = { required_states_to_form_benelux = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_yugoslavia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_yugoslavia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_united_kingdom = yes }
+
+			every_state = {
+				limit = { is_united_kingdom = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_magreb = yes }
+
+			every_state = {
+				limit = { is_magreb = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { original_tag = FEZ }
+
+			every_state = {
+				limit = { required_states_to_form_turkestan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_spain = yes }
+
+			every_state = {
+				limit = { required_states_to_form_spain = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_east_africa = yes }
+
+			every_state = {
+				limit = { is_east_africa = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_ethiopia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_ethiopia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_horn_of_africa = yes }
+
+			every_state = {
+				limit = { required_states_to_form_horn_of_africa = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_latin_africa = yes }
+
+			every_state = {
+				limit = { required_states_to_form_latin_africa = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_mutapa = yes }
+
+			every_state = {
+				limit = { is_mutapa = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_antilles = yes }
+
+			every_state = {
+				limit = { required_states_to_form_antilles = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_canada = yes }
+
+			every_state = {
+				limit = { required_states_to_form_canada = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_west_africa = yes }
+
+			every_state = {
+				limit = { required_states_to_form_west_africa = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_finno_ugria = yes }
+
+			every_state = {
+				limit = { required_states_to_form_finno_ugria = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_polynesia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_polynesia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_australia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_australia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_kurdistan = yes }
+
+			every_state = {
+				limit = { required_states_to_form_kurdistan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_levant = yes }
+
+			every_state = {
+				limit = { required_states_to_form_levant = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_mesopotamia = yes }
+
+			every_state = {
+				limit = { required_states_to_form_mesopotamia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_western_siberia = yes }
+
+			every_state = {
+				limit = { is_western_siberia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_central_siberia = yes }
+
+			every_state = {
+				limit = { is_central_siberia = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_far_eastern_republic = yes }
+
+			every_state = {
+				limit = { required_states_to_form_far_eastern_republic = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_himalayas = yes }
+
+			every_state = {
+				limit = { required_states_to_form_himalayas = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_central_china = yes }
+
+			every_state = {
+				limit = { is_central_china = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_south_china = yes }
+
+			every_state = {
+				limit = { required_states_to_form_south_china = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_east_china = yes }
+
+			every_state = {
+				limit = { required_states_to_form_east_china = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_privolzhsk = yes }
+
+			every_state = {
+				limit = { is_privolzhsk = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_severnaya = yes }
+
+			every_state = {
+				limit = { required_states_to_form_severnaya = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_muscovy = yes }
+
+			every_state = {
+				limit = { is_muscovy = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_japan = yes }
+
+			every_state = {
+				limit = { required_states_to_form_japan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_pakistan = yes }
+
+			every_state = {
+				limit = { required_states_to_form_pakistan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_india = yes }
+
+			every_state = {
+				limit = { required_states_to_form_india = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+		else_if = {
+			limit = { can_form_hindustan = yes }
+
+			every_state = {
+				limit = { required_states_to_form_hindustan = yes }
+
+				set_state_flag = priority_claim_of_@PREV
+			}
+		}
+	}
+}

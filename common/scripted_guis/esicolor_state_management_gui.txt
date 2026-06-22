@@ -192,6 +192,14 @@ scripted_gui = {
 			esicolor_claim_button_clickable_click = {
 				ai_will_do = {
 					base = 10
+
+					# Focus on states to form our formables.
+					modifier = {
+						factor = 4
+
+						NOT = { has_global_flag = formables_disabled }
+						has_state_flag = priority_claim_of_@ROOT
+					}
 				}
 			}
 		}
