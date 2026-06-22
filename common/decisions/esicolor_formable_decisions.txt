@@ -14667,7 +14667,20 @@ esicolor_formables = {
 				}
 			}
 
-			set_cosmetic_tag = MEX_UNITED
+			if = {
+				limit = {
+					OR = {
+						has_country_leader = { character = AFB_luis_maria_martinez ruling_only = yes }
+						has_country_leader = { character = ABI_jesus_degollado_guizar ruling_only = yes }
+					}
+				}
+
+				set_cosmetic_tag = MEX_UNITED_CRISTERO
+
+				else = {
+					set_cosmetic_tag = MEX_UNITED
+				}
+			}
 
 			hidden_effect = {
 				every_state = {

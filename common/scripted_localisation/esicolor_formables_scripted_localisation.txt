@@ -5823,6 +5823,14 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_MEX_UNITED
 	text = {
+		trigger = { has_country_leader = { character = AFB_luis_maria_martinez ruling_only = yes } }
+		localization_key = MEX_UNITED_CRISTERO_neutrality_DEF
+	}
+	text = {
+		trigger = { has_country_leader = { character = ABI_jesus_degollado_guizar ruling_only = yes } }
+		localization_key = MEX_UNITED_CRISTERO_fascism_DEF
+	}
+	text = {
 		trigger = { has_government = neutrality }
 		localization_key = MEX_UNITED_neutrality_DEF
 	}
@@ -5839,6 +5847,7 @@ defined_text = {
 		localization_key = MEX_UNITED_communism_DEF
 	}
 }
+
 defined_text = {
 	name = GetIdeologyDef_PER_KHORASAN
 	text = {
