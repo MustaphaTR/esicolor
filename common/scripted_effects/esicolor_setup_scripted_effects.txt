@@ -578,7 +578,7 @@ get_total_manpower = {
 		add_to_array = { global.populations = state_population_k }
 	}
 	set_variable = { global.per_state_pop = global.total_pop }
-	divide_variable = { global.per_state_pop = 1046 }
+	divide_variable = { global.per_state_pop = 1081 }
 	multiply_variable = { global.per_state_pop = 1000 }
 	round_variable = global.per_state_pop
 }
@@ -3223,7 +3223,7 @@ randomise_intelligence_agency = {
 
 			create_intelligence_agency = yes
 		}
-		1046 = {
+		1081 = {
 			modifier = { add = intelligence_agency_minus }
 		}
 	}
