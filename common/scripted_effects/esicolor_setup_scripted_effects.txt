@@ -3185,6 +3185,1089 @@ set_focus_durations = {
 	}
 }
 
+complete_random_focus = {
+	if = {
+		limit = { has_focus_tree = generic_focus }
+
+		random_list = {
+			seed = random
+
+			1 = {
+				complete_national_focus = army_effort
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = army_effort
+				}
+			}
+			1 = {
+				complete_national_focus = equipment_effort
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = army_effort }
+						has_completed_focus = equipment_effort
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = equipment_effort_2
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = equipment_effort }
+						has_completed_focus = equipment_effort_2
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = equipment_effort_3
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = equipment_effort_2 }
+						has_completed_focus = equipment_effort_3
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = motorization_effort
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = army_effort }
+						has_completed_focus = motorization_effort
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = mechanization_effort
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = motorization_effort }
+						has_completed_focus = mechanization_effort
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = armor_effort
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = mechanization_effort }
+						has_completed_focus = armor_effort
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = doctrine_effort
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = army_effort }
+						has_completed_focus = doctrine_effort
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = doctrine_effort_2
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = doctrine_effort }
+						has_completed_focus = doctrine_effort_2
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = special_forces
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = equipment_effort_3 }
+						NOT = { has_completed_focus = doctrine_effort }
+						NOT = { has_completed_focus = armor_effort }
+						has_completed_focus = special_forces
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = aviation_effort
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = aviation_effort
+				}
+			}
+
+			1 = {
+				complete_national_focus = naval_effort
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { any_controlled_state = { is_coastal = yes } }
+						has_completed_focus = naval_effort
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = industrial_effort
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = industrial_effort
+				}
+			}
+			1 = {
+				complete_national_focus = construction_effort
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = industrial_effort }
+						has_completed_focus = construction_effort
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = construction_effort_2
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = construction_effort }
+						has_completed_focus = construction_effort_2
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = infrastructure_effort
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = construction_effort_2 }
+						has_completed_focus = infrastructure_effort
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = infrastructure_effort_2
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = infrastructure_effort }
+						has_completed_focus = infrastructure_effort_2
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = construction_effort_3
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = infrastructure_effort }
+						has_completed_focus = construction_effort_3
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = nuclear_effort
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = infrastructure_effort_2 }
+						has_completed_focus = nuclear_effort
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = extra_tech_slot
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = infrastructure_effort_2 }
+						has_completed_focus = extra_tech_slot
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = secret_weapons
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = infrastructure_effort_2 }
+						has_completed_focus = secret_weapons
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = production_effort
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = industrial_effort }
+						has_completed_focus = production_effort
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = production_effort_2
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = production_effort }
+						has_completed_focus = production_effort_2
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = production_effort_3
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = production_effort_2 }
+						has_completed_focus = production_effort_3
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = political_effort
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = political_effort
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { has_focus_tree = horn_of_africa_tree }
+
+		random_list = {
+			seed = random
+
+			1 = {
+				complete_national_focus = HOA_develop_capitalstate
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = HOA_develop_capitalstate
+				}
+			}
+			1 = {
+				complete_national_focus = HOA_the_state_bank_of_name
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = HOA_develop_capitalstate }
+						has_completed_focus = HOA_the_state_bank_of_name
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = HOA_pave_the_roads
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = HOA_develop_capitalstate }
+						has_completed_focus = HOA_pave_the_roads
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = HOA_the_steam_locomotive
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = HOA_pave_the_roads }
+						has_completed_focus = HOA_the_steam_locomotive
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = HOA_exploit_national_resources
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = HOA_the_steam_locomotive }
+						NOT = { 
+							any_owned_state = {
+								is_controlled_by = ROOT
+								has_any_resources = yes
+							}
+						}
+						has_completed_focus = HOA_exploit_national_resources
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = HOA_the_adjective_armed_forces
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = HOA_the_adjective_armed_forces
+				}
+			}
+			1 = {
+				complete_national_focus = HOA_warrior_tradition
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = HOA_the_adjective_armed_forces }
+						has_completed_focus = HOA_warrior_tradition
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = HOA_the_first_album
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = HOA_the_first_album
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { has_focus_tree = china_warlord_sea_focus }
+
+		random_list = {
+			seed = random
+
+			1 = {
+				complete_national_focus = CHI_sea_secure_internal_politics
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = CHI_sea_secure_internal_politics
+				}
+			}
+
+			1 = {
+				complete_national_focus = CHI_sea_industrial_research_projects
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = CHI_sea_industrial_research_projects
+				}
+			}
+			1 = {
+				complete_national_focus = CHI_sea_develop_capital
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = CHI_sea_industrial_research_projects }
+						has_completed_focus = CHI_sea_develop_capital
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = CHI_sea_investment_into_shipbuilding
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = {
+							any_controlled_state = { is_coastal = yes }
+							has_completed_focus = CHI_sea_develop_capital
+						}
+						has_completed_focus = CHI_sea_investment_into_shipbuilding
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = CHI_sea_order_destroyers
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = CHI_sea_investment_into_shipbuilding }
+						has_completed_focus = CHI_sea_order_destroyers
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = CHI_sea_train_marines
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = CHI_sea_order_destroyers }
+						has_completed_focus = CHI_sea_train_marines
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = CHI_sea_further_industrial_investment
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = CHI_sea_develop_capital }
+						has_completed_focus = CHI_sea_further_industrial_investment
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = CHI_sea_mining_commission
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = CHI_sea_further_industrial_investment }
+						has_completed_focus = CHI_sea_mining_commission
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = CHI_sea_reform_the_national_bank
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = CHI_sea_mining_commission }
+						has_completed_focus = CHI_sea_reform_the_national_bank
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = CHI_sea_rural_reconstruction_movement
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = {
+							has_completed_focus = CHI_sea_further_industrial_investment
+							has_completed_focus = CHI_sea_develop_capital_arsenal
+						}
+						has_completed_focus = CHI_sea_rural_reconstruction_movement
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = PRC_connecting_the_country
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = CHI_sea_rural_reconstruction_movement }
+						has_completed_focus = PRC_connecting_the_country
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = CHI_sea_develop_capital_arsenal
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = CHI_sea_develop_capital }
+						has_completed_focus = CHI_sea_develop_capital_arsenal
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = CHI_sea_small_arms_production
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = CHI_sea_develop_capital_arsenal }
+						has_completed_focus = CHI_sea_small_arms_production
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = CHI_sea_heavy_weapons_development
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = CHI_sea_small_arms_production }
+						has_completed_focus = CHI_sea_heavy_weapons_development
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = PRC_aviation_infrastructure
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = CHI_sea_develop_capital }
+						has_completed_focus = PRC_aviation_infrastructure
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = CHI_sea_camco
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = PRC_aviation_infrastructure }
+						has_completed_focus = CHI_sea_camco
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = CHI_sea_sino_american_cooperative_organization
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = CHI_sea_camco }
+						has_completed_focus = CHI_sea_sino_american_cooperative_organization
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = CHI_sea_strenghten_warlord_authority
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = CHI_sea_strenghten_warlord_authority
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { has_focus_tree = southern_south_america_focus }
+
+		random_list = {
+			seed = random
+
+			1 = {
+				complete_national_focus = GUAY_laissez_faire
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = GUAY_laissez_faire
+				}
+			}
+			1 = {
+				complete_national_focus = GUAY_empower_the_land_owners
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = GUAY_laissez_faire }
+						has_completed_focus = GUAY_empower_the_land_owners
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = GUAY_river_trade
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = {
+							has_completed_focus = GUAY_empower_the_land_owners
+							has_completed_focus = GUAY_workers_rights
+						}
+						has_completed_focus = GUAY_river_trade
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = GUAY_cash_crop_exports
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = GUAY_river_trade }
+						has_completed_focus = GUAY_cash_crop_exports
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = GUAY_export_focus
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = GUAY_river_trade }
+						has_completed_focus = GUAY_export_focus
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = GUAY_land_reforms
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = GUAY_land_reforms
+				}
+			}
+			1 = {
+				complete_national_focus = GUAY_workers_rights
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = GUAY_land_reforms }
+						has_completed_focus = GUAY_workers_rights
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = GUAY_agricultural_colonization
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = {
+							has_completed_focus = GUAY_empower_the_land_owners
+							has_completed_focus = GUAY_workers_rights
+						}
+						has_completed_focus = GUAY_agricultural_colonization
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = GUAY_beef_and_hide_industry
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = GUAY_agricultural_colonization }
+						has_completed_focus = GUAY_beef_and_hide_industry
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = GUAY_wool_makers
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = GUAY_beef_and_hide_industry }
+						has_completed_focus = GUAY_wool_makers
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = GUAY_heavy_industry
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = GUAY_agricultural_colonization }
+						has_completed_focus = GUAY_heavy_industry
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = GUAY_the_tag_economic_miracle
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						num_of_factories < 14
+						has_completed_focus = GUAY_the_tag_economic_miracle
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = GUAY_protect_domestic_industries
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = GUAY_the_tag_economic_miracle }
+						NOT = {
+							has_completed_focus = GUAY_agricultural_colonization
+							has_completed_focus = GUAY_cash_crop_exports
+						}
+						has_completed_focus = GUAY_protect_domestic_industries
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = GUAY_exploit_mineral_wealth
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = GUAY_the_tag_economic_miracle }
+						NOT = { 
+							any_owned_state = {
+								is_controlled_by = ROOT
+								has_any_resources = yes
+							}
+						}
+						has_completed_focus = GUAY_exploit_mineral_wealth
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = GUAY_rekindle_old_gripes
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = GUAY_rekindle_old_gripes
+				}
+			}
+
+			1 = {
+				complete_national_focus = SMB_army
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = SMB_army
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_logistics_department
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_army }
+						has_completed_focus = SMB_logistics_department
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_support_company
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_logistics_department }
+						has_completed_focus = SMB_support_company
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_military_facilities
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_army }
+						has_completed_focus = SMB_military_facilities
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_army_academy
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_army }
+						has_completed_focus = SMB_army_academy
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = SMB_air_defense
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_army }
+						NOT = { has_completed_focus = SMB_air_force }
+						has_completed_focus = SMB_air_defense
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = SMB_joint_operative_command
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_army_academy }
+						NOT = { has_completed_focus = SMB_air_academy }
+						has_completed_focus = SMB_joint_operative_command
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_war_planning_office
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_joint_operative_command }
+						has_completed_focus = SMB_war_planning_office
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_women_in_aviation
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_war_planning_office }
+						has_government = neutrality
+						has_government = fascism
+						has_completed_focus = SMB_women_in_aviation
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = SMB_air_force
+
+				modifier = {
+					factor = 0
+
+					has_completed_focus = SMB_air_force
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_air_academy
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_air_force }
+						has_completed_focus = SMB_air_academy
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_construct_air_bases
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_air_force }
+						has_completed_focus = SMB_construct_air_bases
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = SMB_fortification_effort
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_air_force }
+						NOT = { has_completed_focus = SMB_navy }
+						has_completed_focus = SMB_fortification_effort
+					}
+				}
+			}
+
+			1 = {
+				complete_national_focus = SMB_navy
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { any_controlled_state = { is_coastal = yes } }
+						has_completed_focus = SMB_navy
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_naval_academy
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_navy }
+						has_completed_focus = SMB_naval_academy
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_construct_naval_bases
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_navy }
+						has_completed_focus = SMB_construct_naval_bases
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_expand_repair_yards
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = { has_completed_focus = SMB_construct_naval_bases }
+						has_completed_focus = SMB_expand_repair_yards
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_naval_foreign_advisors
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = {
+							has_completed_focus = SMB_naval_academy
+							has_completed_focus = SMB_construct_naval_bases
+						}
+						has_completed_focus = SMB_naval_foreign_advisors
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_purchase_destroyers_and_subs
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = {
+							has_completed_focus = SMB_naval_academy
+							has_completed_focus = SMB_construct_naval_bases
+						}
+						has_completed_focus = SMB_purchase_destroyers_and_subs
+					}
+				}
+			}
+			1 = {
+				complete_national_focus = SMB_reescalate_the_naval_arms_race
+
+				modifier = {
+					factor = 0
+
+					OR = {
+						NOT = {
+							has_completed_focus = SMB_naval_foreign_advisors
+							has_completed_focus = SMB_purchase_destroyers_and_subs
+						}
+						has_completed_focus = SMB_reescalate_the_naval_arms_race
+					}
+				}
+			}
+		}
+	}
+}
+
 randomise_stability = {
 	hidden_effect = {
 		set_temp_variable = { stabtoset = 50 }
