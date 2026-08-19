@@ -2342,13 +2342,21 @@ setup_technology_option_1 = {
 }
 
 randomise_technology = {
-	set_temp_variable = { mountaineers_paratroopers_marines_minus = 100 }
 	if = {
 		limit = { has_dlc = "No Compromise, No Surrender" }
 
-		set_temp_variable = { mountaineers_paratroopers_marines_quarter = global.setup_technology_tech_mountaineers_paratroopers_marines }
-		subtract_from_temp_variable = { mountaineers_paratroopers_marines_minus = global.setup_technology_tech_mountaineers_paratroopers_marines }
-		divide_temp_variable = { mountaineers_paratroopers_marines_quarter = 4 }
+		set_temp_variable = {
+			mountaineers_paratroopers_marines_quarter = {
+				value = global.setup_technology_tech_mountaineers_paratroopers_marines
+				divide = 4
+			}
+		}
+		set_temp_variable = {
+			mountaineers_paratroopers_marines_minus = {
+				value = 100
+				subtract = global.setup_technology_tech_mountaineers_paratroopers_marines
+			}
+		}
 		random_list = {
 			seed = random
 			mountaineers_paratroopers_marines_quarter = {
@@ -2367,9 +2375,18 @@ randomise_technology = {
 		}
 	}
 	else = {
-		set_temp_variable = { mountaineers_paratroopers_marines_third = global.setup_technology_tech_mountaineers_paratroopers_marines }
-		subtract_from_temp_variable = { mountaineers_paratroopers_marines_minus = global.setup_technology_tech_mountaineers_paratroopers_marines }
-		divide_temp_variable = { mountaineers_paratroopers_marines_third = 3 }
+		set_temp_variable = {
+			mountaineers_paratroopers_marines_third = {
+				value = global.setup_technology_tech_mountaineers_paratroopers_marines
+				divide = 3
+			}
+		}
+		set_temp_variable = {
+			mountaineers_paratroopers_marines_minus = {
+				value = 100
+				subtract = global.setup_technology_tech_mountaineers_paratroopers_marines
+			}
+		}
 		random_list = {
 			seed = random
 			mountaineers_paratroopers_marines_third = {
@@ -2385,10 +2402,18 @@ randomise_technology = {
 		}
 	}
 
-	set_temp_variable = { transport_1_minus = 100 }
-	subtract_from_temp_variable = { transport_1_minus = global.setup_technology_transport_1 }
-	set_temp_variable = { destroyer_1_minus = 100 }
-	subtract_from_temp_variable = { destroyer_1_minus = global.setup_technology_destroyer_1 }
+	set_temp_variable = {
+		transport_1_minus = {
+			value = 100
+			subtract = global.setup_technology_transport_1
+		}
+	}
+	set_temp_variable = {
+		destroyer_1_minus = {
+			value = 100
+			subtract = global.setup_technology_destroyer_1
+		}
+	}
 	random_list = {
 		seed = random
 		global.setup_technology_transport_1 = {
@@ -2424,28 +2449,49 @@ randomise_technology = {
 
 			set_technology = { tech_support = 1 }
 
-			set_temp_variable = { tech_engineer_recon_mp_minus = 100 }
-			set_temp_variable = { tech_engineer_recon_mp_fifth = global.setup_technology_tech_engineer_recon_mp }
-			subtract_from_temp_variable = { tech_engineer_recon_mp_minus = global.setup_technology_tech_engineer_recon_mp }
-			divide_temp_variable = { tech_engineer_recon_mp_fifth = 5 }
-			set_temp_variable = { tech_engineer_recon_mp_two_fifths = tech_engineer_recon_mp_fifth }
-			multiply_temp_variable = { tech_engineer_recon_mp_two_fifths = 2 }
+			set_temp_variable = {
+				tech_engineer_recon_mp_three_twentieth = {
+					value = global.setup_technology_tech_engineer_recon_mp
+					divide = 20
+					multiply = 3
+				}
+			}
+			set_temp_variable = {
+				tech_engineer_recon_mp_seven_twentieth = {
+					value = global.setup_technology_tech_engineer_recon_mp
+					divide = 20
+					multiply = 7
+				}
+			}
+			set_temp_variable = {
+				tech_engineer_recon_mp_minus = {
+					value = 100
+					subtract = global.setup_technology_tech_engineer_recon_mp
+				}
+			}
 			random_list = {
 				seed = random
-				tech_engineer_recon_mp_two_fifths = {
+				tech_engineer_recon_mp_seven_twentieth = {
 					set_technology = { tech_recon = 1 }
 				}
-				tech_engineer_recon_mp_two_fifths = {
+				tech_engineer_recon_mp_seven_twentieth = {
 					set_technology = { tech_engineers = 1 }
 				}
-				tech_engineer_recon_mp_fifth = {
-					set_technology = { tech_engineers = 1 }
+				tech_engineer_recon_mp_three_twentieth = {
+					set_technology = { tech_military_police = 1 }
+				}
+				tech_engineer_recon_mp_three_twentieth = {
+					set_technology = { tech_maintenance_company = 1 }
 				}
 				tech_engineer_recon_mp_minus = { }
 			}
 
-			set_temp_variable = { submarine_1_minus = 100 }
-			subtract_from_temp_variable = { submarine_1_minus = global.setup_technology_submarine_1 }
+			set_temp_variable = {
+				submarine_1_minus = {
+					value = 100
+					subtract = global.setup_technology_submarine_1
+				}
+			}
 			random_list = {
 				seed = random
 				global.setup_technology_submarine_1 = {
@@ -2475,12 +2521,24 @@ randomise_technology = {
 
 				set_technology = { fuel_silos = 1 }
 
-				set_temp_variable = { synth_oil_experiments_fuel_refining_minus = 100 }
-				set_temp_variable = { synth_oil_experiments_fuel_refining_fifth = global.setup_technology_synth_oil_experiments_fuel_refining }
-				subtract_from_temp_variable = { synth_oil_experiments_fuel_refining_minus = global.setup_technology_synth_oil_experiments_fuel_refining }
-				divide_temp_variable = { synth_oil_experiments_fuel_refining_fifth = 5 }
-				set_temp_variable = { synth_oil_experiments_fuel_refining_four_fifths = synth_oil_experiments_fuel_refining_fifth }
-				multiply_temp_variable = { synth_oil_experiments_fuel_refining_four_fifths = 4 }
+				set_temp_variable = {
+					synth_oil_experiments_fuel_refining_fifth = {
+						value = global.setup_technology_synth_oil_experiments_fuel_refining
+						divide = 5
+					}
+				}
+				set_temp_variable = {
+					synth_oil_experiments_fuel_refining_four_fifths = {
+						value = synth_oil_experiments_fuel_refining_fifth
+						multiply = 4
+					}
+				}
+				set_temp_variable = {
+					synth_oil_experiments_fuel_refining_minus = {
+						value = 100
+						subtract = global.setup_technology_synth_oil_experiments_fuel_refining
+					}
+				}
 				random_list = {
 					seed = random
 					synth_oil_experiments_fuel_refining_fifth = {
@@ -2498,10 +2556,18 @@ randomise_technology = {
 
 				set_technology = { tech_trucks = 1 }
 
-				set_temp_variable = { motorised_infantry_basic_train_minus = 100 }
-				set_temp_variable = { motorised_infantry_basic_train_half = global.setup_technology_motorised_infantry_basic_train }
-				subtract_from_temp_variable = { motorised_infantry_basic_train_minus = global.setup_technology_motorised_infantry_basic_train }
-				divide_temp_variable = { motorised_infantry_basic_train_half = 2 }
+				set_temp_variable = {
+					motorised_infantry_basic_train_half = {
+						value = global.setup_technology_motorised_infantry_basic_train
+						divide = 2
+					}
+				}
+				set_temp_variable = {
+					motorised_infantry_basic_train_minus = {
+						value = 100
+						subtract = global.setup_technology_motorised_infantry_basic_train
+					}
+				}
 				random_list = {
 					seed = random
 					motorised_infantry_basic_train_half = {
@@ -2519,10 +2585,18 @@ randomise_technology = {
 
 				set_technology = { gw_artillery = 1 }
 
-				set_temp_variable = { gwtank_antiair_antitank_minus = 100 }
-				set_temp_variable = { gwtank_antiair_antitank_third = global.setup_technology_gwtank_antiair_antitank }
-				subtract_from_temp_variable = { gwtank_antiair_antitank_minus = global.setup_technology_gwtank_antiair_antitank }
-				divide_temp_variable = { gwtank_antiair_antitank_third = 3 }
+				set_temp_variable = {
+					gwtank_antiair_antitank_third = {
+						value = global.setup_technology_gwtank_antiair_antitank
+						divide = 3
+					}
+				}
+				set_temp_variable = {
+					gwtank_antiair_antitank_minus = {
+						value = 100
+						subtract = global.setup_technology_gwtank_antiair_antitank
+					}
+				}
 				random_list = {
 					seed = random
 					gwtank_antiair_antitank_third = {
@@ -2561,10 +2635,18 @@ randomise_technology = {
 
 				give_early_fighter = yes
 
-				set_temp_variable = { basic_cas_nav_minus = 100 }
-				set_temp_variable = { basic_cas_nav_half = global.setup_technology_basic_cas_nav }
-				subtract_from_temp_variable = { basic_cas_nav_minus = global.setup_technology_basic_cas_nav }
-				divide_temp_variable = { basic_cas_nav_half = 2 }
+				set_temp_variable = {
+					basic_cas_nav_half = {
+						value = global.setup_technology_basic_cas_nav
+						divide = 2
+					}
+				}
+				set_temp_variable = {
+					basic_cas_nav_minus = {
+						value = 100
+						subtract = global.setup_technology_basic_cas_nav
+					}
+				}
 				random_list = {
 					seed = random
 					basic_cas_nav_half = {
