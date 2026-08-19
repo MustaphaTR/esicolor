@@ -182,6 +182,214 @@ handle_special_generals = {
 	else_if = {
 		limit = {
 			var:creator = {
+				has_country_leader = { character = OSZ_heinrich_himmler ruling_only = yes }
+
+				NOT = { has_global_flag = sepp_dietrich_created }
+			}
+		}
+
+		set_global_flag = sepp_dietrich_created
+		set_character_name = GER_sepp_dietrich
+		set_character_flag = special_general
+
+		set_portraits = {
+			civilian = {
+				large = GFX_portrait_GER_sepp_dietrich
+				small = GFX_portrait_GER_sepp_dietrich_small
+			}
+			army = {
+				large = GFX_portrait_GER_sepp_dietrich
+				small = GFX_portrait_GER_sepp_dietrich_small
+			}
+			navy = {
+				large = GFX_portrait_GER_sepp_dietrich
+				small = GFX_portrait_GER_sepp_dietrich_small
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = OSZ_heinrich_himmler ruling_only = yes }
+
+				NOT = { has_global_flag = paul_hausser_created }
+			}
+		}
+
+		set_global_flag = paul_hausser_created
+		set_character_name = GER_paul_hausser
+		set_character_flag = special_general
+
+		set_portraits = {
+			civilian = {
+				large = GFX_portrait_GER_paul_hausser
+				small = GFX_portrait_GER_paul_hausser_small
+			}
+			army = {
+				large = GFX_portrait_GER_paul_hausser
+				small = GFX_portrait_GER_paul_hausser_small
+			}
+			navy = {
+				large = GFX_portrait_GER_paul_hausser
+				small = GFX_portrait_GER_paul_hausser_small
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = OSZ_heinrich_himmler ruling_only = yes }
+
+				NOT = { has_global_flag = felix_steiner_created }
+			}
+		}
+
+		set_global_flag = felix_steiner_created
+		set_character_name = GER_felix_steiner
+		set_character_flag = special_general
+
+		set_portraits = {
+			civilian = {
+				large = GFX_portrait_ger_felix_steiner
+				small = GFX_portrait_GER_felix_steiner_small
+			}
+			army = {
+				large = GFX_portrait_ger_felix_steiner
+				small = GFX_portrait_GER_felix_steiner_small
+			}
+			navy = {
+				large = GFX_portrait_ger_felix_steiner
+				small = GFX_portrait_GER_felix_steiner_small
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = OSZ_heinrich_himmler ruling_only = yes }
+
+				NOT = { has_global_flag = walter_kruger_created }
+			}
+		}
+
+		set_global_flag = walter_kruger_created
+		set_character_name = GER_walter_kruger
+		set_character_flag = special_general
+
+		set_portraits = {
+			civilian = {
+				large = GFX_portrait_GER_walter_kruger
+				small = GFX_portrait_GER_walter_kruger_small
+			}
+			army = {
+				large = GFX_portrait_GER_walter_kruger
+				small = GFX_portrait_GER_walter_kruger_small
+			}
+			navy = {
+				large = GFX_portrait_GER_walter_kruger
+				small = GFX_portrait_GER_walter_kruger_small
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = OSE_heinrich_brandler ruling_only = yes }
+
+				NOT = { has_global_flag = vincenz_muller_created }
+			}
+		}
+
+		set_global_flag = vincenz_muller_created
+		set_character_name = GER_vincenz_muller
+		set_character_flag = special_general
+
+		if = {
+			limit = { has_dlc = "Gotterdammerung" }
+
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_GER_vincenz_muller
+					small = GFX_portrait_GER_vincenz_muller_small
+				}
+				army = {
+					large = GFX_portrait_GER_vincenz_muller
+					small = GFX_portrait_GER_vincenz_muller_small
+				}
+				navy = {
+					large = GFX_portrait_GER_vincenz_muller
+					small = GFX_portrait_GER_vincenz_muller_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large = GFX_Portrait_Germany_Generic_land_2
+					small = GFX_Portrait_Germany_Generic_land_2_small
+				}
+				army = {
+					large = GFX_Portrait_Germany_Generic_land_2
+					small = GFX_Portrait_Germany_Generic_land_2_small
+				}
+				navy = {
+					large = GFX_Portrait_Germany_Generic_land_2
+					small = GFX_Portrait_Germany_Generic_land_2_small
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = OLZ_wilhelm_pieck ruling_only = yes }
+
+				NOT = { has_global_flag = hans_kahle_created }
+			}
+		}
+
+		set_global_flag = hans_kahle_created
+		set_character_name = GER_hans_kahle
+		set_character_flag = special_general
+
+		if = {
+			limit = { has_dlc = "Gotterdammerung" }
+
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_GER_hans_kahle
+					small = GFX_portrait_GER_hans_kahle_small
+				}
+				army = {
+					large = GFX_portrait_GER_hans_kahle
+					small = GFX_portrait_GER_hans_kahle_small
+				}
+				navy = {
+					large = GFX_portrait_GER_hans_kahle
+					small = GFX_portrait_GER_hans_kahle_small
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large = GFX_Portrait_Germany_Generic_land_5
+					small = GFX_Portrait_Germany_Generic_land_5_small
+				}
+				army = {
+					large = GFX_Portrait_Germany_Generic_land_5
+					small = GFX_Portrait_Germany_Generic_land_5_small
+				}
+				navy = {
+					large = GFX_Portrait_Germany_Generic_land_5
+					small = GFX_Portrait_Germany_Generic_land_5_small
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
 				has_country_leader = { character = BSE_josip_broz_tito ruling_only = yes }
 
 				NOT = { has_global_flag = gosnjak_created }
@@ -7498,6 +7706,40 @@ handle_special_advisors = {
 			}
 
 			762 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = FLE }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_airborne_1
+					has_trait = air_airborne_2
+					has_trait = air_airborne_3
+				}
+			}
+
+			set_character_name = GER_kurt_student
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_GER_kurt_student
+					small = GFX_idea_kurt_student
+				}
+				army = {
+					large = GFX_portrait_GER_kurt_student
+					small = GFX_idea_kurt_student
+				}
+				navy = {
+					large = GFX_portrait_GER_kurt_student
+					small = GFX_idea_kurt_student
+				}
+			}
+
+			763 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
