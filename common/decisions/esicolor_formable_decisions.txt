@@ -19417,7 +19417,7 @@ esicolor_formables = {
 			set_country_flag = can_form_SOA_UNITED
 			hidden_effect = {
 				if = {
-					limit = { is_on_continent = africa }
+					limit = { capital_scope = { is_on_continent = africa } }
 
 					every_state = {
 						limit = { required_states_to_form_africa = yes }
