@@ -14355,12 +14355,15 @@ randomise_starting_army_type = {
 }
 
 calculate_template_size_variables = {
-	set_variable_to_random = {
-		var = divisionstoadd
-		min = {
+	set_variable = {
+		min_minus_one = {
 			value = global.setup_starting_army_size_min
 			subtract = 1
 		}
+	}
+	set_variable_to_random = {
+		var = divisionstoadd
+		min = min_minus_one
 		max = global.setup_starting_army_size_max
 		integer = yes
 	}

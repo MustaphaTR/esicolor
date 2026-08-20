@@ -899,13 +899,16 @@ setup_gui_start_resources = {
 
 		every_state = {
 			# clear_resources = yes
-			set_variable_to_random = {
-				var = resourcetypestoadd
-				min = global.setup_resource_types_min
-				max = {
+			set_temp_variable = {
+				max_plus_one = {
 					value = global.setup_resource_types_max
 					add = 1
 				}
+			}
+			set_variable_to_random = {
+				var = resourcetypestoadd
+				min = global.setup_resource_types_min
+				max = max_plus_one
 				integer = yes
 			}
 
