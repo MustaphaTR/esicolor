@@ -577,10 +577,14 @@ get_total_manpower = {
 		add_to_variable = { global.total_pop = state_population_k }
 		add_to_array = { global.populations = state_population_k }
 	}
-	set_variable = { global.per_state_pop = global.total_pop }
-	divide_variable = { global.per_state_pop = 1081 }
-	multiply_variable = { global.per_state_pop = 1000 }
-	round_variable = global.per_state_pop
+	set_variable = {
+		global.per_state_pop = {
+			value = global.total_pop
+			divide = 1081
+			multiply = 1000
+			round = yes
+		}
+	}
 }
 
 randomise_population = {
@@ -2687,12 +2691,12 @@ randomise_technology = {
 	}
 
 	random = {
-		chance =  global.setup_technology_support_weapons
+		chance = global.setup_technology_support_weapons
 
 		set_technology = { support_weapons = 1 }
 	}
 	random = {
-		chance =  global.setup_technology_basic_machine_tools
+		chance = global.setup_technology_basic_machine_tools
 
 		set_technology = { basic_machine_tools = 1 }
 	}
@@ -4379,8 +4383,12 @@ randomise_war_support = {
 }
 
 randomise_intelligence_agency = {
-	set_temp_variable = { intelligence_agency_minus = global.setup_intelligence_agency_chance }
-	multiply_temp_variable = { intelligence_agency_minus = -1 }
+	set_temp_variable = {
+		intelligence_agency_minus = {
+			value = global.setup_intelligence_agency_chance
+			multiply = -1
+		}
+	}
 	random_list = {
 		seed = random
 		0 = {
@@ -14347,19 +14355,24 @@ randomise_starting_army_type = {
 }
 
 calculate_template_size_variables = {
-	set_variable = { min_minus_one = global.setup_starting_army_size_min }
-	subtract_from_variable = { min_minus_one = 1 }
 	set_variable_to_random = {
 		var = divisionstoadd
-		min = min_minus_one
+		min = {
+			value = global.setup_starting_army_size_min
+			subtract = 1
+		}
 		max = global.setup_starting_army_size_max
 		integer = yes
 	}
 
-	set_variable = { max_column = divisionstoadd }
-	divide_variable = { max_column = 5 }
-	subtract_from_variable = { max_column = 0.5 }
-	round_variable = max_column
+	set_variable = {
+		max_column = {
+			value = divisionstoadd
+			divide = 5
+			subtract = 0.5
+			round = yes
+		}
+	}
 }
 adjust_default_template_size = {
 	calculate_template_size_variables = yes

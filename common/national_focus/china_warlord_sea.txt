@@ -1651,21 +1651,16 @@
 			# Left-KMT 
 			hidden_effect = {
 				set_temp_variable = {
-					var = ban_ideology_var
-					value = party_popularity@democratic
-				}
-				multiply_temp_variable = {
-					var = ban_ideology_var
-					value = -1
+					ban_ideology_var = {
+						value = party_popularity@democratic
+						multiply = -1
+					}
 				}
 				add_popularity = {
 					ideology = democratic
 					popularity = ban_ideology_var
 				}
-				multiply_temp_variable = {
-					var = ban_ideology_var
-					value = 0.66
-				}
+				multiply_temp_variable = { ban_ideology_var = 0.66 }
 				set_country_flag = banned_democratic_flag				
 			}
 			remove_democratic_spirits_effect = yes 
@@ -1677,21 +1672,16 @@
 			# CPC 
 			hidden_effect = {
 				set_temp_variable = {
-					var = ban_ideology_var
-					value = party_popularity@communism
-				}
-				multiply_temp_variable = {
-					var = ban_ideology_var
-					value = -1
+					ban_ideology_var = {
+						value = party_popularity@communism
+						multiply = -1
+					}
 				}
 				add_popularity = {
 					ideology = communism
 					popularity = ban_ideology_var
 				}
-				multiply_temp_variable = {
-					var = ban_ideology_var
-					value = 0.66
-				}
+				multiply_temp_variable = { ban_ideology_var = 0.66 }
 				set_country_flag = banned_communism_flag
 				if = {#NSB -> If country has Trotskyist Revolutionary Uprisings NS, swap it with the weakened version
 					limit = {

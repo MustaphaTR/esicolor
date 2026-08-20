@@ -9989,36 +9989,54 @@ handle_special_advisors = {
 }
 
 recalculate_recruitment_costs = {
-	set_variable = { THIS.general_recruitment_cost = 5 }
-	multiply_variable = { THIS.general_recruitment_cost = THIS.army_leaders^num }
-	set_variable = { THIS.general_cost_modifier = 1 }
-	add_to_variable = { THIS.general_cost_modifier = THIS.modifier@army_leader_cost_factor }
-	multiply_variable = { THIS.general_recruitment_cost = THIS.general_cost_modifier }
-	clamp_variable = {
-		var = THIS.general_recruitment_cost
-		max = 200
+	set_variable = {
+		THIS.general_recruitment_cost = {
+			value = 5
+			multiply = THIS.army_leaders^num
+			multiply = {
+				value = 1
+				add = THIS.modifier@army_leader_cost_factor
+			}
+			max = 200
+		}
+	}
+	set_variable = {
+		THIS.general_recruitment_cost_minus = {
+			value = THIS.general_recruitment_cost
+			multiply = -1
+		}
 	}
 
-	set_variable = { THIS.general_recruitment_cost_minus = THIS.general_recruitment_cost }
-	multiply_variable = { THIS.general_recruitment_cost_minus = -1 }
-
-	set_variable = { THIS.marshal_recruitment_cost = THIS.general_recruitment_cost }
-	add_to_variable = { THIS.marshal_recruitment_cost = 40 }
-	set_variable = { THIS.marshal_recruitment_cost_minus = THIS.marshal_recruitment_cost }
-	multiply_variable = { THIS.marshal_recruitment_cost_minus = -1 }
-
-	set_variable = { THIS.admiral_recruitment_cost = 5 }
-	multiply_variable = { THIS.admiral_recruitment_cost = THIS.navy_leaders^num }
-	set_variable = { THIS.admiral_cost_modifier = 1 }
-	add_to_variable = { THIS.general_cost_modifier = THIS.modifier@navy_leader_cost_factor }
-	multiply_variable = { THIS.general_recruitment_cost = THIS.admiral_cost_modifier }
-	clamp_variable = {
-		var = THIS.admiral_recruitment_cost
-		max = 200
+	set_variable = {
+		THIS.marshal_recruitment_cost = {
+			value = THIS.general_recruitment_cost
+			add = 40
+		}
+	}
+	set_variable = {
+		THIS.marshal_recruitment_cost_minus = {
+			value = THIS.marshal_recruitment_cost
+			multiply = -1
+		}
 	}
 
-	set_variable = { THIS.admiral_recruitment_cost_minus = THIS.admiral_recruitment_cost }
-	multiply_variable = { THIS.admiral_recruitment_cost_minus = -1 }
+	set_variable = {
+		THIS.admiral_recruitment_cost = {
+			value = 5
+			multiply = THIS.navy_leaders^num
+			multiply = {
+				value = 1
+				add = THIS.modifier@navy_leader_cost_factor
+			}
+			max = 200
+		}
+	}
+	set_variable = {
+		THIS.admiral_recruitment_cost_minus = {
+			value = THIS.admiral_recruitment_cost
+			multiply = -1
+		}
+	}
 }
 
 claim_action_effect = {

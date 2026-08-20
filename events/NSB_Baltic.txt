@@ -164,20 +164,16 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_variable = {
-				var = civil_war_size_var
-				value = party_popularity@communism
-			}
-			add_to_variable = {
-				var = civil_war_size_var
-				value = 0.15
+				civil_war_size_var = {
+					value = party_popularity@communism
+					add = 0.15
+				}
 			}
 			set_variable = {
-				var = ruling_size_var
-				value = 1
-			}
-			subtract_from_variable = {
-				var = ruling_size_var
-				value = party_popularity@communism
+				ruling_size_var = {
+					value = 1
+					subtract = party_popularity@communism
+				}
 			}
 		}
 	}
