@@ -1,0 +1,59 @@
+scripted_gui = {
+	esicolor_formables_gui = {
+		context_type = decision_category
+		window_name = "esicolor_formables_gui_window"
+
+		properties = {
+			esicolor_formables_gui_visibility = {
+				frame = esicolor_formables_gui_visibility_frame
+			}
+			esicolor_formables_gui_highlight_mode = {
+				frame = esicolor_formables_gui_highlight_mode_frame
+			}
+			esicolor_formables_gui_news = {
+				frame = esicolor_formables_gui_news_frame
+			}
+		}
+
+		effects = {
+			esicolor_formables_gui_visibility_click = {
+				if = {
+					limit = { has_country_flag = formables_show_all }
+
+					clr_country_flag = formables_show_all
+					set_variable = { esicolor_formables_gui_visibility_frame = 1 }
+				}
+				else = {
+					set_country_flag = formables_show_all
+					set_variable = { esicolor_formables_gui_visibility_frame = 2 }
+				}
+			}
+
+			esicolor_formables_gui_highlight_mode_click = {
+				if = {
+					limit = { has_country_flag = formables_highlight_affected }
+
+					clr_country_flag = formables_highlight_affected
+					set_variable = { esicolor_formables_gui_highlight_mode_frame = 1 }
+				}
+				else = {
+					set_country_flag = formables_highlight_affected
+					set_variable = { esicolor_formables_gui_highlight_mode_frame = 2 }
+				}
+			}
+
+			esicolor_formables_gui_news_click = {
+				if = {
+					limit = { has_country_flag = formables_news }
+
+					clr_country_flag = formables_news
+					set_variable = { esicolor_formables_gui_news_frame = 1 }
+				}
+				else = {
+					set_country_flag = formables_news
+					set_variable = { esicolor_formables_gui_news_frame = 2 }
+				}
+			}
+		}
+	}
+}

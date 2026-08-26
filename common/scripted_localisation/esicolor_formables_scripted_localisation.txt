@@ -9,6 +9,39 @@
 # that'll be used if trigger passes
 
 defined_text = {
+	name = GetDecisionVisibilityDesc
+	text = {
+		trigger = { has_country_flag = formables_show_all }
+		localization_key = esicolor_formables_gui_visibility_next_tt
+	}
+	text = {
+		localization_key = esicolor_formables_gui_visibility_all_tt
+	}
+}
+
+defined_text = {
+	name = GetHighlightModeDesc
+	text = {
+		trigger = { has_country_flag = formables_highlight_affected }
+		localization_key = esicolor_formables_gui_highlight_mode_affected_tt
+	}
+	text = {
+		localization_key = esicolor_formables_gui_highlight_mode_required_tt
+	}
+}
+
+defined_text = {
+	name = GetNewsEventsDesc
+	text = {
+		trigger = { has_country_flag = formables_news }
+		localization_key = esicolor_formables_gui_news_enabled_tt
+	}
+	text = {
+		localization_key = esicolor_formables_gui_news_disabled_tt
+	}
+}
+
+defined_text = {
 	name = GetIdeologyDef_YUG_SLOVENIA
 	text = {
 		trigger = { has_government = neutrality }

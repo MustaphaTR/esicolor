@@ -811,42 +811,49 @@ has_states_to_form_lv2_or_lv3_formable = {
 	}
 	OR = {
 		AND = {
+			can_form_europe = yes
 			has_cosmetics_to_form_europe = yes
 			has_states_to_form_europe = yes
 		}
 	}
 	OR = {
 		AND = {
+			can_form_north_america = yes
 			has_cosmetics_to_form_north_america = yes
 			has_states_to_form_north_america = yes
 		}
 	}
 	OR = {
 		AND = {
+			can_form_south_america = yes
 			has_cosmetics_to_form_south_america = yes
 			has_states_to_form_south_america = yes
 		}
 	}
 	OR = {
 		AND = {
+			can_form_oceania = yes
 			has_cosmetics_to_form_oceania = yes
 			has_states_to_form_oceania = yes
 		}
 	}
 	OR = {
 		AND = {
+			can_form_africa = yes
 			has_cosmetics_to_form_africa = yes
 			has_states_to_form_africa = yes
 		}
 	}
 	OR = {
 		AND = {
+			can_form_asia = yes
 			has_cosmetics_to_form_asia = yes
 			has_states_to_form_asia = yes
 		}
 	}
 	OR = {
 		AND = {
+			can_form_middle_east = yes
 			has_cosmetics_to_form_middle_east = yes
 			has_states_to_form_middle_east = yes
 		}
@@ -7702,7 +7709,7 @@ has_cosmetics_to_form_west_usa = {
 }
 has_states_to_form_west_usa = {
 	custom_trigger_tooltip = {
-		tooltip = form_usa_has_states_tt
+		tooltip = form_west_usa_has_states_tt
 
 		has_states_to_form_rockies = yes
 		has_states_to_form_pacific = yes
@@ -10360,8 +10367,8 @@ can_form_baikal = {
 can_form_krasnoyarsk_krai = {
 	OR = {
 		can_form_taymiria = yes
-		original_tag = SFL
 		original_tag = SLB
+		original_tag = SFL
 	}
 }
 
@@ -12930,12 +12937,11 @@ can_form_balochistan = {
 
 can_form_persia = {
 	OR = {
-		can_form_azerbaijan = yes
 		can_form_kurdistan = yes
 		can_form_iran = yes
 		can_form_afghanistan = yes
 		can_form_balochistan = yes
-		original_tag = FAZ
+		can_form_tajikistan = yes
 	}
 }
 
@@ -13211,6 +13217,33 @@ required_states_to_form_ussr = {
 }
 
 #### Europe ####
+can_form_europe = {
+	OR = {
+		can_form_romania = yes
+		can_form_balkans = yes
+		can_form_celtic_union = yes
+		can_form_united_kingdom = yes
+		can_form_baltics = yes
+		can_form_benelux = yes
+		can_form_iberia = yes
+		can_form_danubia = yes
+		can_form_alpine_confederation = yes
+		can_form_germany = yes
+		can_form_italy = yes
+		can_form_north_sea = yes
+		can_form_nordic_council = yes
+		can_form_belarus = yes
+		can_form_poland_lithuania = yes
+		can_form_estonia_finland = yes
+		can_form_karelia = yes
+		can_form_sapmi = yes
+		can_form_ukraine = yes
+		can_form_turkey = yes
+		can_form_mediterranean = yes
+		can_form_france = yes
+	}
+}
+
 is_europe = {
 	OR = {
 		is_on_continent = europe
@@ -13254,6 +13287,16 @@ required_states_to_form_europe = {
 }
 
 #### North America ####
+can_form_north_america = {
+	OR = {
+		can_form_antilles = yes
+		can_form_canada = yes
+		can_form_central_america = yes
+		can_form_mexico = yes
+		can_form_usa = yes
+	}
+}
+
 is_north_america = {
 	OR = {
 		is_on_continent = north_america
@@ -13286,6 +13329,31 @@ has_states_to_form_north_america = {
 }
 
 #### South America ####
+can_form_south_america = {
+	OR = {
+		can_form_gran_colombia = yes
+		can_form_guiana = yes
+		can_form_peru_bolivia = yes
+		can_form_hispaniola = yes
+		can_form_bahamas = yes
+		can_form_british_antilles = yes
+		original_tag = EIS
+		original_tag = LBL
+		original_tag = LBY
+		original_tag = LYI
+		original_tag = LYA
+		original_tag = LYS
+		can_form_rapa_nui = yes
+		can_form_brazil = yes
+		can_form_central_america = yes
+		can_form_la_plata = yes
+		can_form_argentina = yes
+		can_form_chile = yes
+		can_form_patagonia = yes
+		can_form_south_atlantic = yes
+	}
+}
+
 is_south_america = {
 	OR = {
 		is_on_continent = south_america
@@ -13325,6 +13393,14 @@ required_states_to_form_south_america = {
 }
 
 #### Oceania ####
+can_form_oceania = {
+	OR = {
+		can_form_polynesia = yes
+		can_form_nusantara = yes
+		can_form_australia = yes
+	}
+}
+
 is_oceania = {
 	OR = {
 		is_on_continent = australia
@@ -13332,7 +13408,7 @@ is_oceania = {
 		is_australian_iot = yes
 		is_indonesia = yes
 		is_philippines = yes
-		state = 333
+		is_north_borneo = yes
 	}
 }
 
@@ -13351,7 +13427,7 @@ has_states_to_form_oceania = {
 					is_australian_iot = yes
 					is_indonesia = yes
 					is_philippines = yes
-					state = 333
+					is_north_borneo = yes
 				}
 				is_rapa_nui = yes
 				is_owned_by = PREV
@@ -13368,12 +13444,26 @@ required_states_to_form_oceania = {
 		is_australian_iot = yes
 		is_indonesia = yes
 		is_philippines = yes
-		state = 333
+		is_north_borneo = yes
 	}
 	NOT = { is_rapa_nui = yes }
 }
 
 #### Africa ####
+can_form_africa = {
+	OR = {
+		can_form_magreb = yes
+		can_form_east_africa = yes
+		can_form_horn_of_africa = yes
+		can_form_latin_africa = yes
+		can_form_mutapa = yes
+		can_form_west_africa = yes
+		can_form_nile = yes
+		can_form_madagascar = yes
+		can_form_south_atlantic = yes
+	}
+}
+
 is_africa = {
 	is_on_continent = africa
 	OR = {
@@ -13412,6 +13502,22 @@ required_states_to_form_africa = {
 }
 
 #### Asia ####
+can_form_asia = {
+	OR = {
+		can_form_indochina = yes
+		can_form_polynesia = yes
+		can_form_nusantara = yes
+		can_form_siberia = yes
+		can_form_mongolia = yes
+		can_form_himalayas = yes
+		can_form_china = yes
+		can_form_korea = yes
+		can_form_japan = yes
+		can_form_afghanistan_pakistan = yes
+		can_form_hindustan = yes
+	}
+}
+
 is_asia = {
 	OR = {
 		is_on_continent = asia
@@ -13424,7 +13530,7 @@ is_asia = {
 		is_australian_iot = yes
 		is_indonesia = yes
 		is_philippines = yes
-		state = 333
+		is_north_borneo = yes
 		state = 650
 	}
 }
@@ -13448,7 +13554,7 @@ has_states_to_form_asia = {
 				is_australian_iot = yes
 				is_indonesia = yes
 				is_philippines = yes
-				state = 333
+				is_north_borneo = yes
 				state = 650
 				is_owned_by = PREV
 				is_owned_by = OOO
@@ -13458,6 +13564,17 @@ has_states_to_form_asia = {
 }
 
 #### Middle East ####
+can_form_middle_east = {
+	OR = {
+		can_form_arabia = yes
+		can_form_caucasia = yes
+		can_form_egypt = yes
+		can_form_mesopotamia = yes
+		can_form_turkey = yes
+		can_form_persia = yes
+	}
+}
+
 is_middle_east = {
 	OR = {
 		is_on_continent = middle_east
