@@ -1611,9 +1611,11 @@ setup_gui_start_foreign_generals = {
 				limit = { is_ai = no }
 
 				set_country_flag = foreign_generals_named_prioritised
+				set_variable = { esicolor_foreign_generals_gui_priority_frame = 1 }
 			}
 			else = {
 				set_country_flag = foreign_generals_no_priority
+				set_variable = { esicolor_foreign_generals_gui_priority_frame = 3 }
 			}
 		}
 	}

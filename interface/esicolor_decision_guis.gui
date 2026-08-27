@@ -1,5 +1,28 @@
 guiTypes = {
 	containerWindowType = {
+		name = "esicolor_foreign_generals_gui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 50 }
+
+		instantTextboxType = {
+			name = "esicolor_foreign_generals_gui_priority_text"
+			position = { x = 12 y = -37 }
+			orientation = LOWER_LEFT
+			font = "hoi_24header"
+			text = "esicolor_foreign_generals_gui_priority"
+			maxWidth = 350
+		}
+		buttonType = {
+			name = "esicolor_foreign_generals_gui_priority"
+			position = { x = -47 y = -40 }
+			orientation = LOWER_RIGHT
+			quadTextureSprite = "GFX_esicolor_decision_gui_button"
+			frame = 1
+			pdx_tooltip = "esicolor_foreign_generals_gui_priority_tt"
+		}
+	}
+
+	containerWindowType = {
 		name = "esicolor_formables_gui_window"
 		position = { x = 0 y = 0 }
 		size = { width = 100% height = 80 }

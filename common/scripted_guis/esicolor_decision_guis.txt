@@ -1,0 +1,121 @@
+scripted_gui = {
+	esicolor_foreign_generals_gui = {
+		context_type = decision_category
+		window_name = "esicolor_foreign_generals_gui_window"
+
+		properties = {
+			esicolor_foreign_generals_gui_priority = {
+				frame = esicolor_foreign_generals_gui_priority_frame
+			}
+		}
+
+		effects = {
+			esicolor_foreign_generals_gui_priority_click = {
+				if = {
+					limit = { has_country_flag = foreign_generals_named_only }
+
+					clr_country_flag = foreign_generals_named_only
+					set_country_flag = foreign_generals_named_prioritised
+					clr_country_flag = foreign_generals_no_priority
+					set_variable = { esicolor_foreign_generals_gui_priority_frame = 1 }
+				}
+				else_if = {
+					limit = { has_country_flag = foreign_generals_named_prioritised }
+
+					clr_country_flag = foreign_generals_named_only
+					clr_country_flag = foreign_generals_named_prioritised
+					set_country_flag = foreign_generals_no_priority
+					set_variable = { esicolor_foreign_generals_gui_priority_frame = 3 }
+				}
+				else = {
+					set_country_flag = foreign_generals_named_only
+					clr_country_flag = foreign_generals_named_prioritised
+					clr_country_flag = foreign_generals_no_priority
+					set_variable = { esicolor_foreign_generals_gui_priority_frame = 2 }
+				}
+			}
+			esicolor_foreign_generals_gui_priority_right_click = {
+				if = {
+					limit = { has_country_flag = foreign_generals_no_priority }
+
+					clr_country_flag = foreign_generals_named_only
+					set_country_flag = foreign_generals_named_prioritised
+					clr_country_flag = foreign_generals_no_priority
+					set_variable = { esicolor_foreign_generals_gui_priority_frame = 1 }
+				}
+				else_if = {
+					limit = { has_country_flag = foreign_generals_named_only }
+
+					clr_country_flag = foreign_generals_named_only
+					clr_country_flag = foreign_generals_named_prioritised
+					set_country_flag = foreign_generals_no_priority
+					set_variable = { esicolor_foreign_generals_gui_priority_frame = 3 }
+				}
+				else = {
+					set_country_flag = foreign_generals_named_only
+					clr_country_flag = foreign_generals_named_prioritised
+					clr_country_flag = foreign_generals_no_priority
+					set_variable = { esicolor_foreign_generals_gui_priority_frame = 2 }
+				}
+			}
+		}
+	}
+
+	esicolor_formables_gui = {
+		context_type = decision_category
+		window_name = "esicolor_formables_gui_window"
+
+		properties = {
+			esicolor_formables_gui_visibility = {
+				frame = esicolor_formables_gui_visibility_frame
+			}
+			esicolor_formables_gui_highlight_mode = {
+				frame = esicolor_formables_gui_highlight_mode_frame
+			}
+			esicolor_formables_gui_news = {
+				frame = esicolor_formables_gui_news_frame
+			}
+		}
+
+		effects = {
+			esicolor_formables_gui_visibility_click = {
+				if = {
+					limit = { has_country_flag = formables_show_all }
+
+					clr_country_flag = formables_show_all
+					set_variable = { esicolor_formables_gui_visibility_frame = 1 }
+				}
+				else = {
+					set_country_flag = formables_show_all
+					set_variable = { esicolor_formables_gui_visibility_frame = 2 }
+				}
+			}
+
+			esicolor_formables_gui_highlight_mode_click = {
+				if = {
+					limit = { has_country_flag = formables_highlight_affected }
+
+					clr_country_flag = formables_highlight_affected
+					set_variable = { esicolor_formables_gui_highlight_mode_frame = 1 }
+				}
+				else = {
+					set_country_flag = formables_highlight_affected
+					set_variable = { esicolor_formables_gui_highlight_mode_frame = 2 }
+				}
+			}
+
+			esicolor_formables_gui_news_click = {
+				if = {
+					limit = { has_country_flag = formables_news }
+
+					clr_country_flag = formables_news
+					set_variable = { esicolor_formables_gui_news_frame = 1 }
+				}
+				else = {
+					set_country_flag = formables_news
+					set_variable = { esicolor_formables_gui_news_frame = 2 }
+				}
+			}
+		}
+	}
+}

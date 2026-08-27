@@ -1,45 +1,45 @@
 esicolor_general_recruitment = {
-	foreign_generals_named_only = {
-		allowed = {
-			always = yes
-		}
-		visible = {
-			NOT = { has_country_flag = foreign_generals_named_only }
-		}
-		complete_effect = {
-			set_country_flag = foreign_generals_named_only
-			clr_country_flag = foreign_generals_named_prioritised
-			clr_country_flag = foreign_generals_no_priority
-		}
-	}
+	#foreign_generals_named_only = {
+	#	allowed = {
+	#		always = yes
+	#	}
+	#	visible = {
+	#		NOT = { has_country_flag = foreign_generals_named_only }
+	#	}
+	#	complete_effect = {
+	#		set_country_flag = foreign_generals_named_only
+	#		clr_country_flag = foreign_generals_named_prioritised
+	#		clr_country_flag = foreign_generals_no_priority
+	#	}
+	#}
 
-	foreign_generals_named_prioritised = {
-		allowed = {
-			always = yes
-		}
-		visible = {
-			NOT = { has_country_flag = foreign_generals_named_prioritised }
-		}
-		complete_effect = {
-			clr_country_flag = foreign_generals_named_only
-			set_country_flag = foreign_generals_named_prioritised
-			clr_country_flag = foreign_generals_no_priority
-		}
-	}
+	#foreign_generals_named_prioritised = {
+	#	allowed = {
+	#		always = yes
+	#	}
+	#	visible = {
+	#		NOT = { has_country_flag = foreign_generals_named_prioritised }
+	#	}
+	#	complete_effect = {
+	#		clr_country_flag = foreign_generals_named_only
+	#		set_country_flag = foreign_generals_named_prioritised
+	#		clr_country_flag = foreign_generals_no_priority
+	#	}
+	#}
 
-	foreign_generals_no_priority = {
-		allowed = {
-			always = yes
-		}
-		visible = {
-			NOT = { has_country_flag = foreign_generals_no_priority }
-		}
-		complete_effect = {
-			clr_country_flag = foreign_generals_named_only
-			clr_country_flag = foreign_generals_named_prioritised
-			set_country_flag = foreign_generals_no_priority
-		}
-	}
+	#foreign_generals_no_priority = {
+	#	allowed = {
+	#		always = yes
+	#	}
+	#	visible = {
+	#		NOT = { has_country_flag = foreign_generals_no_priority }
+	#	}
+	#	complete_effect = {
+	#		clr_country_flag = foreign_generals_named_only
+	#		clr_country_flag = foreign_generals_named_prioritised
+	#		set_country_flag = foreign_generals_no_priority
+	#	}
+	#}
 
 	recruit_local_marshal = {
 		icon = generic_army_support
