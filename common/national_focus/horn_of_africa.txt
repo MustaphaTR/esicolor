@@ -1602,43 +1602,7 @@ focus_tree = {
 			every_other_country = {
 				limit = {
 					is_major = yes
-					any_owned_state = {
-						if = {
-							limit = { ROOT = { is_on_continent = europe } }
-
-							is_on_continent = europe
-						}
-						else_if = {
-							limit = { ROOT = { is_on_continent = north_america } }
-
-							is_on_continent = north_america
-						}
-						else_if = {
-							limit = { ROOT = { is_on_continent = south_america } }
-
-							is_on_continent = south_america
-						}
-						else_if = {
-							limit = { ROOT = { is_on_continent = australia } }
-
-							is_on_continent = australia
-						}
-						else_if = {
-							limit = { ROOT = { is_on_continent = africa } }
-
-							is_on_continent = africa
-						}
-						else_if = {
-							limit = { ROOT = { is_on_continent = asia } }
-
-							is_on_continent = asia
-						}
-						else_if = {
-							limit = { ROOT = { is_on_continent = middle_east } }
-
-							is_on_continent = middle_east
-						}
-					}
+					is_on_same_continent_as = ROOT
 				}
 				add_opinion_modifier = {
 					target = ROOT
