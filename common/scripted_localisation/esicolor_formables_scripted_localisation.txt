@@ -405,24 +405,21 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_CLT_UNITED
 	text = {
-		localization_key = CLT_UNITED_DEF
+		trigger = { has_government = neutrality }
+		localization_key = CLT_UNITED_neutrality_DEF
 	}
-	#text = {
-	#	trigger = { has_government = neutrality }
-	#	localization_key = CLT_UNITED_neutrality_DEF
-	#}
-	#text = {
-	#	trigger = { has_government = democratic }
-	#	localization_key = CLT_UNITED_democratic_DEF
-	#}
-	#text = {
-	#	trigger = { has_government = fascism }
-	#	localization_key = CLT_UNITED_fascism_DEF
-	#}
-	#text = {
-	#	trigger = { has_government = communism }
-	#	localization_key = CLT_UNITED_communism_DEF
-	#}
+	text = {
+		trigger = { has_government = democratic }
+		localization_key = CLT_UNITED_democratic_DEF
+	}
+	text = {
+		trigger = { has_government = fascism }
+		localization_key = CLT_UNITED_fascism_DEF
+	}
+	text = {
+		trigger = { has_government = communism }
+		localization_key = CLT_UNITED_communism_DEF
+	}
 }
 
 defined_text = {
