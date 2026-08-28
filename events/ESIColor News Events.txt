@@ -11,10 +11,7 @@ news_event = {
 
 	option = {
 		name = esicolor_formable_news.1.a
-		trigger = {
-			tag = FROM
-			has_war_with = FROM
-		}
+		trigger = { tag = FROM }
 	}
 	option = {
 		name = esicolor_formable_news.1.b
@@ -28,6 +25,7 @@ news_event = {
 	option = {
 		name = wtt_news.53.c
 		trigger = {
+			NOT = { tag = FROM }
 			has_war_with = FROM
 		}
 	}
@@ -306,21 +304,21 @@ news_event = {
 	
 	option = {
 		name = wtt_news.62.a
-		trigger = {
-			original_tag = FROM
-		}
+		trigger = { tag = FROM }
 	}
 	option = {
 		name = wtt_news.62.b
 		trigger = {
-			NOT = { original_tag = FROM }
-			NOT = { has_war_with = FROM }
+			NOT = {
+				tag = FROM
+				has_war_with = FROM
+			}
 		}
 	}
 	option = {
 		name = wtt_news.53.c
 		trigger = {
-			NOT = { original_tag = FROM }
+			NOT = { tag = FROM }
 			has_war_with = FROM
 		}
 	}
