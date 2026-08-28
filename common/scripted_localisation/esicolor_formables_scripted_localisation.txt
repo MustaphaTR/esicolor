@@ -347,6 +347,20 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_UBF_UNITED
 	text = {
+		trigger = {
+			has_government = fascism
+			has_country_leader = { character = EAI_halife_abdulmecid_efendi ruling_only = yes }
+		}
+		localization_key = UBF_UNITED_ABDULMEJID_fascism_DEF
+	}
+	text = {
+		trigger = {
+			has_government = communism
+			has_country_leader = { character = EAI_halife_abdulmecid_efendi ruling_only = yes }
+		}
+		localization_key = UBF_UNITED_ABDULMEJID_communism_DEF
+	}
+	text = {
 		trigger = { has_country_leader = { character = EAI_halife_abdulmecid_efendi ruling_only = yes } }
 		localization_key = UBF_UNITED_ABDULMEJID_neutrality_DEF
 	}
