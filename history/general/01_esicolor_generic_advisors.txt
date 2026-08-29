@@ -3891,6 +3891,58 @@ every_possible_country = {
 	if = {
 		limit = {
 			NOT = {
+				has_allowed_idea_with_traits = { idea = army_adaptive_engineer_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_adaptive_engineer_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_adaptive_engineer_3 characters = yes }
+			}
+		}
+
+		meta_effect = {
+			text = {
+				generate_character = {
+					token_base = [TAG]_generic_army_adaptive_engineer
+					advisor = {
+						slot = high_command
+						ledger = army
+						cost = 100
+						traits = { army_adaptive_engineer_2 }
+
+						visible = {
+							NOT = { has_country_flag = army_adaptive_engineer_disabled }
+							OR = {
+								NOT = { has_global_flag = custom_advisors_only }
+								has_character_flag = special_advisor
+							}
+						}
+						available = {
+							hidden_trigger = {
+								NOT = { has_country_flag = army_adaptive_engineer_disabled }
+								OR = {
+									NOT = { has_global_flag = custom_advisors_only }
+									has_character_flag = special_advisor
+								}
+							}
+							if = {
+								limit = { has_global_flag = custom_advisors_only_core }
+
+								[STATE] = { is_core_of =  ROOT }
+							}
+						}
+					}
+				}
+			}
+			TAG = "[THIS.GetTag]"
+			STATE = "[?THIS.original_capital.GetID]"
+		}
+	}
+}
+
+every_possible_country = {
+	limit = { NOT = { original_tag = OOO } }
+
+	if = {
+		limit = {
+			NOT = {
 				has_allowed_idea_with_traits = { idea = army_jungle_warfare_1 characters = yes }
 				has_allowed_idea_with_traits = { idea = army_jungle_warfare_2 characters = yes }
 				has_allowed_idea_with_traits = { idea = army_jungle_warfare_3 characters = yes }

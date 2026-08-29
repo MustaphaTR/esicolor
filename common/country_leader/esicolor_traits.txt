@@ -44,6 +44,14 @@ leader_traits = {
 		resistance_damage_to_garrison = -0.15
 	}
 
+	GER_head_of_the_missile_department_no_cp = { # Without the command power given.
+		sprite = 2
+		random = no
+
+		specialization_air_speed_factor = 0.1
+		specialization_land_speed_factor = 0.1
+	}
+
 	code_breaker = {
 		random = no
 		sprite = 15
@@ -67,7 +75,6 @@ leader_traits = {
 		army_morale_factor = 0.015
 		heat_attrition_factor = -0.05
 		out_of_supply_factor = -0.015
-		#experience_gain_army = @experience_gain_low
 
 		command_cap_increase = @tier1_cp_cap_increase
 		command_power = @tier1_cp_cost
@@ -84,7 +91,6 @@ leader_traits = {
 		army_morale_factor = 0.025
 		heat_attrition_factor = -0.1
 		out_of_supply_factor = -0.03
-		#experience_gain_army = @experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -101,7 +107,6 @@ leader_traits = {
 		army_morale_factor = 0.035
 		heat_attrition_factor = -0.15
 		out_of_supply_factor = -0.045
-		#experience_gain_army = @experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -109,6 +114,42 @@ leader_traits = {
 		ai_will_do = {
 			factor = @army_command_factor_3
 		}
+	}
+
+	army_adaptive_engineer_1 = {
+		random = no
+		sprite = 10
+
+		command_cap_increase = @tier1_cp_cap_increase
+		command_power = @tier1_cp_cost
+
+		equipment_conversion_speed = 0.05
+		equipment_capture_factor = 0.025
+		conversion_cost_civ_to_mil_factor = -0.05
+	}
+
+	army_adaptive_engineer_2 = {
+		random = no
+		sprite = 10
+
+		command_cap_increase = @tier2_cp_cap_increase
+		command_power = @tier2_cp_cost
+
+		equipment_conversion_speed = 0.1
+		equipment_capture_factor = 0.05
+		conversion_cost_civ_to_mil_factor = -0.15
+	}
+
+	army_adaptive_engineer_3 = {
+		random = no
+		sprite = 10
+
+		command_cap_increase = @tier3_cp_cap_increase
+		command_power = @tier3_cp_cost
+
+		equipment_conversion_speed = 0.15
+		equipment_capture_factor = 0.075
+		conversion_cost_civ_to_mil_factor = -0.25
 	}
 
 	agility_focused_aircraft_manufacturer = { 

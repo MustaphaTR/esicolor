@@ -1469,6 +1469,50 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = OOS }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_name = GER_wilhelm_von_gayl
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_GER_wilhelm_von_gayl_small
+					}
+					army = {
+						small = GFX_portrait_GER_wilhelm_von_gayl_small
+					}
+					navy = {
+						small = GFX_portrait_GER_wilhelm_von_gayl_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_Europe_Generic_3_small
+					}
+					army = {
+						small = GFX_portrait_Europe_Generic_3_small
+					}
+					navy = {
+						small = GFX_portrait_Europe_Generic_3_small
+					}
+				}
+			}
+
+			5 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = OOF }
 
 		random_character = {
@@ -1492,7 +1536,7 @@ handle_special_advisors = {
 				}
 			}
 
-			8 = { add_to_array = { state_advisors = PREV } }
+			7 = { add_to_array = { state_advisors = PREV } }
 		}
 		random_character = {
 			limit = {
@@ -1515,7 +1559,7 @@ handle_special_advisors = {
 				}
 			}
 
-			8 = { add_to_array = { state_advisors = PREV } }
+			7 = { add_to_array = { state_advisors = PREV } }
 		}
 		random_character = {
 			limit = {
@@ -1538,7 +1582,7 @@ handle_special_advisors = {
 				}
 			}
 
-			8 = { add_to_array = { state_advisors = PREV } }
+			7 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -2994,6 +3038,331 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = OSO }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = democratic_reformer
+			}
+
+			set_character_name = GER_kurt_schumacher
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_kurt_schumacher
+				}
+				army = {
+					small = GFX_idea_kurt_schumacher
+				}
+				navy = {
+					small = GFX_idea_kurt_schumacher
+				}
+			}
+
+			50 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OSI }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_adaptive_engineer_1
+					has_trait = army_adaptive_engineer_2
+					has_trait = army_adaptive_engineer_3
+				}
+			}
+
+			set_character_name = GER_alfred_becker
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_GER_alfred_becker_small
+				}
+				army = {
+					small = GFX_portrait_GER_alfred_becker_small
+				}
+				navy = {
+					small = GFX_portrait_GER_alfred_becker_small
+				}
+			}
+
+			51 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OSZ }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = prince_of_terror
+			}
+
+			set_character_name = GER_reinhard_heydrich
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_GER_reinhard_heydrich_small
+				}
+				army = {
+					small = GFX_portrait_GER_reinhard_heydrich_small
+				}
+				navy = {
+					small = GFX_portrait_GER_reinhard_heydrich_small
+				}
+			}
+
+			52 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_close_air_support_1
+					has_trait = air_close_air_support_2
+					has_trait = air_close_air_support_3
+				}
+			}
+
+			set_character_name = GER_hugo_sperrle
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_hugo_sperrle
+				}
+				army = {
+					small = GFX_idea_hugo_sperrle
+				}
+				navy = {
+					small = GFX_idea_hugo_sperrle
+				}
+			}
+
+			52 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OSE }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = communist_revolutionary
+			}
+
+			set_character_name = GER_otto_ruhle
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_GER_otto_ruhle_small
+					}
+					army = {
+						small = GFX_portrait_GER_otto_ruhle_small
+					}
+					navy = {
+						small = GFX_portrait_GER_otto_ruhle_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_1
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_1
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_1
+					}
+				}
+			}
+
+			53 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OSL }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = staunch_monarchist
+			}
+
+			set_character_name = GER_alfred_hugenberg
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_GER_alfred_hugenberg
+				}
+				army = {
+					small = GFX_idea_GER_alfred_hugenberg
+				}
+				navy = {
+					small = GFX_idea_GER_alfred_hugenberg
+				}
+			}
+
+			56 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OSF }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = financial_expert
+			}
+
+			set_character_name = GER_ludwig_erhard
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_GER_ludwig_erhard_small
+				}
+				army = {
+					small = GFX_portrait_GER_ludwig_erhard_small
+				}
+				navy = {
+					small = GFX_portrait_GER_ludwig_erhard_small
+				}
+			}
+
+			57 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OSB }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = submarine_specialist
+			}
+
+			set_character_name = GER_alfred_saalwachter
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_GER_alfred_saalwachter
+					small = GFX_portrait_GER_alfred_saalwachter_small
+				}
+				army = {
+					large = GFX_portrait_GER_alfred_saalwachter
+					small = GFX_portrait_GER_alfred_saalwachter_small
+				}
+				navy = {
+					large = GFX_portrait_GER_alfred_saalwachter
+					small = GFX_portrait_GER_alfred_saalwachter_small
+				}
+			}
+
+			58 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = navy_submarine_1
+					has_trait = navy_submarine_2
+					has_trait = navy_submarine_3
+				}
+			}
+
+			set_character_name = GER_viktor_schutze
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_viktor_schutze
+				}
+				army = {
+					small = GFX_idea_viktor_schutze
+				}
+				navy = {
+					small = GFX_idea_viktor_schutze
+				}
+			}
+
+			58 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OSY }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = navy_naval_air_defense_1
+					has_trait = navy_naval_air_defense_2
+					has_trait = navy_naval_air_defense_3
+				}
+			}
+
+			set_character_name = GER_erich_bey
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_erich_bey
+				}
+				army = {
+					small = GFX_idea_erich_bey
+				}
+				navy = {
+					small = GFX_idea_erich_bey
+				}
+			}
+
+			59 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_bomber_interception_1
+					has_trait = air_bomber_interception_2
+					has_trait = air_bomber_interception_3
+				}
+			}
+
+			set_character_name = GER_josef_kammhuber
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_GER_josef_kammhuber_small
+				}
+				army = {
+					small = GFX_portrait_GER_josef_kammhuber_small
+				}
+				navy = {
+					small = GFX_portrait_GER_josef_kammhuber_small
+				}
+			}
+
+			59 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = OLO }
 
 		random_character = {
@@ -3038,6 +3407,348 @@ handle_special_advisors = {
 			}
 
 			60 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OLI }
+
+		random_character = { # Used for Adolf Friedrich of Mecklenburg, only applied with the named advisors only mode.
+			limit = {
+				is_advisor = yes
+				has_trait = prince_of_terror
+			}
+
+			set_character_flag = special_advisor
+
+			61 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OLZ }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = head_of_intelligence
+			}
+
+			set_character_name = GER_wilhelm_zaisser
+			set_character_flag = special_advisor
+
+			if = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_GER_wilhelm_zaisser_small
+					}
+					army = {
+						small = GFX_portrait_GER_wilhelm_zaisser_small
+					}
+					navy = {
+						small = GFX_portrait_GER_wilhelm_zaisser_small
+					}
+				}
+			}
+			else = {
+				set_portraits = {
+					civilian = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+					army = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+					navy = {
+						small = GFX_idea_generic_political_advisor_europe_3
+					}
+				}
+			}
+
+			62 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OLE }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_strategic_bombing_1
+					has_trait = air_strategic_bombing_2
+					has_trait = air_strategic_bombing_3
+				}
+			}
+
+			set_character_name = GER_robert_knauss
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_GER_robert_knauss_small
+				}
+				army = {
+					small = GFX_portrait_GER_robert_knauss_small
+				}
+				navy = {
+					small = GFX_portrait_GER_robert_knauss_small
+				}
+			}
+
+			63 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OLA }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = propaganda_expert
+			}
+
+			set_character_name = GER_leni_riefenstahl
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_GER_leni_riefenstahl_small
+				}
+				army = {
+					small = GFX_portrait_GER_leni_riefenstahl_small
+				}
+				navy = {
+					small = GFX_portrait_GER_leni_riefenstahl_small
+				}
+			}
+
+			64 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_offensive_1
+					has_trait = army_chief_offensive_2
+					has_trait = army_chief_offensive_3
+				}
+			}
+
+			set_character_name = GER_franz_halder
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_franz_halder
+				}
+				army = {
+					small = GFX_idea_franz_halder
+				}
+				navy = {
+					small = GFX_idea_franz_halder
+				}
+			}
+
+			64 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_drill_1
+					has_trait = army_chief_drill_2
+					has_trait = army_chief_drill_3
+				}
+			}
+
+			set_character_name = GER_wilhelm_keitel
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_wilhelm_keitel
+				}
+				army = {
+					small = GFX_idea_wilhelm_keitel
+				}
+				navy = {
+					small = GFX_idea_wilhelm_keitel
+				}
+			}
+
+			64 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = rocket_scientist # High Command advisor in basegame, but keeping theorist here.
+			}
+
+			set_character_name = GER_walter_dornberger
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_GER_walter_dornberger_small
+				}
+				army = {
+					small = GFX_portrait_GER_walter_dornberger_small
+				}
+				navy = {
+					small = GFX_portrait_GER_walter_dornberger_small
+				}
+			}
+
+			64 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OLS }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_chief_ground_support_1
+					has_trait = air_chief_ground_support_2
+					has_trait = air_chief_ground_support_3
+				}
+			}
+
+			set_character_name = GER_helmuth_wilberg
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_GER_helmuth_wilberg_small
+				}
+				army = {
+					small = GFX_portrait_GER_helmuth_wilberg_small
+				}
+				navy = {
+					small = GFX_portrait_GER_helmuth_wilberg_small
+				}
+			}
+
+			65 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OLL }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = close_air_support_proponent
+			}
+
+			set_character_name = GER_wolfram_von_richthofen
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_wolfram_von_richthofen
+				}
+				army = {
+					small = GFX_idea_wolfram_von_richthofen
+				}
+				navy = {
+					small = GFX_idea_wolfram_von_richthofen
+				}
+			}
+
+			66 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_chief_all_weather_1
+					has_trait = air_chief_all_weather_2
+					has_trait = air_chief_all_weather_3
+				}
+			}
+
+			set_character_name = GER_ritter_von_greim
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_ritter_von_greim
+				}
+				army = {
+					small = GFX_idea_ritter_von_greim
+				}
+				navy = {
+					small = GFX_idea_ritter_von_greim
+				}
+			}
+
+			66 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = OLB }
+
+		random_character = { # Used for Hans Oster, only applied with the named advisors only mode.
+			limit = {
+				is_advisor = yes
+				has_trait = popular_figurehead
+			}
+
+			set_character_flag = special_advisor
+
+			68 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = head_of_intelligence
+			}
+
+			set_character_name = GER_wilhelm_canaris
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_ger_wilhelm_canaris
+				}
+				army = {
+					small = GFX_idea_ger_wilhelm_canaris
+				}
+				navy = {
+					small = GFX_idea_ger_wilhelm_canaris
+				}
+			}
+
+			68 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = army_chief_organizational_1
+					has_trait = army_chief_organizational_2
+					has_trait = army_chief_organizational_3
+				}
+			}
+
+			set_character_name = GER_ludwig_beck
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_ludwig_beck
+				}
+				army = {
+					small = GFX_idea_ludwig_beck
+				}
+				navy = {
+					small = GFX_idea_ludwig_beck
+				}
+			}
+
+			68 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {
@@ -7714,6 +8425,29 @@ handle_special_advisors = {
 		random_character = {
 			limit = {
 				is_advisor = yes
+				has_trait = air_warfare_theorist
+			}
+
+			set_character_name = GER_walther_wever
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_walther_wever
+				}
+				army = {
+					small = GFX_idea_walther_wever
+				}
+				navy = {
+					small = GFX_idea_walther_wever
+				}
+			}
+
+			763 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
 				OR = {
 					has_trait = air_airborne_1
 					has_trait = air_airborne_2
@@ -7736,6 +8470,33 @@ handle_special_advisors = {
 				navy = {
 					large = GFX_portrait_GER_kurt_student
 					small = GFX_idea_kurt_student
+				}
+			}
+
+			763 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				OR = {
+					has_trait = air_tactical_bombing_1
+					has_trait = air_tactical_bombing_2
+					has_trait = air_tactical_bombing_3
+				}
+			}
+
+			set_character_name = GER_erhard_milch
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_idea_erhard_milch
+				}
+				army = {
+					small = GFX_idea_erhard_milch
+				}
+				navy = {
+					small = GFX_idea_erhard_milch
 				}
 			}
 
