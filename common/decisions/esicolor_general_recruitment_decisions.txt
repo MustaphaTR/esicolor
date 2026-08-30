@@ -96,54 +96,59 @@ esicolor_general_recruitment = {
 					}
 
 					var:original_owner = {
-						for_each_scope_loop = {
-							array = THIS.army_leaders
+						meta_effect = {
+							text = {
+								for_each_scope_loop = {
+									array = THIS.army_leaders
 
-							if = {
-								limit = {
-									is_field_marshal = yes
-									commander_unavailable_for_leader = no
-									OR = {
-										NOT = { ROOT = { has_country_flag = foreign_generals_named_only } }
-										has_character_flag = special_general
-									}
-									OR = {
-										check_variable = { ROOT.marshal_to_recruit = 0 }
-										AND = {
-											ROOT = { has_country_flag = foreign_generals_named_prioritised }
-											has_character_flag = special_general
-											ROOT = { var:marshal_to_recruit = { NOT = { has_character_flag = special_general } } }
-										}
-										AND = {
-											ROOT = { NOT = { has_country_flag = foreign_generals_no_priority } }
-											has_character_flag = special_general
-											ROOT = {
-												var:marshal_to_recruit = {
-													has_character_flag = special_general
-													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
-												}
-											}
-										}
-										AND = {
+									if = {
+										limit = {
+											is_field_marshal = yes
+											commander_unavailable_for_leader = no
 											OR = {
-												NOT = { has_character_flag = special_general }
-												ROOT = { has_country_flag = foreign_generals_no_priority }
+												NOT = { ROOT = { has_country_flag = foreign_generals_named_only } }
+												has_character_flag = special_general
 											}
-											ROOT = {
-												var:marshal_to_recruit = {
+											OR = {
+												check_variable = { ROOT.marshal_to_recruit = 0 }
+												AND = {
+													ROOT = { has_country_flag = foreign_generals_named_prioritised }
+													has_character_flag = special_general
+													ROOT = { var:marshal_to_recruit = { NOT = { has_character_flag = special_general } } }
+												}
+												AND = {
+													ROOT = { NOT = { has_country_flag = foreign_generals_no_priority } }
+													has_character_flag = special_general
+													ROOT = {
+														var:marshal_to_recruit = {
+															has_character_flag = special_general
+															check_variable = { PREV.PREV.[PRIORITYVAR] > THIS.[PRIORITYVAR] }
+														}
+													}
+												}
+												AND = {
 													OR = {
 														NOT = { has_character_flag = special_general }
 														ROOT = { has_country_flag = foreign_generals_no_priority }
 													}
-													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
+													ROOT = {
+														var:marshal_to_recruit = {
+															OR = {
+																NOT = { has_character_flag = special_general }
+																ROOT = { has_country_flag = foreign_generals_no_priority }
+															}
+															check_variable = { PREV.PREV.[PRIORITYVAR] > THIS.[PRIORITYVAR] }
+														}
+													}
 												}
 											}
 										}
+
+										set_variable = { ROOT.marshal_to_recruit = THIS }
 									}
 								}
-
-								set_variable = { ROOT.marshal_to_recruit = THIS }
 							}
+							PRIORITYVAR = "[ROOT.GetForeignGeneralsPriorityVariable]"
 						}
 					}
 				}
@@ -226,54 +231,59 @@ esicolor_general_recruitment = {
 					}
 
 					var:original_owner = {
-						for_each_scope_loop = {
-							array = THIS.army_leaders
+						meta_effect = {
+							text = {
+								for_each_scope_loop = {
+									array = THIS.army_leaders
 
-							if = {
-								limit = {
-									is_corps_commander = yes
-									commander_unavailable_for_leader = no
-									OR = {
-										NOT = { ROOT = { has_country_flag = foreign_generals_named_only } }
-										has_character_flag = special_general
-									}
-									OR = {
-										check_variable = { ROOT.general_to_recruit = 0 }
-										AND = {
-											ROOT = { has_country_flag = foreign_generals_named_prioritised }
-											has_character_flag = special_general
-											ROOT = { var:general_to_recruit = { NOT = { has_character_flag = special_general } } }
-										}
-										AND = {
-											ROOT = { NOT = { has_country_flag = foreign_generals_no_priority } }
-											has_character_flag = special_general
-											ROOT = {
-												var:general_to_recruit = {
-													has_character_flag = special_general
-													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
-												}
-											}
-										}
-										AND = {
+									if = {
+										limit = {
+											is_corps_commander = yes
+											commander_unavailable_for_leader = no
 											OR = {
-												NOT = { has_character_flag = special_general }
-												ROOT = { has_country_flag = foreign_generals_no_priority }
+												NOT = { ROOT = { has_country_flag = foreign_generals_named_only } }
+												has_character_flag = special_general
 											}
-											ROOT = {
-												var:general_to_recruit = {
+											OR = {
+												check_variable = { ROOT.general_to_recruit = 0 }
+												AND = {
+													ROOT = { has_country_flag = foreign_generals_named_prioritised }
+													has_character_flag = special_general
+													ROOT = { var:general_to_recruit = { NOT = { has_character_flag = special_general } } }
+												}
+												AND = {
+													ROOT = { NOT = { has_country_flag = foreign_generals_no_priority } }
+													has_character_flag = special_general
+													ROOT = {
+														var:general_to_recruit = {
+															has_character_flag = special_general
+															check_variable = { PREV.PREV.[PRIORITYVAR] > THIS.[PRIORITYVAR] }
+														}
+													}
+												}
+												AND = {
 													OR = {
 														NOT = { has_character_flag = special_general }
 														ROOT = { has_country_flag = foreign_generals_no_priority }
 													}
-													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
+													ROOT = {
+														var:general_to_recruit = {
+															OR = {
+																NOT = { has_character_flag = special_general }
+																ROOT = { has_country_flag = foreign_generals_no_priority }
+															}
+															check_variable = { PREV.PREV.[PRIORITYVAR] > THIS.[PRIORITYVAR] }
+														}
+													}
 												}
 											}
 										}
+
+										set_variable = { ROOT.general_to_recruit = THIS }
 									}
 								}
-
-								set_variable = { ROOT.general_to_recruit = THIS }
 							}
+							PRIORITYVAR = "[ROOT.GetForeignGeneralsPriorityVariable]"
 						}
 					}
 				}
@@ -355,53 +365,58 @@ esicolor_general_recruitment = {
 					}
 
 					var:original_owner = {
-						for_each_scope_loop = {
-							array = THIS.navy_leaders
+						meta_effect = {
+							text = {
+								for_each_scope_loop = {
+									array = THIS.navy_leaders
 
-							if = {
-								limit = {
-									commander_unavailable_for_leader = no
-									OR = {
-										NOT = { ROOT = { has_country_flag = foreign_generals_named_only } }
-										has_character_flag = special_admiral
-									}
-									OR = {
-										check_variable = { ROOT.admiral_to_recruit = 0 }
-										AND = {
-											ROOT = { has_country_flag = foreign_generals_named_prioritised }
-											has_character_flag = special_admiral
-											ROOT = { var:admiral_to_recruit = { NOT = { has_character_flag = special_admiral } } }
-										}
-										AND = {
-											ROOT = { NOT = { has_country_flag = foreign_generals_no_priority } }
-											has_character_flag = special_admiral
-											ROOT = {
-												var:admiral_to_recruit = {
-													has_character_flag = special_admiral
-													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
-												}
-											}
-										}
-										AND = {
+									if = {
+										limit = {
+											commander_unavailable_for_leader = no
 											OR = {
-												NOT = { has_character_flag = special_admiral }
-												ROOT = { has_country_flag = foreign_generals_no_priority }
+												NOT = { ROOT = { has_country_flag = foreign_generals_named_only } }
+												has_character_flag = special_admiral
 											}
-											ROOT = {
-												var:admiral_to_recruit = {
+											OR = {
+												check_variable = { ROOT.admiral_to_recruit = 0 }
+												AND = {
+													ROOT = { has_country_flag = foreign_generals_named_prioritised }
+													has_character_flag = special_admiral
+													ROOT = { var:admiral_to_recruit = { NOT = { has_character_flag = special_admiral } } }
+												}
+												AND = {
+													ROOT = { NOT = { has_country_flag = foreign_generals_no_priority } }
+													has_character_flag = special_admiral
+													ROOT = {
+														var:admiral_to_recruit = {
+															has_character_flag = special_admiral
+															check_variable = { PREV.PREV.[PRIORITYVAR] > THIS.[PRIORITYVAR] }
+														}
+													}
+												}
+												AND = {
 													OR = {
 														NOT = { has_character_flag = special_admiral }
 														ROOT = { has_country_flag = foreign_generals_no_priority }
 													}
-													check_variable = { PREV.PREV.skill_level > THIS.skill_level }
+													ROOT = {
+														var:admiral_to_recruit = {
+															OR = {
+																NOT = { has_character_flag = special_admiral }
+																ROOT = { has_country_flag = foreign_generals_no_priority }
+															}
+															check_variable = { PREV.PREV.[PRIORITYVAR] > THIS.[PRIORITYVAR] }
+														}
+													}
 												}
 											}
 										}
+
+										set_variable = { ROOT.admiral_to_recruit = THIS }
 									}
 								}
-
-								set_variable = { ROOT.admiral_to_recruit = THIS }
 							}
+							PRIORITYVAR = "[ROOT.GetForeignAdmiralsPriorityVariable]"
 						}
 					}
 				}

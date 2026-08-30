@@ -2,23 +2,88 @@ guiTypes = {
 	containerWindowType = {
 		name = "esicolor_foreign_generals_gui_window"
 		position = { x = 0 y = 0 }
-		size = { width = 100% height = 50 }
+		size = { width = 100% height = 70 }
 
 		instantTextboxType = {
-			name = "esicolor_foreign_generals_gui_priority_text"
-			position = { x = 12 y = -37 }
+			name = "esicolor_foreign_generals_gui_priority_skill_text"
+			position = { x = 12 y = -65 }
 			orientation = LOWER_LEFT
 			font = "hoi_24header"
-			text = "esicolor_foreign_generals_gui_priority"
+			text = "esicolor_foreign_generals_gui_priority_skill"
 			maxWidth = 350
 		}
 		buttonType = {
-			name = "esicolor_foreign_generals_gui_priority"
-			position = { x = -47 y = -40 }
+			name = "esicolor_foreign_generals_gui_priority_skill"
+			position = { x = -170 y = -65 }
+			orientation = LOWER_RIGHT
+			quadTextureSprite = "GFX_esicolor_decision_gui_button"
+			frame = 10
+			pdx_tooltip = "esicolor_foreign_generals_gui_priority_skill_tt"
+		}
+		buttonType = {
+			name = "esicolor_foreign_generals_gui_priority_attack"
+			position = { x = -138 y = -65 }
 			orientation = LOWER_RIGHT
 			quadTextureSprite = "GFX_esicolor_decision_gui_button"
 			frame = 1
-			pdx_tooltip = "esicolor_foreign_generals_gui_priority_tt"
+			pdx_tooltip = "esicolor_foreign_generals_gui_priority_attack_tt"
+		}
+		buttonType = {
+			name = "esicolor_foreign_generals_gui_priority_defense"
+			position = { x = -106 y = -65 }
+			orientation = LOWER_RIGHT
+			quadTextureSprite = "GFX_esicolor_decision_gui_button"
+			frame = 3
+			pdx_tooltip = "esicolor_foreign_generals_gui_priority_defense_tt"
+		}
+		buttonType = {
+			name = "esicolor_foreign_generals_gui_priority_planning"
+			position = { x = -74 y = -65 }
+			orientation = LOWER_RIGHT
+			quadTextureSprite = "GFX_esicolor_decision_gui_button"
+			frame = 5
+			pdx_tooltip = "esicolor_foreign_generals_gui_priority_planning_tt"
+		}
+		buttonType = {
+			name = "esicolor_foreign_generals_gui_priority_logistics"
+			position = { x = -42 y = -65 }
+			orientation = LOWER_RIGHT
+			quadTextureSprite = "GFX_esicolor_decision_gui_button"
+			frame = 7
+			pdx_tooltip = "esicolor_foreign_generals_gui_priority_logistics_tt"
+		}
+
+		instantTextboxType = {
+			name = "esicolor_foreign_generals_gui_priority_named_leader_text"
+			position = { x = 12 y = -35 }
+			orientation = LOWER_LEFT
+			font = "hoi_24header"
+			text = "esicolor_foreign_generals_gui_priority_named_leader"
+			maxWidth = 350
+		}
+		buttonType = {
+			name = "esicolor_foreign_generals_gui_priority_named_leader_only"
+			position = { x = -106 y = -35 }
+			orientation = LOWER_RIGHT
+			quadTextureSprite = "GFX_esicolor_decision_gui_button"
+			frame = 15
+			pdx_tooltip = "esicolor_foreign_generals_gui_priority_named_leader_only_tt"
+		}
+		buttonType = {
+			name = "esicolor_foreign_generals_gui_priority_named_leader_priority"
+			position = { x = -74 y = -35 }
+			orientation = LOWER_RIGHT
+			quadTextureSprite = "GFX_esicolor_decision_gui_button"
+			frame = 12
+			pdx_tooltip = "esicolor_foreign_generals_gui_priority_named_leader_priority_tt"
+		}
+		buttonType = {
+			name = "esicolor_foreign_generals_gui_priority_named_leader_no_priority"
+			position = { x = -42 y = -35 }
+			orientation = LOWER_RIGHT
+			quadTextureSprite = "GFX_esicolor_decision_gui_button"
+			frame = 13
+			pdx_tooltip = "esicolor_foreign_generals_gui_priority_named_leader_no_priority_tt"
 		}
 	}
 

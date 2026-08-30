@@ -4,59 +4,106 @@ scripted_gui = {
 		window_name = "esicolor_foreign_generals_gui_window"
 
 		properties = {
-			esicolor_foreign_generals_gui_priority = {
-				frame = esicolor_foreign_generals_gui_priority_frame
+			esicolor_foreign_generals_gui_priority_skill = {
+				frame = esicolor_foreign_generals_gui_priority_skill_frame
+			}
+			esicolor_foreign_generals_gui_priority_attack = {
+				frame = esicolor_foreign_generals_gui_priority_attack_frame
+			}
+			esicolor_foreign_generals_gui_priority_defense = {
+				frame = esicolor_foreign_generals_gui_priority_defense_frame
+			}
+			esicolor_foreign_generals_gui_priority_planning = {
+				frame = esicolor_foreign_generals_gui_priority_planning_frame
+			}
+			esicolor_foreign_generals_gui_priority_logistics = {
+				frame = esicolor_foreign_generals_gui_priority_logistics_frame
+			}
+
+			esicolor_foreign_generals_gui_priority_named_leader_only = {
+				frame = esicolor_foreign_generals_gui_priority_named_leader_only_frame
+			}
+			esicolor_foreign_generals_gui_priority_named_leader_priority = {
+				frame = esicolor_foreign_generals_gui_priority_named_leader_priority_frame
+			}
+			esicolor_foreign_generals_gui_priority_named_leader_no_priority = {
+				frame = esicolor_foreign_generals_gui_priority_named_leader_no_priority_frame
 			}
 		}
 
 		effects = {
-			esicolor_foreign_generals_gui_priority_click = {
-				if = {
-					limit = { has_country_flag = foreign_generals_named_only }
+			esicolor_foreign_generals_gui_priority_named_leader_only_click = {
+				set_country_flag = foreign_generals_named_only
+				clr_country_flag = foreign_generals_named_prioritised
+				clr_country_flag = foreign_generals_no_priority
 
-					clr_country_flag = foreign_generals_named_only
-					set_country_flag = foreign_generals_named_prioritised
-					clr_country_flag = foreign_generals_no_priority
-					set_variable = { esicolor_foreign_generals_gui_priority_frame = 1 }
-				}
-				else_if = {
-					limit = { has_country_flag = foreign_generals_named_prioritised }
-
-					clr_country_flag = foreign_generals_named_only
-					clr_country_flag = foreign_generals_named_prioritised
-					set_country_flag = foreign_generals_no_priority
-					set_variable = { esicolor_foreign_generals_gui_priority_frame = 3 }
-				}
-				else = {
-					set_country_flag = foreign_generals_named_only
-					clr_country_flag = foreign_generals_named_prioritised
-					clr_country_flag = foreign_generals_no_priority
-					set_variable = { esicolor_foreign_generals_gui_priority_frame = 2 }
-				}
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_only_frame = 16 }
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_priority_frame = 11 }
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_no_priority_frame = 13 }
 			}
-			esicolor_foreign_generals_gui_priority_right_click = {
-				if = {
-					limit = { has_country_flag = foreign_generals_no_priority }
+			esicolor_foreign_generals_gui_priority_named_leader_priority_click = {
+				clr_country_flag = foreign_generals_named_only
+				set_country_flag = foreign_generals_named_prioritised
+				clr_country_flag = foreign_generals_no_priority
 
-					clr_country_flag = foreign_generals_named_only
-					set_country_flag = foreign_generals_named_prioritised
-					clr_country_flag = foreign_generals_no_priority
-					set_variable = { esicolor_foreign_generals_gui_priority_frame = 1 }
-				}
-				else_if = {
-					limit = { has_country_flag = foreign_generals_named_only }
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_only_frame = 15 }
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_priority_frame = 12 }
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_no_priority_frame = 13 }
+			}
+			esicolor_foreign_generals_gui_priority_named_leader_no_priority_click = {
+				clr_country_flag = foreign_generals_named_only
+				clr_country_flag = foreign_generals_named_prioritised
+				set_country_flag = foreign_generals_no_priority
 
-					clr_country_flag = foreign_generals_named_only
-					clr_country_flag = foreign_generals_named_prioritised
-					set_country_flag = foreign_generals_no_priority
-					set_variable = { esicolor_foreign_generals_gui_priority_frame = 3 }
-				}
-				else = {
-					set_country_flag = foreign_generals_named_only
-					clr_country_flag = foreign_generals_named_prioritised
-					clr_country_flag = foreign_generals_no_priority
-					set_variable = { esicolor_foreign_generals_gui_priority_frame = 2 }
-				}
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_only_frame = 15 }
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_priority_frame = 11 }
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_no_priority_frame = 14 }
+			}
+
+			esicolor_foreign_generals_gui_priority_skill_click = {
+				set_variable = { esicolor_foreign_generals_gui_priority = 0 }
+
+				set_variable = { esicolor_foreign_generals_gui_priority_skill_frame = 10 }
+				set_variable = { esicolor_foreign_generals_gui_priority_attack_frame = 1 }
+				set_variable = { esicolor_foreign_generals_gui_priority_defense_frame = 3 }
+				set_variable = { esicolor_foreign_generals_gui_priority_planning_frame = 5 }
+				set_variable = { esicolor_foreign_generals_gui_priority_logistics_frame = 7 }
+			}
+			esicolor_foreign_generals_gui_priority_attack_click = {
+				set_variable = { esicolor_foreign_generals_gui_priority = 1 }
+
+				set_variable = { esicolor_foreign_generals_gui_priority_skill_frame = 9 }
+				set_variable = { esicolor_foreign_generals_gui_priority_attack_frame = 2 }
+				set_variable = { esicolor_foreign_generals_gui_priority_defense_frame = 3 }
+				set_variable = { esicolor_foreign_generals_gui_priority_planning_frame = 5 }
+				set_variable = { esicolor_foreign_generals_gui_priority_logistics_frame = 7 }
+			}
+			esicolor_foreign_generals_gui_priority_defense_click = {
+				set_variable = { esicolor_foreign_generals_gui_priority = 2 }
+
+				set_variable = { esicolor_foreign_generals_gui_priority_skill_frame = 9 }
+				set_variable = { esicolor_foreign_generals_gui_priority_attack_frame = 1 }
+				set_variable = { esicolor_foreign_generals_gui_priority_defense_frame = 4 }
+				set_variable = { esicolor_foreign_generals_gui_priority_planning_frame = 5 }
+				set_variable = { esicolor_foreign_generals_gui_priority_logistics_frame = 7 }
+			}
+			esicolor_foreign_generals_gui_priority_planning_click = {
+				set_variable = { esicolor_foreign_generals_gui_priority = 3 }
+
+				set_variable = { esicolor_foreign_generals_gui_priority_skill_frame = 9 }
+				set_variable = { esicolor_foreign_generals_gui_priority_attack_frame = 1 }
+				set_variable = { esicolor_foreign_generals_gui_priority_defense_frame = 3 }
+				set_variable = { esicolor_foreign_generals_gui_priority_planning_frame = 6 }
+				set_variable = { esicolor_foreign_generals_gui_priority_logistics_frame = 7 }
+			}
+			esicolor_foreign_generals_gui_priority_logistics_click = {
+				set_variable = { esicolor_foreign_generals_gui_priority = 4 }
+
+				set_variable = { esicolor_foreign_generals_gui_priority_skill_frame = 9 }
+				set_variable = { esicolor_foreign_generals_gui_priority_attack_frame = 1 }
+				set_variable = { esicolor_foreign_generals_gui_priority_defense_frame = 3 }
+				set_variable = { esicolor_foreign_generals_gui_priority_planning_frame = 5 }
+				set_variable = { esicolor_foreign_generals_gui_priority_logistics_frame = 8 }
 			}
 		}
 	}

@@ -1,0 +1,71 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = {
+	name = GetForeignGeneralsPriorityVariable
+	text = {
+		trigger = {
+			check_variable = { esicolor_foreign_generals_gui_priority = 1 }
+		}
+		localization_key = meta_attack_level
+	}
+	text = {
+		trigger = {
+			check_variable = { esicolor_foreign_generals_gui_priority = 2 }
+		}
+		localization_key = meta_defense_level
+	}
+	text = {
+		trigger = {
+			check_variable = { esicolor_foreign_generals_gui_priority = 3 }
+		}
+		localization_key = meta_planning_level
+	}
+	text = {
+		trigger = {
+			check_variable = { esicolor_foreign_generals_gui_priority = 4 }
+		}
+		localization_key = meta_logistics_level
+	}
+	text = {
+		localization_key = meta_skill_level
+	}
+}
+
+defined_text = {
+	name = GetForeignAdmiralsPriorityVariable
+	text = {
+		trigger = {
+			check_variable = { esicolor_foreign_generals_gui_priority = 1 }
+		}
+		localization_key = meta_attack_level
+	}
+	text = {
+		trigger = {
+			check_variable = { esicolor_foreign_generals_gui_priority = 2 }
+		}
+		localization_key = meta_defense_level
+	}
+	text = {
+		trigger = {
+			check_variable = { esicolor_foreign_generals_gui_priority = 3 }
+		}
+		localization_key = meta_coordination_level
+	}
+	text = {
+		trigger = {
+			check_variable = { esicolor_foreign_generals_gui_priority = 4 }
+		}
+		localization_key = meta_maneuvering_level
+	}
+	text = {
+		localization_key = meta_skill_level
+	}
+}

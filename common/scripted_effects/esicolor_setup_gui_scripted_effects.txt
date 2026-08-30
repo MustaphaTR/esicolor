@@ -1611,11 +1611,15 @@ setup_gui_start_foreign_generals = {
 				limit = { is_ai = no }
 
 				set_country_flag = foreign_generals_named_prioritised
-				set_variable = { esicolor_foreign_generals_gui_priority_frame = 1 }
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_only_frame = 15 }
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_priority_frame = 12 }
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_no_priority_frame = 13 }
 			}
 			else = {
 				set_country_flag = foreign_generals_no_priority
-				set_variable = { esicolor_foreign_generals_gui_priority_frame = 3 }
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_only_frame = 15 }
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_priority_frame = 11 }
+				set_variable = { esicolor_foreign_generals_gui_priority_named_leader_no_priority_frame = 14 }
 			}
 		}
 	}
