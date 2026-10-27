@@ -1,39 +1,17 @@
 characters={
 	BIE_johannes_kabin={
-		instance = {
-			allowed = {
-				has_dlc = "No Step Back"
-			}
-			name=EST_johannes_kabin
-			portraits={
-				civilian={
-					large=GFX_portrait_EST_johannes_kabin
-					small=GFX_idea_EST_johannes_kabin
-				}
-			}
-			country_leader={
-				traits={ HUN_ardent_stalinist }
-				ideology=stalinism
-				expire="1965.1.1.1"
-				id=-1
+		name=EST_johannes_kabin
+		portraits={
+			civilian={
+				large=GFX_portrait_EST_johannes_kabin
+				small=GFX_idea_EST_johannes_kabin
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "No Step Back" }
-			}
-			name=EST_johannes_kabin
-			portraits={
-				civilian={
-					large=GFX_Portrait_Europe_Generic_1
-				}
-			}
-			country_leader={
-				traits={ HUN_ardent_stalinist }
-				ideology=stalinism
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			traits={ HUN_ardent_stalinist }
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 }

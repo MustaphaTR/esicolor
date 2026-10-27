@@ -1,38 +1,16 @@
 characters={
 	BOY_gustavs_celminsh={
-		instance = {
-			allowed = {
-				has_dlc = "No Step Back"
-			}
-			name=LAT_gustavs_celminsh
-			portraits={
-				civilian={
-					large=GFX_portrait_LAT_gustavs_celmins
-					small=GFX_idea_LAT_gustavs_celmins
-				}
-			}
-			country_leader={
-				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=-1
+		name=LAT_gustavs_celminsh
+		portraits={
+			civilian={
+				large=GFX_portrait_LAT_gustavs_celmins
+				small=GFX_idea_LAT_gustavs_celmins
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "No Step Back" }
-			}
-			name=LAT_gustavs_celminsh
-			portraits={
-				civilian={
-					large=GFX_Portrait_Europe_Generic_land_3
-					small=GFX_idea_LAT_gustavs_celmins
-				}
-			}
-			country_leader={
-				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 }

@@ -1,38 +1,16 @@
 characters={
 	FBA_augustinas_voldemaras={
-		instance = {
-			allowed = {
-				has_dlc = "No Step Back"
-			}
-			name=LIT_augustinas_voldemaras
-			portraits={
-				civilian={
-					large=GFX_portrait_LIT_augustinas_voldemaras
-					small=GFX_idea_LIT_augustinas_voldemaras
-				}
-			}
-			country_leader={
-				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=-1
+		name=LIT_augustinas_voldemaras
+		portraits={
+			civilian={
+				large=GFX_portrait_LIT_augustinas_voldemaras
+				small=GFX_idea_LIT_augustinas_voldemaras
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "No Step Back" }
-			}
-			name=LIT_augustinas_voldemaras
-			portraits={
-				civilian={
-					large=GFX_Portrait_Europe_Generic_3
-					small=GFX_idea_LIT_augustinas_voldemaras
-				}
-			}
-			country_leader={
-				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=-1
-			}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 }
