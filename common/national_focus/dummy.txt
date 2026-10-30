@@ -1339,12 +1339,78 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MAN_the_two_emperors
+		id = SAF_empower_the_workers
 		icon = GFX_goal_generic_demand_territory
 		x = 0
 		y = 1
 		cost = 8
 		relative_position_id = SAF_abandon_westminster
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = SAF_support_the_afrikaner_broederbond
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SAF_abandon_westminster
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CAN_burn_the_royal_portraits
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SAF_support_the_afrikaner_broederbond
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CAN_swastika_clubs
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CAN_burn_the_royal_portraits
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = NZL_the_lee_affair
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = CAN_swastika_clubs
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = NZL_in_the_darkness
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = NZL_the_lee_affair
+
+		completion_reward = { }
+	}
+
+	focus = {
+		id = MAN_the_two_emperors
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = NZL_in_the_darkness
 
 		completion_reward = { }
 	}
