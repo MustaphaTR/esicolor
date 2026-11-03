@@ -1,6 +1,7 @@
 ﻿l_russian:
  esicolor_action_completed:0 "completed"
  esicolor_action_selected:0 "selected"
+ esicolor_cancel_button_tt_delayed:0 "£pol_power §YPolitical Power§! proportional to remaining duration will be refunded."
 
  esicolor_claim_button_tt:0 "Claim §Y[This.GetName]§!"
  esicolor_claim_button_tt_delayed:0 "[esicolor_claim_button_tt_delayed_option_check]"
@@ -28,6 +29,7 @@
  esicolor_claim_action_no_nap_met:0 "  £trigger_yes Does not have a non-agression pact with [This.owner.GetFlag] §Y[This.owner.GetName]§!."
  esicolor_claim_action_no_nap_unmet:0 "  £trigger_no Does not have a non-agression pact with [This.owner.GetFlag] §Y[This.owner.GetName]§!."
  esicolor_claim_button_timer_text:0 "[?Root.claim_timer_@This]"
+ esicolor_claim_cancel_button_tt:0 "Cancel Claiming §Y[This.GetName]§!"
 
  esicolor_compliance_button_tt:0 "Distrubute Goods in §Y[This.GetName]§!"
  esicolor_compliance_button_tt_delayed:0 "\n§YCost:§![esicolor_compliance_action_cost][esicolor_compliance_action_duration]\n\n§YPrerequisites:§!\n[Root.GetFlag] §Y[Root.GetName]:§!\n[This.esicolor_compliance_action_ours]\n[esicolor_compliance_action_factory]\n§Y[This.GetName]:§!\n[esicolor_compliance_action_no_full_compliance][esicolor_compliance_action_active]\n\n§YEffects when [esicolor_action_get_completed_selected]:§!\n§Y[This.GetName]:§!\n  Compliance: §G+10%§!."
@@ -44,11 +46,13 @@
  esicolor_compliance_action_factory_met:0 "  £trigger_yes Has a §YCivilian Factory§! to use for project."
  esicolor_compliance_action_factory_unmet:0 "  £trigger_no Has a §YCivilian Factory§! to use for project."
  esicolor_compliance_button_timer_text:0 "[?Root.compliance_timer_@This]"
+ esicolor_compliance_cancel_button_tt:0 "Cancel Distrubuting Goods in §Y[This.GetName]§!"
 
  esicolor_build_city_button_tt:0 "Build Administrative Infrastructure in §Y[This.GetName]§!"
  esicolor_build_city_button_tt_delayed:0 "\n§YCost:§![esicolor_compliance_action_cost][esicolor_build_city_action_duration]\n\n§YPrerequisites:§!\n[Root.GetFlag] §Y[Root.GetName]:§!\n[This.esicolor_compliance_action_ours]\n[esicolor_compliance_action_factory][esicolor_compliance_action_active]\n\n§YEffects when [esicolor_action_get_completed_selected]:§!\n§Y[This.GetName]:§!\n  Add §Y2§!£victory_points  to a province in the state."
  esicolor_build_city_action_duration:0 "\n§YDuration:§! [?global.build_city_length] days."
  esicolor_build_city_button_timer_text:0 "[?Root.build_city_timer_@This]"
+ esicolor_build_city_cancel_button_tt:0 "Cancel Building Administrative Infrastructure in §Y[This.GetName]§!"
 
  esicolor_move_capital_button_tt:0 "Move Capital to §Y[This.GetCapitalVictoryPointName]§!"
  esicolor_move_capital_button_tt_delayed:0 "\n§YCost:§![esicolor_move_capital_action_cost][esicolor_move_capital_action_duration]\n\n§YPrerequisites:§!\n[Root.GetFlag] §Y[Root.GetName]:§!\n[This.esicolor_compliance_action_ours]\n[esicolor_move_capital_action_capital][esicolor_move_capital_action_active]\n\n§YEffects when selected:§!\n[Root.GetFlag] §Y[Root.GetName]:§!\n  Moves capital to §Y[This.GetCapitalVictoryPointName]§!."
@@ -79,6 +83,7 @@
  esicolor_core_action_compliance_met:0 "  £trigger_yes Compliance more than"
  esicolor_core_action_compliance_unmet:0 "  £trigger_no Compliance more than"
  esicolor_core_button_timer_text:0 "[?Root.core_timer_@This]"
+ esicolor_core_cancel_button_tt:0 "Cancel Coring §Y[This.GetName]§!"
 
  esicolor_welcome_screen_open:0 "Open the §YWelcome Screen§!"
  esicolor_welcome_screen_header:0 "MustaphaTR's Every State Independent"

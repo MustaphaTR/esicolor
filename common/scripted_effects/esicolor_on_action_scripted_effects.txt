@@ -10800,6 +10800,29 @@ recalculate_recruitment_costs = {
 	}
 }
 
+claim_cancel_effect = { # PREV is state, THIS is claiming country.
+	set_temp_variable = {
+		claim_refund = {
+			value = global.claiming_cost?20
+			multiply = {
+				value = THIS.claim_timer_@PREV
+				divide = global.claiming_length?30
+			}
+		}
+	}
+	add_political_power = var:claim_refund
+
+	add_to_variable = { THIS.dynamic_pp_gain_modifier = 0.1 }
+	clamp_variable = {
+		var = THIS.dynamic_pp_gain_modifier
+		max = 0
+		min = -2000
+	}
+	remove_from_array = {
+		array = THIS.states_being_claimed
+		value = PREV
+	}
+}
 claim_action_effect = {
 	ROOT = { add_threat = 1 }
 
@@ -10841,6 +10864,105 @@ claim_action_effect = {
 					target = state_owner
 				}
 			}
+		}
+	}
+}
+
+compliance_cancel_effect = {
+	set_temp_variable = {
+		claim_refund = {
+			value = 40
+			multiply = {
+				value = ROOT.compliance_timer_@THIS
+				divide = global.compliance_length?30
+			}
+		}
+	}
+	ROOT = { add_political_power = var:claim_refund }
+
+	subtract_from_variable = { ROOT.dynamic_civ_factory_use = 1 }
+	clamp_variable = {
+		var = ROOT.dynamic_civ_factory_use
+		min = 0
+		max = 2000
+	}
+	remove_from_array = {
+		array = ROOT.states_getting_compliance
+		value = THIS
+	}
+}
+
+build_city_cancel_effect = {
+	set_temp_variable = {
+		claim_refund = {
+			value = 40
+			multiply = {
+				value = ROOT.build_city_timer_@THIS
+				divide = global.build_city_length?30
+			}
+		}
+	}
+	ROOT = { add_political_power = var:claim_refund }
+
+	subtract_from_variable = { ROOT.dynamic_civ_factory_use = 1 }
+	clamp_variable = {
+		var = ROOT.dynamic_civ_factory_use
+		min = 0
+		max = 2000
+	}
+	remove_from_array = {
+		array = ROOT.states_getting_city_built
+		value = THIS
+	}
+}
+
+core_cancel_effect = {
+	if = {
+		limit = { is_in_array = { ROOT.states_being_cored_normal = PREV } }
+
+		set_temp_variable = {
+			claim_refund = {
+				value = 60
+				multiply = {
+					value = ROOT.core_timer_@PREV
+					divide = global.coring_length?60
+				}
+			}
+		}
+		ROOT = { add_political_power = var:claim_refund }
+
+		add_to_variable = { ROOT.dynamic_pp_gain_modifier = 0.25 }
+		clamp_variable = {
+			var = ROOT.dynamic_pp_gain_modifier
+			max = 0
+			min = -2000
+		}
+		remove_from_array = {
+			array = ROOT.states_being_cored_normal
+			value = THIS
+		}
+	}
+	else = {
+		set_temp_variable = {
+			claim_refund = {
+				value = 30
+				multiply = {
+					value = ROOT.core_timer_@PREV
+					divide = global.coring_formable_length?30
+				}
+			}
+		}
+		ROOT = { add_political_power = var:claim_refund }
+
+		add_to_variable = { ROOT.dynamic_pp_gain_modifier = 0.125 }
+		clamp_variable = {
+			var = ROOT.dynamic_pp_gain_modifier
+			max = 0
+			min = -2000
+		}
+		remove_from_array = {
+			array = ROOT.states_being_cored_formable
+			value = THIS
 		}
 	}
 }

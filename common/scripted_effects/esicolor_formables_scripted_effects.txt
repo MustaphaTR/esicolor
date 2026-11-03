@@ -29,11 +29,19 @@ formable_decision_effect = {
 		}
 	}
 	else_if = {
-		limit = {
-			has_global_flag = formables_give_core
-		}
+		limit = { has_global_flag = formables_give_core }
 
 		add_core_of = ROOT
+		if = {
+			limit = {
+				OR = {
+					is_in_array = { ROOT.states_being_cored_formable = THIS }
+					is_in_array = { ROOT.states_being_cored_normal = THIS }
+				}
+			}
+
+			core_cancel_effect = yes
+		}
 	}
 
 	ROOT = { set_country_flag = has_formed_a_formable }

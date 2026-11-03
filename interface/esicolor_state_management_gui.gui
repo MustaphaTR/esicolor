@@ -1,134 +1,29 @@
 guiTypes = {
 	containerWindowType = {
-		name = "esicolor_state_action_category_container"
-		position = {x = 0 y = 0 }
-		size = { width= 300 height= 300 }
+		name = "esicolor_claim_button_window"
+		position = { x = 459 y = 6 }
+		size = { width = 67 height = 160 }
 
 		iconType = {
-			name = "esicolor_claim_button" 
-			position = { x = 460 y = 5 }
-			orientation = "UPPER_LEFT"
-			spriteType = "GFX_esicolor_claim_button_greyed"
-
-			pdx_tooltip = "esicolor_claim_button_tt"
-			pdx_tooltip_delayed = "esicolor_claim_button_tt_delayed"
+			name = "esicolor_state_management_bg"
+			position = { x = 5 y = 0 }
+			spriteType = "GFX_esicolor_state_management_bg"
 		}
-
-		iconType = {
-			name = "esicolor_compliance_button" 
-			position = { x = 460 y = 60 }
-			orientation = "UPPER_LEFT"
-			spriteType = "GFX_esicolor_compliance_button_greyed"
-
-			pdx_tooltip = "esicolor_compliance_button_tt"
-			pdx_tooltip_delayed = "esicolor_compliance_button_tt_delayed"
-		}
-
-		iconType = {
-			name = "esicolor_build_city_button" 
-			position = { x = 460 y = 60 }
-			orientation = "UPPER_LEFT"
-			spriteType = "GFX_esicolor_build_city_button_greyed"
-
-			pdx_tooltip = "esicolor_build_city_button_tt"
-			pdx_tooltip_delayed = "esicolor_build_city_button_tt_delayed"
-		}
-
-		iconType = {
-			name = "esicolor_move_capital_button" 
-			position = { x = 460 y = 60 }
-			orientation = "UPPER_LEFT"
-			spriteType = "GFX_esicolor_move_capital_button_greyed"
-
-			pdx_tooltip = "esicolor_move_capital_button_tt"
-			pdx_tooltip_delayed = "esicolor_move_capital_button_tt_delayed"
-		}
-
-		iconType = {
-			name = "esicolor_core_button" 
-			position = { x = 460 y = 115 }
-			orientation = "UPPER_LEFT"
-			spriteType = "GFX_esicolor_core_button_greyed"
-
-			pdx_tooltip = "esicolor_core_button_tt"
-			pdx_tooltip_delayed ="esicolor_core_button_tt_delayed"
-		}
-	}
-
-	containerWindowType = {
-		name = "esicolor_claim_button_clickable_window"
 		buttonType = {
-			name = "esicolor_claim_button_clickable"
-			position = { x = 460 y = 5 }
+			name = "esicolor_claim_button"
+			position = { x = 0 y = 4 }
 			orientation = "UPPER_LEFT"
 			spriteType = "GFX_esicolor_claim_button"
 
 			pdx_tooltip = "esicolor_claim_button_tt"
 			pdx_tooltip_delayed = "esicolor_claim_button_tt_delayed"
 		}
-	}
-
-	containerWindowType = {
-		name = "esicolor_compliance_button_clickable_window"
-		buttonType = {
-			name = "esicolor_compliance_button_clickable"
-			position = { x = 460 y = 60 }
-			orientation = "UPPER_LEFT"
-			spriteType = "GFX_esicolor_compliance_button"
-
-			pdx_tooltip = "esicolor_compliance_button_tt"
-			pdx_tooltip_delayed = "esicolor_compliance_button_tt_delayed"
-		}
-	}
-
-	containerWindowType = {
-		name = "esicolor_build_city_button_clickable_window"
-		buttonType = {
-			name = "esicolor_build_city_button_clickable"
-			position = { x = 460 y = 60 }
-			orientation = "UPPER_LEFT"
-			spriteType = "GFX_esicolor_build_city_button"
-
-			pdx_tooltip = "esicolor_build_city_button_tt"
-			pdx_tooltip_delayed = "esicolor_build_city_button_tt_delayed"
-		}
-	}
-
-	containerWindowType = {
-		name = "esicolor_move_capital_button_clickable_window"
-		buttonType = {
-			name = "esicolor_move_capital_button_clickable"
-			position = { x = 460 y = 60 }
-			orientation = "UPPER_LEFT"
-			spriteType = "GFX_esicolor_move_capital_button"
-
-			pdx_tooltip = "esicolor_move_capital_button_tt"
-			pdx_tooltip_delayed = "esicolor_move_capital_button_tt_delayed"
-		}
-	}
-
-	containerWindowType = {
-		name = "esicolor_core_button_clickable_window"
-		buttonType = {
-			name = "esicolor_core_button_clickable"
-			position = { x = 460 y = 115 }
-			orientation = "UPPER_LEFT"
-			spriteType = "GFX_esicolor_core_button"
-
-			pdx_tooltip = "esicolor_core_button_tt"
-			pdx_tooltip_delayed = "esicolor_core_button_tt_delayed"
-		}
-	}
-
-	containerWindowType = {
-		name = "esicolor_claim_button_timer"
 		instantTextBoxType = {
 			name = "esicolor_claim_button_timer_textbox"
-			position = { x = 409 y = 5 }
+			position = { x = 1 y = 0 }
 			font = "hoi_20b"
-			borderSize = { x = 0 y = 0 }
 			text = "esicolor_claim_button_timer_text"
-			maxWidth = 170
+			maxWidth = 67
 			maxHeight = 32
 			format = center
 			Orientation = "UPPER_LEFT"
@@ -136,17 +31,37 @@ guiTypes = {
 			pdx_tooltip = "esicolor_claim_button_tt"
 			pdx_tooltip_delayed = "esicolor_claim_button_tt_delayed"
 		}
+		buttonType = {
+			name = "esicolor_claim_cancel_button"
+			position = { x = -18 y = 0 }
+			orientation = "UPPER_RIGHT"
+			spriteType = "GFX_cancel_conversion_button"
+
+			pdx_tooltip = "esicolor_claim_cancel_button_tt"
+			pdx_tooltip_delayed = "esicolor_cancel_button_tt_delayed"
+		}
 	}
 
 	containerWindowType = {
-		name = "esicolor_compliance_button_timer"
+		name = "esicolor_compliance_button_window"
+		position = { x = 459 y = 58 }
+		size = { width = 67 height = 49 }
+
+		buttonType = {
+			name = "esicolor_compliance_button"
+			position = { x = 0 y = 4 }
+			orientation = "UPPER_LEFT"
+			spriteType = "GFX_esicolor_compliance_button"
+
+			pdx_tooltip = "esicolor_compliance_button_tt"
+			pdx_tooltip_delayed = "esicolor_compliance_button_tt_delayed"
+		}
 		instantTextBoxType = {
 			name = "esicolor_compliance_button_timer_textbox"
-			position = { x = 409 y = 60 }
+			position = { x = 1 y = 0 }
 			font = "hoi_20b"
-			borderSize = { x = 0 y = 0 }
 			text = "esicolor_compliance_button_timer_text"
-			maxWidth = 170
+			maxWidth = 67
 			maxHeight = 32
 			format = center
 			Orientation = "UPPER_LEFT"
@@ -154,17 +69,37 @@ guiTypes = {
 			pdx_tooltip = "esicolor_compliance_button_tt"
 			pdx_tooltip_delayed = "esicolor_compliance_button_tt_delayed"
 		}
+		buttonType = {
+			name = "esicolor_compliance_cancel_button"
+			position = { x = -18 y = 0 }
+			orientation = "UPPER_RIGHT"
+			spriteType = "GFX_cancel_conversion_button"
+
+			pdx_tooltip = "esicolor_compliance_cancel_button_tt"
+			pdx_tooltip_delayed = "esicolor_cancel_button_tt_delayed"
+		}
 	}
 
 	containerWindowType = {
-		name = "esicolor_build_city_button_timer"
+		name = "esicolor_build_city_button_window"
+		position = { x = 459 y = 58 }
+		size = { width = 67 height = 49 }
+
+		buttonType = {
+			name = "esicolor_build_city_button"
+			position = { x = 0 y = 4 }
+			orientation = "UPPER_LEFT"
+			spriteType = "GFX_esicolor_build_city_button"
+
+			pdx_tooltip = "esicolor_build_city_button_tt"
+			pdx_tooltip_delayed = "esicolor_build_city_button_tt_delayed"
+		}
 		instantTextBoxType = {
 			name = "esicolor_build_city_button_timer_textbox"
-			position = { x = 409 y = 60 }
+			position = { x = 1 y = 0 }
 			font = "hoi_20b"
-			borderSize = { x = 0 y = 0 }
 			text = "esicolor_build_city_button_timer_text"
-			maxWidth = 170
+			maxWidth = 67
 			maxHeight = 32
 			format = center
 			Orientation = "UPPER_LEFT"
@@ -172,17 +107,37 @@ guiTypes = {
 			pdx_tooltip = "esicolor_build_city_button_tt"
 			pdx_tooltip_delayed = "esicolor_build_city_button_tt_delayed"
 		}
+		buttonType = {
+			name = "esicolor_build_city_cancel_button"
+			position = { x = -18 y = 0 }
+			orientation = "UPPER_RIGHT"
+			spriteType = "GFX_cancel_conversion_button"
+
+			pdx_tooltip = "esicolor_build_city_cancel_button_tt"
+			pdx_tooltip_delayed = "esicolor_cancel_button_tt_delayed"
+		}
 	}
 
 	containerWindowType = {
-		name = "esicolor_move_capital_button_timer"
+		name = "esicolor_move_capital_button_window"
+		position = { x = 459 y = 58 }
+		size = { width = 67 height = 49 }
+
+		buttonType = {
+			name = "esicolor_move_capital_button"
+			position = { x = 0 y = 4 }
+			orientation = "UPPER_LEFT"
+			spriteType = "GFX_esicolor_move_capital_button"
+
+			pdx_tooltip = "esicolor_move_capital_button_tt"
+			pdx_tooltip_delayed = "esicolor_move_capital_button_tt_delayed"
+		}
 		instantTextBoxType = {
 			name = "esicolor_move_capital_button_timer_textbox"
-			position = { x = 409 y = 60 }
+			position = { x = 1 y = 0 }
 			font = "hoi_20b"
-			borderSize = { x = 0 y = 0 }
 			text = "esicolor_move_capital_button_timer_text"
-			maxWidth = 170
+			maxWidth = 67
 			maxHeight = 32
 			format = center
 			Orientation = "UPPER_LEFT"
@@ -193,20 +148,40 @@ guiTypes = {
 	}
 
 	containerWindowType = {
-		name = "esicolor_core_button_timer"
+		name = "esicolor_core_button_window"
+		position = { x = 459 y = 108 }
+		size = { width = 67 height = 49 }
+
+		buttonType = {
+			name = "esicolor_core_button"
+			position = { x = 0 y = 4 }
+			orientation = "UPPER_LEFT"
+			spriteType = "GFX_esicolor_core_button"
+
+			pdx_tooltip = "esicolor_core_button_tt"
+			pdx_tooltip_delayed = "esicolor_core_button_tt_delayed"
+		}
 		instantTextBoxType = {
 			name = "esicolor_core_button_timer_textbox"
-			position = { x = 409 y = 115 }
+			position = { x = 1 y = 0 }
 			font = "hoi_20b"
-			borderSize = { x = 0 y = 0 }
 			text = "esicolor_core_button_timer_text"
-			maxWidth = 170
+			maxWidth = 67
 			maxHeight = 32
 			format = center
 			Orientation = "UPPER_LEFT"
 
 			pdx_tooltip = "esicolor_core_button_tt"
 			pdx_tooltip_delayed = "esicolor_core_button_tt_delayed"
+		}
+		buttonType = {
+			name = "esicolor_core_cancel_button"
+			position = { x = -18 y = 0 }
+			orientation = "UPPER_RIGHT"
+			spriteType = "GFX_cancel_conversion_button"
+
+			pdx_tooltip = "esicolor_core_cancel_button_tt"
+			pdx_tooltip_delayed = "esicolor_cancel_button_tt_delayed"
 		}
 	}
 }
