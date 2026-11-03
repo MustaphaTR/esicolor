@@ -17,6 +17,7 @@ YFF_escort_ship_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
 			OR = {
@@ -38,6 +39,139 @@ YFF_escort_ship_organization = {
 		}
 	}
 }
+YFF_escort_ship_organization_custom = {
+	name = cockerill_shipyards
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_BEL_cockerill_shipyards_organization
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = YFF
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 977
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				977 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+    equipment_type = {  
+        screen_ship
+        convoy_1
+    }
+    trait = {
+        token = generic_mio_trait_submarine_hunters
+        limit_to_equipment_type = { screen_ship }
+    }
+    trait = {
+        token = generic_mio_trait_high_speed_mine_hunting_equipment
+        limit_to_equipment_type = { screen_ship }
+    }
+    trait = {
+        token = generic_mio_trait_advanced_hydrodynamic_design
+        limit_to_equipment_type = { screen_ship }
+    }
+    trait = {
+        token = generic_mio_trait_fleet_escorts
+        limit_to_equipment_type = { screen_ship }
+    }
+    trait = {
+        token = generic_mio_trait_anti_air_ships
+        limit_to_equipment_type = { screen_ship }
+    }
+    trait = {
+        token = generic_mio_trait_escort_in_force
+        limit_to_equipment_type = { screen_ship }
+    }
+    trait = {
+        token = generic_mio_trait_anti_air_layout
+        limit_to_equipment_type = { screen_ship }
+    }
+    trait = {
+        token = generic_mio_trait_gyro_stabilized_mounts
+        limit_to_equipment_type = { screen_ship }
+    }
+    trait = {
+        token = generic_mio_trait_improved_anti_air_gun_mounting
+        limit_to_equipment_type = { screen_ship }
+    }
+    trait = {
+        token = generic_mio_trait_mass_production
+        limit_to_equipment_type = { screen_ship }
+    }
+    trait = {
+        token = generic_mio_trait_improved_light_gun_mounting
+        limit_to_equipment_type = { screen_ship }
+    }
+	add_trait = { 
+		token = BEL_mio_trait_belgium_congo_link
+		name = BEL_mio_trait_belgium_congo_link
+		icon = GFX_generic_mio_trait_icon_naval_range
+		special_trait_background = yes
+
+        available = {
+            295 = {
+				owner = {
+					tag = FROM
+					is_subject_of = FROM
+				}
+			}
+        }
+
+		position = { x=9 y=0 }
+
+        limit_to_equipment_type = { screen_ship }
+		equipment_bonus = {
+			naval_range = 0.1
+		}
+	}
+	add_trait = { 
+		token = BEL_mio_trait_high_speed_transport
+		name = BEL_mio_trait_high_speed_transport
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		special_trait_background = yes
+		
+		position = { x=9 y=1 }
+
+		any_parent = { BEL_mio_trait_belgium_congo_link }
+
+        limit_to_equipment_type = { convoy }
+		equipment_bonus = {
+			naval_speed = 0.1
+		}
+	}
+	add_trait = { 
+		token = BEL_mio_trait_anti_submarine_expertise
+		name = BEL_mio_trait_anti_submarine_expertise
+		icon = GFX_generic_mio_trait_icon_sub_attack
+		special_trait_background = yes
+
+		position = { x=9 y=2 }
+
+		any_parent = { BEL_mio_trait_high_speed_transport }
+
+        limit_to_equipment_type = { screen_ship }
+		equipment_bonus = {
+			sub_detection = 0.05
+			sub_attack = 0.05
+		}
+	}
+}
 
 ###########################
 
@@ -49,9 +183,9 @@ YFF_escort_ship_organization = {
 
 ###########################
 
-OOL_light_aircraft_organization = {
+OOL_high_agility_fighter_aircraft_organization = {
 	name = renard
-	include = esicolor_generic_light_aircraft_organization
+	include = esicolor_generic_high_agility_fighter_aircraft_organization
 	icon = GFX_idea_BEL_renard_organization
 
 	allowed = {
@@ -59,7 +193,7 @@ OOL_light_aircraft_organization = {
 	}
 	visible = {
 		owner = {
-			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			NOT = { has_country_flag = agility_focused_aircraft_manufacturer_disabled }
 			OR = {
 				original_tag = OOL
 				AND = {
@@ -76,6 +210,103 @@ OOL_light_aircraft_organization = {
 			owner = {
 				6 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = BEL_mio_trait_all_metal_expertise
+		name = BEL_mio_trait_all_metal_expertise
+		icon = GFX_generic_mio_trait_icon_armor_value
+		special_trait_background = yes
+		
+		position = { x=2 y=1 }
+
+		any_parent = { generic_mio_trait_metal_skin }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			air_defence = 0.10
+		}
+	}
+	add_trait = { 
+		token = BEL_mio_trait_browning_collaboration
+		name = BEL_mio_trait_browning_collaboration
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		special_trait_background = yes
+
+		position = { x=7 y=1 }
+
+		any_parent = { generic_mio_trait_minimum_weapon_requirements }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+        available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = equipment_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+        }
+
+		equipment_bonus = {
+			air_attack = 0.05
+		}
+	}
+	add_trait = { 
+		token = BEL_mio_trait_stampe_et_vertrongen
+		name = BEL_mio_trait_stampe_et_vertrongen
+		icon = GFX_generic_mio_trait_icon_naval_range
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+        available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				977 = { is_core_of = FROM }
+			}
+			else = {
+				977 = { is_owned_by = FROM }
+			}
+		}
+
+		equipment_bonus = {
+			air_agility = 0.05
+			air_range = 0.05
+		}
+
+	}
+	add_trait = { 
+		token = BEL_mio_trait_stampe_et_renard
+		name = BEL_mio_trait_stampe_et_renard
+		icon = GFX_generic_mio_department_icon_plane_fighter_combat
+		special_trait_background = yes
+		
+		position = { x=9 y=1 }  
+
+		any_parent = { BEL_mio_trait_stampe_et_vertrongen }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			air_attack = 0.05 
+			reliability = 0.05
 		}
 	}
 }
@@ -99,6 +330,7 @@ OEA_infantry_equipment_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
 			OR = {
@@ -120,6 +352,117 @@ OEA_infantry_equipment_organization = {
 		}
 	}
 }
+OEA_infantry_equipment_organization_custom = {
+	name = BEL_fn_herstal_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_BEL_fn_herstal_organization
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OEA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 34
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				34 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		name = BEL_mio_initial_trait_fn_herstal
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+	}
+	add_trait = { 
+		token = BEL_mio_trait_outsourced_production
+		name = BEL_mio_trait_outsourced_production
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=0 y=0 }
+
+        available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = equipment_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+        }
+
+		production_bonus = {
+			production_cost_factor = -0.05
+		}
+	}
+
+	add_trait = { 
+		token = BEL_mio_trait_browning_automatic_rifles
+		name = BEL_mio_trait_browning_automatic_rifles
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		special_trait_background = yes
+
+		position = { x=0 y=1 }  
+
+		any_parent = { BEL_mio_trait_outsourced_production }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+	}
+	add_trait = { 
+		token = BEL_mio_trait_assault_rifles
+		name = BEL_mio_trait_assault_rifles
+		icon = GFX_generic_mio_department_icon_infantry_quality
+		special_trait_background = yes
+
+		position = { x=0 y=2 }  
+
+		any_parent = { BEL_mio_trait_browning_automatic_rifles }
+
+		equipment_bonus = {
+			soft_attack = 0.1
+		}
+		production_bonus = { 
+			production_cost_factor = 0.05 
+		}
+	}
+}
 
 OEA_artillery_organization = {
 	name = BEL_fonderie_royale_de_canons_liege_organization
@@ -130,6 +473,7 @@ OEA_artillery_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = artillery_manufacturer_disabled }
 			OR = {
@@ -148,6 +492,91 @@ OEA_artillery_organization = {
 			owner = {
 				34 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+OEA_artillery_organization_custom = {
+	name = BEL_fonderie_royale_de_canons_liege_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_BEL_fonderie_royale_de_canons_liege
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = OEA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 34
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				34 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		production_bonus = {
+			production_cost_factor = -0.03
+		}
+		equipment_bonus = {
+			ap_attack = 0.15
+			hard_attack = 0.1
+		}
+	}
+	add_trait = { 
+		token = BEL_mio_trait_47mm_at_guns
+		name = BEL_mio_trait_47mm_at_guns
+		icon = GFX_generic_mio_department_icon_anti_tank
+		special_trait_background = yes
+
+		position = { x=5 y=1 }  
+
+		any_parent = { generic_mio_trait_rapid_fire }
+
+		limit_to_equipment_type = { anti_tank_equipment }
+		equipment_bonus = {
+			ap_attack = 0.15
+			hard_attack = 0.1
+		}
+	}
+	add_trait = { 
+		token = BEL_mio_trait_excellent_machining_tools
+		name = BEL_mio_trait_excellent_machining_tools
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=7 y=1 }  
+
+		any_parent = { generic_mio_trait_advanced_barrel_forging generic_mio_trait_big_guns }
+        available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				977 = { is_core_of = FROM }
+			}
+			else = {
+				977 = { is_owned_by = FROM }
+			}
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.03
+			production_efficiency_cap_factor = 0.03
 		}
 	}
 }
@@ -178,6 +607,84 @@ YFF_motorized_mechanized_organization = {
 
 			owner = {
 				977 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	add_trait = { 
+		token = BEL_mio_trait_flourishing_automobile_industry
+		name = BEL_mio_trait_flourishing_automobile_industry
+		icon = GFX_generic_mio_department_icon_motorized_production
+		special_trait_background = yes
+
+		position = { x=3 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { motorized_equipment }
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+	add_trait = { 
+		token = BEL_mio_trait_knight_engines_motorized
+		name = BEL_mio_trait_knight_engines
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		special_trait_background = yes
+
+		position = { x=5 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			reliability = 0.05
+			maximum_speed = 0.1
+		}
+	}
+  	add_trait = { 
+		token = BEL_mio_trait_high_grade_armor_mech
+		name = BEL_mio_trait_high_grade_armor
+		icon = GFX_generic_mio_trait_icon_armor_value
+		special_trait_background = yes
+
+		position = { x=5 y=1 }  
+
+		any_parent = { BEL_mio_trait_knight_engines_motorized }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { mechanized_equipment }	
+		equipment_bonus = {
+			armor_value = 0.05
+		}
+	}
+}
+
+OEA_generic_train_organization = {
+	name = BEL_ateliers_metallurgiques_tubize_organization
+	include = esicolor_generic_train_organization
+	icon = GFX_idea_BEL_ateliers_metallurgiques_tubize
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = train_manufacturer_disabled }
+			OR = {
+				original_tag = OEA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 34
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				34 = { state_designer_availabile = yes }
 			}
 		}
 	}

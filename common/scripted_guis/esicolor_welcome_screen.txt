@@ -2861,6 +2861,18 @@ scripted_gui = {
 				check_variable = { global.setup_economic_law = -1 }
 			}
 
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_5_locked_visible = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_5_visible = {
+				has_dlc = "Arms Against Tyranny"
+				check_variable = { global.setup_mio_special_traits = -1 }
+			}
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_5_selected_visible = {
+				has_dlc = "Arms Against Tyranny"
+				check_variable = { global.setup_mio_special_traits = 1 }
+			}
+
 			esicolor_welcome_screen_tab_1_page_5_eaw_data_9_mixed_visible = {
 				check_variable = { global.setup_starting_army = 0 }
 			}
@@ -3007,6 +3019,13 @@ scripted_gui = {
 
 					add_to_variable = { global.setup_advisors = 1 }
 				}
+			}
+
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_5_click = {
+				set_variable = { global.setup_mio_special_traits = 1 }
+			}
+			esicolor_welcome_screen_tab_1_page_5_eaw_data_5_selected_click = {
+				set_variable = { global.setup_mio_special_traits = -1 }
 			}
 
 			esicolor_welcome_screen_tab_1_page_5_max_minus_5_click = {

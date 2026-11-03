@@ -71,6 +71,7 @@ default_preset_effects = {
 	set_variable = { global.setup_advisors = -1 }
 	set_variable = { global.setup_military_advisors = -1 }
 	set_variable = { global.setup_mio_concern = -1 }
+	set_variable = { global.setup_mio_special_traits = -1 }
 
 	set_variable = { global.setup_starting_army = 1 }
 	set_variable = { global.setup_starting_army_type = 0 }
@@ -177,6 +178,7 @@ basegame_preset_effects = {
 	set_variable = { global.setup_advisors = -2 }
 	set_variable = { global.setup_military_advisors = -1 }
 	set_variable = { global.setup_mio_concern = -2 }
+	set_variable = { global.setup_mio_special_traits = -1 }
 
 	set_variable = { global.setup_starting_army = 0 }
 	set_variable = { global.setup_starting_army_type = 0 }
@@ -304,6 +306,7 @@ randomised_preset_effects = {
 	set_variable = { global.setup_advisors = -3 }
 	set_variable = { global.setup_military_advisors = -2 }
 	set_variable = { global.setup_mio_concern = -3 }
+	set_variable = { global.setup_mio_special_traits = -1 }
 
 	set_variable = { global.setup_starting_army = 1 }
 	set_variable = { global.setup_starting_army_type = -1 }
@@ -469,6 +472,7 @@ equalised_preset_effects = {
 	set_variable = { global.setup_advisors = 0 }
 	set_variable = { global.setup_military_advisors = 1 }
 	set_variable = { global.setup_mio_concern = 0 }
+	set_variable = { global.setup_mio_special_traits = -1 }
 
 	set_variable = { global.setup_starting_army = 1 }
 	set_variable = { global.setup_starting_army_type = 0 }
@@ -582,6 +586,7 @@ developer_preset_effects = {
 	set_variable = { global.setup_advisors = -3 }
 	set_variable = { global.setup_military_advisors = -2 }
 	set_variable = { global.setup_mio_concern = 1 }
+	set_variable = { global.setup_mio_special_traits = 1 }
 
 	set_variable = { global.setup_starting_army = 1 }
 	set_variable = { global.setup_starting_army_type = 1 }
@@ -1324,6 +1329,7 @@ setup_gui_start_mio_concern = {
 	clr_global_flag = custom_designers_only
 	clr_global_flag = custom_designers_only_core
 	clr_global_flag = custom_designers_only_ownership
+	clr_global_flag = custom_designer_traits_enabled
 
 	if = {
 		limit = { check_variable = { global.setup_mio_concern < -2 } }
@@ -1351,6 +1357,12 @@ setup_gui_start_mio_concern = {
 
 		set_global_flag = custom_designers_only
 		set_global_flag = custom_designers_only_core
+	}
+
+	if = {
+		limit = { check_variable = { global.setup_mio_special_traits > 0 } }
+
+		set_global_flag = custom_designer_traits_enabled
 	}
 }
 

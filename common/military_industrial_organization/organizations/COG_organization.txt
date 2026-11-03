@@ -17,6 +17,7 @@ ZYS_support_equipment_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
 			OR = {
@@ -35,6 +36,50 @@ ZYS_support_equipment_organization = {
 			owner = {
 				295 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+ZYS_support_equipment_organization_custom = {
+	name = COG_explosifs_congo_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_societe_africain_de_explosifes
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = ZYS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 295
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				295 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		name = HUN_mio_trait_army_ammunition_and_wepaons_works
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			reliability = 0.05
+			breakthrough = 0.03
+		}
+		production_bonus = {
+			production_cost_factor = -0.1
 		}
 	}
 }

@@ -4,6 +4,7 @@ has_custom_infantry_tank_manufacturer = {
 		original_tag = OIO
 		original_tag = PJM # OIL
 		original_tag = IIO
+		original_tag = IEZ
 		original_tag = ISB
 		original_tag = IYS
 		original_tag = NFL
@@ -24,10 +25,10 @@ has_custom_fast_tank_manufacturer = {
 		original_tag = OAF
 		original_tag = OAY
 		original_tag = OSS
+		original_tag = IZB
 		original_tag = IEB
 		original_tag = ZZI
 		original_tag = ZBA
-		original_tag = ZBS
 		original_tag = EYL
 		original_tag = LIE
 	}
@@ -42,6 +43,7 @@ has_custom_medium_tank_manufacturer = {
 		original_tag = ZLL
 		original_tag = ZFS
 		original_tag = ZBZ
+		original_tag = ZBS
 		original_tag = EYE
 		original_tag = SOI
 		original_tag = LZI
@@ -258,6 +260,7 @@ has_custom_convoy_escort_naval_manufacturer = {
 		original_tag = IIO
 		original_tag = IEE
 		original_tag = ZFB
+		original_tag = ZBS
 		original_tag = AZY
 		original_tag = ALA
 		original_tag = SOO
@@ -290,7 +293,6 @@ has_custom_light_aircraft_manufacturer = {
 	OR = {
 		original_tag = OOE
 		original_tag = OOA
-		original_tag = OOL
 		original_tag = OOF
 		original_tag = OOY
 		original_tag = OII
@@ -330,6 +332,7 @@ has_custom_light_aircraft_manufacturer = {
 
 has_custom_agility_focused_aircraft_manufacturer = {
 	OR = {
+		original_tag = OOL
 		original_tag = OFS
 		original_tag = ZBZ
 		original_tag = EEB
@@ -343,6 +346,7 @@ has_custom_agility_focused_aircraft_manufacturer = {
 
 has_custom_CAS_manufacturer = {
 	OR = {
+		original_tag = OOA
 		original_tag = OOY
 		original_tag = OAF
 		original_tag = OLA
@@ -378,6 +382,7 @@ has_custom_medium_aircraft_manufacturer = {
 
 has_custom_fuel_efficient_aircraft_manufacturer = {
 	OR = {
+		original_tag = OOY
 		original_tag = ISB
 		original_tag = SEZ
 		original_tag = FYF
@@ -390,6 +395,7 @@ has_custom_fuel_efficient_aircraft_manufacturer = {
 
 has_custom_multi_role_aircraft_manufacturer = {
 	OR = {
+		original_tag = OEF
 		original_tag = OAE
 		original_tag = OLI
 		original_tag = ISY
@@ -559,6 +565,14 @@ has_custom_motorized_equipment_manufacturer = {
 	}
 }
 
+has_custom_train_manufacturer = {
+	OR = {
+		original_tag = OEA
+		original_tag = IEZ
+		original_tag = LOY
+	}
+}
+
 # Without AAT, this is a Tank Designer.
 has_custom_armored_car_manufacturer = {
 	OR = {
@@ -570,7 +584,7 @@ has_custom_armored_car_manufacturer = {
 	}
 }
 
-# Only available with AAT and WoW.
+# Only available with WoW.
 has_custom_helicopter_manufacturer = {
 	OR = {
 		original_tag = OOL
@@ -730,7 +744,10 @@ has_custom_railway_company = {
 
 has_custom_central_bank = {
 	OR = {
+		original_tag = OOA
+		original_tag = ZFY
 		original_tag = ZBA
+		original_tag = SOO
 		original_tag = NSB
 		original_tag = NFL
 	}

@@ -298,7 +298,6 @@ ideas = {
 	aircraft_manufacturer = {
 		designer = yes
 
-		# Santiago
 		ZFY_light_aircraft_manufacturer = {
 			name = CHL_enaer
 			picture = generic_air_manufacturer_1 # generic_air_manufacturer_2
@@ -491,6 +490,37 @@ ideas = {
 				train_tech = 0.15
 			}
 			traits = { railway_company }
+		}
+
+		ZFY_central_bank = {
+			name = CHL_banco_central_de_chile
+			picture = CHL_bcc
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = central_bank_disabled }
+				OR = {
+					original_tag = ZFY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 279
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					279 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.04
+			}
+			traits = { central_bank_esicolor }
 		}
 	}
 }

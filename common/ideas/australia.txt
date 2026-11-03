@@ -1,14 +1,76 @@
 ideas = {
 	tank_manufacturer = {
-		ZBS_fast_tank_manufacturer = {
-			name = new_south_wales_rc
-			picture = new_south_wales_rc
+		IEZ_infantry_tank_manufacturer = {
+			name = AST_vulcan_foundry_organization
+			picture = AST_vulcan_foundry
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+				OR = {
+					original_tag = IEZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 132
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					132 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { infantry_tank_manufacturer }
+		}
+
+		IZB_fast_tank_manufacturer = {
+			name = AST_nuffield_mechanizations_and_aero_organization
+			picture = AST_nuffield_mechanizations_and_aero
 
 			allowed = {
 				always = yes
 			}
 			visible = {
 				NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+				OR = {
+					original_tag = IZB
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 128
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					128 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { fast_tank_manufacturer }
+		}
+
+		ZBS_medium_tank_manufacturer = {
+			name = AST_new_south_wales_government_railways_organization
+			picture = AST_new_south_wales_government_railways
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = medium_tank_manufacturer_disabled }
 				OR = {
 					original_tag = ZBS
 					AND = {
@@ -28,7 +90,7 @@ ideas = {
 			research_bonus = {
 				armor = 0.15
 			}
-			traits = { fast_tank_manufacturer }
+			traits = { medium_tank_manufacturer }
 		}
 	}
 
@@ -96,6 +158,37 @@ ideas = {
 				naval_equipment = 0.15
 			}
 			traits = { raiding_fleet_naval_manufacturer }
+		}
+
+		ZBS_convoy_escort_naval_manufacturer = {
+			name = AST_morts_dock_organization
+			picture = maizuru_naval_arsenal # generic_naval_manufacturer_1
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+				OR = {
+					original_tag = ZBS
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 285
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					285 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { convoy_escort_naval_manufacturer }
 		}
 	}
 

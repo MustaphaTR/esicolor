@@ -38,7 +38,8 @@ ideas = {
 	aircraft_manufacturer = {
 		designer = yes
 
-		OOL_light_aircraft_manufacturer = {
+		# Original is light_aircraft_manufacturer, but MIO version is Agilty Focused, so using that one here.
+		OOL_agility_focused_aircraft_manufacturer = {
 			name = BEL_renard_organization
 			picture = renard
 
@@ -46,7 +47,7 @@ ideas = {
 				always = yes
 			}
 			visible = {
-				NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+				NOT = { has_country_flag = agility_focused_aircraft_manufacturer_disabled }
 				OR = {
 					original_tag = OOL
 					AND = {
@@ -66,7 +67,7 @@ ideas = {
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			traits = { light_aircraft_manufacturer }
+			traits = { agility_focused_aircraft_manufacturer }
 		}
 	}
 
@@ -165,6 +166,78 @@ ideas = {
 				mot_rockets = 0.50
 			}
 			traits = { motorized_equipment_manufacturer }
+		}
+
+		OEA_train_manufacturer = {
+			name = BEL_ateliers_metallurgiques_tubize_organization
+			picture = BEL_ateliers_metallurgiques_tubize
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = train_manufacturer_disabled }
+				OR = {
+					original_tag = OEA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 34
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					34 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+				support_tech = 0.07
+			}
+			equipment_bonus = {
+				train_equipment = {
+					build_cost_ic = -0.10
+					armor_value = 0.10
+					air_attack = 0.10
+					instant = yes
+				}
+			}
+			traits = { train_equipment_manufacturer }
+		}
+
+		OOL_helicopter_equipment_manufacturer = {
+			name = BEL_laboratoire_aerotechnique_de_belgique_organization
+			picture = generic_helicopter_1
+
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			visible = {
+				NOT = { has_country_flag = train_manufacturer_disabled }
+				OR = {
+					original_tag = OOL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 6
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					6 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.05
+				air_equipment = 0.05
+			}
+			traits = { helicopter_equipment_manufacturer }
 		}
 	}
 

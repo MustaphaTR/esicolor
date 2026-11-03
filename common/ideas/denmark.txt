@@ -68,6 +68,37 @@ ideas = {
 	aircraft_manufacturer = { 
 		designer = yes
 
+		OEF_multi_role_aircraft_manufacturer = {
+			name = DEN_flyvertroppernes_organization
+			picture = DEN_flyvertroppernes_organization
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OEF
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 37
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					37 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { multi_role_aircraft_manufacturer }
+		}
+
 		OEF_naval_aircraft_manufacturer = {
 			name = DEN_flyvemaskinevaerksted_organization
 			picture = DEN_flyvemaskinevaerksted_organization

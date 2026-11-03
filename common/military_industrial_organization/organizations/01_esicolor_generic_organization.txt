@@ -563,6 +563,30 @@ esicolor_generic_motorized_mechanized_organization = {
 	}
 }
 
+#####################
+####   Trains    ####
+#####################
+
+#TRAIN MANUFACTURER - Based on CKD-Plzen (CZE)
+esicolor_generic_train_organization = {
+	name = generic_mio_initial_trait_generic_train_manufacturer
+	icon = GFX_idea_generic_build_infrastructure
+	include = generic_train_organization
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+		owner = { has_custom_train_manufacturer = no }
+	}
+	visible = {
+		owner = {
+			NOT = {
+				has_global_flag = custom_designers_only
+				has_country_flag = train_manufacturer_disabled
+			}
+		}
+	}
+}
+
 ######################
 #### Armored Car  ####
 ######################

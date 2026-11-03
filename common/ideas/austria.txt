@@ -175,6 +175,37 @@ ideas = {
 			}
 			traits = { light_aircraft_manufacturer }
 		}
+
+		OOA_CAS_manufacturer = {
+			name = AUS_osterreichische_fleugzeugfabrik
+			picture = AUS_osterreichische_fleugzeugfabrik_ag
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = CAS_manufacturer_disabled }
+				OR = {
+					original_tag = OOA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 4
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					4 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { CAS_manufacturer }
+		}
 	}
 
 	materiel_manufacturer = {
@@ -312,6 +343,38 @@ ideas = {
 	}
 
 	industrial_concern = {
+		OOA_telephone_company = {
+			name = AUS_kapsch
+			picture = AUS_kapsch
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = telephone_company_disabled }
+				OR = {
+					original_tag = OOA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 4
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					4 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				electronics = 0.06
+				radar_tech = 0.10
+			}
+			traits = { telephone_company }
+		}
+
 		OOA_railway_company = {
 			name = AUS_bbo
 			picture = AUS_bbo
@@ -341,6 +404,37 @@ ideas = {
 				train_tech = 0.15
 			}
 			traits = { railway_company }
+		}
+
+		OOA_central_bank = {
+			name = AUS_creditanstalt_bankverein
+			picture = AUS_creditanstalt_bankverein
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = central_bank_disabled }
+				OR = {
+					original_tag = OOA
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 4
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					4 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.04
+			}
+			traits = { central_bank_esicolor }
 		}
 	}
 }

@@ -276,6 +276,37 @@ ideas = {
 			traits = { CAS_manufacturer }
 		}
 
+		OOY_fuel_efficient_aircraft_manufacturer = {
+			name = CZE_benees_mraz_organization
+			picture = CZE_benes_mraz
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = fuel_efficient_aircraft_manufacturer_disabled }
+				OR = {
+					original_tag = OOY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 9
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					9 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { fuel_efficient_aircraft_manufacturer }
+		}
+
 		OOY_heavy_aircraft_manufacturer = {
 			name = CZE_letov
 			picture = CZE_letov
@@ -657,6 +688,37 @@ ideas = {
 				train_tech = 0.15
 			}
 			traits = { railway_company }
+		}
+
+		OOY_central_bank = {
+			name = CZE_national_bank_of_czechoslovakia
+			picture = CZE_national_bank_of_czechoslovakia
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = central_bank_disabled }
+				OR = {
+					original_tag = OOY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 9
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					9 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.04
+			}
+			traits = { central_bank_esicolor }
 		}
 	}
 }

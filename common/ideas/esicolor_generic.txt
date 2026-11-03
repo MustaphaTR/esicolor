@@ -403,6 +403,7 @@ ideas = {
 		designer = yes
 
 		generic_light_aircraft_manufacturer_esicolor = {
+			name = generic_light_aircraft_manufacturer
 			picture = generic_air_manufacturer_1
 
 			allowed = {
@@ -460,6 +461,7 @@ ideas = {
 		}
 
 		generic_medium_aircraft_manufacturer_esicolor = {
+			name = generic_medium_aircraft_manufacturer
 			picture = generic_air_manufacturer_3
 
 			allowed = {
@@ -518,6 +520,7 @@ ideas = {
 		}
 
 		generic_heavy_aircraft_manufacturer_esicolor = {
+			name = generic_heavy_aircraft_manufacturer
 			picture = generic_air_manufacturer_2
 
 			allowed = {
@@ -538,6 +541,7 @@ ideas = {
 		}
 
 		generic_naval_aircraft_manufacturer_esicolor = {
+			name = generic_naval_aircraft_manufacturer
 			picture = generic_naval_manufacturer_2
 
 			allowed = {
@@ -562,6 +566,7 @@ ideas = {
 		designer = yes
 
 		generic_infantry_equipment_manufacturer_esicolor = {
+			name = generic_infantry_equipment_manufacturer
 			picture = generic_infantry_equipment_manufacturer_2
 
 			allowed = {
@@ -600,6 +605,7 @@ ideas = {
 		}
 
 		generic_artillery_manufacturer_esicolor = {
+			name = generic_artillery_manufacturer
 			picture = generic_artillery_manufacturer_2
 
 			allowed = {
@@ -619,6 +625,7 @@ ideas = {
 		}
 
 		generic_motorized_equipment_manufacturer_esicolor = {
+			name = generic_motorized_equipment_manufacturer
 			picture = generic_motorized_equipment_manufacturer_3
 
 			allowed = {
@@ -637,10 +644,60 @@ ideas = {
 			}
 			traits = { motorized_equipment_manufacturer }
 		}
+
+		generic_train_equipment_manufacturer = {
+			picture = generic_build_infrastructure
+
+			allowed = {
+				has_custom_train_manufacturer = no
+			}
+			visible = {
+				NOT = {
+					has_global_flag = custom_designers_only
+					has_country_flag = train_manufacturer_disabled
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+				support_tech = 0.07
+			}
+			equipment_bonus = {
+				train_equipment = {
+					build_cost_ic = -0.10
+					armor_value = 0.10
+					air_attack = 0.10
+					instant = yes
+				}
+			}
+			traits = { train_equipment_manufacturer }
+		}
+
+		generic_helicopter_equipment_manufacturer = {
+			picture = generic_helicopter_1
+
+			allowed = {
+				has_dlc = "Gotterdammerung"
+				has_custom_helicopter_manufacturer = no
+			}
+			visible = {
+				NOT = {
+					has_global_flag = custom_designers_only
+					has_country_flag = helicopter_manufacturer_disabled
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.05
+				air_equipment = 0.05
+			}
+			traits = { helicopter_equipment_manufacturer }
+		}
 	}
 
 	industrial_concern = {
 		generic_industrial_concern_esicolor = {
+			name = generic_industrial_concern
 			picture = generic_industrial_concern_1
 
 			allowed = {
@@ -660,6 +717,7 @@ ideas = {
 		}
 
 		generic_electronics_concern_esicolor = {
+			name = generic_electronics_concern
 			picture = generic_electronics_concern_1
 
 			allowed = {

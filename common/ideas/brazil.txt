@@ -297,6 +297,37 @@ ideas = {
 			}
 			traits = { railway_company }
 		}
+
+		SOO_central_bank = {
+			name = BRA_banco_do_brasil_idea
+			picture = BRA_banco_do_brasil
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = central_bank_disabled }
+				OR = {
+					original_tag = SOO
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 500
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					500 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				industry = 0.04
+			}
+			traits = { central_bank_esicolor }
+		}
 	}
 }
 

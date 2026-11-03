@@ -37,6 +37,95 @@ OOY_mobile_tank_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = CZE_mio_trait_export_models
+		name = GER_mio_trait_export_models
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+			production_cost_factor = -0.03
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = CZE_mio_trait_expanded_production_facilities_ckd_tanks
+		name = USA_mio_trait_expanded_production_facilities
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_streamlined_production
+
+		all_parents = { generic_mio_streamlined_production }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 OFA_medium_tank_organization = {
@@ -66,6 +155,47 @@ OFA_medium_tank_organization = {
 			owner = {
 				74 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = { 
+		token = CZE_mio_trait_expanded_production_facilities
+		name = USA_mio_trait_expanded_production_facilities
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=3 y=3 }
+
+		all_parents = { generic_mio_trait_simplified_turret_design generic_mio_trait_armor_steel_working }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+			production_capacity_factor = 0.05
 		}
 	}
 }
@@ -183,6 +313,81 @@ OOY_light_aircraft_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = CZE_mio_trait_walter_co
+		name = CZE_mio_trait_walter_co_name
+		icon = GFX_generic_mio_department_icon_plane_general_engine
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				9 = { is_core_of = FROM }
+			}
+			else = {
+				9 = { is_owned_by = FROM }
+			}
+			owner = { NOT = { has_country_flag = CZE_mio_trait_walter_co_taken_flag } }
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = CZE_mio_trait_walter_co_taken_flag
+			}
+		}
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+			air_agility = 0.05
+		}
+
+		ai_will_do = {
+			base = 3
+		}
+	}
+	add_trait = {
+		token = CZE_mio_trait_bata_corporation
+		name = CZE_bata_corporation_name
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=9 y=1 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				75 = { is_core_of = FROM }
+			}
+			else = {
+				75 = { is_owned_by = FROM }
+			}
+			owner = { NOT = { has_country_flag = CZE_mio_trait_bata_corporation_taken_flag } }
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = CZE_mio_trait_bata_corporation_taken_flag
+			}
+		}
+
+		production_bonus = {
+			production_resource_penalty_factor = -0.10
+			production_resource_need_factor = -0.10
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 OFS_high_agility_fighter_aircraft_organization = {
@@ -212,6 +417,81 @@ OFS_high_agility_fighter_aircraft_organization = {
 			owner = {
 				75 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = CZE_mio_trait_walter_co
+		name = CZE_mio_trait_walter_co_name
+		icon = GFX_generic_mio_department_icon_plane_general_engine
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				9 = { is_core_of = FROM }
+			}
+			else = {
+				9 = { is_owned_by = FROM }
+			}
+			owner = { NOT = { has_country_flag = CZE_mio_trait_walter_co_taken_flag } }
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = CZE_mio_trait_walter_co_taken_flag
+			}
+		}
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+			air_agility = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = CZE_mio_trait_bata_corporation
+		name = CZE_bata_corporation_name
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=9 y=1 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				75 = { is_core_of = FROM }
+			}
+			else = {
+				75 = { is_owned_by = FROM }
+			}
+			owner = { NOT = { has_country_flag = CZE_mio_trait_bata_corporation_taken_flag } }
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = CZE_mio_trait_bata_corporation_taken_flag
+			}
+		}
+
+		production_bonus = {
+			production_resource_penalty_factor = -0.10
+			production_resource_need_factor = -0.10
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -245,6 +525,187 @@ OOY_cas_aircraft_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = CZE_mio_trait_walter_co
+		name = CZE_mio_trait_walter_co_name
+		icon = GFX_generic_mio_department_icon_plane_general_engine
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				9 = { is_core_of = FROM }
+			}
+			else = {
+				9 = { is_owned_by = FROM }
+			}
+			owner = { NOT = { has_country_flag = CZE_mio_trait_walter_co_taken_flag } }
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = CZE_mio_trait_walter_co_taken_flag
+			}
+		}
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+			air_agility = 0.05
+		}
+
+		ai_will_do = {
+			base = 3
+		}
+	}
+	add_trait = {
+		token = CZE_mio_trait_bata_corporation
+		name = CZE_bata_corporation_name
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=9 y=1 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				75 = { is_core_of = FROM }
+			}
+			else = {
+				75 = { is_owned_by = FROM }
+			}
+			owner = { NOT = { has_country_flag = CZE_mio_trait_bata_corporation_taken_flag } }
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = CZE_mio_trait_bata_corporation_taken_flag
+			}
+		}
+
+		production_bonus = {
+			production_resource_penalty_factor = -0.10
+			production_resource_need_factor = -0.10
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+}
+
+OOY_range_focused_aircraft_organization = {
+	name = CZE_benees_mraz_organization
+	include = esicolor_generic_range_focused_aircraft_organization
+	icon = GFX_idea_CZE_benes_mraz
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = fuel_efficient_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OOY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 9
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				9 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	add_trait = {
+		token = CZE_mio_trait_walter_co
+		name = CZE_mio_trait_walter_co_name
+		icon = GFX_generic_mio_department_icon_plane_general_engine
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				9 = { is_core_of = FROM }
+			}
+			else = {
+				9 = { is_owned_by = FROM }
+			}
+			owner = { NOT = { has_country_flag = CZE_mio_trait_walter_co_taken_flag } }
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = CZE_mio_trait_walter_co_taken_flag
+			}
+		}
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+			air_agility = 0.05
+		}
+
+		ai_will_do = {
+			base = 3
+		}
+	}
+	add_trait = {
+		token = CZE_mio_trait_bata_corporation
+		name = CZE_bata_corporation_name
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=9 y=1 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				75 = { is_core_of = FROM }
+			}
+			else = {
+				75 = { is_owned_by = FROM }
+			}
+			owner = { NOT = { has_country_flag = CZE_mio_trait_bata_corporation_taken_flag } }
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = CZE_mio_trait_bata_corporation_taken_flag
+			}
+		}
+
+		production_bonus = {
+			production_resource_penalty_factor = -0.10
+			production_resource_need_factor = -0.10
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 OOY_heavy_aircraft_organization = {
@@ -274,6 +735,81 @@ OOY_heavy_aircraft_organization = {
 			owner = {
 				9 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = CZE_mio_trait_walter_co
+		name = CZE_mio_trait_walter_co_name
+		icon = GFX_generic_mio_department_icon_plane_general_engine
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				9 = { is_core_of = FROM }
+			}
+			else = {
+				9 = { is_owned_by = FROM }
+			}
+			owner = { NOT = { has_country_flag = CZE_mio_trait_walter_co_taken_flag } }
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = CZE_mio_trait_walter_co_taken_flag
+			}
+		}
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+			air_agility = 0.05
+		}
+
+		ai_will_do = {
+			base = 3
+		}
+	}
+	add_trait = {
+		token = CZE_mio_trait_bata_corporation
+		name = CZE_bata_corporation_name
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=9 y=1 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				75 = { is_core_of = FROM }
+			}
+			else = {
+				75 = { is_owned_by = FROM }
+			}
+			owner = { NOT = { has_country_flag = CZE_mio_trait_bata_corporation_taken_flag } }
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = CZE_mio_trait_bata_corporation_taken_flag
+			}
+		}
+
+		production_bonus = {
+			production_resource_penalty_factor = -0.10
+			production_resource_need_factor = -0.10
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -347,6 +883,51 @@ OFS_infantry_equipment_organization = {
 			owner = {
 				75 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = CZE_mio_trait_export_models
+		name = GER_mio_trait_export_models
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=-1 y=0 }  
+		relative_position_id = generic_mio_trait_drum_pattern_sights
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+			production_cost_factor = -0.03
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -441,6 +1022,87 @@ OOY_motorized_mechanized_organization = {
 			owner = {
 				9 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = CZE_mio_trait_expanded_production_facilities_praga_aviation
+		name = USA_mio_trait_expanded_production_facilities
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.03
+			production_capacity_factor = 0.03
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = CZE_mio_trait_bata_corporation
+		name = CZE_bata_corporation_name
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=9 y=1 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				75 = { is_core_of = FROM }
+			}
+			else = {
+				75 = { is_owned_by = FROM }
+			}
+			owner = { NOT = { has_country_flag = CZE_mio_trait_bata_corporation_taken_flag } }
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = {
+				set_country_flag = CZE_mio_trait_bata_corporation_taken_flag
+			}
+		}
+
+		production_bonus = {
+			production_resource_penalty_factor = -0.10
+			production_resource_need_factor = -0.10
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }

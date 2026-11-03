@@ -2060,8 +2060,16 @@ defined_text = {
 	text = {
 		trigger = {
 			has_dlc = "Gotterdammerung"
+			has_dlc = "Arms Against Tyranny"
 		}
 		localization_key = esicolor_setup_advisors_list_helicopter_mio
+	}
+	text = {
+		trigger = {
+			has_dlc = "Gotterdammerung"
+			NOT = { has_dlc = "Arms Against Tyranny" }
+		}
+		localization_key = esicolor_setup_advisors_list_helicopter_concern
 	}
 }
 

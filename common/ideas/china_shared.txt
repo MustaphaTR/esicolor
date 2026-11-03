@@ -373,6 +373,46 @@ ideas = {
 			}
 			traits = { motorized_equipment_manufacturer }
 		}
+
+		LOY_train_manufacturer = {
+			name = CHI_beining_railway_tangshan_manufacturing_plant
+			picture = PRC_china_railway_construction_corporation
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = train_manufacturer_disabled }
+				OR = {
+					original_tag = LOY
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 609
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					609 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				train_tech = 0.15
+				support_tech = 0.07
+			}
+			equipment_bonus = {
+				train_equipment = {
+					build_cost_ic = -0.10
+					armor_value = 0.10
+					air_attack = 0.10
+					instant = yes
+				}
+			}
+			traits = { train_equipment_manufacturer }
+		}
 	}
 
 	industrial_concern = {

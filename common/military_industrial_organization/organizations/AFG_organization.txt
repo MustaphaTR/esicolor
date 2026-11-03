@@ -48,6 +48,7 @@ NOL_infantry_equipment_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
 			OR = {
@@ -66,6 +67,103 @@ NOL_infantry_equipment_organization = {
 			owner = {
 				1006 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+NOL_infantry_equipment_organization_custom = {
+	name = AFG_khyber_pass_rifling_org
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = NOL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 1006
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				1006 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		limit_to_equipment_type = { infantry_equipment }
+
+		production_bonus = {
+			production_cost_factor = -0.1
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+	}
+	trait = {
+		token = cost_reduction_1
+	    name = AFG_khyber_pass_rifling_org_cost_reduction_1
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		special_trait_background = yes
+		position = { x=0 y=0 }
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			reliability = -0.05
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.1
+			production_cost_factor = -0.1
+		}
+	}
+	trait = {
+		token = cost_reduction_2
+	    name = AFG_khyber_pass_rifling_org_cost_reduction_2
+		icon = GFX_generic_mio_trait_icon_resources
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = cost_reduction_1
+
+		any_parent = { cost_reduction_1 }
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			reliability = -0.05
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.15
+		}
+	}
+	trait = {
+		token = cost_reduction_3
+	    name = AFG_khyber_pass_rifling_org_cost_reduction_3
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = cost_reduction_2
+
+		any_parent = { cost_reduction_2 }
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			reliability = -0.1
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.15
+			production_cost_factor = -0.2
 		}
 	}
 }

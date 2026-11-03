@@ -575,6 +575,38 @@ ideas = {
 			}
 			traits = { motorized_equipment_manufacturer }
 		}
+
+		ZBZ_helicopter_equipment_manufacturer = {
+			name = JAP_kayaba_industry_organization
+			picture = JAP_kayaba_industry
+
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			visible = {
+				NOT = { has_country_flag = train_manufacturer_disabled }
+				OR = {
+					original_tag = ZBZ
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 282
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					282 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.05
+				air_equipment = 0.05
+			}
+			traits = { helicopter_equipment_manufacturer }
+		}
 	}
 
 	industrial_concern = {

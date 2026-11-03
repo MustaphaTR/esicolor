@@ -37,6 +37,32 @@ ZII_task_force_ship_organization = {
 			}
 		}
 	}
+
+	add_trait = { 
+		token = BUL_mio_trait_an_aegean_sea_fleet
+		name = BUL_an_aegean_sea_fleet
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=9 y=4 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				any_controlled_state = {
+					BUL_state_is_in_the_aegean_sea = yes
+					dockyard > 0
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 ###########################
@@ -76,6 +102,32 @@ OAB_light_aircraft_organization = {
 			owner = {
 				48 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = { 
+		token = BUL_mio_trait_prussia_of_the_balkans
+		name = BUL_prussia_of_the_balkans
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=9 y=4 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				controls_state = 48
+				controls_state = 212
+				controls_state = 211
+				controls_state = 801
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
 		}
 	}
 }
