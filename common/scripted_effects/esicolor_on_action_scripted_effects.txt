@@ -6559,6 +6559,68 @@ handle_special_advisors = {
 		}
 	}
 	else_if = {
+		limit = { original_tag = ZBZ }
+
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = captain_of_industry
+			}
+
+			set_character_name = JAP_yoshisuke_aikawa
+			save_global_event_target_as = JAP_yoshisuke_aikawa
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_JAP_yoshisuke_aikawa_small
+				}
+				army = {
+					small = GFX_portrait_JAP_yoshisuke_aikawa_small
+				}
+				navy = {
+					small = GFX_portrait_JAP_yoshisuke_aikawa_small
+				}
+			}
+
+			282 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = {
+			limit = {
+				is_advisor = yes
+				has_trait = war_industrialist
+			}
+
+			set_character_name = JAP_koyata_iwasaki
+			save_global_event_target_as = JAP_koyata_iwasaki
+			set_character_flag = special_advisor
+
+			set_portraits = {
+				civilian = {
+					small = GFX_portrait_JAP_koyata_iwasaki_small
+				}
+				army = {
+					small = GFX_portrait_JAP_koyata_iwasaki_small
+				}
+				navy = {
+					small = GFX_portrait_JAP_koyata_iwasaki_small
+				}
+			}
+
+			282 = { add_to_array = { state_advisors = PREV } }
+		}
+		random_character = { # Used for Chikuhei Nakajima, only applied with the named advisors only mode.
+			limit = {
+				is_advisor = yes
+				has_trait = armaments_organizer
+			}
+
+			set_character_flag = special_advisor
+
+			282 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
 		limit = { original_tag = ZBA }
 
 		random_character = {
@@ -10695,6 +10757,20 @@ handle_special_advisors = {
 			}
 
 			1011 = { add_to_array = { state_advisors = PREV } }
+		}
+	}
+	else_if = {
+		limit = { original_tag = NZF }
+
+		random_character = { # Used for Vicente Lava, only applied with the named advisors only mode.
+			limit = {
+				is_advisor = yes
+				has_trait = armaments_organizer
+			}
+
+			set_character_flag = special_advisor
+
+			1027 = { add_to_array = { state_advisors = PREV } }
 		}
 	}
 	else_if = {

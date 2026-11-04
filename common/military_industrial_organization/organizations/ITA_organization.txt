@@ -52,6 +52,58 @@ FEL_battle_line_ship_organization = {
 			}
 		}
 	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 ISB_escort_ship_organization = {
@@ -81,6 +133,58 @@ ISB_escort_ship_organization = {
 			owner = {
 				158 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
 		}
 	}
 }
@@ -114,6 +218,58 @@ IIF_refurbishment_repair_organization = {
 			}
 		}
 	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 } 
 
 ISF_raider_ship_organization = {
@@ -145,6 +301,58 @@ ISF_raider_ship_organization = {
 			}
 		}
 	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_ship_general_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 CBZ_generic_submarine_organization = {
@@ -174,6 +382,58 @@ CBZ_generic_submarine_organization = {
 			owner = {
 				849 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_ship_submarine_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
 		}
 	}
 }
@@ -217,6 +477,58 @@ ISY_light_aircraft_organization = {
 			}
 		}
 	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_plane_fighter_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 ISY_cas_aircraft_organization = {
@@ -246,6 +558,58 @@ ISY_cas_aircraft_organization = {
 			owner = {
 				159 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_plane_cas_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
 		}
 	}
 }
@@ -279,6 +643,58 @@ IIF_medium_aircraft_organization = {
 			}
 		}
 	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_plane_medium_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 ISB_range_focused_aircraft_organization = {
@@ -290,6 +706,7 @@ ISB_range_focused_aircraft_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = fuel_efficient_aircraft_manufacturer_disabled }
 			OR = {
@@ -308,6 +725,116 @@ ISB_range_focused_aircraft_organization = {
 			owner = {
 				158 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+ISB_range_focused_aircraft_organization_custom = {
+	name = ITA_fiat_aviazione_organization
+	include = esicolor_generic_range_focused_aircraft_organization
+	icon = GFX_idea_ITA_fiat_aviazione
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = fuel_efficient_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = ISB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 158
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				158 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		equipment_bonus = {
+			naval_strike_attack = -0.1
+			maximum_speed = 0.1
+		}
+	}
+	override_trait = {
+		token = generic_mio_trait_extra_cargo_doors
+
+		position = { x=8 y=0 }
+	}
+	add_trait = {
+		token = ITA_mio_trait_high_altitude_fighter_development
+		name = ITA_mio_trait_high_altitude_fighter_development
+		icon = GFX_generic_mio_trait_icon_air_agility
+		special_trait_background = yes
+		
+		position = { x=0 y=1 }  
+		relative_position_id = generic_mio_trait_low_drag_wings
+
+		any_parent = { generic_mio_trait_low_drag_wings }
+
+		limit_to_equipment_type = { mio_cat_eq_all_small_plane }
+		equipment_bonus = {
+			air_agility = 0.05
+			air_attack = 0.03
+		}
+	}
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_plane_general_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
 		}
 	}
 }
@@ -341,6 +868,104 @@ ISY_multi_role_aircraft_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = ITA_mio_trait_air_race_pedigree
+		name = ITA_mio_trait_air_race_pedigree
+		icon = GFX_generic_mio_department_icon_plane_medium_engine
+		special_trait_background = yes
+		
+		position = { x=7 y=0 }  
+
+		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
+		equipment_bonus = {
+			maximum_speed = 0.05
+			air_range = 0.15
+		}
+	}
+	add_trait = {
+		token = ITA_mio_trait_special_aerotorpedoes_unit
+		name = ITA_mio_trait_special_aerotorpedoes_unit
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		special_trait_background = yes
+		
+		position = { x=1 y=0 }  
+		relative_position_id = ITA_mio_trait_air_race_pedigree
+
+		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
+		equipment_bonus = {
+			naval_strike_attack = 0.15
+		}
+	}
+	add_trait = {
+		token = ITA_mio_trait_remote_operated
+		name = ITA_mio_trait_remote_operated
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		special_trait_background = yes
+
+		position = { x=3 y=0 }  
+		relative_position_id = generic_mio_trait_bomber_specialization
+		available = { FROM = { has_tech = experimental_rockets } }
+
+		limit_to_equipment_type = { mio_cat_eq_all_small_plane }
+		equipment_bonus = {
+			reliability = 0.1
+		}
+		production_bonus = {
+			production_cost_factor = -0.1
+		}
+	}
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_plane_general_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 ISB_heavy_aircraft_organization = {
@@ -372,6 +997,58 @@ ISB_heavy_aircraft_organization = {
 			}
 		}
 	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_plane_heavy_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 FEL_naval_aircraft_organization = {
@@ -401,6 +1078,58 @@ FEL_naval_aircraft_organization = {
 			owner = {
 				736 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_plane_naval_bomber_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
 		}
 	}
 }
@@ -444,6 +1173,58 @@ ISY_infantry_equipment_organization = {
 			}
 		}
 	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_infantry_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 ISY_support_equipment_organization = {
@@ -473,6 +1254,58 @@ ISY_support_equipment_organization = {
 			owner = {
 				159 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_infantry_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
 		}
 	}
 }
@@ -506,6 +1339,58 @@ ISY_artillery_organization = {
 			}
 		}
 	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_artillery_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 ISY_motorized_mechanized_organization = {
@@ -535,6 +1420,327 @@ ISY_motorized_mechanized_organization = {
 			owner = {
 				159 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_motorized_mechanized_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
+}
+
+ISB_generic_train_organization = {
+	name = ITA_ansaldo_train_organization
+	include = esicolor_generic_train_organization
+	icon = GFX_idea_AUS_ansaldo
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
+		owner = {
+			NOT = { has_country_flag = train_manufacturer_disabled }
+			OR = {
+				original_tag = ISB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 158
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				158 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+ISB_generic_train_organization_custom = {
+	name = ITA_ansaldo_train_organization
+	include = esicolor_generic_train_organization
+	icon = GFX_idea_AUS_ansaldo
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
+		owner = {
+			NOT = { has_country_flag = train_manufacturer_disabled }
+			OR = {
+				original_tag = ISB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 158
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				158 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	equipment_type = { train_equipment railway_gun_equipment support_equipment armor }
+	research_categories = { train_tech support_tech }
+
+	tree_header_text = {
+		text = mio_header_tank_production
+		x = 0.11
+	}
+	tree_header_text = {
+		text = mio_header_design_and_production
+		x = 5
+	}
+	tree_header_text = {
+		text = mio_header_support
+		x = 2
+	}
+	tree_header_text = {
+		text = mio_header_weapons
+		x = 8
+	}
+	initial_trait = {
+		name = generic_mio_initial_trait_generic_train_manufacturer
+
+		limit_to_equipment_type = { train_equipment }
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0 #5%
+		}
+	}
+	override_trait = {
+		token = generic_mio_trait_material_improvements
+
+		position = { x=4 y=0 }
+	}
+	override_trait = {
+		token = generic_mio_trait_joint_stock_scheme
+
+		position = { x=6 y=0 }
+	}
+	add_trait = {
+		token = generic_mio_trait_compulsory_tank_designer
+		name = generic_mio_trait_compulsory_tank_designer
+		icon = GFX_generic_mio_department_icon_tank_general_production
+		special_trait_background = yes
+
+		position = { x=0 y=0 }
+
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = armor_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_metal_beasts
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_weapons_development
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_tank_warfare
+				}
+			}
+		}
+
+		limit_to_equipment_type = { armor }
+		equipment_bonus = {
+			maximum_speed = 0.05
+			reliability = -0.05
+			armor_value = 0.05
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.02
+		}
+	}
+
+	add_trait = {
+		token = generic_mio_trait_off_the_board_designs
+		name = generic_mio_trait_off_the_board_designs
+		icon = GFX_generic_mio_department_icon_tank_general_line_efficiency
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_compulsory_tank_designer
+
+		all_parents = { generic_mio_trait_compulsory_tank_designer }
+
+		limit_to_equipment_type = { armor }
+		production_bonus = {
+			production_capacity_factor = 0.03
+			production_efficiency_gain_factor = 0.03
+		}
+	}
+	add_trait = {
+		token = generic_mio_trait_armor_improvements
+		name = generic_mio_trait_armor_improvements
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_off_the_board_designs
+
+		all_parents = { generic_mio_trait_off_the_board_designs }
+
+		limit_to_equipment_type = { armor }
+		equipment_bonus = {
+			defense = 0.05
+			armor_value = 0.05
+		}
+	}
+	add_trait = {
+		token = generic_mio_trait_improved_tracks
+		name = generic_mio_trait_improved_tracks
+		icon = GFX_generic_mio_department_icon_tank_general_engine
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_armor_improvements
+
+		all_parents = { generic_mio_trait_armor_improvements }
+
+		limit_to_equipment_type = { armor }
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+		production_bonus = {
+			production_capacity_factor = 0.02
+		}
+	}
+	add_trait = {
+		token = generic_mio_trait_additional_anti_aircraft_machine_guns
+		name =  generic_mio_trait_additional_anti_aircraft_machine_guns
+		icon = GFX_generic_mio_department_icon_tank_general_aa
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_improved_tracks
+
+		all_parents = { generic_mio_trait_improved_tracks }
+
+		limit_to_equipment_type = { armor }
+		equipment_bonus = {
+			defense = 0.05
+			air_attack = 0.10
+		}
+	}
+	add_trait = { 
+		token = ITA_mio_trait_new_ricostruzione_iundustriale
+		name = ITA_new_ricostruzione_industriale
+		icon = GFX_military_industrial_organization_train
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = construction_effort_2
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					OR = {
+						has_completed_focus = HOA_the_adjective_regional_development_fund
+						has_completed_focus = HOA_the_adjective_industrial_fund
+					}
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_further_industrial_investment
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = GUAY_heavy_industry
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		limit_to_equipment_type = { train_equipment armor }
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.10
+		}
+		production_bonus = {
+			production_capacity_factor = 0.10
 		}
 	}
 }

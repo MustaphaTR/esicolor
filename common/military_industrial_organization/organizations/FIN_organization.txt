@@ -34,6 +34,7 @@ YZL_raider_ship_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
 			OR = {
@@ -52,6 +53,232 @@ YZL_raider_ship_organization = {
 			owner = {
 				926 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+YZL_raider_ship_organization_custom = {
+	name = FIN_crichton_vulcan_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_FIN_crichton_vulcan
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = YZL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 926
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				926 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	tree_header_text = {
+		text = mio_header_long_range_focus
+		x = 2
+	}
+	tree_header_text = {
+		text = mio_header_high_speed_focus
+		x = 8
+	}
+	override_trait = {
+		token = generic_mio_trait_long_range_raiding
+
+		position = { x=2 y=0 }
+	}
+	add_trait = { 
+		token = FIN_mio_trait_andros_engines
+		name = FIN_mio_trait_andros_engines
+		icon = GFX_generic_mio_department_icon_ship_general_engine
+		special_trait_background = yes
+
+		position = { x=2 y=1 }
+		relative_position_id = generic_mio_trait_long_range_raiding
+
+		any_parent = { generic_mio_trait_long_range_raiding generic_mio_trait_high_speed_raiding }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = naval_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_use_the_natural_harbors
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_investment_into_shipbuilding
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_navy
+				}
+			}
+		}
+
+		equipment_bonus = {
+			naval_range = 0.05
+			naval_speed = 0.05
+			fuel_consumption = -0.05
+		}
+	}
+	add_trait = { 
+		token = FIN_mio_trait_wartsila_engine_production
+		name = FIN_mio_trait_wartsila_engine_production
+		icon = GFX_generic_mio_department_icon_ship_general_production
+		special_trait_background = yes
+
+		position = { x=-2 y=1 }
+		relative_position_id = generic_mio_trait_high_speed_raiding
+
+		any_parent = { generic_mio_trait_long_range_raiding generic_mio_trait_high_speed_raiding }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+	add_trait = { 
+		token = FIN_mio_trait_rapid_raiders
+		name = FIN_mio_trait_rapid_raiders
+		icon = GFX_generic_mio_department_icon_ship_general_offense
+		special_trait_background = yes
+
+		position = { x=-2 y=0 }
+		relative_position_id = generic_mio_trait_long_range_raiding
+
+		mutually_exclusive = { FIN_mio_trait_deep_sea_raiders }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = destroyer_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_expand_naval_variety
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_light_cruiser_project
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_escort_fleet
+				}
+			}
+		}
+
+		limit_to_equipment_type = { screen_ship }
+		equipment_bonus = {
+			naval_speed = 0.05
+			lg_attack = 0.05
+			surface_detection = 0.05
+			sub_detection = 0.05
+		}
+	}
+	add_trait = { 
+		token = FIN_mio_trait_deep_sea_raiders
+		name = FIN_mio_trait_deep_sea_raiders
+		icon = GFX_generic_mio_department_icon_ship_submarine_survivability
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = FIN_mio_trait_rapid_raiders
+
+		mutually_exclusive = { FIN_mio_trait_rapid_raiders }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = submarine_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_expand_naval_variety
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_modern_submarines
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_raiding_fleet
+				}
+			}
+		}
+
+		limit_to_equipment_type = { submarine }
+		equipment_bonus = {
+			naval_speed = 0.05
+			surface_detection = 0.05
+			sub_visibility = -0.05
+			torpedo_attack = 0.05
+		}
+	}
+	add_trait = { 
+		token = FIN_mio_trait_modernization_program
+		name = FIN_mio_trait_modernization_program
+		icon = GFX_generic_mio_department_icon_ship_general_production
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_high_speed_raiding
+
+		available = { owner = { has_tech = advanced_machine_tools } }
+
+		production_bonus = {
+			production_capacity_factor = 0.05
 		}
 	}
 }
@@ -95,6 +322,64 @@ III_light_aircraft_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = FIN_mio_trait_modernization_program
+		name = FIN_mio_trait_modernization_program
+		icon = GFX_generic_mio_department_icon_plane_general_production
+		special_trait_background = yes
+
+		position = { x=-1 y=0 }
+		relative_position_id = generic_mio_trait_expanded_production_facilities # generic_mio_trait_conservative_designs
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = { owner = { has_tech = advanced_machine_tools } }
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+	add_trait = {
+		token = FIN_mio_trait_wartsila_engine_production
+		name = FIN_mio_trait_wartsila_engine_production
+		icon = GFX_generic_mio_department_icon_plane_general_line_efficiency
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_expanded_production_facilities # generic_mio_trait_conservative_designs
+
+		any_parent = { generic_mio_trait_expanded_production_facilities } # generic_mio_trait_conservative_designs
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+			production_efficiency_gain_factor = 0.05
+		}
+	}
 }
 
 ################################### 
@@ -116,6 +401,7 @@ IAY_infantry_equipment_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
 			OR = {
@@ -137,6 +423,170 @@ IAY_infantry_equipment_organization = {
 		}
 	}
 }
+IAY_infantry_equipment_organization_custom = {
+	name = FIN_valtion_kivaaritehdas_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_FIN_valtion_kivaaritehdas
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = IAY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 149
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				149 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	tree_header_text = {
+		text = mio_header_systems
+		x = 1
+	}
+	tree_header_text = {
+		text = mio_header_weapons
+		x = 5.5
+	}
+	tree_header_text = {
+		text = mio_header_production
+		x = 8.5
+	}
+	override_trait = {
+		token = generic_mio_trait_reinforced_stocks
+
+		position = { x=3 y=0 }
+		relative_position_id = generic_mio_trait_drum_pattern_sights
+	}
+	override_trait = {
+		token = generic_mio_trait_bolt_action
+
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_reinforced_stocks
+	}
+	override_trait = {
+		token = generic_mio_trait_rubber_cushioned_buttpad
+
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_heavy_anti_armor_ammunition
+	}
+	override_trait = {
+		token = generic_mio_trait_anti_vechicle_land_mines
+
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_vehicle_mounted_capabilities
+	}
+	add_trait = { 
+		token = FIN_mio_trait_salvaged_and_retooled
+		name = FIN_mio_trait_salvaged_and_retooled
+		icon = GFX_generic_mio_department_icon_infantry_materials
+		special_trait_background = yes
+
+		position = { x=8 y=0 }
+
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = mechanization_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_weapons_development
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+			production_resource_need_factor = -0.1
+		}
+	}
+	add_trait = { 
+		token = FIN_mio_trait_modernization_program
+		name = FIN_mio_trait_modernization_program
+		icon = GFX_generic_mio_department_icon_infantry_production
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = FIN_mio_trait_salvaged_and_retooled
+
+		available = { owner = { has_tech = advanced_machine_tools } }
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+	add_trait = { 
+		token = FIN_mio_trait_oy_tikkakoski
+		name = FIN_mio_trait_oy_tikkakoski
+		icon = GFX_generic_mio_department_icon_infantry_line_efficiency
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = FIN_mio_trait_salvaged_and_retooled
+
+		any_parent = { generic_mio_trait_heavy_anti_armor_ammunition }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+			production_efficiency_gain_factor = 0.1
+		}
+	}
+}
 
 IAY_artillery_organization = {
 	name = FIN_valtion_tykkitehdas_organization
@@ -147,6 +597,7 @@ IAY_artillery_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = artillery_manufacturer_disabled }
 			OR = {
@@ -168,6 +619,111 @@ IAY_artillery_organization = {
 		}
 	}
 }
+IAY_artillery_organization_custom = {
+	name = FIN_valtion_tykkitehdas_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_FIN_valtion_tykkitehdas
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = IAY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 149
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				149 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	tree_header_text = {
+		text = mio_header_operational_department
+		x = 1
+	}
+	tree_header_text = {
+		text = mio_header_design_department
+		x = 5
+	}
+	tree_header_text = {
+		text = mio_header_production_department
+		x = 8.5
+	}
+	override_trait = {
+		token = generic_mio_trait_rapid_fire
+
+		position = { x=3 y=0 }
+	}
+	add_trait = {
+		token = FIN_mio_trait_salvaged_and_retooled
+		name = FIN_mio_trait_salvaged_and_retooled
+		icon = GFX_generic_mio_trait_icon_resources
+		special_trait_background = yes
+
+		position = { x=8 y=0 }
+		
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = mechanization_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_weapons_development
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+			production_resource_need_factor = -0.1
+		}
+	}
+	add_trait = {
+		token = FIN_mio_trait_modernization_program
+		name = FIN_mio_trait_modernization_program
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = FIN_mio_trait_salvaged_and_retooled
+
+		available = { owner = { has_tech = advanced_machine_tools } }
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+}
 
 III_motorized_mechanized_organization = {
 	name = FIN_sisu_auto_organization
@@ -178,6 +734,7 @@ III_motorized_mechanized_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
 			OR = {
@@ -196,6 +753,300 @@ III_motorized_mechanized_organization = {
 			owner = {
 				111 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+III_motorized_mechanized_organization_custom = {
+	name = FIN_sisu_auto_organization
+	include = esicolor_generic_motorized_mechanized_organization
+	icon = GFX_idea_FIN_sisu_auto
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = III
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 111
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				111 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	tree_header_text = {
+		text = mio_header_motorized
+		x = 1
+	}
+	tree_header_text = {
+		text = mio_header_mechanized
+		x = 6
+	}
+	tree_header_text = {
+		text = mio_header_production
+		x = 8.5
+	}
+	override_trait = {
+		token = generic_mio_trait_steel_cargo_bed
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_composite_cargo_bed
+	}
+	override_trait = {
+		token = generic_mio_trait_high_powered_engine
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_attached_wood_gas_generator
+	}
+	override_trait = {
+		token = generic_mio_trait_medium_machinegun_mounts
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_steel_cargo_bed
+	}
+	override_trait = {
+		token = generic_mio_trait_advanced_artillery_racks
+
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_armored_pulpit_mount
+	}
+	override_trait = {
+		token = generic_mio_trait_heavy_machinegun_mount
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_advanced_artillery_racks
+	}
+	override_trait = {
+		token = generic_mio_trait_open_chassi
+
+		position = { x=3 y=0 }
+		relative_position_id = generic_mio_trait_medium_machinegun_mounts
+	}
+	override_trait = {
+		token = generic_mio_trait_land_mine_racks
+
+		mutually_exclusive = { FIN_mio_trait_repurposed_equipment }
+	}
+	add_trait = { 
+		token = FIN_mio_trait_wartsila_engine_production
+		name = FIN_mio_trait_wartsila_engine_production
+		icon = GFX_generic_mio_department_icon_motorized_mechanized_line_efficiency
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_composite_cargo_bed
+
+		any_parent = { generic_mio_trait_composite_cargo_bed generic_mio_trait_steel_cargo_bed }
+
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+	add_trait = { 
+		token = FIN_mio_trait_recycled_materials
+		name = FIN_mio_trait_recycled_materials
+		icon = GFX_generic_mio_department_icon_motorized_materials
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_medium_machinegun_mounts
+
+		available = { owner = { has_tech = rubber_processing } }
+
+		limit_to_equipment_type = { motorized_equipment }
+		production_bonus = {
+			production_capacity_factor = 0.05
+			production_resource_need_factor = -0.1
+		}
+	}
+	add_trait = {
+		token = FIN_mio_trait_yhteissisus_modern_premises
+		name = FIN_mio_trait_yhteissisus_modern_premises
+		icon = GFX_generic_mio_department_icon_motorized_technology
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = FIN_mio_trait_recycled_materials
+
+		all_parents = { FIN_mio_trait_recycled_materials }
+	
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = motorization_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_small_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					OR = {
+						has_completed_focus = SMB_regular_infantry
+						has_completed_focus = SMB_motorized
+					}
+				}
+			}
+		}
+
+		limit_to_equipment_type = { motorized_equipment }
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+			production_efficiency_cap_factor = 0.1
+		}
+	}
+	add_trait = { 
+		token = FIN_mio_trait_repurposed_equipment
+		name = FIN_mio_trait_repurposed_equipment
+		icon = GFX_generic_mio_department_icon_motorized_line_efficiency
+		special_trait_background = yes
+
+		position = { x=0 y=4 }
+		relative_position_id = FIN_mio_trait_salvaged_and_retooled
+
+		all_parents = { FIN_mio_trait_salvaged_and_retooled generic_mio_trait_bulletproof_panels }
+
+		mutually_exclusive = { generic_mio_trait_land_mine_racks }
+		available = {
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = FIN_mio_trait_repurposed_equipment_trigger_tt
+					has_tech = mechanised_infantry3
+				}
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = mechanization_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_weapons_development
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		limit_to_equipment_type = { motorized_equipment }
+		production_bonus = {
+			production_efficiency_gain_factor = 0.1
+		}
+	}
+
+	add_trait = { 
+		token = FIN_mio_trait_salvaged_and_retooled
+		name = FIN_mio_trait_salvaged_and_retooled
+		icon = GFX_generic_mio_department_icon_motorized_mechanized_materials
+		special_trait_background = yes
+
+		position = { x=8 y=0 }
+		
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = mechanization_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_weapons_development
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+			production_resource_need_factor = -0.1
+		}
+	}
+	add_trait = { 
+		token = FIN_mio_trait_modernization_program
+		name = FIN_mio_trait_modernization_program
+		icon = GFX_generic_mio_department_icon_motorized_mechanized_production
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = FIN_mio_trait_salvaged_and_retooled
+
+		available = { owner = { has_tech = advanced_machine_tools } }
+
+		production_bonus = {
+			production_capacity_factor = 0.05
 		}
 	}
 }

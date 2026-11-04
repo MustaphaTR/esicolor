@@ -39,6 +39,59 @@ ZBZ_assault_guns_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = JAP_mio_trait_foreign_research_and_development_cooperation
+		name = JAP_mio_trait_foreign_research_and_development_cooperation
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 2 y = 0 }
+		relative_position_id = generic_mio_trait_heavy_assault_gun_improvements
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = armor_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_metal_beasts
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_weapons_development
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_tank_warfare
+				}
+				NOT = { has_country_flag = JAP_mio_trait_foreign_research_and_development_cooperation_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = JAP_mio_trait_foreign_research_and_development_cooperation_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 ZBZ_medium_tank_organization = {
@@ -68,6 +121,102 @@ ZBZ_medium_tank_organization = {
 			owner = {
 				282 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = JAP_mio_trait_military_arsenal_trait
+		name = JAP_mio_trait_military_arsenal_trait
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x = -5 y = 0 }
+		relative_position_id = generic_mio_trait_armor_steel_working
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_foreign_research_and_development_cooperation
+		name = JAP_mio_trait_foreign_research_and_development_cooperation
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+		relative_position_id = generic_mio_trait_aircraft_engines
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = armor_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_metal_beasts
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_weapons_development
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_tank_warfare
+				}
+				NOT = { has_country_flag = JAP_mio_trait_foreign_research_and_development_cooperation_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = JAP_mio_trait_foreign_research_and_development_cooperation_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -111,6 +260,210 @@ ZBZ_task_force_ship_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = JAP_mio_trait_naval_arsenal_trait
+		name = JAP_mio_trait_naval_arsenal_trait
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x = -1 y = 0 }
+		relative_position_id = generic_mio_trait_primary_fire_director_control
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				JAP_naval_faction_is_not_subdued = yes
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = JAP_mio_trait_armor_plating_to_hull_strength
+		name = JAP_mio_trait_armor_plating_to_hull_strength
+		icon = GFX_generic_mio_department_icon_ship_general_production
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 } 
+		relative_position_id = generic_mio_trait_long_range_cruising
+
+		any_parent = { generic_mio_trait_long_range_cruising generic_mio_trait_high_speed_cruising }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = JAP_mio_trait_enhanced_optics
+		name = JAP_mio_trait_enhanced_optics
+		icon = GFX_generic_mio_trait_icon_surface_detection
+		special_trait_background = yes
+
+		position = { x = 1 y = 1 } 
+		relative_position_id = generic_mio_trait_primary_fire_director_control
+
+		all_parents = { generic_mio_trait_primary_fire_director_control }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = JAP_mio_trait_type_94_fire_control
+		name = JAP_mio_trait_type_94_fire_control
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+		relative_position_id = generic_mio_trait_secondary_fire_director_control
+
+		all_parents = { generic_mio_trait_secondary_fire_director_control }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { mio_cat_eq_all_cruiser carrier }
+		equipment_bonus = {
+			anti_air_attack = 0.1
+			naval_light_gun_hit_chance_factor = 0.025
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = JAP_mio_trait_torpedo_reloads
+		name = JAP_mio_trait_torpedo_reloads
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 } 
+		relative_position_id = JAP_mio_trait_enhanced_optics
+
+		all_parents = { JAP_mio_trait_enhanced_optics }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { screen_ship }
+		equipment_bonus = {
+			torpedo_attack	= 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_strength_in_numbers
+		name = JAP_mio_trait_strength_in_numbers
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 1 y = 0 }
+		relative_position_id = generic_mio_trait_primary_fire_director_control
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				owner = {
+					if = {
+						limit = { has_focus_tree = generic_focus }
+
+						has_completed_focus = large_navy
+					}
+					else_if = {
+						limit = { has_focus_tree = horn_of_africa_tree }
+
+						has_completed_focus = HOA_expand_naval_variety
+					}
+					else_if = {
+						limit = { has_focus_tree = china_warlord_sea_focus }
+
+						has_completed_focus = CHI_sea_order_destroyers
+					}
+					else_if = {
+						limit = { has_focus_tree = southern_south_america_focus }
+
+						has_completed_focus = SMB_coastal_fleet
+					}
+				}
+				NOT = { has_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_ethanol_fuel_adaptations
+		name = PHI_mio_trait_ethanol_fuel_adaptations
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		special_trait_background = yes
+
+		position = { x = 9 y = 0 }  
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			fuel_consumption = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_coconut_fuel_adaptations
+		name = PHI_mio_trait_coconut_fuel_adaptations
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+
+		visible = {
+			has_global_flag = custom_designer_traits_enabled
+			has_global_flag = custom_advisors_only
+		}
+		available = { FROM = { event_target:PHI_vicente_lava = { is_hired_as_advisor = yes } } }
+
+		relative_position_id = PHI_mio_trait_ethanol_fuel_adaptations
+		any_parent = { PHI_mio_trait_ethanol_fuel_adaptations }
+
+		equipment_bonus = {
+			fuel_consumption = -0.10
+			reliability = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 SZY_battle_line_ship_organization = {
@@ -140,6 +493,142 @@ SZY_battle_line_ship_organization = {
 			owner = {
 				529 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = JAP_mio_trait_naval_arsenal_trait
+		name = JAP_mio_trait_naval_arsenal_trait
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x = -1 y = 0 }
+		relative_position_id = generic_mio_trait_primary_battery_layout
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = naval_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_use_the_natural_harbors
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_investment_into_shipbuilding
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_navy
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = JAP_mio_trait_rapid_counterflooding_system
+		name = JAP_mio_trait_rapid_counterflooding_system
+		icon = GFX_generic_mio_trait_icon_max_strength
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 } 
+		relative_position_id = generic_mio_trait_hardened_critical_components
+
+		all_parents = { generic_mio_trait_hardened_critical_components }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			naval_torpedo_enemy_critical_chance_factor = -0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = JAP_mio_trait_enhanced_optics
+		name = JAP_mio_trait_enhanced_optics
+		icon = GFX_generic_mio_trait_icon_surface_detection
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+		relative_position_id = generic_mio_trait_secondary_battery_layout
+
+		all_parents = { generic_mio_trait_secondary_battery_layout }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_strength_in_numbers
+		name = JAP_mio_trait_strength_in_numbers
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 1 y = 0 }
+		relative_position_id = generic_mio_trait_primary_battery_layout
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				owner = {
+					if = {
+						limit = { has_focus_tree = generic_focus }
+
+						has_completed_focus = large_navy
+					}
+					else_if = {
+						limit = { has_focus_tree = horn_of_africa_tree }
+
+						has_completed_focus = HOA_expand_naval_variety
+					}
+					else_if = {
+						limit = { has_focus_tree = china_warlord_sea_focus }
+
+						has_completed_focus = CHI_sea_order_destroyers
+					}
+					else_if = {
+						limit = { has_focus_tree = southern_south_america_focus }
+
+						has_completed_focus = SMB_coastal_fleet
+					}
+				}
+				NOT = { has_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -204,6 +693,141 @@ SZB_raider_ship_organization = {
 			}
 		}
 	}
+
+	add_trait = {  
+		token = JAP_mio_trait_torpedo_reloads
+		name = JAP_mio_trait_torpedo_reloads
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_offense
+		special_trait_background = yes
+
+		position = { x = 2 y = 1 }
+		relative_position_id = generic_mio_trait_raiding_submarines
+
+		all_parents = { generic_mio_trait_raiding_submarines }
+
+		limit_to_equipment_type = { screen_ship submarine }
+		equipment_bonus = {
+			torpedo_attack	= 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = JAP_mio_trait_type_97_torpedo_control_director
+		name = JAP_mio_trait_type_97_torpedo_control_director
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		special_trait_background = yes
+
+		position = { x = 1 y = 1 } 
+		relative_position_id = generic_mio_trait_high_quality_optics
+
+		any_parent = { generic_mio_trait_high_quality_optics generic_mio_trait_spotting_tops }
+
+		limit_to_equipment_type = { screen_ship }
+		equipment_bonus = {
+			naval_torpedo_hit_chance_factor	= 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_naval_arsenal_trait
+		name = JAP_mio_trait_naval_arsenal_trait
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x = -1 y = 0 }
+		relative_position_id = JAP_mio_trait_strength_in_numbers
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = naval_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_use_the_natural_harbors
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_investment_into_shipbuilding
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_navy
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_strength_in_numbers
+		name = JAP_mio_trait_strength_in_numbers
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 2 y = 0 }
+		relative_position_id = generic_mio_trait_high_speed_raiding
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				owner = {
+					if = {
+						limit = { has_focus_tree = generic_focus }
+
+						has_completed_focus = large_navy
+					}
+					else_if = {
+						limit = { has_focus_tree = horn_of_africa_tree }
+
+						has_completed_focus = HOA_expand_naval_variety
+					}
+					else_if = {
+						limit = { has_focus_tree = china_warlord_sea_focus }
+
+						has_completed_focus = CHI_sea_order_destroyers
+					}
+					else_if = {
+						limit = { has_focus_tree = southern_south_america_focus }
+
+						has_completed_focus = SMB_coastal_fleet
+					}
+				}
+				NOT = { has_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 SEI_escort_ship_organization = {
@@ -233,6 +857,164 @@ SEI_escort_ship_organization = {
 			owner = {
 				531 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {  
+		token = JAP_mio_trait_high_pressure_boilers
+		name = JAP_mio_trait_high_pressure_boilers
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		special_trait_background = yes
+
+		position = { x = -1 y = 1 }
+		relative_position_id = generic_mio_trait_high_speed_mine_hunting_equipment
+
+		all_parents = { generic_mio_trait_high_speed_mine_hunting_equipment }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			naval_speed = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = JAP_mio_trait_torpedo_reloads
+		name = JAP_mio_trait_torpedo_reloads
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 } 
+		relative_position_id = generic_mio_trait_fleet_escorts
+
+		all_parents = { generic_mio_trait_fleet_escorts }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { screen_ship }
+		equipment_bonus = {
+			torpedo_attack	= 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = JAP_mio_trait_type_94_fire_control
+		name = JAP_mio_trait_type_94_fire_control
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		special_trait_background = yes
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_high_speed_mine_hunting_equipment
+
+		all_parents = { generic_mio_trait_high_speed_mine_hunting_equipment }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { mio_cat_eq_all_cruiser carrier }
+		equipment_bonus = {
+			anti_air_attack = 0.1
+			naval_light_gun_hit_chance_factor = 0.025
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_naval_arsenal_trait
+		name = JAP_mio_trait_naval_arsenal_trait
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x = -1 y = 0 }
+		relative_position_id = JAP_mio_trait_strength_in_numbers
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = naval_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_use_the_natural_harbors
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_investment_into_shipbuilding
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_navy
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_strength_in_numbers
+		name = JAP_mio_trait_strength_in_numbers
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 3 y = 0 }
+		relative_position_id = generic_mio_trait_fleet_escorts
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				owner = {
+					if = {
+						limit = { has_focus_tree = generic_focus }
+
+						has_completed_focus = large_navy
+					}
+					else_if = {
+						limit = { has_focus_tree = horn_of_africa_tree }
+
+						has_completed_focus = HOA_expand_naval_variety
+					}
+					else_if = {
+						limit = { has_focus_tree = china_warlord_sea_focus }
+
+						has_completed_focus = CHI_sea_order_destroyers
+					}
+					else_if = {
+						limit = { has_focus_tree = southern_south_america_focus }
+
+						has_completed_focus = SMB_coastal_fleet
+					}
+				}
+				NOT = { has_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = JAP_mio_trait_strength_in_numbers_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -276,6 +1058,182 @@ ZBZ_high_agility_fighter_aircraft_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = JAP_mio_trait_zaibatsu_production_capabilities_trait
+		name = JAP_mio_trait_zaibatsu_production_capabilities_trait
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		special_trait_background = yes
+
+		position = { x = 1 y = 0 }
+		relative_position_id = generic_mio_trait_minimum_weapon_requirements
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_the_adjective_air_fleet
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_camco
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_establish_aircraft_industry
+				}
+			}
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_special_government_contracts_mitsubishi_trait
+		name = JAP_mio_trait_special_government_contracts_mitsubishi_trait
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+		special_trait_background = yes
+
+		position = { x = 2 y = 1 }
+		relative_position_id = generic_mio_trait_minimum_weapon_requirements
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			has_mio_size > 5
+			FROM = { NOT = { has_country_flag = JAP_mio_trait_special_government_contracts_taken_flag } }
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = JAP_mio_trait_special_government_contracts_taken_flag }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			FROM = {
+				if = {
+					limit = {
+						has_global_flag = custom_advisors_only
+						has_character = event_target:JAP_koyata_iwasaki
+					}
+
+					event_target:JAP_koyata_iwasaki = {
+						if = {
+							limit = { has_trait = JAP_mitsubishi_president }
+
+							remove_trait = {
+								slot = political_advisor
+								trait = JAP_mitsubishi_president
+							}
+							custom_effect_tooltip = generic_skip_one_line_tt
+							add_trait = {
+								slot = political_advisor
+								trait = JAP_mitsubishi_president_2
+							}
+						}
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.02
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_unified_research_and_development
+		name = JAP_mio_trait_unified_research_and_development
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 2 y = 0 }
+		relative_position_id = generic_mio_trait_minimum_weapon_requirements
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				owner = {
+					if = {
+						limit = { has_focus_tree = generic_focus }
+
+						has_completed_focus = aviation_effort_2
+					}
+					else_if = {
+						limit = { has_focus_tree = horn_of_africa_tree }
+
+						has_completed_focus = HOA_study_air_tactics
+					}
+					else_if = {
+						limit = { has_focus_tree = china_warlord_sea_focus }
+
+						OR = {
+							has_completed_focus = CHI_sea_local_fighter_production
+							has_completed_focus = CHI_sea_local_bomber_production
+						}
+					}
+					else_if = {
+						limit = { has_focus_tree = southern_south_america_focus }
+
+						has_completed_focus = SMB_establish_aircraft_industry
+					}
+				}
+				NOT = { has_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_engine_filters
+		name = PHI_mio_trait_engine_filters
+		icon = GFX_generic_mio_trait_icon_reliability
+		special_trait_background = yes
+
+		position = { x = 1 y = 1 }  
+		relative_position_id = generic_mio_trait_fabric_skin
+
+		any_parent = { generic_mio_trait_fabric_skin generic_mio_trait_metal_skin }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			reliability = 0.10
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 ZBZ_medium_aircraft_organization = {
@@ -305,6 +1263,108 @@ ZBZ_medium_aircraft_organization = {
 			owner = {
 				282 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = JAP_mio_trait_zaibatsu_production_capabilities_trait
+		name = JAP_mio_trait_zaibatsu_production_capabilities_trait
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		special_trait_background = yes
+
+		position = { x = -1 y = 0 }
+		relative_position_id = generic_mio_trait_skip_bombing
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_the_adjective_air_fleet
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_camco
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_establish_aircraft_industry
+				}
+			}
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_unified_research_and_development
+		name = JAP_mio_trait_unified_research_and_development
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 1 y = 0 }
+		relative_position_id = generic_mio_trait_skip_bombing
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				owner = {
+					if = {
+						limit = { has_focus_tree = generic_focus }
+
+						has_completed_focus = aviation_effort_2
+					}
+					else_if = {
+						limit = { has_focus_tree = horn_of_africa_tree }
+
+						has_completed_focus = HOA_study_air_tactics
+					}
+					else_if = {
+						limit = { has_focus_tree = china_warlord_sea_focus }
+
+						OR = {
+							has_completed_focus = CHI_sea_local_fighter_production
+							has_completed_focus = CHI_sea_local_bomber_production
+						}
+					}
+					else_if = {
+						limit = { has_focus_tree = southern_south_america_focus }
+
+						has_completed_focus = SMB_establish_aircraft_industry
+					}
+				}
+				NOT = { has_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -338,6 +1398,64 @@ SEZ_range_focused_aircraft_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = JAP_mio_trait_unified_research_and_development
+		name = JAP_mio_trait_unified_research_and_development
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = -1 y = 0 }
+		relative_position_id = generic_mio_trait_extra_cargo_doors
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				owner = {
+					if = {
+						limit = { has_focus_tree = generic_focus }
+
+						has_completed_focus = aviation_effort_2
+					}
+					else_if = {
+						limit = { has_focus_tree = horn_of_africa_tree }
+
+						has_completed_focus = HOA_study_air_tactics
+					}
+					else_if = {
+						limit = { has_focus_tree = china_warlord_sea_focus }
+
+						OR = {
+							has_completed_focus = CHI_sea_local_fighter_production
+							has_completed_focus = CHI_sea_local_bomber_production
+						}
+					}
+					else_if = {
+						limit = { has_focus_tree = southern_south_america_focus }
+
+						has_completed_focus = SMB_establish_aircraft_industry
+					}
+				}
+				NOT = { has_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 SZY_multi_role_aircraft_organization = {
@@ -367,6 +1485,64 @@ SZY_multi_role_aircraft_organization = {
 			owner = {
 				529 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = JAP_mio_trait_unified_research_and_development
+		name = JAP_mio_trait_unified_research_and_development
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 3 y = 0 }
+		relative_position_id = generic_mio_trait_escort_designs
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				owner = {
+					if = {
+						limit = { has_focus_tree = generic_focus }
+
+						has_completed_focus = aviation_effort_2
+					}
+					else_if = {
+						limit = { has_focus_tree = horn_of_africa_tree }
+
+						has_completed_focus = HOA_study_air_tactics
+					}
+					else_if = {
+						limit = { has_focus_tree = china_warlord_sea_focus }
+
+						OR = {
+							has_completed_focus = CHI_sea_local_fighter_production
+							has_completed_focus = CHI_sea_local_bomber_production
+						}
+					}
+					else_if = {
+						limit = { has_focus_tree = southern_south_america_focus }
+
+						has_completed_focus = SMB_establish_aircraft_industry
+					}
+				}
+				NOT = { has_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -400,6 +1576,154 @@ ZBZ_heavy_aircraft_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = JAP_mio_trait_special_government_contracts_nakajima_trait
+		name = JAP_mio_trait_special_government_contracts_nakajima_trait
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+		special_trait_background = yes
+
+		position = { x = -3 y = 0 }
+		relative_position_id = generic_mio_trait_extended_rear_fuselage
+
+		available = { has_mio_size > 5 }
+
+		on_complete = {
+			FROM = {
+				if = {
+					limit = {
+						has_global_flag = custom_advisors_only
+						has_character = event_target:JAP_chikuhei_nakajima
+					}
+
+					event_target:JAP_chikuhei_nakajima = {
+						if = {
+							limit = { has_trait = JAP_nakajima_president }
+
+							remove_trait = {
+								slot = political_advisor
+								trait = JAP_nakajima_president
+							}
+							custom_effect_tooltip = generic_skip_one_line_tt
+							add_trait = {
+								slot = political_advisor
+								trait = JAP_nakajima_president_2
+							}
+						}
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.02
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_zaibatsu_production_capabilities_trait
+		name = JAP_mio_trait_zaibatsu_production_capabilities_trait
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		special_trait_background = yes
+
+		position = { x = -1 y = 0 }
+		relative_position_id = generic_mio_trait_extended_rear_fuselage
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_the_adjective_air_fleet
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_camco
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_establish_aircraft_industry
+				}
+			}
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_unified_research_and_development
+		name = JAP_mio_trait_unified_research_and_development
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 1 y = 0 }
+		relative_position_id = generic_mio_trait_extended_rear_fuselage
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				owner = {
+					if = {
+						limit = { has_focus_tree = generic_focus }
+
+						has_completed_focus = aviation_effort_2
+					}
+					else_if = {
+						limit = { has_focus_tree = horn_of_africa_tree }
+
+						has_completed_focus = HOA_study_air_tactics
+					}
+					else_if = {
+						limit = { has_focus_tree = china_warlord_sea_focus }
+
+						OR = {
+							has_completed_focus = CHI_sea_local_fighter_production
+							has_completed_focus = CHI_sea_local_bomber_production
+						}
+					}
+					else_if = {
+						limit = { has_focus_tree = southern_south_america_focus }
+
+						has_completed_focus = SMB_establish_aircraft_industry
+					}
+				}
+				NOT = { has_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 ZBZ_naval_aircraft_organization  = {
@@ -429,6 +1753,152 @@ ZBZ_naval_aircraft_organization  = {
 			owner = {
 				282 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = JAP_mio_trait_type_91_aerial_torpedo_integration
+		name = JAP_mio_trait_type_91_aerial_torpedo_integration
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
+		special_trait_background = yes
+
+		position = { x = 2 y = 1 }
+		relative_position_id = generic_mio_trait_navigation_equipment
+
+		all_parents = { generic_mio_trait_navigation_equipment }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = NAV_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_the_adjective_air_fleet
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_coastal_patrol_planes
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_naval_support
+				}
+			}
+		}
+
+		equipment_bonus = {
+			naval_strike_attack = 0.1
+			naval_strike_targetting = 0.05
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_naval_arsenal_trait
+		name = JAP_mio_trait_naval_arsenal_trait
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x = 4 y = 0 }
+		relative_position_id = generic_mio_trait_navigation_equipment
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = naval_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_use_the_natural_harbors
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_investment_into_shipbuilding
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_navy
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_unified_research_and_development
+		name = JAP_mio_trait_unified_research_and_development
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 5 y = 0 }
+		relative_position_id = generic_mio_trait_navigation_equipment
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				owner = {
+					if = {
+						limit = { has_focus_tree = generic_focus }
+
+						has_completed_focus = aviation_effort_2
+					}
+					else_if = {
+						limit = { has_focus_tree = horn_of_africa_tree }
+
+						has_completed_focus = HOA_study_air_tactics
+					}
+					else_if = {
+						limit = { has_focus_tree = china_warlord_sea_focus }
+
+						OR = {
+							has_completed_focus = CHI_sea_local_fighter_production
+							has_completed_focus = CHI_sea_local_bomber_production
+						}
+					}
+					else_if = {
+						limit = { has_focus_tree = southern_south_america_focus }
+
+						has_completed_focus = SMB_establish_aircraft_industry
+					}
+				}
+				NOT = { has_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -472,6 +1942,79 @@ SZB_infantry_equipment_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = JAP_mio_trait_military_arsenal_trait
+		name = JAP_mio_trait_military_arsenal_trait
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x = 1 y = 0 }
+		relative_position_id = generic_mio_trait_heavy_anti_armor_ammunition
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = { 
+		token = PHI_mio_trait_rugged_construction
+		name = PHI_mio_trait_rugged_construction
+		icon = GFX_generic_mio_trait_icon_reliability
+		special_trait_background = yes
+
+		position = { x=0 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+	add_trait = { 
+		token = PHI_mio_trait_use_local_materials
+		name = PHI_mio_trait_use_local_materials
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+
+		any_parent = { PHI_mio_trait_rugged_construction }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		production_bonus = {
+			production_cost_factor = -0.05 
+		}
+	}
 }
 
 SEZ_support_equipment_organization = {
@@ -501,6 +2044,50 @@ SEZ_support_equipment_organization = {
 			owner = {
 				532 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = JAP_mio_trait_military_arsenal_trait
+		name = JAP_mio_trait_military_arsenal_trait
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x = 1 y = 0 }
+		relative_position_id = generic_mio_trait_anti_tank_rifle
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -534,9 +2121,53 @@ SEI_artillery_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = JAP_mio_trait_military_arsenal_trait
+		name = JAP_mio_trait_military_arsenal_trait
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x = 1 y = 0 }
+		relative_position_id = generic_mio_trait_big_guns
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_develop_capital_arsenal
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_military_facilities
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 } 
 
-ZBZ_motorized_mechanized_organization  = {
+ZBZ_motorized_mechanized_organization = {
 	name = JAP_nissan_organization 
 	include = esicolor_generic_motorized_mechanized_organization 
 	icon = GFX_idea_nissan
@@ -563,6 +2194,157 @@ ZBZ_motorized_mechanized_organization  = {
 			owner = {
 				282 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = JAP_mio_trait_special_government_contracts_nissan_trait
+		name = JAP_mio_trait_special_government_contracts_nissan_trait
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+		special_trait_background = yes
+
+		position = { x = 1 y = 2 }
+		relative_position_id = generic_mio_trait_closed_chassi
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = { has_mio_size > 5 }
+
+		on_complete = {
+			FROM = {
+				if = {
+					limit = {
+						has_global_flag = custom_advisors_only
+						has_character = event_target:JAP_yoshisuke_aikawa
+					}
+
+					event_target:JAP_yoshisuke_aikawa = {
+						if = {
+							limit = { has_trait = JAP_nakajima_president }
+
+							remove_trait = {
+								slot = political_advisor
+								trait = JAP_nissan_president
+							}
+							custom_effect_tooltip = generic_skip_one_line_tt
+							add_trait = {
+								slot = political_advisor
+								trait = JAP_nissan_president_2
+							}
+						}
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.02
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_zaibatsu_production_capabilities_trait
+		name = JAP_mio_trait_zaibatsu_production_capabilities_trait
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		special_trait_background = yes
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_closed_chassi
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_the_adjective_air_fleet
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_camco
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_establish_aircraft_industry
+				}
+			}
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_cooperation_with_kurogane
+		name = JAP_mio_trait_cooperation_with_kurogane
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 1 y = 0 }
+		relative_position_id = generic_mio_trait_closed_chassi
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_ethanol_fuel_adaptations
+		name = PHI_mio_trait_ethanol_fuel_adaptations
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		special_trait_background = yes
+
+		position = { x = 9 y = 0 }  
+
+		equipment_bonus = {
+			fuel_consumption = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_coconut_fuel_adaptations
+		name = PHI_mio_trait_coconut_fuel_adaptations
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+
+		visible = {
+			has_global_flag = custom_designer_traits_enabled
+			has_global_flag = custom_advisors_only
+		}
+		available = { FROM = { event_target:PHI_vicente_lava = { is_hired_as_advisor = yes } } }
+
+		relative_position_id = PHI_mio_trait_ethanol_fuel_adaptations
+		any_parent = { PHI_mio_trait_ethanol_fuel_adaptations }
+
+		equipment_bonus = {
+			fuel_consumption = -0.10
+			reliability = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -594,6 +2376,206 @@ ZBZ_armored_car_organization = {
 			owner = {
 				282 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = PHI_mio_trait_ethanol_fuel_adaptations
+		name = PHI_mio_trait_ethanol_fuel_adaptations
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		special_trait_background = yes
+
+		position = { x = 9 y = 0 }
+
+		equipment_bonus = {
+			fuel_consumption = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_coconut_fuel_adaptations
+		name = PHI_mio_trait_coconut_fuel_adaptations
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+		relative_position_id = PHI_mio_trait_ethanol_fuel_adaptations
+
+		any_parent = { PHI_mio_trait_ethanol_fuel_adaptations }
+		visible = {
+			has_global_flag = custom_designer_traits_enabled
+			has_global_flag = custom_advisors_only
+		}
+		available = { FROM = { event_target:PHI_vicente_lava = { is_hired_as_advisor = yes } } }
+
+		equipment_bonus = {
+			fuel_consumption = -0.10
+			reliability = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_ad_hoc_armor_reinforcement
+		name = PHI_mio_trait_ad_hoc_armor_reinforcement
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+		relative_position_id = generic_mio_trait_command_upgrades
+
+		any_parent = { generic_mio_trait_command_upgrades }
+
+		equipment_bonus = {
+			hardness = 0.05
+			armor_value = 0.03
+			maximum_speed = -0.03
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_widened_tires
+		name = PHI_mio_trait_widened_tires
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+		relative_position_id = generic_mio_trait_reinforced_wheels
+
+		any_parent = { generic_mio_trait_reinforced_wheels }
+
+		equipment_bonus = {
+			reliability = 0.07
+			maximum_speed = 0.03
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+}
+
+SEZ_generic_train_organization = {
+	name = JAP_nippon_sharyo_organization
+	include = esicolor_generic_train_organization
+	icon = GFX_idea_JAP_nippon_sharyo
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
+		owner = {
+			NOT = { has_country_flag = train_manufacturer_disabled }
+			OR = {
+				original_tag = SEZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 532
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				532 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+SEZ_generic_train_organization_custom = {
+	name = JAP_nippon_sharyo_organization
+	include = esicolor_generic_train_organization
+	icon = GFX_idea_JAP_nippon_sharyo
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = train_manufacturer_disabled }
+			OR = {
+				original_tag = SEZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 532
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				532 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		name = generic_mio_initial_trait_generic_train_manufacturer
+
+		limit_to_equipment_type = { train_equipment }
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05 #5% from MIO base
+		}
+	}
+	add_trait = {
+		token = JAP_mio_trait_zaibatsu_production_capabilities_trait
+		name = JAP_mio_trait_zaibatsu_production_capabilities_trait
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		special_trait_background = yes
+
+		position = { x = 9 y = 0 }
+
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_the_adjective_air_fleet
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_camco
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_establish_aircraft_industry
+				}
+			}
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }

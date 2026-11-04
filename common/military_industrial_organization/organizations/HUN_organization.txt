@@ -161,6 +161,7 @@ OAE_multi_role_aircraft_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
 			OR = {
@@ -182,6 +183,48 @@ OAE_multi_role_aircraft_organization = {
 		}
 	}
 }
+OAE_multi_role_aircraft_organization_custom = {
+	name = HUN_mrt_aircraft_organization
+	include = esicolor_generic_multi_role_aircraft_organization
+	icon = GFX_idea_HUN_mrt_aircraft
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OAE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 43
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				43 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		name = HUN_mio_trait_aircraft_production_plant
+
+		limit_to_equipment_type = { mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane mio_cat_eq_all_large_plane }
+		production_bonus = {
+			production_cost_factor = -0.05
+			production_resource_need_factor = -0.1
+			production_capacity_factor = 0.05
+		}
+	}
+}
 
 ################################### 
 
@@ -190,7 +233,6 @@ OAE_multi_role_aircraft_organization = {
 # # # ####  #  ##  ###   #  ##  #   
 #   # #  #  #  #   #  #  #  #   #   
 #   # #  #  #  ### #  # ### ### ### 
-
 
 ###################################
 
@@ -234,8 +276,152 @@ OAE_support_equipment_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OAE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 43
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				43 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+OAE_support_equipment_organization_custom = {
+	name = HUN_danuvia_inf_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_HUN_dunai_gepgyar
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OAE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 43
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				43 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		name = HUN_mio_trait_army_ammunition_and_wepaons_works
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			reliability = 0.05
+			breakthrough = 0.03
+		}
+		production_bonus = {
+			production_cost_factor = -0.05
+		}
+	}
+	add_trait = { 
+		token = HUN_mio_trait_danuvia_two_part_lever_delayed_blowback_bolt
+		name = HUN_mio_trait_danuvia_two_part_lever_delayed_blowback_bolt
+		icon = GFX_generic_mio_department_icon_infantry_quality
+		special_trait_background = yes
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_anti_tank_rifle
+
+		all_parents = { generic_mio_trait_anti_tank_rifle }
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			reliability = 0.05
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+	}
+	add_trait = { 
+		token = HUN_mio_trait_danuvia_improved_stock
+		name = HUN_mio_trait_danuvia_improved_stock
+		icon = GFX_generic_mio_department_icon_infantry_quality
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+		relative_position_id = HUN_mio_trait_danuvia_two_part_lever_delayed_blowback_bolt
+
+		all_parents = { HUN_mio_trait_danuvia_two_part_lever_delayed_blowback_bolt }
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			reliability = 0.05
+			soft_attack = 0.05
+		}
+	}
+	add_trait = { 
+		token = HUN_mio_trait_heavy_mauser_rounds
+		name = HUN_mio_trait_heavy_mauser_rounds
+		icon = GFX_generic_mio_department_icon_infantry_quality
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+		relative_position_id = HUN_mio_trait_danuvia_improved_stock
+
+		all_parents = { HUN_mio_trait_danuvia_improved_stock }
+
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			breakthrough = 0.1
+			hard_attack = 0.1
+		}
+	}
+	add_trait = { 
+		token = HUN_mio_trait_danuvia_motorcycles
+		name = HUN_mio_trait_danuvia_motorcycles
+		icon = GFX_generic_mio_department_icon_support_production
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+		relative_position_id = generic_mio_trait_pontoons
+
+		all_parents = { generic_mio_trait_pontoons }
+
+		limit_to_equipment_type = { support_equipment }
+		equipment_bonus = {
+			build_cost_ic = -0.15
+		}
+	}
+}
+
+OAE_artillery_organization = {
+	name = HUN_digep_artillery
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_HUN_digep_artillery
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
 			OR = {
 				original_tag = OAE
 				AND = {

@@ -17,6 +17,7 @@ PJM_infantry_tank_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
 			OR = {
@@ -38,6 +39,74 @@ PJM_infantry_tank_organization = {
 		}
 	}
 }
+PJM_infantry_tank_organization_custom = {
+	name = FRA_renault_organization
+	include = esicolor_generic_infantry_tank_organization
+	icon = GFX_idea_renault
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+			OR = {
+				original_tag = PJM
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 16
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				16 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+	add_trait = { 
+		token = FRA_mio_trait_automitrailleuses
+		name = FRA_mio_trait_automitrailleuses
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+		special_trait_background = yes
+
+		position = { x=5 y=0 }   
+
+		limit_to_equipment_type = { medium_tank_chassis }
+		equipment_bonus = {
+			maximum_speed = 0.1
+			armor_value = -0.05
+		}
+	}
+	add_trait = {
+		token = FRA_mio_trait_b1_bis_suspension
+		name = FRA_mio_trait_b1_bis_suspension
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		special_trait_background = yes
+
+		position = { x=1 y=1 }  
+		relative_position_id = generic_mio_trait_single_engine
+
+		any_parent = { generic_mio_trait_single_engine generic_mio_trait_dual_engine_redundancy }
+
+		limit_to_equipment_type = { heavy_tank_chassis }
+		equipment_bonus = {
+			maximum_speed = 0.05
+			breakthrough = 0.1 
+		} 
+	}
+}
 
 PJM_mobile_tank_organization = {
 	name = FRA_hotchkiss_organization
@@ -48,6 +117,7 @@ PJM_mobile_tank_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
 			OR = {
@@ -67,6 +137,57 @@ PJM_mobile_tank_organization = {
 				16 = { state_designer_availabile = yes }
 			}
 		}
+	}
+}
+PJM_mobile_tank_organization_custom = {
+	name = FRA_hotchkiss_organization
+	include = esicolor_generic_mobile_tank_organization
+	# icon = GFX_idea_generic_tank_manufacturer_3
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			OR = {
+				original_tag = PJM
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 16
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				16 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	add_trait = { 
+		token = FRA_mio_trait_l_35
+		name = FRA_mio_trait_l_35
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
+
+		position = { x=1 y=2 }
+		relative_position_id = generic_mio_enlarged_breech
+
+		any_parent = { generic_mio_enlarged_breech }
+
+		equipment_bonus = {
+			hard_attack = 0.05
+			ap_attack = 0.05
+		}  
+	}
+	override_trait = {
+		token = generic_mio_gunner_sight_improvements
+		position = { x=-1 y=2 }
 	}
 }
 
@@ -482,6 +603,111 @@ PJM_armored_car_organization = {
 			owner = {
 				16 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+
+PJM_generic_train_organization = {
+	name = FRA_alsthom_organization
+	include = esicolor_generic_train_organization
+	icon = GFX_idea_FRA_alsthom
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
+		owner = {
+			NOT = { has_country_flag = train_manufacturer_disabled }
+			OR = {
+				original_tag = PJM
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 16
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				16 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+PJM_generic_train_organization_custom = {
+	name = FRA_alsthom_organization
+	include = esicolor_generic_train_organization
+	icon = GFX_idea_FRA_alsthom
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = train_manufacturer_disabled }
+			OR = {
+				original_tag = PJM
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 16
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				16 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	research_categories = { train_tech support_tech }
+
+	initial_trait = {
+		name = generic_mio_initial_trait_generic_train_manufacturer
+
+		limit_to_equipment_type = { train_equipment }
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0 #5% from MIO base
+		}
+	}
+	add_trait = {
+		token = FRA_mio_trait_scam_facilities
+		name = FRA_mio_trait_scam_facilities
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				28 = { is_core_of = FROM }
+			}
+			else = {
+				28 = { is_owned_by = FROM }
+			}
+		}
+
+		limit_to_equipment_type = { train_equipment }
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }

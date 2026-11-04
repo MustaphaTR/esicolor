@@ -17,6 +17,7 @@ OLA_assault_guns_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = assault_gun_manufacturer_disabled }
 			OR = {
@@ -38,6 +39,160 @@ OLA_assault_guns_organization = {
 		}
 	}
 }
+OLA_assault_guns_organization_custom = {
+	name = GER_alkett_organization
+	include = esicolor_generic_assault_guns_organization
+	icon = GFX_idea_GER_alkett
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = assault_gun_manufacturer_disabled }
+			OR = {
+				original_tag = OLA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 64
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				64 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	tree_header_text = {
+		text = mio_header_light_tank_department
+		x = 1
+	}
+	tree_header_text = {
+		text = mio_header_medium_tank_department
+		x = 4
+	}
+	tree_header_text = {
+		text = mio_header_heavy_tank_department
+		x = 7
+	}
+	override_trait = {
+		token = generic_mio_medium_assault_gun_rocket_tubes
+
+		mutually_exclusive = { GER_mio_trait_panzerjager }	
+	}
+	add_trait = {
+		token = GER_mio_trait_hoesch_facilities
+		name = GER_mio_trait_hoesch_facilities
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				51 = { is_core_of = FROM }
+			}
+			else = {
+				51 = { is_owned_by = FROM }
+			}
+			FROM = { NOT = { has_country_flag = GER_hoesch_facilities_trait_taken_flag } }
+		}
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_hoesch_facilities_trait_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_panzerjager
+		name = GER_mio_trait_panzerjager
+		icon = GFX_generic_mio_department_icon_tank_general_at
+		special_trait_background = yes 
+
+		position = { x = 0 y = 1 }
+		relative_position_id = generic_mio_medium_assault_gun_75_mm_43M_tank_gun
+
+		mutually_exclusive = { generic_mio_medium_assault_gun_rocket_tubes }
+		all_parents = { generic_mio_medium_assault_gun_75_mm_43M_tank_gun }
+		available = {
+			FROM = { has_tech = antitank2 }
+		}
+
+		limit_to_equipment_type = { medium_tank_artillery_chassis heavy_tank_artillery_chassis }
+		equipment_bonus = {
+			ap_attack = 0.05
+			hard_attack = 0.1
+			reliability = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_armored_superstructure_specialist
+		name = GER_mio_trait_armored_superstructure_specialist
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+		special_trait_background = yes 
+
+		position = { x = 9 y = 1 }
+
+		equipment_bonus = {
+			armor_value = 0.05
+			defense = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_sturmhaubitze
+		name = GER_mio_trait_sturmhaubitze
+		icon = GFX_generic_mio_department_icon_tank_general_at
+		special_trait_background = yes 
+
+		position = { x = 9 y = 2 }
+
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				9 = { is_core_of = FROM }
+			}
+			else = {
+				9 = { is_owned_by = FROM }
+			}
+		}
+
+		limit_to_equipment_type = { medium_tank_artillery_chassis heavy_tank_artillery_chassis }
+		equipment_bonus = {
+			soft_attack = 0.03
+			hard_attack = 0.05
+			breakthrough = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+}
 
 OSS_mobile_tank_organization = {
 	name = GER_henschel_organization
@@ -48,6 +203,7 @@ OSS_mobile_tank_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
 			OR = {
@@ -69,6 +225,186 @@ OSS_mobile_tank_organization = {
 		}
 	}
 }
+OSS_mobile_tank_organization_custom = {
+	name = GER_henschel_organization
+	include = esicolor_generic_mobile_tank_organization
+	icon = GFX_idea_henschel
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OSS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 55
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				55 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	override_trait = {
+		token = generic_mio_trait_light_tank_specialization
+
+		position = { x=-1 y=1 }
+		relative_position_id = GER_mio_trait_technical_superiority
+		any_parent = { GER_mio_trait_technical_superiority }
+	}
+	override_trait = {
+		token = generic_mio_trait_medium_tank_specialization
+
+		position = { x=0 y=1 }
+		relative_position_id = GER_mio_trait_technical_superiority
+		any_parent = { GER_mio_trait_technical_superiority }
+	}
+	override_trait = {
+		token = generic_mio_trait_heavy_tank_specialization
+
+		position = { x=1 y=1 }
+		relative_position_id = GER_mio_trait_technical_superiority
+		any_parent = { GER_mio_trait_technical_superiority }
+	}
+	add_trait = {
+		token = GER_mio_trait_hoesch_facilities
+		name = GER_mio_trait_hoesch_facilities
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				51 = { is_core_of = FROM }
+			}
+			else = {
+				51 = { is_owned_by = FROM }
+			}
+			FROM = { NOT = { has_country_flag = GER_hoesch_facilities_trait_taken_flag } }
+		}
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_hoesch_facilities_trait_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_involve_henschel_in_special_projects
+		name = GER_mio_trait_involve_henschel_in_special_projects
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=8 y=0 }
+
+		available = { has_mio_size > 4 }
+
+		on_complete = {
+			custom_effect_tooltip = {
+				localization_key = available_scientist_one_line_tt
+				CHARACTER = GER_erwin_aders
+			}
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_character = event_target:OSS_erwin_aders } }
+
+					event_target:OSS_erwin_aders = { set_nationality = FROM }
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_steel_wheel_design
+		name = GER_mio_trait_steel_wheel_design
+		icon = GFX_generic_mio_department_icon_tank_heavy_tank_quality
+		special_trait_background = yes
+
+		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank }
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_interleaved_track_wheels
+
+		any_parent = { generic_mio_trait_interleaved_track_wheels generic_mio_trait_overlapped_track_wheels }
+
+		equipment_bonus = {
+			reliability = 0.03
+			breakthrough = 0.05
+			armor_value = 0.05
+		}
+		production_bonus = {
+			production_cost_factor = 0.03
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_telescopic_sight
+		name = GER_mio_trait_telescopic_sight
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		special_trait_background = yes
+
+		position = { x=-0 y=1 }
+		relative_position_id = generic_mio_trait_turret_sights
+
+		any_parent = { generic_mio_trait_turret_sights }
+
+		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank }
+		equipment_bonus = {
+			hard_attack = 0.05
+			ap_attack = 0.05
+			breakthrough = 0.05
+		}
+		production_bonus = {
+			production_cost_factor = 0.03
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_technical_superiority
+		name = GER_mio_trait_technical_superiority
+		icon = GFX_generic_mio_department_icon_tank_general_quality
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_adaptable_chassis
+
+		any_parent = { generic_mio_trait_adaptable_chassis }
+
+		equipment_bonus = {
+			defense = 0.05
+			soft_attack = 0.05
+			armor_value = 0.05
+		}
+		production_bonus = {
+			production_cost_factor = 0.03
+		}
+	}
+}
 
 OSZ_medium_tank_organization = {
 	name = GER_man_organization
@@ -79,6 +415,7 @@ OSZ_medium_tank_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = medium_tank_manufacturer_disabled }
 			OR = {
@@ -100,6 +437,147 @@ OSZ_medium_tank_organization = {
 		}
 	}
 }
+OSZ_medium_tank_organization_custom = {
+	name = GER_man_organization
+	include = esicolor_generic_medium_tank_organization
+	icon = GFX_idea_GER_MAN
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = medium_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OSZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 52
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				52 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	tree_header_text = {
+		text = mio_header_design
+		x = 1
+	}
+	tree_header_text = {
+		text = mio_header_armor
+		x = 4
+	}
+	tree_header_text = {
+		text = mio_header_engines
+		x = 7
+	}
+	override_trait = {
+		token = generic_mio_trait_armor_steel_working
+
+		position = { x=3 y=0 }
+	}
+	add_trait = {
+		token = GER_mio_trait_hoesch_facilities
+		name = GER_mio_trait_hoesch_facilities
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				51 = { is_core_of = FROM }
+			}
+			else = {
+				51 = { is_owned_by = FROM }
+			}
+			FROM = { NOT = { has_country_flag = GER_hoesch_facilities_trait_taken_flag } }
+		}
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_hoesch_facilities_trait_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_high_velocity_armament
+		name = GER_mio_trait_high_velocity_armament
+		icon = GFX_generic_mio_department_icon_tank_general_at
+		special_trait_background = yes
+
+		position = { x=1 y=2 }
+		relative_position_id = generic_mio_trait_spaced_armor
+
+		all_parents = { generic_mio_trait_improved_gun_metallurgy }
+		any_parent = { generic_mio_trait_spaced_armor generic_mio_trait_crew_survival_layout generic_mio_trait_sloped_side_armor }
+
+		equipment_bonus = {
+			ap_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_schachtellaufwerk 
+		name = GER_mio_trait_schachtellaufwerk 
+		icon = GFX_generic_mio_department_icon_tank_heavy_tank_quality
+		special_trait_background = yes
+
+		position = { x=-1 y=1 }
+		relative_position_id = generic_mio_trait_improved_suspension
+
+		all_parents = { generic_mio_trait_improved_suspension }
+
+		equipment_bonus = {
+			breakthrough = 0.03
+			reliability = 0.03
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_mobility_design_philosophy
+		name = GER_mio_trait_mobility_design_philosophy 
+		icon = GFX_generic_mio_department_icon_tank_medium_tank_engine
+		special_trait_background = yes
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_improved_suspension
+
+		all_parents = { generic_mio_trait_improved_suspension }
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+}
 
 OSO_heavy_tank_organization = {
 	name = GER_porsche_organization
@@ -110,6 +588,7 @@ OSO_heavy_tank_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = heavy_tank_manufacturer_disabled }
 			OR = {
@@ -128,6 +607,193 @@ OSO_heavy_tank_organization = {
 			owner = {
 				50 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+OSO_heavy_tank_organization_custom = {
+	name = GER_porsche_organization
+	include = esicolor_generic_heavy_tank_organization
+	icon = GFX_idea_porsche
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = heavy_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OSO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 50
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				50 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	tree_header_text = {
+		text = mio_header_engine_and_drive_system
+		x = 0.5
+	}
+	tree_header_text = {
+		text = mio_header_chassis
+		x = 4
+	}
+	tree_header_text = {
+		text = mio_header_guns_and_turret
+		x = 7
+	}
+	override_trait = {
+		token = generic_mio_trait_wide_tracks
+		
+		position = { x=0 y=0 }
+	}
+	override_trait = {
+		token = generic_mio_trait_one_piece_hull_side_coverings
+		
+		position = { x=3 y=0 }
+	}
+	override_trait = {
+		token = generic_mio_trait_improved_crew_ergonomics
+
+		position = { x=0 y=2 }
+	}
+	override_trait = {
+		token = generic_mio_trait_fully_cast_turret
+
+		position = { x=4 y=0 }
+	}
+	add_trait = {
+		token = GER_mio_trait_hoesch_facilities
+		name = GER_mio_trait_hoesch_facilities
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				51 = { is_core_of = FROM }
+			}
+			else = {
+				51 = { is_owned_by = FROM }
+			}
+			FROM = { NOT = { has_country_flag = GER_hoesch_facilities_trait_taken_flag } }
+		}
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_hoesch_facilities_trait_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_involve_porsche_in_special_projects
+		name = GER_mio_trait_involve_porsche_in_special_projects
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = GER_mio_trait_hoesch_facilities
+
+		available = { has_mio_size > 4 }
+
+		on_complete = {
+			custom_effect_tooltip = {
+				localization_key = available_scientist_one_line_tt
+				CHARACTER = GER_ferdinand_porsche
+			}
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_character = event_target:OSO_ferdinand_porsche } }
+
+					event_target:OSO_ferdinand_porsche = { set_nationality = FROM }
+				}
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_multi_role_tanks
+		name = GER_mio_trait_multi_role_tanks
+		icon = GFX_generic_mio_department_icon_tank_heavy_tank_aa
+		special_trait_background = yes
+
+		position = { x=2 y=0 }
+		relative_position_id = generic_mio_trait_one_piece_hull_side_coverings
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			air_attack = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_anti_tank_specialization
+		name = GER_mio_trait_anti_tank_specialization
+		icon = GFX_generic_mio_department_icon_tank_heavy_tank_at
+		special_trait_background = yes
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_one_piece_hull_side_coverings
+
+		all_parents = { generic_mio_trait_one_piece_hull_side_coverings GER_mio_trait_multi_role_tanks }
+
+		equipment_bonus = {
+			hard_attack = 0.05
+			ap_attack = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_unorthodox_transmission_design
+		name = GER_mio_trait_unorthodox_transmission_design
+		icon = GFX_generic_mio_department_icon_tank_heavy_tank_engine
+		special_trait_background = yes
+
+		position = { x=-1 y=1 }
+		relative_position_id = generic_mio_trait_simplified_transmission_system
+
+		all_parents = { generic_mio_trait_simplified_transmission_system }
+
+		limit_to_equipment_type = { armor }
+		equipment_bonus = {
+			maximum_speed = 0.05
+			reliability = -0.02
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -153,6 +819,7 @@ OSB_task_force_ship_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
 			OR = {
@@ -174,6 +841,137 @@ OSB_task_force_ship_organization = {
 		}
 	}
 }
+OSB_task_force_ship_organization_custom = {
+	name = GER_deutsche_werke_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_GER_deutsche_werke
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OSB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 58
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				58 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	override_trait = {
+		token = generic_mio_trait_primary_fire_director_control
+		
+		position = { x=2 y=0 }
+	}
+	override_trait = {
+		token = generic_mio_trait_splinter_protection
+
+		all_parents = { GER_mio_trait_raider_doctrine }
+
+		position = { x=0 y=1 }
+		relative_position_id = GER_mio_trait_raider_doctrine
+	}
+	override_trait = {
+		token = generic_mio_trait_underway_replenishment_equipment
+
+		position = { x=0 y=2 }
+	}
+	add_trait = {
+		token = GER_mio_trait_foreign_influences
+		name = GER_mio_trait_foreign_influences
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=2 y=0 }
+		relative_position_id = generic_mio_trait_primary_fire_director_control
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_raider_doctrine
+		name = GER_mio_trait_raider_doctrine
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_quality
+		special_trait_background = yes
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_long_range_cruising
+		
+		any_parent = { generic_mio_trait_long_range_cruising generic_mio_trait_high_speed_cruising }
+
+		limit_to_equipment_type = { screen_ship }
+		equipment_bonus = {
+			naval_speed = 0.05
+			surface_visibility = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_fast_raiders
+		name = GER_mio_trait_fast_raiders
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_engine
+		special_trait_background = yes
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_splinter_protection
+
+		any_parent = { generic_mio_trait_splinter_protection }
+
+		limit_to_equipment_type = { screen_ship }
+		equipment_bonus = {
+			naval_speed = 0.05
+			naval_range = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_carrier_raiders
+		name = GER_mio_trait_carrier_raiders
+		icon = GFX_generic_mio_department_icon_ship_carrier_engine
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = GER_mio_trait_fast_raiders
+
+		all_parents = { GER_mio_trait_fast_raiders }
+
+		limit_to_equipment_type = { mio_cat_eq_all_carrier }
+		equipment_bonus = {
+			naval_speed = 0.05
+			naval_range = 0.05
+			surface_visibility = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+}
 
 OSB_battle_line_ship_organization = {
 	name = GER_germaniawerft_organization
@@ -184,6 +982,7 @@ OSB_battle_line_ship_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
 			OR = {
@@ -202,6 +1001,189 @@ OSB_battle_line_ship_organization = {
 			owner = {
 				58 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+OSB_battle_line_ship_organization_custom = {
+	name = GER_germaniawerft_organization
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_germaniawerft
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = atlantic_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OSB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 58
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				58 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	override_trait = {
+		token = generic_mio_trait_internal_armor_belt
+		
+		position = { x=1 y=0 }
+	}
+	override_trait = {
+		token = generic_mio_trait_advanced_armor_design
+		
+		position = { x=0 y=2 }
+	}
+	override_trait = {
+		token = generic_mio_trait_anti_air_layout
+		
+		position = { x=3 y=0 }
+	}
+	add_trait = {  
+		token = GER_mio_trait_history_of_battleships
+		name = GER_mio_trait_history_of_battleships
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_production
+		special_trait_background = yes
+
+		relative_position_id = generic_mio_trait_internal_armor_belt
+
+		position = { x=1 y=0 }  
+
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = large_navy
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_a_steamboat_fleet
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_light_cruiser_project
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_blue_water_fleet
+				}
+			}
+        }
+
+        limit_to_equipment_type = { mio_cat_eq_all_battleship }
+      	equipment_bonus = {
+			hg_attack = 0.05
+			build_cost_ic = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = GER_mio_trait_krupp_guns
+		name = GER_mio_trait_krupp_guns
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_weapons
+		special_trait_background = yes
+
+		relative_position_id = GER_mio_trait_history_of_battleships
+
+		all_parents = { GER_mio_trait_history_of_battleships }
+		position = { x=0 y=1 }  
+
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = capital_ship_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_expand_naval_variety
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_cruiser_project
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_purchase_cruisers_and_dreadnoughts
+				}
+			}
+		}
+
+      	equipment_bonus = {
+			hg_attack = 0.05
+			lg_attack = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = GER_mio_trait_h_class_battleships
+		name = GER_mio_trait_h_class_battleships
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_quality
+		special_trait_background = yes
+
+		position = { x=0 y=1 }  
+		relative_position_id = GER_mio_trait_krupp_guns
+
+		all_parents = { GER_mio_trait_krupp_guns }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = capital_ship_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_expand_naval_variety
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_cruiser_project
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_purchase_cruisers_and_dreadnoughts
+				}
+			}
+		}
+
+        limit_to_equipment_type = { mio_cat_eq_all_battleship }
+      	equipment_bonus = {
+			hg_armor_piercing = 0.05
+			naval_speed = 0.05
+			build_cost_ic = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -235,6 +1217,92 @@ OSL_refurbishment_repair_organization = {
 			}
 		}
 	}
+
+	add_trait = {  
+		token = GER_mio_trait_historical_shipyard
+		name = GER_mio_trait_historical_shipyard
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=8 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = naval_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_use_the_natural_harbors
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_investment_into_shipbuilding
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_navy
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.07
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = GER_mio_trait_upgrade_panzerschiffs
+		name = GER_mio_trait_upgrade_panzerschiffs
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_engine
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { ship_hull_cruiser }
+		equipment_bonus = {
+			naval_speed = 0.05
+			surface_visibility = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = GER_mio_trait_innovative_battleship_designs
+		name = GER_mio_trait_innovative_battleship_designs
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_engine
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = GER_mio_trait_upgrade_panzerschiffs
+
+		all_parents = { GER_mio_trait_upgrade_panzerschiffs }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { capital_ship }
+		equipment_bonus = {
+			naval_speed = 0.05
+			surface_visibility = -0.03
+			naval_torpedo_enemy_critical_chance_factor = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 OSB_generic_submarine_organization = {
@@ -266,6 +1334,184 @@ OSB_generic_submarine_organization = {
 			}
 		}
 	}
+
+	add_trait = {  
+		token = GER_mio_trait_ocean_u_boats
+		name = GER_mio_trait_ocean_u_boats
+		icon = GFX_generic_mio_department_icon_ship_submarine_engine
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_long_range_raiding
+
+		all_parents = { generic_mio_trait_long_range_raiding }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = submarine_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_expand_naval_variety
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_modern_submarines
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_raiding_fleet
+				}
+			}
+		}
+
+        equipment_bonus = {
+			sub_visibility = -0.03
+			naval_range = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = GER_mio_trait_kilian_submarine_bunker
+		name = GER_mio_trait_kilian_submarine_bunker
+		icon = GFX_generic_mio_department_icon_ship_submarine_production
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_submarine_mass_production
+
+		all_parents = { generic_mio_trait_submarine_mass_production }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = submarine_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_expand_naval_variety
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_modern_submarines
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_raiding_fleet
+				}
+			}
+		}
+
+        production_bonus = {
+			production_capacity_factor = 0.05
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.05		
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = GER_mio_trait_saddle_tanks
+		name = GER_mio_trait_saddle_tanks
+		icon = GFX_generic_mio_department_icon_ship_submarine_quality
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			naval_range = 0.07
+			build_cost_ic = 0.02	
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = GER_mio_trait_excellent_diving_performance
+		name = GER_mio_trait_excellent_diving_performance
+		icon = GFX_generic_mio_department_icon_ship_submarine_survivability
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = GER_mio_trait_saddle_tanks
+
+		all_parents = { GER_mio_trait_saddle_tanks }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			sub_visibility = -0.05	
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = GER_mio_trait_atlantic_raiders
+		name = GER_mio_trait_atlantic_raiders
+		icon = GFX_generic_mio_department_icon_ship_submarine_engine
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = GER_mio_trait_excellent_diving_performance
+
+		all_parents = { GER_mio_trait_excellent_diving_performance }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = submarine_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_expand_naval_variety
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_modern_submarines
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_raiding_fleet
+				}
+			}
+		}
+
+		equipment_bonus = {
+			sub_visibility = -0.03
+			naval_range = 0.05
+			naval_speed = 0.03
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 OSB_raider_ship_organization = {
@@ -277,6 +1523,7 @@ OSB_raider_ship_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
 			OR = {
@@ -298,6 +1545,206 @@ OSB_raider_ship_organization = {
 		}
 	}
 }
+OSB_raider_ship_organization_custom = {
+	name = GER_blohm_und_voss_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_blohm_und_voss
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OSB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 58
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				58 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	override_trait = {
+		token = generic_mio_trait_unescorted_raider_requirements
+		
+		position = { x=2 y=1 }
+	}
+	override_trait = {
+		token = generic_mio_trait_raider_escort_requirements
+		
+		position = { x=0 y=1 }
+	}
+	add_trait = {
+		token = GER_mio_trait_heavy_raiders
+		name = GER_mio_trait_heavy_raiders
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_engine
+		special_trait_background = yes
+
+		position = { x=-2 y=1 }
+		relative_position_id = generic_mio_trait_raiding_capital_ships
+
+		all_parents = { generic_mio_trait_raiding_capital_ships }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = cruiser_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_expand_naval_variety
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_light_cruiser_project
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_purchase_cruisers_and_dreadnoughts
+				}
+			}
+        }
+
+        limit_to_equipment_type = { ship_hull_cruiser }
+      	equipment_bonus = {
+			surface_visibility = -0.05
+			naval_speed = 0.05
+			naval_range = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = GER_mio_trait_o_class_battlecruisers
+		name = GER_mio_trait_o_class_battlecruisers
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_engine
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = GER_mio_trait_heavy_raiders
+
+		all_parents = { GER_mio_trait_heavy_raiders }
+
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = cruiser_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_expand_naval_variety
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_cruiser_project
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_purchase_cruisers_and_dreadnoughts
+				}
+			}
+		}
+
+        limit_to_equipment_type = { mio_cat_eq_all_cruiser }
+      	equipment_bonus = {
+			hg_armor_piercing = 0.05
+			naval_speed = 0.05
+			build_cost_ic = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	add_trait = {  
+		token = GER_mio_trait_u_boat_yards
+		name = GER_mio_trait_u_boat_yards
+		icon = GFX_generic_mio_department_icon_ship_submarine_production
+		special_trait_background = yes
+
+		position = { x=2 y=1 }  
+		relative_position_id = generic_mio_trait_raiding_submarines
+
+		all_parents = { generic_mio_trait_raiding_submarines }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = submarine_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_expand_naval_variety
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_modern_submarines
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_raiding_fleet
+				}
+			}
+        }
+
+        limit_to_equipment_type = { submarine }
+        equipment_bonus = {
+			build_cost_ic = -0.1		
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = GER_mio_trait_high_test_peroxide
+		name = GER_mio_trait_high_test_peroxide
+		icon = GFX_generic_mio_department_icon_ship_submarine_engine
+		special_trait_background = yes
+
+		position = { x=0 y=1 }  
+		relative_position_id = GER_mio_trait_u_boat_yards
+
+		all_parents = { GER_mio_trait_u_boat_yards }
+
+        limit_to_equipment_type = { submarine }
+        equipment_bonus = {
+			naval_speed = 0.1		
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+}
 
 OSY_escort_ship_organization = {
 	name = GER_deschimag_organization
@@ -308,6 +1755,7 @@ OSY_escort_ship_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
 			OR = {
@@ -326,6 +1774,115 @@ OSY_escort_ship_organization = {
 			owner = {
 				59 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+OSY_escort_ship_organization_custom = {
+	name = GER_deschimag_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_GER_deschimag
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OSY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 59
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				59 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	override_trait = {
+		token = generic_mio_trait_fleet_escorts
+
+		position = { x=4 y=0 }
+	}
+	override_trait = {
+		token = generic_mio_trait_anti_air_ships
+
+		position = { x=-2 y=2 }
+	}
+	add_trait = {  
+		token = GER_mio_trait_krupp_contacts
+		name = GER_mio_trait_krupp_contacts
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_quality
+		special_trait_background = yes
+
+		any_parent = { generic_mio_trait_anti_air_ships generic_mio_trait_escort_in_force }
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_escort_in_force
+
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				51 = { is_core_of = FROM }
+			}
+			else = {
+				51 = { is_owned_by = FROM }
+			}
+		}
+
+		equipment_bonus = {
+			lg_attack = 0.05
+			lg_armor_piercing = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = GER_mio_trait_armored_design
+		name = GER_mio_trait_armored_design
+		icon = GFX_generic_mio_trait_icon_armor_value
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = GER_mio_trait_krupp_contacts
+
+		all_parents = { GER_mio_trait_krupp_contacts }
+
+		equipment_bonus = {
+			armor_value = 0.07
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {  
+		token = GER_mio_trait_shipyard_conglomerate
+		name = GER_mio_trait_shipyard_conglomerate
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=3 y=0 }
+		relative_position_id = generic_mio_trait_fleet_escorts 
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -368,6 +1925,160 @@ OSZ_light_aircraft_organization = {
 				52 = { state_designer_availabile = yes }
 			}
 		}
+	}
+
+	add_trait = {
+		token = GER_mio_trait_maintenance_first_design
+		name = GER_mio_trait_maintenance_first_design
+		icon = GFX_generic_mio_department_icon_plane_fighter_line_efficiency
+		special_trait_background = yes
+
+		position = { x=-2 y=1 }
+		relative_position_id = generic_mio_trait_expanded_production_facilities
+
+		all_parents = { generic_mio_trait_expanded_production_facilities }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_fuselage_based_weapons
+		name = GER_mio_trait_fuselage_based_weapons
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		special_trait_background = yes
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_gun_pods
+
+		any_parent = { generic_mio_trait_heavier_airframe generic_mio_trait_maximum_wing_loads generic_mio_trait_gun_pods }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			air_attack = 0.05
+			air_agility = 0.05
+		} 
+	}
+	add_trait = {
+		token = GER_mio_trait_hamburger_flugzeugbau
+		name = GER_mio_trait_hamburger_flugzeugbau
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					mio:OSB_raider_ship_organization_custom = { has_mio_size > 4 }
+				}
+				else = {
+					58 = { is_owned_by = FROM }
+				}
+				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_aerodynamic_research_insitute
+		name = GER_mio_trait_aerodynamic_research_insitute
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		relative_position_id = generic_mio_trait_advanced_aerodynamics
+
+		position = { x = 2 y = 0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				air_facility > 0
+				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_amerikabomber_learnings
+		name = GER_mio_trait_amerikabomber_learnings
+		icon = GFX_generic_mio_department_icon_plane_medium_engine
+		special_trait_background = yes
+
+		position = { x=1 y=4 }
+		relative_position_id = GER_mio_trait_aerodynamic_research_insitute
+
+		visible = {
+			has_dlc = "Gotterdammerung"
+			has_global_flag = custom_designer_traits_enabled
+		}
+		available = {
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							is_on_continent = north_america
+							is_on_continent = south_america
+						}
+					}
+				}
+
+				any_enemy_country = {
+					capital_scope = {
+						NOT = {
+							is_on_continent = north_america
+							is_on_continent = south_america
+						}
+					}
+				}
+			}
+			else = {
+				any_enemy_country = {
+					capital_scope = {
+						OR = {
+							is_on_continent = north_america
+							is_on_continent = south_america
+						}
+					}
+				}
+			}
+		}
+
+		limit_to_equipment_type = { mio_cat_eq_only_light_fighter }
+		equipment_bonus = {
+			air_range = 0.1
+		} 
 	}
 }
 
@@ -429,6 +2140,109 @@ OSO_medium_aircraft_organization = {
 			owner = {
 				50 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = GER_mio_trait_flying_boat_specialist
+		name = GER_mio_trait_flying_boat_specialist
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
+		special_trait_background = yes
+		
+		position = { x=-1 y=1 }
+		relative_position_id = generic_mio_trait_skip_bombing
+
+		all_parents = { generic_mio_trait_skip_bombing }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
+
+		equipment_bonus = {
+			surface_detection = 0.03
+			naval_strike_attack = 0.05
+		} 
+	}
+	add_trait = {
+		token = GER_mio_trait_schnellbomber_doctrine
+		name = GER_mio_trait_schnellbomber_doctrine
+		icon = GFX_generic_mio_department_icon_plane_medium_engine
+		special_trait_background = yes
+		
+		position = { x=-1 y=1 }
+		relative_position_id = generic_mio_trait_refined_engines
+
+		all_parents = { generic_mio_trait_refined_engines }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
+		equipment_bonus = {
+			maximum_speed = 0.1
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_hamburger_flugzeugbau
+		name = GER_mio_trait_hamburger_flugzeugbau
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					mio:OSB_raider_ship_organization_custom = { has_mio_size > 4 }
+				}
+				else = {
+					58 = { is_owned_by = FROM }
+				}
+				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_aerodynamic_research_insitute
+		name = GER_mio_trait_aerodynamic_research_insitute
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 2 y = 0 }
+		relative_position_id = GER_mio_trait_flying_boat_specialist
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				air_facility > 0
+				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -493,11 +2307,95 @@ OLI_multi_role_aircraft_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = GER_mio_trait_jet_bomber_innovator
+		name = GER_mio_trait_jet_bomber_innovator
+		icon = GFX_generic_mio_department_icon_plane_medium_engine
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = { FROM = { is_special_project_completed = sp:sp_air_jet_engine } }
+
+		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
+		equipment_bonus = {
+			maximum_speed = 0.1
+		} 
+	} 
+	add_trait = {
+		token = GER_mio_trait_hamburger_flugzeugbau
+		name = GER_mio_trait_hamburger_flugzeugbau
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+		
+		position = { x=9 y=0 }  
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					mio:OSB_raider_ship_organization_custom = { has_mio_size > 4 }
+				}
+				else = {
+					58 = { is_owned_by = FROM }
+				}
+				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_aerodynamic_research_insitute
+		name = GER_mio_trait_aerodynamic_research_insitute
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = -1 y = 0 }
+		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				air_facility > 0
+				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 OLI_heavy_aircraft_organization = {
 	name = GER_heinkel_organization
-	include = esicolor_generic_heavy_aircraft_organization # esicolor_generic_medium_aircraft_organization
+	include = esicolor_generic_heavy_aircraft_organization
 	icon = GFX_idea_heinkel
 
 	allowed = {
@@ -523,6 +2421,216 @@ OLI_heavy_aircraft_organization = {
 				61 = { state_designer_availabile = yes }
 			}
 		}
+	}
+}
+OLI_heavy_aircraft_organization_custom = {
+	name = GER_heinkel_organization
+	include = esicolor_generic_heavy_aircraft_organization
+	icon = GFX_idea_heinkel
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = heavy_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OLI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 61
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				61 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	tree_header_text = {
+		text = mio_header_design_department
+		x = 2
+	}
+	tree_header_text = {
+		text = mio_header_operational_department
+		x = 7
+	}
+	override_trait = {
+		token = generic_mio_trait_advanced_turbochargers
+
+		position = { x=0 y=1 }
+	}
+	override_trait = {
+		token = generic_mio_trait_extended_rear_fuselage
+
+		position = { x=5 y=0 }
+	}
+	override_trait = {
+		token = generic_mio_trait_pressurized_cockpit
+
+		position = { x=2 y=1 }
+	}
+	add_trait = {
+		token = GER_mio_trait_doppel_blitz
+		name = GER_mio_trait_doppel_blitz
+		icon = GFX_generic_mio_department_icon_plane_heavy_engine
+		special_trait_background = yes
+
+		position = { x=3 y=0 }
+		relative_position_id = generic_mio_trait_reinforced_frames
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_advanced_night_equipment
+		name = GER_mio_trait_advanced_night_equipment
+		icon = GFX_generic_mio_trait_icon_detection
+		special_trait_background = yes
+		
+		position = { x=-1 y=1 }
+		relative_position_id = generic_mio_trait_pressurized_cockpit
+
+		all_parents = { generic_mio_trait_pressurized_cockpit }
+
+		equipment_bonus = {
+			night_penalty = -0.05
+		} 
+	}
+	add_trait = {
+		token = GER_mio_trait_stepless_cockpit
+		name = GER_mio_trait_stepless_cockpit
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+		special_trait_background = yes
+		
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_pressurized_cockpit
+
+		all_parents = { generic_mio_trait_pressurized_cockpit }
+
+		limit_to_equipment_type = { mio_cat_eq_only_strategic_bomber }
+		equipment_bonus = {
+			air_bombing = 0.05
+		} 
+	} 
+	add_trait = {
+		token = GER_mio_trait_hamburger_flugzeugbau
+		name = GER_mio_trait_hamburger_flugzeugbau
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		available = {
+			FROM = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					mio:OSB_raider_ship_organization_custom = { has_mio_size > 4 }
+				}
+				else = {
+					58 = { is_owned_by = FROM }
+				}
+				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_aerodynamic_research_insitute
+		name = GER_mio_trait_aerodynamic_research_insitute
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 1 y = 0 }
+		relative_position_id = generic_mio_trait_air_deployed_sonobuoys
+
+		available = {
+			FROM = {
+				air_facility > 0
+				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_amerikabomber_learnings
+		name = GER_mio_trait_amerikabomber_learnings
+		icon = GFX_generic_mio_department_icon_plane_medium_engine
+		special_trait_background = yes
+
+		position = { x=0 y=3 }
+		relative_position_id = GER_mio_trait_aerodynamic_research_insitute
+
+		visible = { has_dlc = "Gotterdammerung" }
+		available = {
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							is_on_continent = north_america
+							is_on_continent = south_america
+						}
+					}
+				}
+
+				any_enemy_country = {
+					capital_scope = {
+						NOT = {
+							is_on_continent = north_america
+							is_on_continent = south_america
+						}
+					}
+				}
+			}
+			else = {
+				any_enemy_country = {
+					capital_scope = {
+						OR = {
+							is_on_continent = north_america
+							is_on_continent = south_america
+						}
+					}
+				}
+			}
+		}
+
+		limit_to_equipment_type = { mio_cat_eq_only_strategic_bomber }
+		equipment_bonus = {
+			air_range = 0.1
+			air_bombing = 0.05
+		} 
 	}
 }
 
@@ -555,6 +2663,73 @@ OSS_naval_aircraft_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = GER_mio_trait_hamburger_flugzeugbau
+		name = GER_mio_trait_hamburger_flugzeugbau
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					mio:OSB_raider_ship_organization_custom = { has_mio_size > 4 }
+				}
+				else = {
+					58 = { is_owned_by = FROM }
+				}
+				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_aerodynamic_research_insitute
+		name = GER_mio_trait_aerodynamic_research_insitute
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				air_facility > 0
+				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 ################################### 
@@ -576,6 +2751,7 @@ OSO_infantry_equipment_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
 			OR = {
@@ -594,6 +2770,139 @@ OSO_infantry_equipment_organization = {
 			owner = {
 				50 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+OSO_infantry_equipment_organization_custom = {
+	name = GER_mauser_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_mauser
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = OSO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 50
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				50 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	override_trait = {
+		token = generic_mio_trait_armor_piercing_rounds
+
+		position = { x=0 y=2 }
+	}
+	override_trait = {
+		token = generic_mio_trait_advanced_barrel_forging
+
+		position = { x=1 y=2 }
+	}
+	override_trait = {
+		token = generic_mio_trait_reinforced_stocks
+
+		position = { x=3 y=0 }
+	}
+	override_trait = {
+		token = generic_mio_trait_medium_machineguns
+
+		position = { x=0 y=2 }
+	}
+	add_trait = {
+		token = GER_mio_trait_experienced_manufacturer
+		name = GER_mio_trait_experienced_manufacturer
+		icon = GFX_generic_mio_trait_icon_reliability
+		special_trait_background = yes
+
+		position = { x=-1 y=0 }  
+		relative_position_id = generic_mio_trait_drum_pattern_sights
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_export_models
+		name = GER_mio_trait_export_models
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=-1 y=1 }  
+		relative_position_id = generic_mio_trait_drum_pattern_sights
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+			production_cost_factor = -0.03
+		}
+		
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_karabiner
+		name = GER_mio_trait_karabiner
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=0 y=1 }  
+		relative_position_id = generic_mio_trait_reinforced_stocks
+
+		all_parents = {	generic_mio_trait_reinforced_stocks }
+
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_sturmgewehr
+		name = GER_mio_trait_sturmgewehr
+		icon = GFX_generic_mio_department_icon_infantry_offense
+		special_trait_background = yes
+
+		position = { x=2 y=2 }
+		relative_position_id = generic_mio_trait_bolt_action
+
+		any_parent = { generic_mio_trait_semi_auto generic_mio_trait_bolt_action }
+		available = { FROM = { has_tech = advanced_infantry_weapons } }
+
+		equipment_bonus = {
+			soft_attack = 0.07
+			breakthrough = 0.03
+		}
+		production_bonus = {
+			production_cost_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }
@@ -627,6 +2936,53 @@ OLO_support_equipment_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = GER_mio_trait_innovative_safety_features
+		name = GER_mio_trait_innovative_safety_features
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=1 y=1 } 
+		relative_position_id = generic_mio_trait_private_scientists_program
+
+		all_parents = { generic_mio_trait_private_scientists_program }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_design_team_assign_cost = -0.05
+			military_industrial_organization_industrial_manufacturer_assign_cost = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_policiary_equipment
+		name = GER_mio_trait_policiary_equipment
+		icon = GFX_generic_mio_department_icon_support_equipment
+		special_trait_background = yes
+
+		position = { x=0 y=1 } 
+		relative_position_id = generic_mio_trait_private_tenders
+		
+		all_parents = { generic_mio_trait_private_tenders }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { support_equipment }
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.05
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 OSI_artillery_organization = {
@@ -656,6 +3012,82 @@ OSI_artillery_organization = {
 			owner = {
 				51 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = { 
+		token = GER_mio_trait_3_7_cm_pak
+		name = GER_mio_trait_3_7_cm_pak
+		icon = GFX_generic_mio_department_icon_anti_tank
+		special_trait_background = yes
+
+		position = { x = 1 y = 0 }
+		relative_position_id = generic_mio_trait_big_guns
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { anti_tank_equipment }
+		equipment_bonus = {
+			ap_attack = 0.05
+			hard_attack = 0.05
+			soft_attack = 0.1
+		}
+	}
+	add_trait = { 
+		token = GER_mio_trait_7_5_cm_pak
+		name = GER_mio_trait_7_5_cm_pak
+		icon = GFX_generic_mio_trait_icon_ap_attack
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+		relative_position_id = GER_mio_trait_3_7_cm_pak
+
+		any_parent = { GER_mio_trait_3_7_cm_pak }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { anti_tank_equipment }
+		equipment_bonus = {
+			ap_attack = 0.05
+			hard_attack = 0.1
+		}
+	}
+	add_trait = { 
+		token = GER_mio_trait_versatile_carriage
+		name = GER_mio_trait_versatile_carriage
+		icon = GFX_generic_mio_department_icon_anti_air
+		special_trait_background = yes
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_rapid_fire
+
+		all_parents = { generic_mio_trait_rapid_fire generic_mio_trait_advanced_barrel_forging }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		limit_to_equipment_type = { anti_tank_equipment anti_air_equipment }
+		equipment_bonus = {
+			ap_attack = 0.03
+			hard_attack = 0.03
+			air_attack = 0.05
+		}
+	}
+	add_trait = { 
+		token = GER_mio_trait_dual_recoil_mechanism
+		name = GER_mio_trait_dual_recoil_mechanism
+		icon = GFX_generic_mio_department_icon_artillery
+		special_trait_background = yes
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_advanced_barrel_forging
+
+		all_parents = { generic_mio_trait_advanced_barrel_forging generic_mio_trait_big_guns }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		available = { FROM = { has_tech = artillery3 } }
+
+		limit_to_equipment_type = { artillery_equipment }
+		equipment_bonus = {
+			soft_attack = 0.1
+			build_cost_ic = 0.05
 		}
 	}
 }
@@ -689,6 +3121,97 @@ OSS_motorized_mechanized_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = GER_mio_trait_continental_ag_tires
+		name = GER_mio_trait_continental_ag_tires
+		icon = GFX_generic_mio_trait_icon_reliability
+		special_trait_background = yes
+
+		position = { x=9 y=0 }  
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = { owner = { has_tech = rubber_processing } }
+
+		equipment_bonus = {
+			reliability = 0.05
+			build_cost_ic = -0.02
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_ford_facilities
+		name = GER_mio_trait_ford_facilities
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=9 y=1 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				51 = { is_core_of = FROM }
+			}
+			else = {
+				51 = { is_owned_by = FROM }
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_efficiency_in_mass_production
+		name = GER_mio_trait_efficiency_in_mass_production
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = GER_mio_trait_ford_facilities
+
+		any_parent = { GER_mio_trait_ford_facilities }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_improved_engines
+		name = GER_mio_trait_improved_engines
+		icon = GFX_generic_mio_department_icon_motorized_mechanized_engine
+		special_trait_background = yes
+
+		position = { x=-1 y=1 }
+		relative_position_id = GER_mio_trait_ford_facilities
+
+		any_parent = { GER_mio_trait_ford_facilities }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+			reliability = 0.03
+			build_cost_ic = 0.02
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 OLS_armored_car_organization = {
@@ -718,6 +3241,269 @@ OLS_armored_car_organization = {
 			owner = {
 				65 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	add_trait = {
+		token = GER_mio_trait_racing_pedigree
+		name = GER_mio_trait_racing_pedigree
+		icon = GFX_generic_mio_department_icon_armored_car_engine
+		special_trait_background = yes
+
+		position = { x=-1 y=1 }
+		relative_position_id = generic_mio_trait_simplified_suspension
+
+		all_parents = { generic_mio_trait_simplified_suspension }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			maximum_speed = 0.07
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_military_exclusivity
+		name = GER_mio_trait_military_exclusivity
+		icon = GFX_generic_mio_department_icon_armored_car_line_efficiency
+		special_trait_background = yes
+
+		position = { x=0 y=3 }
+		relative_position_id = GER_mio_trait_racing_pedigree
+
+		all_parents = { GER_mio_trait_racing_pedigree generic_mio_trait_improved_tooling }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+			production_efficiency_cap_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_schwerer_panzerspahwagen
+		name = GER_mio_trait_schwerer_panzerspahwagen
+		icon = GFX_generic_mio_department_icon_armored_car_defense
+		special_trait_background = yes
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_defensive_equipment
+
+		all_parents = { generic_mio_trait_defensive_equipment }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = mechanization_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_weapons_development
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.03
+			armor_value = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+}
+
+OSS_generic_train_organization = {
+	name = GER_henschel_kassel_organization
+	include = esicolor_generic_train_organization
+	icon = GFX_idea_GER_henschel_civilian
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = train_manufacturer_disabled }
+			OR = {
+				original_tag = OSS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 55
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				55 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	add_trait = {
+		token = GER_mio_trait_lokomotivfabrik_floridsdorf
+		name = GER_mio_trait_lokomotivfabrik_floridsdorf
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				4 = {
+					OR = {
+						is_core_of = FROM
+						AND = {
+							is_core_of = owner
+							owner = { is_subject_of = FROM }
+						}
+					}
+				}
+			}
+			else = {
+				4 = {
+					OR = {
+						is_owned_by = FROM
+						owner = { is_subject_of = FROM }
+					}
+				}
+			}
+		}
+
+		limit_to_equipment_type = { train_equipment }
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+}
+
+OSL_generic_helicopter_organization = {
+	name = GER_focke_achgelis_organization
+	include = esicolor_generic_helicopter_organization
+	icon = GFX_idea_GER_focke_achgelis
+
+	allowed = {
+		has_dlc = "Gotterdammerung"
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = helicopter_manufacturer_disabled }
+			OR = {
+				original_tag = OSL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 56
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				56 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	add_trait = {
+		token = GER_mio_trait_hamburger_flugzeugbau
+		name = GER_mio_trait_hamburger_flugzeugbau
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					mio:OSB_raider_ship_organization_custom = { has_mio_size > 4 }
+				}
+				else = {
+					58 = { is_owned_by = FROM }
+				}
+				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = GER_mio_trait_aerodynamic_research_insitute
+		name = GER_mio_trait_aerodynamic_research_insitute
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			FROM = {
+				air_facility > 0
+				NOT = { has_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
+			}
+		}
+
+		on_complete = {
+			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
+			FROM = { set_country_flag = GER_mio_trait_aerodynamic_research_insitute_taken_flag }
+		}
+
+		organization_modifier = {
+		    military_industrial_organization_research_bonus = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
 		}
 	}
 }

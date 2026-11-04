@@ -461,6 +461,37 @@ ideas = {
 			traits = { support_equipment_manufacturer }
 		}
 
+		OAE_artillery_manufacturer = {
+			name = HUN_digep_artillery
+			picture = HUN_digep_artillery
+
+			allowed = {
+				always = yes
+			}
+			visible = {
+				NOT = { has_country_flag = artillery_manufacturer_disabled }
+				OR = {
+					original_tag = OAE
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 43
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					43 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+			traits = { artillery_manufacturer }
+		}
+
 		ISS_motorized_equipment_manufacturer = {
 			name = HUN_mwg_raba
 			picture = HUN_mwg_raba

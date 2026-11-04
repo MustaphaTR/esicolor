@@ -697,6 +697,38 @@ ideas = {
 			}
 			traits = { motorized_equipment_manufacturer }
 		}
+
+		OSL_helicopter_equipment_manufacturer = {
+			name = GER_focke_achgelis_organization
+			picture = GER_focke_achgelis
+
+			allowed = {
+				has_dlc = "Gotterdammerung"
+			}
+			visible = {
+				NOT = { has_country_flag = helicopter_manufacturer_disabled }
+				OR = {
+					original_tag = OSL
+					AND = {
+						has_global_flag = custom_designers_only
+						owns_state = 56
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = { has_global_flag = custom_designers_only }
+
+					56 = { state_designer_availabile = yes }
+				}
+			}
+
+			research_bonus = {
+				support_tech = 0.05
+				air_equipment = 0.05
+			}
+			traits = { helicopter_equipment_manufacturer }
+		}
 	}
 	
 	industrial_concern = {

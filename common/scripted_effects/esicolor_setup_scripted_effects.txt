@@ -12079,6 +12079,67 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	282 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Yoshisuke Aikawa
+				limit = { has_trait = captain_of_industry }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = captain_of_industry
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JAP_nissan_president
+				}
+			}
+		}
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Koyata Iwasaki
+				limit = { has_trait = war_industrialist }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = war_industrialist
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JAP_mitsubishi_president
+				}
+			}
+		}
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Chikuhei Nakajima
+				limit = { has_trait = armaments_organizer }
+
+				set_character_name = JAP_chikuhei_nakajima
+				save_global_event_target_as = JAP_chikuhei_nakajima
+				remove_trait = {
+					slot = political_advisor
+					trait = armaments_organizer
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = JAP_nakajima_president
+				}
+
+				set_portraits = {
+					civilian = {
+						small = GFX_portrait_JAP_chikuhei_nakajima_small
+					}
+					army = {
+						small = GFX_portrait_JAP_chikuhei_nakajima_small
+					}
+					navy = {
+						small = GFX_portrait_JAP_chikuhei_nakajima_small
+					}
+				}
+			}
+		}
+	}
 	284 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -12926,6 +12987,54 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = soviet_economist
+				}
+			}
+		}
+	}
+	1027 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Vicente Lava
+				limit = { has_trait = armaments_organizer }
+
+				set_character_name = PHI_vicente_lava
+				save_global_event_target_as = PHI_vicente_lava
+				remove_trait = {
+					slot = political_advisor
+					trait = armaments_organizer
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = PHI_coconut_scientist
+				}
+
+				if = {
+					limit = { has_dlc = "No Compromise, No Surrender" }
+
+					set_portraits = {
+						civilian = {
+							small = GFX_portrait_PHI_vicente_lava_small
+						}
+						army = {
+							small = GFX_portrait_PHI_vicente_lava_small
+						}
+						navy = {
+							small = GFX_portrait_PHI_vicente_lava_small
+						}
+					}
+				}
+				else = {
+					set_portraits = {
+						civilian = {
+							small = GFX_idea_generic_army_asia_7
+						}
+						army = {
+							small = GFX_idea_generic_army_asia_7
+						}
+						navy = {
+							small = GFX_idea_generic_army_asia_7
+						}
+					}
 				}
 			}
 		}

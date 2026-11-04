@@ -21,6 +21,12 @@ set_politics = {
 }
 
 recruit_character = OSS_august_von_mackensen
+recruit_character = OSS_erwin_aders
+
+random_character = {
+	limit = { is_character = OSS_erwin_aders }
+	save_global_event_target_as = OSS_erwin_aders
+}
 
 set_rule = {
 	can_generate_female_aces = yes
