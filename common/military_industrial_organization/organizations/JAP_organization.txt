@@ -272,8 +272,27 @@ ZBZ_task_force_ship_organization = {
 
 		visible = { has_global_flag = custom_designer_traits_enabled }
 		available = {
-			FROM = {
-				JAP_naval_faction_is_not_subdued = yes
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = naval_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_use_the_natural_harbors
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_investment_into_shipbuilding
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_navy
+				}
 			}
 		}
 

@@ -194,9 +194,9 @@ OLA_assault_guns_organization_custom = {
 	}
 }
 
-OSS_mobile_tank_organization = {
+OSS_infantry_tank_organization = {
 	name = GER_henschel_organization
-	include = esicolor_generic_mobile_tank_organization
+	include = esicolor_generic_infantry_tank_organization
 	icon = GFX_idea_henschel
 
 	allowed = {
@@ -205,7 +205,7 @@ OSS_mobile_tank_organization = {
 	visible = {
 		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
-			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
 			OR = {
 				original_tag = OSS
 				AND = {
@@ -225,9 +225,9 @@ OSS_mobile_tank_organization = {
 		}
 	}
 }
-OSS_mobile_tank_organization_custom = {
+OSS_infantry_tank_organization_custom = {
 	name = GER_henschel_organization
-	include = esicolor_generic_mobile_tank_organization
+	include = esicolor_generic_infantry_tank_organization
 	icon = GFX_idea_henschel
 
 	allowed = {
@@ -236,7 +236,7 @@ OSS_mobile_tank_organization_custom = {
 	visible = {
 		has_global_flag = custom_designer_traits_enabled
 		owner = {
-			NOT = { has_country_flag = fast_tank_manufacturer_disabled }
+			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
 			OR = {
 				original_tag = OSS
 				AND = {
@@ -326,7 +326,7 @@ OSS_mobile_tank_organization_custom = {
 			}
 			hidden_effect = {
 				if = {
-					limit = { NOT = { has_character = event_target:OSS_erwin_aders } }
+					limit = { FROM = { NOT = { has_character = event_target:OSS_erwin_aders } } }
 
 					event_target:OSS_erwin_aders = { set_nationality = FROM }
 				}
@@ -723,7 +723,7 @@ OSO_heavy_tank_organization_custom = {
 			}
 			hidden_effect = {
 				if = {
-					limit = { NOT = { has_character = event_target:OSO_ferdinand_porsche } }
+					limit = { FROM = { NOT = { has_character = event_target:OSO_ferdinand_porsche } } }
 
 					event_target:OSO_ferdinand_porsche = { set_nationality = FROM }
 				}
@@ -1111,7 +1111,7 @@ OSB_battle_line_ship_organization_custom = {
 				if = {
 					limit = { has_focus_tree = generic_focus }
 
-					has_completed_focus = capital_ship_effort
+					has_completed_focus = capital_ships_effort
 				}
 				else_if = {
 					limit = { has_focus_tree = horn_of_africa_tree }
@@ -1155,7 +1155,7 @@ OSB_battle_line_ship_organization_custom = {
 				if = {
 					limit = { has_focus_tree = generic_focus }
 
-					has_completed_focus = capital_ship_effort
+					has_completed_focus = capital_ships_effort
 				}
 				else_if = {
 					limit = { has_focus_tree = horn_of_africa_tree }
@@ -2054,21 +2054,25 @@ OSZ_light_aircraft_organization = {
 					}
 				}
 
-				any_enemy_country = {
-					capital_scope = {
-						NOT = {
-							is_on_continent = north_america
-							is_on_continent = south_america
+				FROM = {
+					any_enemy_country = {
+						capital_scope = {
+							NOT = {
+								is_on_continent = north_america
+								is_on_continent = south_america
+							}
 						}
 					}
 				}
 			}
 			else = {
-				any_enemy_country = {
-					capital_scope = {
-						OR = {
-							is_on_continent = north_america
-							is_on_continent = south_america
+				FROM = {
+					any_enemy_country = {
+						capital_scope = {
+							OR = {
+								is_on_continent = north_america
+								is_on_continent = south_america
+							}
 						}
 					}
 				}
@@ -2605,21 +2609,25 @@ OLI_heavy_aircraft_organization_custom = {
 					}
 				}
 
-				any_enemy_country = {
-					capital_scope = {
-						NOT = {
-							is_on_continent = north_america
-							is_on_continent = south_america
+				FROM = {
+					any_enemy_country = {
+						capital_scope = {
+							NOT = {
+								is_on_continent = north_america
+								is_on_continent = south_america
+							}
 						}
 					}
 				}
 			}
 			else = {
-				any_enemy_country = {
-					capital_scope = {
-						OR = {
-							is_on_continent = north_america
-							is_on_continent = south_america
+				FROM = {
+					any_enemy_country = {
+						capital_scope = {
+							OR = {
+								is_on_continent = north_america
+								is_on_continent = south_america
+							}
 						}
 					}
 				}

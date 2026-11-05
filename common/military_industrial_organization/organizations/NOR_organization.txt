@@ -10,13 +10,14 @@
 
 IIO_infantry_tank_organization = {
 	name = NOR_thunes_mekaniske_verksted_organization
-    include = esicolor_generic_infantry_tank_organization
-    icon = GFX_idea_NOR_thunes_mekaniske_vaerksted
+	include = esicolor_generic_infantry_tank_organization
+	icon = GFX_idea_NOR_thunes_mekaniske_vaerksted
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
 			OR = {
@@ -38,6 +39,50 @@ IIO_infantry_tank_organization = {
 		}
 	}
 }
+IIO_infantry_tank_organization_custom = {
+	name = NOR_thunes_mekaniske_verksted_organization
+	include = esicolor_generic_infantry_tank_organization
+	icon = GFX_idea_NOR_thunes_mekaniske_vaerksted
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+			OR = {
+				original_tag = IIO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 110
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				110 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	equipment_type = { armor train_equipment }
+	research_categories = { armor train_tech }
+
+	initial_trait = {
+		name = NOR_mio_initial_trait_mechanical_workshop
+
+		limit_to_equipment_type = { train_equipment }
+		equipment_bonus = {
+			build_cost_ic = -0.07
+			armor_value = 0.02
+		}
+	}
+}
 
 #####################
 
@@ -51,8 +96,8 @@ IIO_infantry_tank_organization = {
 
 IIO_battle_line_ship_organization = {
 	name = NOR_karljohansvern_verft_organization
-    include = esicolor_generic_battle_line_ship_organization
-    icon = GFX_idea_NOR_karljohansvern_verft
+	include = esicolor_generic_battle_line_ship_organization
+	icon = GFX_idea_NOR_karljohansvern_verft
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -78,17 +123,110 @@ IIO_battle_line_ship_organization = {
 			}
 		}
 	}
+
+	trait = {
+		token = NOR_mio_trait_forsvarets_forskningsinstitutt
+		name = NOR_mio_trait_forsvarets_forskningsinstitutt
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background  = yes
+
+		position = { x = 9 y = 0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = naval_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_use_the_natural_harbors
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_investment_into_shipbuilding
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_navy
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+	}
+	trait = {
+		token = NOR_mio_trait_trondhjems_mekaniske_vaerksted
+		name = NOR_mio_trait_trondhjems_mekaniske_vaerksted
+		icon = GFX_generic_mio_department_icon_ship_general_production
+		special_trait_background  = yes
+
+		position = { x = 3 y = 0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				143 = { is_core_of = FROM }
+			}
+			else = {
+				143 = { is_owned_by = FROM }
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+	trait = {
+		token = NOR_mio_trait_cruiser_specialization
+		name = NOR_mio_trait_cruiser_specialization
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_offense
+		special_trait_background  = yes
+
+		position = { x = 3 y = 1 }
+
+		any_parent = { NOR_mio_trait_trondhjems_mekaniske_vaerksted }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				143 = { is_core_of = FROM }
+			}
+			else = {
+				143 = { is_owned_by = FROM }
+			}
+		}
+
+		limit_to_equipment_type = { mio_cat_eq_all_cruiser }
+		equipment_bonus = {
+			lg_attack = 0.1
+			max_strength = 0.05
+			armor_value = 0.02
+		}
+	}
 }
 
 IIO_escort_ship_organization = {
 	name = NOR_akers_mekaniske_verksted_organization
-    include = esicolor_generic_escort_ship_organization
-    icon = GFX_idea_NOR_akers_mekaniske_verksted
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_NOR_akers_mekaniske_verksted
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
 			OR = {
@@ -110,6 +248,111 @@ IIO_escort_ship_organization = {
 		}
 	}
 }
+IIO_escort_ship_organization_custom = {
+	name = NOR_akers_mekaniske_verksted_organization
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_NOR_akers_mekaniske_verksted
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = IIO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 110
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				110 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	equipment_type = { screen_ship convoy_1 }
+
+	initial_trait = {
+		name = NOR_mio_initial_trait_convoy_and_escort_fleet
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		production_bonus = {
+			production_capacity_factor = 0.07
+		}
+	}
+	trait = {
+		token = generic_mio_trait_submarine_hunters
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_high_speed_mine_hunting_equipment
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_advanced_hydrodynamic_design
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_fleet_escorts
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_anti_air_ships
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_escort_in_force
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_anti_air_layout
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_gyro_stabilized_mounts
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_improved_anti_air_gun_mounting
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_mass_production
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_improved_light_gun_mounting
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = NOR_mio_trait_convoy_production
+		name = NOR_shipping_capitalist
+		icon = GFX_generic_mio_trait_icon_supply_consumption
+		special_trait_background  = yes
+
+		position = { x=0 y=0 }
+
+		visible = { has_global_flag = custom_advisors_only }
+		available = { event_target:NOR_johan_ludwig_mowinckel = { is_political_advisor = yes } }
+
+		limit_to_equipment_type = { convoy }
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}   
+
+	}
+}
 
 ###########################
 
@@ -122,14 +365,15 @@ IIO_escort_ship_organization = {
 ###########################
 
 IIO_naval_aircraft_organization = {
-    name = NOR_marinens_flyvebaatfabrikk_organization
-    include = esicolor_generic_naval_aircraft_organization
-    icon = GFX_idea_NOR_marinens_flyvebaatfabrikk
+	name = NOR_marinens_flyvebaatfabrikk_organization
+	include = esicolor_generic_naval_aircraft_organization
+	icon = GFX_idea_NOR_marinens_flyvebaatfabrikk
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
 			OR = {
@@ -151,6 +395,82 @@ IIO_naval_aircraft_organization = {
 		}
 	}
 }
+IIO_naval_aircraft_organization_custom = {
+	name = NOR_marinens_flyvebaatfabrikk_organization
+	include = esicolor_generic_naval_aircraft_organization
+	icon = GFX_idea_NOR_marinens_flyvebaatfabrikk
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = IIO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 110
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				110 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		equipment_bonus = {
+			naval_strike_attack = 0.07
+		}
+	}
+	add_trait = { 
+		token = DEN_mio_trait_standardized_production_flyvertroppernes
+		name = generic_mio_initial_trait_standardized_production
+		icon = GFX_generic_mio_department_icon_plane_general_line_efficiency
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = aviation_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_the_capital_city_airport
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = PRC_aviation_infrastructure
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_air_force
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = 0.05
+		}
+	}   
+}
 
 ################################### 
 
@@ -160,18 +480,18 @@ IIO_naval_aircraft_organization = {
 #   # #  #  #  #   #  #  #  #   #   
 #   # #  #  #  ### #  # ### ### ### 
 
-
 ###################################
 
 YZI_infantry_equipment_organization = {
-    name = NOR_kongsberg_vaapenfabrikk_organization
-    include = esicolor_generic_infantry_equipment_organization
-    icon = GFX_idea_NOR_kongsberg_vaapenfabrikk
+	name = NOR_kongsberg_vaapenfabrikk_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_NOR_kongsberg_vaapenfabrikk
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
 			OR = {
@@ -193,11 +513,53 @@ YZI_infantry_equipment_organization = {
 		}
 	}
 }
+YZI_infantry_equipment_organization_custom = {
+	name = NOR_kongsberg_vaapenfabrikk_organization
+	include = esicolor_generic_infantry_equipment_organization
+	icon = GFX_idea_NOR_kongsberg_vaapenfabrikk
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = YZI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 921
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				921 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+			production_resource_need_factor = -0.05
+		}
+		equipment_bonus = {
+			soft_attack = 0.03
+			breakthrough = 0.02
+		}
+	}
+}
 
 IIO_support_equipment_organization = {
-    name = NOR_norsk_spraengstofindustri_organization
-    include = esicolor_generic_support_equipment_organization
-    icon = GFX_idea_NOR_norsk_Spraengstofindustri
+	name = NOR_norsk_spraengstofindustri_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_NOR_norsk_Spraengstofindustri
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -226,9 +588,9 @@ IIO_support_equipment_organization = {
 }
 
 YZO_artillery_organization = {
-    name = NOR_raufoss_ammunisjonsfabrikker_organization
-    include = esicolor_generic_artillery_organization
-    icon = GFX_idea_NOR_raufoss_ammunisjonsfabrikker
+	name = NOR_raufoss_ammunisjonsfabrikker_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_NOR_raufoss_ammunisjonsfabrikker
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -252,6 +614,49 @@ YZO_artillery_organization = {
 			owner = {
 				920 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	trait = {
+		token = SWE_bofors_fly_swatter
+		name = SWE_bofors_fly_swatter
+		icon = GFX_generic_mio_department_icon_anti_air
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_improved_hydraulic_recoil_system
+
+		all_parents = { generic_mio_trait_improved_hydraulic_recoil_system }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = production_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_the_roars_of_thunder
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_weapons_development
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_air_defense
+				}
+			}
+		}
+
+		limit_to_equipment_type = { anti_air_equipment }
+		equipment_bonus = {
+			air_attack = 0.1
+			ap_attack = 0.05
 		}
 	}
 }

@@ -1024,6 +1024,61 @@ every_possible_country = {
 	if = {
 		limit = {
 			NOT = {
+				has_allowed_idea_with_traits = { idea = naval_architect characters = yes }
+			}
+		}
+
+		meta_effect = {
+			text = {
+				generate_character = {
+					token_base = [TAG]_generic_naval_architect
+					advisor = {
+						slot = political_advisor
+						traits = { naval_architect }
+
+						visible = {
+							NOT = { has_country_flag = naval_architect_disabled }
+							OR = {
+								NOT = { has_global_flag = custom_advisors_only }
+								has_character_flag = special_advisor
+							}
+						}
+						available = {
+							hidden_trigger = {
+								NOT = { has_country_flag = naval_architect_disabled }
+								OR = {
+									NOT = { has_global_flag = custom_advisors_only }
+									has_character_flag = special_advisor
+								}
+							}
+							if = {
+								limit = { has_global_flag = custom_advisors_only_core }
+
+								[STATE] = { is_core_of =  ROOT }
+							}
+						}
+
+						ai_will_do = {
+							factor = 1
+						}
+					}
+					portraits = {
+						army = { small = GFX_idea_unknown_advisor }
+					}
+				}
+			}
+			TAG = "[THIS.GetTag]"
+			STATE = "[?THIS.original_capital.GetID]"
+		}
+	}
+}
+
+every_possible_country = {
+	limit = { NOT = { original_tag = OOO } }
+
+	if = {
+		limit = {
+			NOT = {
 				has_allowed_idea_with_traits = { idea = fortification_engineer characters = yes }
 			}
 		}

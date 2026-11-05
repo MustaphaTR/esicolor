@@ -8,6 +8,10 @@ has_custom_infantry_tank_manufacturer = {
 		original_tag = ISB
 		original_tag = IYS
 		original_tag = NFL
+		AND = {
+			has_dlc = "Arms Against Tyranny"
+			original_tag = OSS
+		}
 	}
 }
 
@@ -24,13 +28,16 @@ has_custom_fast_tank_manufacturer = {
 		original_tag = PJM # OIL
 		original_tag = OAF
 		original_tag = OAY
-		original_tag = OSS
 		original_tag = IZB
 		original_tag = IEB
 		original_tag = ZZI
 		original_tag = ZBA
 		original_tag = EYL
 		original_tag = LIE
+		AND = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+			original_tag = OSS
+		}
 	}
 }
 

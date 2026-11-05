@@ -4414,7 +4414,7 @@ remove_political_advisor = {
 
 			modifier = {
 				factor = 0
-				
+
 				has_country_flag = popular_figurehead_disabled
 			}
 		}
@@ -4423,7 +4423,7 @@ remove_political_advisor = {
 
 			modifier = {
 				factor = 0
-				
+
 				has_country_flag = propaganda_expert_disabled
 			}
 		}
@@ -4432,7 +4432,7 @@ remove_political_advisor = {
 
 			modifier = {
 				factor = 0
-				
+
 				has_country_flag = silent_workhorse_disabled
 			}
 		}
@@ -4441,7 +4441,7 @@ remove_political_advisor = {
 
 			modifier = {
 				factor = 0
-				
+
 				has_country_flag = prince_of_terror_disabled
 			}
 		}
@@ -4450,7 +4450,7 @@ remove_political_advisor = {
 
 			modifier = {
 				factor = 0
-				
+
 				has_country_flag = backroom_backstabber_disabled
 			}
 		}
@@ -4459,7 +4459,7 @@ remove_political_advisor = {
 
 			modifier = {
 				factor = 0
-				
+
 				has_country_flag = editor_disabled
 			}
 		}
@@ -4468,7 +4468,7 @@ remove_political_advisor = {
 
 			modifier = {
 				factor = 0
-				
+
 				has_country_flag = compassionate_gentleman_disabled
 			}
 		}
@@ -4477,7 +4477,7 @@ remove_political_advisor = {
 
 			modifier = {
 				factor = 0
-				
+
 				has_country_flag = smooth_talking_charmer_disabled
 			}
 		}
@@ -4486,7 +4486,7 @@ remove_political_advisor = {
 
 			modifier = {
 				factor = 0
-				
+
 				has_country_flag = financial_expert_disabled
 			}
 		}
@@ -4495,7 +4495,7 @@ remove_political_advisor = {
 
 			modifier = {
 				factor = 0
-				
+
 				has_country_flag = economist_disabled
 			}
 		}
@@ -4504,7 +4504,7 @@ remove_political_advisor = {
 
 			modifier = {
 				factor = 0
-				
+
 				has_country_flag = captain_of_industry_disabled
 			}
 		}
@@ -4513,8 +4513,22 @@ remove_political_advisor = {
 
 			modifier = {
 				factor = 0
-				
+
 				has_country_flag = war_industrialist_disabled
+			}
+		}
+		6 = {
+			set_country_flag = naval_architect_disabled
+
+			modifier = {
+				factor = 0
+
+				has_country_flag = naval_architect_disabled
+			}
+			modifier = {
+				factor = 2
+
+				NOT = { any_owned_state = { is_coastal = yes } }
 			}
 		}
 		6 = {
@@ -10826,6 +10840,7 @@ randomise_advisors = {
 	remove_political_advisor = yes
 	remove_political_advisor = yes
 	remove_political_advisor = yes
+	remove_political_advisor = yes
 
 	remove_spymaster = yes
 	remove_spymaster = yes
@@ -11755,6 +11770,47 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	110 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Trygve Halvdan Lie
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_compliant_politician
+				}
+			}
+			if = { # Halvdan Koht
+				limit = { has_trait = smooth_talking_charmer }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = smooth_talking_charmer
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_pacifist_diplomat
+				}
+			}
+			if = { # Johan Ludwig Mowinckel
+				limit = { has_trait = naval_architect }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = naval_architect
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_shipping_capitalist
+				}
+			}
+		}
+	}
 	117 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -11768,6 +11824,35 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = hierarch_minister_of_foreign_affairs_no_bop
+				}
+			}
+		}
+	}
+	143 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Kirsten Hansteen
+				limit = { has_trait = communist_revolutionary }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_the_womens_front
+				}
+			}
+			if = { # Jeanette Olsen
+				limit = { has_trait = captain_of_industry }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = captain_of_industry
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_radical_trade_unionist
 				}
 			}
 		}
@@ -12582,6 +12667,100 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = communist_orator
+				}
+			}
+		}
+	}
+	921 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Joakim Lehmkuhl
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_conservative_businessman
+				}
+			}
+			if = { # Rolf Fuglesang
+				limit = { has_trait = propaganda_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = propaganda_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_pan_germanist_minister
+				}
+			}
+			if = { # Ragnar Skancke
+				limit = { has_trait = financial_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = financial_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_callous_engineer
+				}
+			}
+			if = { # Sverre Riisnæs
+				limit = { has_trait = prince_of_terror }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = prince_of_terror
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_fascist_judiciary
+				}
+			}
+			if = { # Eivind Blehr
+				limit = { has_trait = quartermaster_general }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = quartermaster_general
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_fascist_minister_of_supplies
+				}
+			}
+			if = { # Konrad Sundlo
+				limit = { has_trait = military_theorist }
+
+				remove_trait = {
+					slot = theorist
+					trait = military_theorist
+				}
+				add_trait = {
+					slot = theorist
+					trait = NOR_oppportunistic_officer
+				}
+			}
+		}
+	}
+	922 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Axel Aubert
+				limit = { has_trait = fortification_engineer }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = fortification_engineer
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_aristocratic_industrialist
 				}
 			}
 		}
@@ -13577,6 +13756,7 @@ setup_default_advisors = {
 	set_country_flag = smooth_talking_charmer_disabled
 	set_country_flag = financial_expert_disabled
 	set_country_flag = economist_disabled
+	set_country_flag = naval_architect_disabled
 	set_country_flag = quartermaster_general_disabled
 	set_country_flag = armaments_organizer_disabled
 
@@ -13636,6 +13816,7 @@ setup_basegame_advisors = {
 	set_country_flag = smooth_talking_charmer_disabled
 	set_country_flag = financial_expert_disabled
 	set_country_flag = economist_disabled
+	set_country_flag = naval_architect_disabled
 	set_country_flag = quartermaster_general_disabled
 	set_country_flag = armaments_organizer_disabled
 
@@ -13777,6 +13958,7 @@ clear_advisor_disabled_flags = {
 	clr_country_flag = economist_disabled
 	clr_country_flag = captain_of_industry_disabled
 	clr_country_flag = war_industrialist_disabled
+	clr_country_flag = naval_architect_disabled
 	clr_country_flag = fortification_engineer_disabled
 	clr_country_flag = quartermaster_general_disabled
 	clr_country_flag = armaments_organizer_disabled
