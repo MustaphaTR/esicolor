@@ -24685,7 +24685,15 @@ esicolor_formables = {
 
 			set_country_flag = can_form_EAR_UNITED
 
-			set_cosmetic_tag = ASI_UNITED
+			if = {
+				limit = { has_country_leader_ideology = buddhist_socialism }
+
+				set_cosmetic_tag = ASI_UNITED_BUDDHIST
+
+				else = {
+					set_cosmetic_tag = ASI_UNITED
+				}
+			}
 
 			hidden_effect = {
 				every_state = {

@@ -1,0 +1,39 @@
+characters={
+	SZY_giro_senoo = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			name=JAP_giro_senoo
+			portraits={
+				civilian={
+					large=GFX_portrait_JAP_giro_senoo
+					small=GFX_portrait_JAP_giro_senoo_small
+				}
+			}
+			country_leader={
+				traits={ JAP_nichiren_marxist_trait } 
+				ideology=buddhist_socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "No Compromise, No Surrender" }
+			}
+			name=JAP_giro_senoo
+			portraits={
+				civilian={
+					large=GFX_Portrait_Japan_Generic_1
+				}
+			}
+			country_leader={
+				traits={ JAP_nichiren_marxist_trait } 
+				ideology=buddhist_socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
