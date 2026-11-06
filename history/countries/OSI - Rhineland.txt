@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = OSI_joseph_goebbels
+recruit_character = OSI_alfred_becker
+random_character = { limit = { is_character = OSI_alfred_becker } 51 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

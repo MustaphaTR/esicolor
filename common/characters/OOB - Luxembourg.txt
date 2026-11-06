@@ -1,16 +1,67 @@
 ﻿characters={
 	OOB_joseph_bech={
 		name=LUX_joseph_bech
-		portraits={
-			civilian={
-				large="GFX_portrait_luxembourg_joseph_bech"
+		portraits={ civilian={ large=GFX_portrait_luxembourg_joseph_bech } }
+
+		country_leader={
+			traits={ ambitious_diplomat }
+			ideology=conservatism
+		}
+	}
+	
+	#Advisors
+	OOB_pierre_dupong={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=LUX_pierre_dupong
+			portraits={
+				civilian={
+					large=GFX_portrait_LUX_pierre_dupong
+					small=GFX_portrait_LUX_pierre_dupong_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=OOB_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						8={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
 			}
 		}
-		country_leader={
-			traits = { ambitious_diplomat }
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=LUX_pierre_dupong
+			portraits={
+				civilian={
+					large=GFX_portrait_Europe_Generic_2
+					small=GFX_idea_generic_political_advisor_europe_2
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=OOB_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						8={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
 		}
 	}
 }

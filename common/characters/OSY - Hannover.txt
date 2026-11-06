@@ -1,17 +1,58 @@
 ﻿characters={
-	OSY_martin_bormann = {
-		name = GER_martin_bormann
-		portraits = {
-			army = {
-				large = GFX_portrait_GER_martin_bormann
-				small = GFX_portrait_GER_martin_bormann_small
+	OSY_martin_bormann={
+		name=GER_martin_bormann
+		portraits={
+			army={
+				large=GFX_portrait_GER_martin_bormann
+				small=GFX_portrait_GER_martin_bormann_small
 			}
 		}
+
 		country_leader={
-			traits = { GER_bormann_fuhrer }
+			traits={ GER_bormann_fuhrer }
 			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OSY_erich_bey={
+		name=GER_erich_bey
+		portraits={ army={ small=GFX_idea_erich_bey } }
+
+		advisor={
+			slot=high_command
+			idea_token=OSY_cc_navy_naval_air_defense
+			ledger=navy
+			cost=100
+			traits={ navy_naval_air_defense_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					59={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OSY_josef_kammhuber={
+		name=GER_josef_kammhuber
+		portraits={ army={ small=GFX_portrait_GER_josef_kammhuber_small } }
+
+		advisor={
+			slot=high_command
+			idea_token=OSY_db_air_bomber_interception
+			ledger=air
+			cost=100
+			traits={ air_bomber_interception_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					59={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

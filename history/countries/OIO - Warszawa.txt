@@ -21,6 +21,22 @@ set_politics = {
 }
 
 recruit_character = OIO_ignacy_moscicki
+recruit_character = OIO_mieczyslaw_michalowicz
+random_character = { limit = { is_character = OIO_mieczyslaw_michalowicz } 10 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OIO_jozef_beck
+random_character = { limit = { is_character = OIO_jozef_beck } 10 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OIO_eugeniusz_kwiatkowiski
+random_character = { limit = { is_character = OIO_eugeniusz_kwiatkowiski } 10 = { add_to_array = { state_advisors = PREV } } }
+if = {
+	limit = { has_dlc = "La Resistance" }
+
+	recruit_character = OIO_marian_rejewski
+	random_character = { limit = { is_character = OIO_marian_rejewski } 10 = { add_to_array = { state_advisors = PREV } } }
+}
+recruit_character = OIO_ludomil_rayski
+random_character = { limit = { is_character = OIO_ludomil_rayski } 10 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OIO_zygmunt_buhusz_szysko
+random_character = { limit = { is_character = OIO_zygmunt_buhusz_szysko } 10 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

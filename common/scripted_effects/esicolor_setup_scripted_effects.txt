@@ -4560,12 +4560,271 @@ remove_political_advisor = {
 		}
 	}
 }
+generate_political_advisors = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = popular_figurehead_disabled }
+			has_custom_popular_figurehead = no
+		}
+
+		generate_generic_popular_figurehead = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = popular_figurehead_disabled
+			has_custom_popular_figurehead = yes
+		}
+
+		retire_popular_figurehead = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = propaganda_expert_disabled }
+			has_custom_propaganda_expert = no
+		}
+
+		generate_generic_propaganda_expert = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = propaganda_expert_disabled
+			has_custom_propaganda_expert = yes
+		}
+
+		retire_propaganda_expert = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = silent_workhorse_disabled }
+			has_custom_silent_workhorse = no
+		}
+
+		generate_generic_silent_workhorse = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = silent_workhorse_disabled
+			has_custom_silent_workhorse = yes
+		}
+
+		retire_silent_workhorse = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = prince_of_terror_disabled }
+			has_custom_prince_of_terror = no
+		}
+
+		generate_generic_prince_of_terror = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = prince_of_terror_disabled
+			has_custom_prince_of_terror = yes
+		}
+
+		retire_prince_of_terror = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = backroom_backstabber_disabled }
+			has_custom_backroom_backstabber = no
+		}
+
+		generate_generic_backroom_backstabber = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = backroom_backstabber_disabled
+			has_custom_backroom_backstabber = yes
+		}
+
+		retire_backroom_backstabber = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = editor_disabled }
+			has_custom_editor = no
+		}
+
+		generate_generic_editor = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = editor_disabled
+			has_custom_editor = yes
+		}
+
+		retire_editor = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = compassionate_gentleman_disabled }
+			has_custom_compassionate_gentleman = no
+		}
+
+		generate_generic_compassionate_gentleman = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = compassionate_gentleman_disabled
+			has_custom_compassionate_gentleman = yes
+		}
+
+		retire_compassionate_gentleman = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = smooth_talking_charmer_disabled }
+			has_custom_smooth_talking_charmer = no
+		}
+
+		generate_generic_smooth_talking_charmer = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = smooth_talking_charmer_disabled
+			has_custom_smooth_talking_charmer = yes
+		}
+
+		retire_smooth_talking_charmer = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = financial_expert_disabled }
+			has_custom_financial_expert = no
+		}
+
+		generate_generic_financial_expert = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = financial_expert_disabled
+			has_custom_financial_expert = yes
+		}
+
+		retire_financial_expert = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = economist_disabled }
+			has_custom_economist = no
+		}
+
+		generate_generic_economist = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = economist_disabled
+			has_custom_economist = yes
+		}
+
+		retire_economist = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = captain_of_industry_disabled }
+			has_custom_captain_of_industry = no
+		}
+
+		generate_generic_captain_of_industry = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = captain_of_industry_disabled
+			has_custom_captain_of_industry = yes
+		}
+
+		retire_captain_of_industry = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = war_industrialist_disabled }
+			has_custom_war_industrialist = no
+		}
+
+		generate_generic_war_industrialist = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = war_industrialist_disabled
+			has_custom_war_industrialist = yes
+		}
+
+		retire_war_industrialist = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = naval_architect_disabled }
+			has_custom_naval_architect = no
+		}
+
+		generate_generic_naval_architect = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = naval_architect_disabled
+			has_custom_naval_architect = yes
+		}
+
+		retire_naval_architect = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = fortification_engineer_disabled }
+			has_custom_fortification_engineer = no
+		}
+
+		generate_generic_fortification_engineer = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = fortification_engineer_disabled
+			has_custom_fortification_engineer = yes
+		}
+
+		retire_fortification_engineer = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = quartermaster_general_disabled }
+			has_custom_quartermaster_general = no
+		}
+
+		generate_generic_quartermaster_general = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = quartermaster_general_disabled
+			has_custom_quartermaster_general = yes
+		}
+
+		retire_quartermaster_general = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = armaments_organizer_disabled }
+			has_custom_armaments_organizer = no
+		}
+
+		generate_generic_armaments_organizer = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = armaments_organizer_disabled
+			has_custom_armaments_organizer = yes
+		}
+
+		retire_armaments_organizer = yes
+	}
+}
 
 remove_spymaster = {
 	random_list = {
 		seed = random
 		30 = {
 			set_country_flag = head_of_intelligence_disabled
+			retire_head_of_intelligence = yes
 
 			modifier = {
 				factor = 0
@@ -4575,6 +4834,7 @@ remove_spymaster = {
 		}
 		35 = {
 			set_country_flag = code_breaker_disabled
+			retire_code_breaker = yes
 
 			modifier = {
 				factor = 0
@@ -4584,6 +4844,7 @@ remove_spymaster = {
 		}
 		35 = {
 			set_country_flag = encryption_expert_disabled
+			retire_encryption_expert = yes
 
 			modifier = {
 				factor = 0
@@ -4637,7 +4898,6 @@ remove_theorist = {
 		89 = { }
 	}
 }
-
 get_branch_specific_military_theorist = {
 	random_list = {
 		seed = random
@@ -4692,7 +4952,6 @@ get_branch_specific_military_theorist = {
 		88 = { }
 	}
 }
-
 get_branch_specific_naval_theorist = {
 	random_list = {
 		seed = random
@@ -4735,7 +4994,6 @@ get_branch_specific_naval_theorist = {
 		88 = { }
 	}
 }
-
 get_branch_specific_air_warfare_theorist = {
 	random_list = {
 		seed = random
@@ -4778,12 +5036,145 @@ get_branch_specific_air_warfare_theorist = {
 		88 = { }
 	}
 }
+generate_theorists = {
+	if = {
+		limit = { NOT = { has_country_flag = military_theorist_disabled } }
+
+		if = {
+			limit = { has_country_flag = mobile_warfare_expert_enabled }
+
+			generate_generic_mobile_warfare_expert = yes
+		}
+		if = {
+			limit = { has_country_flag = superior_firepower_expert_enabled }
+
+			generate_generic_superior_firepower_expert = yes
+		}
+		if = {
+			limit = { has_country_flag = grand_battle_plan_expert_enabled }
+
+			generate_generic_grand_battle_plan_expert = yes
+		}
+		if = {
+			limit = { has_country_flag = mass_assault_expert_enabled }
+
+			generate_generic_mass_assault_expert = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						has_country_flag = mobile_warfare_expert_enabled
+						has_country_flag = superior_firepower_expert_enabled
+						has_country_flag = grand_battle_plan_expert_enabled
+						has_country_flag = mass_assault_expert_enabled
+					}
+					has_country_flag = all_advisors_enabled
+				}
+			}
+
+			generate_generic_military_theorist = yes
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = naval_theorist_disabled } }
+
+		if = {
+			limit = { has_country_flag = naval_aviation_pioneer_enabled }
+
+			generate_generic_naval_aviation_pioneer = yes
+		}
+		if = {
+			limit = { has_country_flag = grand_fleet_proponent_enabled }
+
+			generate_generic_grand_fleet_proponent = yes
+		}
+		if = {
+			limit = { has_country_flag = submarine_specialist_enabled }
+
+			generate_generic_submarine_specialist = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						has_country_flag = naval_aviation_pioneer_enabled
+						has_country_flag = grand_fleet_proponent_enabled
+						has_country_flag = submarine_specialist_enabled
+					}
+					has_country_flag = all_advisors_enabled
+				}
+			}
+
+			generate_generic_naval_theorist = yes
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = air_warfare_theorist_disabled } }
+
+		if = {
+			limit = { has_country_flag = victory_through_airpower_enabled }
+
+			generate_generic_victory_through_airpower = yes
+		}
+		if = {
+			limit = { has_country_flag = close_air_support_proponent_enabled }
+
+			generate_generic_close_air_support_proponent = yes
+		}
+		if = {
+			limit = {
+				has_country_flag = assault_avaition_enabled
+				has_custom_assault_avaition = no
+			}
+
+			generate_generic_assault_avaition = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { has_country_flag = assault_avaition_enabled }
+				has_custom_assault_avaition = yes
+			}
+
+			retire_assault_avaition = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						has_country_flag = air_warfare_theorist_disabled
+						has_country_flag = close_air_support_proponent_enabled
+						has_country_flag = assault_avaition_enabled
+					}
+					has_country_flag = all_advisors_enabled
+				}
+				has_custom_air_warfare_theorist = no
+			}
+
+			generate_generic_air_warfare_theorist = yes
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_country_flag = air_warfare_theorist_disabled
+					has_country_flag = close_air_support_proponent_enabled
+					has_country_flag = assault_avaition_enabled
+				}
+				NOT = { has_country_flag = all_advisors_enabled }
+				has_custom_air_warfare_theorist = yes
+			}
+
+			retire_air_warfare_theorist = yes
+		}
+	}
+}
 
 remove_scientist = {
 	random_list = {
 		seed = random
 		15 = {
 			set_country_flag = nuclear_scientist_disabled
+			retire_nuclear_scientist = yes
 
 			modifier = {
 				factor = 0
@@ -4793,6 +5184,7 @@ remove_scientist = {
 		}
 		15 = {
 			set_country_flag = rocket_scientist_disabled
+			retire_rocket_scientist = yes
 
 			modifier = {
 				factor = 0
@@ -4905,6 +5297,168 @@ remove_army_chief = {
 		}
 	}
 }
+generate_army_chiefs = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_chief_offensive_disabled }
+			has_custom_army_chief_offensive = no
+		}
+
+		generate_generic_army_chief_offensive = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_chief_offensive_disabled
+			has_custom_army_chief_offensive = yes
+		}
+
+		retire_army_chief_offensive = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_chief_defensive_disabled }
+			has_custom_army_chief_defensive = no
+		}
+
+		generate_generic_army_chief_defensive = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_chief_defensive_disabled
+			has_custom_army_chief_defensive = yes
+		}
+
+		retire_army_chief_defensive = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_chief_maneuver_disabled }
+			has_custom_army_chief_maneuver = no
+		}
+
+		generate_generic_army_chief_maneuver = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_chief_maneuver_disabled
+			has_custom_army_chief_maneuver = yes
+		}
+
+		retire_army_chief_maneuver = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_chief_drill_disabled }
+			has_custom_army_chief_drill = no
+		}
+
+		generate_generic_army_chief_drill = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_chief_drill_disabled
+			has_custom_army_chief_drill = yes
+		}
+
+		retire_army_chief_drill = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_chief_planning_disabled }
+			has_custom_army_chief_planning = no
+		}
+
+		generate_generic_army_chief_planning = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_chief_planning_disabled
+			has_custom_army_chief_planning = yes
+		}
+
+		retire_army_chief_planning = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_chief_morale_disabled }
+			has_custom_army_chief_morale = no
+		}
+
+		generate_generic_army_chief_morale = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_chief_morale_disabled
+			has_custom_army_chief_morale = yes
+		}
+
+		retire_army_chief_morale = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_chief_organizational_disabled }
+			has_custom_army_chief_organizational = no
+		}
+
+		generate_generic_army_chief_organizational = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_chief_organizational_disabled
+			has_custom_army_chief_organizational = yes
+		}
+
+		retire_army_chief_organizational = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_chief_entrenchment_disabled }
+			has_custom_army_chief_entrenchment = no
+		}
+
+		generate_generic_army_chief_entrenchment = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_chief_entrenchment_disabled
+			has_custom_army_chief_entrenchment = yes
+		}
+
+		retire_army_chief_entrenchment = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_chief_reform_disabled }
+			has_custom_army_chief_reform = no
+		}
+
+		generate_generic_army_chief_reform = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_chief_reform_disabled
+			has_custom_army_chief_reform = yes
+		}
+
+		retire_army_chief_reform = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_chief_old_guard_disabled }
+			has_custom_army_chief_old_guard = no
+		}
+
+		generate_generic_army_chief_old_guard = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_chief_old_guard_disabled
+			has_custom_army_chief_old_guard = yes
+		}
+
+		retire_army_chief_old_guard = yes
+	}
+}
 
 randomise_army_chief_offensive_levels = {
 	every_character = {
@@ -4936,16 +5490,9 @@ randomise_army_chief_offensive_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_offensive_esicolor
+							idea_token = a_army_chief_offensive
 							cost = 50
 							traits = { army_chief_offensive_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_offensive_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_offensive_disabled } }
-							#}
 						}
 					}
 				}
@@ -4955,6 +5502,7 @@ randomise_army_chief_offensive_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -4967,16 +5515,9 @@ randomise_army_chief_offensive_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_offensive_esicolor
+							idea_token = a_army_chief_offensive
 							cost = 100
 							traits = { army_chief_offensive_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_offensive_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_offensive_disabled } }
-							#}
 						}
 					}
 				}
@@ -4986,6 +5527,7 @@ randomise_army_chief_offensive_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -4998,16 +5540,9 @@ randomise_army_chief_offensive_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_offensive_esicolor
+							idea_token = a_army_chief_offensive
 							cost = 200
 							traits = { army_chief_offensive_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_offensive_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_offensive_disabled } }
-							#}
 						}
 					}
 				}
@@ -5046,16 +5581,9 @@ randomise_army_chief_defensive_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_defensive_esicolor
+							idea_token = b_army_chief_defensive
 							cost = 50
 							traits = { army_chief_defensive_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_defensive_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_defensive_disabled } }
-							#}
 						}
 					}
 				}
@@ -5065,6 +5593,7 @@ randomise_army_chief_defensive_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -5077,16 +5606,9 @@ randomise_army_chief_defensive_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_defensive_esicolor
+							idea_token = b_army_chief_defensive
 							cost = 100
 							traits = { army_chief_defensive_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_defensive_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_defensive_disabled } }
-							#}
 						}
 					}
 				}
@@ -5096,6 +5618,7 @@ randomise_army_chief_defensive_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -5108,16 +5631,9 @@ randomise_army_chief_defensive_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_defensive_esicolor
+							idea_token = b_army_chief_defensive
 							cost = 200
 							traits = { army_chief_defensive_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_defensive_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_defensive_disabled } }
-							#}
 						}
 					}
 				}
@@ -5156,16 +5672,9 @@ randomise_army_chief_maneuver_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_maneuver
+							idea_token = c_army_chief_maneuver
 							cost = 50
 							traits = { army_chief_maneuver_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_maneuver_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_maneuver_disabled } }
-							#}
 						}
 					}
 				}
@@ -5175,6 +5684,7 @@ randomise_army_chief_maneuver_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -5187,16 +5697,9 @@ randomise_army_chief_maneuver_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_maneuver
+							idea_token = c_army_chief_maneuver
 							cost = 100
 							traits = { army_chief_maneuver_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_maneuver_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_maneuver_disabled } }
-							#}
 						}
 					}
 				}
@@ -5206,6 +5709,7 @@ randomise_army_chief_maneuver_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -5218,16 +5722,9 @@ randomise_army_chief_maneuver_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_maneuver
+							idea_token = c_army_chief_maneuver
 							cost = 200
 							traits = { army_chief_maneuver_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_maneuver_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_maneuver_disabled } }
-							#}
 						}
 					}
 				}
@@ -5266,16 +5763,9 @@ randomise_army_chief_drill_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_drill
+							idea_token = d_army_chief_drill
 							cost = 50
 							traits = { army_chief_drill_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_drill_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_drill_disabled } }
-							#}
 						}
 					}
 				}
@@ -5285,6 +5775,7 @@ randomise_army_chief_drill_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -5297,16 +5788,9 @@ randomise_army_chief_drill_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_drill
+							idea_token = d_army_chief_drill
 							cost = 100
 							traits = { army_chief_drill_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_drill_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_drill_disabled } }
-							#}
 						}
 					}
 				}
@@ -5316,6 +5800,7 @@ randomise_army_chief_drill_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -5328,16 +5813,9 @@ randomise_army_chief_drill_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_drill
+							idea_token = d_army_chief_drill
 							cost = 200
 							traits = { army_chief_drill_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_drill_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_drill_disabled } }
-							#}
 						}
 					}
 				}
@@ -5376,16 +5854,9 @@ randomise_army_chief_planning_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_planning
+							idea_token = e_army_chief_planning
 							cost = 50
 							traits = { army_chief_planning_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_planning_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_planning_disabled } }
-							#}
 						}
 					}
 				}
@@ -5395,6 +5866,7 @@ randomise_army_chief_planning_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -5407,16 +5879,9 @@ randomise_army_chief_planning_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_planning
+							idea_token = e_army_chief_planning
 							cost = 100
 							traits = { army_chief_planning_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_planning_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_planning_disabled } }
-							#}
 						}
 					}
 				}
@@ -5426,6 +5891,7 @@ randomise_army_chief_planning_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -5438,16 +5904,9 @@ randomise_army_chief_planning_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_planning
+							idea_token = e_army_chief_planning
 							cost = 200
 							traits = { army_chief_planning_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_planning_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_planning_disabled } }
-							#}
 						}
 					}
 				}
@@ -5486,16 +5945,9 @@ randomise_army_chief_morale_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_morale
+							idea_token = f_army_chief_morale
 							cost = 50
 							traits = { army_chief_morale_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_morale_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_morale_disabled } }
-							#}
 						}
 					}
 				}
@@ -5505,6 +5957,7 @@ randomise_army_chief_morale_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -5517,16 +5970,9 @@ randomise_army_chief_morale_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_morale
+							idea_token = f_army_chief_morale
 							cost = 100
 							traits = { army_chief_morale_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_morale_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_morale_disabled } }
-							#}
 						}
 					}
 				}
@@ -5536,6 +5982,7 @@ randomise_army_chief_morale_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -5548,16 +5995,9 @@ randomise_army_chief_morale_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_morale
+							idea_token = f_army_chief_morale
 							cost = 200
 							traits = { army_chief_morale_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_morale_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_morale_disabled } }
-							#}
 						}
 					}
 				}
@@ -5596,16 +6036,9 @@ randomise_army_chief_organizational_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_organizational
+							idea_token = g_army_chief_organizational
 							cost = 50
 							traits = { army_chief_organizational_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_organizational_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_organizational_disabled } }
-							#}
 						}
 					}
 				}
@@ -5615,6 +6048,7 @@ randomise_army_chief_organizational_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -5627,16 +6061,9 @@ randomise_army_chief_organizational_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_organizational
+							idea_token = g_army_chief_organizational
 							cost = 100
 							traits = { army_chief_organizational_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_organizational_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_organizational_disabled } }
-							#}
 						}
 					}
 				}
@@ -5646,6 +6073,7 @@ randomise_army_chief_organizational_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -5658,16 +6086,9 @@ randomise_army_chief_organizational_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_organizational
+							idea_token = g_army_chief_organizational
 							cost = 200
 							traits = { army_chief_organizational_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_organizational_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_organizational_disabled } }
-							#}
 						}
 					}
 				}
@@ -5706,16 +6127,9 @@ randomise_army_chief_entrenchment_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_entrenchment
+							idea_token = h_army_chief_entrenchment
 							cost = 50
 							traits = { army_chief_entrenchment_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_entrenchment_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_entrenchment_disabled } }
-							#}
 						}
 					}
 				}
@@ -5725,6 +6139,7 @@ randomise_army_chief_entrenchment_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -5737,16 +6152,9 @@ randomise_army_chief_entrenchment_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_entrenchment
+							idea_token = h_army_chief_entrenchment
 							cost = 100
 							traits = { army_chief_entrenchment_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_entrenchment_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_entrenchment_disabled } }
-							#}
 						}
 					}
 				}
@@ -5756,6 +6164,7 @@ randomise_army_chief_entrenchment_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -5768,16 +6177,9 @@ randomise_army_chief_entrenchment_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_entrenchment
+							idea_token = h_army_chief_entrenchment
 							cost = 200
 							traits = { army_chief_entrenchment_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_entrenchment_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_entrenchment_disabled } }
-							#}
 						}
 					}
 				}
@@ -5816,16 +6218,9 @@ randomise_army_chief_reform_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_reform_esicolor
+							idea_token = i_army_chief_reform
 							cost = 50
 							traits = { army_chief_reform_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_reform_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_reform_disabled } }
-							#}
 						}
 					}
 				}
@@ -5835,6 +6230,7 @@ randomise_army_chief_reform_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -5847,16 +6243,9 @@ randomise_army_chief_reform_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_reform_esicolor
+							idea_token = i_army_chief_reform
 							cost = 100
 							traits = { army_chief_reform_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_reform_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_reform_disabled } }
-							#}
 						}
 					}
 				}
@@ -5866,6 +6255,7 @@ randomise_army_chief_reform_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -5878,16 +6268,9 @@ randomise_army_chief_reform_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = army_chief
-							idea_token = generic_army_chief_reform_esicolor
+							idea_token = i_army_chief_reform
 							cost = 200
 							traits = { army_chief_reform_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_chief_reform_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_chief_reform_disabled } }
-							#}
 						}
 					}
 				}
@@ -5964,6 +6347,120 @@ remove_navy_chief = {
 		}
 	}
 }
+generate_navy_chiefs = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_chief_commerce_raiding_disabled }
+			has_custom_navy_chief_commerce_raiding = no
+		}
+
+		generate_generic_navy_chief_commerce_raiding = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_chief_commerce_raiding_disabled
+			has_custom_navy_chief_commerce_raiding = yes
+		}
+
+		retire_navy_chief_commerce_raiding = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_chief_maneuver_disabled }
+			has_custom_navy_chief_maneuver = no
+		}
+
+		generate_generic_navy_chief_maneuver = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_chief_maneuver_disabled
+			has_custom_navy_chief_maneuver = yes
+		}
+
+		retire_navy_chief_maneuver = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_chief_decisive_battle_disabled }
+			has_custom_navy_chief_decisive_battle = no
+		}
+
+		generate_generic_navy_chief_decisive_battle = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_chief_decisive_battle_disabled
+			has_custom_navy_chief_decisive_battle = yes
+		}
+
+		retire_navy_chief_decisive_battle = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_chief_naval_aviation_disabled }
+			has_custom_navy_chief_naval_aviation = no
+		}
+
+		generate_generic_navy_chief_naval_aviation = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_chief_naval_aviation_disabled
+			has_custom_navy_chief_naval_aviation = yes
+		}
+
+		retire_navy_chief_naval_aviation = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_chief_naval_engineer_disabled }
+			has_custom_navy_chief_naval_engineer = no
+		}
+
+		generate_generic_navy_chief_naval_engineer = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_chief_naval_engineer_disabled
+			has_custom_navy_chief_naval_engineer = yes
+		}
+
+		retire_navy_chief_naval_engineer = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_chief_reform_disabled }
+			has_custom_navy_chief_reform = no
+		}
+
+		generate_generic_navy_chief_reform = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_chief_reform_disabled
+			has_custom_navy_chief_reform = yes
+		}
+
+		retire_navy_chief_reform = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_chief_old_guard_disabled }
+			has_custom_navy_chief_old_guard = no
+		}
+
+		generate_generic_navy_chief_old_guard = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_chief_old_guard_disabled
+			has_custom_navy_chief_old_guard = yes
+		}
+
+		retire_navy_chief_old_guard = yes
+	}
+}
 
 randomise_navy_chief_commerce_raiding_levels = {
 	every_character = {
@@ -5983,6 +6480,7 @@ randomise_navy_chief_commerce_raiding_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -5995,16 +6493,9 @@ randomise_navy_chief_commerce_raiding_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_commerce_raiding_esicolor
+							idea_token = a_navy_chief_commerce_raiding
 							cost = 50
 							traits = { navy_chief_commerce_raiding_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_commerce_raiding_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_commerce_raiding_disabled } }
-							#}
 						}
 					}
 				}
@@ -6026,16 +6517,9 @@ randomise_navy_chief_commerce_raiding_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_commerce_raiding_esicolor
+							idea_token = a_navy_chief_commerce_raiding
 							cost = 100
 							traits = { navy_chief_commerce_raiding_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_commerce_raiding_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_commerce_raiding_disabled } }
-							#}
 						}
 					}
 				}
@@ -6045,6 +6529,7 @@ randomise_navy_chief_commerce_raiding_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -6057,16 +6542,9 @@ randomise_navy_chief_commerce_raiding_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_commerce_raiding_esicolor
+							idea_token = a_navy_chief_commerce_raiding
 							cost = 200
 							traits = { navy_chief_commerce_raiding_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_commerce_raiding_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_commerce_raiding_disabled } }
-							#}
 						}
 					}
 				}
@@ -6093,6 +6571,7 @@ randomise_navy_chief_maneuver_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -6105,16 +6584,9 @@ randomise_navy_chief_maneuver_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_maneuver
+							idea_token = b_navy_chief_maneuver
 							cost = 50
 							traits = { navy_chief_maneuver_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_maneuver_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_maneuver_disabled } }
-							#}
 						}
 					}
 				}
@@ -6136,16 +6608,9 @@ randomise_navy_chief_maneuver_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_maneuver
+							idea_token = b_navy_chief_maneuver
 							cost = 100
 							traits = { navy_chief_maneuver_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_maneuver_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_maneuver_disabled } }
-							#}
 						}
 					}
 				}
@@ -6155,6 +6620,7 @@ randomise_navy_chief_maneuver_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -6167,16 +6633,9 @@ randomise_navy_chief_maneuver_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_maneuver
+							idea_token = b_navy_chief_maneuver
 							cost = 200
 							traits = { navy_chief_maneuver_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_maneuver_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_maneuver_disabled } }
-							#}
 						}
 					}
 				}
@@ -6203,6 +6662,7 @@ randomise_navy_chief_decisive_battle_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -6215,16 +6675,9 @@ randomise_navy_chief_decisive_battle_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_decisive_battle_esicolor
+							idea_token = c_navy_chief_decisive_battle
 							cost = 50
 							traits = { navy_chief_decisive_battle_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_decisive_battle_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_decisive_battle_disabled } }
-							#}
 						}
 					}
 				}
@@ -6246,16 +6699,9 @@ randomise_navy_chief_decisive_battle_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_decisive_battle_esicolor
+							idea_token = c_navy_chief_decisive_battle
 							cost = 100
 							traits = { navy_chief_decisive_battle_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_decisive_battle_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_decisive_battle_disabled } }
-							#}
 						}
 					}
 				}
@@ -6265,6 +6711,7 @@ randomise_navy_chief_decisive_battle_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -6277,16 +6724,9 @@ randomise_navy_chief_decisive_battle_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_decisive_battle_esicolor
+							idea_token = c_navy_chief_decisive_battle
 							cost = 200
 							traits = { navy_chief_decisive_battle_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_decisive_battle_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_decisive_battle_disabled } }
-							#}
 						}
 					}
 				}
@@ -6313,6 +6753,7 @@ randomise_navy_chief_naval_aviation_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -6325,16 +6766,9 @@ randomise_navy_chief_naval_aviation_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_naval_aviation
+							idea_token = d_navy_chief_naval_aviation
 							cost = 50
 							traits = { navy_chief_naval_aviation_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_naval_aviation_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_naval_aviation_disabled } }
-							#}
 						}
 					}
 				}
@@ -6356,16 +6790,9 @@ randomise_navy_chief_naval_aviation_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_naval_aviation
+							idea_token = d_navy_chief_naval_aviation
 							cost = 100
 							traits = { navy_chief_naval_aviation_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_naval_aviation_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_naval_aviation_disabled } }
-							#}
 						}
 					}
 				}
@@ -6375,6 +6802,7 @@ randomise_navy_chief_naval_aviation_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -6387,16 +6815,9 @@ randomise_navy_chief_naval_aviation_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_naval_aviation
+							idea_token = d_navy_chief_naval_aviation
 							cost = 200
 							traits = { navy_chief_naval_aviation_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_naval_aviation_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_naval_aviation_disabled } }
-							#}
 						}
 					}
 				}
@@ -6423,6 +6844,7 @@ randomise_navy_chief_naval_engineer_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -6435,16 +6857,9 @@ randomise_navy_chief_naval_engineer_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_naval_engineer
+							idea_token = e_navy_chief_naval_engineer
 							cost = 50
 							traits = { navy_chief_naval_engineer_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_naval_engineer_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_naval_engineer_disabled } }
-							#}
 						}
 					}
 				}
@@ -6466,16 +6881,9 @@ randomise_navy_chief_naval_engineer_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_naval_engineer
+							idea_token = e_navy_chief_naval_engineer
 							cost = 100
 							traits = { navy_chief_naval_engineer_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_naval_engineer_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_naval_engineer_disabled } }
-							#}
 						}
 					}
 				}
@@ -6485,6 +6893,7 @@ randomise_navy_chief_naval_engineer_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -6497,16 +6906,9 @@ randomise_navy_chief_naval_engineer_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_naval_engineer
+							idea_token = e_navy_chief_naval_engineer
 							cost = 200
 							traits = { navy_chief_naval_engineer_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_naval_engineer_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_naval_engineer_disabled } }
-							#}
 						}
 					}
 				}
@@ -6545,16 +6947,9 @@ randomise_navy_chief_reform_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_reform_esicolor
+							idea_token = f_navy_chief_reform
 							cost = 50
 							traits = { navy_chief_reform_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_reform_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_reform_disabled } }
-							#}
 						}
 					}
 				}
@@ -6564,6 +6959,7 @@ randomise_navy_chief_reform_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -6576,16 +6972,9 @@ randomise_navy_chief_reform_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_reform_esicolor
+							idea_token = f_navy_chief_reform
 							cost = 100
 							traits = { navy_chief_reform_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_reform_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_reform_disabled } }
-							#}
 						}
 					}
 				}
@@ -6595,6 +6984,7 @@ randomise_navy_chief_reform_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -6607,16 +6997,9 @@ randomise_navy_chief_reform_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = navy_chief
-							idea_token = generic_navy_chief_reform_esicolor
+							idea_token = f_navy_chief_reform
 							cost = 200
 							traits = { navy_chief_reform_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_chief_reform_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_chief_reform_disabled } }
-							#}
 						}
 					}
 				}
@@ -6684,6 +7067,104 @@ remove_air_chief = {
 		}
 	}
 }
+generate_air_chiefs = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_chief_night_operations_disabled }
+			has_custom_air_chief_night_operations = no
+		}
+
+		generate_generic_air_chief_night_operations = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_chief_night_operations_disabled
+			has_custom_air_chief_night_operations = yes
+		}
+
+		retire_air_chief_night_operations = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_chief_ground_support_disabled }
+			has_custom_air_chief_ground_support = no
+		}
+
+		generate_generic_air_chief_ground_support = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_chief_ground_support_disabled
+			has_custom_air_chief_ground_support = yes
+		}
+
+		retire_air_chief_ground_support = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_chief_all_weather_disabled }
+			has_custom_air_chief_all_weather = no
+		}
+
+		generate_generic_air_chief_all_weather = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_chief_all_weather_disabled
+			has_custom_air_chief_all_weather = yes
+		}
+
+		retire_air_chief_all_weather = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_chief_safety_disabled }
+			has_custom_air_chief_safety = no
+		}
+
+		generate_generic_air_chief_safety = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_chief_safety_disabled
+			has_custom_air_chief_safety = yes
+		}
+
+		retire_air_chief_safety = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_chief_reform_disabled }
+			has_custom_air_chief_reform = no
+		}
+
+		generate_generic_air_chief_reform = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_chief_reform_disabled
+			has_custom_air_chief_reform = yes
+		}
+
+		retire_air_chief_reform = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_chief_old_guard_disabled }
+			has_custom_air_chief_old_guard = no
+		}
+
+		generate_generic_air_chief_old_guard = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_chief_old_guard_disabled
+			has_custom_air_chief_old_guard = yes
+		}
+
+		retire_air_chief_old_guard = yes
+	}
+}
 
 randomise_air_chief_night_operations_levels = {
 	every_character = {
@@ -6703,6 +7184,7 @@ randomise_air_chief_night_operations_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -6715,16 +7197,9 @@ randomise_air_chief_night_operations_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_night_operations
+							idea_token = a_air_chief_night_operations
 							cost = 50
 							traits = { air_chief_night_operations_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_night_operations_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_night_operations_disabled } }
-							#}
 						}
 					}
 				}
@@ -6746,16 +7221,9 @@ randomise_air_chief_night_operations_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_night_operations
+							idea_token = a_air_chief_night_operations
 							cost = 100
 							traits = { air_chief_night_operations_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_night_operations_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_night_operations_disabled } }
-							#}
 						}
 					}
 				}
@@ -6765,6 +7233,7 @@ randomise_air_chief_night_operations_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -6777,16 +7246,9 @@ randomise_air_chief_night_operations_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_night_operations
+							idea_token = a_air_chief_night_operations
 							cost = 200
 							traits = { air_chief_night_operations_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_night_operations_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_night_operations_disabled } }
-							#}
 						}
 					}
 				}
@@ -6813,6 +7275,7 @@ randomise_air_chief_ground_support_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -6825,16 +7288,9 @@ randomise_air_chief_ground_support_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_ground_support_esicolor
+							idea_token = b_air_chief_ground_support
 							cost = 50
 							traits = { air_chief_ground_support_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_ground_support_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_ground_support_disabled } }
-							#}
 						}
 					}
 				}
@@ -6856,16 +7312,9 @@ randomise_air_chief_ground_support_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_ground_support_esicolor
+							idea_token = b_air_chief_ground_support
 							cost = 100
 							traits = { air_chief_ground_support_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_ground_support_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_ground_support_disabled } }
-							#}
 						}
 					}
 				}
@@ -6875,6 +7324,7 @@ randomise_air_chief_ground_support_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -6887,16 +7337,9 @@ randomise_air_chief_ground_support_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_ground_support_esicolor
+							idea_token = b_air_chief_ground_support
 							cost = 200
 							traits = { air_chief_ground_support_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_ground_support_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_ground_support_disabled } }
-							#}
 						}
 					}
 				}
@@ -6923,6 +7366,7 @@ randomise_air_chief_all_weather_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -6935,16 +7379,9 @@ randomise_air_chief_all_weather_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_all_weather_esicolor
+							idea_token = c_air_chief_all_weather
 							cost = 50
 							traits = { air_chief_all_weather_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_all_weather_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_all_weather_disabled } }
-							#}
 						}
 					}
 				}
@@ -6966,16 +7403,9 @@ randomise_air_chief_all_weather_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_all_weather_esicolor
+							idea_token = c_air_chief_all_weather
 							cost = 100
 							traits = { air_chief_all_weather_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_all_weather_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_all_weather_disabled } }
-							#}
 						}
 					}
 				}
@@ -6985,6 +7415,7 @@ randomise_air_chief_all_weather_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -6997,16 +7428,9 @@ randomise_air_chief_all_weather_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_all_weather_esicolor
+							idea_token = c_air_chief_all_weather
 							cost = 200
 							traits = { air_chief_all_weather_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_all_weather_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_all_weather_disabled } }
-							#}
 						}
 					}
 				}
@@ -7033,6 +7457,7 @@ randomise_air_chief_safety_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -7045,16 +7470,9 @@ randomise_air_chief_safety_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_safety_esicolor
+							idea_token = d_air_chief_safety
 							cost = 50
 							traits = { air_chief_safety_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_safety_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_safety_disabled } }
-							#}
 						}
 					}
 				}
@@ -7076,16 +7494,9 @@ randomise_air_chief_safety_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_safety_esicolor
+							idea_token = d_air_chief_safety
 							cost = 100
 							traits = { air_chief_safety_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_safety_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_safety_disabled } }
-							#}
 						}
 					}
 				}
@@ -7095,6 +7506,7 @@ randomise_air_chief_safety_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -7107,16 +7519,9 @@ randomise_air_chief_safety_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_safety_esicolor
+							idea_token = d_air_chief_safety
 							cost = 200
 							traits = { air_chief_safety_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_safety_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_safety_disabled } }
-							#}
 						}
 					}
 				}
@@ -7143,6 +7548,7 @@ randomise_air_chief_reform_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -7155,16 +7561,9 @@ randomise_air_chief_reform_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_reform_esicolor
+							idea_token = e_air_chief_reform
 							cost = 50
 							traits = { air_chief_reform_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_reform_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_reform_disabled } }
-							#}
 						}
 					}
 				}
@@ -7186,16 +7585,9 @@ randomise_air_chief_reform_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_reform_esicolor
+							idea_token = e_air_chief_reform
 							cost = 100
 							traits = { air_chief_reform_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_reform_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_reform_disabled } }
-							#}
 						}
 					}
 				}
@@ -7205,6 +7597,7 @@ randomise_air_chief_reform_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -7217,16 +7610,9 @@ randomise_air_chief_reform_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = air_chief
-							idea_token = generic_air_chief_reform_esicolor
+							idea_token = e_air_chief_reform
 							cost = 200
 							traits = { air_chief_reform_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_chief_reform_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_chief_reform_disabled } }
-							#}
 						}
 					}
 				}
@@ -7294,7 +7680,104 @@ remove_high_command_army_specific = {
 		}
 	}
 }
+generate_high_command_army_specific = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_infantry_disabled }
+			has_custom_army_infantry = no
+		}
 
+		generate_generic_army_infantry = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_infantry_disabled
+			has_custom_army_infantry = yes
+		}
+
+		retire_army_infantry = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_artillery_disabled }
+			has_custom_army_artillery = no
+		}
+
+		generate_generic_army_artillery = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_artillery_disabled
+			has_custom_army_artillery = yes
+		}
+
+		retire_army_artillery = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_cavalry_disabled }
+			has_custom_army_cavalry = no
+		}
+
+		generate_generic_army_cavalry = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_cavalry_disabled
+			has_custom_army_cavalry = yes
+		}
+
+		retire_army_cavalry = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_combined_arms_disabled }
+			has_custom_army_combined_arms = no
+		}
+
+		generate_generic_army_combined_arms = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_combined_arms_disabled
+			has_custom_army_combined_arms = yes
+		}
+
+		retire_army_combined_arms = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_armored_disabled }
+			has_custom_army_armored = no
+		}
+
+		generate_generic_army_armored = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_armored_disabled
+			has_custom_army_armored = yes
+		}
+
+		retire_army_armored = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_commando_disabled }
+			has_custom_army_commando = no
+		}
+
+		generate_generic_army_commando = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_commando_disabled
+			has_custom_army_commando = yes
+		}
+
+		retire_army_commando = yes
+	}
+}
 
 randomise_army_infantry_levels = {
 	every_character = {
@@ -7326,17 +7809,10 @@ randomise_army_infantry_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_infantry
+							idea_token = aa_army_infantry
 							ledger = army
 							cost = 50
 							traits = { army_infantry_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_infantry_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_infantry_disabled } }
-							#}
 						}
 					}
 				}
@@ -7346,6 +7822,7 @@ randomise_army_infantry_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -7358,17 +7835,10 @@ randomise_army_infantry_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_infantry
+							idea_token = aa_army_infantry
 							ledger = army
 							cost = 100
 							traits = { army_infantry_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_infantry_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_infantry_disabled } }
-							#}
 						}
 					}
 				}
@@ -7378,6 +7848,7 @@ randomise_army_infantry_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -7390,17 +7861,10 @@ randomise_army_infantry_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_infantry
+							idea_token = aa_army_infantry
 							ledger = army
 							cost = 200
 							traits = { army_infantry_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_infantry_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_infantry_disabled } }
-							#}
 						}
 					}
 				}
@@ -7439,17 +7903,10 @@ randomise_army_artillery_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_artillery
+							idea_token = ab_army_artillery
 							ledger = army
 							cost = 50
 							traits = { army_artillery_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_artillery_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_artillery_disabled } }
-							#}
 						}
 					}
 				}
@@ -7459,6 +7916,7 @@ randomise_army_artillery_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -7471,17 +7929,10 @@ randomise_army_artillery_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_artillery
+							idea_token = ab_army_artillery
 							ledger = army
 							cost = 100
 							traits = { army_artillery_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_artillery_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_artillery_disabled } }
-							#}
 						}
 					}
 				}
@@ -7491,6 +7942,7 @@ randomise_army_artillery_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -7503,17 +7955,10 @@ randomise_army_artillery_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_artillery
+							idea_token = ab_army_artillery
 							ledger = army
 							cost = 200
 							traits = { army_artillery_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_artillery_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_artillery_disabled } }
-							#}
 						}
 					}
 				}
@@ -7552,17 +7997,10 @@ randomise_army_cavalry_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_cavalry
+							idea_token = ac_army_cavalry
 							ledger = army
 							cost = 50
 							traits = { army_cavalry_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_cavalry_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_cavalry_disabled } }
-							#}
 						}
 					}
 				}
@@ -7572,6 +8010,7 @@ randomise_army_cavalry_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -7584,17 +8023,10 @@ randomise_army_cavalry_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_cavalry
+							idea_token = ac_army_cavalry
 							ledger = army
 							cost = 100
 							traits = { army_cavalry_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_cavalry_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_cavalry_disabled } }
-							#}
 						}
 					}
 				}
@@ -7604,6 +8036,7 @@ randomise_army_cavalry_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -7616,17 +8049,10 @@ randomise_army_cavalry_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_cavalry
+							idea_token = ac_army_cavalry
 							ledger = army
 							cost = 200
 							traits = { army_cavalry_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_cavalry_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_cavalry_disabled } }
-							#}
 						}
 					}
 				}
@@ -7665,17 +8091,10 @@ randomise_army_combined_arms_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_combined_arms
+							idea_token = ad_army_combined_arms
 							ledger = army
 							cost = 50
 							traits = { army_CombinedArms_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_combined_arms_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_combined_arms_disabled } }
-							#}
 						}
 					}
 				}
@@ -7685,6 +8104,7 @@ randomise_army_combined_arms_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -7697,17 +8117,10 @@ randomise_army_combined_arms_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_combined_arms
+							idea_token = ad_army_combined_arms
 							ledger = army
 							cost = 100
 							traits = { army_CombinedArms_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_combined_arms_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_combined_arms_disabled } }
-							#}
 						}
 					}
 				}
@@ -7717,6 +8130,7 @@ randomise_army_combined_arms_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -7729,17 +8143,10 @@ randomise_army_combined_arms_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_combined_arms
+							idea_token = ad_army_combined_arms
 							ledger = army
 							cost = 200
 							traits = { army_CombinedArms_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_combined_arms_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_combined_arms_disabled } }
-							#}
 						}
 					}
 				}
@@ -7778,17 +8185,10 @@ randomise_army_armored_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_armored
+							idea_token = ae_army_armored
 							ledger = army
 							cost = 50
 							traits = { army_armored_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_armored_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_armored_disabled } }
-							#}
 						}
 					}
 				}
@@ -7798,6 +8198,7 @@ randomise_army_armored_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -7810,17 +8211,10 @@ randomise_army_armored_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_armored
+							idea_token = ae_army_armored
 							ledger = army
 							cost = 100
 							traits = { army_armored_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_armored_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_armored_disabled } }
-							#}
 						}
 					}
 				}
@@ -7830,6 +8224,7 @@ randomise_army_armored_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -7842,17 +8237,10 @@ randomise_army_armored_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_armored
+							idea_token = ae_army_armored
 							ledger = army
 							cost = 200
 							traits = { army_armored_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_armored_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_armored_disabled } }
-							#}
 						}
 					}
 				}
@@ -7891,17 +8279,10 @@ randomise_army_commando_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_commando
+							idea_token = af_army_commando
 							ledger = army
 							cost = 50
 							traits = { army_commando_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_commando_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_commando_disabled } }
-							#}
 						}
 					}
 				}
@@ -7911,6 +8292,7 @@ randomise_army_commando_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -7923,17 +8305,10 @@ randomise_army_commando_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_commando
+							idea_token = af_army_commando
 							ledger = army
 							cost = 100
 							traits = { army_commando_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_commando_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_commando_disabled } }
-							#}
 						}
 					}
 				}
@@ -7943,6 +8318,7 @@ randomise_army_commando_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -7955,17 +8331,10 @@ randomise_army_commando_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_commando
+							idea_token = af_army_commando
 							ledger = army
 							cost = 200
 							traits = { army_commando_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_commando_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_commando_disabled } }
-							#}
 						}
 					}
 				}
@@ -8042,6 +8411,120 @@ remove_high_command_army_generic = {
 		}
 	}
 }
+generate_high_command_army_generic = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_entrenchment_disabled }
+			has_custom_army_entrenchment = no
+		}
+
+		generate_generic_army_entrenchment = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_entrenchment_disabled
+			has_custom_army_entrenchment = yes
+		}
+
+		retire_army_entrenchment = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_logistics_disabled }
+			has_custom_army_logistics = no
+		}
+
+		generate_generic_army_logistics = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_logistics_disabled
+			has_custom_army_logistics = yes
+		}
+
+		retire_army_logistics = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_regrouping_disabled }
+			has_custom_army_regrouping = no
+		}
+
+		generate_generic_army_regrouping = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_regrouping_disabled
+			has_custom_army_regrouping = yes
+		}
+
+		retire_army_regrouping = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_concealment_disabled }
+			has_custom_army_concealment = no
+		}
+
+		generate_generic_army_concealment = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_concealment_disabled
+			has_custom_army_concealment = yes
+		}
+
+		retire_army_concealment = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_radio_intelligence_disabled }
+			has_custom_army_radio_intelligence = no
+		}
+
+		generate_generic_army_radio_intelligence = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_radio_intelligence_disabled
+			has_custom_army_radio_intelligence = yes
+		}
+
+		retire_army_radio_intelligence = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_adaptive_engineer_disabled }
+			has_custom_army_adaptive_engineer = no
+		}
+
+		generate_generic_army_adaptive_engineer = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_adaptive_engineer_disabled
+			has_custom_army_adaptive_engineer = yes
+		}
+
+		retire_army_adaptive_engineer = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = army_jungle_warfare_disabled }
+			has_custom_army_jungle_warfare = no
+		}
+
+		generate_generic_army_jungle_warfare = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = army_jungle_warfare_disabled
+			has_custom_army_jungle_warfare = yes
+		}
+
+		retire_army_jungle_warfare = yes
+	}
+}
 
 randomise_army_entrenchment_levels = {
 	every_character = {
@@ -8073,17 +8556,10 @@ randomise_army_entrenchment_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_entrenchment_esicolor
+							idea_token = ba_army_entrenchment
 							ledger = army
 							cost = 50
 							traits = { army_entrenchment_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_entrenchment_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_entrenchment_disabled } }
-							#}
 						}
 					}
 				}
@@ -8093,6 +8569,7 @@ randomise_army_entrenchment_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -8105,17 +8582,10 @@ randomise_army_entrenchment_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_entrenchment_esicolor
+							idea_token = ba_army_entrenchment
 							ledger = army
 							cost = 100
 							traits = { army_entrenchment_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_entrenchment_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_entrenchment_disabled } }
-							#}
 						}
 					}
 				}
@@ -8125,6 +8595,7 @@ randomise_army_entrenchment_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -8137,17 +8608,10 @@ randomise_army_entrenchment_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_entrenchment_esicolor
+							idea_token = ba_army_entrenchment
 							ledger = army
 							cost = 200
 							traits = { army_entrenchment_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_entrenchment_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_entrenchment_disabled } }
-							#}
 						}
 					}
 				}
@@ -8174,6 +8638,7 @@ randomise_army_logistics_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -8186,17 +8651,10 @@ randomise_army_logistics_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_logistics_esicolor
+							idea_token = bb_army_logistics
 							ledger = army
 							cost = 50
 							traits = { army_logistics_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_logistics_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_logistics_disabled } }
-							#}
 						}
 					}
 				}
@@ -8218,17 +8676,10 @@ randomise_army_logistics_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_logistics_esicolor
+							idea_token = bb_army_logistics
 							ledger = army
 							cost = 100
 							traits = { army_logistics_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_logistics_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_logistics_disabled } }
-							#}
 						}
 					}
 				}
@@ -8238,6 +8689,7 @@ randomise_army_logistics_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -8250,17 +8702,10 @@ randomise_army_logistics_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_logistics_esicolor
+							idea_token = bb_army_logistics
 							ledger = army
 							cost = 200
 							traits = { army_logistics_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_logistics_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_logistics_disabled } }
-							#}
 						}
 					}
 				}
@@ -8287,6 +8732,7 @@ randomise_army_regrouping_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -8299,17 +8745,10 @@ randomise_army_regrouping_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_regrouping_esicolor
+							idea_token = bc_army_regrouping
 							ledger = army
 							cost = 50
 							traits = { army_regrouping_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_regrouping_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_regrouping_disabled } }
-							#}
 						}
 					}
 				}
@@ -8331,17 +8770,10 @@ randomise_army_regrouping_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_regrouping_esicolor
+							idea_token = bc_army_regrouping
 							ledger = army
 							cost = 100
 							traits = { army_regrouping_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_regrouping_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_regrouping_disabled } }
-							#}
 						}
 					}
 				}
@@ -8351,6 +8783,7 @@ randomise_army_regrouping_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -8363,17 +8796,10 @@ randomise_army_regrouping_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_regrouping_esicolor
+							idea_token = bc_army_regrouping
 							ledger = army
 							cost = 200
 							traits = { army_regrouping_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_regrouping_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_regrouping_disabled } }
-							#}
 						}
 					}
 				}
@@ -8400,6 +8826,7 @@ randomise_army_concealment_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -8412,17 +8839,10 @@ randomise_army_concealment_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_concealment
+							idea_token = bd_army_concealment
 							ledger = army
 							cost = 50
 							traits = { army_concealment_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_concealment_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_concealment_disabled } }
-							#}
 						}
 					}
 				}
@@ -8444,17 +8864,10 @@ randomise_army_concealment_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_concealment
+							idea_token = bd_army_concealment
 							ledger = army
 							cost = 100
 							traits = { army_concealment_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_concealment_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_concealment_disabled } }
-							#}
 						}
 					}
 				}
@@ -8464,6 +8877,7 @@ randomise_army_concealment_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -8476,17 +8890,10 @@ randomise_army_concealment_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_concealment
+							idea_token = bd_army_concealment
 							ledger = army
 							cost = 200
 							traits = { army_concealment_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_concealment_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_concealment_disabled } }
-							#}
 						}
 					}
 				}
@@ -8513,6 +8920,7 @@ randomise_army_radio_intelligence_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -8525,17 +8933,10 @@ randomise_army_radio_intelligence_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_radio_intelligence
+							idea_token = be_army_radio_intelligence
 							ledger = army
 							cost = 50
 							traits = { army_radio_intelligence_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_radio_intelligence_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_radio_intelligence_disabled } }
-							#}
 						}
 					}
 				}
@@ -8557,17 +8958,10 @@ randomise_army_radio_intelligence_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_radio_intelligence
+							idea_token = be_army_radio_intelligence
 							ledger = army
 							cost = 100
 							traits = { army_radio_intelligence_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_radio_intelligence_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_radio_intelligence_disabled } }
-							#}
 						}
 					}
 				}
@@ -8577,6 +8971,7 @@ randomise_army_radio_intelligence_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -8589,17 +8984,10 @@ randomise_army_radio_intelligence_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_radio_intelligence
+							idea_token = be_army_radio_intelligence
 							ledger = army
 							cost = 200
 							traits = { army_radio_intelligence_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_radio_intelligence_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_radio_intelligence_disabled } }
-							#}
 						}
 					}
 				}
@@ -8626,6 +9014,7 @@ randomise_army_adaptive_engineer_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -8638,17 +9027,10 @@ randomise_army_adaptive_engineer_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_adaptive_engineer
+							idea_token = bf_army_adaptive_engineer
 							ledger = army
 							cost = 50
 							traits = { army_adaptive_engineer_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_adaptive_engineer_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_adaptive_engineer_disabled } }
-							#}
 						}
 					}
 				}
@@ -8670,17 +9052,10 @@ randomise_army_adaptive_engineer_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_adaptive_engineer
+							idea_token = bf_army_adaptive_engineer
 							ledger = army
 							cost = 100
 							traits = { army_adaptive_engineer_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_adaptive_engineer_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_adaptive_engineer_disabled } }
-							#}
 						}
 					}
 				}
@@ -8690,6 +9065,7 @@ randomise_army_adaptive_engineer_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -8702,17 +9078,10 @@ randomise_army_adaptive_engineer_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_adaptive_engineer
+							idea_token = bf_army_adaptive_engineer
 							ledger = army
 							cost = 200
 							traits = { army_adaptive_engineer_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_adaptive_engineer_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_adaptive_engineer_disabled } }
-							#}
 						}
 					}
 				}
@@ -8739,6 +9108,7 @@ randomise_army_jungle_warfare_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -8751,17 +9121,10 @@ randomise_army_jungle_warfare_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_jungle_warfare
+							idea_token = bg_army_jungle_warfare
 							ledger = army
 							cost = 50
 							traits = { army_jungle_warfare_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_jungle_warfare_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_jungle_warfare_disabled } }
-							#}
 						}
 					}
 				}
@@ -8783,17 +9146,10 @@ randomise_army_jungle_warfare_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_jungle_warfare
+							idea_token = bg_army_jungle_warfare
 							ledger = army
 							cost = 100
 							traits = { army_jungle_warfare_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_jungle_warfare_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_jungle_warfare_disabled } }
-							#}
 						}
 					}
 				}
@@ -8803,6 +9159,7 @@ randomise_army_jungle_warfare_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -8815,17 +9172,10 @@ randomise_army_jungle_warfare_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_army_jungle_warfare
+							idea_token = bg_army_jungle_warfare
 							ledger = army
 							cost = 200
 							traits = { army_jungle_warfare_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = army_jungle_warfare_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = army_jungle_warfare_disabled } }
-							#}
 						}
 					}
 				}
@@ -8911,6 +9261,136 @@ remove_high_command_navy = {
 		}
 	}
 }
+generate_high_command_navy = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_amphibious_assault_disabled }
+			has_custom_navy_amphibious_assault = no
+		}
+
+		generate_generic_navy_amphibious_assault = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_amphibious_assault_disabled
+			has_custom_navy_amphibious_assault = yes
+		}
+
+		retire_navy_amphibious_assault = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_fleet_logistics_disabled }
+			has_custom_navy_fleet_logistics = no
+		}
+
+		generate_generic_navy_fleet_logistics = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_fleet_logistics_disabled
+			has_custom_navy_fleet_logistics = yes
+		}
+
+		retire_navy_fleet_logistics = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_naval_air_defense_disabled }
+			has_custom_navy_naval_air_defense = no
+		}
+
+		generate_generic_navy_naval_air_defense = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_naval_air_defense_disabled
+			has_custom_navy_naval_air_defense = yes
+		}
+
+		retire_navy_naval_air_defense = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_anti_submarine_disabled }
+			has_custom_navy_anti_submarine = no
+		}
+
+		generate_generic_navy_anti_submarine = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_anti_submarine_disabled
+			has_custom_navy_anti_submarine = yes
+		}
+
+		retire_navy_anti_submarine = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_submarine_disabled }
+			has_custom_navy_submarine = no
+		}
+
+		generate_generic_navy_submarine = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_submarine_disabled
+			has_custom_navy_submarine = yes
+		}
+
+		retire_navy_submarine = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_capital_ship_disabled }
+			has_custom_navy_capital_ship = no
+		}
+
+		generate_generic_navy_capital_ship = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_capital_ship_disabled
+			has_custom_navy_capital_ship = yes
+		}
+
+		retire_navy_capital_ship = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_screen_disabled }
+			has_custom_navy_screen = no
+		}
+
+		generate_generic_navy_screen = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_screen_disabled
+			has_custom_navy_screen = yes
+		}
+
+		retire_navy_screen = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = navy_carrier_disabled }
+			has_custom_navy_carrier = no
+		}
+
+		generate_generic_navy_carrier = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = navy_carrier_disabled
+			has_custom_navy_carrier = yes
+		}
+
+		retire_navy_carrier = yes
+	}
+}
 
 randomise_navy_amphibious_assault_levels = {
 	every_character = {
@@ -8942,17 +9422,10 @@ randomise_navy_amphibious_assault_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_amphibious_assault_esicolor
+							idea_token = ca_navy_amphibious_assault
 							ledger = navy
 							cost = 50
 							traits = { navy_amphibious_assault_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_amphibious_assault_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_amphibious_assault_disabled } }
-							#}
 						}
 					}
 				}
@@ -8962,6 +9435,7 @@ randomise_navy_amphibious_assault_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -8974,17 +9448,10 @@ randomise_navy_amphibious_assault_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_amphibious_assault_esicolor
+							idea_token = ca_navy_amphibious_assault
 							ledger = navy
 							cost = 100
 							traits = { navy_amphibious_assault_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_amphibious_assault_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_amphibious_assault_disabled } }
-							#}
 						}
 					}
 				}
@@ -8994,6 +9461,7 @@ randomise_navy_amphibious_assault_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -9006,17 +9474,10 @@ randomise_navy_amphibious_assault_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_amphibious_assault_esicolor
+							idea_token = ca_navy_amphibious_assault
 							ledger = navy
 							cost = 200
 							traits = { navy_amphibious_assault_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_amphibious_assault_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_amphibious_assault_disabled } }
-							#}
 						}
 					}
 				}
@@ -9055,17 +9516,10 @@ randomise_navy_fleet_logistics_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_fleet_logistics_esicolor
+							idea_token = cb_navy_fleet_logistics
 							ledger = navy
 							cost = 50
 							traits = { navy_fleet_logistics_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_fleet_logistics_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_fleet_logistics_disabled } }
-							#}
 						}
 					}
 				}
@@ -9075,6 +9529,7 @@ randomise_navy_fleet_logistics_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -9087,17 +9542,10 @@ randomise_navy_fleet_logistics_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_fleet_logistics_esicolor
+							idea_token = cb_navy_fleet_logistics
 							ledger = navy
 							cost = 100
 							traits = { navy_fleet_logistics_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_fleet_logistics_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_fleet_logistics_disabled } }
-							#}
 						}
 					}
 				}
@@ -9107,6 +9555,7 @@ randomise_navy_fleet_logistics_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -9119,17 +9568,10 @@ randomise_navy_fleet_logistics_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_fleet_logistics_esicolor
+							idea_token = cb_navy_fleet_logistics
 							ledger = navy
 							cost = 200
 							traits = { navy_fleet_logistics_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_fleet_logistics_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_fleet_logistics_disabled } }
-							#}
 						}
 					}
 				}
@@ -9168,17 +9610,10 @@ randomise_navy_naval_air_defense_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_naval_air_defense_esicolor
+							idea_token = cc_navy_naval_air_defense
 							ledger = navy
 							cost = 50
 							traits = { navy_naval_air_defense_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_naval_air_defense_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_naval_air_defense_disabled } }
-							#}
 						}
 					}
 				}
@@ -9188,6 +9623,7 @@ randomise_navy_naval_air_defense_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -9200,17 +9636,10 @@ randomise_navy_naval_air_defense_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_naval_air_defense_esicolor
+							idea_token = cc_navy_naval_air_defense
 							ledger = navy
 							cost = 100
 							traits = { navy_naval_air_defense_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_naval_air_defense_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_naval_air_defense_disabled } }
-							#}
 						}
 					}
 				}
@@ -9220,6 +9649,7 @@ randomise_navy_naval_air_defense_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -9232,17 +9662,10 @@ randomise_navy_naval_air_defense_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_naval_air_defense_esicolor
+							idea_token = cc_navy_naval_air_defense
 							ledger = navy
 							cost = 200
 							traits = { navy_naval_air_defense_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_naval_air_defense_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_naval_air_defense_disabled } }
-							#}
 						}
 					}
 				}
@@ -9269,6 +9692,7 @@ randomise_navy_anti_submarine_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -9281,17 +9705,10 @@ randomise_navy_anti_submarine_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_anti_submarine
+							idea_token = cd_navy_anti_submarine
 							ledger = navy
 							cost = 50
 							traits = { navy_anti_submarine_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_anti_submarine_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_anti_submarine_disabled } }
-							#}
 						}
 					}
 				}
@@ -9313,17 +9730,10 @@ randomise_navy_anti_submarine_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_anti_submarine
+							idea_token = cd_navy_anti_submarine
 							ledger = navy
 							cost = 100
 							traits = { navy_anti_submarine_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_anti_submarine_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_anti_submarine_disabled } }
-							#}
 						}
 					}
 				}
@@ -9333,6 +9743,7 @@ randomise_navy_anti_submarine_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -9345,17 +9756,10 @@ randomise_navy_anti_submarine_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_anti_submarine
+							idea_token = cd_navy_anti_submarine
 							ledger = navy
 							cost = 200
 							traits = { navy_anti_submarine_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_anti_submarine_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_anti_submarine_disabled } }
-							#}
 						}
 					}
 				}
@@ -9394,17 +9798,10 @@ randomise_navy_submarine_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_submarine
+							idea_token = ce_navy_submarine
 							ledger = navy
 							cost = 50
 							traits = { navy_submarine_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_submarine_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_submarine_disabled } }
-							#}
 						}
 					}
 				}
@@ -9414,6 +9811,7 @@ randomise_navy_submarine_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -9426,17 +9824,10 @@ randomise_navy_submarine_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_submarine
+							idea_token = ce_navy_submarine
 							ledger = navy
 							cost = 100
 							traits = { navy_submarine_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_submarine_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_submarine_disabled } }
-							#}
 						}
 					}
 				}
@@ -9446,6 +9837,7 @@ randomise_navy_submarine_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -9458,17 +9850,10 @@ randomise_navy_submarine_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_submarine
+							idea_token = ce_navy_submarine
 							ledger = navy
 							cost = 200
 							traits = { navy_submarine_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_submarine_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_submarine_disabled } }
-							#}
 						}
 					}
 				}
@@ -9507,17 +9892,10 @@ randomise_navy_capital_ship_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_capital_ship
+							idea_token = cf_navy_capital_ship
 							ledger = navy
 							cost = 50
 							traits = { navy_capital_ship_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_capital_ship_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_capital_ship_disabled } }
-							#}
 						}
 					}
 				}
@@ -9527,6 +9905,7 @@ randomise_navy_capital_ship_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -9539,17 +9918,10 @@ randomise_navy_capital_ship_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_capital_ship
+							idea_token = cf_navy_capital_ship
 							ledger = navy
 							cost = 100
 							traits = { navy_capital_ship_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_capital_ship_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_capital_ship_disabled } }
-							#}
 						}
 					}
 				}
@@ -9559,6 +9931,7 @@ randomise_navy_capital_ship_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -9571,17 +9944,10 @@ randomise_navy_capital_ship_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_capital_ship
+							idea_token = cf_navy_capital_ship
 							ledger = navy
 							cost = 200
 							traits = { navy_capital_ship_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_capital_ship_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_capital_ship_disabled } }
-							#}
 						}
 					}
 				}
@@ -9620,17 +9986,10 @@ randomise_navy_screen_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_screen
+							idea_token = cg_navy_screen
 							ledger = navy
 							cost = 50
 							traits = { navy_screen_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_screen_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_screen_disabled } }
-							#}
 						}
 					}
 				}
@@ -9640,6 +9999,7 @@ randomise_navy_screen_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -9652,17 +10012,10 @@ randomise_navy_screen_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_screen
+							idea_token = cg_navy_screen
 							ledger = navy
 							cost = 100
 							traits = { navy_screen_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_screen_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_screen_disabled } }
-							#}
 						}
 					}
 				}
@@ -9672,6 +10025,7 @@ randomise_navy_screen_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -9684,17 +10038,10 @@ randomise_navy_screen_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_screen
+							idea_token = cg_navy_screen
 							ledger = navy
 							cost = 200
 							traits = { navy_screen_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_screen_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_screen_disabled } }
-							#}
 						}
 					}
 				}
@@ -9733,17 +10080,10 @@ randomise_navy_carrier_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_carrier
+							idea_token = ch_navy_carrier
 							ledger = navy
 							cost = 50
 							traits = { navy_carrier_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_carrier_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_carrier_disabled } }
-							#}
 						}
 					}
 				}
@@ -9753,6 +10093,7 @@ randomise_navy_carrier_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -9765,17 +10106,10 @@ randomise_navy_carrier_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_carrier
+							idea_token = ch_navy_carrier
 							ledger = navy
 							cost = 100
 							traits = { navy_carrier_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_carrier_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_carrier_disabled } }
-							#}
 						}
 					}
 				}
@@ -9785,6 +10119,7 @@ randomise_navy_carrier_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -9797,17 +10132,10 @@ randomise_navy_carrier_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_navy_carrier
+							idea_token = ch_navy_carrier
 							ledger = navy
 							cost = 200
 							traits = { navy_carrier_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = navy_carrier_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = navy_carrier_disabled } }
-							#}
 						}
 					}
 				}
@@ -9893,6 +10221,136 @@ remove_high_command_air = {
 		}
 	}
 }
+generate_high_command_air = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_air_superiority_disabled }
+			has_custom_air_air_superiority = no
+		}
+
+		generate_generic_air_air_superiority = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_air_superiority_disabled
+			has_custom_air_air_superiority = yes
+		}
+
+		retire_air_air_superiority = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_bomber_interception_disabled }
+			has_custom_air_bomber_interception = no
+		}
+
+		generate_generic_air_bomber_interception = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_bomber_interception_disabled
+			has_custom_air_bomber_interception = yes
+		}
+
+		retire_air_bomber_interception = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_close_air_support_disabled }
+			has_custom_air_close_air_support = no
+		}
+
+		generate_generic_air_close_air_support = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_close_air_support_disabled
+			has_custom_air_close_air_support = yes
+		}
+
+		retire_air_close_air_support = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_naval_strike_disabled }
+			has_custom_air_naval_strike = no
+		}
+
+		generate_generic_air_naval_strike = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_naval_strike_disabled
+			has_custom_air_naval_strike = yes
+		}
+
+		retire_air_naval_strike = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_tactical_bombing_disabled }
+			has_custom_air_tactical_bombing = no
+		}
+
+		generate_generic_air_tactical_bombing = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_tactical_bombing_disabled
+			has_custom_air_tactical_bombing = yes
+		}
+
+		retire_air_tactical_bombing = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_strategic_bombing_disabled }
+			has_custom_air_strategic_bombing = no
+		}
+
+		generate_generic_air_strategic_bombing = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_strategic_bombing_disabled
+			has_custom_air_strategic_bombing = yes
+		}
+
+		retire_air_strategic_bombing = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_airborne_disabled }
+			has_custom_air_airborne = no
+		}
+
+		generate_generic_air_airborne = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_airborne_disabled
+			has_custom_air_airborne = yes
+		}
+
+		retire_air_airborne = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = air_air_combat_training_disabled }
+			has_custom_air_air_combat_training = no
+		}
+
+		generate_generic_air_air_combat_training = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = air_air_combat_training_disabled
+			has_custom_air_air_combat_training = yes
+		}
+
+		retire_air_air_combat_training = yes
+	}
+}
 
 randomise_air_air_superiority_levels = {
 	every_character = {
@@ -9924,17 +10382,10 @@ randomise_air_air_superiority_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_air_superiority_esicolor
+							idea_token = da_air_air_superiority
 							ledger = air
 							cost = 50
 							traits = { air_air_superiority_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_air_superiority_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_air_superiority_disabled } }
-							#}
 						}
 					}
 				}
@@ -9944,6 +10395,7 @@ randomise_air_air_superiority_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -9956,17 +10408,10 @@ randomise_air_air_superiority_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_air_superiority_esicolor
+							idea_token = da_air_air_superiority
 							ledger = air
 							cost = 100
 							traits = { air_air_superiority_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_air_superiority_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_air_superiority_disabled } }
-							#}
 						}
 					}
 				}
@@ -9976,6 +10421,7 @@ randomise_air_air_superiority_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -9988,17 +10434,10 @@ randomise_air_air_superiority_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_air_superiority_esicolor
+							idea_token = da_air_air_superiority
 							ledger = air
 							cost = 200
 							traits = { air_air_superiority_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_air_superiority_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_air_superiority_disabled } }
-							#}
 						}
 					}
 				}
@@ -10025,6 +10464,7 @@ randomise_air_bomber_interception_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -10037,17 +10477,10 @@ randomise_air_bomber_interception_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_bomber_interception
+							idea_token = db_air_bomber_interception
 							ledger = air
 							cost = 50
 							traits = { air_bomber_interception_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_bomber_interception_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_bomber_interception_disabled } }
-							#}
 						}
 					}
 				}
@@ -10069,17 +10502,10 @@ randomise_air_bomber_interception_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_bomber_interception
+							idea_token = db_air_bomber_interception
 							ledger = air
 							cost = 100
 							traits = { air_bomber_interception_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_bomber_interception_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_bomber_interception_disabled } }
-							#}
 						}
 					}
 				}
@@ -10089,6 +10515,7 @@ randomise_air_bomber_interception_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -10101,17 +10528,10 @@ randomise_air_bomber_interception_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_bomber_interception
+							idea_token = db_air_bomber_interception
 							ledger = air
 							cost = 200
 							traits = { air_bomber_interception_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_bomber_interception_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_bomber_interception_disabled } }
-							#}
 						}
 					}
 				}
@@ -10138,6 +10558,7 @@ randomise_air_close_air_support_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -10150,17 +10571,10 @@ randomise_air_close_air_support_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_close_air_support_esicolor
+							idea_token = dc_air_close_air_support
 							ledger = air
 							cost = 50
 							traits = { air_close_air_support_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_close_air_support_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_close_air_support_disabled } }
-							#}
 						}
 					}
 				}
@@ -10182,17 +10596,10 @@ randomise_air_close_air_support_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_close_air_support_esicolor
+							idea_token = dc_air_close_air_support
 							ledger = air
 							cost = 100
 							traits = { air_close_air_support_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_close_air_support_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_close_air_support_disabled } }
-							#}
 						}
 					}
 				}
@@ -10202,6 +10609,7 @@ randomise_air_close_air_support_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -10214,17 +10622,10 @@ randomise_air_close_air_support_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_close_air_support_esicolor
+							idea_token = dc_air_close_air_support
 							ledger = air
 							cost = 200
 							traits = { air_close_air_support_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_close_air_support_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_close_air_support_disabled } }
-							#}
 						}
 					}
 				}
@@ -10263,17 +10664,10 @@ randomise_air_naval_strike_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_naval_strike
+							idea_token = dd_air_naval_strike
 							ledger = air
 							cost = 50
 							traits = { air_naval_strike_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_naval_strike_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_naval_strike_disabled } }
-							#}
 						}
 					}
 				}
@@ -10283,6 +10677,7 @@ randomise_air_naval_strike_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_3
 					}
@@ -10295,17 +10690,10 @@ randomise_air_naval_strike_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_naval_strike
+							idea_token = dd_air_naval_strike
 							ledger = air
 							cost = 100
 							traits = { air_naval_strike_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_naval_strike_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_naval_strike_disabled } }
-							#}
 						}
 					}
 				}
@@ -10315,6 +10703,7 @@ randomise_air_naval_strike_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -10327,17 +10716,10 @@ randomise_air_naval_strike_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_naval_strike
+							idea_token = dd_air_naval_strike
 							ledger = air
 							cost = 200
 							traits = { air_naval_strike_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_naval_strike_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_naval_strike_disabled } }
-							#}
 						}
 					}
 				}
@@ -10364,6 +10746,7 @@ randomise_air_tactical_bombing_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -10376,17 +10759,10 @@ randomise_air_tactical_bombing_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_tactical_bombing_esicolor
+							idea_token = de_air_tactical_bombing
 							ledger = air
 							cost = 50
 							traits = { air_tactical_bombing_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_tactical_bombing_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_tactical_bombing_disabled } }
-							#}
 						}
 					}
 				}
@@ -10408,17 +10784,10 @@ randomise_air_tactical_bombing_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_tactical_bombing_esicolor
+							idea_token = de_air_tactical_bombing
 							ledger = air
 							cost = 100
 							traits = { air_tactical_bombing_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_tactical_bombing_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_tactical_bombing_disabled } }
-							#}
 						}
 					}
 				}
@@ -10428,6 +10797,7 @@ randomise_air_tactical_bombing_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -10440,17 +10810,10 @@ randomise_air_tactical_bombing_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_tactical_bombing_esicolor
+							idea_token = de_air_tactical_bombing
 							ledger = air
 							cost = 200
 							traits = { air_tactical_bombing_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_tactical_bombing_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_tactical_bombing_disabled } }
-							#}
 						}
 					}
 				}
@@ -10477,6 +10840,7 @@ randomise_air_strategic_bombing_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -10489,17 +10853,10 @@ randomise_air_strategic_bombing_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_strategic_bombing_esicolor
+							idea_token = df_air_strategic_bombing
 							ledger = air
 							cost = 50
 							traits = { air_strategic_bombing_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_strategic_bombing_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_strategic_bombing_disabled } }
-							#}
 						}
 					}
 				}
@@ -10521,17 +10878,10 @@ randomise_air_strategic_bombing_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_strategic_bombing_esicolor
+							idea_token = df_air_strategic_bombing
 							ledger = air
 							cost = 100
 							traits = { air_strategic_bombing_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_strategic_bombing_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_strategic_bombing_disabled } }
-							#}
 						}
 					}
 				}
@@ -10541,6 +10891,7 @@ randomise_air_strategic_bombing_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -10553,17 +10904,10 @@ randomise_air_strategic_bombing_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_strategic_bombing_esicolor
+							idea_token = df_air_strategic_bombing
 							ledger = air
 							cost = 200
 							traits = { air_strategic_bombing_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_strategic_bombing_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_strategic_bombing_disabled } }
-							#}
 						}
 					}
 				}
@@ -10590,6 +10934,7 @@ randomise_air_airborne_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -10602,17 +10947,10 @@ randomise_air_airborne_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_airborne
+							idea_token = dg_air_airborne
 							ledger = air
 							cost = 50
 							traits = { air_airborne_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_airborne_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_airborne_disabled } }
-							#}
 						}
 					}
 				}
@@ -10634,17 +10972,10 @@ randomise_air_airborne_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_airborne
+							idea_token = dg_air_airborne
 							ledger = air
 							cost = 100
 							traits = { air_airborne_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_airborne_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_airborne_disabled } }
-							#}
 						}
 					}
 				}
@@ -10654,6 +10985,7 @@ randomise_air_airborne_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -10666,17 +10998,10 @@ randomise_air_airborne_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_airborne
+							idea_token = dg_air_airborne
 							ledger = air
 							cost = 200
 							traits = { air_airborne_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_airborne_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_airborne_disabled } }
-							#}
 						}
 					}
 				}
@@ -10703,6 +11028,7 @@ randomise_air_air_combat_training_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_2
 						has_global_flag = military_advisor_levels_3
 					}
@@ -10715,17 +11041,10 @@ randomise_air_air_combat_training_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_air_combat_training_esicolor
+							idea_token = dh_air_air_combat_training
 							ledger = air
 							cost = 50
 							traits = { air_air_combat_training_1 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_air_combat_training_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_air_combat_training_disabled } }
-							#}
 						}
 					}
 				}
@@ -10756,17 +11075,10 @@ randomise_air_air_combat_training_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_air_combat_training_esicolor
+							idea_token = dh_air_air_combat_training
 							ledger = air
 							cost = 100
 							traits = { air_air_combat_training_2 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_air_combat_training_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_air_combat_training_disabled } }
-							#}
 						}
 					}
 				}
@@ -10776,6 +11088,7 @@ randomise_air_air_combat_training_levels = {
 					factor = 0
 
 					OR = {
+						has_global_flag = military_advisor_levels_default
 						has_global_flag = military_advisor_levels_1
 						has_global_flag = military_advisor_levels_2
 					}
@@ -10788,23 +11101,42 @@ randomise_air_air_combat_training_levels = {
 					add_advisor_role = {
 						advisor = {
 							slot = high_command
-							idea_token = generic_air_air_combat_training_esicolor
+							idea_token = dh_air_air_combat_training
 							ledger = air
 							cost = 200
 							traits = { air_air_combat_training_3 }
-
-							#visible = {
-							#	NOT = { has_country_flag = air_air_combat_training_disabled }
-							#}
-							#available = {
-							#	hidden_trigger = { NOT = { has_country_flag = air_air_combat_training_disabled } }
-							#}
 						}
 					}
 				}
 			}
 		}
 	}
+}
+
+generate_advisors = {
+	generate_political_advisors = yes
+	generate_theorists = yes
+	generate_army_chiefs = yes
+	generate_navy_chiefs = yes
+	generate_air_chiefs = yes
+	generate_high_command_army_specific = yes
+	generate_high_command_army_generic = yes
+	generate_high_command_navy = yes
+	generate_high_command_air = yes
+
+	retire_custom_named_advisors = yes
+	setup_generic_advisor_portraits = yes
+}
+retire_generic_advisors = {
+	if = { limit = { has_custom_staunch_monarchist = no } retire_staunch_monarchist = yes }
+	if = { limit = { has_custom_democratic_reformer = no } retire_democratic_reformer = yes }
+	if = { limit = { has_custom_fascist_demagogue = no } retire_fascist_demagogue = yes }
+	if = { limit = { has_custom_communist_revolutionary = no } retire_communist_revolutionary = yes }
+	if = { limit = { has_custom_head_of_intelligence = no } retire_head_of_intelligence = yes }
+	if = { limit = { has_custom_code_breaker = no } retire_code_breaker = yes }
+	if = { limit = { has_custom_encryption_expert = no } retire_encryption_expert = yes }
+	if = { limit = { has_custom_nuclear_scientist = no } retire_nuclear_scientist = yes }
+	if = { limit = { has_custom_rocket_scientist = no } retire_rocket_scientist = yes }
 }
 
 enable_all_advisors = {
@@ -10829,74 +11161,53 @@ enable_all_advisors = {
 randomise_advisors = {
 	clear_advisor_disabled_flags = yes
 
-	remove_political_advisor = yes
-	remove_political_advisor = yes
-	remove_political_advisor = yes
-	remove_political_advisor = yes
-	remove_political_advisor = yes
-	remove_political_advisor = yes
-	remove_political_advisor = yes
-	remove_political_advisor = yes
-	remove_political_advisor = yes
-	remove_political_advisor = yes
-	remove_political_advisor = yes
-	remove_political_advisor = yes
-
-	remove_spymaster = yes
-	remove_spymaster = yes
-
-	remove_theorist = yes
-	remove_theorist = yes
-	remove_theorist = yes
-
+	for_loop_effect = {
+		end = 11
+		remove_political_advisor = yes
+	}
+	for_loop_effect = {
+		end = 2
+		remove_spymaster = yes
+	}
+	for_loop_effect = {
+		end = 3
+		remove_theorist = yes
+	}
 	get_branch_specific_military_theorist = yes
 	get_branch_specific_naval_theorist = yes
 	get_branch_specific_air_warfare_theorist = yes
-
-	remove_scientist = yes
-	remove_scientist = yes
-
-	remove_army_chief = yes
-	remove_army_chief = yes
-	remove_army_chief = yes
-	remove_army_chief = yes
-	remove_army_chief = yes
-	remove_army_chief = yes
-	remove_army_chief = yes
-
-	remove_navy_chief = yes
-	remove_navy_chief = yes
-	remove_navy_chief = yes
-	remove_navy_chief = yes
-
-	remove_air_chief = yes
-	remove_air_chief = yes
-	remove_air_chief = yes
-
-	remove_high_command_army_specific = yes
-	remove_high_command_army_specific = yes
-	remove_high_command_army_specific = yes
-	remove_high_command_army_specific = yes
-
-	remove_high_command_army_generic = yes
-	remove_high_command_army_generic = yes
-	remove_high_command_army_generic = yes
-	remove_high_command_army_generic = yes
-	remove_high_command_army_generic = yes
-
-	remove_high_command_navy = yes
-	remove_high_command_navy = yes
-	remove_high_command_navy = yes
-	remove_high_command_navy = yes
-	remove_high_command_navy = yes
-	remove_high_command_navy = yes
-
-	remove_high_command_air = yes
-	remove_high_command_air = yes
-	remove_high_command_air = yes
-	remove_high_command_air = yes
-	remove_high_command_air = yes
-	remove_high_command_air = yes
+	for_loop_effect = {
+		end = 2
+		remove_scientist = yes
+	}
+	for_loop_effect = {
+		end = 7
+		remove_army_chief = yes
+	}
+	for_loop_effect = {
+		end = 4
+		remove_navy_chief = yes
+	}
+	for_loop_effect = {
+		end = 3
+		remove_air_chief = yes
+	}
+	for_loop_effect = {
+		end = 4
+		remove_high_command_army_specific = yes
+	}
+	for_loop_effect = {
+		end = 5
+		remove_high_command_army_generic = yes
+	}
+	for_loop_effect = {
+		end = 6
+		remove_high_command_navy = yes
+	}
+	for_loop_effect = {
+		end = 6
+		remove_high_command_air = yes
+	}
 }
 
 randomise_military_advisor_levels = {
@@ -11172,48 +11483,6 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = HUN_her_serene_highness
-				}
-			}
-			if = { # Miklós Horthy Jr.
-				limit = { has_trait = editor }
-
-				set_character_name = HUN_miklos_horthy_jr
-				remove_trait = {
-					slot = political_advisor
-					trait = editor
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = modernizer_and_diplomat
-				}
-
-				if = {
-					limit = { has_dlc = "Gotterdammerung" }
-
-					set_portraits = {
-						civilian = {
-							small = GFX_portrait_HUN_miklos_horthy_jr_small
-						}
-						army = {
-							small = GFX_portrait_HUN_miklos_horthy_jr_small
-						}
-						navy = {
-							small = GFX_portrait_HUN_miklos_horthy_jr_small
-						}
-					}
-				}
-				else = {
-					set_portraits = {
-						civilian = {
-							small = GFX_portrait_europe_generic_fascism_3_small
-						}
-						army = {
-							small = GFX_portrait_europe_generic_fascism_3_small
-						}
-						navy = {
-							small = GFX_portrait_europe_generic_fascism_3_small
-						}
-					}
 				}
 			}
 			if = { # Kálmán Kánya
@@ -13219,6 +13488,9 @@ adjust_named_advisor_traits = {
 		}
 	}
 }
+retire_custom_named_advisors = {
+	random_country = { limit = { has_character = OAE_miklos_horthy_jr } retire_character = OAE_miklos_horthy_jr }
+}
 
 remove_tank_designer = {
 	random_list = {
@@ -13761,9 +14033,12 @@ setup_default_advisors = {
 	set_country_flag = armaments_organizer_disabled
 
 	set_country_flag = code_breaker_disabled
+	retire_code_breaker = yes
 	set_country_flag = encryption_expert_disabled
+	retire_encryption_expert = yes
 
 	set_country_flag = rocket_scientist_disabled
+	retire_rocket_scientist = yes
 
 	set_country_flag = army_chief_drill_disabled
 	set_country_flag = army_chief_planning_disabled
@@ -13821,10 +14096,14 @@ setup_basegame_advisors = {
 	set_country_flag = armaments_organizer_disabled
 
 	set_country_flag = code_breaker_disabled
+	retire_code_breaker = yes
 	set_country_flag = encryption_expert_disabled
+	retire_encryption_expert = yes
 
 	set_country_flag = nuclear_scientist_disabled
+	retire_nuclear_scientist = yes
 	set_country_flag = rocket_scientist_disabled
+	retire_rocket_scientist = yes
 
 	set_country_flag = army_chief_maneuver_disabled
 	set_country_flag = army_chief_drill_disabled

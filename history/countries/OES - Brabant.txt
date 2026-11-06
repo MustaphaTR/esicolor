@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = OES_lou_de_visser
+recruit_character = OES_saul_de_groot
+random_character = { limit = { is_character = OES_saul_de_groot } 35 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

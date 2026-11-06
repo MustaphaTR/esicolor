@@ -21,10 +21,12 @@ set_politics = {
 }
 
 if = {
-	limit = {
-		has_dlc = "By Blood Alone"
-	}
+	limit = { has_dlc = "By Blood Alone" }
+
 	recruit_character = OOZ_vittorio_emanuele_iii
+
+	recruit_character = OOZ_pietro_d_acquarone
+	random_character = { limit = { is_character = OOZ_pietro_d_acquarone } 114 = { add_to_array = { state_advisors = PREV } } }
 
 	set_popularities = {
 		democratic = 15

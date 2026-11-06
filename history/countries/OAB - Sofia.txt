@@ -21,6 +21,12 @@ set_politics = {
 }
 
 recruit_character = OAB_boris_iii
+recruit_character = OAB_dobri_bozhilov
+random_character = { limit = { is_character = OAB_dobri_bozhilov } 48 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OAB_georgi_ivanov_kyoseivanov
+random_character = { limit = { is_character = OAB_georgi_ivanov_kyoseivanov } 48 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OAB_theodosi_daskalov
+random_character = { limit = { is_character = OAB_theodosi_daskalov } 48 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

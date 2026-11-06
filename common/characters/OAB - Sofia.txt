@@ -1,16 +1,73 @@
 ﻿characters={
 	OAB_boris_iii={
 		name=BUL_boris_iii
-		portraits={
-			civilian={
-				large=GFX_portrait_BUL_boris_iii
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_BUL_boris_iii } }
+
 		country_leader={
 			traits={ tsar_unifier }
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OAB_dobri_bozhilov={
+		name=BUL_dobri_bozhilov
+		portraits={ civilian={ small=GFX_idea_bul_dobri_bozhilov } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OAB_p_captain_of_industry
+			traits={ captain_of_industry }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					48={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+	}
+	OAB_georgi_ivanov_kyoseivanov={
+		name=BUL_georgi_ivanov_kyoseivanov
+		portraits={ civilian={ small=GFX_idea_bul_georgi_kyoseivanov } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OAB_i_backroom_backstabber
+			traits={ backroom_backstabber }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					48={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=5 }
+		}
+	}
+	OAB_theodosi_daskalov={
+		name=BUL_theodosi_daskalov
+		portraits={ army={ small=GFX_idea_bul_theodosi_daskalov } }
+
+		advisor={
+			slot=theorist
+			idea_token=OAB_a_military_theorist
+			ledger=army
+			cost=100
+			traits={ military_theorist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					48={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

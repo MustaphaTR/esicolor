@@ -378,6 +378,13 @@ Version 2.3.9 (XX.XX.2026):
 - Added buttons to cancel State GUI actions except Move Capital.
 -- Doing so refunds Political Power proportional to remaining time on the action.
 -- AI will now cancel ongoing claims if they are attacked by someone else.
+- Reworked the way advisors are defined for better performance.
+-- Generic advisors, with a few exceptions, are now created after the setup, rather than when the game is loading, so unavailable advisors will actually not exist instead of being hidden with a visiblity check.
+--- This increases the time the setup takes once you click Start, especially if you are playing with all advisors, but it is a trade worth for general performance.
+-- Named advisors are now proper characters, instead of reskinned generic advisors.
+-- Both exception generic advisors and named advisors are properly retired if they are not to be available, instead of just hidden with a visiblity check.
+-- Named military advisors in named advisors only mode now get their correct trait level from basegame.
+-- Fixed the advisor ordering that got messed up from changes PDX did in 1.19.4.
 - Added a setup option to enable special traits for named MIOs.
 - Foreign Commander Recruitment event now lists up to 10 traits the leader has as well.
 - Added Keisuke Okada as the Non-Aligned and Democratic leader of Hokuriku.

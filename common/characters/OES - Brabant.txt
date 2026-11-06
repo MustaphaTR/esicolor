@@ -1,16 +1,50 @@
 ﻿characters={
 	OES_lou_de_visser={
 		name=HOL_lou_de_visser
-		portraits={
-			civilian={
-				large=GFX_portrait_HOL_lou_de_visser # Correct portrait is DLC locked, but identical GFX definition pointing at a generic portrait exist in basegame as well.
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_HOL_lou_de_visser } }
+
 		country_leader={
 			traits={ veteran_communist }
 			ideology=leninism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OES_saul_de_groot={
+		name=HOL_saul_de_groot
+		portraits={ civilian={ small=GFX_idea_HOL_saul_de_groot } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OES_d_communist_revolutionary
+			traits={ communist_revolutionary }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					35={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=30
+				}
+			}
 		}
 	}
 }

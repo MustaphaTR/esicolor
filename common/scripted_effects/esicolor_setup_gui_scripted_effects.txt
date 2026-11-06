@@ -1259,37 +1259,49 @@ setup_gui_start_advisors = {
 	if = {
 		limit = { check_variable = { global.setup_advisors < -2 } }
 
-		every_country = { randomise_advisors = yes }
+		every_country = {
+			randomise_advisors = yes
+			generate_advisors = yes
+		}
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_advisors = -2 } }
 
-		every_country = { setup_basegame_advisors = yes }
+		every_country = {
+			setup_basegame_advisors = yes
+			generate_advisors = yes
+		}
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_advisors = -1 } }
 
-		every_country = { setup_default_advisors = yes }
+		every_country = {
+			setup_default_advisors = yes
+			generate_advisors = yes
+		}
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_advisors = 0 } }
 
-		every_country = { enable_all_advisors = yes }
+		every_country = {
+			enable_all_advisors = yes
+			generate_advisors = yes
+		}
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_advisors = 1 } }
 
-		every_country = { enable_all_advisors = yes }
 		set_global_flag = custom_advisors_only
 		set_global_flag = custom_advisors_only_ownership
+		every_country = { retire_generic_advisors = yes }
 		adjust_named_advisor_traits = yes
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_advisors > 1 } }
 
-		every_country = { enable_all_advisors = yes }
 		set_global_flag = custom_advisors_only
 		set_global_flag = custom_advisors_only_core
+		every_country = { retire_generic_advisors = yes }
 		adjust_named_advisor_traits = yes
 	}
 }
@@ -1299,6 +1311,13 @@ setup_gui_start_military_advisors = {
 		limit = { check_variable = { global.setup_military_advisors < -1 } }
 
 		every_country = { randomise_military_advisor_levels = yes }
+	}
+	else_if = {
+		limit = { check_variable = { global.setup_military_advisors = -1 } }
+
+		set_global_flag = military_advisor_levels_default
+		every_country = { randomise_military_advisor_levels = yes }
+		clr_global_flag = military_advisor_levels_default
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_military_advisors = 0 } }

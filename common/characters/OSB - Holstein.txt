@@ -7,17 +7,61 @@
 				small=GFX_portrait_GER_karl_donitz_small
 			}
 		}
+
 		country_leader={
 			traits={ navy_chief_commerce_raiding_3 }
 			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		country_leader={
 			traits={ navy_chief_commerce_raiding_3 }
 			ideology=oligarchism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OSB_alfred_saalwachter={
+		name=GER_alfred_saalwachter
+		portraits={
+			army={
+				large=GFX_portrait_GER_alfred_saalwachter
+				small=GFX_portrait_GER_alfred_saalwachter_small
+			}
+		}
+
+		advisor={
+			slot=theorist
+			idea_token=OSB_i_submarine_specialist
+			ledger=navy
+			cost=150
+			traits={ submarine_specialist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					58={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OSB_viktor_schutze={
+		name=GER_viktor_schutze
+		portraits={ army={ small=GFX_idea_viktor_schutze } }
+
+		advisor={
+			slot=high_command
+			idea_token=OSB_ce_navy_submarine
+			ledger=navy
+			cost=50
+			traits={ navy_submarine_1 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					58={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

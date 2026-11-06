@@ -1,15 +1,41 @@
 ﻿characters={
 	OAS_milan_grol={
 		name=YUG_milan_grol
-		portraits={
-			civilian={
-				large=GFX_portrait_YUG_milan_grol
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_YUG_milan_grol } }
+
 		country_leader={
 			ideology=liberalism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OAS_slobodan_jovanovic={
+		name=YUG_slobodan_jovanovic
+		portraits={ civilian={ small=GFX_idea_YUG_slobodan_jovanovic } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OAS_e_popular_figurehead
+			traits={ popular_figurehead }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					45={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					has_stability > 0.35
+					has_stability < 0.5
+
+					add=9
+				}
+			}
 		}
 	}
 }

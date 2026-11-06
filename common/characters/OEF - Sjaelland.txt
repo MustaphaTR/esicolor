@@ -3,15 +3,272 @@
 		name=DEN_thorvald_stauning
 		portraits={
 			civilian={
-				large = GFX_portrait_Thorvald_Stauning
-				small = GFX_portrait_DEN_thorvald_stauning_small
+				large=GFX_portrait_Thorvald_Stauning
+				small=GFX_portrait_DEN_thorvald_stauning_small
 			}
 		}
+
 		country_leader={
 			traits={ DEN_socialdemokrat }
 			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OEF_hans_hedtoft={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=DEN_hans_hedtoft
+			portraits={ civilian={ small=GFX_portrait_DEN_hans_hedtoft_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OEF_i_backroom_backstabber
+				traits={ backroom_backstabber }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						37={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=DEN_hans_hedtoft
+			portraits={ civilian={ small=GFX_Portrait_Europe_Generic_3_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OEF_i_backroom_backstabber
+				traits={ backroom_backstabber }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						37={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+	}
+	OEF_karl_kristian_steincke={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=DEN_karl_kristian_steincke
+			portraits={ civilian={ small=GFX_portrait_DEN_karl_kristian_steincke_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OEF_j_editor
+				traits={ editor }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						37={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=DEN_karl_kristian_steincke
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_1 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OEF_j_editor
+				traits={ editor }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						37={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+	}
+	OEF_vilhelm_buhl={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=DEN_vilhelm_buhl
+			portraits={
+				civilian={
+					large=GFX_portrait_DEN_vilhelm_buhl
+					small=GFX_portrait_DEN_vilhelm_buhl_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=OEF_n_financial_expert
+				traits={ financial_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						37={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=DEN_vilhelm_buhl
+			portraits={
+				civilian={
+					large=GFX_portrait_europe_generic_democratic_1
+					small=GFX_portrait_europe_generic_democratic_1_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=OEF_n_financial_expert
+				traits={ financial_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						37={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	OEF_alsing_andersen={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=DEN_alsing_andersen
+			portraits={ civilian={ small=GFX_portrait_DEN_alsing_andersen_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OEF_q_war_industrialist
+				traits={ war_industrialist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						37={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=DEN_alsing_andersen
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_4 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OEF_q_war_industrialist
+				traits={ war_industrialist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						37={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	OEF_peter_horn={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=DEN_peter_horn
+			portraits={ army={ small=GFX_portrait_DEN_peter_horn_small } }
+
+			advisor={
+				slot=theorist
+				idea_token=OEF_j_air_warfare_theorist
+				ledger=air
+				cost=100
+				traits={ air_warfare_theorist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						37={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=DEN_peter_horn
+			portraits={ army={ small=GFX_idea_generic_air_europe_3 } }
+
+			advisor={
+				slot=theorist
+				idea_token=OEF_j_air_warfare_theorist
+				ledger=air
+				cost=100
+				traits={ air_warfare_theorist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						37={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+	}
+	OEF_niels_bohr={ 
+		name=DEN_niels_bohr
+		portraits={
+			army={
+				large=GFX_portrait_DEN_niels_bohr
+				small=GFX_portrait_DEN_niels_bohr_small
+			}
+		}
+
+		advisor={
+			slot=theorist
+			idea_token=OEF_n_nuclear_scientist
+			ledger=army
+			cost=100
+			traits={ nuclear_scientist }
+			research_bonus={ nuclear=0.15 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					37={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

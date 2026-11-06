@@ -1,16 +1,50 @@
 ﻿characters={
 	OSL_wilhelm_ii={
 		name=GER_wilhelm_ii
-		portraits={
-			civilian={
-				large=GFX_portrait_ger_wilhelm_ii
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_ger_wilhelm_ii } }
+
 		country_leader={
 			traits={ anti_democrat imperial_connections }
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OSL_alfred_hugenberg={
+		name=GER_alfred_hugenberg
+		portraits={ civilian={ small=GFX_idea_GER_alfred_hugenberg } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OSL_a_staunch_monarchist
+			traits={ staunch_monarchist }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=neutrality
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					56={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_neutrality
+					NOT={ has_government=neutrality }
+
+					add=30
+				}
+			}
 		}
 	}
 }

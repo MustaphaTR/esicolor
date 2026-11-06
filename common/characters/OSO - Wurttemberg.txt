@@ -1,43 +1,72 @@
-﻿characters = {
-	OSO_philipp_albrecht = {
-		name = WUR_philipp_albrecht
-		portraits = {
-			civilian = {
-				large = GFX_portrait_WUR_philipp_albrecht
-			}
-		}
-		country_leader = {
-			ideology = despotism
-			expire = "1975.1.1.1"
-			id = -1
+﻿characters={
+	OSO_philipp_albrecht={
+		name=WUR_philipp_albrecht
+		portraits={ civilian={ large=GFX_portrait_WUR_philipp_albrecht } }
+
+		country_leader={
+			ideology=despotism
 		}
 	}
 
-	OSO_ferdinand_porsche = {
-		name = GER_ferdinand_porsche
-		portraits = {
-			army = {
-				large = GFX_portrait_GER_ferdinand_porsche
+	# Scientists
+	OSO_ferdinand_porsche={
+		name=GER_ferdinand_porsche
+		portraits={ army={ large=GFX_portrait_GER_ferdinand_porsche } }
+
+		scientist={
+			traits={ scientist_trait_armored_specialist scientist_trait_gifted_engineer }
+			skills={ specialization_land=3 }
+
+			visible={
+				owner={
+					if={
+						limit={ has_dlc="Arms Against Tyranny" }
+
+						mio:OSO_heavy_tank_organization_custom={ is_mio_trait_completed=GER_mio_trait_involve_porsche_in_special_projects }
+					}
+					else={
+						has_idea=OSO_heavy_tank_manufacturer
+						has_global_flag=custom_designer_traits_enabled
+					}
+				}
 			}
 		}
+	}
 
-		scientist = {
-			traits = { scientist_trait_armored_specialist scientist_trait_gifted_engineer }
-			skills = {
-				specialization_land = 3
+	#Advisors
+	OSO_kurt_schumacher={
+		name=GER_kurt_schumacher
+		portraits={ civilian={ small=GFX_idea_kurt_schumacher } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OSO_b_democratic_reformer
+			traits={ democratic_reformer }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=democratic
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					50={ is_core_of=ROOT }
+				}
 			}
 
-			visible = {
-				owner = {
-					if = {
-						limit = { has_dlc = "Arms Against Tyranny" }
+			ai_will_do={
+				factor=0
 
-						mio:OSO_heavy_tank_organization_custom = { is_mio_trait_completed = GER_mio_trait_involve_porsche_in_special_projects }
-					}
-					else = {
-						has_idea = OSO_heavy_tank_manufacturer
-						has_global_flag = custom_designer_traits_enabled
-					}
+				modifier={
+					has_country_flag=ai_go_democratic
+					NOT={ has_government=democratic }
+
+					add=30
 				}
 			}
 		}

@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = OSY_martin_bormann
+recruit_character = OSY_erich_bey
+random_character = { limit = { is_character = OSY_erich_bey } 59 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OSY_josef_kammhuber
+random_character = { limit = { is_character = OSY_josef_kammhuber } 59 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

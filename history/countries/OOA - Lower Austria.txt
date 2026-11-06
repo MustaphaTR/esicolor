@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = OOA_kurt_schuschnigg
+recruit_character = OOA_ernst_rudiger_starhemberg
+random_character = { limit = { is_character = OOA_ernst_rudiger_starhemberg } 4 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OOA_julius_raab
+random_character = { limit = { is_character = OOA_julius_raab } 4 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

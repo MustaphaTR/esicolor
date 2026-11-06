@@ -1,15 +1,95 @@
-characters = {
-	OLO_erwin_baum = {
-		name = THU_erwin_baum
-		portraits = {
-			civilian = {
-				large = GFX_portrait_THU_erwin_baum
+characters={
+	OLO_erwin_baum={
+		name=THU_erwin_baum
+		portraits={ civilian={ large=GFX_portrait_THU_erwin_baum } }
+
+		country_leader={
+			ideology=conservatism
+		}
+	}
+
+	#Advisors
+	OLO_ernst_thalmann={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=GER_ernst_thalmann
+			portraits={
+				civilian={
+					large=GFX_portrait_GER_ernst_thalmann
+					small=GFX_portrait_GER_ernst_thalmann_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=OLO_d_communist_revolutionary
+				traits={ communist_revolutionary }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						60={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=30
+					}
+				}
 			}
 		}
-		country_leader = {
-			ideology = conservatism
-			expire = "1965.1.1.1"
-			id = -1
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=GER_ernst_thalmann
+			portraits={ civilian={ small=GFX_idea_ernst_thalmann } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OLO_d_communist_revolutionary
+				traits={ communist_revolutionary }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						60={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=30
+					}
+				}
+			}
 		}
 	}
 }

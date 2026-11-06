@@ -22,6 +22,10 @@ set_politics = {
 
 #recruit_character = OSZ_rupprecht_of_bavaria
 recruit_character = OSZ_heinrich_himmler
+recruit_character = OSZ_reinhard_heydrich
+random_character = { limit = { is_character = OSZ_reinhard_heydrich } 52 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OSZ_hugo_sperrle
+random_character = { limit = { is_character = OSZ_hugo_sperrle } 52 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

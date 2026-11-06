@@ -1,0 +1,4173 @@
+### Political Advisors
+# Ideology
+retire_staunch_monarchist = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = staunch_monarchist
+		}
+
+		retire = yes
+	}
+}
+retire_democratic_reformer = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = democratic_reformer
+		}
+
+		retire = yes
+	}
+}
+retire_fascist_demagogue = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = fascist_demagogue
+		}
+
+		retire = yes
+	}
+}
+retire_communist_revolutionary = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = communist_revolutionary
+		}
+
+		retire = yes
+	}
+}
+# Other Political
+generate_generic_popular_figurehead = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_e_popular_figurehead
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_e_popular_figurehead
+
+				advisor = {
+					slot = political_advisor
+					traits = { popular_figurehead }
+
+					ai_will_do = {
+						factor = 1
+
+						modifier = {
+							has_stability > 0.35
+							has_stability < 0.5
+
+							add = 9
+						}
+					}
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_popular_figurehead = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = popular_figurehead
+		}
+
+		retire = yes
+	}
+}
+generate_generic_propaganda_expert = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_f_propaganda_expert
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_f_propaganda_expert
+
+				advisor = {
+					slot = political_advisor
+					traits = { propaganda_expert }
+
+					ai_will_do = {
+						factor = 1
+
+						modifier = {
+							has_war_support > 0.4
+							has_war_support < 0.5
+
+							add = 9
+						}
+					}
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_propaganda_expert = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = propaganda_expert
+		}
+
+		retire = yes
+	}
+}
+generate_generic_silent_workhorse = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_g_silent_workhorse
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_g_silent_workhorse
+
+				advisor = {
+					slot = political_advisor
+					traits = { silent_workhorse }
+
+					ai_will_do = { factor = 15 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_silent_workhorse = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = silent_workhorse
+		}
+
+		retire = yes
+	}
+}
+generate_generic_prince_of_terror = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_h_prince_of_terror
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_h_prince_of_terror
+
+				advisor = {
+					slot = political_advisor
+					traits = { prince_of_terror }
+
+					ai_will_do = {
+						factor = 1
+
+						modifier = {
+							any_owned_state = {
+								resistance > 50
+							}
+
+							add = 9
+						}
+					}
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_prince_of_terror = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = prince_of_terror
+		}
+
+		retire = yes
+	}
+}
+generate_generic_backroom_backstabber = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_i_backroom_backstabber
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_i_backroom_backstabber
+
+				advisor = {
+					slot = political_advisor
+					traits = { backroom_backstabber }
+
+					ai_will_do = { factor = 5 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_backroom_backstabber = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = backroom_backstabber
+		}
+
+		retire = yes
+	}
+}
+generate_generic_editor = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_j_editor
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_j_editor
+
+				advisor = {
+					slot = political_advisor
+					traits = { editor }
+
+					ai_will_do = { factor = 5 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_editor = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = editor
+		}
+
+		retire = yes
+	}
+}
+generate_generic_ideological_crusader = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_k_ideological_crusader
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_k_ideological_crusader
+
+				advisor = {
+					slot = political_advisor
+					traits = { ideological_crusader }
+
+					ai_will_do = { factor = 5 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_ideological_crusader = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = ideological_crusader
+		}
+
+		retire = yes
+	}
+}
+generate_generic_compassionate_gentleman = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_l_compassionate_gentleman
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_l_compassionate_gentleman
+
+				advisor = {
+					slot = political_advisor
+					traits = { compassionate_gentleman }
+
+					ai_will_do = { factor = 2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_compassionate_gentleman = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = compassionate_gentleman
+		}
+
+		retire = yes
+	}
+}
+generate_generic_smooth_talking_charmer = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_m_smooth_talking_charmer
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_m_smooth_talking_charmer
+
+				advisor = {
+					slot = political_advisor
+					traits = { smooth_talking_charmer }
+
+					ai_will_do = { factor = 1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_smooth_talking_charmer = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = smooth_talking_charmer
+		}
+
+		retire = yes
+	}
+}
+generate_generic_financial_expert = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_n_financial_expert
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_n_financial_expert
+
+				advisor = {
+					slot = political_advisor
+					traits = { financial_expert }
+
+					ai_will_do = { factor = 1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_financial_expert = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = financial_expert
+		}
+
+		retire = yes
+	}
+}
+generate_generic_economist = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_o_economist
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_o_economist
+
+				advisor = {
+					slot = political_advisor
+					traits = { economist }
+
+					ai_will_do = { factor = 1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_economist = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = economist
+		}
+
+		retire = yes
+	}
+}
+generate_generic_captain_of_industry = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_p_captain_of_industry
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_p_captain_of_industry
+
+				advisor = {
+					slot = political_advisor
+					traits = { captain_of_industry }
+
+					ai_will_do = { factor = 1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_captain_of_industry = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = captain_of_industry
+		}
+
+		retire = yes
+	}
+}
+generate_generic_war_industrialist = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_q_war_industrialist
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_q_war_industrialist
+
+				advisor = {
+					slot = political_advisor
+					traits = { war_industrialist }
+
+					ai_will_do = { factor = 1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_war_industrialist = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = war_industrialist
+		}
+
+		retire = yes
+	}
+}
+generate_generic_naval_architect = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_r_naval_architect
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_r_naval_architect
+
+				advisor = {
+					slot = political_advisor
+					traits = { naval_architect }
+
+					ai_will_do = {
+						factor = 1
+
+						modifier = {
+							NOT = { any_owned_state = { is_coastal = yes } }
+
+							factor = 0
+						}
+					}
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_naval_architect = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = naval_architect
+		}
+
+		retire = yes
+	}
+}
+generate_generic_fortification_engineer = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_s_fortification_engineer
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_s_fortification_engineer
+
+				advisor = {
+					slot = political_advisor
+					traits = { fortification_engineer }
+
+					ai_will_do = { factor = 1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_fortification_engineer = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = fortification_engineer
+		}
+
+		retire = yes
+	}
+}
+generate_generic_quartermaster_general = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_t_quartermaster_general
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_t_quartermaster_general
+
+				advisor = {
+					slot = political_advisor
+					traits = { quartermaster_general }
+
+					ai_will_do = { factor = 1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_quartermaster_general = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = quartermaster_general
+		}
+
+		retire = yes
+	}
+}
+generate_generic_armaments_organizer = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_u_armaments_organizer
+				portraits = { army = { small = GFX_idea_unknown_advisor } }
+			}
+
+			add_advisor_role = {
+				character = [TAG]_u_armaments_organizer
+
+				advisor = {
+					slot = political_advisor
+					traits = { armaments_organizer }
+
+					ai_will_do = { factor = 1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_armaments_organizer = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = armaments_organizer
+		}
+
+		retire = yes
+	}
+}
+# Intelligence
+retire_head_of_intelligence = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = head_of_intelligence
+		}
+
+		retire = yes
+	}
+}
+retire_code_breaker = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = code_breaker
+		}
+
+		retire = yes
+	}
+}
+retire_encryption_expert = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = encryption_expert
+		}
+
+		retire = yes
+	}
+}
+
+### Theorists
+# Military Theorists
+generate_generic_military_theorist = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_a_military_theorist
+			}
+
+			add_advisor_role = {
+				character = [TAG]_a_military_theorist
+
+				advisor = {
+					slot = theorist
+					ledger = army
+					cost = 100
+					traits = { military_theorist }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_military_theorist = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = military_theorist
+		}
+
+		retire = yes
+	}
+}
+generate_generic_mobile_warfare_expert = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_b_mobile_warfare_expert
+			}
+
+			add_advisor_role = {
+				character = [TAG]_b_mobile_warfare_expert
+
+				advisor = {
+					slot = theorist
+					ledger = army
+					cost = 150
+					traits = { mobile_warfare_expert }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_mobile_warfare_expert = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = mobile_warfare_expert
+		}
+
+		retire = yes
+	}
+}
+generate_generic_superior_firepower_expert = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_c_superior_firepower_expert
+			}
+
+			add_advisor_role = {
+				character = [TAG]_c_superior_firepower_expert
+
+				advisor = {
+					slot = theorist
+					ledger = army
+					cost = 150
+					traits = { superior_firepower_expert }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_superior_firepower_expert = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = superior_firepower_expert
+		}
+
+		retire = yes
+	}
+}
+generate_generic_grand_battle_plan_expert = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_d_grand_battle_plan_expert
+			}
+
+			add_advisor_role = {
+				character = [TAG]_d_grand_battle_plan_expert
+
+				advisor = {
+					slot = theorist
+					ledger = army
+					cost = 150
+					traits = { grand_battle_plan_expert }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_grand_battle_plan_expert = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = grand_battle_plan_expert
+		}
+
+		retire = yes
+	}
+}
+generate_generic_mass_assault_expert = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_e_mass_assault_expert
+			}
+
+			add_advisor_role = {
+				character = [TAG]_e_mass_assault_expert
+
+				advisor = {
+					slot = theorist
+					ledger = army
+					cost = 150
+					traits = { mass_assault_expert }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_mass_assault_expert = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = mass_assault_expert
+		}
+
+		retire = yes
+	}
+}
+# Naval Theorists
+generate_generic_naval_theorist = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_f_naval_theorist
+			}
+
+			add_advisor_role = {
+				character = [TAG]_f_naval_theorist
+
+				advisor = {
+					slot = theorist
+					ledger = navy
+					cost = 100
+					traits = { naval_theorist }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_naval_theorist = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = naval_theorist
+		}
+
+		retire = yes
+	}
+}
+generate_generic_naval_aviation_pioneer = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_g_naval_aviation_pioneer
+			}
+
+			add_advisor_role = {
+				character = [TAG]_g_naval_aviation_pioneer
+
+				advisor = {
+					slot = theorist
+					ledger = navy
+					cost = 150
+					traits = { naval_aviation_pioneer }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_naval_aviation_pioneer = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = naval_aviation_pioneer
+		}
+
+		retire = yes
+	}
+}
+generate_generic_grand_fleet_proponent = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_h_grand_fleet_proponent
+			}
+
+			add_advisor_role = {
+				character = [TAG]_h_grand_fleet_proponent
+
+				advisor = {
+					slot = theorist
+					ledger = navy
+					cost = 150
+					traits = { grand_fleet_proponent }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_grand_fleet_proponent = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = grand_fleet_proponent
+		}
+
+		retire = yes
+	}
+}
+generate_generic_submarine_specialist = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_i_submarine_specialist
+			}
+
+			add_advisor_role = {
+				character = [TAG]_i_submarine_specialist
+
+				advisor = {
+					slot = theorist
+					ledger = navy
+					cost = 150
+					traits = { submarine_specialist }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_victory_through_airpower = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = submarine_specialist
+		}
+
+		retire = yes
+	}
+}
+# Air Warfare Theorists
+generate_generic_air_warfare_theorist = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_j_air_warfare_theorist
+			}
+
+			add_advisor_role = {
+				character = [TAG]_j_air_warfare_theorist
+
+				advisor = {
+					slot = theorist
+					ledger = air
+					cost = 100
+					traits = { air_warfare_theorist }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_warfare_theorist = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = air_warfare_theorist
+		}
+
+		retire = yes
+	}
+}
+generate_generic_victory_through_airpower = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_k_victory_through_airpower
+			}
+
+			add_advisor_role = {
+				character = [TAG]_k_victory_through_airpower
+
+				advisor = {
+					slot = theorist
+					ledger = air
+					cost = 150
+					traits = { victory_through_airpower }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_victory_through_airpower = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = victory_through_airpower
+		}
+
+		retire = yes
+	}
+}
+generate_generic_close_air_support_proponent = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_l_close_air_support_proponent
+			}
+
+			add_advisor_role = {
+				character = [TAG]_l_close_air_support_proponent
+
+				advisor = {
+					slot = theorist
+					ledger = air
+					cost = 150
+					traits = { close_air_support_proponent }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_close_air_support_proponent = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = close_air_support_proponent
+		}
+
+		retire = yes
+	}
+}
+generate_generic_assault_avaition = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_m_assault_avaition
+			}
+
+			add_advisor_role = {
+				character = [TAG]_m_assault_avaition
+
+				advisor = {
+					slot = theorist
+					ledger = air
+					cost = 150
+					traits = { assault_avaition }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_assault_avaition = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = assault_avaition
+		}
+
+		retire = yes
+	}
+}
+# Scientists - don't work
+generate_generic_nuclear_scientist = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_n_nuclear_scientist
+			}
+
+			add_advisor_role = {
+				character = [TAG]_n_nuclear_scientist
+
+				advisor = {
+					slot = theorist
+					ledger = army
+					cost = 100
+					research_bonus = {
+						nuclear = 0.15
+					}
+					traits = { nuclear_scientist }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_nuclear_scientist = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = nuclear_scientist
+		}
+
+		retire = yes
+	}
+}
+generate_generic_rocket_scientist = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_o_rocket_scientist
+			}
+
+			add_advisor_role = {
+				character = [TAG]_o_rocket_scientist
+
+				advisor = {
+					slot = theorist
+					ledger = air
+					cost = 100
+					research_bonus = {
+						rocketry = 0.15
+					}
+					traits = { rocket_scientist }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_rocket_scientist = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = rocket_scientist
+		}
+
+		retire = yes
+	}
+}
+### Chiefs of Army
+generate_generic_army_chief_offensive = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_a_army_chief_offensive
+			}
+
+			add_advisor_role = {
+				character = [TAG]_a_army_chief_offensive
+
+				advisor = {
+					slot = army_chief
+					cost = 50
+					traits = { army_chief_offensive_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_chief_offensive = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_chief_offensive_1
+				has_trait = army_chief_offensive_2
+				has_trait = army_chief_offensive_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_chief_defensive = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_b_army_chief_defensive
+			}
+
+			add_advisor_role = {
+				character = [TAG]_b_army_chief_defensive
+
+				advisor = {
+					slot = army_chief
+					cost = 50
+					traits = { army_chief_defensive_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_chief_defensive = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_chief_defensive_1
+				has_trait = army_chief_defensive_2
+				has_trait = army_chief_defensive_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_chief_maneuver = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_c_army_chief_maneuver
+			}
+
+			add_advisor_role = {
+				character = [TAG]_c_army_chief_maneuver
+
+				advisor = {
+					slot = army_chief
+					cost = 50
+					traits = { army_chief_maneuver_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_chief_maneuver = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_chief_maneuver_1
+				has_trait = army_chief_maneuver_2
+				has_trait = army_chief_maneuver_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_chief_drill = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_d_army_chief_drill
+			}
+
+			add_advisor_role = {
+				character = [TAG]_d_army_chief_drill
+
+				advisor = {
+					slot = army_chief
+					cost = 50
+					traits = { army_chief_drill_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_chief_drill = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_chief_drill_1
+				has_trait = army_chief_drill_2
+				has_trait = army_chief_drill_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_chief_planning = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_e_army_chief_planning
+			}
+
+			add_advisor_role = {
+				character = [TAG]_e_army_chief_planning
+
+				advisor = {
+					slot = army_chief
+					cost = 50
+					traits = { army_chief_planning_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_chief_planning = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_chief_planning_1
+				has_trait = army_chief_planning_2
+				has_trait = army_chief_planning_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_chief_morale = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_f_army_chief_morale
+			}
+
+			add_advisor_role = {
+				character = [TAG]_f_army_chief_morale
+
+				advisor = {
+					slot = army_chief
+					cost = 50
+					traits = { army_chief_morale_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_chief_morale = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_chief_morale_1
+				has_trait = army_chief_morale_2
+				has_trait = army_chief_morale_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_chief_organizational = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_g_army_chief_organizational
+			}
+
+			add_advisor_role = {
+				character = [TAG]_g_army_chief_organizational
+
+				advisor = {
+					slot = army_chief
+					cost = 50
+					traits = { army_chief_organizational_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_chief_organizational = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_chief_organizational_1
+				has_trait = army_chief_organizational_2
+				has_trait = army_chief_organizational_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_chief_entrenchment = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_h_army_chief_entrenchment
+			}
+
+			add_advisor_role = {
+				character = [TAG]_h_army_chief_entrenchment
+
+				advisor = {
+					slot = army_chief
+					cost = 50
+					traits = { army_chief_entrenchment_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_chief_entrenchment = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_chief_entrenchment_1
+				has_trait = army_chief_entrenchment_2
+				has_trait = army_chief_entrenchment_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_chief_reform = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_i_army_chief_reform
+			}
+
+			add_advisor_role = {
+				character = [TAG]_i_army_chief_reform
+
+				advisor = {
+					slot = army_chief
+					cost = 50
+					traits = { army_chief_reform_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_chief_reform = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_chief_reform_1
+				has_trait = army_chief_reform_2
+				has_trait = army_chief_reform_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_chief_old_guard = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_j_army_chief_old_guard
+			}
+
+			add_advisor_role = {
+				character = [TAG]_j_army_chief_old_guard
+
+				advisor = {
+					slot = army_chief
+					cost = 50
+					traits = { army_chief_old_guard }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_chief_old_guard = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = army_chief_old_guard
+		}
+
+		retire = yes
+	}
+}
+### Chiefs of Navy
+generate_generic_navy_chief_commerce_raiding = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_a_navy_chief_commerce_raiding
+			}
+
+			add_advisor_role = {
+				character = [TAG]_a_navy_chief_commerce_raiding
+
+				advisor = {
+					slot = navy_chief
+					cost = 100
+					traits = { navy_chief_commerce_raiding_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_chief_commerce_raiding = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_chief_commerce_raiding_1
+				has_trait = navy_chief_commerce_raiding_2
+				has_trait = navy_chief_commerce_raiding_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_navy_chief_maneuver = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_b_navy_chief_maneuver
+			}
+
+			add_advisor_role = {
+				character = [TAG]_b_navy_chief_maneuver
+
+				advisor = {
+					slot = navy_chief
+					cost = 100
+					traits = { navy_chief_maneuver_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_chief_maneuver = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_chief_maneuver_1
+				has_trait = navy_chief_maneuver_2
+				has_trait = navy_chief_maneuver_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_navy_chief_decisive_battle = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_c_navy_chief_decisive_battle
+			}
+
+			add_advisor_role = {
+				character = [TAG]_c_navy_chief_decisive_battle
+
+				advisor = {
+					slot = navy_chief
+					cost = 100
+					traits = { navy_chief_decisive_battle_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_chief_decisive_battle = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_chief_decisive_battle_1
+				has_trait = navy_chief_decisive_battle_2
+				has_trait = navy_chief_decisive_battle_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_navy_chief_naval_aviation = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_d_navy_chief_naval_aviation
+			}
+
+			add_advisor_role = {
+				character = [TAG]_d_navy_chief_naval_aviation
+
+				advisor = {
+					slot = navy_chief
+					cost = 100
+					traits = { navy_chief_naval_aviation_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_chief_naval_aviation = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_chief_naval_aviation_1
+				has_trait = navy_chief_naval_aviation_2
+				has_trait = navy_chief_naval_aviation_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_navy_chief_naval_engineer = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_e_navy_chief_naval_engineer
+			}
+
+			add_advisor_role = {
+				character = [TAG]_e_navy_chief_naval_engineer
+
+				advisor = {
+					slot = navy_chief
+					cost = 100
+					traits = { navy_chief_naval_engineer_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_chief_naval_engineer = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_chief_naval_engineer_1
+				has_trait = navy_chief_naval_engineer_2
+				has_trait = navy_chief_naval_engineer_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_navy_chief_reform = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_f_navy_chief_reform
+			}
+
+			add_advisor_role = {
+				character = [TAG]_f_navy_chief_reform
+
+				advisor = {
+					slot = navy_chief
+					cost = 50
+					traits = { navy_chief_reform_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_chief_reform = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_chief_reform_1
+				has_trait = navy_chief_reform_2
+				has_trait = navy_chief_reform_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_navy_chief_old_guard = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_g_navy_chief_old_guard
+			}
+
+			add_advisor_role = {
+				character = [TAG]_g_navy_chief_old_guard
+
+				advisor = {
+					slot = navy_chief
+					cost = 50
+					traits = { navy_chief_old_guard }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_chief_old_guard = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = navy_chief_old_guard
+		}
+
+		retire = yes
+	}
+}
+### Chiefs of Air Force
+generate_generic_air_chief_night_operations = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_a_air_chief_night_operations
+			}
+
+			add_advisor_role = {
+				character = [TAG]_a_air_chief_night_operations
+
+				advisor = {
+					slot = air_chief
+					cost = 100
+					traits = { air_chief_night_operations_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_chief_night_operations = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_chief_night_operations_1
+				has_trait = air_chief_night_operations_2
+				has_trait = air_chief_night_operations_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_air_chief_ground_support = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_b_air_chief_ground_support
+			}
+
+			add_advisor_role = {
+				character = [TAG]_b_air_chief_ground_support
+
+				advisor = {
+					slot = air_chief
+					cost = 100
+					traits = { air_chief_ground_support_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_chief_ground_support = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_chief_ground_support_1
+				has_trait = air_chief_ground_support_2
+				has_trait = air_chief_ground_support_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_air_chief_all_weather = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_c_air_chief_all_weather
+			}
+
+			add_advisor_role = {
+				character = [TAG]_c_air_chief_all_weather
+
+				advisor = {
+					slot = air_chief
+					cost = 100
+					traits = { air_chief_all_weather_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_chief_all_weather = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_chief_all_weather_1
+				has_trait = air_chief_all_weather_2
+				has_trait = air_chief_all_weather_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_air_chief_safety = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_d_air_chief_safety
+			}
+
+			add_advisor_role = {
+				character = [TAG]_d_air_chief_safety
+
+				advisor = {
+					slot = air_chief
+					cost = 100
+					traits = { air_chief_safety_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_chief_safety = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_chief_safety_1
+				has_trait = air_chief_safety_2
+				has_trait = air_chief_safety_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_air_chief_reform = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_e_air_chief_reform
+			}
+
+			add_advisor_role = {
+				character = [TAG]_e_air_chief_reform
+
+				advisor = {
+					slot = air_chief
+					cost = 50
+					traits = { air_chief_reform_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_chief_reform = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_chief_reform_1
+				has_trait = air_chief_reform_2
+				has_trait = air_chief_reform_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_air_chief_old_guard = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_f_air_chief_old_guard
+			}
+
+			add_advisor_role = {
+				character = [TAG]_f_air_chief_old_guard
+
+				advisor = {
+					slot = air_chief
+					cost = 50
+					traits = { air_chief_old_guard }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_chief_old_guard = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			has_trait = air_chief_old_guard
+		}
+
+		retire = yes
+	}
+}
+### High Command
+# Army - Unit Specific
+generate_generic_army_infantry = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_aa_army_infantry
+			}
+
+			add_advisor_role = {
+				character = [TAG]_aa_army_infantry
+
+				advisor = {
+					slot = high_command
+					ledger = army
+					cost = 50
+					traits = { army_infantry_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_infantry = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_infantry_1
+				has_trait = army_infantry_2
+				has_trait = army_infantry_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_artillery = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_ab_army_artillery
+			}
+
+			add_advisor_role = {
+				character = [TAG]_ab_army_artillery
+
+				advisor = {
+					slot = high_command
+					ledger = army
+					cost = 50
+					traits = { army_artillery_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_artillery = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_artillery_1
+				has_trait = army_artillery_2
+				has_trait = army_artillery_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_cavalry = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_ac_army_cavalry
+			}
+
+			add_advisor_role = {
+				character = [TAG]_ac_army_cavalry
+
+				advisor = {
+					slot = high_command
+					ledger = army
+					cost = 50
+					traits = { army_cavalry_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_cavalry = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_cavalry_1
+				has_trait = army_cavalry_2
+				has_trait = army_cavalry_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_combined_arms = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_ad_army_combined_arms
+			}
+
+			add_advisor_role = {
+				character = [TAG]_ad_army_combined_arms
+
+				advisor = {
+					slot = high_command
+					ledger = army
+					cost = 50
+					traits = { army_CombinedArms_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_combined_arms = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_CombinedArms_1
+				has_trait = army_CombinedArms_2
+				has_trait = army_CombinedArms_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_armored = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_ae_army_armored
+			}
+
+			add_advisor_role = {
+				character = [TAG]_ae_army_armored
+
+				advisor = {
+					slot = high_command
+					ledger = army
+					cost = 50
+					traits = { army_armored_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_armored = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_armored_1
+				has_trait = army_armored_2
+				has_trait = army_armored_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_commando = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_af_army_commando
+			}
+
+			add_advisor_role = {
+				character = [TAG]_af_army_commando
+
+				advisor = {
+					slot = high_command
+					ledger = army
+					cost = 50
+					traits = { army_commando_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_commando = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_commando_1
+				has_trait = army_commando_2
+				has_trait = army_commando_3
+			}
+		}
+
+		retire = yes
+	}
+}
+# Army - Generic
+generate_generic_army_entrenchment = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_ba_army_entrenchment
+			}
+
+			add_advisor_role = {
+				character = [TAG]_ba_army_entrenchment
+
+				advisor = {
+					slot = high_command
+					ledger = army
+					cost = 50
+					traits = { army_entrenchment_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_entrenchment = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_entrenchment_1
+				has_trait = army_entrenchment_2
+				has_trait = army_entrenchment_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_logistics = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_bb_army_logistics
+			}
+
+			add_advisor_role = {
+				character = [TAG]_bb_army_logistics
+
+				advisor = {
+					slot = high_command
+					ledger = army
+					cost = 100
+					traits = { army_logistics_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_logistics = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_logistics_1
+				has_trait = army_logistics_2
+				has_trait = army_logistics_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_regrouping = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_bc_army_regrouping
+			}
+
+			add_advisor_role = {
+				character = [TAG]_bc_army_regrouping
+
+				advisor = {
+					slot = high_command
+					ledger = army
+					cost = 100
+					traits = { army_regrouping_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_regrouping = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_regrouping_1
+				has_trait = army_regrouping_2
+				has_trait = army_regrouping_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_concealment = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_bd_army_concealment
+			}
+
+			add_advisor_role = {
+				character = [TAG]_bd_army_concealment
+
+				advisor = {
+					slot = high_command
+					ledger = army
+					cost = 100
+					traits = { army_concealment_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_concealment = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_concealment_1
+				has_trait = army_concealment_2
+				has_trait = army_concealment_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_radio_intelligence = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_be_army_radio_intelligence
+			}
+
+			add_advisor_role = {
+				character = [TAG]_be_army_radio_intelligence
+
+				advisor = {
+					slot = high_command
+					ledger = army
+					cost = 100
+					traits = { army_radio_intelligence_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_radio_intelligence = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_radio_intelligence_1
+				has_trait = army_radio_intelligence_2
+				has_trait = army_radio_intelligence_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_adaptive_engineer = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_bf_army_adaptive_engineer
+			}
+
+			add_advisor_role = {
+				character = [TAG]_bf_army_adaptive_engineer
+
+				advisor = {
+					slot = high_command
+					ledger = army
+					cost = 100
+					traits = { army_adaptive_engineer_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_adaptive_engineer = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_adaptive_engineer_1
+				has_trait = army_adaptive_engineer_2
+				has_trait = army_adaptive_engineer_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_army_jungle_warfare = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_bg_army_jungle_warfare
+			}
+
+			add_advisor_role = {
+				character = [TAG]_bg_army_jungle_warfare
+
+				advisor = {
+					slot = high_command
+					ledger = army
+					cost = 100
+					traits = { army_jungle_warfare_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_army_jungle_warfare = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = army_jungle_warfare_1
+				has_trait = army_jungle_warfare_2
+				has_trait = army_jungle_warfare_3
+			}
+		}
+
+		retire = yes
+	}
+}
+# Navy
+generate_generic_navy_amphibious_assault = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_ca_navy_amphibious_assault
+			}
+
+			add_advisor_role = {
+				character = [TAG]_ca_navy_amphibious_assault
+
+				advisor = {
+					slot = high_command
+					ledger = navy
+					cost = 50
+					traits = { navy_amphibious_assault_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_amphibious_assault = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_amphibious_assault_1
+				has_trait = navy_amphibious_assault_2
+				has_trait = navy_amphibious_assault_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_navy_fleet_logistics = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_cb_navy_fleet_logistics
+			}
+
+			add_advisor_role = {
+				character = [TAG]_cb_navy_fleet_logistics
+
+				advisor = {
+					slot = high_command
+					ledger = navy
+					cost = 50
+					traits = { navy_fleet_logistics_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_fleet_logistics = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_fleet_logistics_1
+				has_trait = navy_fleet_logistics_2
+				has_trait = navy_fleet_logistics_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_navy_naval_air_defense = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_cc_navy_naval_air_defense
+			}
+
+			add_advisor_role = {
+				character = [TAG]_cc_navy_naval_air_defense
+
+				advisor = {
+					slot = high_command
+					ledger = navy
+					cost = 50
+					traits = { navy_naval_air_defense_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_naval_air_defense = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_naval_air_defense_1
+				has_trait = navy_naval_air_defense_2
+				has_trait = navy_naval_air_defense_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_navy_anti_submarine = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_cd_navy_anti_submarine
+			}
+
+			add_advisor_role = {
+				character = [TAG]_cd_navy_anti_submarine
+
+				advisor = {
+					slot = high_command
+					ledger = navy
+					cost = 100
+					traits = { navy_anti_submarine_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_anti_submarine = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_anti_submarine_1
+				has_trait = navy_anti_submarine_2
+				has_trait = navy_anti_submarine_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_navy_submarine = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_ce_navy_submarine
+			}
+
+			add_advisor_role = {
+				character = [TAG]_ce_navy_submarine
+
+				advisor = {
+					slot = high_command
+					ledger = navy
+					cost = 50
+					traits = { navy_submarine_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_submarine = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_submarine_1
+				has_trait = navy_submarine_2
+				has_trait = navy_submarine_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_navy_capital_ship = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_cf_navy_capital_ship
+			}
+
+			add_advisor_role = {
+				character = [TAG]_cf_navy_capital_ship
+
+				advisor = {
+					slot = high_command
+					ledger = navy
+					cost = 50
+					traits = { navy_capital_ship_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_capital_ship = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_capital_ship_1
+				has_trait = navy_capital_ship_2
+				has_trait = navy_capital_ship_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_navy_screen = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_cg_navy_screen
+			}
+
+			add_advisor_role = {
+				character = [TAG]_cg_navy_screen
+
+				advisor = {
+					slot = high_command
+					ledger = navy
+					cost = 50
+					traits = { navy_screen_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_screen = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_screen_1
+				has_trait = navy_screen_2
+				has_trait = navy_screen_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_navy_carrier = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_ch_navy_carrier
+			}
+
+			add_advisor_role = {
+				character = [TAG]_ch_navy_carrier
+
+				advisor = {
+					slot = high_command
+					ledger = navy
+					cost = 50
+					traits = { navy_carrier_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_navy_carrier = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = navy_carrier_1
+				has_trait = navy_carrier_2
+				has_trait = navy_carrier_3
+			}
+		}
+
+		retire = yes
+	}
+}
+# Air Force
+generate_generic_air_air_superiority = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_da_air_air_superiority
+			}
+
+			add_advisor_role = {
+				character = [TAG]_da_air_air_superiority
+
+				advisor = {
+					slot = high_command
+					ledger = air
+					cost = 50
+					traits = { air_air_superiority_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_air_superiority = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_air_superiority_1
+				has_trait = air_air_superiority_2
+				has_trait = air_air_superiority_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_air_bomber_interception = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_db_air_bomber_interception
+			}
+
+			add_advisor_role = {
+				character = [TAG]_db_air_bomber_interception
+
+				advisor = {
+					slot = high_command
+					ledger = air
+					cost = 100
+					traits = { air_bomber_interception_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_bomber_interception = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_bomber_interception_1
+				has_trait = air_bomber_interception_2
+				has_trait = air_bomber_interception_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_air_close_air_support = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_dc_air_close_air_support
+			}
+
+			add_advisor_role = {
+				character = [TAG]_dc_air_close_air_support
+
+				advisor = {
+					slot = high_command
+					ledger = air
+					cost = 100
+					traits = { air_close_air_support_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_close_air_support = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_close_air_support_1
+				has_trait = air_close_air_support_2
+				has_trait = air_close_air_support_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_air_naval_strike = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_dd_air_naval_strike
+			}
+
+			add_advisor_role = {
+				character = [TAG]_dd_air_naval_strike
+
+				advisor = {
+					slot = high_command
+					ledger = air
+					cost = 50
+					traits = { air_naval_strike_1 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_naval_strike = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_naval_strike_1
+				has_trait = air_naval_strike_2
+				has_trait = air_naval_strike_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_air_tactical_bombing = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_de_air_tactical_bombing
+			}
+
+			add_advisor_role = {
+				character = [TAG]_de_air_tactical_bombing
+
+				advisor = {
+					slot = high_command
+					ledger = air
+					cost = 100
+					traits = { air_tactical_bombing_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_tactical_bombing = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_tactical_bombing_1
+				has_trait = air_tactical_bombing_2
+				has_trait = air_tactical_bombing_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_air_strategic_bombing = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_df_air_strategic_bombing
+			}
+
+			add_advisor_role = {
+				character = [TAG]_df_air_strategic_bombing
+
+				advisor = {
+					slot = high_command
+					ledger = air
+					cost = 100
+					traits = { air_strategic_bombing_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_strategic_bombing = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_strategic_bombing_1
+				has_trait = air_strategic_bombing_2
+				has_trait = air_strategic_bombing_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_air_airborne = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_dg_air_airborne
+			}
+
+			add_advisor_role = {
+				character = [TAG]_dg_air_airborne
+
+				advisor = {
+					slot = high_command
+					ledger = air
+					cost = 100
+					traits = { air_airborne_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_airborne = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_airborne_1
+				has_trait = air_airborne_2
+				has_trait = air_airborne_3
+			}
+		}
+
+		retire = yes
+	}
+}
+generate_generic_air_air_combat_training = {
+	meta_effect = {
+		text = {
+			generate_character = {
+				token_base = [TAG]_dh_air_air_combat_training
+			}
+
+			add_advisor_role = {
+				character = [TAG]_dh_air_air_combat_training
+
+				advisor = {
+					slot = high_command
+					ledger = air
+					cost = 100
+					traits = { air_air_combat_training_2 }
+				}
+			}
+		}
+		TAG = "[THIS.GetTag]"
+	}
+}
+retire_air_air_combat_training = {
+	random_character = {
+		limit = {
+			is_advisor = yes
+			OR = {
+				has_trait = air_air_combat_training_1
+				has_trait = air_air_combat_training_2
+				has_trait = air_air_combat_training_3
+			}
+		}
+
+		retire = yes
+	}
+}
+
+setup_generic_advisor_portraits = {
+	if = {
+		limit = {
+			OR = {
+				capital_scope = {
+					OR = {
+						is_on_continent = europe
+						is_on_continent = australia
+						is_on_continent = north_america
+					}
+				}
+				state_originally_from_SPR = yes
+				state_originally_from_POR = yes
+				state_originally_from_GEO = yes
+				original_tag = ZFS
+			}
+			state_originally_from_MEX = no
+		}
+
+		every_character = {
+			limit = {
+				NOT = {
+					has_army_ledger = yes
+					has_navy_ledger = yes
+					has_air_ledger = yes
+					owner = { capital_scope = { is_in_array = { state_advisors = PREV.PREV } } }
+				}
+			}
+
+			random_list = {
+				seed = random
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_europe_1" }
+						army = { small = "GFX_idea_generic_political_advisor_europe_1" }
+						navy = { small = "GFX_idea_generic_political_advisor_europe_1" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_europe_2" }
+						army = { small = "GFX_idea_generic_political_advisor_europe_2" }
+						navy = { small = "GFX_idea_generic_political_advisor_europe_2" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_europe_3" }
+						army = { small = "GFX_idea_generic_political_advisor_europe_3" }
+						navy = { small = "GFX_idea_generic_political_advisor_europe_3" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_europe_4" }
+						army = { small = "GFX_idea_generic_political_advisor_europe_4" }
+						navy = { small = "GFX_idea_generic_political_advisor_europe_4" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_europe_5" }
+						army = { small = "GFX_idea_generic_political_advisor_europe_5" }
+						navy = { small = "GFX_idea_generic_political_advisor_europe_5" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_europe_6" }
+						army = { small = "GFX_idea_generic_political_advisor_europe_6" }
+						navy = { small = "GFX_idea_generic_political_advisor_europe_6" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Europe_Generic_3_small" }
+						army = { small = "GFX_Portrait_Europe_Generic_3_small" }
+						navy = { small = "GFX_Portrait_Europe_Generic_3_small" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Europe_Generic_4_small" }
+						army = { small = "GFX_Portrait_Europe_Generic_4_small" }
+						navy = { small = "GFX_Portrait_Europe_Generic_4_small" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Europe_Generic_5_small" }
+						army = { small = "GFX_Portrait_Europe_Generic_5_small" }
+						navy = { small = "GFX_Portrait_Europe_Generic_5_small" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Europe_Generic_6_small" }
+						army = { small = "GFX_Portrait_Europe_Generic_6_small" }
+						navy = { small = "GFX_Portrait_Europe_Generic_6_small" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_europe_generic_7_small" }
+						army = { small = "GFX_Portrait_europe_generic_7_small" }
+						navy = { small = "GFX_Portrait_europe_generic_7_small" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_europe_generic_8_small" }
+						army = { small = "GFX_portrait_europe_generic_8_small" }
+						navy = { small = "GFX_portrait_europe_generic_8_small" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_fascist_demagogue_western_european_2d" }
+						army = { small = "GFX_idea_generic_fascist_demagogue_western_european_2d" }
+						navy = { small = "GFX_idea_generic_fascist_demagogue_western_european_2d" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_europe_generic_communism_1_small" }
+						army = { small = "GFX_portrait_europe_generic_communism_1_small" }
+						navy = { small = "GFX_portrait_europe_generic_communism_1_small" }
+					}
+				}
+				3 = {
+					modifier = {
+						factor = 0
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_europe_generic_democratic_1_small" }
+						army = { small = "GFX_portrait_europe_generic_democratic_1_small" }
+						navy = { small = "GFX_portrait_europe_generic_democratic_1_small" }
+					}
+				}
+				3 = {
+					modifier = {
+						factor = 0
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_europe_generic_fascism_1_small" }
+						army = { small = "GFX_portrait_europe_generic_fascism_1_small" }
+						navy = { small = "GFX_portrait_europe_generic_fascism_1_small" }
+					}
+				}
+				2 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_europe_generic_communism_2_small" }
+						army = { small = "GFX_portrait_europe_generic_communism_2_small" }
+						navy = { small = "GFX_portrait_europe_generic_communism_2_small" }
+					}
+				}
+				2 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_europe_generic_democratic_2_small" }
+						army = { small = "GFX_portrait_europe_generic_democratic_2_small" }
+						navy = { small = "GFX_portrait_europe_generic_democratic_2_small" }
+					}
+				}
+				2 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_europe_generic_fascism_2_small" }
+						army = { small = "GFX_portrait_europe_generic_fascism_2_small" }
+						navy = { small = "GFX_portrait_europe_generic_fascism_2_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_europe_generic_communism_3_small" }
+						army = { small = "GFX_portrait_europe_generic_communism_3_small" }
+						navy = { small = "GFX_portrait_europe_generic_communism_3_small" }
+					}
+				}
+				3 = {
+					modifier = {
+						factor = 0
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_europe_generic_democratic_3_small" }
+						army = { small = "GFX_portrait_europe_generic_democratic_3_small" }
+						navy = { small = "GFX_portrait_europe_generic_democratic_3_small" }
+					}
+				}
+				3 = {
+					modifier = {
+						factor = 0
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_europe_generic_fascism_3_small" }
+						army = { small = "GFX_portrait_europe_generic_fascism_3_small" }
+						navy = { small = "GFX_portrait_europe_generic_fascism_3_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_dlc = "Arms Against Tyranny"
+						owner = {
+							OR = {
+								state_originally_from_DEN = yes
+								state_originally_from_SWE = yes
+								state_originally_from_NOR = yes
+								state_originally_from_ICE = yes
+							}
+						}
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_generic_nordic_political_1_small" }
+						army = { small = "GFX_portrait_generic_nordic_political_1_small" }
+						navy = { small = "GFX_portrait_generic_nordic_political_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_dlc = "Arms Against Tyranny"
+						owner = {
+							OR = {
+								state_originally_from_DEN = yes
+								state_originally_from_SWE = yes
+								state_originally_from_NOR = yes
+								state_originally_from_ICE = yes
+							}
+						}
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_generic_nordic_political_2_small" }
+						army = { small = "GFX_portrait_generic_nordic_political_2_small" }
+						navy = { small = "GFX_portrait_generic_nordic_political_2_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_dlc = "Arms Against Tyranny"
+						owner = {
+							OR = {
+								state_originally_from_DEN = yes
+								state_originally_from_SWE = yes
+								state_originally_from_NOR = yes
+								state_originally_from_ICE = yes
+							}
+						}
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_generic_nordic_political_3_small" }
+						army = { small = "GFX_portrait_generic_nordic_political_3_small" }
+						navy = { small = "GFX_portrait_generic_nordic_political_3_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 18
+						owner = { state_originally_from_SMI = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_generic_sami_political_1" }
+						army = { small = "GFX_portrait_generic_sami_political_1" }
+						navy = { small = "GFX_portrait_generic_sami_political_1" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 18
+						owner = { state_originally_from_SMI = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_generic_sami_political_3" }
+						army = { small = "GFX_portrait_generic_sami_political_3" }
+						navy = { small = "GFX_portrait_generic_sami_political_3" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						owner = { state_originally_from_SMI = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_generic_communist_revolutionary_sami_2d" }
+						army = { small = "GFX_portrait_generic_communist_revolutionary_sami_2d" }
+						navy = { small = "GFX_portrait_generic_communist_revolutionary_sami_2d" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						owner = { state_originally_from_SMI = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_generic_democratic_reformer_sami_2d" }
+						army = { small = "GFX_portrait_generic_democratic_reformer_sami_2d" }
+						navy = { small = "GFX_portrait_generic_democratic_reformer_sami_2d" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						owner = { state_originally_from_SMI = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_generic_sami_political_fascist" }
+						army = { small = "GFX_portrait_generic_sami_political_fascist" }
+						navy = { small = "GFX_portrait_generic_sami_political_fascist" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_USA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_USA_Generic_1_small" }
+						army = { small = "GFX_Portrait_USA_Generic_1_small" }
+						navy = { small = "GFX_Portrait_USA_Generic_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_USA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_USA_Generic_2_small" }
+						army = { small = "GFX_Portrait_USA_Generic_2_small" }
+						navy = { small = "GFX_Portrait_USA_Generic_2_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_USA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_USA_Generic_3_small" }
+						army = { small = "GFX_Portrait_USA_Generic_3_small" }
+						navy = { small = "GFX_Portrait_USA_Generic_3_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_USA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_USA_generic_communism_1_small" }
+						army = { small = "GFX_portrait_USA_generic_communism_1_small" }
+						navy = { small = "GFX_portrait_USA_generic_communism_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_USA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_USA_generic_democratic_1_small" }
+						army = { small = "GFX_portrait_USA_generic_democratic_1_small" }
+						navy = { small = "GFX_portrait_USA_generic_democratic_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_USA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_USA_generic_fascism_1_small" }
+						army = { small = "GFX_portrait_USA_generic_fascism_1_small" }
+						navy = { small = "GFX_portrait_USA_generic_fascism_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_FRA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_France_Generic_1_small" }
+						army = { small = "GFX_Portrait_France_Generic_1_small" }
+						navy = { small = "GFX_Portrait_France_Generic_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_FRA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_France_Generic_2_small" }
+						army = { small = "GFX_Portrait_France_Generic_2_small" }
+						navy = { small = "GFX_Portrait_France_Generic_2_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_FRA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_France_Generic_3_small" }
+						army = { small = "GFX_Portrait_France_Generic_3_small" }
+						navy = { small = "GFX_Portrait_France_Generic_3_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_FRA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_FRA_generic_communism_1_small" }
+						army = { small = "GFX_portrait_FRA_generic_communism_1_small" }
+						navy = { small = "GFX_portrait_FRA_generic_communism_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_FRA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_FRA_generic_democratic_1_small" }
+						army = { small = "GFX_portrait_FRA_generic_democratic_1_small" }
+						navy = { small = "GFX_portrait_FRA_generic_democratic_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_FRA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_portrait_FRA_generic_fascism_1_small" }
+						army = { small = "GFX_portrait_FRA_generic_fascism_1_small" }
+						navy = { small = "GFX_portrait_FRA_generic_fascism_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_trait = communist_revolutionary
+						owner = { state_originally_from_GER = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Germany_Generic_1_small" }
+						army = { small = "GFX_Portrait_Germany_Generic_1_small" }
+						navy = { small = "GFX_Portrait_Germany_Generic_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 3
+						NOT = { has_trait = communist_revolutionary }
+						owner = { state_originally_from_GER = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Germany_Generic_2_small" }
+						army = { small = "GFX_Portrait_Germany_Generic_2_small" }
+						navy = { small = "GFX_Portrait_Germany_Generic_2_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 3
+						NOT = { has_trait = communist_revolutionary }
+						owner = { state_originally_from_GER = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Germany_Generic_3_small" }
+						army = { small = "GFX_Portrait_Germany_Generic_3_small" }
+						navy = { small = "GFX_Portrait_Germany_Generic_3_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_ITA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Italy_Generic_1_small" }
+						army = { small = "GFX_Portrait_Italy_Generic_1_small" }
+						navy = { small = "GFX_Portrait_Italy_Generic_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_ITA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Italy_Generic_2_small" }
+						army = { small = "GFX_Portrait_Italy_Generic_2_small" }
+						navy = { small = "GFX_Portrait_Italy_Generic_2_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_ITA = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Italy_Generic_3_small" }
+						army = { small = "GFX_Portrait_Italy_Generic_3_small" }
+						navy = { small = "GFX_Portrait_Italy_Generic_3_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = {
+							OR = {
+								state_originally_from_UKD = yes
+								state_originally_from_AST = yes
+								state_originally_from_CAN = yes
+								state_originally_from_NZL = yes
+							}
+						}
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Britain_Generic_1_small" }
+						army = { small = "GFX_Portrait_Britain_Generic_1_small" }
+						navy = { small = "GFX_Portrait_Britain_Generic_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = {
+							OR = {
+								state_originally_from_UKD = yes
+								state_originally_from_AST = yes
+								state_originally_from_CAN = yes
+								state_originally_from_NZL = yes
+							}
+						}
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Britain_Generic_2_small" }
+						army = { small = "GFX_Portrait_Britain_Generic_2_small" }
+						navy = { small = "GFX_Portrait_Britain_Generic_2_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = {
+							OR = {
+								state_originally_from_UKD = yes
+								state_originally_from_AST = yes
+								state_originally_from_CAN = yes
+								state_originally_from_NZL = yes
+							}
+						}
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Britain_Generic_3_small" }
+						army = { small = "GFX_Portrait_Britain_Generic_3_small" }
+						navy = { small = "GFX_Portrait_Britain_Generic_3_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_SOV = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Soviet_Generic_1_small" }
+						army = { small = "GFX_Portrait_Soviet_Generic_1_small" }
+						navy = { small = "GFX_Portrait_Soviet_Generic_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_SOV = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Soviet_Generic_2_small" }
+						army = { small = "GFX_Portrait_Soviet_Generic_2_small" }
+						navy = { small = "GFX_Portrait_Soviet_Generic_2_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_SOV = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Soviet_Generic_3_small" }
+						army = { small = "GFX_Portrait_Soviet_Generic_3_small" }
+						navy = { small = "GFX_Portrait_Soviet_Generic_3_small" }
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				is_on_continent = asia
+			}
+			state_originally_from_AFG = no
+			state_originally_from_RAJ = no
+			state_originally_from_PAK = no
+			state_originally_from_BAN = no
+		}
+
+		every_character = {
+			limit = {
+				NOT = {
+					has_army_ledger = yes
+					has_navy_ledger = yes
+					has_air_ledger = yes
+					owner = { capital_scope = { is_in_array = { state_advisors = PREV.PREV } } }
+				}
+			}
+
+			random_list = {
+				seed = random
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_asia_1" }
+						army = { small = "GFX_idea_generic_political_advisor_asia_1" }
+						navy = { small = "GFX_idea_generic_political_advisor_asia_1" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_asia_2" }
+						army = { small = "GFX_idea_generic_political_advisor_asia_2" }
+						navy = { small = "GFX_idea_generic_political_advisor_asia_2" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_asia_3" }
+						army = { small = "GFX_idea_generic_political_advisor_asia_3" }
+						navy = { small = "GFX_idea_generic_political_advisor_asia_3" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_communist_revolutionary_asian_2d" }
+						army = { small = "GFX_idea_generic_communist_revolutionary_asian_2d" }
+						navy = { small = "GFX_idea_generic_communist_revolutionary_asian_2d" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_trait = democratic_reformer
+					}
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_democratic_reformer_asian_2d" }
+						army = { small = "GFX_idea_generic_democratic_reformer_asian_2d" }
+						navy = { small = "GFX_idea_generic_democratic_reformer_asian_2d" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_fascist_demagogue_asian_2d" }
+						army = { small = "GFX_idea_generic_fascist_demagogue_asian_2d" }
+						navy = { small = "GFX_idea_generic_fascist_demagogue_asian_2d" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_trait = democratic_reformer
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Asia_Generic_2_small" }
+						army = { small = "GFX_Portrait_Asia_Generic_2_small" }
+						navy = { small = "GFX_Portrait_Asia_Generic_2_small" }
+					}
+				}
+				6 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_trait = communist_revolutionary
+							has_trait = democratic_reformer
+						}
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Asia_Generic_3_small" }
+						army = { small = "GFX_Portrait_Asia_Generic_3_small" }
+						navy = { small = "GFX_Portrait_Asia_Generic_3_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Asia_Generic_communism_small" }
+						army = { small = "GFX_Portrait_Asia_Generic_communism_small" }
+						navy = { small = "GFX_Portrait_Asia_Generic_communism_small" }
+					}
+				}
+				3 = {
+					modifier = {
+						factor = 0
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Asia_Generic_democracy_small" }
+						army = { small = "GFX_Portrait_Asia_Generic_democracy_small" }
+						navy = { small = "GFX_Portrait_Asia_Generic_democracy_small" }
+					}
+				}
+				3 = {
+					modifier = {
+						factor = 0
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Asia_Generic_fascism_small" }
+						army = { small = "GFX_Portrait_Asia_Generic_fascism_small" }
+						navy = { small = "GFX_Portrait_Asia_Generic_fascism_small" }
+					}
+				}
+				2 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_asia_generic_communism_2_small" }
+						army = { small = "GFX_portrait_asia_generic_communism_2_small" }
+						navy = { small = "GFX_portrait_asia_generic_communism_2_small" }
+					}
+				}
+				2 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_asia_generic_democratic_2_small" }
+						army = { small = "GFX_portrait_asia_generic_democratic_2_small" }
+						navy = { small = "GFX_portrait_asia_generic_democratic_2_small" }
+					}
+				}
+				2 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_asia_generic_fascism_2_small" }
+						army = { small = "GFX_portrait_asia_generic_fascism_2_small" }
+						navy = { small = "GFX_portrait_asia_generic_fascism_2_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_JAP = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Japan_Generic_1_small" }
+						army = { small = "GFX_Portrait_Japan_Generic_1_small" }
+						navy = { small = "GFX_Portrait_Japan_Generic_1_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_JAP = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Japan_Generic_2_small" }
+						army = { small = "GFX_Portrait_Japan_Generic_2_small" }
+						navy = { small = "GFX_Portrait_Japan_Generic_2_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 2
+						owner = { state_originally_from_JAP = yes }
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Japan_Generic_3_small" }
+						army = { small = "GFX_Portrait_Japan_Generic_3_small" }
+						navy = { small = "GFX_Portrait_Japan_Generic_3_small" }
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				state_originally_from_RAJ = yes
+				state_originally_from_PAK = yes
+				state_originally_from_BAN = yes
+			}
+		}
+
+		every_character = {
+			limit = {
+				NOT = {
+					has_army_ledger = yes
+					has_navy_ledger = yes
+					has_air_ledger = yes
+					owner = { capital_scope = { is_in_array = { state_advisors = PREV.PREV } } }
+				}
+			}
+
+			random_list = {
+				seed = random
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_india_1" }
+						army = { small = "GFX_idea_generic_political_advisor_india_1" }
+						navy = { small = "GFX_idea_generic_political_advisor_india_1" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_india_2" }
+						army = { small = "GFX_idea_generic_political_advisor_india_2" }
+						navy = { small = "GFX_idea_generic_political_advisor_india_2" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_The_Raj_Political_Leader_Generic_small" }
+						army = { small = "GFX_Portrait_The_Raj_Political_Leader_Generic_small" }
+						navy = { small = "GFX_Portrait_The_Raj_Political_Leader_Generic_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_The_Raj_Political_Leader_Generic_2_small" }
+						army = { small = "GFX_Portrait_The_Raj_Political_Leader_Generic_2_small" }
+						navy = { small = "GFX_Portrait_The_Raj_Political_Leader_Generic_2_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_asia_3" }
+						army = { small = "GFX_idea_generic_political_advisor_asia_3" }
+						navy = { small = "GFX_idea_generic_political_advisor_asia_3" }
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				capital_scope = {
+					is_on_continent = africa
+				}
+				state_originally_from_BAH = yes
+			}
+			state_originally_from_MOR = no
+			state_originally_from_ALG = no
+			state_originally_from_TUN = no
+			state_originally_from_LBA = no
+			state_originally_from_EGY = no
+			state_originally_from_YEM = no
+			NOT = { original_tag = ZFS }
+		}
+
+		every_character = {
+			limit = {
+				NOT = {
+					has_army_ledger = yes
+					has_navy_ledger = yes
+					has_air_ledger = yes
+					owner = { capital_scope = { is_in_array = { state_advisors = PREV.PREV } } }
+				}
+			}
+
+			random_list = {
+				seed = random
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_african_1" }
+						army = { small = "GFX_idea_generic_political_advisor_african_1" }
+						navy = { small = "GFX_idea_generic_political_advisor_african_1" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_african_2" }
+						army = { small = "GFX_idea_generic_political_advisor_african_2" }
+						navy = { small = "GFX_idea_generic_political_advisor_african_2" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_african_3" }
+						army = { small = "GFX_idea_generic_political_advisor_african_3" }
+						navy = { small = "GFX_idea_generic_political_advisor_african_3" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Africa_Generic_3_small" }
+						army = { small = "GFX_Portrait_Africa_Generic_3_small" }
+						navy = { small = "GFX_Portrait_Africa_Generic_3_small" }
+					}
+				}
+				1 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_fascist_demagogue_african_2d" }
+						army = { small = "GFX_idea_generic_fascist_demagogue_african_2d" }
+						navy = { small = "GFX_idea_generic_fascist_demagogue_african_2d" }
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				capital_scope = {
+					is_on_continent = middle_east
+				}
+				state_originally_from_MOR = yes
+				state_originally_from_ALG = yes
+				state_originally_from_TUN = yes
+				state_originally_from_LBA = yes
+				state_originally_from_EGY = yes
+				state_originally_from_YEM = yes
+				state_originally_from_AFG = yes
+			}
+			state_originally_from_TUR = no
+		}
+
+		every_character = {
+			limit = {
+				NOT = {
+					has_army_ledger = yes
+					has_navy_ledger = yes
+					has_air_ledger = yes
+					owner = { capital_scope = { is_in_array = { state_advisors = PREV.PREV } } }
+				}
+			}
+
+			random_list = {
+				seed = random
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_arab_1" }
+						army = { small = "GFX_idea_generic_political_advisor_arab_1" }
+						navy = { small = "GFX_idea_generic_political_advisor_arab_1" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_arab_2" }
+						army = { small = "GFX_idea_generic_political_advisor_arab_2" }
+						navy = { small = "GFX_idea_generic_political_advisor_arab_2" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_arab_3" }
+						army = { small = "GFX_idea_generic_political_advisor_arab_3" }
+						navy = { small = "GFX_idea_generic_political_advisor_arab_3" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_communist_revolutionary_middle_eastern_2d" }
+						army = { small = "GFX_idea_generic_communist_revolutionary_middle_eastern_2d" }
+						navy = { small = "GFX_idea_generic_communist_revolutionary_middle_eastern_2d" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_trait = democratic_reformer
+					}
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_democratic_reformer_middle_eastern_2d" }
+						army = { small = "GFX_idea_generic_democratic_reformer_middle_eastern_2d" }
+						navy = { small = "GFX_idea_generic_democratic_reformer_middle_eastern_2d" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_fascist_demagogue_middle_eastern_2d" }
+						army = { small = "GFX_idea_generic_fascist_demagogue_middle_eastern_2d" }
+						navy = { small = "GFX_idea_generic_fascist_demagogue_middle_eastern_2d" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_trait = democratic_reformer
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Arabia_Generic_2_small" }
+						army = { small = "GFX_Portrait_Arabia_Generic_2_small" }
+						navy = { small = "GFX_Portrait_Arabia_Generic_2_small" }
+					}
+				}
+				6 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_trait = democratic_reformer
+							has_trait = communist_revolutionary
+						}
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Arabia_Generic_3_small" }
+						army = { small = "GFX_Portrait_Arabia_Generic_3_small" }
+						navy = { small = "GFX_Portrait_Arabia_Generic_3_small" }
+					}
+				}
+				3 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Arabia_Generic_democratic1_small" }
+						army = { small = "GFX_Portrait_Arabia_Generic_democratic1_small" }
+						navy = { small = "GFX_Portrait_Arabia_Generic_democratic1_small" }
+					}
+				}
+				3 = {
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_Arabia_Generic_fascism1_small" }
+						army = { small = "GFX_Portrait_Arabia_Generic_fascism1_small" }
+						navy = { small = "GFX_Portrait_Arabia_Generic_fascism1_small" }
+					}
+				}
+				2 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_arabia_generic_communism_2_small" }
+						army = { small = "GFX_portrait_arabia_generic_communism_2_small" }
+						navy = { small = "GFX_portrait_arabia_generic_communism_2_small" }
+					}
+				}
+				2 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_arabia_generic_democratic_2_small" }
+						army = { small = "GFX_portrait_arabia_generic_democratic_2_small" }
+						navy = { small = "GFX_portrait_arabia_generic_democratic_2_small" }
+					}
+				}
+				2 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_arabia_generic_fascism_2_small" }
+						army = { small = "GFX_portrait_arabia_generic_fascism_2_small" }
+						navy = { small = "GFX_portrait_arabia_generic_fascism_2_small" }
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				capital_scope = {
+					is_on_continent = south_america
+				}
+				state_originally_from_TUR = yes
+				state_originally_from_MEX = yes
+			}
+		}
+
+		every_character = {
+			limit = {
+				NOT = {
+					has_army_ledger = yes
+					has_navy_ledger = yes
+					has_air_ledger = yes
+					owner = { capital_scope = { is_in_array = { state_advisors = PREV.PREV } } }
+				}
+			}
+
+			random_list = {
+				seed = random
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_south_america_1" }
+						army = { small = "GFX_idea_generic_political_advisor_south_america_1" }
+						navy = { small = "GFX_idea_generic_political_advisor_south_america_1" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_south_america_2" }
+						army = { small = "GFX_idea_generic_political_advisor_south_america_2" }
+						navy = { small = "GFX_idea_generic_political_advisor_south_america_2" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_political_advisor_south_america_3" }
+						army = { small = "GFX_idea_generic_political_advisor_south_america_3" }
+						navy = { small = "GFX_idea_generic_political_advisor_south_america_3" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_South_America_Generic_1_small" }
+						army = { small = "GFX_Portrait_South_America_Generic_1_small" }
+						navy = { small = "GFX_Portrait_South_America_Generic_1_small" }
+					}
+				}
+				3 = {
+					modifier = {
+						factor = 0
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_South_America_Generic_2_small" }
+						army = { small = "GFX_Portrait_South_America_Generic_2_small" }
+						navy = { small = "GFX_Portrait_South_America_Generic_2_small" }
+					}
+				}
+				3 = {
+					modifier = {
+						factor = 0
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_South_America_Generic_3_small" }
+						army = { small = "GFX_Portrait_South_America_Generic_3_small" }
+						navy = { small = "GFX_Portrait_South_America_Generic_3_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_South_America_Generic_4_small" }
+						army = { small = "GFX_Portrait_South_America_Generic_4_small" }
+						navy = { small = "GFX_Portrait_South_America_Generic_4_small" }
+					}
+				}
+				3 = {
+					modifier = {
+						factor = 0
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_South_America_Generic_5_small" }
+						army = { small = "GFX_Portrait_South_America_Generic_5_small" }
+						navy = { small = "GFX_Portrait_South_America_Generic_5_small" }
+					}
+				}
+				3 = {
+					modifier = {
+						factor = 0
+						has_trait = communist_revolutionary
+					}
+					set_portraits = {
+						civilian = { small = "GFX_Portrait_South_America_Generic_6_small" }
+						army = { small = "GFX_Portrait_South_America_Generic_6_small" }
+						navy = { small = "GFX_Portrait_South_America_Generic_6_small" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_south_america_generic_7_small" }
+						army = { small = "GFX_portrait_south_america_generic_7_small" }
+						navy = { small = "GFX_portrait_south_america_generic_7_small" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_south_america_generic_8_small" }
+						army = { small = "GFX_portrait_south_america_generic_8_small" }
+						navy = { small = "GFX_portrait_south_america_generic_8_small" }
+					}
+				}
+				6 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_south_america_generic_9_small" }
+						army = { small = "GFX_portrait_south_america_generic_9_small" }
+						navy = { small = "GFX_portrait_south_america_generic_9_small" }
+					}
+				}
+				0 = {
+					modifier = {
+						add = 6
+						has_trait = democratic_reformer
+					}
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_democratic_reformer_southamerican_2d" }
+						army = { small = "GFX_idea_generic_democratic_reformer_southamerican_2d" }
+						navy = { small = "GFX_idea_generic_democratic_reformer_southamerican_2d" }
+					}
+				}
+				6 = {
+					modifier = {
+						factor = 0
+						has_trait = democratic_reformer
+					}
+					set_portraits = {
+						civilian = { small = "GFX_idea_generic_fascist_demagogue_southamerican_2d" }
+						army = { small = "GFX_idea_generic_fascist_demagogue_southamerican_2d" }
+						navy = { small = "GFX_idea_generic_fascist_demagogue_southamerican_2d" }
+					}
+				}
+				2 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_south_america_generic_communism_1_small" }
+						army = { small = "GFX_portrait_south_america_generic_communism_1_small" }
+						navy = { small = "GFX_portrait_south_america_generic_communism_1_small" }
+					}
+				}
+				2 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_south_america_generic_democratic_1_small" }
+						army = { small = "GFX_portrait_south_america_generic_democratic_1_small" }
+						navy = { small = "GFX_portrait_south_america_generic_democratic_1_small" }
+					}
+				}
+				2 = {
+					set_portraits = {
+						civilian = { small = "GFX_portrait_south_america_generic_fascism_1_small" }
+						army = { small = "GFX_portrait_south_america_generic_fascism_1_small" }
+						navy = { small = "GFX_portrait_south_america_generic_fascism_1_small" }
+					}
+				}
+			}
+		}
+	}
+
+	handle_special_advisors = yes
+}

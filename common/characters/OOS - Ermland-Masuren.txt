@@ -3,15 +3,78 @@
 		name=PRE_eitel_friedrich
 		portraits={
 			civilian={
-				large = GFX_portrait_PRE_eitel_friedrich
-				small = GFX_portrait_PRE_eitel_friedrich_small
+				large=GFX_portrait_PRE_eitel_friedrich
+				small=GFX_portrait_PRE_eitel_friedrich_small
 			}
 		}
+
 		country_leader={
 			traits={ the_soldier_king }
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OOS_wilhelm_von_gayl={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=GER_wilhelm_von_gayl
+			portraits={ civilian={ small=GFX_portrait_GER_wilhelm_von_gayl_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OOZ_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						5={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=GER_wilhelm_von_gayl
+			portraits={ civilian={ small=GFX_portrait_Europe_Generic_3_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OOZ_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						5={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
 		}
 	}
 }

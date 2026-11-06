@@ -1,39 +1,55 @@
 characters={
-	OSI_joseph_goebbels = {
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
+	OSI_joseph_goebbels={
+		instance={
+			allowed={ has_dlc="La Resistance" }
 			name=GER_joseph_goebbels
 			portraits={
 				civilian={
-					large = GFX_portrait_GER_joseph_goebbels
-					small = GFX_portrait_GER_joseph_goebbels_small
+					large=GFX_portrait_GER_joseph_goebbels
+					small=GFX_portrait_GER_joseph_goebbels_small
 				}
 			}
+
 			country_leader={
 				traits={ GER_goebbels_fuhrer }
 				ideology=nazism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="La Resistance" } }
 			name=GER_joseph_goebbels
 			portraits={
 				civilian={
-					large = GFX_portrait_GER_joseph_goebbels
-					small = GFX_portrait_GER_joseph_goebbels_small
+					large=GFX_portrait_GER_joseph_goebbels
+					small=GFX_portrait_GER_joseph_goebbels_small
 				}
 			}
+
 			country_leader={
 				traits={ GER_goebbels_fuhrer_no_lar }
 				ideology=nazism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	OSI_alfred_becker={
+		name=GER_alfred_becker
+		portraits={ army={ small=GFX_portrait_GER_alfred_becker_small } }
+
+		advisor={
+			slot=high_command
+			idea_token=OSI_bf_army_adaptive_engineer
+			ledger=army
+			cost=100
+			traits={ army_adaptive_engineer_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					51={ is_core_of=ROOT }
+				}
 			}
 		}
 	}

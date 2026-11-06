@@ -21,6 +21,12 @@ set_politics = {
 }
 
 recruit_character = OOF_hendrikus_colijn
+recruit_character = OOF_willem_schermerhorn
+random_character = { limit = { is_character = OOF_willem_schermerhorn } 7 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OOF_walraven_van_hall
+random_character = { limit = { is_character = OOF_walraven_van_hall } 7 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OOF_jan_goudriaan
+random_character = { limit = { is_character = OOF_jan_goudriaan } 7 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

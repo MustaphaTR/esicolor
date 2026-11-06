@@ -1,16 +1,33 @@
 ﻿characters={
 	OSF_konrad_adenauer={
 		name=GER_konrad_adenauer
-		portraits={
-			civilian={
-				large=GFX_portrait_GER_konrad_adenauer
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_GER_konrad_adenauer } }
+
 		country_leader={
 			traits={ GER_traditionalist }
 			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+	
+	#Advisors
+	OSF_ludwig_erhard={
+		name=GER_ludwig_erhard
+		portraits={ civilian={ small=GFX_portrait_GER_ludwig_erhard_small } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OSF_n_financial_expert
+			traits={ financial_expert }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					57={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
 		}
 	}
 }

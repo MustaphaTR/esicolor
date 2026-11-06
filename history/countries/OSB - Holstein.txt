@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = OSB_karl_donitz
+recruit_character = OSB_alfred_saalwachter
+random_character = { limit = { is_character = OSB_alfred_saalwachter } 58 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OSB_viktor_schutze
+random_character = { limit = { is_character = OSB_viktor_schutze } 58 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

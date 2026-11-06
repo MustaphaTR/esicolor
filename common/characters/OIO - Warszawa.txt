@@ -1,15 +1,155 @@
 ﻿characters={
 	OIO_ignacy_moscicki={
 		name=POL_ignacy_moscicki
-		portraits={
-			civilian={
-				large=GFX_portrait_POL_ignacy_moscicki
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_POL_ignacy_moscicki } }
+
 		country_leader={
 			ideology=oligarchism
-			expire="1938.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OIO_mieczyslaw_michalowicz={
+		name=POL_mieczyslaw_michalowicz
+		portraits={ army={ small=GFX_idea_POL_mieczyslaw_michalowicz } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OIO_b_democratic_reformer
+			traits={ democratic_reformer }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=democratic
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					10={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_democratic
+					NOT={ has_government=democratic }
+
+					add=30
+				}
+			}
+		}
+	}
+	OIO_jozef_beck={
+		name=POL_jozef_beck
+		portraits={ civilian={ small=GFX_idea_POL_jozef_beck } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OIO_m_smooth_talking_charmer
+			traits={ smooth_talking_charmer }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					10={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+	}
+	OIO_eugeniusz_kwiatkowiski={
+		name=POL_eugeniusz_kwiatkowiski
+		portraits={ army={ small=GFX_idea_POL_eugeniusz_kwiatkowiski } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OIO_p_captain_of_industry
+			traits={ captain_of_industry }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					10={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+	}
+	OIO_marian_rejewski={
+		name=POL_marian_rejewski
+		portraits={ army={ small=GFX_idea_POL_marian_rejewski } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OIO_w_code_breaker
+			traits={ code_breaker }
+
+			available={
+				has_intelligence_agency=yes
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					10={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+				modifier={
+					has_intelligence_agency=no
+					factor=0
+				}
+			}
+		}
+	}
+	OIO_ludomil_rayski={
+		name=POL_ludomil_rayski
+		portraits={ army={ small=GFX_idea_POL_ludomil_rayski } }
+
+		advisor={
+			slot=air_chief
+			idea_token=OIO_b_air_chief_ground_support
+			cost=100
+			traits={ air_chief_ground_support_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					10={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OIO_zygmunt_buhusz_szysko={
+		name=POL_zygmunt_buhusz_szysko
+		portraits={ army={ small=GFX_idea_POL_zygmunt_buhusz_szysko } }
+
+		advisor={
+			slot=high_command
+			idea_token=OIO_aa_army_infantry
+			ledger=army
+			cost=100
+			traits={ army_infantry_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					10={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

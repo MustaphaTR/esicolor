@@ -1,28 +1,136 @@
 characters={
 	OOA_kurt_schuschnigg={
 		name=AUS_kurt_schuschnigg
-		portraits={
-			civilian={
-				large=GFX_portrait_AUS_kurt_schuschnigg
+		portraits={ civilian={ large=GFX_portrait_AUS_kurt_schuschnigg } }
+
+		country_leader={
+			traits={ fascist_corporatist }
+			ideology=despotism
+		}
+		country_leader={
+			traits={ fascist_corporatist }
+			ideology=fascism_ideology
+		}
+		country_leader={
+			traits={ AUS_abolished_austrofascism }
+			ideology=conservatism
+		}
+	}
+
+	#Advisors
+	OOA_ernst_rudiger_starhemberg={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=AUS_ernst_rudiger_starhemberg
+			portraits={
+				civilian={
+					large=GFX_portrait_AUS_ernst_rudiger_starhemberg
+					small=GFX_portrait_AUS_ernst_rudiger_starhemberg_civilian_small
+				}
+				army={
+					large=GFX_portrait_AUS_ernst_rudiger_starhemberg
+					small=GFX_portrait_AUS_ernst_rudiger_starhemberg_military_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=OOA_f_propaganda_expert
+				traits={ propaganda_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						4={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_war_support > 0.4
+						has_war_support < 0.5
+
+						add=9
+					}
+				}
 			}
 		}
-		country_leader={
-			traits = { fascist_corporatist }
-			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=AUS_ernst_rudiger_starhemberg
+			portraits={ civilian={ small=GFX_Portrait_Germany_Generic_land_9_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OOA_f_propaganda_expert
+				traits={ propaganda_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						4={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_war_support > 0.4
+						has_war_support < 0.5
+
+						add=9
+					}
+				}
+			}
 		}
-		country_leader={
-			traits = { fascist_corporatist }
-			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+	}
+	OOA_julius_raab={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=AUS_julius_raab
+			portraits={ civilian={ small=GFX_portrait_AUS_julius_raab_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OOA_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						4={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
 		}
-		country_leader={
-			traits = { AUS_abolished_austrofascism }
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=AUS_julius_raab
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_3 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OOA_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						4={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
 		}
 	}
 }

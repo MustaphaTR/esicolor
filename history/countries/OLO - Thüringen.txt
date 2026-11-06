@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = OLO_erwin_baum
+recruit_character = OLO_ernst_thalmann
+random_character = { limit = { is_character = OLO_ernst_thalmann } 60 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = OAS_milan_grol
+recruit_character = OAS_slobodan_jovanovic
+random_character = { limit = { is_character = OAS_slobodan_jovanovic } 45 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

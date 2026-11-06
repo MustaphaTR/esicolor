@@ -21,6 +21,12 @@ set_politics = {
 }
 
 recruit_character = OAL_carol_ii
+recruit_character = OAL_nicolae_malaxa
+random_character = { limit = { is_character = OAL_nicolae_malaxa } 46 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OAL_gheorghe_mihail
+random_character = { limit = { is_character = OAL_gheorghe_mihail } 46 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OAL_paul_teodorescu
+random_character = { limit = { is_character = OAL_paul_teodorescu } 46 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

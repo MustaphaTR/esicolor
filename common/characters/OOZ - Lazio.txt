@@ -1,37 +1,135 @@
 characters={
-	OOZ_vittorio_emanuele_iii = {
-		name = ITA_vittorio_emanuele_iii
-		portraits = {
-			civilian = {
-				large = GFX_portrait_ITA_vittorio_emanuele_III
-				small = GFX_portrait_ITA_vittorio_emanuele_III_small
+	OOZ_vittorio_emanuele_iii={
+		name=ITA_vittorio_emanuele_iii
+		portraits={
+			civilian={
+				large=GFX_portrait_ITA_vittorio_emanuele_III
+				small=GFX_portrait_ITA_vittorio_emanuele_III_small
 			}
 		}
+
 		country_leader={
 			traits={ the_soldier_king }
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		country_leader={
 			traits={ the_soldier_king }
 			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
-	OOZ_papa_pio_xi = {
-		name = ITA_papa_pio_xi
-		portraits = {
-			civilian = {
-				large = GFX_portrait_ITA_papa_pio_xi
-			}
-		}
+	OOZ_papa_pio_xi={
+		name=ITA_papa_pio_xi
+		portraits={ civilian={ large=GFX_portrait_ITA_papa_pio_xi } }
+
 		country_leader={
 			traits={ supreme_pontiff grand_master_of_the_equestrian_order_of_the_holy_sepulcher_of_jerusalem }
 			ideology=oligarchism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OOZ_pietro_d_acquarone={
+		name=ITA_pietro_d_acquarone
+		portraits={ civilian={ small=GFX_portrait_ITA_pietro_d_acquarone_small } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OOZ_a_staunch_monarchist
+			traits={ staunch_monarchist }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=neutrality
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					if={
+						limit={ has_dlc="By Blood Alone" }
+						
+						114={ is_core_of=ROOT }
+					}
+					else={
+						2={ is_core_of=ROOT }
+					}
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_neutrality
+					NOT={ has_government=neutrality }
+
+					add=30
+				}
+			}
+		}
+	}
+	OOZ_alberto_beneduce={
+		name=ITA_alberto_beneduce
+		portraits={ civilian={ small=GFX_portrait_ITA_alberto_beneduce_small } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OOZ_p_captain_of_industry
+			traits={ captain_of_industry }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					2={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+	}
+	OOZ_renato_sandalli={
+		name=ITA_renato_sandalli
+		portraits={ army={ small=GFX_idea_renato_sandalli } }
+
+		advisor={
+			slot=theorist
+			idea_token=OOZ_j_air_warfare_theorist
+			ledger=air
+			cost=100
+			traits={ air_warfare_theorist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					2={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OOZ_amedeo_mecozzi={
+		name=ITA_amedeo_mecozzi
+		portraits={ army={ small=GFX_idea_amedeo_mecozzi } }
+
+		advisor={
+			slot=theorist
+			idea_token=OOZ_m_assault_avaition
+			ledger=air
+			cost=150
+			traits={ assault_avaition }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					2={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

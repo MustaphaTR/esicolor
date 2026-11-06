@@ -1,50 +1,393 @@
 ﻿characters={
-	OAE_miklos_horthy = {
-		instance = {
-			allowed = {
-				has_dlc = "Gotterdammerung"
-			}
+	OAE_miklos_horthy={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
 			name=HUN_miklos_horthy
 			portraits={
 				civilian={
-					large = GFX_portrait_HUN_miklos_horthy
-					small = GFX_portrait_HUN_miklos_horthy_small
+					large=GFX_portrait_HUN_miklos_horthy
+					small=GFX_portrait_HUN_miklos_horthy_small
 				}
 			}
+
 			country_leader={
 				traits={ anti_communist }
 				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=-1
 			}
 			country_leader={
 				traits={ fascist_sympathies anti_communist HUN_the_regent }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Gotterdammerung" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
 			name=HUN_miklos_horthy
-			portraits={
-				civilian={
-					large = GFX_Portrait_hungary_miklos_horthy
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_hungary_miklos_horthy } }
+
 			country_leader={
 				traits={ anti_communist }
 				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=-1
 			}
 			country_leader={
 				traits={ fascist_sympathies anti_communist HUN_the_regent }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	OAE_gyula_gombos_de_jakfa={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_gyula_gombos_de_jakfa
+			portraits={
+				army={
+					large=GFX_portrait_HUN_gyula_gombos_de_jakfa
+					small=GFX_portrait_HUN_gyula_gombos_de_jakfa_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=OAE_c_fascist_demagogue
+				traits={ fascist_demagogue }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							NOT={ has_global_flag=custom_advisors_only } # Adjusted trait don't give access to ideology changing.
+						}
+
+						OR={
+							has_government=fascism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						43={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_fascism
+						NOT={
+							has_government=fascism
+							has_global_flag=custom_advisors_only
+						}
+
+						add=30
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_gyula_gombos_de_jakfa
+			portraits={ army={ small=GFX_idea_HUN_gyula_gombos_de_jakfa } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OAE_c_fascist_demagogue
+				traits={ fascist_demagogue }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							NOT={ has_global_flag=custom_advisors_only } # Adjusted trait don't give access to ideology changing.
+						}
+
+						OR={
+							has_government=fascism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						43={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_fascism
+						NOT={
+							has_government=fascism
+							has_global_flag=custom_advisors_only
+						}
+
+						add=30
+					}
+				}
+			}
+		}
+	}
+	OAE_magdolna_purgly={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_magdolna_purgly
+			portraits={ civilian={ small=GFX_portrait_HUN_magdolna_purgly_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OAE_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						43={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+			gender=female
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_magdolna_purgly
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_female_europe } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OAE_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						43={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+			gender=female
+		}
+	}
+	OAE_miklos_horthy_jr={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_miklos_horthy_jr
+			portraits={ civilian={ small=GFX_portrait_HUN_miklos_horthy_jr_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OAE_j_editor2
+				traits={ modernizer_and_diplomat }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						43={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_miklos_horthy_jr
+			portraits={ civilian={ small=GFX_portrait_europe_generic_fascism_3_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OAE_j_editor2
+				traits={ modernizer_and_diplomat }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						43={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+	}
+	OAE_kalman_daranyi={
+		name=HUN_kalman_daranyi
+		portraits={ civilian={ small=GFX_idea_HUN_kalman_daranyi } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OAE_m_smooth_talking_charmer
+			traits={ smooth_talking_charmer }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					43={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+	}
+	OAE_istvan_horthy={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_istvan_horthy
+			portraits={
+				civilian={
+					large=GFX_portrait_HUN_istvan_horthy
+					small=GFX_portrait_HUN_istvan_horthy_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=OAE_q_war_industrialist
+				traits={ war_industrialist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						43={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_istvan_horthy
+			portraits={ civilian={ small=GFX_portrait_europe_generic_land_13_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OAE_q_war_industrialist
+				traits={ war_industrialist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						43={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	OAE_shvoy_kalman={
+		name=HUN_shvoy_kalman
+		portraits={ army={ small=GFX_idea_HUN_shvoy_kalman } }
+
+		advisor={
+			slot=theorist
+			idea_token=OAE_a_military_theorist
+			ledger=army
+			cost=100
+			traits={ military_theorist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					43={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OAE_gyorgy_jendrassik={
+		name=HUN_gyorgy_jendrassik
+		portraits={ army={ small=GFX_idea_HUN_gyorgy_jendrassik } }
+
+		advisor={
+			slot=theorist
+			idea_token=OAE_j_air_warfare_theorist
+			ledger=air
+			cost=100
+			traits={ air_warfare_theorist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					43={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OAE_ferenc_szombathelyi={
+		name=HUN_ferenc_szombathelyi
+		portraits={ army={ small=GFX_idea_HUN_ferenc_szombathelyi } }
+
+		advisor={
+			slot=army_chief
+			idea_token=OOY_b_army_chief_defensive
+			cost=100
+			traits={ army_chief_defensive_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					43={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OAE_kalman_hardy={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_kalman_hardy
+			portraits={ army={ small=GFX_portrait_HUN_kalman_hardy_small } }
+
+			advisor={
+				slot=navy_chief
+				idea_token=OAE_a_navy_chief_commerce_raiding
+				cost=100
+				traits={ navy_chief_commerce_raiding_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						43={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_kalman_hardy
+			portraits={ army={ small=GFX_portrait_europe_generic_land_16_small } }
+
+			advisor={
+				slot=navy_chief
+				idea_token=OAE_a_navy_chief_commerce_raiding
+				cost=100
+				traits={ navy_chief_commerce_raiding_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						43={ is_core_of=ROOT }
+					}
+				}
 			}
 		}
 	}
