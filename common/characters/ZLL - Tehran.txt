@@ -1,37 +1,127 @@
 characters={
-	ZLL_reza_shah_pahlavi = {
-		instance = {
-			allowed = {
-				has_dlc = "Graveyard of Empires"
-			}
+	ZLL_reza_shah_pahlavi={
+		instance={
+			allowed={ has_dlc="Graveyard of Empires" }
 			name=PER_reza_shah_pahlavi
-			portraits={
-				civilian={
-					large=GFX_portrait_PER_reza_shah_pahlavi
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_PER_reza_shah_pahlavi } }
+
 			country_leader={
 				traits={ dynasty_founder }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Graveyard of Empires" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Graveyard of Empires" } }
 			name=PER_reza_shah_pahlavi
-			portraits={
-				civilian={
-					large="GFX_portrait_Reza_Shah_Pahlavi"
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_Reza_Shah_Pahlavi } }
+
 			country_leader={
 				traits={ dynasty_founder }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	ZLL_p_captain_of_industry={
+		instance={
+			allowed={ has_dlc="Graveyard of Empires" }
+			name=PER_karim_buzarjamehri
+			portraits={ civilian={ small=GFX_portrait_PER_karim_buzarjamehri_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZLL_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						266={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Graveyard of Empires" } }
+			name=PER_karim_buzarjamehri
+			portraits={ civilian={ small=GFX_idea_generic_air_arab_2 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZLL_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						266={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	ZLL_v_head_of_intelligence={
+		instance={
+			allowed={ has_dlc="Graveyard of Empires" }
+			name=PER_rokneddin_mokhtari
+			portraits={ civilian={ small=GFX_portrait_PER_rokneddin_mokhtari_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZLL_v_head_of_intelligence
+				traits={ head_of_intelligence }
+
+				available={
+					has_intelligence_agency=yes
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						266={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+					modifier={
+						has_intelligence_agency=no
+						factor=0
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Graveyard of Empires" } }
+			name=PER_rokneddin_mokhtari
+			portraits={ civilian={ small=GFX_Portrait_Arabia_Generic_land_1_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZLL_v_head_of_intelligence
+				traits={ head_of_intelligence }
+
+				available={
+					has_intelligence_agency=yes
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						266={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+					modifier={
+						has_intelligence_agency=no
+						factor=0
+					}
+				}
 			}
 		}
 	}

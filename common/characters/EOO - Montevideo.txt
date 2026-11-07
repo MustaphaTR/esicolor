@@ -1,16 +1,57 @@
 characters={
 	EOO_gabriel_terra={
 		name=URG_gabriel_terra
-		portraits={
-			civilian={
-				large=GFX_portrait_uruguay_portrait_gabriel_terra
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_uruguay_portrait_gabriel_terra } }
+
 		country_leader={
 			traits={ batllista_traditionalist }
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisor
+	EOO_m_smooth_talking_charmer={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=URG_jose_espalter
+			portraits={ civilian={ small=GFX_portrait_URG_jose_espalter_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=EOO_m_smooth_talking_charmer
+				traits={ smooth_talking_charmer }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						300={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=URG_jose_espalter
+			portraits={ civilian={ small=GFX_Portrait_Europe_Generic_3_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=EOO_m_smooth_talking_charmer
+				traits={ smooth_talking_charmer }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						300={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
 		}
 	}
 }

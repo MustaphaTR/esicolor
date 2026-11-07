@@ -2,37 +2,211 @@ characters={
 	# This is the default leader of Argentina, as such has a portrait without ToA, but gets a different one with the DLC.
 	ZFB_agustin_pedro_justo = {
 		instance = {
-			allowed = {
-				has_dlc = "Trial of Allegiance"
-			}
+			allowed = { has_dlc = "Trial of Allegiance" }
 			name=ARG_agustin_pedro_justo
-			portraits={
-				civilian={
-					large=GFX_portrait_ARG_augustin_pedro_justo
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_ARG_augustin_pedro_justo } }
+
 			country_leader={
 				traits={ ARG_fraudulent_industrialist }
 				ideology=moderatism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
 		instance = {
-			allowed = {
-				NOT = { has_dlc = "Trial of Allegiance" }
-			}
+			allowed = { NOT = { has_dlc = "Trial of Allegiance" } }
 			name=ARG_agustin_pedro_justo
-			portraits={
-				civilian={
-					large=GFX_portrait_Agustin_Pedro_Justo
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_Agustin_Pedro_Justo } }
+
 			country_leader={
 				traits={ ARG_fraudulent_industrialist }
 				ideology=moderatism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	ZFB_g_silent_workhorse={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=ZFB_julio_roca
+			portraits={ civilian={ small=GFX_portrait_ARG_julio_roca_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFB_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						278={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=ZFB_julio_roca
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_1 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFB_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						278={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+	}
+	ZFB_j_editor={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=ARG_roberto_maria_ortiz
+			portraits={
+				civilian={
+					large=GFX_portrait_ARG_roberto_maria_ortiz
+					small=GFX_portrait_ARG_roberto_maria_ortiz_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFB_j_editor
+				traits={ editor }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						278={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=ARG_roberto_maria_ortiz
+			portraits={ civilian={ small=GFX_Portrait_South_America_Generic_3_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFB_j_editor
+				traits={ editor }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						278={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+	}
+	ZFB_m_smooth_talking_charmer={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=ARG_ramon_castillo
+			portraits={
+				civilian={
+					large=GFX_portrait_ARG_ramon_castillo
+					small=GFX_portrait_ARG_ramon_castillo_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFB_m_smooth_talking_charmer
+				traits={ smooth_talking_charmer }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						278={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=ARG_ramon_castillo
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_2 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFB_m_smooth_talking_charmer
+				traits={ smooth_talking_charmer }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						278={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	ZFB_n_financial_expert={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=ZFB_diogenes_taboada
+			portraits={ civilian={ small=GFX_portrait_ARG_diogenes_taboada_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFB_n_financial_expert
+				traits={ financial_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						278={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=ZFB_diogenes_taboada
+			portraits={ civilian={ small=GFX_idea_generic_army_south_america_4 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFB_n_financial_expert
+				traits={ financial_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						278={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
 			}
 		}
 	}

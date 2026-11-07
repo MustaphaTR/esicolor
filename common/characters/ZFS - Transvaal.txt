@@ -1,15 +1,108 @@
 characters={
 	ZFS_j_b_m_hertzog={
 		name=SAF_j_b_m_hertzog
-		portraits={
-			civilian={
-				large=GFX_SAF_james_hertzog
-			}
-		}
+		portraits={ civilian={ large=GFX_SAF_james_hertzog } }
+
 		country_leader={
 			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	ZFS_b_democratic_reformer={
+		name=SAF_sir_patrick_duncan
+		portraits={ civilian={ small=GFX_idea_SAF_sir_patrick_duncan } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ZFS_b_democratic_reformer
+			traits={ democratic_reformer }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=democratic
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					275={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_democratic
+					NOT={ has_government=democratic }
+
+					add=30
+				}
+			}
+		}
+	}
+	ZFS_g_silent_workhorse={
+		name=SAF_e_g_jansen
+		portraits={ civilian={ small=GFX_idea_SAF_e_g_jansen } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ZFS_g_silent_workhorse
+			traits={ silent_workhorse }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					275={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=15 }
+		}
+	}
+	ZFS_p_captain_of_industry={
+		name=SAF_nicolaas_havenga
+		portraits={ civilian={ small=GFX_idea_SAF_nicolaas_havenga } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ZFS_p_captain_of_industry
+			traits={ captain_of_industry }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					275={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+	}
+	ZFS_b_air_chief_ground_support={
+		name=SAF_pierre_van_ryneveld
+		portraits={ army={ small=GFX_idea_SAF_pierre_van_ryneveld } }
+
+		advisor={
+			slot=air_chief
+			idea_token=ZFS_b_air_chief_ground_support
+			cost=100
+			traits={ air_chief_ground_support_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					275={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

@@ -1,16 +1,75 @@
 characters={
 	ZYI_ghazi_i={
 		name=IRQ_ghazi_i
-		portraits={
-			civilian={
-				large="GFX_portrait_iraq_ghazi"
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_iraq_ghazi } }
+
 		country_leader={
 			traits={ IRQ_king_of_iraq_ghazi }
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	ZYI_f_propaganda_expert={
+		instance={
+			allowed={ has_dlc="Graveyard of Empires" }
+			name=IRQ_maruf_al_rusafi
+			portraits={ civilian={ small=GFX_portrait_IRQ_maruf_al_rusafi_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZYI_f_propaganda_expert
+				traits={ propaganda_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						291={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_war_support > 0.4
+						has_war_support < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Graveyard of Empires" } }
+			name=IRQ_maruf_al_rusafi
+			portraits={ civilian={ small=GFX_portrait_arabia_generic_land_7_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZYI_f_propaganda_expert
+				traits={ propaganda_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						291={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_war_support > 0.4
+						has_war_support < 0.5
+
+						add=9
+					}
+				}
+			}
 		}
 	}
 }

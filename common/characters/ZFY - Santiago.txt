@@ -1,16 +1,256 @@
 characters={
-	ZFY_arturo_alessandri = {
-		name = CHL_arturo_alessandri
-		portraits = {
-			civilian = {
-				large=GFX_Portrait_chile_arturo_alessandri
-			}
-		}
+	ZFY_arturo_alessandri={
+		name=CHL_arturo_alessandri
+		portraits={ civilian={ large=GFX_Portrait_chile_arturo_alessandri } }
+
 		country_leader={
 			traits={ JUNO_the_lion_of_tarapaca }
 			ideology=liberalism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	ZFY_f_propaganda_expert={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_ulk
+			portraits={ civilian={ small=GFX_portrait_CHL_ulk_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFY_f_propaganda_expert
+				traits={ propaganda_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						279={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_war_support > 0.4
+						has_war_support < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=CHL_ulk
+			portraits={ civilian={ small=GFX_idea_unknown_advisor_dog } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFY_f_propaganda_expert
+				traits={ propaganda_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						279={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_war_support > 0.4
+						has_war_support < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+	}
+	ZFY_m_smooth_talking_charmer={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_ernesto_jarpa
+			portraits={ civilian={ small=GFX_portrait_CHL_ernesto_jarpa_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFY_m_smooth_talking_charmer
+				traits={ smooth_talking_charmer }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						279={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=CHL_ernesto_jarpa
+			portraits={ civilian={ small=GFX_Portrait_South_America_Generic_navy_1_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFY_m_smooth_talking_charmer
+				traits={ smooth_talking_charmer }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						279={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	ZFY_n_financial_expert={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_gustavo_ross_santa_maria
+			portraits={
+				civilian={
+					large=GFX_portrait_CHL_gustavo_ross_santa_maria
+					small=GFX_portrait_CHL_gustavo_ross_santa_maria_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFY_n_financial_expert
+				traits={ financial_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						279={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=CHL_gustavo_ross_santa_maria
+			portraits={ civilian={ small=GFX_Portrait_South_America_Generic_land_4_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFY_n_financial_expert
+				traits={ financial_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						279={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	ZFY_o_economist={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_jorge_alessandri
+			portraits={ civilian={ small=GFX_portrait_CHL_jorge_alessandri_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFY_o_economist
+				traits={ economist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						279={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=CHL_jorge_alessandri
+			portraits={ civilian={ small=GFX_Portrait_South_America_Generic_navy_3_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFY_o_economist
+				traits={ economist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						279={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	ZFY_p_captain_of_industry={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_benjamin_larrain
+			portraits={ civilian={ small=GFX_portrait_CHL_benjamin_larrain_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFY_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						279={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=CHL_benjamin_larrain
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_2 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ZFY_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						279={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
 		}
 	}
 }

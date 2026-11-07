@@ -21,6 +21,16 @@ set_politics = {
 }
 
 recruit_character = ZFY_arturo_alessandri
+recruit_character = ZFY_f_propaganda_expert
+random_character = { limit = { is_character = ZFY_f_propaganda_expert } 279 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = ZFY_m_smooth_talking_charmer
+random_character = { limit = { is_character = ZFY_m_smooth_talking_charmer } 279 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = ZFY_n_financial_expert
+random_character = { limit = { is_character = ZFY_n_financial_expert } 279 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = ZFY_o_economist
+random_character = { limit = { is_character = ZFY_o_economist } 279 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = ZFY_p_captain_of_industry
+random_character = { limit = { is_character = ZFY_p_captain_of_industry } 279 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

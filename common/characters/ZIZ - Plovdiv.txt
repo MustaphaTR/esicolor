@@ -1,16 +1,132 @@
 characters={
 	ZIZ_hristo_lukov={
 		name=BUL_hristo_lukov
-		portraits={
-			civilian={
-				large=GFX_Portrait_bulgaria_hristo_lukov
-			}
-		}
+		portraits={ civilian={ large=GFX_Portrait_bulgaria_hristo_lukov } }
+
 		country_leader={
 			traits={ hardened_officer }
 			ideology=fascism_ideology
-			expire="1965.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	ZIZ_c_fascist_demagogue={
+		name=BUL_ivan_dochev
+		portraits={ civilian={ small=GFX_idea_bul_ivan_dochev } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ZIZ_c_fascist_demagogue
+			traits={ fascist_demagogue }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=fascism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					212={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_fascism
+					NOT={ has_government=fascism }
+
+					add=30
+				}
+			}
+		}
+	}
+	ZIZ_k_ideological_crusader={
+		name=BUL_nikola_zhekov
+		portraits={ civilian={ small=GFX_idea_bul_nikola_zhekov } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ZIZ_k_ideological_crusader
+			traits={ ideological_crusader }
+
+			available={
+				if={
+					limit={
+						has_focus_tree=horn_of_africa_tree
+						has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+					}
+
+					OR={
+						has_government=fascism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					212={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					has_global_flag=custom_advisors_only
+					has_country_flag=ai_go_fascism
+					NOT={ has_government=fascism }
+
+					add=29
+				}
+			}
+		}
+	}
+	ZIZ_n_financial_expert={
+		name=BUL_aleksandar_tsankov
+		portraits={ civilian={ small=GFX_idea_bul_aleksandar_tsankov } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ZIZ_n_financial_expert
+			traits={ financial_expert }
+
+			available={
+				if={
+					limit={
+						has_focus_tree=horn_of_africa_tree
+						has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+					}
+
+					OR={
+						has_government=fascism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					212={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					has_global_flag=custom_advisors_only
+					has_country_flag=ai_go_fascism
+					NOT={ has_government=fascism }
+
+					add=29
+				}
+			}
 		}
 	}
 }

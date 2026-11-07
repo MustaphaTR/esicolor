@@ -12109,52 +12109,6 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
-	266 = {
-		for_each_scope_loop = {
-			array = state_advisors
-			if = { # Karim Buzarjomehri
-				limit = { has_trait = captain_of_industry }
-
-				remove_trait = {
-					slot = political_advisor
-					trait = captain_of_industry
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = PER_head_of_transport
-				}
-			}
-			if = { # Rokneddin Mokhtari
-				limit = { has_trait = head_of_intelligence }
-
-				remove_trait = {
-					slot = political_advisor
-					trait = head_of_intelligence
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = PER_head_of_military_police
-				}
-			}
-		}
-	}
-	291 = {
-		for_each_scope_loop = {
-			array = state_advisors
-			if = { # Ma'ruf al-Rusafi
-				limit = { has_trait = propaganda_expert }
-
-				remove_trait = {
-					slot = political_advisor
-					trait = propaganda_expert
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = IRQ_poet_of_freedom
-				}
-			}
-		}
-	}
 	212 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -12180,6 +12134,35 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = statism_adept
+				}
+			}
+		}
+	}
+	266 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Karim Buzarjomehri
+				limit = { has_trait = captain_of_industry }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = captain_of_industry
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = PER_head_of_transport
+				}
+			}
+			if = { # Rokneddin Mokhtari
+				limit = { has_trait = head_of_intelligence }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = head_of_intelligence
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = PER_head_of_military_police
 				}
 			}
 		}
@@ -12309,35 +12292,6 @@ adjust_named_advisor_traits = {
 				}
 			}
 		}
-		for_each_scope_loop = {
-			array = state_advisors
-			if = { # Chikuhei Nakajima
-				limit = { has_trait = armaments_organizer }
-
-				set_character_name = JAP_chikuhei_nakajima
-				save_global_event_target_as = JAP_chikuhei_nakajima
-				remove_trait = {
-					slot = political_advisor
-					trait = armaments_organizer
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = JAP_nakajima_president
-				}
-
-				set_portraits = {
-					civilian = {
-						small = GFX_portrait_JAP_chikuhei_nakajima_small
-					}
-					army = {
-						small = GFX_portrait_JAP_chikuhei_nakajima_small
-					}
-					navy = {
-						small = GFX_portrait_JAP_chikuhei_nakajima_small
-					}
-				}
-			}
-		}
 	}
 	284 = {
 		for_each_scope_loop = {
@@ -12352,6 +12306,23 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = NZL_reserve_bank_governor
+				}
+			}
+		}
+	}
+	291 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Ma'ruf al-Rusafi
+				limit = { has_trait = propaganda_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = propaganda_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = IRQ_poet_of_freedom
 				}
 			}
 		}
@@ -13340,6 +13311,7 @@ retire_custom_named_advisors = {
 	random_country = { limit = { has_character = OLB_e_anti_fascist_agent } retire_character = OLB_e_anti_fascist_agent } # Hans Oster
 	random_country = { limit = { has_character = OFS_q_socialist_firebrand_union_women } retire_character = OFS_q_socialist_firebrand_union_women } # Bozena Machacova-Dostalova
 	random_country = { limit = { has_character = IOO_i_progressive_doctor } retire_character = IOO_i_progressive_doctor } # Olaf J Thorlacius
+	random_country = { limit = { has_character = ZBZ_u_nakajima_president } retire_character = ZBZ_u_nakajima_president } # Chikuhei Nakajima
 }
 
 remove_tank_designer = {

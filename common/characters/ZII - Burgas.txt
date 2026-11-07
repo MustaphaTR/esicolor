@@ -1,16 +1,109 @@
 characters={
 	ZII_georgi_dimitrov={
 		name=BUL_georgi_dimitrov
-		portraits={
-			civilian={
-				large=GFX_portrait_bul_georgi_dimitrov
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_bul_georgi_dimitrov } }
+
 		country_leader={
 			traits={ the_hero_of_the_leipzig_trials }
 			ideology=stalinism
-			expire="1965.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	ZII_d_communist_revolutionary={
+		name=BUL_vasil_kolarov
+		portraits={ civilian={ small=GFX_idea_bul_vasil_kolarov } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ZII_d_communist_revolutionary
+			traits={ communist_revolutionary }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					211={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=30
+				}
+			}
+		}
+	}
+	ZII_p_captain_of_industry={
+		name=BUL_valko_chervenkov
+		portraits={ civilian={ small=GFX_idea_bul_valko_chervenkov } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ZII_p_captain_of_industry
+			traits={ captain_of_industry }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					211={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+	}
+	ZII_b_air_chief_ground_support={
+		name=BUL_zachari_zachariev
+		portraits={ army={ small=GFX_idea_bul_zachari_zachariev } }
+
+		advisor={
+			slot=air_chief
+			idea_token=ZII_b_air_chief_ground_support
+			cost=200
+			traits={ air_chief_ground_support_3 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					211={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	ZII_ba_army_entrenchment={
+		name=BUL_ferdinand_kozovski
+		portraits={ army={ small=GFX_idea_bul_ferdinand_kozovski } }
+
+		advisor={
+			slot=high_command
+			idea_token=ZII_ba_army_entrenchment
+			ledger=army
+			cost=100
+			traits={ army_entrenchment_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					211={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

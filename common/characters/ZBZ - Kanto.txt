@@ -1,22 +1,77 @@
 characters={
 	ZBZ_emperor_hirohito={
 		name=JAP_emperor_hirohito
-		portraits={
-			civilian={
-				large=GFX_portrait_JAP_emperor_hirohito
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_JAP_emperor_hirohito } }
+
 		country_leader={
 			traits={ warrior_code emperor_showa imperial_sanction }
 			ideology=emperor_fascism
-			expire="1989.1.1.1"
-			id=-1
 		}
 		country_leader={
 			traits={ warrior_code emperor_showa }
 			ideology=despotism
-			expire="1989.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	ZBZ_p_captain_of_industry={
+		name=JAP_yoshisuke_aikawa
+		portraits={ civilian={ small=GFX_portrait_JAP_yoshisuke_aikawa_small } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ZBZ_p_captain_of_industry
+			traits={ captain_of_industry }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					282={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+	}
+	ZBZ_q_war_industrialist={
+		name=JAP_koyata_iwasaki
+		portraits={ civilian={ small=GFX_portrait_JAP_koyata_iwasaki_small } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ZBZ_q_war_industrialist
+			traits={ war_industrialist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					282={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+	}
+	ZBZ_u_nakajima_president={
+		name=JAP_chikuhei_nakajima
+		portraits={ civilian={ small=GFX_portrait_JAP_chikuhei_nakajima_small } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ZBZ_u_nakajima_president
+			traits={ JAP_nakajima_president }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					282={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
 		}
 	}
 }

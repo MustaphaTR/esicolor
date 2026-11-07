@@ -1,16 +1,53 @@
 characters={
 	ZBA_michael_joseph_savage={
 		name=NZL_michael_joseph_savage
-		portraits={
-			civilian={
-				large=GFX_NZL_michael_joseph_savage
-			}
-		}
+		portraits={ civilian={ large=GFX_NZL_michael_joseph_savage } }
+
 		country_leader={
 			traits={ NZL_social_welfare_architect_trait }
 			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	ZBA_o_economist={
+		name=NZL_leslie_lefeaux
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_2 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ZBA_o_economist
+			traits={ economist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					284={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+	}
+	ZBA_u_armaments_organizer={
+		name=NZL_walter_nash
+		portraits={ civilian={ small=GFX_idea_NZL_walter_nash } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ZBA_u_armaments_organizer
+			traits={ armaments_organizer }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					284={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
 		}
 	}
 }

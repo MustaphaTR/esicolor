@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = ZYI_ghazi_i
+recruit_character = ZYI_f_propaganda_expert
+random_character = { limit = { is_character = ZYI_f_propaganda_expert } 291 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes
