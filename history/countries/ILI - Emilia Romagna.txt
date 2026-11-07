@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = ILI_dino_grandi
+recruit_character = ILI_q_war_industrialist
+random_character = { limit = { is_character = ILI_q_war_industrialist } 161 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

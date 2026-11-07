@@ -1,37 +1,44 @@
 characters={
 	IBL_george_ii = {
 		instance = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-			}
+			allowed = { has_dlc = "Battle for the Bosporus" }
 			name=GRE_george_ii
-			portraits={
-				civilian={
-					large=GFX_portrait_gre_george_ii
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_gre_george_ii } }
+
 			country_leader={
 				traits={ divisive_absolute_monarch }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
 		instance = {
-			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
-			}
+			allowed = { NOT = { has_dlc = "Battle for the Bosporus" } }
 			name=GRE_george_ii
-			portraits={
-				civilian={
-					large=GFX_Portrait_Europe_Generic_5
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_Europe_Generic_5 } }
+
 			country_leader={
 				traits={ divisive_absolute_monarch }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	IBL_c_navy_chief_decisive_battle={
+		name=GRE_alexandros_sakellariou
+		portraits={ army={ small=GFX_idea_gre_alexandros_sakellariou } }
+
+		advisor={
+			slot=navy_chief
+			idea_token=IBL_c_navy_chief_decisive_battle
+			cost=100
+			traits={ navy_chief_decisive_battle_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					186={ is_core_of=ROOT }
+				}
 			}
 		}
 	}

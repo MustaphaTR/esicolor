@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = IOY_vladko_macek
+recruit_character = IOY_bb_army_logistics
+random_character = { limit = { is_character = IOY_bb_army_logistics } 109 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

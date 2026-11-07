@@ -1,16 +1,33 @@
 characters={
 	IBS_markos_vafiadis={
 		name=GRE_markos_vafiadis
-		portraits={
-			civilian={
-				large=GFX_portrait_GRE_markos_vafiadis
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_GRE_markos_vafiadis } }
+
 		country_leader={
 			traits={ guerilla_warfare_expert }
 			ideology=marxism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	IBS_bc_army_regrouping={
+		name=GRE_nikos_beloyannis
+		portraits={ army={ small=GFX_idea_gre_nikos_beloyannis } }
+
+		advisor={
+			slot=high_command
+			idea_token=IBS_bc_army_regrouping
+			ledger=army
+			cost=100
+			traits={ army_regrouping_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					185={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

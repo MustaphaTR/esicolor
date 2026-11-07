@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = ILE_ante_pavelic
+recruit_character = ILE_b_navy_chief_maneuver
+random_character = { limit = { is_character = ILE_b_navy_chief_maneuver } 163 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = ILE_bc_army_regrouping
+random_character = { limit = { is_character = ILE_bc_army_regrouping } 163 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

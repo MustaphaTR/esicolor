@@ -1,16 +1,85 @@
 characters={
 	ILE_ante_pavelic={
 		name=CRO_ante_pavelic
-		portraits={
-			civilian={
-				large=GFX_portrait_Ante_Pavelic
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_Ante_Pavelic } }
+
 		country_leader={
 			traits={ CRO_poglavnik_trait }
 			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	ILE_b_navy_chief_maneuver={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=CRO_duro_jakcin
+			portraits={
+				army={
+					large=GFX_portrait_CRO_duro_jakcin
+					small=GFX_portrait_CRO_duro_jakcin_small
+				}
+			}
+
+			advisor={
+				slot=navy_chief
+				idea_token=ILE_b_navy_chief_maneuver
+				cost=100
+				traits={ navy_chief_maneuver_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						163={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=CRO_duro_jakcin
+			portraits={ army={ small=GFX_portrait_europe_generic_navy_12_small } }
+
+			advisor={
+				slot=navy_chief
+				idea_token=ILE_b_navy_chief_maneuver
+				cost=100
+				traits={ navy_chief_maneuver_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						163={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+	}
+	ILE_bc_army_regrouping={
+		name=CRO_slavko_kvaternik
+		portraits={ # Generic portraits.
+			army={
+				large=GFX_portrait_CRO_slavko_kvaternik
+				small=GFX_portrait_CRO_slavko_kvaternik_small
+			}
+		}
+
+		advisor={
+			slot=high_command
+			idea_token=ILE_bc_army_regrouping
+			ledger=army
+			cost=100
+			traits={ army_regrouping_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					163={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

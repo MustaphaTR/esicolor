@@ -1,16 +1,54 @@
 characters={
-	IIF_benito_mussolini = {
-		name = ITA_benito_mussolini
-		portraits = {
-			civilian = {
-				large = GFX_portrait_ITA_benito_mussolini
-			}
-		}
+	IIF_benito_mussolini={
+		name=ITA_benito_mussolini
+		portraits={ civilian={ large=GFX_portrait_ITA_benito_mussolini } }
+
 		country_leader={
 			traits={ il_duce }
 			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	IIF_l_compassionate_gentleman={
+		name=ITA_gian_galeazzo_ciano
+		portraits={ civilian={ small=GFX_portrait_ITA_gian_galeazzo_ciano_small } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=IIF_l_compassionate_gentleman
+			traits={ compassionate_gentleman }
+
+			available={
+				if={
+					limit={
+						has_focus_tree=horn_of_africa_tree
+						has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+					}
+
+					OR={
+						has_government=fascism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					117={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=2
+
+				modifier={
+					has_global_flag=custom_advisors_only
+					has_country_flag=ai_go_fascism
+					NOT={ has_government=fascism }
+
+					add=28
+				}
+			}
 		}
 	}
 }

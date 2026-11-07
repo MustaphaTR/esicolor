@@ -1,9 +1,7 @@
 ﻿characters={
-	IAE_olav_scheflo = {
-		instance = {
-			allowed = {
-				has_dlc = "Arms Against Tyranny"
-			}
+	IAE_olav_scheflo={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
 			name=NOR_olav_scheflo
 			portraits={
 				civilian={
@@ -11,29 +9,148 @@
 					small=GFX_portrait_NOR_olav_scheflo_small
 				}
 			}
+
 			country_leader={
-				traits = { NOR_conciliatory_socialist }
+				traits={ NOR_conciliatory_socialist }
 				ideology=marxism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Arms Against Tyranny" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
 			name=NOR_olav_scheflo
-			portraits={
-				civilian={
-					large = "GFX_portrait_europe_generic_4"
+			portraits={ civilian={ large=GFX_portrait_europe_generic_4 } }
+			country_leader={
+				traits={ NOR_conciliatory_socialist }
+				ideology=marxism
+			}
+		}
+	}
+
+	#Advisors
+	IAE_d_communist_revolutionary={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=NOR_kirsten_hansteen
+			portraits={ civilian={ small=GFX_portrait_NOR_kirsten_hansteen_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IAE_d_communist_revolutionary
+				traits={ communist_revolutionary }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						143={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=30
+					}
 				}
 			}
-			country_leader={
-				traits = { NOR_conciliatory_socialist }
-				ideology=marxism
-				expire="1965.1.1.1"
-				id=-1
+			gender=female
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=NOR_kirsten_hansteen
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_female_europe } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IAE_d_communist_revolutionary
+				traits={ communist_revolutionary }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						143={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=30
+					}
+				}
 			}
+			gender=female
+		}
+	}
+	IAE_p_captain_of_industry={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=NOR_jeanette_olsen
+			portraits={ civilian={ small=GFX_portrait_NOR_jeanette_olsen_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IAE_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						143={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+			gender=female
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=NOR_jeanette_olsen
+			portraits={ civilian={ small=GFX_idea_generic_navy_female_europe } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IAE_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						143={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+			gender=female
 		}
 	}
 }

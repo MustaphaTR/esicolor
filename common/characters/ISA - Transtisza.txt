@@ -1,16 +1,149 @@
 ﻿characters={
 	ISA_matyas_rakosi={
 		name=HUN_matyas_rakosi
-		portraits={
-			civilian={
-				large=GFX_Portrait_hungary_matyas_rakosi
+		portraits={ civilian={ large=GFX_Portrait_hungary_matyas_rakosi } }
+
+		country_leader={
+			traits={ HUN_ardent_stalinist }
+			ideology=stalinism
+		}
+	}
+
+	#Advisors
+	ISA_d_communist_revolutionary={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_imre_nagy
+			portraits={ civilian={ small=GFX_portrait_HUN_imre_nagy_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ISA_d_communist_revolutionary
+				traits={ communist_revolutionary }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						154={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=30
+					}
+				}
 			}
 		}
-		country_leader={
-			traits = { HUN_ardent_stalinist }
-			ideology=stalinism
-			expire="1965.1.1.1"
-			id=-1
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_imre_nagy
+			portraits={ civilian={ small=GFX_idea_generic_communist_revolutionary_western_european_2d } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ISA_d_communist_revolutionary
+				traits={ communist_revolutionary }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						154={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=30
+					}
+				}
+			}
+		}
+	}
+	ISA_v_head_of_intelligence={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_erno_gero
+			portraits={ civilian={ small=GFX_portrait_HUN_erno_gero_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ISA_v_head_of_intelligence
+				traits={ head_of_intelligence }
+
+				available={
+					has_intelligence_agency=yes
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						154={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+					modifier={
+						has_intelligence_agency=no
+						factor=0
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_erno_gero
+			portraits={ civilian={ small=GFX_portrait_europe_generic_communism_3_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ISA_v_head_of_intelligence
+				traits={ head_of_intelligence }
+
+				available={
+					has_intelligence_agency=yes
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						154={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+					modifier={
+						has_intelligence_agency=no
+						factor=0
+					}
+				}
+			}
 		}
 	}
 }

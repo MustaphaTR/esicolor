@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = IOF_prince_paul
+recruit_character = IOF_a_military_theorist
+random_character = { limit = { is_character = IOF_a_military_theorist } 107 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = IOF_b_army_chief_defensive
+random_character = { limit = { is_character = IOF_b_army_chief_defensive } 107 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

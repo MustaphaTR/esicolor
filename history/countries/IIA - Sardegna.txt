@@ -35,6 +35,8 @@ if = {
 		neutrality = 60
 	}
 }
+recruit_character = IIA_t_quartermaster_general
+random_character = { limit = { is_character = IIA_t_quartermaster_general } 114 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

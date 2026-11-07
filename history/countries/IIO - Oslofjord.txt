@@ -21,6 +21,14 @@ set_politics = {
 }
 
 recruit_character = IIO_johan_nygaardsvold
+recruit_character = IIO_e_popular_figurehead
+random_character = { limit = { is_character = IIO_e_popular_figurehead } 110 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = IIO_m_smooth_talking_charmer
+random_character = { limit = { is_character = IIO_m_smooth_talking_charmer } 110 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = IIO_r_naval_architect
+random_character = { limit = { is_character = IIO_r_naval_architect } 110 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = IIO_a_army_chief_offensive
+random_character = { limit = { is_character = IIO_a_army_chief_offensive } 110 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

@@ -1,37 +1,62 @@
 characters={
-	IBA_nikos_zachariadis = {
-		instance = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-			}
+	IBA_nikos_zachariadis={
+		instance={
+			allowed={ has_dlc="Battle for the Bosporus" }
 			name=GRE_nikos_zachariadis
-			portraits={
-				civilian={
-					large=GFX_portrait_gre_nikos_zachariadis
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_gre_nikos_zachariadis } }
+
 			country_leader={
 				traits={ reluctant_stalinist }
 				ideology=stalinism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Battle for the Bosporus" } }
 			name=GRE_nikos_zachariadis
-			portraits={
-				civilian={
-					large=GFX_Portrait_South_America_Generic_land_2
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_South_America_Generic_land_2 } }
+
 			country_leader={
 				traits={ reluctant_stalinist }
 				ideology=stalinism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	IBA_d_communist_revolutionary={
+		name=GRE_dimitris_glinos
+		portraits={ civilian={ small=GFX_idea_gre_dimitris_glinos } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=IBA_d_communist_revolutionary
+			traits={ communist_revolutionary }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					184={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=30
+				}
 			}
 		}
 	}

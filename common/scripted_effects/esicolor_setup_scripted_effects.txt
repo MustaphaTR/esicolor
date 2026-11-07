@@ -11950,6 +11950,18 @@ adjust_named_advisor_traits = {
 	152 = {
 		for_each_scope_loop = {
 			array = state_advisors
+			if = { # Franz Winkler
+				limit = { has_trait = propaganda_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = propaganda_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = AUS_putschminister
+				}
+			}
 			if = { # Heimito von Doderer
 				limit = { has_trait = editor }
 
@@ -11967,7 +11979,7 @@ adjust_named_advisor_traits = {
 	153 = {
 		for_each_scope_loop = {
 			array = state_advisors
-			if = { # Heimito von Doderer
+			if = { # Franz Koritschoner
 				limit = { has_trait = communist_revolutionary }
 
 				remove_trait = {
@@ -12025,6 +12037,18 @@ adjust_named_advisor_traits = {
 	155 = {
 		for_each_scope_loop = {
 			array = state_advisors
+			if = { # Zoltán Tildy
+				limit = { has_trait = democratic_reformer }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = democratic_reformer
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = HUN_democracy_advocate
+				}
+			}
 			if = { # István Bethlen
 				limit = { has_trait = popular_figurehead }
 

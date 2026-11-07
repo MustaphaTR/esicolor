@@ -25,6 +25,7 @@ has_custom_democratic_reformer = {
 
 			original_tag = IOO
 		}
+		original_tag = ISS
 	}
 }
 has_custom_fascist_demagogue = {
@@ -32,6 +33,7 @@ has_custom_fascist_demagogue = {
 		original_tag = OAE
 		original_tag = OLY
 		original_tag = OFY
+		original_tag = IBZ
 	}
 }
 has_custom_communist_revolutionary = {
@@ -42,6 +44,11 @@ has_custom_communist_revolutionary = {
 		original_tag = OFS
 		original_tag = OFB
 		original_tag = OYO
+		original_tag = IAE
+		original_tag = ISE
+		original_tag = ISA
+		original_tag = ILZ
+		original_tag = IBA
 	}
 }
 # Other Political
@@ -51,12 +58,16 @@ has_custom_popular_figurehead = {
 		original_tag = OAS
 		original_tag = OFS
 		original_tag = IOO
+		original_tag = IIO
+		original_tag = ISE
+		original_tag = ISS
 	}
 }
 has_custom_propaganda_expert = {
 	OR = {
 		original_tag = OOA
 		original_tag = OLA
+		original_tag = ISZ
 	}
 }
 has_custom_silent_workhorse = {
@@ -65,6 +76,7 @@ has_custom_silent_workhorse = {
 		original_tag = OOY
 		original_tag = OAE
 		original_tag = OFO
+		original_tag = ISS
 	}
 }
 has_custom_prince_of_terror = {
@@ -87,6 +99,7 @@ has_custom_editor = {
 		original_tag = OOY
 		original_tag = OEF
 		original_tag = OFS
+		original_tag = ISZ
 	}
 }
 has_custom_ideological_crusader = {
@@ -97,6 +110,7 @@ has_custom_ideological_crusader = {
 has_custom_compassionate_gentleman = {
 	OR = {
 		original_tag = OFI
+		original_tag = IIF
 	}
 }
 has_custom_smooth_talking_charmer = {
@@ -105,6 +119,7 @@ has_custom_smooth_talking_charmer = {
 		original_tag = OIO
 		original_tag = OAE
 		original_tag = OYY
+		original_tag = IIO
 	}
 }
 has_custom_financial_expert = {
@@ -138,17 +153,19 @@ has_custom_captain_of_industry = {
 		original_tag = OAY
 		original_tag = OYY
 		original_tag = IOO
+		original_tag = IAE
 	}
 }
 has_custom_war_industrialist = {
 	OR = {
 		original_tag = OEF
 		original_tag = OAE
+		original_tag = ILI
 	}
 }
 has_custom_naval_architect = {
 	OR = {
-		
+		original_tag = IIO
 	}
 }
 has_custom_fortification_engineer = {
@@ -159,6 +176,7 @@ has_custom_fortification_engineer = {
 has_custom_quartermaster_general = {
 	OR = {
 		original_tag = OFO
+		original_tag = IIA
 	}
 }
 has_custom_armaments_organizer = {
@@ -171,6 +189,8 @@ has_custom_head_of_intelligence = {
 	OR = {
 		original_tag = OLZ
 		original_tag = OLB
+		original_tag = ISZ
+		original_tag = ISA
 	}
 }
 has_custom_code_breaker = {
@@ -190,6 +210,7 @@ has_custom_military_theorist = {
 	OR = {
 		original_tag = OAE
 		original_tag = OAB
+		original_tag = IOF
 	}
 }
 has_custom_mobile_warfare_expert = {
@@ -273,12 +294,20 @@ has_custom_army_chief_offensive = {
 	OR = {
 		original_tag = OLA
 		original_tag = OFI
+		original_tag = IIO
+		original_tag = IBZ
 	}
 }
 has_custom_army_chief_defensive = {
 	OR = {
 		original_tag = OOY
 		original_tag = OAE
+		original_tag = IOF
+		if = {
+			limit = { NOT = { has_dlc = "La Resistance" } }
+
+			original_tag = ISZ
+		}
 	}
 }
 has_custom_army_chief_maneuver = {
@@ -331,12 +360,12 @@ has_custom_navy_chief_commerce_raiding = {
 }
 has_custom_navy_chief_maneuver = {
 	OR = {
-		
+		original_tag = ILE
 	}
 }
 has_custom_navy_chief_decisive_battle = {
 	OR = {
-		
+		original_tag = IBL
 	}
 }
 has_custom_navy_chief_naval_aviation = {
@@ -382,12 +411,13 @@ has_custom_air_chief_all_weather = {
 }
 has_custom_air_chief_safety = {
 	OR = {
-		
+		original_tag = IOB
 	}
 }
 has_custom_air_chief_reform = {
 	OR = {
 		original_tag = OBB
+		original_tag = ISZ
 	}
 }
 has_custom_air_chief_old_guard = {
@@ -427,6 +457,7 @@ has_custom_army_armored = {
 has_custom_army_commando = {
 	OR = {
 		original_tag = OAL
+		original_tag = ISZ
 	}
 }
 # Army - Generic
@@ -438,11 +469,14 @@ has_custom_army_entrenchment = {
 has_custom_army_logistics = {
 	OR = {
 		original_tag = OOY
+		original_tag = IOY
 	}
 }
 has_custom_army_regrouping = {
 	OR = {
 		original_tag = OFI
+		original_tag = ILE
+		original_tag = IBA
 	}
 }
 has_custom_army_concealment = {
@@ -515,6 +549,7 @@ has_custom_air_air_superiority = {
 has_custom_air_bomber_interception = {
 	OR = {
 		original_tag = OSY
+		original_tag = IOB
 	}
 }
 has_custom_air_close_air_support = {

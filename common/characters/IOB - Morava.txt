@@ -1,22 +1,56 @@
 ﻿characters={
 	IOB_peter_ii={
 		name=YUG_peter_ii
-		portraits={
-			civilian={
-				large="GFX_portrait_yugoslavia_peter_ii_young"
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_yugoslavia_peter_ii_young } }
+
 		country_leader={
 			traits={ underage_monarch }
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		country_leader={
 			traits={ underage_monarch }
 			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	IOB_d_air_chief_safety={
+		name=YUG_dusan_simovic
+		portraits={ army={ small=GFX_idea_YUG_dusan_simovic } }
+
+		advisor={
+			slot=air_chief
+			idea_token=IOB_d_air_chief_safety
+			cost=100
+			traits={ air_chief_safety_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					108={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	IOB_db_air_bomber_interception={
+		name=YUG_borivoje_mirkovic
+		portraits={ army={ small=GFX_idea_YUG_borivoje_mirkovic } }
+
+		advisor={
+			slot=high_command
+			idea_token=IOB_db_air_bomber_interception
+			ledger=air
+			cost=50
+			traits={ air_bomber_interception_1 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					108={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

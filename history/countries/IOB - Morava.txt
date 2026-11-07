@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = IOB_peter_ii
+recruit_character = IOB_d_air_chief_safety
+random_character = { limit = { is_character = IOB_d_air_chief_safety } 108 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = IOB_db_air_bomber_interception
+random_character = { limit = { is_character = IOB_db_air_bomber_interception } 108 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

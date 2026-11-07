@@ -344,7 +344,7 @@ IIO_escort_ship_organization_custom = {
 		position = { x=0 y=0 }
 
 		visible = { has_global_flag = custom_advisors_only }
-		available = { event_target:NOR_johan_ludwig_mowinckel = { is_political_advisor = yes } }
+		available = { FROM = { has_idea_with_trait = NOR_shipping_capitalist } }
 
 		limit_to_equipment_type = { convoy }
 		production_bonus = {

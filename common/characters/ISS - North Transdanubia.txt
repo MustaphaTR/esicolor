@@ -3,15 +3,194 @@
 		name=HUN_arpad_szakasits
 		portraits={
 			civilian={
-				large = "GFX_portrait_HUN_arpad_szakasits"
-				small = "GFX_portrait_HUN_arpad_szakasits_small"
+				large=GFX_portrait_HUN_arpad_szakasits
+				small=GFX_portrait_HUN_arpad_szakasits_small
 			}
 		}
 		country_leader={
-			traits = { HUN_socialist_bulwark }
+			traits={ HUN_socialist_bulwark }
 			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	ISS_b_democratic_reformer={
+		name=HUN_zoltan_tildy
+		portraits={ civilian={ small=GFX_idea_HUN_zoltan_tildy } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ISS_b_democratic_reformer
+			traits={ democratic_reformer }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=democratic
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					155={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_democratic
+					NOT={ has_government=democratic }
+
+					add=30
+				}
+			}
+		}
+	}
+	ISS_e_popular_figurehead={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_istvan_bethlen
+			portraits={ civilian={ small=GFX_portrait_HUN_istvan_bethlen_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ISS_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+						}
+
+						OR={
+							has_government=democratic
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						155={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+					modifier={
+						has_global_flag=custom_advisors_only
+						has_country_flag=ai_go_democratic
+						NOT={ has_government=democratic }
+
+						add=29
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=AUS_otto_bauer
+			portraits={ civilian={ small=GFX_portrait_europe_generic_democratic_3_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ISS_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+						}
+
+						OR={
+							has_government=democratic
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						155={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+					modifier={
+						has_global_flag=custom_advisors_only
+						has_country_flag=ai_go_democratic
+						NOT={ has_government=democratic }
+
+						add=29
+					}
+				}
+			}
+		}
+	}
+	ISS_g_silent_workhorse={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_jusztinian_seredi
+			portraits={ civilian={ small=GFX_portrait_HUN_jusztinian_seredi_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ISS_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						155={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_jusztinian_seredi
+			portraits={ civilian={ small=GFX_Portrait_Europe_Generic_3_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=ISS_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						155={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
 		}
 	}
 }

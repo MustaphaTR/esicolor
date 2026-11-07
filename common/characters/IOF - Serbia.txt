@@ -1,21 +1,55 @@
 ﻿characters={
 	IOF_prince_paul={
 		name=YUG_prince_paul
-		portraits={
-			civilian={
-				large=GFX_portrait_YUG_prince_paul
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_YUG_prince_paul } }
+
 		country_leader={
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		country_leader={
-			traits = { collaborator_king }
+			traits={ collaborator_king }
 			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	IOF_a_military_theorist={
+		name=YUG_ljubomir_maric
+		portraits={ army={ small=GFX_idea_YUG_ljubomir_maric } }
+
+		advisor={
+			slot=theorist
+			idea_token=OAB_a_military_theorist
+			ledger=army
+			cost=100
+			traits={ military_theorist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					107={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	IOF_b_army_chief_defensive={
+		name=YUG_draza_mihailovic
+		portraits={ army={ small=GFX_idea_CZE_mikulas_dolezal } }
+
+		advisor={
+			slot=army_chief
+			idea_token=IOF_b_army_chief_defensive
+			cost=100
+			traits={ GFX_idea_YUG_draza_mihailovic }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					107={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

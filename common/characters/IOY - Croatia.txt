@@ -1,20 +1,35 @@
 ﻿characters={
 	IOY_vladko_macek={
 		name=CRO_vladko_macek
-		portraits={
-			civilian={
-				large=GFX_portrait_Vladko_Macek
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_Vladko_Macek } }
+
 		country_leader={
 			ideology=centrism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		country_leader={
 			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	IOY_bb_army_logistics={
+		name=YUG_mihajlo_lukic
+		portraits={ army={ small=GFX_idea_YUG_mihajlo_lukic } }
+
+		advisor={
+			slot=high_command
+			idea_token=IOY_bb_army_logistics
+			ledger=army
+			cost=100
+			traits={ army_logistics_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					109={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

@@ -1,16 +1,210 @@
 ﻿characters={
 	IIO_johan_nygaardsvold={
 		name=NOR_johan_nygaardsvold
-		portraits={
-			civilian={
-				large=GFX_portrait_Johan_Nygaardsvold
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_Johan_Nygaardsvold } }
+
 		country_leader={
 			traits={ NOR_popular_reformer }
 			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	IIO_e_popular_figurehead={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=NOR_trygve_halvdan_lie
+			portraits={ civilian={ small=GFX_portrait_NOR_trygve_halvdan_lie_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IIO_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						110={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=NOR_trygve_halvdan_lie
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_3 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IIO_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						110={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+	}
+	IIO_m_smooth_talking_charmer={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=NOR_halvdan_koht
+			portraits={ civilian={ small=GFX_portrait_NOR_halvdan_koht_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IIO_m_smooth_talking_charmer
+				traits={ smooth_talking_charmer }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						110={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=NOR_halvdan_koht
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_1 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IIO_m_smooth_talking_charmer
+				traits={ smooth_talking_charmer }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						110={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	IIO_r_naval_architect={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=NOR_johan_ludwig_mowinckel
+			portraits={ civilian={ small=GFX_portrait_NOR_johan_ludwig_mowinckel_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IIO_r_naval_architect
+				traits={ naval_architect }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						110={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=ICE_haraldur_gudhmundsson
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_3 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IIO_r_naval_architect
+				traits={ naval_architect }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						110={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	IIO_a_army_chief_offensive={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=NOR_carl_gustav_fleischer
+			portraits={
+				army={
+					large=GFX_portrait_NOR_carl_gustav_fleischer
+					small=GFX_portrait_NOR_carl_gustav_fleischer_small
+				}
+			}
+
+			advisor={
+				slot=army_chief
+				idea_token=IIO_a_army_chief_offensive
+				cost=200
+				traits={ army_chief_offensive_3 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						100={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=NOR_carl_gustav_fleischer
+			portraits={ army={ small=GFX_idea_generic_army_europe_3 } }
+
+			advisor={
+				slot=army_chief
+				idea_token=IIO_a_army_chief_offensive
+				cost=200
+				traits={ army_chief_offensive_3 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						100={ is_core_of=ROOT }
+					}
+				}
+			}
 		}
 	}
 }
