@@ -25,10 +25,10 @@ recruit_character = IOO_o_economist
 if = {
 	limit = { has_dlc = "Arms Against Tyranny" }
 
-	random_character = { limit = { is_character = OOY_g_silent_workhorse } 100 = { add_to_array = { state_advisors = PREV } } }
+	random_character = { limit = { is_character = IOO_o_economist } 100 = { add_to_array = { state_advisors = PREV } } }
 
 	else = {
-		random_character = { limit = { is_character = IOO_o_economist } 100 = { add_to_array = { state_advisors = PREV } } }
+		random_character = { limit = { is_character = IOO_b_democratic_reformer } 100 = { add_to_array = { state_advisors = PREV } } }
 	}
 }
 recruit_character = IOO_e_popular_figurehead
