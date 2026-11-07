@@ -36,12 +36,12 @@
 	}
 
 	#Advisors
-	OAE_gyula_gombos_de_jakfa={
+	OAE_c_fascist_demagogue={
 		instance={
 			allowed={ has_dlc="Gotterdammerung" }
 			name=HUN_gyula_gombos_de_jakfa
 			portraits={
-				army={
+				civilian={
 					large=GFX_portrait_HUN_gyula_gombos_de_jakfa
 					small=GFX_portrait_HUN_gyula_gombos_de_jakfa_small
 				}
@@ -89,7 +89,7 @@
 		instance={
 			allowed={ NOT={ has_dlc="Gotterdammerung" } }
 			name=HUN_gyula_gombos_de_jakfa
-			portraits={ army={ small=GFX_idea_HUN_gyula_gombos_de_jakfa } }
+			portraits={ civilian={ small=GFX_idea_HUN_gyula_gombos_de_jakfa } }
 
 			advisor={
 				slot=political_advisor
@@ -131,7 +131,7 @@
 			}
 		}
 	}
-	OAE_magdolna_purgly={
+	OAE_g_silent_workhorse={
 		instance={
 			allowed={ has_dlc="Gotterdammerung" }
 			name=HUN_magdolna_purgly
@@ -177,7 +177,7 @@
 			gender=female
 		}
 	}
-	OAE_miklos_horthy_jr={
+	OAE_j_modernizer_and_diplomat={
 		instance={
 			allowed={ has_dlc="Gotterdammerung" }
 			name=HUN_miklos_horthy_jr
@@ -185,7 +185,7 @@
 
 			advisor={
 				slot=political_advisor
-				idea_token=OAE_j_editor2
+				idea_token=OAE_j_modernizer_and_diplomat
 				traits={ modernizer_and_diplomat }
 
 				available={
@@ -206,7 +206,7 @@
 
 			advisor={
 				slot=political_advisor
-				idea_token=OAE_j_editor2
+				idea_token=OAE_j_modernizer_and_diplomat
 				traits={ modernizer_and_diplomat }
 
 				available={
@@ -221,7 +221,7 @@
 			}
 		}
 	}
-	OAE_kalman_daranyi={
+	OAE_m_smooth_talking_charmer={
 		name=HUN_kalman_daranyi
 		portraits={ civilian={ small=GFX_idea_HUN_kalman_daranyi } }
 
@@ -241,7 +241,7 @@
 			ai_will_do={ factor=1 }
 		}
 	}
-	OAE_istvan_horthy={
+	OAE_q_war_industrialist={
 		instance={
 			allowed={ has_dlc="Gotterdammerung" }
 			name=HUN_istvan_horthy
@@ -290,7 +290,7 @@
 			}
 		}
 	}
-	OAE_shvoy_kalman={
+	OAE_a_military_theorist={
 		name=HUN_shvoy_kalman
 		portraits={ army={ small=GFX_idea_HUN_shvoy_kalman } }
 
@@ -310,7 +310,7 @@
 			}
 		}
 	}
-	OAE_gyorgy_jendrassik={
+	OAE_j_air_warfare_theorist={
 		name=HUN_gyorgy_jendrassik
 		portraits={ army={ small=GFX_idea_HUN_gyorgy_jendrassik } }
 
@@ -330,13 +330,13 @@
 			}
 		}
 	}
-	OAE_ferenc_szombathelyi={
+	OAE_b_army_chief_defensive={
 		name=HUN_ferenc_szombathelyi
 		portraits={ army={ small=GFX_idea_HUN_ferenc_szombathelyi } }
 
 		advisor={
 			slot=army_chief
-			idea_token=OOY_b_army_chief_defensive
+			idea_token=OAE_b_army_chief_defensive
 			cost=100
 			traits={ army_chief_defensive_2 }
 
@@ -349,7 +349,7 @@
 			}
 		}
 	}
-	OAE_kalman_hardy={
+	OAE_a_navy_chief_commerce_raiding={
 		instance={
 			allowed={ has_dlc="Gotterdammerung" }
 			name=HUN_kalman_hardy

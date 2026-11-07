@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = OBE_armand_calinescu
+recruit_character = OBE_b_democratic_reformer
+random_character = { limit = { is_character = OBE_b_democratic_reformer } 83 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

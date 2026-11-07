@@ -1,15 +1,45 @@
-﻿characters = {
-	OLI_christian_louis = {
-		name = MEK_christian_louis
-		portraits = {
-			civilian = {
-				large = GFX_portrait_MEK_christian_louis
+﻿characters={
+	OLI_christian_louis={
+		name=MEK_christian_louis
+		portraits={ civilian={ large=GFX_portrait_MEK_christian_louis } }
+
+		country_leader={
+			ideology=despotism
+		}
+	}
+
+	#Advisors
+	OLI_h_minister_of_the_colonies={
+		name=GER_adolf_friedrich_von_mecklenburg
+		portraits={
+			civilian={
+				large=GFX_portrait_GER_duke_adolf_friedrich_of_mecklenburg
+				small=GFX_portrait_GER_duke_adolf_friedrich_of_mecklenburg_civilian_small
 			}
 		}
-		country_leader = {
-			ideology = despotism
-			expire = "1960.1.1.1"
-			id = -1
+
+		advisor={
+			slot=political_advisor
+			idea_token=OLI_h_minister_of_the_colonies
+			traits={ GER_minister_of_the_colonies }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					61={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					any_owned_state={ NOT = { is_core_of = ROOT } }
+
+					add=9
+				}
+			}
 		}
 	}
 }

@@ -1,9 +1,7 @@
 characters={
 	OFI_jan_ursiny = {
 		instance = {
-			allowed = {
-				has_dlc = "Peace For Our Time"
-			}
+			allowed = { has_dlc = "Peace For Our Time" }
 			name=SLO_jan_ursiny
 			portraits={
 				civilian={
@@ -11,28 +9,146 @@ characters={
 					small=GFX_portrait_SLO_jan_ursiny_small
 				}
 			}
+
 			country_leader={
 				traits={ agrarian_old_guard }
 				ideology=conservatism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
 		instance = {
-			allowed = {
-				NOT = { has_dlc = "Peace For Our Time" }
-			}
+			allowed = { NOT = { has_dlc = "Peace For Our Time" } }
 			name=SLO_jan_ursiny
-			portraits={
-				civilian={
-					large="GFX_portrait_europe_generic_6"
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_europe_generic_6 } }
+
 			country_leader={
 				traits={ agrarian_old_guard }
 				ideology=conservatism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	OFI_b_democratic_reformer={
+		name=CZE_stefan_osusky
+		portraits={ civilian={ small=GFX_idea_CZE_stefan_osusky } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OFI_b_democratic_reformer
+			traits={ democratic_reformer }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=democratic
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					71={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_democratic
+					NOT={ has_government=democratic }
+
+					add=30
+				}
+			}
+		}
+	}
+	OFI_l_compassionate_gentleman={
+		name=SLO_janko_jesensky
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_6 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OFI_l_compassionate_gentleman
+			traits={ compassionate_gentleman }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					71={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=2 }
+		}
+	}
+	OFI_a_army_chief_offensive={
+		instance={
+			allowed={ has_dlc="Peace For Our Time" }
+			name=CZE_rudolf_viest
+			portraits={
+				army={
+					large=GFX_portrait_CZE_rudolf_viest
+					small=GFX_portrait_CZE_rudolf_viest_small
+				}
+			}
+
+			advisor={
+				slot=army_chief
+				idea_token=OFI_a_army_chief_offensive
+				cost=100
+				traits={ army_chief_offensive_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						71={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Peace For Our Time" } }
+			name=CZE_rudolf_viest
+			portraits={ army={ small=GFX_idea_CZE_rudolf_viest } }
+
+			advisor={
+				slot=army_chief
+				idea_token=OFI_a_army_chief_offensive
+				cost=100
+				traits={ army_chief_offensive_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						71={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+	}
+	OFI_bc_army_regrouping={
+		name=CZE_jan_golian
+		portraits={ army={ small=GFX_idea_CZE_jan_golian } }
+
+		advisor={
+			slot=high_command
+			idea_token=OFI_bc_army_regrouping
+			ledger=army
+			cost=100
+			traits={ army_regrouping_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					71={ is_core_of=ROOT }
+				}
 			}
 		}
 	}

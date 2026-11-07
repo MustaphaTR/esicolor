@@ -20,16 +20,23 @@ set_politics = {
 	elections_allowed = yes
 }
 
+recruit_character = IOO_b_democratic_reformer
+recruit_character = IOO_o_economist
 if = {
-	limit = {
-		has_dlc = "Arms Against Tyranny"
-	}
-	recruit_character = IOO_hermann_jonasson
+	limit = { has_dlc = "Arms Against Tyranny" }
+
+	random_character = { limit = { is_character = OOY_g_silent_workhorse } 100 = { add_to_array = { state_advisors = PREV } } }
 
 	else = {
-		recruit_character = IOO_sveinn_bjornsson
+		random_character = { limit = { is_character = IOO_o_economist } 100 = { add_to_array = { state_advisors = PREV } } }
 	}
 }
+recruit_character = OOS_e_popular_figurehead
+random_character = { limit = { is_character = OOS_e_popular_figurehead } 100 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = IOO_i_progressive_doctor
+random_character = { limit = { is_character = IOO_i_progressive_doctor } 100 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = IOO_p_captain_of_industry
+random_character = { limit = { is_character = IOO_p_captain_of_industry } 100 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

@@ -3,15 +3,36 @@
 		name=GER_fritz_todt
 		portraits={
 			civilian={
-				large = GFX_portrait_GER_fritz_todt
-				small = GFX_portrait_GER_fritz_todt_small
+				large=GFX_portrait_GER_fritz_todt
+				small=GFX_portrait_GER_fritz_todt_small
 			}
 		}
+
 		country_leader={
-			traits = { GER_todt_fuhrer }
+			traits={ GER_todt_fuhrer }
 			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OLE_df_air_strategic_bombing={
+		name=GER_robert_knauss
+		portraits={ army={ small=GFX_portrait_GER_robert_knauss_small } }
+
+		advisor={
+			slot=high_command
+			idea_token=OLE_df_air_strategic_bombing
+			ledger=air
+			cost=100
+			traits={ air_strategic_bombing_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					63={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

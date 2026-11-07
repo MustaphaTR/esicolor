@@ -1,17 +1,55 @@
 ﻿characters={
-	OLY_konstantin_von_neurath = {
-		name = GER_konstantin_von_neurath
-		portraits = {
-			army = {
-				large = GFX_portrait_GER_konstantin_von_neurath
-				small = GFX_portrait_GER_konstantin_von_neurath_small
+	OLY_konstantin_von_neurath={
+		name=GER_konstantin_von_neurath
+		portraits={
+			civilian={
+				large=GFX_portrait_GER_konstantin_von_neurath
+				small=GFX_portrait_GER_konstantin_von_neurath_small
 			}
 		}
+
 		country_leader={
-			traits = { GER_reich_minister_foreign_affairs_neurath }
+			traits={ GER_reich_minister_foreign_affairs_neurath }
 			ideology=nazism
-			expire="1965.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OLY_c_fascist_demagogue={
+		name=CZE_konrad_henlein
+		portraits={ civilian={ small=GFX_idea_CZE_konrad_henlein } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OLY_c_fascist_demagogue
+			traits={ fascist_demagogue }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=fascism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					69={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_fascism
+					NOT={ has_government=fascism }
+
+					add=30
+				}
+			}
 		}
 	}
 }

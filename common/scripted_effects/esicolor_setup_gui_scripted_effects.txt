@@ -1263,6 +1263,7 @@ setup_gui_start_advisors = {
 			randomise_advisors = yes
 			generate_advisors = yes
 		}
+		retire_custom_named_advisors = yes
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_advisors = -2 } }
@@ -1271,6 +1272,7 @@ setup_gui_start_advisors = {
 			setup_basegame_advisors = yes
 			generate_advisors = yes
 		}
+		retire_custom_named_advisors = yes
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_advisors = -1 } }
@@ -1279,6 +1281,7 @@ setup_gui_start_advisors = {
 			setup_default_advisors = yes
 			generate_advisors = yes
 		}
+		retire_custom_named_advisors = yes
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_advisors = 0 } }
@@ -1287,6 +1290,7 @@ setup_gui_start_advisors = {
 			enable_all_advisors = yes
 			generate_advisors = yes
 		}
+		retire_custom_named_advisors = yes
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_advisors = 1 } }

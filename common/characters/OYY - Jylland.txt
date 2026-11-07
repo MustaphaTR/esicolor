@@ -7,11 +7,147 @@
 				small = GFX_portrait_DEN_erik_scavenius_small
 			}
 		}
+
 		country_leader={
 			traits={ DEN_venstre }
 			ideology=liberalism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OYY_m_smooth_talking_charmer={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=DEN_peter_rochegune_munch
+			portraits={ civilian={ small=GFX_portrait_DEN_peter_rochegune_munch_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OYY_m_smooth_talking_charmer
+				traits={ smooth_talking_charmer }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						99={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=DEN_peter_rochegune_munch
+			portraits={ civilian={ small=GFX_idea_generic_democratic_reformer_western_european_2d } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OYY_m_smooth_talking_charmer
+				traits={ smooth_talking_charmer }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						99={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	OYY_p_captain_of_industry={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=DEN_knud_kristensen
+			portraits={
+				civilian={
+					large=GFX_portrait_DEN_knud_kristensen
+					small=GFX_portrait_DEN_knud_kristensen_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=OYY_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						99={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=DEN_knud_kristensen
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_3 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OYY_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						99={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	OOY_b_air_chief_ground_support={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=DEN_christian_forslev
+			portraits={ army={ small=GFX_portrait_DEN_christian_forslev_small } }
+
+			advisor={
+				slot=air_chief
+				idea_token=OOY_b_air_chief_ground_support
+				cost=50
+				traits={ air_chief_ground_support_1 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						99={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=DEN_christian_forslev
+			portraits={ army={ small=GFX_idea_generic_air_europe_1 } }
+
+			advisor={
+				slot=air_chief
+				idea_token=OOY_b_air_chief_ground_support
+				cost=50
+				traits={ air_chief_ground_support_1 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						99={ is_core_of=ROOT }
+					}
+				}
+			}
 		}
 	}
 }

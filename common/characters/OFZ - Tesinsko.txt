@@ -1,35 +1,21 @@
 characters={
 	OFZ_karl_albrecht = {
 		instance = {
-			allowed = {
-				has_dlc = "No Step Back"
-			}
+			allowed = { has_dlc = "No Step Back" }
 			name=POL_karl_albrecht
-			portraits={
-				civilian={
-					large=GFX_portrait_POL_karl_albrecht
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_POL_karl_albrecht } }
+
 			country_leader={
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
 		instance = {
-			allowed = {
-				NOT = { has_dlc = "No Step Back" }
-			}
+			allowed = { NOT = { has_dlc = "No Step Back" } }
 			name=POL_karl_albrecht
-			portraits={
-				civilian={
-					large="GFX_Portrait_Europe_Generic_land_5"
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_Europe_Generic_land_5 } }
+
 			country_leader={
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
 	}
@@ -41,10 +27,97 @@ characters={
 				small=GFX_idea_CZE_karel_schwarzenberg
 			}
 		}
+
 		country_leader={
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OFZ_o_economist={
+		instance={
+			allowed={ has_dlc="Peace For Our Time" }
+			name=CZE_jan_ruckl
+			portraits={ civilian={ small=GFX_portrait_CZE_jan_ruckl_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OFZ_o_economist
+				traits={ economist }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+						}
+
+						OR={
+							has_government=neutrality
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						72={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_global_flag=custom_advisors_only
+						has_country_flag=ai_go_neutrality
+						NOT={ has_government=neutrality }
+
+						add=29
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Peace For Our Time" } }
+			name=CZE_jan_ruckl
+			portraits={ civilian={ small=GFX_idea_generic_fascist_demagogue_western_european_2d } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OFZ_o_economist
+				traits={ economist }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+						}
+
+						OR={
+							has_government=neutrality
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						72={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_global_flag=custom_advisors_only
+						has_country_flag=ai_go_neutrality
+						NOT={ has_government=neutrality }
+
+						add=29
+					}
+				}
+			}
 		}
 	}
 }

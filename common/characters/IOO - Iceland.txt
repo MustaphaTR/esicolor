@@ -1,37 +1,246 @@
 characters={
-	IOO_hermann_jonasson={
-		name=ICE_hermann_jonasson
-		portraits={
-			civilian = {
-				large = GFX_portrait_ICE_hermann_jonasson
-				small = GFX_portrait_ICE_hermann_jonasson_small
+	IOO_b_democratic_reformer={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=ICE_hermann_jonasson
+			portraits={
+				civilian={
+					large=GFX_portrait_ICE_hermann_jonasson
+					small=GFX_portrait_ICE_hermann_jonasson_small
+				}
+			}
+
+			country_leader={
+				traits={ ICE_hot_tempered_reformer }
+				ideology=liberalism
 			}
 		}
-		country_leader={
-			traits = { ICE_hot_tempered_reformer }
-			ideology=liberalism
-			expire="1965.1.1.1"
-			id=-1
+		instance={
+			allowed={ NOT = { has_dlc="Arms Against Tyranny" } }
+			name=ICE_hermann_jonasson
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_2 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IOO_b_democratic_reformer
+				traits={ democratic_reformer }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=democratic
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						100={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_democratic
+						NOT={ has_government=democratic }
+
+						add=30
+					}
+				}
+			}
 		}
 	}
-	IOO_sveinn_bjornsson={
-		name=ICE_sveinn_bjornsson
-		portraits={
-			civilian = {
-				large = GFX_portrait_ice_sveinn_bjornsson
+	IOO_o_economist={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=ICE_sveinn_bjornsson
+			portraits={ civilian={ large=GFX_portrait_ice_sveinn_bjornsson } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IOO_o_economist
+				traits={ economist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						100={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
 			}
 		}
-		country_leader={
-			traits = { ICE_the_strict_regent }
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
+		instance={
+			allowed={ NOT = { has_dlc="Arms Against Tyranny" } }
+			name=ICE_sveinn_bjornsson
+			portraits={ civilian={ large=GFX_portrait_ice_sveinn_bjornsson } }
+
+			country_leader={
+				traits={ ICE_the_strict_regent }
+				ideology=conservatism
+			}
+			country_leader={
+				traits={ ICE_the_strict_regent }
+				ideology=centrism
+			}
 		}
-		country_leader={
-			traits = { ICE_the_strict_regent }
-			ideology=centrism
-			expire="1965.1.1.1"
-			id=-1
+	}
+
+	#Advisors
+	OOS_e_popular_figurehead={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=ICE_skuli_gudhmundsson
+			portraits={ civilian={ small=GFX_portrait_ICE_skuli_gudhmundsson_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OOS_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						100={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=ICE_skuli_gudhmundsson
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_4 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OOS_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						100={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+	}
+	IOO_i_progressive_doctor={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=ICE_olaf_j_thorlacius
+			portraits={ civilian={ small=GFX_portrait_ICE_olaf_j_thorlacius_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IOO_i_progressive_doctor
+				traits={ ICE_progressive_doctor }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						100={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=ICE_olaf_j_thorlacius
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_5 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IOO_i_progressive_doctor
+				traits={ ICE_progressive_doctor }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						100={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+	}
+	IOO_p_captain_of_industry={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=ICE_haraldur_gudhmundsson
+			portraits={ civilian={ small=GFX_portrait_ICE_haraldur_gudhmundsson_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IOO_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						100={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=ICE_haraldur_gudhmundsson
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_6 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=IOO_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						100={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
 		}
 	}
 }

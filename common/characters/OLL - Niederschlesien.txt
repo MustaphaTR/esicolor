@@ -1,39 +1,74 @@
 ﻿characters={
-	OLL_rudolf_hess = {
-		instance = {
-			allowed = {
-				has_dlc = "Arms Against Tyranny"
-			}
+	OLL_rudolf_hess={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
 			name=GER_rudolf_hess
 			portraits={
 				civilian={
-					large = GFX_portrait_GER_rudolf_hess
-					small = GFX_portrait_GER_rudolf_hess_small
+					large=GFX_portrait_GER_rudolf_hess
+					small=GFX_portrait_GER_rudolf_hess_small
 				}
 			}
+
 			country_leader={
-				traits = { GER_hess_fuhrer }
+				traits={ GER_hess_fuhrer }
 				ideology=nazism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Arms Against Tyranny" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
 			name=GER_rudolf_hess
 			portraits={
 				civilian={
-					large = GFX_portrait_GER_rudolf_hess
-					small = GFX_portrait_GER_rudolf_hess_small
+					large=GFX_portrait_GER_rudolf_hess
+					small=GFX_portrait_GER_rudolf_hess_small
 				}
 			}
+
 			country_leader={
-				traits = { GER_hess_fuhrer_no_aat }
+				traits={ GER_hess_fuhrer_no_aat }
 				ideology=nazism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	OLL_l_close_air_support_proponent={
+		name=GER_wolfram_von_richthofen
+		portraits={ army={ small=GFX_idea_wolfram_von_richthofen } }
+
+		advisor={
+			slot=theorist
+			idea_token=OLL_l_close_air_support_proponent
+			ledger=air
+			cost=150
+			traits={ close_air_support_proponent }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					66={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OLL_c_air_chief_all_weather={
+		name=GER_ritter_von_greim
+		portraits={ army={ small=GFX_idea_ritter_von_greim } }
+
+		advisor={
+			slot=air_chief
+			idea_token=OLL_c_air_chief_all_weather
+			cost=100
+			traits={ air_chief_all_weather_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					66={ is_core_of=ROOT }
+				}
 			}
 		}
 	}

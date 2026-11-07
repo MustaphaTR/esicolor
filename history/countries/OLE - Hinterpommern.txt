@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = OLE_fritz_todt
+recruit_character = OLE_df_air_strategic_bombing
+random_character = { limit = { is_character = OLE_df_air_strategic_bombing } 63 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

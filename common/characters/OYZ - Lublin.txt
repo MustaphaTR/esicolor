@@ -1,0 +1,47 @@
+characters={
+	#Advisors
+	OYZ_dh_air_air_combat_training={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=CZE_karel_kuttelwascher
+			portraits={ army={ small=GFX_portrait_POL_jan_zumbach_small } }
+
+			advisor={
+				slot=high_command
+				idea_token=OYZ_dh_air_air_combat_training
+				ledger=air
+				cost=50
+				traits={ air_air_combat_training_1 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						92={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=CZE_karel_kuttelwascher
+			portraits={ army={ small=GFX_idea_generic_air_europe_3 } }
+
+			advisor={
+				slot=high_command
+				idea_token=OYZ_dh_air_air_combat_training
+				ledger=air
+				cost=50
+				traits={ air_air_combat_training_1 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						92={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+	}
+}

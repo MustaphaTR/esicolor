@@ -1,16 +1,32 @@
 ﻿characters={
 	OBB_stanislaw_mikolajczyk={
 		name=POL_stanislaw_mikolajczyk
-		portraits={
-			civilian={
-				large=GFX_portrait_POL_stanislaw_mikolajczyk
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_POL_stanislaw_mikolajczyk } }
+
 		country_leader={
 			traits={ polish_peasant_champion }
 			ideology=socialism
-			expire="1938.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OBB_e_air_chief_reform={
+		name=POL_jozef_zajac
+		portraits={ army={ small=GFX_idea_POL_jozef_zajac } }
+
+		advisor={
+			slot=air_chief
+			idea_token=OBB_e_air_chief_reform
+			cost=100
+			traits={ air_chief_reform_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					88={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

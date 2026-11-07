@@ -1,15 +1,31 @@
-﻿characters = {
-	OLS_george_of_saxony = {
-		name = SAX_george_of_saxony
-		portraits = {
-			civilian = {
-				large = GFX_portrait_SAX_george_of_saxony
-			}
+﻿characters={
+	OLS_george_of_saxony={
+		name=SAX_george_of_saxony
+		portraits={ civilian={ large=GFX_portrait_SAX_george_of_saxony } }
+
+		country_leader={
+			ideology=despotism
 		}
-		country_leader = {
-			ideology = despotism
-			expire = "1943.1.1.1"
-			id = -1
+	}
+
+	#Advisors
+	OLS_b_air_chief_ground_support={
+		name=GER_helmuth_wilberg
+		portraits={ army={ small=GFX_portrait_GER_helmuth_wilberg_small } }
+
+		advisor={
+			slot=air_chief
+			idea_token=OLS_b_air_chief_ground_support
+			cost=200
+			traits={ air_chief_ground_support_3 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					64={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

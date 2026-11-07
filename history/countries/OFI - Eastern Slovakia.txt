@@ -21,6 +21,14 @@ set_politics = {
 }
 
 recruit_character = OFI_jan_ursiny
+recruit_character = OFI_b_democratic_reformer
+random_character = { limit = { is_character = OFI_b_democratic_reformer } 71 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OFI_l_compassionate_gentleman
+random_character = { limit = { is_character = OFI_l_compassionate_gentleman } 71 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OFI_a_army_chief_offensive
+random_character = { limit = { is_character = OFI_a_army_chief_offensive } 71 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OFI_bc_army_regrouping
+random_character = { limit = { is_character = OFI_bc_army_regrouping } 71 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

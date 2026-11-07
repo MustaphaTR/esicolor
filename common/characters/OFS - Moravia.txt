@@ -7,11 +7,298 @@
 				small=GFX_portrait_CZE_klement_gottwald_small
 			}
 		}
+
 		country_leader={
 			traits={ staunch_stalinist }
 			ideology=stalinism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OFS_d_communist_revolutionary={
+		name=CZE_gustav_husak
+		portraits={ civilian={ small=GFX_idea_CZE_gustav_husak } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OFS_d_communist_revolutionary
+			traits={ communist_revolutionary }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					75={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=30
+				}
+			}
+		}
+	}
+	OFS_e_popular_figurehead={
+		instance={
+			allowed={ has_dlc="Peace For Our Time" }
+			name=CZE_vaclav_kopecky
+			portraits={ civilian={ small=GFX_portrait_CZE_vaclav_kopecky_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OFS_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+						}
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						75={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+					modifier={
+						has_global_flag=custom_advisors_only
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=29
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Peace For Our Time" } }
+			name=CZE_vaclav_kopecky
+			portraits={ civilian={ small=GFX_idea_generic_communist_revolutionary_western_european_2d } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OAS_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+						}
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						75={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+					modifier={
+						has_global_flag=custom_advisors_only
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=29
+					}
+				}
+			}
+		}
+	}
+	OFS_j_editor={
+		instance={
+			allowed={ has_dlc="Peace For Our Time" }
+			name=CZE_pavel_reiman
+			portraits={ civilian={ small=GFX_portrait_CZE_pavel_reiman_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OFS_j_editor
+				traits={ editor }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+						}
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						75={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=5
+
+					modifier={
+						has_global_flag=custom_advisors_only
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=25
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Peace For Our Time" } }
+			name=CZE_pavel_reiman
+			portraits={ civilian={ small=GFX_portrait_europe_generic_communism_3_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OFS_j_editor
+				traits={ editor }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+						}
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						75={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=5
+
+					modifier={
+						has_global_flag=custom_advisors_only
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=25
+					}
+				}
+			}
+		}
+	}
+	OFS_q_socialist_firebrand_union_women={
+		instance={
+			allowed={ has_dlc="Peace For Our Time" }
+			name=CZE_bozena_machacova_dostalova
+			portraits={ civilian={ small=GFX_portrait_CZE_bozena_machacova_dostalova_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OFS_q_socialist_firebrand_union_women
+				traits={ socialist_firebrand union_women }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						75={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+			gender=female
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Peace For Our Time" } }
+			name=CZE_bozena_machacova_dostalova
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_female_europe } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OFS_q_socialist_firebrand_union_women
+				traits={ socialist_firebrand union_women }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						75={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+			gender=female
+		}
+	}
+	OFS_f_army_chief_morale={
+		name=CZE_ludvik_svoboda
+		portraits={ army={ small=GFX_idea_CZE_ludvik_svoboda } }
+
+		advisor={
+			slot=army_chief
+			idea_token=OFS_f_army_chief_morale
+			cost=200
+			traits={ army_chief_morale_3 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					75={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

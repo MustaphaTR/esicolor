@@ -1,16 +1,59 @@
 characters={
 	OBF_boleslaw_piasecki={
 		name=POL_boleslaw_piasecki
-		portraits={
-			civilian={
-				large=GFX_POL_boleslaw_piasecki
-			}
-		}
+		portraits={ civilian={ large=GFX_POL_boleslaw_piasecki } }
+
 		country_leader={
 			traits={ unruly_falangist }
 			ideology=falangism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OBF_h_prince_of_terror={
+		name=POL_jerzy_rutkowski
+		portraits={ civilian={ small=GFX_idea_POL_jerzy_rutkowski } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OBF_h_prince_of_terror
+			traits={ prince_of_terror }
+
+			available={
+				if={
+					limit={
+						has_focus_tree=horn_of_africa_tree
+						has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+					}
+
+					OR={
+						has_government=fascism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					87={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					any_owned_state={ resistance > 50 }
+
+					add=9
+				}
+				modifier={
+					has_global_flag=custom_advisors_only
+					has_country_flag=ai_go_fascism
+					NOT={ has_government=fascism }
+
+					add=29
+				}
+			}
 		}
 	}
 }

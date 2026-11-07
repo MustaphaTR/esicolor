@@ -11124,7 +11124,6 @@ generate_advisors = {
 	generate_high_command_navy = yes
 	generate_high_command_air = yes
 
-	retire_custom_named_advisors = yes
 	setup_generic_advisor_portraits = yes
 }
 retire_generic_advisors = {
@@ -11657,40 +11656,6 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
-	61 = {
-		for_each_scope_loop = {
-			array = state_advisors
-			if = { # Adolf Friedrich of Mecklenburg
-				limit = { has_trait = prince_of_terror }
-
-				remove_trait = {
-					slot = political_advisor
-					trait = prince_of_terror
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = GER_minister_of_the_colonies
-				}
-
-				set_character_name = GER_adolf_friedrich_von_mecklenburg
-
-				set_portraits = {
-					civilian = {
-						large = GFX_portrait_GER_duke_adolf_friedrich_of_mecklenburg
-						small = GFX_portrait_GER_duke_adolf_friedrich_of_mecklenburg_civilian_small
-					}
-					army = {
-						large = GFX_portrait_GER_duke_adolf_friedrich_of_mecklenburg
-						small = GFX_portrait_GER_duke_adolf_friedrich_of_mecklenburg_civilian_small
-					}
-					navy = {
-						large = GFX_portrait_GER_duke_adolf_friedrich_of_mecklenburg
-						small = GFX_portrait_GER_duke_adolf_friedrich_of_mecklenburg_civilian_small
-					}
-				}
-			}
-		}
-	}
 	62 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -11726,46 +11691,13 @@ adjust_named_advisor_traits = {
 			if = { # Walter Dornberger
 				limit = { has_trait = rocket_scientist }
 
-				remove_trait = {
-					slot = theorist
-					trait = rocket_scientist
-				}
-				add_trait = {
-					slot = theorist
-					trait = GER_head_of_the_missile_department_no_cp
-				}
+				remove_advisor_role = { slot = theorist }
 			}
 		}
 	}
 	68 = {
 		for_each_scope_loop = {
 			array = state_advisors
-			if = { # Hans Oster
-				limit = { has_trait = popular_figurehead }
-
-				remove_trait = {
-					slot = political_advisor
-					trait = popular_figurehead
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = anti_fascist_agent
-				}
-
-				set_character_name = GER_hans_oster
-
-				set_portraits = {
-					civilian = {
-						small = GFX_idea_GER_hans_oster
-					}
-					army = {
-						small = GFX_idea_GER_hans_oster
-					}
-					navy = {
-						small = GFX_idea_GER_hans_oster
-					}
-				}
-			}
 			if = { # Wilhelm Canaris
 				limit = { has_trait = head_of_intelligence }
 
@@ -11810,29 +11742,6 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = SLO_head_of_the_radical_wing
-				}
-			}
-			if = { # Ferdinand Catlos
-				limit = {
-					OR = {
-						has_trait = army_chief_organizational_1
-						has_trait = army_chief_organizational_2
-						has_trait = army_chief_organizational_3
-					}
-				}
-
-				set_character_name = SLO_ferdinand_catlos
-
-				set_portraits = {
-					civilian = {
-						small = GFX_idea_CZE_ferdinand_catlos
-					}
-					army = {
-						small = GFX_idea_CZE_ferdinand_catlos
-					}
-					navy = {
-						small = GFX_idea_CZE_ferdinand_catlos
-					}
 				}
 			}
 		}
@@ -11898,52 +11807,6 @@ adjust_named_advisor_traits = {
 					trait = socialist_writer
 				}
 			}
-			if = { # Bozena Machacova-Dostalova
-				limit = { has_trait = war_industrialist }
-
-				set_character_name = CZE_bozena_machacova_dostalova
-				remove_trait = {
-					slot = political_advisor
-					trait = war_industrialist
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = socialist_firebrand
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = union_women
-				}
-
-				if = {
-					limit = { has_dlc = "Peace For Our Time" }
-
-					set_portraits = {
-						civilian = {
-							small = GFX_portrait_CZE_bozena_machacova_dostalova_small
-						}
-						army = {
-							small = GFX_portrait_CZE_bozena_machacova_dostalova_small
-						}
-						navy = {
-							small = GFX_portrait_CZE_bozena_machacova_dostalova_small
-						}
-					}
-				}
-				else = {
-					set_portraits = {
-						civilian = {
-							small = GFX_idea_generic_political_advisor_female_europe
-						}
-						army = {
-							small = GFX_idea_generic_political_advisor_female_europe
-						}
-						navy = {
-							small = GFX_idea_generic_political_advisor_female_europe
-						}
-					}
-				}
-			}
 		}
 	}
 	87 = {
@@ -11993,48 +11856,6 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = ICE_minister_of_healthcare_and_finance
-				}
-			}
-			if = { # Olaf J Thorlacius
-				limit = { has_trait = backroom_backstabber }
-
-				set_character_name = ICE_olaf_j_thorlacius
-				remove_trait = {
-					slot = political_advisor
-					trait = backroom_backstabber
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = ICE_progressive_doctor
-				}
-
-				if = {
-					limit = { has_dlc = "Gotterdammerung" }
-
-					set_portraits = {
-						civilian = {
-							small = GFX_portrait_ICE_olaf_j_thorlacius_small
-						}
-						army = {
-							small = GFX_portrait_ICE_olaf_j_thorlacius_small
-						}
-						navy = {
-							small = GFX_portrait_ICE_olaf_j_thorlacius_small
-						}
-					}
-				}
-				else = {
-					set_portraits = {
-						civilian = {
-							small = GFX_idea_generic_political_advisor_europe_5
-						}
-						army = {
-							small = GFX_idea_generic_political_advisor_europe_5
-						}
-						navy = {
-							small = GFX_idea_generic_political_advisor_europe_5
-						}
-					}
 				}
 			}
 		}
@@ -13489,7 +13310,12 @@ adjust_named_advisor_traits = {
 	}
 }
 retire_custom_named_advisors = {
-	random_country = { limit = { has_character = OAE_miklos_horthy_jr } retire_character = OAE_miklos_horthy_jr }
+	random_country = { limit = { has_character = OAE_j_modernizer_and_diplomat } retire_character = OAE_j_modernizer_and_diplomat } # Miklós Horthy Jr.
+	random_country = { limit = { has_character = OLI_h_minister_of_the_colonies } retire_character = OLI_h_minister_of_the_colonies } # Adolf Friedrich of Mecklenburg
+	random_country = { limit = { has_character = OLA_o_rocket_scientist } remove_advisor_role = { character = OLA_o_rocket_scientist slot = high_command } } # Walter Dornberger
+	random_country = { limit = { has_character = OLB_e_anti_fascist_agent } retire_character = OLB_e_anti_fascist_agent } # Hans Oster
+	random_country = { limit = { has_character = OFS_q_socialist_firebrand_union_women } retire_character = OFS_q_socialist_firebrand_union_women } # Bozena Machacova-Dostalova
+	random_country = { limit = { has_character = IOO_i_progressive_doctor } retire_character = IOO_i_progressive_doctor } # Olaf J Thorlacius
 }
 
 remove_tank_designer = {

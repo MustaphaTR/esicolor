@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = OLL_rudolf_hess
+recruit_character = OLL_l_close_air_support_proponent
+random_character = { limit = { is_character = OLL_l_close_air_support_proponent } 66 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OLL_c_air_chief_all_weather
+random_character = { limit = { is_character = OLL_c_air_chief_all_weather } 66 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

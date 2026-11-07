@@ -1,22 +1,206 @@
 ﻿characters={
-	OFO_jozef_tiso = {
-		name = SLO_jozef_tiso
-		portraits = {
-			civilian = {
-				large = GFX_portrait_Jozef_Tiso
-			}
-		}
+	OFO_jozef_tiso={
+		name=SLO_jozef_tiso
+		portraits={ civilian={ large=GFX_portrait_Jozef_Tiso } }
+
 		country_leader={
 			traits={ SLO_vodca_trait }
 			ideology=fascism_ideology
-			expire="1965.1.1"
-			id=-1
 		}
 		country_leader={
 			traits={ SLO_nationalist_catholic_priest }
 			ideology=despotism
-			expire="1965.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OFO_g_silent_workhorse={
+		name=SLO_karol_sidor
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_1 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OFO_g_silent_workhorse
+			traits={ silent_workhorse }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					70={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=15 }
+		}
+	}
+	OFO_h_prince_of_terror={
+		name=CZE_vojtech_tuka
+		portraits={ civilian={ small=GFX_idea_CZE_vojtech_tuka } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OFO_h_prince_of_terror
+			traits={ prince_of_terror }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					70={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					any_owned_state={ resistance > 50 }
+
+					add=9
+				}
+			}
+		}
+	}
+	OFO_i_backroom_backstabber={
+		name=SLO_stefan_tiso
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_3 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OFO_i_backroom_backstabber
+			traits={ backroom_backstabber }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					70={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=5 }
+		}
+	}
+	OFO_t_quartermaster_general={
+		name=CZE_ferdinand_catlos
+		portraits={ civilian={ small=GFX_idea_CZE_ferdinand_catlos } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OFO_t_quartermaster_general
+			traits={ quartermaster_general }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					70={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+		advisor={
+			slot=army_chief
+			idea_token=OFO_g_army_chief_organizational
+			cost=100
+			traits={ army_chief_organizational_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					70={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OFO_f_navy_chief_reform={
+		name=SLO_julius_thorzo
+		portraits={ army={ small=GFX_idea_generic_navy_europe_3 } }
+
+		advisor={
+			slot=navy_chief
+			idea_token=OFO_f_navy_chief_reform
+			cost=100
+			traits={ navy_chief_reform_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					70={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OFO_b_air_chief_ground_support={
+		name=SLO_anton_pulanick
+		portraits={ army={ small=GFX_idea_generic_air_europe_2 } }
+
+		advisor={
+			slot=air_chief
+			idea_token=OFO_b_air_chief_ground_support
+			cost=100
+			traits={ air_chief_ground_support_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					70={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OFO_ab_army_artillery={
+		instance={
+			allowed={ has_dlc="Peace For Our Time" }
+			name=SLO_jozef_turanec
+			portraits={
+				army={
+					large=GFX_portrait_SLO_jozef_turanec
+					small=GFX_portrait_SLO_jozef_turanec_small
+				}
+			}
+
+			advisor={
+				slot=high_command
+				idea_token=OFO_ab_army_artillery
+				ledger=army
+				cost=100
+				traits={ army_artillery_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						70={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Peace For Our Time" } }
+			name=SLO_jozef_turanec
+			portraits={ army={ small=GFX_Portrait_Europe_Generic_land_5_small } }
+
+			advisor={
+				slot=high_command
+				idea_token=OFO_ab_army_artillery
+				ledger=army
+				cost=100
+				traits={ army_artillery_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						70={ is_core_of=ROOT }
+					}
+				}
+			}
 		}
 	}
 }

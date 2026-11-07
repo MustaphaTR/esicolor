@@ -18,11 +18,20 @@ has_custom_democratic_reformer = {
 		original_tag = OOF
 		original_tag = OIO
 		original_tag = OSO
+		original_tag = OFI
+		original_tag = OBE
+		if = {
+			limit = { NOT = { has_dlc = "Arms Against Tyranny" } }
+
+			original_tag = IOO
+		}
 	}
 }
 has_custom_fascist_demagogue = {
 	OR = {
 		original_tag = OAE
+		original_tag = OLY
+		original_tag = OFY
 	}
 }
 has_custom_communist_revolutionary = {
@@ -30,6 +39,9 @@ has_custom_communist_revolutionary = {
 		original_tag = OES
 		original_tag = OSE
 		original_tag = OLO
+		original_tag = OFS
+		original_tag = OFB
+		original_tag = OYO
 	}
 }
 # Other Political
@@ -37,11 +49,14 @@ has_custom_popular_figurehead = {
 	OR = {
 		original_tag = OOS
 		original_tag = OAS
+		original_tag = OFS
+		original_tag = IOO
 	}
 }
 has_custom_propaganda_expert = {
 	OR = {
 		original_tag = OOA
+		original_tag = OLA
 	}
 }
 has_custom_silent_workhorse = {
@@ -49,23 +64,29 @@ has_custom_silent_workhorse = {
 		original_tag = OOB
 		original_tag = OOY
 		original_tag = OAE
+		original_tag = OFO
 	}
 }
 has_custom_prince_of_terror = {
 	OR = {
 		original_tag = OSZ
+		original_tag = OFO
+		original_tag = OBF
 	}
 }
 has_custom_backroom_backstabber = {
 	OR = {
 		original_tag = OEF
 		original_tag = OAB
+		original_tag = OFO
+		original_tag = OFB
 	}
 }
 has_custom_editor = {
 	OR = {
 		original_tag = OOY
 		original_tag = OEF
+		original_tag = OFS
 	}
 }
 has_custom_ideological_crusader = {
@@ -75,7 +96,7 @@ has_custom_ideological_crusader = {
 }
 has_custom_compassionate_gentleman = {
 	OR = {
-		
+		original_tag = OFI
 	}
 }
 has_custom_smooth_talking_charmer = {
@@ -83,6 +104,7 @@ has_custom_smooth_talking_charmer = {
 		original_tag = OOY
 		original_tag = OIO
 		original_tag = OAE
+		original_tag = OYY
 	}
 }
 has_custom_financial_expert = {
@@ -96,6 +118,12 @@ has_custom_financial_expert = {
 has_custom_economist = {
 	OR = {
 		original_tag = OOY
+		original_tag = OFZ
+		if = {
+			limit = { has_dlc = "Arms Against Tyranny" }
+
+			original_tag = IOO
+		}
 	}
 }
 has_custom_captain_of_industry = {
@@ -108,6 +136,8 @@ has_custom_captain_of_industry = {
 		original_tag = OAF
 		original_tag = OAB
 		original_tag = OAY
+		original_tag = OYY
+		original_tag = IOO
 	}
 }
 has_custom_war_industrialist = {
@@ -128,7 +158,7 @@ has_custom_fortification_engineer = {
 }
 has_custom_quartermaster_general = {
 	OR = {
-		
+		original_tag = OFO
 	}
 }
 has_custom_armaments_organizer = {
@@ -139,7 +169,8 @@ has_custom_armaments_organizer = {
 # Intelligence
 has_custom_head_of_intelligence = {
 	OR = {
-		
+		original_tag = OLZ
+		original_tag = OLB
 	}
 }
 has_custom_code_breaker = {
@@ -217,7 +248,7 @@ has_custom_victory_through_airpower = {
 }
 has_custom_close_air_support_proponent = {
 	OR = {
-		
+		original_tag = OLL
 	}
 }
 has_custom_assault_avaition = {
@@ -233,14 +264,15 @@ has_custom_nuclear_scientist = {
 }
 has_custom_rocket_scientist = {
 	OR = {
-		
+		original_tag = OLA
 	}
 }
 
 ### Chiefs of Army
 has_custom_army_chief_offensive = {
 	OR = {
-		
+		original_tag = OLA
+		original_tag = OFI
 	}
 }
 has_custom_army_chief_defensive = {
@@ -256,7 +288,7 @@ has_custom_army_chief_maneuver = {
 }
 has_custom_army_chief_drill = {
 	OR = {
-		
+		original_tag = OLA
 	}
 }
 has_custom_army_chief_planning = {
@@ -266,12 +298,13 @@ has_custom_army_chief_planning = {
 }
 has_custom_army_chief_morale = {
 	OR = {
-		
+		original_tag = OFS
 	}
 }
 has_custom_army_chief_organizational = {
 	OR = {
-		
+		original_tag = OLB
+		original_tag = OFO
 	}
 }
 has_custom_army_chief_entrenchment = {
@@ -318,7 +351,7 @@ has_custom_navy_chief_naval_engineer = {
 }
 has_custom_navy_chief_reform = {
 	OR = {
-		
+		original_tag = OFO
 	}
 }
 has_custom_navy_chief_old_guard = {
@@ -337,11 +370,14 @@ has_custom_air_chief_ground_support = {
 	OR = {
 		original_tag = OOY
 		original_tag = OIO
+		original_tag = OLS
+		original_tag = OFO
+		original_tag = OYY
 	}
 }
 has_custom_air_chief_all_weather = {
 	OR = {
-		
+		original_tag = OLL
 	}
 }
 has_custom_air_chief_safety = {
@@ -351,7 +387,7 @@ has_custom_air_chief_safety = {
 }
 has_custom_air_chief_reform = {
 	OR = {
-		
+		original_tag = OBB
 	}
 }
 has_custom_air_chief_old_guard = {
@@ -370,7 +406,7 @@ has_custom_army_infantry = {
 }
 has_custom_army_artillery = {
 	OR = {
-		
+		original_tag = OFO
 	}
 }
 has_custom_army_cavalry = {
@@ -406,7 +442,7 @@ has_custom_army_logistics = {
 }
 has_custom_army_regrouping = {
 	OR = {
-		
+		original_tag = OFI
 	}
 }
 has_custom_army_concealment = {
@@ -499,6 +535,7 @@ has_custom_air_tactical_bombing = {
 has_custom_air_strategic_bombing = {
 	OR = {
 		original_tag = OAL
+		original_tag = OLE
 	}
 }
 has_custom_air_airborne = {
@@ -509,5 +546,6 @@ has_custom_air_airborne = {
 has_custom_air_air_combat_training = {
 	OR = {
 		original_tag = OOY
+		original_tag = OYZ
 	}
 }

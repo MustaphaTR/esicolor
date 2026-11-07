@@ -21,6 +21,14 @@ set_politics = {
 }
 
 recruit_character = OLA_adolf_hitler
+recruit_character = OLA_f_propaganda_expert
+random_character = { limit = { is_character = OLA_f_propaganda_expert } 64 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OLA_o_rocket_scientist
+random_character = { limit = { is_character = OLA_o_rocket_scientist } 64 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OLA_a_army_chief_offensive
+random_character = { limit = { is_character = OLA_a_army_chief_offensive } 64 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OLA_d_army_chief_drill
+random_character = { limit = { is_character = OLA_d_army_chief_drill } 64 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

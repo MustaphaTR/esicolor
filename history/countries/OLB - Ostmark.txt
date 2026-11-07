@@ -21,6 +21,12 @@ set_politics = {
 }
 
 recruit_character = OLB_gunther_von_kluge
+recruit_character = OLB_e_anti_fascist_agent
+random_character = { limit = { is_character = OLB_e_anti_fascist_agent } 68 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OLB_v_head_of_intelligence
+random_character = { limit = { is_character = OLB_v_head_of_intelligence } 68 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OLB_g_army_chief_organizational
+random_character = { limit = { is_character = OLB_g_army_chief_organizational } 68 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

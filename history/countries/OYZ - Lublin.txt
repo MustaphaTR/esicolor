@@ -20,6 +20,9 @@ set_politics = {
 	elections_allowed = no
 }
 
+recruit_character = OYZ_dh_air_air_combat_training
+random_character = { limit = { is_character = OYZ_dh_air_air_combat_training } 92 = { add_to_array = { state_advisors = PREV } } }
+
 set_rule = {
 	can_generate_female_aces = yes
 }

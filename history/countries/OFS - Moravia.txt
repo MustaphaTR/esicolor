@@ -21,6 +21,16 @@ set_politics = {
 }
 
 recruit_character = OFS_klement_gottwald
+recruit_character = OFS_d_communist_revolutionary
+random_character = { limit = { is_character = OFS_d_communist_revolutionary } 75 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OFS_e_popular_figurehead
+random_character = { limit = { is_character = OFS_e_popular_figurehead } 75 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OFS_j_editor
+random_character = { limit = { is_character = OFS_j_editor } 75 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OFS_q_socialist_firebrand_union_women
+random_character = { limit = { is_character = OFS_q_socialist_firebrand_union_women } 75 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OFS_f_army_chief_morale
+random_character = { limit = { is_character = OFS_f_army_chief_morale } 75 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

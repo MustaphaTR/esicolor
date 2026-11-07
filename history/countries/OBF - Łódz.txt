@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = OBF_boleslaw_piasecki
+recruit_character = OBF_h_prince_of_terror
+random_character = { limit = { is_character = OBF_h_prince_of_terror } 87 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

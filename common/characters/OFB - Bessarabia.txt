@@ -1,15 +1,69 @@
 ﻿characters={
 	OFB_constantin_ion_parhon={
 		name=ROM_constantin_ion_parhon
-		portraits={
-			civilian={
-				large=GFX_Portrait_romania_constantin_ion_parhon
-			}
-		}
+		portraits={ civilian={ large=GFX_Portrait_romania_constantin_ion_parhon } }
+
 		country_leader={
 			ideology=leninism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OFB_d_communist_revolutionary={
+		name=ROM_gheorghe_gheorghiu_dej
+		portraits={ civilian={ small=GFX_idea_ROM_gheorghe_gheorghiu_dej } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OFB_d_communist_revolutionary
+			traits={ communist_revolutionary }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					78={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=30
+				}
+			}
+		}
+	}
+	OFB_i_backroom_backstabber={
+		name=ROM_petru_groza
+		portraits={ civilian={ small=GFX_idea_ROM_petru_groza } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OFB_i_backroom_backstabber
+			traits={ backroom_backstabber }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					78={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=5 }
 		}
 	}
 }

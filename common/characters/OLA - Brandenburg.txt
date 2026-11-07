@@ -1,16 +1,108 @@
 characters={
 	OLA_adolf_hitler={
 		name=GER_adolf_hitler
-		portraits={
-			civilian={
-				large=GFX_portrait_GER_adolf_hitler
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_GER_adolf_hitler } }
+
 		country_leader={
 			traits={ GER_der_fuhrer }
 			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OLA_f_propaganda_expert={
+		name=GER_leni_riefenstahl
+		portraits={ civilian={ small=GFX_portrait_GER_leni_riefenstahl_small } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OLA_f_propaganda_expert
+			traits={ propaganda_expert }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					64={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					has_war_support > 0.4
+					has_war_support < 0.5
+
+					add=9
+				}
+			}
+		}
+	}
+	OLA_o_rocket_scientist={
+		name=GER_walter_dornberger
+		portraits={ army={ small=GFX_portrait_GER_walter_dornberger_small } }
+
+		advisor={
+			slot=theorist
+			idea_token=OLA_o_rocket_scientist
+			ledger=air
+			cost=100
+			traits={ rocket_scientist }
+			research_bonus={ rocketry=0.15 }
+		}
+		advisor={
+			slot=high_command
+			idea_token=OLA_o_head_of_the_missile_department
+			ledger=air
+			cost=100
+			traits={ GER_head_of_the_missile_department }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					64={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OLA_a_army_chief_offensive={
+		name=GER_franz_halder
+		portraits={ army={ small=GFX_idea_franz_halder } }
+
+		advisor={
+			slot=army_chief
+			idea_token=OLA_a_army_chief_offensive
+			cost=100
+			traits={ army_chief_offensive_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					64={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OLA_d_army_chief_drill={
+		name=GER_wilhelm_keitel
+		portraits={ army={ small=GFX_idea_wilhelm_keitel } }
+
+		advisor={
+			slot=army_chief
+			idea_token=OLA_d_army_chief_drill
+			cost=100
+			traits={ army_chief_drill_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					64={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

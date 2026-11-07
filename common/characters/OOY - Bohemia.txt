@@ -29,7 +29,7 @@
 	}
 
 	#Advisors
-	OOY_ferdinand_peroutka={
+	OOY_g_silent_workhorse={
 		instance={
 			allowed={ has_dlc="Peace For Our Time" }
 			name=CZE_ferdinand_peroutka
@@ -73,7 +73,7 @@
 			}
 		}
 	}
-	OOY_milada_horakova={
+	OOY_j_editor={
 		instance={
 			allowed={ has_dlc="Peace For Our Time" }
 			name=CZE_milada_horakova
@@ -119,7 +119,7 @@
 			gender=female
 		}
 	}
-	OOY_kamil_krofta={
+	OOY_m_smooth_talking_charmer={
 		instance={
 			allowed={ has_dlc="Peace For Our Time" }
 			name=CZE_kamil_krofta
@@ -163,7 +163,7 @@
 			}
 		}
 	}
-	OOY_josef_kalfus={
+	OOY_n_financial_expert={
 		instance={
 			allowed={ has_dlc="Peace For Our Time" }
 			name=CZE_josef_kalfus
@@ -207,7 +207,7 @@
 			}
 		}
 	}
-	OOY_hugo_vavrecka={
+	OOY_o_economist={
 		instance={
 			allowed={ has_dlc="Peace For Our Time" }
 			name=CZE_hugo_vavrecka
@@ -251,7 +251,7 @@
 			}
 		}
 	}
-	OOY_mikulas_dolezal={
+	OOY_b_army_chief_defensive={
 		instance={
 			allowed={ has_dlc="Peace For Our Time" }
 			name=CZE_mikulas_dolezal
@@ -293,7 +293,7 @@
 			}
 		}
 	}
-	OOY_jaroslav_fajfr={
+	OOY_b_air_chief_ground_support={
 		name=CZE_jaroslav_fajfr
 		portraits={ army={ small=GFX_idea_CZE_jaroslav_fajfr } }
 
@@ -312,7 +312,7 @@
 			}
 		}
 	}
-	OOY_ludvik_krejci={
+	OOY_aa_army_infantry={
 		name=CZE_ludvik_krejci
 		portraits={ army={ small=GFX_idea_CZE_ludvik_krejci } }
 
@@ -332,7 +332,7 @@
 			}
 		}
 	}
-	OOY_frantisek_havel={
+	OOY_bb_army_logistics={
 		name=CZE_frantisek_havel
 		portraits={ army={ small=GFX_idea_CZE_frantisek_havel } }
 
@@ -352,7 +352,7 @@
 			}
 		}
 	}
-	OOY_sergej_ingr={
+	OOY_bd_army_concealment={
 		instance={
 			allowed={ has_dlc="Peace For Our Time" }
 			name=CZE_sergej_ingr
@@ -383,7 +383,7 @@
 				slot=high_command
 				idea_token=OOY_bd_army_concealment
 				ledger=army
-				cost=100
+				cost=50
 				traits={ army_concealment_1 }
 
 				available={
@@ -396,7 +396,7 @@
 			}
 		}
 	}
-	OOY_josef_frantisek={
+	OOY_da_air_air_superiority={
 		name=CZE_josef_frantisek
 		portraits={ army={ small=GFX_idea_CZE_josef_frantisek } }
 
@@ -416,27 +416,7 @@
 			}
 		}
 	}
-	OOY_josef_frantisek={
-		name=CZE_josef_frantisek
-		portraits={ army={ small=GFX_idea_CZE_josef_frantisek } }
-
-		advisor={
-			slot=high_command
-			idea_token=OOY_da_air_air_superiority
-			ledger=air
-			cost=100
-			traits={ air_air_superiority_2 }
-
-			available={
-				if={
-					limit={ has_global_flag=custom_advisors_only_core }
-
-					9={ is_core_of=ROOT }
-				}
-			}
-		}
-	}
-	OOY_karel_kuttelwascher={
+	OOY_dh_air_air_combat_training={
 		name=CZE_karel_kuttelwascher
 		portraits={ army={ small=GFX_idea_CZE_karel_kuttelwascher } }
 

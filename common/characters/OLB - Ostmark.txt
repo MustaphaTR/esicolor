@@ -3,19 +3,98 @@
 		name=GER_gunther_von_kluge
 		portraits={
 			civilian={
-				large = GFX_portrait_GER_gunther_von_kluge
-				small = GFX_portrait_GER_gunther_von_kluge_small
+				large=GFX_portrait_GER_gunther_von_kluge
+				small=GFX_portrait_GER_gunther_von_kluge_small
 			}
 		}
+
 		country_leader={
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		country_leader={
 			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OLB_e_anti_fascist_agent={
+		name=GER_hans_oster
+		portraits={ civilian={ small=GFX_idea_GER_hans_oster } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OLB_e_anti_fascist_agent
+			traits={ anti_fascist_agent }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					68={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					has_stability > 0.35
+					has_stability < 0.5
+
+					add=9
+				}
+				modifier={
+					has_government=fascism
+
+					factor=0
+				}
+			}
+		}
+	}
+	OLB_v_head_of_intelligence={
+		name=GER_wilhelm_canaris
+		portraits={ civilian={ small=GFX_idea_ger_wilhelm_canaris } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OLB_v_head_of_intelligence
+			traits={ head_of_intelligence }
+
+			available={
+				has_intelligence_agency=yes
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					68={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+				modifier={
+					has_intelligence_agency=no
+					factor=0
+				}
+			}
+		}
+	}
+	OLB_g_army_chief_organizational={
+		name=GER_ludwig_beck
+		portraits={ army={ small=GFX_idea_ludwig_beck } }
+
+		advisor={
+			slot=army_chief
+			idea_token=OLB_g_army_chief_organizational
+			cost=100
+			traits={ army_chief_organizational_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					64={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }
