@@ -122,6 +122,24 @@ IAO_battle_line_ship_organization = {
 			}
 		}
 	}
+
+	trait = {
+		token = SWE_mio_trait_high_capacity_dockyard
+		name = SWE_mio_trait_high_capacity_dockyard
+		icon = GFX_generic_mio_department_icon_ship_general_production
+		special_trait_background = yes
+
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_semi_armor_piercing_shells
+
+		any_parent = { generic_mio_trait_semi_armor_piercing_shells generic_mio_trait_super_heavy_shells generic_mio_trait_high_velocity_guns }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = { owner = { has_completed_initial_naval_focus = yes } }
+
+		production_bonus = {
+			production_capacity_factor = 0.06
+		}
+	}
 }
 
 IEB_raider_ship_organization = {
@@ -151,24 +169,6 @@ IEB_raider_ship_organization = {
 			owner = {
 				138 = { state_designer_availabile = yes }
 			}
-		}
-	}
-
-	trait = {
-		token = SWE_mio_trait_high_capacity_dockyard
-		name = SWE_mio_trait_high_capacity_dockyard
-		icon = GFX_generic_mio_department_icon_ship_general_production
-		special_trait_background = yes
-
-		position = { x=0 y=2 }
-		relative_position_id = generic_mio_trait_semi_armor_piercing_shells
-
-		any_parent = { generic_mio_trait_semi_armor_piercing_shells generic_mio_trait_super_heavy_shells generic_mio_trait_high_velocity_guns }
-		visible = { has_global_flag = custom_designer_traits_enabled }
-		available = { owner = { has_completed_initial_naval_focus = yes } }
-
-		production_bonus = {
-			production_capacity_factor = 0.06
 		}
 	}
 }

@@ -1392,7 +1392,7 @@ ZIY_heavy_aircraft_organization = {
 		}
 	}
 }
-ZIY_heavy_aircraft_organization = {
+ZIY_heavy_aircraft_organization_custom = {
 	name = SOV_tupolev_design_bureau_organization
 	include = esicolor_generic_heavy_aircraft_organization
 	icon = GFX_idea_tupolev_design_bureau
@@ -1792,7 +1792,7 @@ ZZE_infantry_equipment_organization_custom = {
 		position = { x=@materiel_1_X y=@materiel_1_Y }
 
 		available = {
-			FROM = { has_full_control_of_state = 399 #UDMURTIA } (Izhevsk)
+			FROM = { has_full_control_of_state = 399 } #UDMURTIA (Izhevsk)
 			FROM = { has_completed_SOV_merge_tank_and_materiel_plants_arms = yes }
 			#Only exists in this MIO
 		}
@@ -2034,7 +2034,7 @@ ZSZ_motorized_mechanized_organization = {
 		visible = { has_global_flag = custom_designer_traits_enabled }
 		available = {
 			FROM = { has_full_control_of_state = 582 } #MAGNITOGORSK
-			FROM = { has_completed_focus = SOV_merge_tank_and_materiel_plants }
+			FROM = { has_completed_SOV_merge_tank_and_materiel_plants_arms = yes }
 			FROM = { NOT = { has_country_flag = SOV_merge_magnitogorsk_metallurgical_plant_flag } }
 		}
 
