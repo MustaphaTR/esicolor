@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = ESS_mustafa_kemal_ataturk
+recruit_character = ESS_cb_navy_fleet_logistics
+random_character = { limit = { is_character = ESS_cb_navy_fleet_logistics } 355 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

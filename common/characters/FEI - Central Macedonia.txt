@@ -1,37 +1,84 @@
 characters={
-	FEI_themistoklis_sofoulis = {
-		instance = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-			}
+	FEI_themistoklis_sofoulis={
+		instance={
+			allowed={ has_dlc="Battle for the Bosporus" }
 			name=FEI_themistoklis_sofoulis
-			portraits={
-				civilian={
-					large=GFX_portrait_gre_themistoklis_sofoulis
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_gre_themistoklis_sofoulis } }
+
 			country_leader={
 				traits={ professional_crisis_solver }
 				ideology=liberalism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Battle for the Bosporus" } }
 			name=FEI_themistoklis_sofoulis
-			portraits={
-				civilian={
-					large=GFX_Portrait_South_America_Generic_5
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_South_America_Generic_5 } }
+
 			country_leader={
 				traits={ professional_crisis_solver }
 				ideology=liberalism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	FEI_i_backroom_backstabber={
+		name=GRE_sophoklis_venizelos
+		portraits={ civilian={ small=GFX_idea_gre_sophoklis_venizelos } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=FEI_i_backroom_backstabber
+			traits={ backroom_backstabber }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					731={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=5 }
+		}
+	}
+	FEI_d_grand_battle_plan_expert={
+		name=GRE_konstantinos_ventiris
+		portraits={ army={ small=GFX_idea_gre_konstantinos_ventiris } }
+
+		advisor={
+			slot=theorist
+			idea_token=FEI_d_grand_battle_plan_expert
+			ledger=army
+			cost=150
+			traits={ grand_battle_plan_expert }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					731={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	FEI_c_army_chief_maneuver={
+		name=GRE_nikolaos_plastiras
+		portraits={ army={ small=GFX_idea_gre_nikolaos_plastiras } }
+
+		advisor={
+			slot=army_chief
+			idea_token=FEI_c_army_chief_maneuver
+			cost=200
+			traits={ army_chief_maneuver_3 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					731={ is_core_of=ROOT }
+				}
 			}
 		}
 	}

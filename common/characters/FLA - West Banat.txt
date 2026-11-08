@@ -1,15 +1,77 @@
 characters={
 	FLA_milan_stojadinovic={
 		name=YUG_milan_stojadinovic
-		portraits={
-			civilian={
-				large=GFX_portrait_YUG_milan_stojadinovic
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_YUG_milan_stojadinovic } }
+
 		country_leader={
 			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	FLA_c_fascist_demagogue={
+		name=YUG_dimitrije_ljotic
+		portraits={ civilian={ small=GFX_idea_YUG_dimitrije_ljotic } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=FLA_c_fascist_demagogue
+			traits={ fascist_demagogue }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=fascism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					764={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_fascism
+					NOT={ has_government=fascism }
+
+					add=30
+				}
+			}
+		}
+	}
+	FLA_h_prince_of_terror={
+		name=YUG_milan_nedic
+		portraits={ civilian={ small=GFX_idea_YUG_milan_nedic } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=FLA_h_prince_of_terror
+			traits={ prince_of_terror }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					764={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					any_owned_state={ resistance > 50 }
+
+					add=9
+				}
+			}
 		}
 	}
 }

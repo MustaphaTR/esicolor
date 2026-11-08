@@ -1,0 +1,40 @@
+characters={
+	#Advisors
+	BOA_b_democratic_reformer={
+		name=YUG_milovan_djilas
+		portraits={ civilian={ small=GFX_idea_YUG_milovan_djilas } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=BOA_b_democratic_reformer
+			traits={ democratic_reformer }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=democratic
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					804={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_democratic
+					NOT={ has_government=democratic }
+
+					add=30
+				}
+			}
+		}
+	}
+}

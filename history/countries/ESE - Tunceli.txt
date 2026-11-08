@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = ESE_seyid_riza
+recruit_character = ESE_b_democratic_reformer
+random_character = { limit = { is_character = ESE_b_democratic_reformer } 353 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

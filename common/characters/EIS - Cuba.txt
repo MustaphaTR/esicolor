@@ -1,15 +1,51 @@
 characters={
 	EIS_jose_agripino_barnet={
 		name=EIS_jose_agripino_barnet
-		portraits={
-			civilian={
-				large=GFX_portrait_cuba_jose_barnet
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_cuba_jose_barnet } }
+
 		country_leader={
 			ideology=liberalism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	EIS_g_silent_workhorse={
+		name=CUB_gerardo_machado
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_3 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=EIS_g_silent_workhorse
+			traits={ silent_workhorse }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					315={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=15 }
+		}
+	}
+	EIS_a_army_chief_offensive={
+		name=CUB_fulgencio_batista
+		portraits={ army={ small=GFX_idea_generic_army_south_america_5 } }
+
+		advisor={
+			slot=army_chief
+			idea_token=EIS_a_army_chief_offensive
+			cost=100
+			traits={ army_chief_offensive_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					315={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

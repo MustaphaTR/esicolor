@@ -1,16 +1,54 @@
 characters={
 	ESA_sefik_husnu={
 		name=TUR_sefik_husnu
-		portraits={
-			civilian={
-				large="GFX_portrait_TUR_sefik_husnu"
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_TUR_sefik_husnu } }
+
 		country_leader={
 			traits={ reluctant_stalinist }
 			ideology=stalinism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	ESA_g_silent_workhorse={
+		name=TUR_nazim_hikmet
+		portraits={ civilian={ small=GFX_idea_tur_nazim_hikmet } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ESA_g_silent_workhorse
+			traits={ silent_workhorse }
+
+			available={
+				if={
+					limit={
+						has_focus_tree=horn_of_africa_tree
+						has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+					}
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					354={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=15
+
+				modifier={
+					has_global_flag=custom_advisors_only
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=15
+				}
+			}
 		}
 	}
 }

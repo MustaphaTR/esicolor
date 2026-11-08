@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = EIY_rafael_trujillo
+recruit_character = EIY_m_smooth_talking_charmer
+random_character = { limit = { is_character = EIY_m_smooth_talking_charmer } 319 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = EIY_u_armaments_organizer
+random_character = { limit = { is_character = EIY_u_armaments_organizer } 319 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

@@ -12422,34 +12422,6 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
-	487 = {
-		for_each_scope_loop = {
-			array = state_advisors
-			if = { # Bernardino Bilbao Rioja
-				limit = {
-					OR = {
-						has_trait = air_chief_reform_1
-						has_trait = air_chief_reform_2
-						has_trait = air_chief_reform_3
-					}
-				}
-
-				set_character_name = BOL_bernardino_bilbao_rioja
-
-				set_portraits = {
-					civilian = {
-						small = GFX_idea_generic_air_south_america_1
-					}
-					army = {
-						small = GFX_idea_generic_air_south_america_1
-					}
-					navy = {
-						small = GFX_idea_generic_air_south_america_1
-					}
-				}
-			}
-		}
-	}
 	496 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -12557,24 +12529,7 @@ adjust_named_advisor_traits = {
 	#		}
 	#	}
 	#}
-	688 = {
-		for_each_scope_loop = {
-			array = state_advisors
-			if = { # Anselmo Jover Peralta
-				limit = { has_trait = compassionate_gentleman }
-
-				remove_trait = {
-					slot = political_advisor
-					trait = compassionate_gentleman
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = SWE_minister_of_justice
-				}
-			}
-		}
-	}
-	695 = {
+	675 = {
 		for_each_scope_loop = {
 			array = state_advisors
 			if = { # Husain al-Rahhal
@@ -12591,7 +12546,7 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
-	696 = {
+	676 = {
 		for_each_scope_loop = {
 			array = state_advisors
 			if = { # Muhammad Amin Zaki
@@ -12604,6 +12559,23 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = IRQ_kurdish_politician
+				}
+			}
+		}
+	}
+	688 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Anselmo Jover Peralta
+				limit = { has_trait = compassionate_gentleman }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = compassionate_gentleman
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = SWE_minister_of_justice
 				}
 			}
 		}
@@ -13226,35 +13198,6 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
-	1079 = {
-		for_each_scope_loop = {
-			array = state_advisors
-			if = { # Alexander Galbraith
-				limit = { has_trait = communist_revolutionary }
-
-				remove_trait = {
-					slot = political_advisor
-					trait = communist_revolutionary
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = ICE_trade_unionist
-				}
-			}
-			if = { # Vic Wilcox
-				limit = { has_trait = economist }
-
-				remove_trait = {
-					slot = political_advisor
-					trait = economist
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = soviet_economist
-				}
-			}
-		}
-	}
 	1027 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -13303,6 +13246,35 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	1079 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Alexander Galbraith
+				limit = { has_trait = communist_revolutionary }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = ICE_trade_unionist
+				}
+			}
+			if = { # Vic Wilcox
+				limit = { has_trait = economist }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = economist
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = soviet_economist
+				}
+			}
+		}
+	}
 }
 retire_custom_named_advisors = {
 	random_country = { limit = { has_character = OAE_j_modernizer_and_diplomat } retire_character = OAE_j_modernizer_and_diplomat } # Miklós Horthy Jr.
@@ -13312,6 +13284,11 @@ retire_custom_named_advisors = {
 	random_country = { limit = { has_character = OFS_q_socialist_firebrand_union_women } retire_character = OFS_q_socialist_firebrand_union_women } # Bozena Machacova-Dostalova
 	random_country = { limit = { has_character = IOO_i_progressive_doctor } retire_character = IOO_i_progressive_doctor } # Olaf J Thorlacius
 	random_country = { limit = { has_character = ZBZ_u_nakajima_president } retire_character = ZBZ_u_nakajima_president } # Chikuhei Nakajima
+	if = {
+		limit = { NOT = { has_dlc = "No Step Back" } }
+
+		random_country = { limit = { has_character = BIS_b_army_chief_defensive } remove_advisor_role = { character = BIS_b_army_chief_defensive slot = political_advisor } } # Stasys Raštikis
+	}
 }
 
 remove_tank_designer = {

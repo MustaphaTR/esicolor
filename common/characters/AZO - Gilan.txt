@@ -1,0 +1,81 @@
+characters={
+	#Advisors
+	AZO_d_communist_revolutionary={
+		instance={
+			allowed={ has_dlc="Graveyard of Empires" }
+			name=PER_ardeshir_ovanessian
+			portraits={ civilian={ small=GFX_portrait_PER_ardeshir_ovanessian_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=AZO_d_communist_revolutionary
+				traits={ communist_revolutionary }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						420={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=30
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Graveyard of Empires" } }
+			name=PER_ardeshir_ovanessian
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_4 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=AZO_d_communist_revolutionary
+				traits={ communist_revolutionary }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						420={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=30
+					}
+				}
+			}
+		}
+	}
+}

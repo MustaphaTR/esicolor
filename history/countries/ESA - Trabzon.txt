@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = ESA_sefik_husnu
+recruit_character = ESA_g_silent_workhorse
+random_character = { limit = { is_character = ESA_g_silent_workhorse } 354 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

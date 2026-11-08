@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = AII_soleiman_eskandari
+recruit_character = AII_f_propaganda_expert
+random_character = { limit = { is_character = AII_f_propaganda_expert } 411 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

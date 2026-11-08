@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = EAL_adnan_menderes
+recruit_character = EAL_a_military_theorist
+random_character = { limit = { is_character = EAL_a_military_theorist } 346 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

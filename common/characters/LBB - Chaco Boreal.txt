@@ -1,16 +1,145 @@
 characters={
 	LBB_rafael_franco={
 		name=LBB_rafael_franco
-		portraits={
-			civilian={
-				large=GFX_Portrait_paraguay_rafael_franco
-			}
-		}
+		portraits={ civilian={ large=GFX_Portrait_paraguay_rafael_franco } }
+
 		country_leader={
 			traits={ JUNO_revolutionary_feberista_hero }
 			ideology=marxism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	LBB_g_silent_workhorse={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=PAR_damian_bruyn
+			portraits={ civilian={ small=GFX_portrait_PAR_damian_bruyn_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=LBB_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						688={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=PAR_damian_bruyn
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_6 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=LBB_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=GFX_portrait_south_america_generic_8_small }
+
+						688={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+	}
+	LBB_l_compassionate_gentleman={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=PAR_anselmo_jover_peralta
+			portraits={ civilian={ small=GFX_portrait_PAR_anselmo_jover_peralta_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=LBB_l_compassionate_gentleman
+				traits={ compassionate_gentleman }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						688={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+		instance={
+			allowed={ NOT = { has_dlc="Trial of Allegiance" } }
+			name=PAR_anselmo_jover_peralta
+			portraits={ civilian={ small=GFX_Portrait_South_America_Generic_6_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=LBB_l_compassionate_gentleman
+				traits={ compassionate_gentleman }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						688={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+	}
+	LBB_q_war_industrialist={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=PAR_aristides_rivas_ortellado
+			portraits={ civilian={ small=GFX_portrait_PAR_aristides_rivas_ortellado_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=LBB_q_war_industrialist
+				traits={ war_industrialist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						688={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=PAR_aristides_rivas_ortellado
+			portraits={ civilian={ small=GFX_Portrait_South_America_Generic_land_2_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=LBB_q_war_industrialist
+				traits={ war_industrialist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						688={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
 		}
 	}
 }

@@ -20,7 +20,9 @@ set_politics = {
 	elections_allowed = no
 }
 
-recruit_character = FYB_nihal_atsiz # He doesn't have a leader role in basegame it seems, but he has a portrait in the files, so i'll use it.
+recruit_character = FYB_nihal_atsiz
+recruit_character = FYB_f_propaganda_expert
+random_character = { limit = { is_character = FYB_f_propaganda_expert } 798 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

@@ -1,9 +1,7 @@
 characters={
-	CBZ_sandro_pertini = {
-		instance = {
-			allowed = {
-				has_dlc = "By Blood Alone"
-			}
+	CBZ_sandro_pertini={
+		instance={
+			allowed={ has_dlc="By Blood Alone" }
 			name=ITA_sandro_pertini
 			portraits={
 				civilian={
@@ -11,29 +9,84 @@ characters={
 					small=GFX_portrait_ITA_sandro_pertini_small
 				}
 			}
+
 			country_leader={
 				traits={ staunch_anti_fascist }
 				ideology=stalinism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "By Blood Alone" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="By Blood Alone" } }
 			name=ITA_sandro_pertini
-			portraits={
-				civilian={
-					large="gfx/leaders/ITA/Portrait_Italy_Generic_1.dds"
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_Italy_Generic_1 } }
+
 			country_leader={
 				traits={ staunch_anti_fascist }
 				ideology=stalinism
-				expire="1965.1.1.1"
-				id=-1
 			}
+		}
+	}
+
+	#Advisors
+	CBZ_g_silent_workhorse={
+		name=ITA_ignazio_silone
+		portraits={ civilian={ small=GFX_portrait_ITA_ignazio_silone_small } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=CBZ_g_silent_workhorse
+			traits={ silent_workhorse }
+
+			available={
+				if={
+					limit={
+						has_focus_tree=horn_of_africa_tree
+						has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+					}
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					849={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=15
+
+				modifier={
+					has_global_flag=custom_advisors_only
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=15
+				}
+			}
+		}
+	}
+	CBZ_o_economist={
+		name=ITA_antonio_pesenti
+		portraits={ civilian={ small=GFX_portrait_ITA_antonio_pesenti_small } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=CBZ_o_economist
+			traits={ economist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					849={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
 		}
 	}
 }

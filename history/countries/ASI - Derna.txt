@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = ASI_italo_balbo
+recruit_character = ASI_d_air_chief_safety
+random_character = { limit = { is_character = ASI_d_air_chief_safety } 451 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

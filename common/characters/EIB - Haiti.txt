@@ -1,15 +1,51 @@
 characters={
 	EIB_stenio_vincent={
 		name=EIB_stenio_vincent
-		portraits={
-			civilian={
-				large=GFX_portrait_haiti_stenio_vincent
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_haiti_stenio_vincent } }
+
 		country_leader={
 			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	EIB_b_army_chief_defensive={
+		name=HAI_franck_lavaud
+		portraits={ army={ small=GFX_idea_generic_army_african_2 } }
+
+		advisor={
+			slot=army_chief
+			idea_token=EIB_b_army_chief_defensive
+			cost=100
+			traits={ army_chief_defensive_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					318={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	EIB_bd_army_concealment={
+		name=HAI_paul_magloire
+		portraits={ army={ small=GFX_idea_generic_army_african_5 } }
+
+		advisor={
+			slot=high_command
+			idea_token=EIB_bd_army_concealment
+			ledger=army
+			cost=100
+			traits={ army_concealment_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					318={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

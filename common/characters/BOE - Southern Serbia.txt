@@ -1,0 +1,23 @@
+characters={
+	#Advisors
+	BOE_ba_army_entrenchment={
+		name=YUG_arso_jovanovic
+		portraits={ army={ small=GFX_idea_YUG_arso_jovanovic } }
+
+		advisor={
+			slot=high_command
+			idea_token=BOE_ba_army_entrenchment
+			ledger=army
+			cost=100
+			traits={ army_entrenchment_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					803={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+}

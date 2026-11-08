@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = EIB_stenio_vincent
+recruit_character = EIB_b_army_chief_defensive
+random_character = { limit = { is_character = EIB_b_army_chief_defensive } 318 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = EIB_bd_army_concealment
+random_character = { limit = { is_character = EIB_bd_army_concealment } 318 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

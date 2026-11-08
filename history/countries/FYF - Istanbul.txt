@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = FYF_fevzi_cakmak
+recruit_character = FYF_q_war_industrialist
+random_character = { limit = { is_character = FYF_q_war_industrialist } 979 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = FYF_t_quartermaster_general
+random_character = { limit = { is_character = FYF_t_quartermaster_general } 979 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

@@ -1,28 +1,167 @@
 characters={
-	SOO_getulio_vargas = {
-		name = BRA_getulio_vargas
-		portraits = {
-			civilian = {
-				large=GFX_portrait_BRA_getulio_vargas
-			}
-		}
+	SOO_getulio_vargas={
+		name=BRA_getulio_vargas
+		portraits={ civilian={ large=GFX_portrait_BRA_getulio_vargas } }
+
 		country_leader={
 			traits={ BRA_authoritarian_populist }
 			ideology=populism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		country_leader={
 			traits={ BRA_authoritarian_populist }
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		country_leader={
 			traits={ BRA_reluctant_integralist }
 			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	SOO_k_ideological_crusader={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=BRA_francisco_campos
+			portraits={ civilian={ small=GFX_portrait_BRA_francisco_campos_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=SOO_k_ideological_crusader
+				traits={ ideological_crusader }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						500={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT = { has_dlc="Trial of Allegiance" } }
+			name=BRA_francisco_campos
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_2 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=SOO_k_ideological_crusader
+				traits={ ideological_crusader }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						500={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	SOO_l_compassionate_gentleman={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=BRA_osvaldo_aranha
+			portraits={ civilian={ small=GFX_portrait_BRA_osvaldo_aranha_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=SOO_l_compassionate_gentleman
+				traits={ compassionate_gentleman }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						500={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+		instance={
+			allowed={ NOT = { has_dlc="Trial of Allegiance" } }
+			name=BRA_osvaldo_aranha
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_2 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=SOO_l_compassionate_gentleman
+				traits={ compassionate_gentleman }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						500={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+	}
+	SOO_v_head_of_intelligence={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=BRA_filinto_muller
+			portraits={ civilian={ small=GFX_portrait_BRA_flinto_muller_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=SOO_v_head_of_intelligence
+				traits={ head_of_intelligence }
+
+				available={
+					has_intelligence_agency=yes
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						500={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+					modifier={
+						has_intelligence_agency=no
+						factor=0
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=BRA_filinto_muller
+			portraits={ civilian={ small=GFX_Portrait_South_America_Generic_6_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=SOO_v_head_of_intelligence
+				traits={ head_of_intelligence }
+
+				available={
+					has_intelligence_agency=yes
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						500={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+					modifier={
+						has_intelligence_agency=no
+						factor=0
+					}
+				}
+			}
 		}
 	}
 }

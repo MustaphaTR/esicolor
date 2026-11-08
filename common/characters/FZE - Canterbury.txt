@@ -1,17 +1,72 @@
 characters={
 	FZE_sidney_holland={
 		name=NZL_sidney_holland
-		portraits={
-			civilian={
-				large=GFX_NZL_sidney_holland
-			}
-		}
+		portraits={ civilian={ large=GFX_NZL_sidney_holland } }
+
 		country_leader={
 			traits={ NZL_pro_american_nationalist_trait }
 			ideology=centrism
-			expire="1965.1.1.1"
-			id=-1
 		}
-		gender = female
+	}
+
+	#Advisors
+	FZE_n_financial_expert={
+		name=NZL_william_polson
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_3 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=FZE_n_financial_expert
+			traits={ financial_expert }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					723={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+	}
+	FZE_a_military_theorist={
+		name=NZL_keith_j_holyoake
+		portraits={ army={ small=GFX_idea_NZL_keith_j_holyoake } }
+
+		advisor={
+			slot=theorist
+			idea_token=FZE_a_military_theorist
+			ledger=army
+			cost=100
+			traits={ military_theorist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					723={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	FZE_e_air_chief_reform={
+		name=NZL_a_j_stallworthy
+		portraits={ army={ small=GFX_idea_POL_jozef_zajac } }
+
+		advisor={
+			slot=air_chief
+			idea_token=FZE_e_air_chief_reform
+			cost=100
+			traits={ air_chief_reform_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					723={ is_core_of=ROOT }
+				}
+			}
+		}
 	}
 }

@@ -1,18 +1,38 @@
-characters = {
-	FLZ_alexander_hochberg = { 
-		name = SIL_alexander_hochberg
-		portraits = {
-			civilian = {
-				large = GFX_portrait_SIL_alexander_hochberg
-				small = GFX_portrait_SIL_alexander_hochberg_small
+characters={
+	FLZ_alexander_hochberg={ 
+		name=SIL_alexander_hochberg
+		portraits={
+			civilian={
+				large=GFX_portrait_SIL_alexander_hochberg
+				small=GFX_portrait_SIL_alexander_hochberg_small
 			}
-			
 		}
-		country_leader = {
-			ideology = despotism
-			traits = { SIL_prince_of_pless_trait }
-			expire = "1984.1.1.1"
-			id = -1
+
+		country_leader={
+			traits={ SIL_prince_of_pless_trait }
+			ideology=despotism
+		}
+	}
+
+	#Advisors
+	FLZ_ae_army_armored={
+		name=POL_stanislav_maczek
+		portraits={ army={ small=GFX_idea_POL_stanislav_maczek } }
+
+		advisor={
+			slot=high_command
+			idea_token=FLZ_ae_army_armored
+			ledger=army
+			cost=100
+			traits={ army_armored_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					762={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

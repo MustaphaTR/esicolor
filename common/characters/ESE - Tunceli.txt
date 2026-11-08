@@ -1,16 +1,50 @@
 characters={
 	ESE_seyid_riza={
 		name=KUR_seyid_riza
-		portraits={
-			civilian={
-				large=GFX_portrait_kur_seyid_riza
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_kur_seyid_riza } }
+
 		country_leader={
 			traits={ freedom_fighter }
 			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	ESE_b_democratic_reformer={
+		name=KUR_nuri_dersimi
+		portraits={ civilian={ small=GFX_idea_KUR_nuri_dersimi } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ESE_b_democratic_reformer
+			traits={ democratic_reformer }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=democratic
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					353={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_democratic
+					NOT={ has_government=democratic }
+
+					add=30
+				}
+			}
 		}
 	}
 }

@@ -1,37 +1,59 @@
 characters={
 	ABF_oscar_unzaga_de_la_vega = {
 		instance = {
-			allowed = {
-				has_dlc = "Trial of Allegiance"
-			}
+			allowed = { has_dlc = "Trial of Allegiance" }
 			name=BOL_oscar_unzaga_de_la_vega
-			portraits={
-				civilian={
-					large="GFX_portrait_BOL_oscar_unzaga_de_la_vega"
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_BOL_oscar_unzaga_de_la_vega } }
+
 			country_leader={
 				traits={ JUNO_bolivian_falange }
 				ideology=falangism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
 		instance = {
-			allowed = {
-				NOT = { has_dlc = "Trial of Allegiance" }
-			}
+			allowed = { NOT = { has_dlc = "Trial of Allegiance" } }
 			name=BOL_oscar_unzaga_de_la_vega
-			portraits={
-				civilian={
-					large="GFX_portrait_Oscar_Unzaga_de_la_Vega"
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_Oscar_Unzaga_de_la_Vega } }
+
 			country_leader={
 				traits={ JUNO_bolivian_falange }
 				ideology=falangism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	ABF_j_air_warfare_theorist={
+		name=BOL_bernardino_bilbao_rioja
+		portraits={ army={ small=GFX_idea_generic_air_south_america_1 } }
+
+		advisor={
+			slot=theorist
+			idea_token=ABF_j_air_warfare_theorist
+			ledger=air
+			cost=100
+			traits={ air_warfare_theorist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					487={ is_core_of=ROOT }
+				}
+			}
+		}
+		advisor={
+			slot=air_chief
+			idea_token=ABF_e_air_chief_reform
+			cost=100
+			traits={ air_chief_reform_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					487={ is_core_of=ROOT }
+				}
 			}
 		}
 	}

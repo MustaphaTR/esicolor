@@ -1,15 +1,69 @@
 characters={
 	BSE_josip_broz_tito={
 		name=YUG_josip_broz_tito
-		portraits={
-			civilian={
-				large=GFX_portrait_YUG_josip_broz_tito
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_YUG_josip_broz_tito } }
+
 		country_leader={
 			ideology=leninism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	BSE_d_communist_revolutionary={
+		name=YUG_ivo_lola_ribar
+		portraits={ civilian={ small=GFX_idea_YUG_ivo_lola_ribar } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=BSE_d_communist_revolutionary
+			traits={ communist_revolutionary }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					853={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=30
+				}
+			}
+		}
+	}
+	BSE_p_captain_of_industry={
+		name=YUG_ivan_ribar
+		portraits={ civilian={ small=GFX_idea_YUG_ivan_ribar } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=BSE_p_captain_of_industry
+			traits={ captain_of_industry }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					853={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
 		}
 	}
 }

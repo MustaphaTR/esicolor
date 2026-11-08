@@ -1,15 +1,52 @@
 characters={
 	EIY_rafael_trujillo={
 		name=EIY_rafael_trujillo
-		portraits={
-			civilian={
-				large=GFX_portrait_dominca_rafael_trujillo
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_dominca_rafael_trujillo } }
+
 		country_leader={
 			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	EIY_m_smooth_talking_charmer={
+		name=DOM_jacinto_bienvenido_peynado
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_1 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=EIY_m_smooth_talking_charmer
+			traits={ smooth_talking_charmer }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					319={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+	}
+	EIY_u_armaments_organizer={
+		name=DOM_manuel_de_jesus_troncoso
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_2 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=EIY_u_armaments_organizer
+			traits={ armaments_organizer }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					284={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
 		}
 	}
 }

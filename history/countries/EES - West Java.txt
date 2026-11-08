@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = EES_bonifacius_cornelis_de_jonge
+recruit_character = EES_dd_air_naval_strike
+random_character = { limit = { is_character = EES_dd_air_naval_strike } 335 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

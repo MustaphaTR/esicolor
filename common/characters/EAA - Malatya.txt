@@ -1,38 +1,46 @@
 characters={
 	EAA_kazim_karabekir = {
 		instance = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-			}
+			allowed = { has_dlc = "Battle for the Bosporus" }
 			name=TUR_kazim_karabekir
-			portraits={
-				civilian={
-					large=GFX_portrait_tur_kazim_karabekir
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_tur_kazim_karabekir } }
+
 			country_leader={
 				traits={ grand_battle_plan_expert }
 				ideology=oligarchism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
 		instance = {
-			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
-			}
+			allowed = { NOT = { has_dlc = "Battle for the Bosporus" } }
 			name=TUR_kazim_karabekir
-			portraits={
-				civilian={
-					large=GFX_Portrait_South_America_Generic_land_1
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_South_America_Generic_land_1 } }
+
 			country_leader={
 				traits={ grand_battle_plan_expert }
 				ideology=oligarchism
-				expire="1965.1.1.1"
-				id=-1
 			}
+		}
+	}
+
+	#Advisors
+	EAA_g_silent_workhorse={
+		name=TUR_hilmi_uran
+		portraits={ civilian={ small=GFX_idea_tur_hilmi_uran } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=EAA_g_silent_workhorse
+			traits={ silent_workhorse }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					344={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=15 }
 		}
 	}
 }

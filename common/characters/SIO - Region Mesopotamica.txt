@@ -1,9 +1,7 @@
 characters={
-	SIO_pedro_pablo_ramirez = {
-		instance = {
-			allowed = {
-				has_dlc = "Trial of Allegiance"
-			}
+	SIO_pedro_pablo_ramirez={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
 			name=ARG_pedro_pablo_ramirez
 			portraits={
 				civilian={
@@ -11,40 +9,172 @@ characters={
 					small=GFX_portrait_ARG_pedro_pablo_ramirez_fascist_small
 				}
 			}
+
 			country_leader={
 				traits={ ARG_moderate_dictator }
 				ideology=gen_nazism
-				expire="1965.1.1.1"
-				id=-1
 			}
 			country_leader={
 				traits={ ARG_moderate_dictator }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Trial of Allegiance" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
 			name=ARG_pedro_pablo_ramirez
-			portraits={
-				civilian={
-					large="GFX_Portrait_South_America_Generic_land_2"
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_South_America_Generic_land_2 } }
+
 			country_leader={
 				traits={ ARG_moderate_dictator }
 				ideology=gen_nazism
-				expire="1965.1.1.1"
-				id=-1
 			}
 			country_leader={
 				traits={ ARG_moderate_dictator }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	SIO_t_quartermaster_general={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=ARG_edelmiro_julian_farrell
+			portraits={
+				civilian={
+					large=GFX_portrait_ARG_edelmiro_julian_farrell
+					small=GFX_portrait_ARG_edelmiro_julian_farrell_military_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=SIO_t_quartermaster_general
+				traits={ quartermaster_general }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						510={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=ARG_edelmiro_julian_farrell
+			portraits={ civilian={ small=GFX_idea_generic_navy_south_america_1 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=SIO_t_quartermaster_general
+				traits={ quartermaster_general }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						510={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	SIO_h_grand_fleet_proponent={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=SIO_segundo_storni
+			portraits={ army={ small=GFX_portrait_ARG_segundo_storni_small } }
+
+			advisor={
+				slot=theorist
+				idea_token=SIO_h_grand_fleet_proponent
+				ledger=navy
+				cost=150
+				traits={ grand_fleet_proponent }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						510={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=SIO_segundo_storni
+			portraits={ army={ small=GFX_Portrait_South_America_Generic_navy_3_small } }
+
+			advisor={
+				slot=theorist
+				idea_token=SIO_h_grand_fleet_proponent
+				ledger=navy
+				cost=150
+				traits={ grand_fleet_proponent }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						510={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+	}
+	SIO_bc_army_regrouping={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=ARG_juan_peron
+			portraits={
+				army={
+					large=GFX_portrait_ARG_juan_peron"
+					small=GFX_portrait_ARG_juan_peron_small
+				}
+			}
+
+			advisor={
+				slot=high_command
+				idea_token=SIO_bc_army_regrouping
+				ledger=army
+				cost=100
+				traits={ army_regrouping_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						510={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=ARG_juan_peron
+			portraits={ army={ small=GFX_Portrait_South_America_Generic_land_5_small } }
+
+			advisor={
+				slot=high_command
+				idea_token=SIO_bc_army_regrouping
+				ledger=army
+				cost=100
+				traits={ army_regrouping_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						510={ is_core_of=ROOT }
+					}
+				}
 			}
 		}
 	}

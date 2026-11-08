@@ -1,32 +1,99 @@
 characters={
-	BIS_antanas_gustaitis={
-		name=LIT_antanas_gustaitis
-		portraits={
-			civilian={
-				large=GFX_portrait_LIT_Antanas_Gustaitis
-				small=GFX_portrait_LIT_antanas_gustaitis_small
+	BIS_e_air_chief_reform={
+		instance={
+			allowed={ has_dlc="No Step Back" }
+			name=LIT_antanas_gustaitis
+			portraits={
+				civilian={
+					large=GFX_portrait_LIT_Antanas_Gustaitis
+					small=GFX_portrait_LIT_antanas_gustaitis_small
+				}
+			}
+
+			advisor={
+				slot=air_chief
+				idea_token=BIS_e_air_chief_reform
+				cost=200
+				traits={ air_chief_reform_3 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						815={ is_core_of=ROOT }
+					}
+				}
 			}
 		}
-		country_leader={
-			traits={ air_chief_reform_3 }
-			ideology=oligarchism
-			expire="1938.1.1.1"
-			id=-1
+		instance={
+			allowed={ NOT = { has_dlc="No Step Back" } }
+			name=LIT_antanas_gustaitis
+			portraits={
+				civilian={
+					large=GFX_portrait_LIT_Antanas_Gustaitis
+					small=GFX_portrait_LIT_antanas_gustaitis_small
+				}
+			}
+
+			country_leader={
+				traits={ air_chief_reform_3 }
+				ideology=oligarchism
+			}
 		}
 	}
-	BIS_stasys_rastikis={
-		name=LIT_stasys_rastikis
-		portraits={
-			civilian={
-				large=GFX_portrait_LIT_stasys_rastikis
-				small=GFX_idea_LIT_stasys_rastikis
+	BIS_b_army_chief_defensive={
+		instance={
+			allowed={ has_dlc="No Step Back" }
+			name=LIT_stasys_rastikis
+			portraits={
+				civilian={
+					large=GFX_portrait_LIT_stasys_rastikis
+					small=GFX_idea_LIT_stasys_rastikis
+				}
+			}
+
+			country_leader={
+				traits={ army_chief_defensive_2 }
+				ideology=oligarchism
 			}
 		}
-		country_leader={
-			traits={ army_chief_defensive_2 }
-			ideology=oligarchism
-			expire="1938.1.1.1"
-			id=-1
+		instance={
+			allowed={ NOT = { has_dlc="No Step Back" } }
+			name=LIT_stasys_rastikis
+			portraits={
+				civilian={
+					large=GFX_portrait_LIT_stasys_rastikis
+					small=GFX_idea_LIT_stasys_rastikis
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=BIS_b_veteran_minister
+				traits={ veteran_minister }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						815={ is_core_of=ROOT }
+					}
+				}
+			}
+			advisor={
+				slot=army_chief
+				idea_token=BIS_b_army_chief_defensive
+				cost=100
+				traits={ army_chief_defensive_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						815={ is_core_of=ROOT }
+					}
+				}
+			}
 		}
 	}
 }

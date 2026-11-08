@@ -1,16 +1,52 @@
 characters={
 	EZA_jigme_wangchuck={
 		name=BHU_jigme_wangchuck
-		portraits={
-			civilian={
-				large="GFX_portrait_buthan_jigme_wangchuk"
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_buthan_jigme_wangchuk } }
+
 		country_leader={
 			traits={ the_dragon_king }
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	EZA_i_backroom_backstabber={
+		name=BHU_sonam_tobgay_dorji
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_asia_3 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=EZA_i_backroom_backstabber
+			traits={ backroom_backstabber }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					324={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=5 }
+		}
+	}
+	EZA_b_army_chief_defensive={
+		name=BHU_jigme_dorji_wangchuck
+		portraits={ army={ small=GFX_idea_generic_army_asia_1 } }
+
+		advisor={
+			slot=army_chief
+			idea_token=EZA_b_army_chief_defensive
+			cost=100
+			traits={ army_chief_defensive_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					324={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

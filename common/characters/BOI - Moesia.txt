@@ -1,38 +1,144 @@
 characters={
-	BOI_nikola_mushanov = {
-		instance = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-			}
+	BOI_nikola_mushanov={
+		instance={
+			allowed={ has_dlc="Battle for the Bosporus" }
 			name=BUL_nikola_mushanov
-			portraits={
-				civilian={
-					large=GFX_portrait_bul_nikola_mushanov
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_bul_nikola_mushanov } }
+
 			country_leader={
 				traits={ appeaser }
 				ideology=liberalism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Battle for the Bosporus" } }
 			name=BUL_nikola_mushanov
-			portraits={
-				civilian={
-					large=GFX_Portrait_Europe_Generic_6
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_Europe_Generic_6 } }
+
 			country_leader={
 				traits={ appeaser }
 				ideology=liberalism
-				expire="1965.1.1.1"
-				id=-1
 			}
+		}
+	}
+
+	#Advisors
+	BOI_b_democratic_reformer={
+		name=BUL_stoycho_mushanov
+		portraits={ civilian={ small=GFX_idea_bul_stoycho_mushanov } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=BOI_b_democratic_reformer
+			traits={ democratic_reformer }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=democratic
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					801={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_democratic
+					NOT={ has_government=democratic }
+
+					add=30
+				}
+			}
+		}
+	}
+	BOI_g_silent_workhorse={
+		name=BUL_nikola_petkov
+		portraits={ civilian={ small=GFX_idea_bul_nikola_petkov } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=BOI_g_silent_workhorse
+			traits={ silent_workhorse }
+
+			available={
+				if={
+					limit={
+						has_focus_tree=horn_of_africa_tree
+						has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+					}
+
+					OR={
+						has_government=democratic
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					801={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=15
+
+				modifier={
+					has_global_flag=custom_advisors_only
+					has_country_flag=ai_go_democratic
+					NOT={ has_government=democratic }
+
+					add=15
+				}
+			}
+		}
+	}
+	BOI_l_compassionate_gentleman={
+		name=BUL_konstantin_muraviev
+		portraits={ civilian={ small=GFX_idea_bul_konstantin_muraviev } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=BOI_l_compassionate_gentleman
+			traits={ compassionate_gentleman }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					801={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=5 }
+		}
+	}
+	BOI_p_captain_of_industry={
+		name=BUL_stefan_stefanov
+		portraits={ civilian={ small=GFX_idea_bul_stefan_stefanov } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=BOI_p_captain_of_industry
+			traits={ captain_of_industry }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					801={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
 		}
 	}
 }

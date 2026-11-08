@@ -20,14 +20,15 @@ set_politics = {
 	elections_allowed = no
 }
 
+recruit_character = BIS_e_air_chief_reform
+recruit_character = BIS_b_army_chief_defensive
 if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	recruit_character = BIS_stasys_rastikis
+	limit = { has_dlc = "No Step Back" }
+
+	random_character = { limit = { is_character = BIS_e_air_chief_reform } 815 = { add_to_array = { state_advisors = PREV } } }
 
 	else = {
-		recruit_character = BIS_antanas_gustaitis
+		random_character = { limit = { is_character = BIS_b_army_chief_defensive } 815 = { add_to_array = { state_advisors = PREV } } }
 	}
 }
 

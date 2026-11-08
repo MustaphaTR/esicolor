@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = BSE_josip_broz_tito
+recruit_character = BSE_d_communist_revolutionary
+random_character = { limit = { is_character = BSE_d_communist_revolutionary } 853 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = BSE_p_captain_of_industry
+random_character = { limit = { is_character = BSE_p_captain_of_industry } 853 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

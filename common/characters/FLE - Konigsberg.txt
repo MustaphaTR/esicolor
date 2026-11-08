@@ -3,15 +3,81 @@ characters={
 		name=GER_hermann_goring
 		portraits={
 			civilian={
-				large = GFX_portrait_GER_hermann_goring
-				small = GFX_portrait_GER_hermann_goring_small
+				large=GFX_portrait_GER_hermann_goring
+				small=GFX_portrait_GER_hermann_goring_small
 			}
 		}
+
 		country_leader={
 			traits={ GER_goring_fuhrer }
 			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	FLE_j_air_warfare_theorist={
+		name=GER_walther_wever
+		portraits={ army={ small=GFX_idea_walther_wever } }
+
+		advisor={
+			slot=theorist
+			idea_token=FLE_j_air_warfare_theorist
+			ledger=air
+			cost=100
+			traits={ air_warfare_theorist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					763={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	FLE_de_air_tactical_bombing={
+		name=GER_erhard_milch
+		portraits={ army={ small=GFX_idea_erhard_milch } }
+
+		advisor={
+			slot=high_command
+			idea_token=FLE_de_air_tactical_bombing
+			ledger=air
+			cost=100
+			traits={ air_tactical_bombing_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					763={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	FLE_dg_air_airborne={
+		name=GER_kurt_student
+		portraits={
+			army={
+				large=GFX_portrait_GER_kurt_student
+				small=GFX_idea_kurt_student
+			}
+		}
+
+		advisor={
+			slot=high_command
+			idea_token=FLE_dg_air_airborne
+			ledger=air
+			cost=100
+			traits={ air_airborne_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					763={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

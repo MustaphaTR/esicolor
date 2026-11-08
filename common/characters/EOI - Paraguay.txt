@@ -1,37 +1,69 @@
 characters={
-	EOI_eusebio_ayala = {
-		instance = {
-			allowed = {
-				has_dlc = "Trial of Allegiance"
-			}
+	EOI_eusebio_ayala={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
 			name=PAR_Eusebio_Ayala
-			portraits={
-				civilian={
-					large="GFX_portrait_PAR_eusebio_ayala"
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_PAR_eusebio_ayala } }
+
 			country_leader={
 				traits={ JUNO_president_of_victory JUNO_unpopular }
 				ideology=liberalism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Trial of Allegiance" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
 			name=PAR_Eusebio_Ayala
-			portraits={
-				civilian={
-					large="GFX_Portrait_South_America_Generic_2"
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_South_America_Generic_2 } }
+
 			country_leader={
 				traits={ JUNO_president_of_victory JUNO_unpopular }
 				ideology=liberalism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	EOI_o_economist={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=PAR_justo_pastor_benitez
+			portraits={ civilian={ small=GFX_portrait_PAR_justo_pastor_benitez_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=EOI_o_economist
+				traits={ economist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						301={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=PAR_justo_pastor_benitez
+			portraits={ civilian={ small=GFX_Portrait_South_America_Generic_land_5_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=EOI_o_economist
+				traits={ economist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						301={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
 			}
 		}
 	}

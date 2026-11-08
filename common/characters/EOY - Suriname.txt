@@ -1,0 +1,40 @@
+characters={
+	#Advisors
+	EOY_d_communist_revolutionary={
+		name=HOL_anton_de_kom
+		portraits={ civilian={ small=GFX_idea_HOL_anton_de_kom } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=EOY_d_communist_revolutionary
+			traits={ communist_revolutionary }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					309={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=30
+				}
+			}
+		}
+	}
+}

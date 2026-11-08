@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = EEY_sukru_okan
+recruit_character = EEY_n_financial_expert
+random_character = { limit = { is_character = EEY_n_financial_expert } 339 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = EEY_g_naval_aviation_pioneer
+random_character = { limit = { is_character = EEY_g_naval_aviation_pioneer } 339 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

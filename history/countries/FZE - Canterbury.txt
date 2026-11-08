@@ -21,6 +21,12 @@ set_politics = {
 }
 
 recruit_character = FZE_sidney_holland
+recruit_character = FZE_n_financial_expert
+random_character = { limit = { is_character = FZE_n_financial_expert } 723 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = FZE_a_military_theorist
+random_character = { limit = { is_character = FZE_a_military_theorist } 723 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = FZE_e_air_chief_reform
+random_character = { limit = { is_character = FZE_e_air_chief_reform } 723 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

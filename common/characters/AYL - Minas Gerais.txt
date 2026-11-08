@@ -1,0 +1,47 @@
+characters={
+	#Advisors
+	AYL_g_silent_workhorse={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=BRA_benedito_valadres
+			portraits={ civilian={ small=GFX_portrait_BRA_benedito_valaderes_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=AYL_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						496={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=BRA_benedito_valadres
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_1 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=AYL_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						496={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+	}
+}

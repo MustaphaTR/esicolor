@@ -21,6 +21,12 @@ set_politics = {
 }
 
 recruit_character = FLE_hermann_goring
+recruit_character = FLE_j_air_warfare_theorist
+random_character = { limit = { is_character = FLE_j_air_warfare_theorist } 763 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = FLE_de_air_tactical_bombing
+random_character = { limit = { is_character = FLE_de_air_tactical_bombing } 763 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = FLE_dg_air_airborne
+random_character = { limit = { is_character = FLE_dg_air_airborne } 763 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

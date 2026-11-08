@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = EOI_eusebio_ayala
+recruit_character = EOI_o_economist
+random_character = { limit = { is_character = EOI_o_economist } 301 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

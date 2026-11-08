@@ -1,39 +1,77 @@
 characters={
-	BAB_alois_of_liechtenstein = {
-		instance = {
-			allowed = {
-				has_dlc = "Gotterdammerung"
-			}
+	BAB_alois_of_liechtenstein={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
 			name=AUS_alois_of_liechtenstein
 			portraits={
 				civilian={
-					large = "GFX_portrait_AUS_alois_of_liechtenstein" 
-					small = "GFX_portrait_AUS_alois_of_liechtenstein_small"
+					large=GFX_portrait_AUS_alois_of_liechtenstein
+					small=GFX_portrait_AUS_alois_of_liechtenstein_small
 				}
 			}
+
 			country_leader={
-				traits = { AUS_king_of_liechtenstein }
+				traits={ AUS_king_of_liechtenstein }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Gotterdammerung" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
 			name=AUS_alois_of_liechtenstein
-			portraits={
-				civilian={
-					large = "GFX_Portrait_Europe_Generic_6"
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_Europe_Generic_6 } }
+
 			country_leader={
-				traits = { AUS_king_of_liechtenstein }
+				traits={ AUS_king_of_liechtenstein }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
 			}
+		}
+	}
+
+	#Advisors
+	BAB_p_captain_of_industry={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=AUS_elizabet_von_gutmann
+			portraits={ civilian={ small=GFX_portrait_AUS_elisabeth_von_gutmann_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=BAB_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						848={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+			gender=female
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=AUS_elizabet_von_gutmann
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_female_europe } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=BAB_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						848={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+			gender=female
 		}
 	}
 }

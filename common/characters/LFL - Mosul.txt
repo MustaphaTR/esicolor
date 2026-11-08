@@ -1,37 +1,93 @@
 characters={
 	LFL_mahmud_barzanji={
 		name=KUR_mahmud_barzanji
-		portraits={
-			civilian={
-				large=GFX_portrait_Sheikh_Mahmud_Barzanji
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_Sheikh_Mahmud_Barzanji } }
+
 		country_leader={
 			traits={ guerilla_warfare_expert } # For DLC consistency, fits both people anyway.
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	LFL_ahmed_barzani={
 		name=IRQ_ahmed_barzani
 		portraits={
 			civilian={
-				large = GFX_portrait_IRQ_ahmed_barzani
-				small = GFX_portrait_IRQ_ahmed_barzani_small
+				large=GFX_portrait_IRQ_ahmed_barzani
+				small=GFX_portrait_IRQ_ahmed_barzani_small
 			}
 		}
+
 		country_leader={
 			traits={ guerilla_warfare_expert }
 			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		country_leader={
 			traits={ guerilla_warfare_expert }
 			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	LFL_e_popular_figurehead={
+		instance={
+			allowed={ has_dlc="Graveyard of Empires" }
+			name=IRQ_muhammad_amin_zaki
+			portraits={ civilian={ small=GFX_portrait_IRQ_muhammad_amin_zaki_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=LFL_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						676={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Graveyard of Empires" } }
+			name=IRQ_muhammad_amin_zaki
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_arab_3 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=LFL_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						676={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
 		}
 	}
 }

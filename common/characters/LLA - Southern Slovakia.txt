@@ -1,9 +1,7 @@
 characters={
-	LLA_karol_smidke = {
-		instance = {
-			allowed = {
-				has_dlc = "Peace For Our Time"
-			}
+	LLA_karol_smidke={
+		instance={
+			allowed={ has_dlc="Peace For Our Time" }
 			name=SLO_karol_smidke
 			portraits={
 				civilian={
@@ -11,28 +9,71 @@ characters={
 					small=GFX_portrait_SLO_karol_smidke_small
 				}
 			}
+
 			country_leader={
 				traits={ veteran_communist }
 				ideology=stalinism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Peace For Our Time" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Peace For Our Time" } }
 			name=SLO_karol_smidke
-			portraits={
-				civilian={
-					large="GFX_Portrait_Soviet_Generic_1"
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_Soviet_Generic_1 } }
+
 			country_leader={
 				traits={ veteran_communist }
 				ideology=stalinism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	LLA_e_popular_figurehead={
+		name=SLO_frano_kral
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_5 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=LLA_e_popular_figurehead
+			traits={ popular_figurehead }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					664={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					has_stability > 0.35
+					has_stability < 0.5
+
+					add=9
+				}
+			}
+		}
+	}
+	LLA_db_air_bomber_interception={
+		name=SLO_cyril_kuchta
+		portraits={ army={ small=GFX_idea_generic_air_europe_1 } }
+
+		advisor={
+			slot=high_command
+			idea_token=LLA_db_air_bomber_interception
+			ledger=air
+			cost=100
+			traits={ air_bomber_interception_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					664={ is_core_of=ROOT }
+				}
 			}
 		}
 	}

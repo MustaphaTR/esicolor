@@ -1,0 +1,22 @@
+characters={
+	#Advisors
+	BOF_g_navy_chief_old_guard={
+		name=POL_xawery_czernicki
+		portraits={ army={ small=GFX_idea_POL_xawery_czernicki } }
+
+		advisor={
+			slot=navy_chief
+			idea_token=BOF_g_navy_chief_old_guard
+			cost=50
+			traits={ navy_chief_old_guard }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					807={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+}

@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = CBZ_sandro_pertini
+recruit_character = CBZ_g_silent_workhorse
+random_character = { limit = { is_character = CBZ_g_silent_workhorse } 849 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = CBZ_o_economist
+random_character = { limit = { is_character = CBZ_o_economist } 849 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

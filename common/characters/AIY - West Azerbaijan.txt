@@ -1,35 +1,60 @@
 characters={
 	AIY_qazi_muhammad = {
 		instance = {
-			allowed = {
-				has_dlc = "Graveyard of Empires"
-			}
+			allowed = { has_dlc = "Graveyard of Empires" }
 			name=KUR_qazi_muhamad
-			portraits={
-				civilian={
-					large=GFX_portrait_PER_qazi_muhammad
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_PER_qazi_muhammad } }
+
 			country_leader={
 				ideology=marxism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
 		instance = {
-			allowed = {
-				NOT = { has_dlc = "Graveyard of Empires" }
-			}
+			allowed = { NOT = { has_dlc = "Graveyard of Empires" } }
 			name=KUR_qazi_muhamad
-			portraits={
-				civilian={
-					large=GFX_portrait_Qazi_Muhammad
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_Qazi_Muhammad } }
+
 			country_leader={
 				ideology=marxism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	AIY_d_communist_revolutionary={
+		name=KUR_haji_baba
+		portraits={ civilian={ small=GFX_idea_KUR_haji_baba } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=AIY_d_communist_revolutionary
+			traits={ communist_revolutionary }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					419={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=30
+				}
 			}
 		}
 	}

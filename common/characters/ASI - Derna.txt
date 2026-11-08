@@ -7,11 +7,31 @@ characters={
 				small = GFX_portrait_ITA_italo_balbo_small
 			}
 		}
+
 		country_leader={
 			traits={ aviation_hero }
 			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	ASI_d_air_chief_safety={
+		name=ITA_rino_corso_fougier
+		portraits={ army={ small=GFX_idea_rino_corso_fougier } }
+
+		advisor={
+			slot=air_chief
+			idea_token=ASI_d_air_chief_safety
+			cost=50
+			traits={ air_chief_safety_1 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					451={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

@@ -1,0 +1,40 @@
+characters={
+	#Advisors
+	ESZ_c_fascist_demagogue={
+		name=KUR_kamuran_ali_bedirxan
+		portraits={ civilian={ small=GFX_idea_KUR_kamuran_ali_bedirxan } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=ESZ_c_fascist_demagogue
+			traits={ fascist_demagogue }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=fascism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					352={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_fascism
+					NOT={ has_government=fascism }
+
+					add=30
+				}
+			}
+		}
+	}
+}

@@ -1,39 +1,51 @@
 characters={
-	LFS_yusuf_salman_yusuf = {
-		instance = {
-			allowed = {
-				has_dlc = "Graveyard of Empires"
-			}
+	LFS_yusuf_salman_yusuf={
+		instance={
+			allowed={ has_dlc="Graveyard of Empires" }
 			name=IRQ_yusuf_salman_yusuf
 			portraits={
 				civilian={
-					large = GFX_portrait_IRQ_yusuf_salman_yusuf
-					small = GFX_portrait_IRQ_yusuf_salman_yusuf_small
+					large=GFX_portrait_IRQ_yusuf_salman_yusuf
+					small=GFX_portrait_IRQ_yusuf_salman_yusuf_small
 				}
 			}
+
 			country_leader={
 				traits={ IRQ_comrade_fahd }
 				ideology=leninism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Graveyard of Empires" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Graveyard of Empires" } }
 			name=IRQ_yusuf_salman_yusuf
-			portraits={
-				civilian={
-					large="GFX_portrait_Yusuf_Salman_Yusuf"
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_Yusuf_Salman_Yusuf } }
+
 			country_leader={
 				traits={ IRQ_comrade_fahd }
 				ideology=leninism
-				expire="1965.1.1.1"
-				id=-1
 			}
+		}
+	}
+
+	#Advisors
+	LFS_m_smooth_talking_charmer={
+		name=IRQ_husain_al_rahhal
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_arab_2 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=LFS_m_smooth_talking_charmer
+			traits={ smooth_talking_charmer }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					675={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
 		}
 	}
 }

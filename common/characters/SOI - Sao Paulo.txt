@@ -1,38 +1,79 @@
 characters={
-	SOI_armando_de_sales_oliveira = {
-		instance = {
-			allowed = {
-				has_dlc = "Trial of Allegiance"
-			}
+	SOI_armando_de_sales_oliveira={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
 			name=BRA_armando_de_sales_oliveira
 			portraits={
 				civilian={
-					large="GFX_portrait_BRA_armando_sales_oliveria"
-					small="GFX_portrait_BRA_armando_sales_oliveria_small"
+					large=GFX_portrait_BRA_armando_sales_oliveria
+					small=GFX_portrait_BRA_armando_sales_oliveria_small
 				}
 			}
+
 			country_leader={
 				traits={ BRA_democratic_engineer }
 				ideology=liberalism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Trial of Allegiance" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
 			name=BRA_armando_de_sales_oliveira
-			portraits={
-				civilian={
-					large="GFX_Portrait_South_America_Generic_2"
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_South_America_Generic_2 } }
+
 			country_leader={
 				traits={ BRA_democratic_engineer }
 				ideology=liberalism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	SOI_i_backroom_backstabber={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=BRA_washington_luis_pereira
+			portraits={
+				civilian={
+					large=GFX_portrait_BRA_washington_luis
+					small=GFX_portrait_BRA_washington_luis_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=SOI_i_backroom_backstabber
+				traits={ backroom_backstabber }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						501={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=BRA_washington_luis_pereira
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_3 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=SOI_i_backroom_backstabber
+				traits={ backroom_backstabber }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						501={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
 			}
 		}
 	}

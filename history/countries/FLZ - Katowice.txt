@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = FLZ_alexander_hochberg
+recruit_character = FLZ_ae_army_armored
+random_character = { limit = { is_character = FLZ_ae_army_armored } 762 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

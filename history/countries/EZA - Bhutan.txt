@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = EZA_jigme_wangchuck
+recruit_character = EZA_i_backroom_backstabber
+random_character = { limit = { is_character = EZA_i_backroom_backstabber } 324 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = EZA_b_army_chief_defensive
+random_character = { limit = { is_character = EZA_b_army_chief_defensive } 324 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes
