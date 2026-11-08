@@ -1,16 +1,200 @@
 characters={
 	YFA_bela_kun={
 		name=HUN_bela_kun
-		portraits={
-			civilian={
-				large=GFX_Portrait_hungary_bela_kun
+		portraits={ civilian={ large=GFX_Portrait_hungary_bela_kun } }
+
+		country_leader={
+			traits={ HUN_the_hungarian_lenin }
+			ideology=marxism
+		}
+	}
+
+	#Advisors
+	YFA_d_communist_revolutionary={
+		name=HUN_laszlo_rajk
+		portraits={ civilian={ small=GFX_idea_HUN_laszlo_rajk } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=YFA_d_communist_revolutionary
+			traits={ communist_revolutionary }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					974={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=30
+				}
 			}
 		}
-		country_leader={
-			traits = { HUN_the_hungarian_lenin }
-			ideology=marxism
-			expire="1965.1.1.1"
-			id=-1
+	}
+	YFA_e_popular_figurehead={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_janos_kadar
+			portraits={ civilian={ small=GFX_portrait_HUN_janos_kadar_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFA_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						974={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_janos_kadar
+			portraits={ civilian={ small=GFX_idea_generic_communist_revolutionary_western_european_2d } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFA_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						974={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+	}
+	YFA_n_financial_expert={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_sandor_garbai
+			portraits={ civilian={ small=GFX_portrait_HUN_sandor_garbai_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFA_n_financial_expert
+				traits={ financial_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						974={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_sandor_garbai
+			portraits={ civilian={ small=GFX_idea_generic_communist_revolutionary_southamerican_2d } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFA_n_financial_expert
+				traits={ financial_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						974={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	YFA_p_captain_of_industry={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_jozsef_kelen
+			portraits={ civilian={ small=GFX_portrait_HUN_jozsef_kelen_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFA_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						974={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_jozsef_kelen
+			portraits={ civilian={ small=GFX_portrait_europe_generic_communism_1_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFA_p_captain_of_industry
+				traits={ captain_of_industry }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						974={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
 		}
 	}
 }

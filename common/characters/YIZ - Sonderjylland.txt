@@ -1,9 +1,7 @@
 characters={
-	YIZ_frits_clausen = {
-		instance = {
-			allowed = {
-				has_dlc = "Arms Against Tyranny"
-			}
+	YIZ_frits_clausen={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
 			name=DEN_frits_clausen
 			portraits={
 				civilian={
@@ -11,28 +9,175 @@ characters={
 					small=GFX_portrait_DEN_frits_clausen_small
 				}
 			}
+
 			country_leader={
 				traits={ DEN_fascist_populist }
 				ideology=nazism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Arms Against Tyranny" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
 			name=DEN_frits_clausen
-			portraits={
-				civilian={
-					large="gfx/leaders/Europe/portrait_europe_generic_5.dds"
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_europe_generic_5 } }
+
 			country_leader={
 				traits={ DEN_fascist_populist }
 				ideology=nazism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	YIZ_h_prince_of_terror={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=DEN_cay_lembcke
+			portraits={
+				civilian={
+					large=GFX_portrait_DEN_cay_lembcke
+					small=GFX_portrait_DEN_cay_lembcke_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=YIZ_h_prince_of_terror
+				traits={ prince_of_terror }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						912={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						any_owned_state={ resistance > 50 }
+
+						add=9
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=DEN_cay_lembcke
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_6 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YIZ_h_prince_of_terror
+				traits={ prince_of_terror }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						912={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						any_owned_state={ resistance > 50 }
+
+						add=9
+					}
+				}
+			}
+		}
+	}
+	YIZ_ab_army_artillery={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=DEN_hans_a_rolsted
+			portraits={ army={ small=GFX_portrait_DEN_hans_a_rolsted_small } }
+
+			advisor={
+				slot=high_command
+				idea_token=YIZ_ab_army_artillery
+				ledger=army
+				cost=100
+				traits={ army_artillery_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						912={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=DEN_hans_a_rolsted
+			portraits={ army={ small=GFX_Portrait_Germany_Generic_land_6_small } }
+
+			advisor={
+				slot=high_command
+				idea_token=YIZ_ab_army_artillery
+				ledger=army
+				cost=100
+				traits={ army_artillery_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						912={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+	}
+	YIZ_dh_air_air_combat_training={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=DEN_poul_sommer
+			portraits={ army={ small=GFX_portrait_DEN_poul_sommer_small } }
+
+			advisor={
+				slot=high_command
+				idea_token=YIZ_dh_air_air_combat_training
+				ledger=air
+				cost=100
+				traits={ air_air_combat_training_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						912={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=DEN_poul_sommer
+			portraits={ army={ small=GFX_Portrait_Germany_Generic_navy_2_small } }
+
+			advisor={
+				slot=high_command
+				idea_token=YIZ_dh_air_air_combat_training
+				ledger=air
+				cost=100
+				traits={ air_air_combat_training_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						912={ is_core_of=ROOT }
+					}
+				}
 			}
 		}
 	}

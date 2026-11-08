@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = NFY_elsie_farrelly
+recruit_character = NFY_d_communist_revolutionary
+random_character = { limit = { is_character = NFY_d_communist_revolutionary } 1079 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = NFY_o_economist
+random_character = { limit = { is_character = NFY_o_economist } 1079 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

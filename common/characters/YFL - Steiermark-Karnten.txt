@@ -1,16 +1,248 @@
 characters={
 	YFL_karl_renner={
 		name=AUS_karl_renner
-		portraits={
-			civilian={
-				large=GFX_portrait_AUS_karl_renner
+		portraits={ civilian={ large=GFX_portrait_AUS_karl_renner } }
+
+		country_leader={
+			traits={ resolute_social_democrat }
+			ideology=socialism
+		}
+	}
+
+	#Advisors
+	YFL_d_communist_revolutionary={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=AUS_marianne_pollak
+			portraits={ civilian={ small=GFX_portrait_AUS_marianne_pollak_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFL_d_communist_revolutionary
+				traits={ communist_revolutionary }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						976={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=30
+					}
+				}
+			}
+			gender=female
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=AUS_marianne_pollak
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_female_europe } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFL_d_communist_revolutionary
+				traits={ communist_revolutionary }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=communism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						976={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_communism
+						NOT={ has_government=communism }
+
+						add=30
+					}
+				}
+			}
+			gender=female
+		}
+	}
+	YFL_e_popular_figurehead={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=AUS_bruno_kreisky
+			portraits={ civilian={ small=GFX_portrait_AUS_bruno_kreisky_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFL_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						976={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
 			}
 		}
-		country_leader={
-			traits = { resolute_social_democrat }
-			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=AUS_bruno_kreisky
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_3 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFL_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						976={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+	}
+	YFL_g_silent_workhorse={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=AUS_adolf_scharf
+			portraits={ civilian={ small=GFX_portrait_AUS_adolf_scharf_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFL_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						976={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=AUS_adolf_scharf
+			portraits={ civilian={ small=GFX_Portrait_europe_generic_7_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFL_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						976={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+	}
+	YFL_bd_army_concealment={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=AUS_theodor_korner
+			portraits={
+				army={
+					large=GFX_portrait_AUS_theodor_korner
+					small=GFX_portrait_AUS_theodor_korner_small
+				}
+			}
+
+			advisor={
+				slot=high_command
+				idea_token=YFL_bd_army_concealment
+				ledger=army
+				cost=50
+				traits={ army_concealment_1 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						976={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=AUS_theodor_korner
+			portraits={ army={ small=GFX_Portrait_Germany_Generic_land_9_small } }
+
+			advisor={
+				slot=high_command
+				idea_token=YFL_bd_army_concealment
+				ledger=army
+				cost=50
+				traits={ army_concealment_1 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						976={ is_core_of=ROOT }
+					}
+				}
+			}
 		}
 	}
 }

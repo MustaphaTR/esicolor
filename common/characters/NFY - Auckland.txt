@@ -1,17 +1,77 @@
 characters={
 	NFY_elsie_farrelly={
 		name=NZL_elsie_farrelly
-		portraits={
-			civilian={
-				large=GFX_NZL_elsie_farrelly
-			}
-		}
+		portraits={ civilian={ large=GFX_NZL_elsie_farrelly } }
+
 		country_leader={
 			traits={ ARG_socialist_feminist }
 			ideology=marxism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		gender = female
+	}
+
+	#Advisors
+	NFY_d_communist_revolutionary={
+		name=NZL_alexander_galbraith
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_2 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=NFY_d_communist_revolutionary
+			traits={ communist_revolutionary }
+
+			available={
+				if={
+					limit={
+						has_focus_tree=horn_of_africa_tree
+						NOT={ has_global_flag=custom_advisors_only } # Adjusted trait don't give access to ideology changing.
+					}
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					1079={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_communism
+					NOT={
+						has_government=communism
+						has_global_flag=custom_advisors_only
+					}
+
+					add=30
+				}
+			}
+		}
+	}
+	NFY_o_economist={
+		name=NZL_vic_wilcox
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_3 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=NFY_o_economist
+			traits={ economist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					1079={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
 	}
 }

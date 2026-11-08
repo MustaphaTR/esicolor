@@ -21,6 +21,14 @@ set_politics = {
 }
 
 recruit_character = YFE_franz_anton_bach
+recruit_character = YFE_c_fascist_demagogue
+random_character = { limit = { is_character = YFE_c_fascist_demagogue } 973 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YFE_n_financial_expert
+random_character = { limit = { is_character = YFE_n_financial_expert } 973 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YFE_ba_army_entrenchment
+random_character = { limit = { is_character = YFE_ba_army_entrenchment } 973 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YFE_bc_army_regrouping
+random_character = { limit = { is_character = YFE_bc_army_regrouping } 973 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

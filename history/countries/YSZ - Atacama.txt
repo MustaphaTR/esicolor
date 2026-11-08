@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = YSZ_jorge_gonzalez_von_marees
+recruit_character = YSZ_c_fascist_demagogue
+random_character = { limit = { is_character = YSZ_c_fascist_demagogue } 952 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YSZ_o_economist
+random_character = { limit = { is_character = YSZ_o_economist } 952 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

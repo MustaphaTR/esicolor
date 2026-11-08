@@ -1,37 +1,69 @@
 characters={
-	YAS_alfredo_baldomir_ferrari = {
-		instance = {
-			allowed = {
-				has_dlc = "Trial of Allegiance"
-			}
+	YAS_alfredo_baldomir_ferrari={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
 			name=URG_alfredo_baldomir_ferrari
-			portraits={
-				civilian={
-					large=GFX_portrait_URG_alfredo_baldomir_ferrari
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_URG_alfredo_baldomir_ferrari } }
+
 			country_leader={
 				traits={ pro_allied_politician }
 				ideology=liberalism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Trial of Allegiance" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
 			name=URG_alfredo_baldomir_ferrari
-			portraits={
-				civilian={
-					large=GFX_portrait_Alfredo_Baldomir_Ferrari
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_Alfredo_Baldomir_Ferrari } }
+
 			country_leader={
 				traits={ pro_allied_politician }
 				ideology=liberalism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	YAS_n_financial_expert={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=URG_cesar_charlone
+			portraits={ civilian={ small=GFX_portrait_URG_cesar_charlone_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YAS_n_financial_expert
+				traits={ financial_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						945={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=URG_cesar_charlone
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_2 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YAS_n_financial_expert
+				traits={ financial_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						945={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
 			}
 		}
 	}

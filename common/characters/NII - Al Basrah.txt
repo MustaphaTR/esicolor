@@ -1,16 +1,124 @@
 characters={
 	NII_rashid_ali_algaylani={
 		name=IRQ_rashid_ali_algaylani
-		portraits={
-			civilian={
-				large="GFX_portrait_iraq_rashid_al_gaylani"
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_iraq_rashid_al_gaylani } }
+
 		country_leader={
 			traits={ IRQ_arab_fascist_politician }
 			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	NII_g_silent_workhorse={
+		instance={
+			allowed={ has_dlc="Graveyard of Empires" }
+			name=IRQ_hikmat_suleiman
+			portraits={
+				civilian={
+					large=GFX_portrait_IRQ_hikmat_suleiman
+					small=GFX_portrait_IRQ_hikmat_suleiman_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=NII_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						1011={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Graveyard of Empires" } }
+			name=IRQ_hikmat_suleiman
+			portraits={ civilian={ small=GFX_idea_generic_fascist_demagogue_middle_eastern_2d } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=NII_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						1011={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+	}
+	NII_e_popular_figurehead={
+		instance={
+			allowed={ has_dlc="Graveyard of Empires" }
+			name=IRQ_sharaf_bin_rajeh
+			portraits={ civilian={ small=GFX_portrait_IRQ_sharaf_bin_rajeh_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=NII_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						1011={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Graveyard of Empires" } }
+			name=IRQ_sharaf_bin_rajeh
+			portraits={ civilian={ small=GFX_idea_generic_army_arab_2 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=NII_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						1011={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
 		}
 	}
 }

@@ -21,6 +21,14 @@ set_politics = {
 }
 
 recruit_character = YFL_karl_renner
+recruit_character = YFL_d_communist_revolutionary
+random_character = { limit = { is_character = YFL_d_communist_revolutionary } 976 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YFL_e_popular_figurehead
+random_character = { limit = { is_character = YFL_e_popular_figurehead } 976 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YFL_g_silent_workhorse
+random_character = { limit = { is_character = YFL_g_silent_workhorse } 976 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YFL_bd_army_concealment
+random_character = { limit = { is_character = YFL_bd_army_concealment } 976 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

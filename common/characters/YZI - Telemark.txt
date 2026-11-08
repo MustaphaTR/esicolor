@@ -7,11 +7,328 @@ characters={
 				small=GFX_portrait_NOR_vidkun_quisling_small
 			}
 		}
+
 		country_leader={
 			traits={ NOR_fascist_lackey }
 			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	YZI_e_popular_figurehead={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=NOR_joakim_lehmkuhl
+			portraits={ civilian={ small=GFX_portrait_NOR_joakim_lehmkuhl_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YZI_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						921={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=NOR_joakim_lehmkuhl
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_6 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YZI_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						921={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+	}
+	YZI_f_propaganda_expert={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=NOR_rolf_fuglesang
+			portraits={ civilian={ small=GFX_portrait_NOR_rolf_fuglesang_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YZI_f_propaganda_expert
+				traits={ propaganda_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						921={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_war_support > 0.4
+						has_war_support < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=NOR_rolf_fuglesang
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_4 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YZI_f_propaganda_expert
+				traits={ propaganda_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						921={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_war_support > 0.4
+						has_war_support < 0.5
+
+						add=9
+					}
+				}
+			}
+		}
+	}
+	YZI_h_prince_of_terror={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=NOR_sverre_riisnaes
+			portraits={ civilian={ small=GFX_portrait_NOR_sverre_riisnaes_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YZI_h_prince_of_terror
+				traits={ prince_of_terror }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						921={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						any_owned_state={ resistance > 50 }
+
+						add=9
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=NOR_sverre_riisnaes
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_2 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YZI_h_prince_of_terror
+				traits={ prince_of_terror }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						921={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						any_owned_state={ resistance > 50 }
+
+						add=9
+					}
+				}
+			}
+		}
+	}
+	YZI_n_financial_expert={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=NOR_ragnar_skancke
+			portraits={ civilian={ small=GFX_portrait_NOR_ragnar_skancke_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YZI_n_financial_expert
+				traits={ financial_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						921={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=NOR_ragnar_skancke
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_3 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YZI_n_financial_expert
+				traits={ financial_expert }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						921={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	YZI_t_quartermaster_general={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=NOR_eivind_blehr
+			portraits={ civilian={ small=GFX_portrait_NOR_eivind_blehr_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YZI_t_quartermaster_general
+				traits={ quartermaster_general }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						921={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=NOR_eivind_blehr
+			portraits={ civilian={ small=GFX_idea_generic_fascist_demagogue_western_european_2d } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YZI_t_quartermaster_general
+				traits={ quartermaster_general }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						921={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+		}
+	}
+	YZI_a_military_theorist={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=NOR_konrad_sundlo
+			portraits={ army={ small=GFX_portrait_NOR_konrad_sundlo_small } }
+
+			advisor={
+				slot=theorist
+				idea_token=YZI_a_military_theorist
+				ledger=army
+				cost=100
+				traits={ military_theorist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						921={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=NOR_konrad_sundlo
+			portraits={ army={ small=GFX_idea_generic_army_europe_2 } }
+
+			advisor={
+				slot=theorist
+				idea_token=YZI_a_military_theorist
+				ledger=army
+				cost=100
+				traits={ military_theorist }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						921={ is_core_of=ROOT }
+					}
+				}
+			}
 		}
 	}
 }

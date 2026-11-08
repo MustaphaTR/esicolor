@@ -3,15 +3,212 @@ characters={
 		name=HUN_franz_anton_bach
 		portraits={
 			civilian={
-				large = GFX_portrait_HUN_franz_anton_bach
-				small = GFX_portrait_HUN_franz_anton_bach_small
+				large=GFX_portrait_HUN_franz_anton_bach
+				small=GFX_portrait_HUN_franz_anton_bach_small
 			}
 		}
+
 		country_leader={
-			traits = { nazi_sympathizer volksgruppenfurher_der_volksbund }
+			traits={ nazi_sympathizer volksgruppenfurher_der_volksbund }
 			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	YFE_c_fascist_demagogue={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_fidel_palffy
+			portraits={ civilian={ small=GFX_portrait_HUN_fidel_palffy_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFE_c_fascist_demagogue
+				traits={ fascist_demagogue }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=fascism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						973={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_fascism
+						NOT={ has_government=fascism }
+
+						add=30
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_fidel_palffy
+			portraits={ civilian={ small=GFX_Portrait_Europe_Generic_4_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFE_c_fascist_demagogue
+				traits={ fascist_demagogue }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=fascism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						973={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_fascism
+						NOT={ has_government=fascism }
+
+						add=30
+					}
+				}
+			}
+		}
+	}
+	YFE_n_financial_expert={
+		name=HUN_lajos_remenyi_schneller
+		portraits={ civilian={ small=GFX_idea_HUN_lajos_remenyi_schneller } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=YFE_n_financial_expert
+			traits={ financial_expert }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					973={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
+		}
+	}
+	YFE_ba_army_entrenchment={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_henrik_werth
+			portraits={
+				army={
+					large=GFX_portrait_HUN_henrik_werth
+					small=GFX_portrait_HUN_henrik_werth_small
+				}
+			}
+
+			advisor={
+				slot=high_command
+				idea_token=YFE_ba_army_entrenchment
+				ledger=army
+				cost=100
+				traits={ army_entrenchment_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						973={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_henrik_werth
+			portraits={ army={ small=GFX_idea_HUN_henrik_werth } }
+
+			advisor={
+				slot=high_command
+				idea_token=YFE_ba_army_entrenchment
+				ledger=army
+				cost=100
+				traits={ army_entrenchment_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						973={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+	}
+	YFE_bc_army_regrouping={
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_dezso_laszlo
+			portraits={
+				army={
+					large=GFX_portrait_HUN_dezso_laszlo
+					small=GFX_portrait_HUN_dezso_laszlo_small
+				}
+			}
+
+			advisor={
+				slot=high_command
+				idea_token=YFE_bc_army_regrouping
+				ledger=army
+				cost=100
+				traits={ army_regrouping_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						973={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_dezso_laszlo
+			portraits={ army={ small=GFX_idea_HUN_dezso_laszlo } }
+
+			advisor={
+				slot=high_command
+				idea_token=YFE_bc_army_regrouping
+				ledger=army
+				cost=100
+				traits={ army_regrouping_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						973={ is_core_of=ROOT }
+					}
+				}
+			}
 		}
 	}
 }

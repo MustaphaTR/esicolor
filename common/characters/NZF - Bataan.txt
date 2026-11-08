@@ -1,9 +1,7 @@
 characters={
 	NZF_cristanto_evangelista = {
 		instance = {
-			allowed = {
-				has_dlc = "No Compromise, No Surrender"
-			}
+			allowed = { has_dlc = "No Compromise, No Surrender" }
 			name=PHI_cristanto_evangelista
 			portraits={
 				civilian={
@@ -11,29 +9,43 @@ characters={
 					small=GFX_portrait_PHI_cristanto_evangelista_small
 				}
 			}
+
 			country_leader={
 				traits={ PHI_radical_leader }
 				ideology=marxism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
 		instance = {
-			allowed = {
-				NOT = { has_dlc = "No Compromise, No Surrender" }
-			}
+			allowed = { NOT = { has_dlc = "No Compromise, No Surrender" } }
 			name=PHI_cristanto_evangelista
-			portraits={
-				civilian={
-					large=GFX_Portrait_Asia_Generic_1
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_Asia_Generic_1 } }
+
 			country_leader={
 				traits={ PHI_radical_leader }
 				ideology=marxism
-				expire="1965.1.1.1"
-				id=-1
 			}
+		}
+	}
+
+	#Advisors
+	NZF_u_coconut_scientist={
+		name=PHI_vicente_lava
+		portraits={ civilian={ small=GFX_portrait_PHI_vicente_lava_small } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=NZF_u_coconut_scientist
+			traits={ PHI_coconut_scientist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					1027={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
 		}
 	}
 }

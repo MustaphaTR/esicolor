@@ -7,10 +7,107 @@
 				small=GFX_portrait_CZE_sergej_vojcechovsky_small
 			}
 		}
+
 		country_leader={
 			ideology=oligarchism
-			expire="1965.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	YFZ_s_fortification_engineer={
+		instance={
+			allowed={ has_dlc="Peace For Our Time" }
+			name=CZE_karel_husarek
+			portraits={
+				civilian={
+					large=GFX_portrait_CZE_karel_husarek
+					small=GFX_portrait_CZE_karel_husarek_military_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFZ_s_fortification_engineer
+				traits={ fortification_engineer }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						972={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+			advisor={
+				slot=army_chief
+				idea_token=YFZ_j_army_chief_old_guard
+				cost=50
+				traits={ army_chief_old_guard }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						972={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Peace For Our Time" } }
+			name=CZE_karel_husarek
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_6 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YFZ_s_fortification_engineer
+				traits={ fortification_engineer }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						972={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=1 }
+			}
+			advisor={
+				slot=army_chief
+				idea_token=YFZ_j_army_chief_old_guard
+				cost=50
+				traits={ army_chief_old_guard }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						972={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+	}
+	YFZ_d_air_chief_safety={
+		name=ITA_rino_corso_fougier
+		portraits={ army={ small=GFX_idea_CZE_karel_janousek } }
+
+		advisor={
+			slot=air_chief
+			idea_token=YFZ_d_air_chief_safety
+			cost=100
+			traits={ air_chief_safety_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					972={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

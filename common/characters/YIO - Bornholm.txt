@@ -1,37 +1,72 @@
 characters={
-	YIO_christian_x = {
-		instance = {
-			allowed = {
-				has_dlc = "Arms Against Tyranny"
-			}
+	YIO_christian_x={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
 			name=DEN_christian_x
-			portraits={
-				civilian={
-					large=GFX_portrait_DEN_christian_x
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_DEN_christian_x } }
+
 			country_leader={
 				traits={ DEN_the_king }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Arms Against Tyranny" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
 			name=DEN_christian_x
-			portraits={
-				civilian={
-					large="gfx/leaders/Europe/portrait_europe_generic_4.dds"
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_europe_generic_4 } }
+
 			country_leader={
 				traits={ DEN_the_king }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	YIO_c_navy_chief_decisive_battle={
+		instance={
+			allowed={ has_dlc="Arms Against Tyranny" }
+			name=DEN_prince_frederik
+			portraits={
+				army={
+					large=GFX_portrait_DEN_frederik_ix
+					small=GFX_portrait_DEN_frederik_ix_small
+				}
+			}
+
+			advisor={
+				slot=navy_chief
+				idea_token=YIO_c_navy_chief_decisive_battle
+				cost=100
+				traits={ navy_chief_decisive_battle_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						910={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Arms Against Tyranny" } }
+			name=DEN_prince_frederik
+			portraits={ army={ small=GFX_idea_generic_air_europe_2 } }
+
+			advisor={
+				slot=navy_chief
+				idea_token=YIO_c_navy_chief_decisive_battle
+				cost=100
+				traits={ navy_chief_decisive_battle_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						910={ is_core_of=ROOT }
+					}
+				}
 			}
 		}
 	}

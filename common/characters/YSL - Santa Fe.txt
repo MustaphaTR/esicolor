@@ -1,9 +1,7 @@
 characters={
-	YSL_enrique_mosca = {
-		instance = {
-			allowed = {
-				has_dlc = "Trial of Allegiance"
-			}
+	YSL_enrique_mosca={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
 			name=ARG_enrique_mosca
 			portraits={
 				civilian={
@@ -11,28 +9,149 @@ characters={
 					small=GFX_portrait_ARG_enrique_mosca_small
 				}
 			}
+
 			country_leader={
 				traits={ ARG_prominent_centrist }
 				ideology=socialism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Trial of Allegiance" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
 			name=ARG_enrique_mosca
-			portraits={
-				civilian={
-					large="GFX_Portrait_South_America_Generic_2"
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_South_America_Generic_2 } }
+
 			country_leader={
 				traits={ ARG_prominent_centrist }
 				ideology=socialism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	YSL_b_democratic_reformer={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=ARG_marcelo_t_de_alvear
+			portraits={
+				civilian={
+					large=GFX_portrait_ARG_marcelo_t_de_alvear
+					small=GFX_portrait_ARG_marcelo_t_de_alvear_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSL_b_democratic_reformer
+				traits={ democratic_reformer }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=democratic
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						956={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_democratic
+						NOT={ has_government=democratic }
+
+						add=30
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=ARG_marcelo_t_de_alvear
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_2 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSL_b_democratic_reformer
+				traits={ democratic_reformer }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=democratic
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						956={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_democratic
+						NOT={ has_government=democratic }
+
+						add=30
+					}
+				}
+			}
+		}
+	}
+	YSL_l_compassionate_gentleman={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=YSL_honorio_pueyrredon
+			portraits={ civilian={ small=GFX_portrait_ARG_honorio_pueyrredon_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSL_l_compassionate_gentleman
+				traits={ compassionate_gentleman }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						956={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=YSL_honorio_pueyrredon
+			portraits={ civilian={ small=GFX_Portrait_South_America_Generic_3_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSL_l_compassionate_gentleman
+				traits={ compassionate_gentleman }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						956={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
 			}
 		}
 	}

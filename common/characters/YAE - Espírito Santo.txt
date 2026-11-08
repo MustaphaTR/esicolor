@@ -1,43 +1,117 @@
 characters={
-	YAE_pedro_henrique = {
-		instance = {
-			allowed = {
-				OR = {
-					has_dlc = "La Resistance"
-					has_dlc = "Trial of Allegiance"
+	YAE_pedro_henrique={
+		instance={
+			allowed={
+				OR={
+					has_dlc="La Resistance"
+					has_dlc="Trial of Allegiance"
 				}
 			}
 			name=BRA_pedro_henrique
-			portraits={
-				civilian={
-					large="GFX_portrait_BRA_pedro_henrique"
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_BRA_pedro_henrique } }
+
 			country_leader={
 				traits={ BRA_politically_educated }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "La Resistance"
-					has_dlc = "Trial of Allegiance"
+		instance={
+			allowed={
+				NOT={
+					has_dlc="La Resistance"
+					has_dlc="Trial of Allegiance"
 				}
 			}
 			name=BRA_pedro_henrique
-			portraits={
-				civilian={
-					large="GFX_Portrait_South_America_Generic_navy_2"
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_South_America_Generic_navy_2 } }
 			country_leader={
 				traits={ BRA_politically_educated }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	YAE_a_staunch_monarchist={
+		instance={
+			allowed={ has_dlc="La Resistance" }
+			name=BRA_arlindo_veiga_dos_santos
+			portraits={
+				civilian={
+					large=GFX_portrait_BRA_arlindo_veiga_dos_santos
+					small=GFX_idea_BRA_arlindo_veiga_dos_santos
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=YAE_a_staunch_monarchist
+				traits={ staunch_monarchist }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=neutrality
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						943={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_neutrality
+						NOT={ has_government=neutrality }
+
+						add=30
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="La Resistance" } }
+			name=BRA_arlindo_veiga_dos_santos
+			portraits={ civilian={ small=GFX_idea_generic_air_africa_2 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YAE_a_staunch_monarchist
+				traits={ staunch_monarchist }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=neutrality
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						943={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_neutrality
+						NOT={ has_government=neutrality }
+
+						add=30
+					}
+				}
 			}
 		}
 	}

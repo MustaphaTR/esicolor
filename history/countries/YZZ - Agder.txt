@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = YZZ_peder_anker_wedel_jarlsberg
+recruit_character = YZZ_s_fortification_engineer
+random_character = { limit = { is_character = YZZ_s_fortification_engineer } 922 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

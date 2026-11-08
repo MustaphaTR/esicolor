@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = YAL_arnulf_fuhrmann
+recruit_character = YAL_c_fascist_demagogue
+random_character = { limit = { is_character = YAL_c_fascist_demagogue } 946 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

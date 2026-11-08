@@ -21,6 +21,14 @@ set_politics = {
 }
 
 recruit_character = YFA_bela_kun
+recruit_character = YFA_d_communist_revolutionary
+random_character = { limit = { is_character = YFA_d_communist_revolutionary } 974 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YFA_e_popular_figurehead
+random_character = { limit = { is_character = YFA_e_popular_figurehead } 974 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YFA_n_financial_expert
+random_character = { limit = { is_character = YFA_n_financial_expert } 974 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YFA_p_captain_of_industry
+random_character = { limit = { is_character = YFA_p_captain_of_industry } 974 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

@@ -469,7 +469,7 @@ ZBZ_task_force_ship_organization = {
 			has_global_flag = custom_designer_traits_enabled
 			has_global_flag = custom_advisors_only
 		}
-		available = { FROM = { event_target:PHI_vicente_lava = { is_hired_as_advisor = yes } } }
+		available = { FROM = { has_idea_with_trait = PHI_coconut_scientist }
 
 		relative_position_id = PHI_mio_trait_ethanol_fuel_adaptations
 		any_parent = { PHI_mio_trait_ethanol_fuel_adaptations }
@@ -2352,7 +2352,7 @@ ZBZ_motorized_mechanized_organization = {
 			has_global_flag = custom_designer_traits_enabled
 			has_global_flag = custom_advisors_only
 		}
-		available = { FROM = { event_target:PHI_vicente_lava = { is_hired_as_advisor = yes } } }
+		available = { FROM = { has_idea_with_trait = PHI_coconut_scientist }
 
 		relative_position_id = PHI_mio_trait_ethanol_fuel_adaptations
 		any_parent = { PHI_mio_trait_ethanol_fuel_adaptations }
@@ -2428,7 +2428,7 @@ ZBZ_armored_car_organization = {
 			has_global_flag = custom_designer_traits_enabled
 			has_global_flag = custom_advisors_only
 		}
-		available = { FROM = { event_target:PHI_vicente_lava = { is_hired_as_advisor = yes } } }
+		available = { FROM = { has_idea_with_trait = PHI_coconut_scientist }
 
 		equipment_bonus = {
 			fuel_consumption = -0.10

@@ -1,9 +1,7 @@
 characters={
-	YSO_manuel_manquilef = {
-		instance = {
-			allowed = {
-				has_dlc = "Trial of Allegiance"
-			}
+	YSO_manuel_manquilef={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
 			name=CHL_manuel_manquilef
 			portraits={
 				civilian={
@@ -11,28 +9,390 @@ characters={
 					small=GFX_portrait_CHL_manuel_manquilef_small
 				}
 			}
+
 			country_leader={
 				traits={ JUNO_defender_of_araucania }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Trial of Allegiance" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
 			name=CHL_manuel_manquilef
-			portraits={
-				civilian={
-					large="GFX_Portrait_South_America_Generic_5"
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_South_America_Generic_5 } }
+
 			country_leader={
 				traits={ JUNO_defender_of_araucania }
 				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	YSO_a_staunch_traditionalist={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_manuel_panguilef
+			portraits={ civilian={ small=GFX_portrait_CHL_manuel_panguilef_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSO_a_staunch_traditionalist
+				traits={ staunch_traditionalist }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=neutrality
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						950={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_neutrality
+						NOT={ has_government=neutrality }
+
+						add=30
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=CHL_manuel_panguilef
+			portraits={ civilian={ small=GFX_Portrait_South_America_Generic_6_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSO_a_staunch_traditionalist
+				traits={ staunch_traditionalist }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=neutrality
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						950={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_neutrality
+						NOT={ has_government=neutrality }
+
+						add=30
+					}
+				}
+			}
+		}
+	}
+	YSO_e_popular_figurehead={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_rayen_quitral
+			portraits={ civilian={ small=GFX_portrait_CHL_rayen_quitral_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSO_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						950={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+			gender=female
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=CHL_rayen_quitral
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_female_south_america } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSO_e_popular_figurehead
+				traits={ popular_figurehead }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						950={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_stability > 0.35
+						has_stability < 0.5
+
+						add=9
+					}
+				}
+			}
+			gender=female
+		}
+	}
+	YSO_g_silent_workhorse={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_carlos_huayquinir
+			portraits={ civilian={ small=GFX_portrait_CHL_carlos_huayquinir_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSO_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						950={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=CHL_carlos_huayquinir
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_2 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSO_g_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						950={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+	}
+	YSO_l_compassionate_gentleman={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_guido_beck
+			portraits={ civilian={ small=GFX_portrait_CHL_guido_beck_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSO_l_compassionate_gentleman
+				traits={ compassionate_gentleman }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						950={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=CHL_guido_beck
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_3 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSO_l_compassionate_gentleman
+				traits={ compassionate_gentleman }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						950={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+	}
+	YSO_o_economist={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_esteban_romero_sandoval
+			portraits={
+				civilian={
+					large=GFX_portrait_CHL_esteban_romero_sandoval
+					small=GFX_portrait_CHL_esteban_romero_sandoval_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSO_o_economist
+				traits={ economist }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+						}
+
+						OR={
+							has_government=neutrality
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						950={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_global_flag=custom_advisors_only
+						has_country_flag=ai_go_neutrality
+						NOT={ has_government=neutrality }
+
+						add=29
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=CHL_esteban_romero_sandoval
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_2 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSO_o_economist
+				traits={ economist }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+						}
+
+						OR={
+							has_government=neutrality
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						950={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_global_flag=custom_advisors_only
+						has_country_flag=ai_go_neutrality
+						NOT={ has_government=neutrality }
+
+						add=29
+					}
+				}
+			}
+		}
+	}
+	YSO_a_army_chief_offensive={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_venancio_huenchual
+			portraits={
+				army={
+					large=GFX_portrait_CHL_venancio_huenchual
+					small=GFX_portrait_CHL_venancio_huenchual_small
+				}
+			}
+
+			advisor={
+				slot=army_chief
+				idea_token=YSO_a_army_chief_offensive
+				cost=100
+				traits={ army_chief_offensive_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						950={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_venancio_huenchual
+			portraits={ army={ small=GFX_Portrait_South_America_Generic_land_1_small } }
+
+			advisor={
+				slot=army_chief
+				idea_token=YSO_a_army_chief_offensive
+				cost=100
+				traits={ army_chief_offensive_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						950={ is_core_of=ROOT }
+					}
+				}
 			}
 		}
 	}

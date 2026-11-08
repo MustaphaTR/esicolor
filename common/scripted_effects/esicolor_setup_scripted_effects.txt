@@ -12755,18 +12755,6 @@ adjust_named_advisor_traits = {
 					trait = NOR_pan_germanist_minister
 				}
 			}
-			if = { # Ragnar Skancke
-				limit = { has_trait = financial_expert }
-
-				remove_trait = {
-					slot = political_advisor
-					trait = financial_expert
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = NOR_callous_engineer
-				}
-			}
 			if = { # Sverre Riisnæs
 				limit = { has_trait = prince_of_terror }
 
@@ -12777,6 +12765,18 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = NOR_fascist_judiciary
+				}
+			}
+			if = { # Ragnar Skancke
+				limit = { has_trait = financial_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = financial_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = NOR_callous_engineer
 				}
 			}
 			if = { # Eivind Blehr
@@ -12996,48 +12996,6 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
-	972 = {
-		for_each_scope_loop = {
-			array = state_advisors
-			if = { # Karel Husárek
-				limit = { has_trait = army_chief_old_guard }
-
-				set_character_name = CZE_karel_husarek
-
-				if = {
-					limit = { has_dlc = "Peace For Our Time" }
-
-					set_portraits = {
-						civilian = {
-							large=GFX_portrait_CZE_karel_husarek
-							small=GFX_portrait_CZE_karel_husarek_military_small
-						}
-						army = {
-							large=GFX_portrait_CZE_karel_husarek
-							small=GFX_portrait_CZE_karel_husarek_military_small
-						}
-						navy = {
-							large=GFX_portrait_CZE_karel_husarek
-							small=GFX_portrait_CZE_karel_husarek_military_small
-						}
-					}
-				}
-				else = {
-					set_portraits = {
-						civilian = {
-							small = GFX_Portrait_Europe_Generic_land_2_small
-						}
-						army = {
-							small = GFX_Portrait_Europe_Generic_land_2_small
-						}
-						navy = {
-							small = GFX_Portrait_Europe_Generic_land_2_small
-						}
-					}
-				}
-			}
-		}
-	}
 	973 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -13123,9 +13081,6 @@ adjust_named_advisor_traits = {
 					trait = AUS_treasurer_of_the_monarchy
 				}
 			}
-		}
-		for_each_scope_loop = {
-			array = state_advisors
 			if = { # Maximilian Ronge
 				limit = { has_trait = code_breaker }
 
@@ -13172,18 +13127,6 @@ adjust_named_advisor_traits = {
 	1011 = {
 		for_each_scope_loop = {
 			array = state_advisors
-			if = { # Hikmat Sulayman
-				limit = { has_trait = silent_workhorse }
-
-				remove_trait = {
-					slot = political_advisor
-					trait = silent_workhorse
-				}
-				add_trait = {
-					slot = political_advisor
-					trait = IRQ_minister_of_the_interior
-				}
-			}
 			if = { # Sharaf bin Rajeh
 				limit = { has_trait = popular_figurehead }
 
@@ -13196,52 +13139,16 @@ adjust_named_advisor_traits = {
 					trait = IRQ_emir_of_taif
 				}
 			}
-		}
-	}
-	1027 = {
-		for_each_scope_loop = {
-			array = state_advisors
-			if = { # Vicente Lava
-				limit = { has_trait = armaments_organizer }
+			if = { # Hikmat Sulayman
+				limit = { has_trait = silent_workhorse }
 
-				set_character_name = PHI_vicente_lava
-				save_global_event_target_as = PHI_vicente_lava
 				remove_trait = {
 					slot = political_advisor
-					trait = armaments_organizer
+					trait = silent_workhorse
 				}
 				add_trait = {
 					slot = political_advisor
-					trait = PHI_coconut_scientist
-				}
-
-				if = {
-					limit = { has_dlc = "No Compromise, No Surrender" }
-
-					set_portraits = {
-						civilian = {
-							small = GFX_portrait_PHI_vicente_lava_small
-						}
-						army = {
-							small = GFX_portrait_PHI_vicente_lava_small
-						}
-						navy = {
-							small = GFX_portrait_PHI_vicente_lava_small
-						}
-					}
-				}
-				else = {
-					set_portraits = {
-						civilian = {
-							small = GFX_idea_generic_army_asia_7
-						}
-						army = {
-							small = GFX_idea_generic_army_asia_7
-						}
-						navy = {
-							small = GFX_idea_generic_army_asia_7
-						}
-					}
+					trait = IRQ_minister_of_the_interior
 				}
 			}
 		}
@@ -13289,6 +13196,7 @@ retire_custom_named_advisors = {
 
 		random_country = { limit = { has_character = BIS_b_army_chief_defensive } remove_advisor_role = { character = BIS_b_army_chief_defensive slot = political_advisor } } # Stasys Raštikis
 	}
+	random_country = { limit = { has_character = NZF_u_coconut_scientist } retire_character = NZF_u_coconut_scientist } # Vicente Lava
 }
 
 remove_tank_designer = {

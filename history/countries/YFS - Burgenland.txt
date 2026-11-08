@@ -21,6 +21,14 @@ set_politics = {
 }
 
 recruit_character = YFS_otto_von_habsburg
+recruit_character = YFS_a_staunch_monarchist
+random_character = { limit = { is_character = YFS_a_staunch_monarchist } 975 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YFS_n_financial_expert
+random_character = { limit = { is_character = YFS_n_financial_expert } 975 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YFS_p_captain_of_industry
+random_character = { limit = { is_character = YFS_p_captain_of_industry } 975 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YFS_dh_air_air_combat_training
+random_character = { limit = { is_character = YFS_dh_air_air_combat_training } 975 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

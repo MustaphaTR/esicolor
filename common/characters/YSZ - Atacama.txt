@@ -1,41 +1,197 @@
 characters={
-	YSZ_jorge_gonzalez_von_marees = {
-		instance = {
-			allowed = {
-				has_dlc = "Trial of Allegiance"
-			}
-			name=CHL_jorge_gonzalez_von_marees
-			portraits={
-				civilian = {
-					large=GFX_portrait_CHL_jorge_gonzalez_von_marees
-					small=GFX_portrait_CHL_jorge_gonzalez_von_marees_small
-				}
-				army = {
-					large=GFX_portrait_CHL_jorge_gonzalez_von_marees_army
-				}
-			}
-			country_leader={
-				traits={ JUNO_el_jefe }
-				ideology=nazism
-				expire="1965.1.1.1"
-				id=-1
-			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Trial of Allegiance" }
-			}
+	YSZ_jorge_gonzalez_von_marees={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
 			name=CHL_jorge_gonzalez_von_marees
 			portraits={
 				civilian={
-					large=GFX_Portrait_South_America_Generic_land_5
+					large=GFX_portrait_CHL_jorge_gonzalez_von_marees
+					small=GFX_portrait_CHL_jorge_gonzalez_von_marees_small
+				}
+				army={
+					large=GFX_portrait_CHL_jorge_gonzalez_von_marees_army
 				}
 			}
+
 			country_leader={
 				traits={ JUNO_el_jefe }
 				ideology=nazism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=CHL_jorge_gonzalez_von_marees
+			portraits={ civilian={ large=GFX_Portrait_South_America_Generic_land_5 } }
+
+			country_leader={
+				traits={ JUNO_el_jefe }
+				ideology=nazism
+			}
+		}
+	}
+
+	#Advisors
+	YSZ_c_fascist_demagogue={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_miguel_serrano
+			portraits={ civilian={ small=GFX_portrait_CHL_miguel_serrano_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSZ_c_fascist_demagogue
+				traits={ fascist_demagogue }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=fascism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						952={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_fascism
+						NOT={ has_government=fascism }
+
+						add=30
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=CHL_miguel_serrano
+			portraits={ civilian={ small=GFX_Portrait_South_America_Generic_land_2_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSZ_c_fascist_demagogue
+				traits={ fascist_demagogue }
+
+				available={
+					if={
+						limit={ has_focus_tree=horn_of_africa_tree }
+
+						OR={
+							has_government=fascism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						952={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=0
+
+					modifier={
+						has_country_flag=ai_go_fascism
+						NOT={ has_government=fascism }
+
+						add=30
+					}
+				}
+			}
+		}
+	}
+	YSZ_o_economist={
+		instance={
+			allowed={ has_dlc="Trial of Allegiance" }
+			name=CHL_francisco_encina
+			portraits={ civilian={ small=GFX_portrait_CHL_francisco_encina_small } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSZ_o_economist
+				traits={ economist }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+						}
+
+						OR={
+							has_government=fascism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						952={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_global_flag=custom_advisors_only
+						has_country_flag=ai_go_fascism
+						NOT={ has_government=fascism }
+
+						add=29
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Trial of Allegiance" } }
+			name=CHL_francisco_encina
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_south_america_3 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=YSZ_o_economist
+				traits={ economist }
+
+				available={
+					if={
+						limit={
+							has_focus_tree=horn_of_africa_tree
+							has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+						}
+
+						OR={
+							has_government=fascism
+							has_completed_focus=HOA_a_change_in_course
+						}
+					}
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						952={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={
+					factor=1
+
+					modifier={
+						has_global_flag=custom_advisors_only
+						has_country_flag=ai_go_fascism
+						NOT={ has_government=fascism }
+
+						add=29
+					}
+				}
 			}
 		}
 	}

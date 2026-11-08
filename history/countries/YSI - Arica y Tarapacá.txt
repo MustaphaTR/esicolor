@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = YSI_carlos_contreras_labarca
+recruit_character = YSI_d_communist_revolutionary
+random_character = { limit = { is_character = YSI_d_communist_revolutionary } 951 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = YSI_e_popular_figurehead
+random_character = { limit = { is_character = YSI_e_popular_figurehead } 951 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes
