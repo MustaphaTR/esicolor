@@ -271,30 +271,7 @@ ZBZ_task_force_ship_organization = {
 		relative_position_id = generic_mio_trait_primary_fire_director_control
 
 		visible = { has_global_flag = custom_designer_traits_enabled }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = naval_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_use_the_natural_harbors
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_investment_into_shipbuilding
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_navy
-				}
-			}
-		}
+		available = { owner = { has_completed_initial_naval_focus = yes } }
 
 		production_bonus = {
 			production_capacity_factor = 0.05
@@ -469,7 +446,7 @@ ZBZ_task_force_ship_organization = {
 			has_global_flag = custom_designer_traits_enabled
 			has_global_flag = custom_advisors_only
 		}
-		available = { FROM = { has_idea_with_trait = PHI_coconut_scientist }
+		available = { FROM = { has_idea_with_trait = PHI_coconut_scientist } }
 
 		relative_position_id = PHI_mio_trait_ethanol_fuel_adaptations
 		any_parent = { PHI_mio_trait_ethanol_fuel_adaptations }
@@ -525,30 +502,7 @@ SZY_battle_line_ship_organization = {
 		relative_position_id = generic_mio_trait_primary_battery_layout
 
 		visible = { has_global_flag = custom_designer_traits_enabled }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = naval_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_use_the_natural_harbors
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_investment_into_shipbuilding
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_navy
-				}
-			}
-		}
+		available = { owner = { has_completed_initial_naval_focus = yes } }
 
 		production_bonus = {
 			production_capacity_factor = 0.05
@@ -763,30 +717,7 @@ SZB_raider_ship_organization = {
 		relative_position_id = JAP_mio_trait_strength_in_numbers
 
 		visible = { has_global_flag = custom_designer_traits_enabled }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = naval_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_use_the_natural_harbors
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_investment_into_shipbuilding
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_navy
-				}
-			}
-		}
+		available = { owner = { has_completed_initial_naval_focus = yes } }
 
 		production_bonus = {
 			production_capacity_factor = 0.05
@@ -952,30 +883,7 @@ SEI_escort_ship_organization = {
 		relative_position_id = JAP_mio_trait_strength_in_numbers
 
 		visible = { has_global_flag = custom_designer_traits_enabled }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = naval_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_use_the_natural_harbors
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_investment_into_shipbuilding
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_navy
-				}
-			}
-		}
+		available = { owner = { has_completed_initial_naval_focus = yes } }
 
 		production_bonus = {
 			production_capacity_factor = 0.05
@@ -1830,30 +1738,7 @@ ZBZ_naval_aircraft_organization  = {
 		relative_position_id = generic_mio_trait_navigation_equipment
 
 		visible = { has_global_flag = custom_designer_traits_enabled }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = naval_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_use_the_natural_harbors
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_investment_into_shipbuilding
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_navy
-				}
-			}
-		}
+		available = { owner = { has_completed_initial_naval_focus = yes } }
 
 		production_bonus = {
 			production_capacity_factor = 0.05
@@ -2352,7 +2237,7 @@ ZBZ_motorized_mechanized_organization = {
 			has_global_flag = custom_designer_traits_enabled
 			has_global_flag = custom_advisors_only
 		}
-		available = { FROM = { has_idea_with_trait = PHI_coconut_scientist }
+		available = { FROM = { has_idea_with_trait = PHI_coconut_scientist } }
 
 		relative_position_id = PHI_mio_trait_ethanol_fuel_adaptations
 		any_parent = { PHI_mio_trait_ethanol_fuel_adaptations }
@@ -2428,7 +2313,7 @@ ZBZ_armored_car_organization = {
 			has_global_flag = custom_designer_traits_enabled
 			has_global_flag = custom_advisors_only
 		}
-		available = { FROM = { has_idea_with_trait = PHI_coconut_scientist }
+		available = { FROM = { has_idea_with_trait = PHI_coconut_scientist } }
 
 		equipment_bonus = {
 			fuel_consumption = -0.10

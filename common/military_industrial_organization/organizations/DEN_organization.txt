@@ -135,30 +135,7 @@ OEF_task_force_ship_organization_custom = {
 		relative_position_id = DEN_mio_trait_engine_optimization
 
 		all_parents = { DEN_mio_trait_engine_optimization }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = naval_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_use_the_natural_harbors
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_investment_into_shipbuilding
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_navy
-				}
-			}
-		}
+		available = { owner = { has_completed_initial_naval_focus = yes } }
 
 		production_bonus = {
 			production_conversion_speed_factor = 0.1
@@ -353,30 +330,7 @@ OEF_raider_ship_organization_custom = {
 		position = { x=7 y=0 }
 		relative_position_id = generic_mio_trait_long_range_raiding
 
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = naval_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_use_the_natural_harbors
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_investment_into_shipbuilding
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_navy
-				}
-			}
-		}
+		available = { owner = { has_completed_initial_naval_focus = yes } }
 
 		production_bonus = {
 			production_cost_factor = -0.05
@@ -634,30 +588,7 @@ OEF_naval_aircraft_organization_custom = {
 
 		all_parents = { generic_mio_trait_navigation_equipment }
 		mutually_exclusive = { DEN_mio_trait_naval_detection }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = aviation_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_the_capital_city_airport
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = PRC_aviation_infrastructure
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_air_force
-				}
-			}
-		}
+		available = { owner = { has_completed_initial_air_force_focus = yes } }
 
 		equipment_bonus = {
 			sub_detection = 0.05
@@ -677,30 +608,7 @@ OEF_naval_aircraft_organization_custom = {
 
 		all_parents = { generic_mio_trait_navigation_equipment }
 		mutually_exclusive = { DEN_mio_trait_sub_detection }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = aviation_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_the_capital_city_airport
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = PRC_aviation_infrastructure
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_air_force
-				}
-			}
-		}
+		available = { owner = { has_completed_initial_air_force_focus = yes } }
 
 		equipment_bonus = {
 			surface_detection = 0.05

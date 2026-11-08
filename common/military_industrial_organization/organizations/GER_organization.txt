@@ -1227,30 +1227,7 @@ OSL_refurbishment_repair_organization = {
 		position = { x=8 y=0 }
 
 		visible = { has_global_flag = custom_designer_traits_enabled }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = naval_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_use_the_natural_harbors
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_investment_into_shipbuilding
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_navy
-				}
-			}
-		}
+		available = { owner = { has_completed_initial_naval_focus = yes } }
 
 		production_bonus = {
 			production_capacity_factor = 0.07
@@ -1346,30 +1323,7 @@ OSB_generic_submarine_organization = {
 
 		all_parents = { generic_mio_trait_long_range_raiding }
 		visible = { has_global_flag = custom_designer_traits_enabled }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = submarine_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_expand_naval_variety
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_modern_submarines
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_raiding_fleet
-				}
-			}
-		}
+		available = { owner = { has_completed_submarine_focus = yes } }
 
         equipment_bonus = {
 			sub_visibility = -0.03
@@ -1391,30 +1345,7 @@ OSB_generic_submarine_organization = {
 
 		all_parents = { generic_mio_trait_submarine_mass_production }
 		visible = { has_global_flag = custom_designer_traits_enabled }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = submarine_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_expand_naval_variety
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_modern_submarines
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_raiding_fleet
-				}
-			}
-		}
+		available = { owner = { has_completed_submarine_focus = yes } }
 
         production_bonus = {
 			production_capacity_factor = 0.05
@@ -1477,30 +1408,7 @@ OSB_generic_submarine_organization = {
 
 		all_parents = { GER_mio_trait_excellent_diving_performance }
 		visible = { has_global_flag = custom_designer_traits_enabled }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = submarine_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_expand_naval_variety
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_modern_submarines
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_raiding_fleet
-				}
-			}
-		}
+		available = { owner = { has_completed_submarine_focus = yes } }
 
 		equipment_bonus = {
 			sub_visibility = -0.03
@@ -1690,30 +1598,7 @@ OSB_raider_ship_organization_custom = {
 		relative_position_id = generic_mio_trait_raiding_submarines
 
 		all_parents = { generic_mio_trait_raiding_submarines }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = submarine_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_expand_naval_variety
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_modern_submarines
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_raiding_fleet
-				}
-			}
-        }
+		available = { owner = { has_completed_submarine_focus = yes } }
 
         limit_to_equipment_type = { submarine }
         equipment_bonus = {

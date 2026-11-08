@@ -37,6 +37,69 @@ EZF_refurbishment_repair_organization = {
 			}
 		}
 	}
+
+	add_trait = {
+		token = PHI_mio_trait_ethanol_fuel_adaptations
+		name = PHI_mio_trait_ethanol_fuel_adaptations
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		special_trait_background = yes
+
+		position = { x = 9 y = 0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			fuel_consumption = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_coconut_fuel_adaptations
+		name = PHI_mio_trait_coconut_fuel_adaptations
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }  
+		relative_position_id = PHI_mio_trait_ethanol_fuel_adaptations
+
+		any_parent = { PHI_mio_trait_ethanol_fuel_adaptations }
+		visible = {
+			has_global_flag = custom_designer_traits_enabled
+			has_global_flag = custom_advisors_only
+		}
+		available = { FROM = { has_idea_with_trait = PHI_coconut_scientist } }
+
+		equipment_bonus = {
+			fuel_consumption = -0.10
+			reliability = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_coastal_specialization
+		name = PHI_mio_trait_coastal_specialization
+		icon = GFX_generic_mio_trait_icon_surface_detection
+		special_trait_background = yes
+
+		position = { x = 8 y = 0 }
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+		equipment_bonus = {
+			surface_visibility = -0.05
+			surface_detection = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
 }
 
 LZB_escort_ship_organization = {
@@ -48,6 +111,7 @@ LZB_escort_ship_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
 			OR = {
@@ -66,6 +130,200 @@ LZB_escort_ship_organization = {
 			owner = {
 				628 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+LZB_escort_ship_organization = {
+	name = PHI_compania_maritima_de_cebu
+	include = esicolor_generic_escort_ship_organization
+	icon = GFX_idea_PHI_compania_maritima
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = convoy_escort_naval_manufacturer_disabled }
+			OR = {
+				original_tag = LZB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 628
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				628 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	equipment_type = { screen_ship convoy_1 }
+
+	trait = {
+		token = generic_mio_trait_submarine_hunters
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_high_speed_mine_hunting_equipment
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_advanced_hydrodynamic_design
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_fleet_escorts
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_anti_air_ships
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_escort_in_force
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_anti_air_layout
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_gyro_stabilized_mounts
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_improved_anti_air_gun_mounting
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_mass_production
+		limit_to_equipment_type = { screen_ship }
+	}
+	trait = {
+		token = generic_mio_trait_improved_light_gun_mounting
+		limit_to_equipment_type = { screen_ship }
+	}
+	add_trait = {
+		token = PHI_mio_trait_civilian_smugglers
+		name = PHI_mio_trait_civilian_smugglers
+		icon = GFX_generic_mio_trait_icon_supply_consumption
+		special_trait_background  = yes
+
+		position = { x=0 y=0 }
+		limit_to_equipment_type = { convoy }
+
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = special_forces
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_utilize_our_strengths
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					OR = {
+						has_completed_focus = CHI_sea_anti_opposition_campaigns
+						has_completed_focus = CHI_sea_institute_cross_border_raids
+						has_completed_focus = CHI_sea_provoke_border_clashes
+					}
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_special_forces
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.10
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_ethanol_fuel_adaptations
+		name = PHI_mio_trait_ethanol_fuel_adaptations
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		special_trait_background = yes
+
+		position = { x = 9 y = 0 }  
+
+		limit_to_equipment_type = { screen_ship }
+		equipment_bonus = {
+			fuel_consumption = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_coconut_fuel_adaptations
+		name = PHI_mio_trait_coconut_fuel_adaptations
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+		relative_position_id = PHI_mio_trait_ethanol_fuel_adaptations
+
+		any_parent = { PHI_mio_trait_ethanol_fuel_adaptations }
+		visible = { has_global_flag = custom_advisors_only }
+		available = { FROM = { has_idea_with_trait = PHI_coconut_scientist } }
+
+		limit_to_equipment_type = { screen_ship }
+		equipment_bonus = {
+			fuel_consumption = -0.10
+			reliability = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_coastal_specialization
+		name = PHI_mio_trait_coastal_specialization
+		icon = GFX_generic_mio_trait_icon_surface_detection
+		special_trait_background = yes
+
+		position = { x = 8 y = 0 }  
+
+		limit_to_equipment_type = { screen_ship }
+		equipment_bonus = {
+			surface_visibility = -0.05
+			surface_detection = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		token = PHI_mio_trait_employ_civilian_cargo
+		name = PHI_mio_trait_employ_civilian_cargo
+		icon = GFX_generic_mio_trait_icon_supply_consumption
+		special_trait_background  = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = PHI_mio_trait_coastal_specialization
+
+		any_parent = { PHI_mio_trait_coastal_specialization }
+
+		limit_to_equipment_type = { convoy }
+		production_bonus = {
+			production_capacity_factor = 0.05
 		}
 	}
 }

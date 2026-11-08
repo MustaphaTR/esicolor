@@ -579,6 +579,8 @@ has_custom_train_manufacturer = {
 		original_tag = OEA
 		original_tag = IEZ
 		original_tag = ISB
+		original_tag = ZIY
+		original_tag = ELO
 		original_tag = SEZ
 		original_tag = LOY
 	}
@@ -601,6 +603,7 @@ has_custom_helicopter_manufacturer = {
 		original_tag = OOL
 		original_tag = OSL
 		original_tag = ZBZ
+		original_tag = ESB
 	}
 }
 
@@ -778,5 +781,165 @@ state_designer_availabile = {
 		limit = { has_global_flag = custom_designers_only_ownership }
 		
 		is_owned_by = PREV
+	}
+}
+
+# Custom MIO trait equalivent Focus Checks
+has_completed_initial_air_force_focus = {
+	if = {
+		limit = { has_focus_tree = generic_focus }
+
+		has_completed_focus = aviation_effort
+	}
+	else_if = {
+		limit = { has_focus_tree = horn_of_africa_tree }
+
+		has_completed_focus = HOA_the_capital_city_airport
+	}
+	else_if = {
+		limit = { has_focus_tree = china_warlord_sea_focus }
+
+		has_completed_focus = PRC_aviation_infrastructure
+	}
+	else_if = {
+		limit = { has_focus_tree = southern_south_america_focus }
+
+		has_completed_focus = SMB_air_force
+	}
+}
+has_completed_initial_naval_focus = {
+	if = {
+		limit = { has_focus_tree = generic_focus }
+
+		has_completed_focus = naval_effort
+	}
+	else_if = {
+		limit = { has_focus_tree = horn_of_africa_tree }
+
+		has_completed_focus = HOA_use_the_natural_harbors
+	}
+	else_if = {
+		limit = { has_focus_tree = china_warlord_sea_focus }
+
+		has_completed_focus = CHI_sea_investment_into_shipbuilding
+	}
+	else_if = {
+		limit = { has_focus_tree = southern_south_america_focus }
+
+		has_completed_focus = SMB_navy
+	}
+}
+has_completed_submarine_focus = {
+	if = {
+		limit = { has_focus_tree = generic_focus }
+
+		has_completed_focus = submarine_effort
+	}
+	else_if = {
+		limit = { has_focus_tree = horn_of_africa_tree }
+
+		has_completed_focus = HOA_expand_naval_variety
+	}
+	else_if = {
+		limit = { has_focus_tree = china_warlord_sea_focus }
+
+		has_completed_focus = CHI_sea_modern_submarines
+	}
+	else_if = {
+		limit = { has_focus_tree = southern_south_america_focus }
+
+		has_completed_focus = SMB_raiding_fleet
+	}
+}
+
+has_completed_SOV_merge_tank_and_materiel_plants_tank = {
+	if = {
+		limit = { has_focus_tree = generic_focus }
+
+		has_completed_focus = production_effort_3
+	}
+	else_if = {
+		limit = { has_focus_tree = horn_of_africa_tree }
+
+		has_completed_focus = HOA_steel_lions
+	}
+	else_if = {
+		limit = { has_focus_tree = china_warlord_sea_focus }
+
+		has_completed_focus = CHI_sea_heavy_weapons_development
+	}
+	else_if = {
+		limit = { has_focus_tree = southern_south_america_focus }
+
+		has_completed_focus = SMB_tank_warfare
+	}
+}
+has_completed_SOV_merge_aircraft_plants = {
+	if = {
+		limit = { has_focus_tree = generic_focus }
+
+		has_completed_focus = production_effort_3
+	}
+	else_if = {
+		limit = { has_focus_tree = horn_of_africa_tree }
+
+		has_completed_focus = HOA_the_adjective_air_fleet
+	}
+	else_if = {
+		limit = { has_focus_tree = china_warlord_sea_focus }
+
+		has_completed_focus = CHI_sea_the_hump
+	}
+	else_if = {
+		limit = { has_focus_tree = southern_south_america_focus }
+
+		has_completed_focus = SMB_establish_aircraft_industry
+	}
+}
+has_completed_SOV_merge_tank_and_materiel_plants_arms = {
+	if = {
+		limit = { has_focus_tree = generic_focus }
+
+		has_completed_focus = production_effort_3
+	}
+	else_if = {
+		limit = { has_focus_tree = horn_of_africa_tree }
+
+		has_completed_focus = HOA_modern_infantry
+	}
+	else_if = {
+		limit = { has_focus_tree = china_warlord_sea_focus }
+
+		has_completed_focus = CHI_sea_heavy_weapons_development
+	}
+	else_if = {
+		limit = { has_focus_tree = southern_south_america_focus }
+
+		OR = {
+			has_completed_focus = SMB_domestic_production
+			has_completed_focus = SMB_foreign_designs
+		}
+	}
+}
+has_completed_SOV_merge_tank_and_materiel_plants_artillery = {
+	if = {
+		limit = { has_focus_tree = generic_focus }
+
+		has_completed_focus = production_effort_3
+	}
+	else_if = {
+		limit = { has_focus_tree = horn_of_africa_tree }
+
+		has_completed_focus = HOA_warfare_from_afar
+	}
+	else_if = {
+		limit = { has_focus_tree = china_warlord_sea_focus }
+
+		has_completed_focus = CHI_sea_heavy_weapons_development
+	}
+	else_if = {
+		limit = { has_focus_tree = southern_south_america_focus }
+
+		has_completed_focus = SMB_artillery
 	}
 }

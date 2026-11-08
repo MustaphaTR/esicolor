@@ -39,7 +39,6 @@ OOE_heavy_tank_organization = {
 	}
 }
 
-
 #####################
 
  ## #  # ### ###   ## 
@@ -173,6 +172,44 @@ OOE_artillery_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = {
+			has_global_flag = custom_designer_traits_enabled
+			has_global_flag = OOE_arty_EWF
+		}
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = OOE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 3
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				3 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+OOE_artillery_organization_custom = {
+	name = SWI_oerlikon
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_SWI_oerlikon
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		OR = {
+			has_global_flag = custom_designer_traits_enabled
+			NOT = { has_global_flag = OOE_arty_EWF }
+		}
 		owner = {
 			NOT = {
 				has_country_flag = artillery_manufacturer_disabled
@@ -196,6 +233,32 @@ OOE_artillery_organization = {
 			}
 		}
 	}
+
+	equipment_type = { artillery_equipment anti_tank_equipment anti_air_equipment }
+	
+	initial_trait = {
+		name = generic_mio_initial_trait_artillery_manufacturer
+		equipment_bonus = {
+			air_attack = 0.1 
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = generic_mio_trait_advanced_anti_air_targeting
+		name = generic_mio_trait_advanced_anti_air_targeting
+		icon = GFX_generic_mio_department_icon_anti_air
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_improved_direct_fire_targeting
+
+		all_parents = { generic_mio_trait_improved_hydraulic_recoil_system }
+		mutually_exclusive = { generic_mio_trait_improved_direct_fire_targeting generic_mio_trait_advanced_trajectory_calculations }
+		
+		limit_to_equipment_type = { anti_air_equipment }
+		equipment_bonus = {
+			air_attack = 0.1
+		}
+	}
 }
 
 OOE_artillery_organization_2 = {
@@ -207,9 +270,10 @@ OOE_artillery_organization_2 = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
+		has_global_flag = OOE_arty_EWF
 		owner = {
 			NOT = { has_country_flag = artillery_manufacturer_disabled }
-			has_global_flag = OOE_arty_EWF
 			OR = {
 				original_tag = OOE
 				AND = {
@@ -226,6 +290,48 @@ OOE_artillery_organization_2 = {
 			owner = {
 				3 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+OOE_artillery_organization_2_custom = {
+	name = SWI_eidgenossische_WF
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_SWI_eidgenossische_WF
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		OR = {
+			has_global_flag = custom_designer_traits_enabled
+			has_global_flag = OOE_arty_EWF
+		}
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = OOE
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 3
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				3 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		name = generic_mio_initial_trait_artillery_manufacturer
+		equipment_bonus = {
+			build_cost_ic = -0.05
+			defense = -0.25
 		}
 	}
 }

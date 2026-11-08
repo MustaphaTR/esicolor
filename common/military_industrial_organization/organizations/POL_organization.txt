@@ -17,6 +17,7 @@ OIO_infantry_tank_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
 			OR = {
@@ -36,6 +37,65 @@ OIO_infantry_tank_organization = {
 				10 = { state_designer_availabile = yes }
 			}
 		}
+	}
+}
+OIO_infantry_tank_organization_custom = {
+	name = POL_pzinz_organization
+	include = esicolor_generic_infantry_tank_organization
+	icon = GFX_idea_POL_pzinz
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = infantry_tank_manufacturer_disabled }
+			OR = {
+				original_tag = OIO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 10
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				10 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		name = POL_mio_trait_multi_role_tank_designer
+
+		limit_to_equipment_type = { armor }
+		equipment_bonus = {
+			armor_value = -0.05
+			maximum_speed = -0.05
+			reliability = 0.05
+		}
+	}
+	add_trait = {
+		token = POL_mio_trait_cruiser_tanks
+		name = POL_mio_trait_cruiser_tanks
+		icon = GFX_generic_mio_department_icon_tank_general_engine
+		special_trait_background = yes
+
+		position = { x=1 y=1 }  
+		relative_position_id = generic_mio_trait_interleaved_track_wheels
+
+		any_parent = { generic_mio_trait_interleaved_track_wheels generic_mio_trait_overlapped_track_wheels }
+
+		limit_to_equipment_type = { medium_tank_chassis heavy_tank_chassis }
+		equipment_bonus = {
+			maximum_speed = 0.1
+			breakthrough = 0.05
+		} 
 	}
 }
 

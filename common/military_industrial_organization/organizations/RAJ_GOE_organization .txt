@@ -37,6 +37,131 @@ AZY_infantry_equipment_organization = {
 			}
 		}
 	}
+
+	trait = {
+		token = RAJ_mio_trait_gun_and_shell_facatory_cassiopore
+		name = RAJ_gun_and_shell_factory_cossipore
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		special_trait_background = yes
+
+		position = { x=-1 y=0 }
+		relative_position_id = generic_mio_trait_drum_pattern_sights
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			431 = {
+				if = {
+					limit = { has_global_flag = custom_designers_only_core }
+
+					is_core_of = FROM
+				}
+				else = {
+					is_owned_by = FROM
+				}
+				arms_factory > 0
+			}
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.02
+		}
+	}
+	trait = {
+		token = RAJ_mio_trait_ordnance_factory_khamaria_jabalpur
+		name = RAJ_ordnance_factory_khamaria_jabalpur
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = RAJ_mio_trait_gun_and_shell_facatory_cassiopore
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			436 = {
+				if = {
+					limit = { has_global_flag = custom_designers_only_core }
+
+					is_core_of = FROM
+				}
+				else = {
+					is_owned_by = FROM
+				}
+				arms_factory > 0
+			}
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.02
+		}
+	}
+	trait = { 
+		token = RAJ_mio_trait_rifle_factory_ishapore
+		name = RAJ_rifle_factory_ishapore_west_bengal
+		icon = GFX_generic_mio_department_icon_infantry_quality
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = RAJ_mio_trait_ordnance_factory_khamaria_jabalpur
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			431 = {
+				if = {
+					limit = { has_global_flag = custom_designers_only_core }
+
+					is_core_of = FROM
+				}
+				else = {
+					is_owned_by = FROM
+				}
+				arms_factory > 1
+			}
+		}
+
+		equipment_bonus = {
+			defense = 0.06
+			ap_attack = 0.25
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.02
+		}
+	}
+	trait = {
+		token = RAJ_mio_trait_ordnance_factory_kanpur_uttar_pradesh_inf
+		name = RAJ_ordnance_factory_kanpur_uttar_pradesh
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_drum_pattern_sights
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			438 = {
+				if = {
+					limit = { has_global_flag = custom_designers_only_core }
+
+					is_core_of = FROM
+				}
+				else = {
+					is_owned_by = FROM
+				}
+				arms_factory > 0
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.15
+			military_industrial_organization_funds_gain = 0.2
+		}
+	}
 }
 
 AEB_artillery_organization = {
@@ -68,6 +193,69 @@ AEB_artillery_organization = {
 			}
 		}
 	}
+
+	trait = {
+		token = RAJ_mio_trait_cordite_factory_aruvankadu_tamil_nadu
+		name = RAJ_cordite_factory_aruvankadu_tamil_nadu
+		icon = GFX_generic_mio_department_icon_artillery
+		special_trait_background = yes
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_big_guns
+
+		all_parents = { generic_mio_trait_big_guns }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			423 = {
+				if = {
+					limit = { has_global_flag = custom_designers_only_core }
+
+					is_core_of = FROM
+				}
+				else = {
+					is_owned_by = FROM
+				}
+				arms_factory > 0
+			}
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.03
+		}
+		equipment_bonus = {
+			soft_attack = 0.06
+			ap_attack = 0.06
+		}
+	}
+	trait = {
+		token = RAJ_mio_trait_ordnance_factory_kanpur_uttar_pradesh_art
+		name = RAJ_mio_trait_ordnance_factory_kanpur_uttar_pradesh_art
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=-1 y=0 }
+		relative_position_id = generic_mio_trait_big_guns
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			438 = {
+				if = {
+					limit = { has_global_flag = custom_designers_only_core }
+
+					is_core_of = FROM
+				}
+				else = {
+					is_owned_by = FROM
+				}
+				arms_factory > 1
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.15
+			military_industrial_organization_funds_gain = 0.15
+		}
+	}
 }
 
 AZF_motorized_mechanized_organization = {
@@ -97,6 +285,94 @@ AZF_motorized_mechanized_organization = {
 			owner = {
 				427 = { state_designer_availabile = yes }
 			}
+		}
+	}
+
+	trait = {
+		token = RAJ_mio_trait_apc_research_effort
+		name = RAJ_mio_trait_apc_research_effort
+		icon = GFX_generic_mio_department_icon_facilities
+
+		special_trait_background = yes
+		position = { x=1 y=0 }
+
+		relative_position_id = generic_mio_trait_closed_chassi
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = mechanization_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_weapons_development
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.2
+		}
+	}
+	trait = {
+		token = RAJ_mio_trait_chariot_of_victory
+		name = RAJ_mio_trait_chariot_of_victory
+		icon = GFX_generic_mio_department_icon_mechanized_hull
+		special_trait_background = yes
+
+		position = { x=0 y=1 }	
+		relative_position_id = RAJ_mio_trait_apc_research_effort
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = mechanization_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_encourage_local_arms_production
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_weapons_development
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					OR = {
+						has_completed_focus = SMB_domestic_production
+						has_completed_focus = SMB_foreign_designs
+					}
+				}
+			}
+		}
+
+		limit_to_equipment_type = { mechanized_equipment amphibious_mechanized_equipment }
+		equipment_bonus = {
+			breakthrough = 0.06
+			armor_value = 0.08
 		}
 	}
 }

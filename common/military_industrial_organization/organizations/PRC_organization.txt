@@ -37,6 +37,27 @@ LZI_medium_tank_organization = {
 			}
 		}
 	}
+
+ 	add_trait = {
+ 		token = PRC_factory_617_early_mbt_trait
+ 		name = PRC_factory_617_early_mbt_trait
+ 		icon = GFX_my_custom_mio_custom_1
+ 		special_trait_background = yes
+
+ 		position = { x = 0 y = 1 }
+ 		relative_position_id =	generic_mio_trait_crew_survival_layout
+
+ 		any_parent = { generic_mio_trait_crew_survival_layout generic_mio_trait_spaced_armor generic_mio_trait_sloped_side_armor }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+ 		limit_to_equipment_type = { modern_tank_chassis }
+ 		equipment_bonus = {
+ 			breakthrough = 0.2	
+ 		}
+ 		organization_modifier = {
+ 			military_industrial_organization_research_bonus = 0.15
+ 		}
+ 	}
 }
 
 #####################
@@ -58,6 +79,7 @@ FAS_task_force_ship_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
 			OR = {
@@ -79,6 +101,130 @@ FAS_task_force_ship_organization = {
 		}
 	}
 }
+FAS_task_force_ship_organization_custom = {
+	name = PRC_dalian_shipbuilding_company_organization
+	include = esicolor_generic_task_force_ship_organization
+	icon = GFX_idea_PRC_dalian_shipbuilding_company
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = pacific_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = FAS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 745
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				745 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	tree_header_text = {
+		text = mio_header_systems
+		x = 1
+	}
+	tree_header_text = {
+		text = mio_header_weapons
+		x = 5
+	}
+	tree_header_text = {
+		text = PRC_dalian_shipbuilding_company_organization_header
+		x = 9
+	}
+ 	add_trait = {
+ 		token = PRC_dalian_shipbuilding_company_carrier_learners
+ 		name = PRC_dalian_shipbuilding_company_carrier_learners
+ 		icon = GFX_generic_mio_department_icon_ship_carrier_conversion
+ 		
+ 		special_trait_background = yes 
+
+ 		position = { x = 1 y = 0 }
+ 		relative_position_id = generic_mio_trait_primary_fire_director_control
+
+ 		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = capital_ships_effort
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_expand_naval_variety
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_naval_aviation
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_aircraft_carriers
+				}
+			}
+ 		}
+
+ 		on_complete = { FROM = { add_ideas = PRC_refitting_bonus } }
+
+ 		limit_to_equipment_type =  { mio_cat_eq_all_carrier }
+ 		organization_modifier = {
+ 			military_industrial_organization_size_up_requirement = -0.15
+ 		}
+ 	}
+ 	add_trait = {
+ 		token = PRC_dalian_shipbuilding_company_domestic_carriers_trait
+ 		name = PRC_dalian_shipbuilding_company_domestic_carriers_trait
+ 		icon = GFX_generic_mio_department_icon_ship_carrier_production
+ 		special_trait_background = yes 
+
+ 		position = { x = 0 y = 1 }
+ 		relative_position_id = PRC_dalian_shipbuilding_company_carrier_learners
+
+ 		all_parents = { PRC_dalian_shipbuilding_company_carrier_learners }
+
+ 		limit_to_equipment_type =  { mio_cat_eq_all_carrier }
+ 		production_bonus = {
+ 			production_cost_factor = -0.05
+ 		}
+ 		organization_modifier = {
+ 			military_industrial_organization_funds_gain = 0.25
+ 		}
+ 	}
+ 	add_trait = {
+ 		token = PRC_dalian_shipbuilding_company_mass_production_carriers_trait
+ 		name = PRC_dalian_shipbuilding_company_mass_production_carriers_trait
+ 		icon = GFX_generic_mio_department_icon_ship_carrier_engine
+ 		special_trait_background = yes
+
+ 		position = { x = 0 y = 1 }
+ 		relative_position_id = PRC_dalian_shipbuilding_company_domestic_carriers_trait
+
+ 		all_parents = { PRC_dalian_shipbuilding_company_domestic_carriers_trait }
+
+ 		limit_to_equipment_type =  { mio_cat_eq_all_carrier }
+		equipment_bonus = {
+			build_cost_ic = -0.15
+		}
+ 		organization_modifier = {
+ 			military_industrial_organization_design_team_assign_cost = -0.2
+ 		}
+ 	}
+}
 
 ###########################
 
@@ -97,6 +243,7 @@ FIL_high_agility_fighter_aircraft_organization = {
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
+		has_dlc = "By Blood Alone"
 	}
 	visible = {
 		owner = {
@@ -119,6 +266,113 @@ FIL_high_agility_fighter_aircraft_organization = {
 			}
 		}
 	}
+
+ 	add_trait = {
+ 		token = PRC_shenyang_aircraft_corporation_factory_112_trait
+ 		name = PRC_shenyang_aircraft_corporation_factory_112_trait
+ 		icon = GFX_generic_mio_department_icon_facilities
+ 		special_trait_background = yes
+
+ 		position = { x = 1 y = 2 }
+ 		relative_position_id = generic_mio_trait_fabric_skin
+
+ 		any_parent = {	generic_mio_trait_fabric_skin generic_mio_trait_metal_skin }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+ 		limit_to_equipment_type = { small_plane_airframe_4 cv_small_plane_airframe_4 }
+ 		production_bonus = {
+ 			production_capacity_factor = 0.15
+ 		}
+ 	}
+ 	add_trait = {
+ 		token = PRC_shenyang_aircraft_corporation_domestic_jet_manufacturer_trait
+ 		name = PRC_shenyang_aircraft_corporation_domestic_jet_manufacturer_trait
+ 		icon = GFX_military_industrial_organization_jet_fighter_equipment
+ 		special_trait_background = yes 
+
+ 		position = { x = 1 y = 4 }
+ 		relative_position_id = generic_mio_trait_fabric_skin
+
+ 		all_parents = { PRC_shenyang_aircraft_corporation_factory_112_trait generic_mio_trait_fuel_injection_engines }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+ 		limit_to_equipment_type = { small_plane_airframe_4 cv_small_plane_airframe_4 }
+ 		equipment_bonus = {
+ 			air_agility = 0.15
+ 		}
+ 		production_bonus = {
+ 			production_capacity_factor = 0.1
+ 		}
+ 	}
+}
+FIL_high_agility_fighter_aircraft_organization_no_bba = {
+	name = PRC_shenyang_aircraft_corporation_organization
+	include = esicolor_generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_PRC_shenyang_aircraft_corporation
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = agility_focused_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = FIL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 716
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				716 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+ 	add_trait = {
+ 		token = PRC_shenyang_aircraft_corporation_factory_112_trait
+ 		name = PRC_shenyang_aircraft_corporation_factory_112_trait
+ 		icon = GFX_generic_mio_department_icon_facilities
+ 		special_trait_background = yes
+
+ 		position = { x = 1 y = 2 }
+ 		relative_position_id = generic_mio_trait_fabric_skin
+
+ 		any_parent = {	generic_mio_trait_fabric_skin generic_mio_trait_metal_skin }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+ 		limit_to_equipment_type = { jet_fighter_equipment_1 jet_fighter_equipment_2 jet_tac_bomber_equipment_1 jet_tac_bomber_equipment_2 }
+ 		production_bonus = {
+ 			production_capacity_factor = 0.15
+ 		}
+ 	}
+ 	add_trait = {
+ 		token = PRC_shenyang_aircraft_corporation_domestic_jet_manufacturer_trait
+ 		name = PRC_shenyang_aircraft_corporation_domestic_jet_manufacturer_trait
+ 		icon = GFX_military_industrial_organization_jet_fighter_equipment
+ 		special_trait_background = yes 
+
+ 		position = { x = 1 y = 4 }
+ 		relative_position_id = generic_mio_trait_fabric_skin
+
+ 		all_parents = { PRC_shenyang_aircraft_corporation_factory_112_trait generic_mio_trait_fuel_injection_engines }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+ 		limit_to_equipment_type = { jet_fighter_equipment_1 jet_fighter_equipment_2 jet_tac_bomber_equipment_1 jet_tac_bomber_equipment_2 }
+ 		equipment_bonus = {
+ 			air_agility = 0.15
+ 		}
+ 		production_bonus = {
+ 			production_capacity_factor = 0.1
+ 		}
+ 	}
 }
 
 EZB_multi_role_aircraft_organization = {
@@ -130,6 +384,10 @@ EZB_multi_role_aircraft_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		OR = {
+			NOT = { has_global_flag = custom_designer_traits_enabled }
+			NOT = { has_dlc = "Gotterdammerung" }
+		}
 		owner = {
 			NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
 			OR = {
@@ -150,6 +408,109 @@ EZB_multi_role_aircraft_organization = {
 			}
 		}
 	}
+
+ 	add_trait = {
+ 		token = PRC_harbin_aircraft_industry_group_factory_122_trait
+ 		name = PRC_harbin_aircraft_industry_group_factory_122_trait
+ 		icon = GFX_generic_mio_department_icon_plane_general_conversion
+
+ 		special_trait_background = yes 
+
+ 		relative_position_id = generic_mio_trait_escort_designs
+ 		position = { x = 2 y = 1 }
+
+ 		all_parents = { generic_mio_trait_escort_designs }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+
+ 		production_bonus = {
+ 			production_conversion_speed_factor = 0.1
+ 		}
+ 	}
+}
+EZB_multi_role_aircraft_organization_custom = {
+	name = PRC_harbin_aircraft_industry_group_organization
+	include = esicolor_generic_multi_role_aircraft_organization
+	icon = GFX_idea_PRC_harbin_aircraft
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+		has_dlc = "Gotterdammerung"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = multi_role_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = EZB
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 328
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				328 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	research_categories = { mio_cat_all_light_aircraft_and_modules mio_cat_all_medium_aircraft_and_modules helicopter_tech }
+	equipment_type = {
+		mio_cat_eq_all_small_plane
+		mio_cat_eq_all_medium_plane
+		transport_plane_equipment
+ 		helicopter_equipment ## Include helicopters
+	}
+
+	tree_header_text = {
+		text = PRC_harbin_aircraft_industry_group_organization_header
+		x = 0 
+	}
+	tree_header_text = {
+		text = mio_header_light_aircraft
+		x = 3
+	}
+	tree_header_text = {
+		text = mio_header_medium_aircraft
+		x = 6
+	}
+ 	add_trait = {
+ 		token = PRC_harbin_aircraft_industry_group_harbin_aircraft_manufacturing_plant_trait
+ 		name = PRC_harbin_aircraft_industry_group_harbin_aircraft_manufacturing_plant_trait
+ 		icon = GFX_generic_mio_department_icon_helicopter
+ 		special_trait_background = yes 
+
+ 		position = { x = -3 y = 3 }
+ 		relative_position_id = generic_mio_trait_armored_cockpit
+
+ 		all_parents = { generic_mio_trait_armored_cockpit }
+
+ 		limit_to_equipment_type = { helicopter_equipment }
+ 		production_bonus = {
+ 			production_capacity_factor = 0.15
+ 		}
+ 	}
+ 	add_trait = {
+ 		token = PRC_harbin_aircraft_industry_group_factory_122_trait
+ 		name = PRC_harbin_aircraft_industry_group_factory_122_trait
+ 		icon = GFX_generic_mio_department_icon_plane_general_conversion
+
+ 		special_trait_background = yes 
+
+ 		relative_position_id = generic_mio_trait_escort_designs
+ 		position = { x = 2 y = 1 }
+
+ 		all_parents = { generic_mio_trait_escort_designs }
+
+ 		production_bonus = {
+ 			production_conversion_speed_factor = 0.1
+ 		}
+ 	}
 }
 
 ################################### 
@@ -171,6 +532,7 @@ LIS_support_equipment_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
 			OR = {
@@ -191,4 +553,82 @@ LIS_support_equipment_organization = {
 			}
 		}
 	}
+}
+LIS_support_equipment_organization_custom = {
+	name = PRC_huangyadong_arsenal_organization
+	include = esicolor_generic_support_equipment_organization
+	icon = GFX_idea_PRC_huangyadong_arsenal
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = support_equipment_manufacturer_disabled }
+			OR = {
+				original_tag = LIS
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 615
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				615 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	tree_header_text = {
+		text = mio_header_support
+		x = 1
+	}
+	tree_header_text = {
+		text = PRC_huangyadong_arsenal_organization_header
+		x = 3
+	}
+	tree_header_text = {
+		text = mio_header_weapons
+		x = 6.5
+	}
+	add_trait = {
+ 		token = PRC_huangyadong_arsenal_cave_industry_trait
+ 		name = PRC_huangyadong_arsenal_cave_industry_trait
+ 		icon = GFX_generic_mio_department_icon_tank_general_spg
+ 		special_trait_background = yes 
+
+ 		position = { x = -2 y = 0 }
+ 		relative_position_id = generic_mio_trait_private_scientists_program
+
+ 		production_bonus = {
+ 			production_cost_factor = -0.05
+ 		}
+ 		organization_modifier = {
+ 			military_industrial_organization_design_team_assign_cost = -0.25
+ 		}
+ 	}
+	add_trait = {
+ 		token = PRC_huangyadong_arsenal_jewell_in_the_crown_trait
+ 		name = PRC_huangyadong_arsenal_jewell_in_the_crown_trait
+ 		icon = GFX_generic_mio_trait_icon_unique
+ 		special_trait_background = yes 
+
+ 		position = { x = 0 y = 1 } 
+ 		relative_position_id = PRC_huangyadong_arsenal_cave_industry_trait
+
+ 		all_parents = { PRC_huangyadong_arsenal_cave_industry_trait }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+		} 		
+ 		organization_modifier = {
+ 			military_industrial_organization_funds_gain = 0.1
+ 		}
+ 	}
 }

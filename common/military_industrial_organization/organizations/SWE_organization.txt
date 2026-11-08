@@ -37,6 +37,50 @@ IEB_mobile_tank_organization = {
 			}
 		}
 	}
+
+	trait = {
+		token = SWE_mio_trait_german_landsverk_tech_exchange
+		name = SWE_mio_trait_german_landsverk_tech_exchange
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_streamlined_production
+
+		all_parents = { generic_mio_streamlined_production }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = {
+			if = {
+				limit = { has_global_flag = custom_designers_only_core }
+
+				52 = {
+					OR = {
+						is_core_of = FROM
+						AND = {
+							is_core_of = owner
+							owner = { is_subject_of = FROM }
+						}
+					}
+				}
+			}
+			else = {
+				52 = {
+					OR = {
+						is_owned_by = FROM
+						owner = { is_subject_of = FROM }
+					}
+				}
+			}
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.03
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.08
+		
+		}
+	}
 }
 
 #####################
@@ -109,6 +153,24 @@ IEB_raider_ship_organization = {
 			}
 		}
 	}
+
+	trait = {
+		token = SWE_mio_trait_high_capacity_dockyard
+		name = SWE_mio_trait_high_capacity_dockyard
+		icon = GFX_generic_mio_department_icon_ship_general_production
+		special_trait_background = yes
+
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_semi_armor_piercing_shells
+
+		any_parent = { generic_mio_trait_semi_armor_piercing_shells generic_mio_trait_super_heavy_shells generic_mio_trait_high_velocity_guns }
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = { owner = { has_completed_initial_naval_focus = yes } }
+
+		production_bonus = {
+			production_capacity_factor = 0.06
+		}
+	}
 }
 
 ###########################
@@ -128,6 +190,7 @@ IAO_light_aircraft_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
 			OR = {
@@ -149,7 +212,70 @@ IAO_light_aircraft_organization = {
 		}
 	}
 }
+IAO_light_aircraft_organization_custom = {
+	name = SWE_saab_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_SWE_saab
 
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = IAO
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 140
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				140 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		name = generic_mio_initial_trait_standardized_production
+		
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}	
+		production_bonus = {
+			production_cost_factor = -0.1
+		}
+	}
+	trait = {
+		token = SWE_mio_trait_forefront_of_aeroplane_development
+		name = SWE_mio_trait_forefront_of_aeroplane_development
+		icon = GFX_generic_mio_department_icon_plane_fighter_quality
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_removable_wings
+
+		all_parents = { generic_mio_trait_removable_wings }
+
+		production_bonus = {
+			production_cost_factor = 0.03
+			production_resource_need_factor = -0.1
+		}
+		equipment_bonus = {
+			fuel_consumption = -0.03
+			air_range = 0.08
+			air_agility = 0.03
+			air_defence = 0.05
+		}
+	}
+}
 
 ################################### 
 
@@ -202,6 +328,7 @@ IAI_artillery_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = artillery_manufacturer_disabled }
 			OR = {
@@ -220,6 +347,125 @@ IAI_artillery_organization = {
 			owner = {
 				141 = { state_designer_availabile = yes }
 			}
+		}
+	}
+}
+IAI_artillery_organization_custom = {
+	name = SWE_bofors_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_SWE_bofors
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = IAI
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 141
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				141 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		name = generic_mio_initial_trait_artillery_manufacturer
+
+		equipment_bonus = {
+			air_attack = 0.03
+		}
+	}
+	trait = { 
+		token = SWE_bofors_fly_swatter
+		name = SWE_bofors_fly_swatter
+		icon = GFX_generic_mio_department_icon_anti_air
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_improved_hydraulic_recoil_system
+
+		all_parents = { generic_mio_trait_improved_hydraulic_recoil_system }
+		available = { owner = { has_tech = interwar_antiair } }
+
+		limit_to_equipment_type = { anti_air_equipment }
+		equipment_bonus = {
+			air_attack = 0.1
+			ap_attack = 0.05
+		}
+	}
+	trait = { 
+		token = SWE_bofors_anti_tank_gun
+		name = SWE_bofors_anti_tank_gun
+		icon = GFX_generic_mio_department_icon_anti_tank
+		special_trait_background = yes
+
+		position = { x=-1 y=0 }
+		relative_position_id = generic_mio_trait_improved_hydraulic_recoil_system
+
+		all_parents = { generic_mio_trait_improved_hydraulic_recoil_system }
+		available = { owner = { has_tech = interwar_antitank } }
+
+		limit_to_equipment_type = { anti_tank_equipment }
+		equipment_bonus = {
+			ap_attack = 0.05
+			hard_attack = 0.05
+		}
+		production_bonus = {
+			production_capacity_factor = 0.05 
+		}
+	}
+	trait = { 
+		token = SWE_mio_trait_defense_in_depth
+		name = SWE_mio_trait_defense_in_depth
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_sliding_breech_block
+
+		all_parents = { generic_mio_trait_sliding_breech_block }
+		available = {
+			owner = {
+				if = {
+					limit = { has_focus_tree = generic_focus }
+
+					has_completed_focus = doctrine_effort_2
+				}
+				else_if = {
+					limit = { has_focus_tree = horn_of_africa_tree }
+
+					has_completed_focus = HOA_the_roars_of_thunder
+				}
+				else_if = {
+					limit = { has_focus_tree = china_warlord_sea_focus }
+
+					has_completed_focus = CHI_sea_heavy_weapons_development
+				}
+				else_if = {
+					limit = { has_focus_tree = southern_south_america_focus }
+
+					has_completed_focus = SMB_artillery
+				}
+			}
+		}
+
+		equipment_bonus = {
+			defense = 0.08
+			ap_attack = 0.05
+			hard_attack = 0.05
 		}
 	}
 }

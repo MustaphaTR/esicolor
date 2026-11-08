@@ -110,30 +110,7 @@ YZL_raider_ship_organization_custom = {
 		relative_position_id = generic_mio_trait_long_range_raiding
 
 		any_parent = { generic_mio_trait_long_range_raiding generic_mio_trait_high_speed_raiding }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = naval_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_use_the_natural_harbors
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_investment_into_shipbuilding
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_navy
-				}
-			}
-		}
+		available = { owner = { has_completed_initial_naval_focus = yes } }
 
 		equipment_bonus = {
 			naval_range = 0.05
@@ -233,30 +210,7 @@ YZL_raider_ship_organization_custom = {
 		relative_position_id = FIN_mio_trait_rapid_raiders
 
 		mutually_exclusive = { FIN_mio_trait_rapid_raiders }
-		available = {
-			owner = {
-				if = {
-					limit = { has_focus_tree = generic_focus }
-
-					has_completed_focus = submarine_effort
-				}
-				else_if = {
-					limit = { has_focus_tree = horn_of_africa_tree }
-
-					has_completed_focus = HOA_expand_naval_variety
-				}
-				else_if = {
-					limit = { has_focus_tree = china_warlord_sea_focus }
-
-					has_completed_focus = CHI_sea_modern_submarines
-				}
-				else_if = {
-					limit = { has_focus_tree = southern_south_america_focus }
-
-					has_completed_focus = SMB_raiding_fleet
-				}
-			}
-		}
+		available = { owner = { has_completed_submarine_focus = yes } }
 
 		limit_to_equipment_type = { submarine }
 		equipment_bonus = {

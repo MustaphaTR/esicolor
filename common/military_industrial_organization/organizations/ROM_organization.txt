@@ -1,75 +1,3 @@
-###########################
-
-###  #    ##  #  # ###  ## 
-#  # #   #  # ## # #   #   
-###  #   #### # ## ##   #  
-#    #   #  # #  # #     # 
-#    ### #  # #  # ### ##  
-
-###########################
-
-OBA_light_aircraft_organization = {
-	name = ROM_iar_organization
-	include = esicolor_generic_light_aircraft_organization
-	icon = GFX_idea_ROM_iar
-
-	allowed = {
-		has_dlc = "Arms Against Tyranny"
-	}
-	visible = {
-		owner = {
-			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
-			OR = {
-				original_tag = OBA
-				AND = {
-					has_global_flag = custom_designers_only
-					owns_state = 84
-				}
-			}
-		}
-	}
-	available = {
-		if = {
-			limit = { has_global_flag = custom_designers_only }
-
-			owner = {
-				84 = { state_designer_availabile = yes }
-			}
-		}
-	}
-}
-
-OAL_naval_aircraft_organization = {
-	name = ROM_set_organization
-	include = esicolor_generic_naval_aircraft_organization
-	icon = GFX_idea_ROM_SET
-
-	allowed = {
-		has_dlc = "Arms Against Tyranny"
-	}
-	visible = {
-		owner = {
-			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
-			OR = {
-				original_tag = OAL
-				AND = {
-					has_global_flag = custom_designers_only
-					owns_state = 46
-				}
-			}
-		}
-	}
-	available = {
-		if = {
-			limit = { has_global_flag = custom_designers_only }
-
-			owner = {
-				46 = { state_designer_availabile = yes }
-			}
-		}
-	}
-}
-
 #####################
 
  ## #  # ### ###   ## 
@@ -151,6 +79,7 @@ OFY_raider_ship_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
 			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
 			OR = {
@@ -168,6 +97,139 @@ OFY_raider_ship_organization = {
 
 			owner = {
 				79 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+OFY_raider_ship_organization_custom = {
+	name = ROM_galati_shipyard_organization
+	include = esicolor_generic_raider_ship_organization
+	icon = GFX_idea_generic_coastal_navy
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		has_global_flag = custom_designer_traits_enabled
+		owner = {
+			NOT = { has_country_flag = raiding_fleet_naval_manufacturer_disabled }
+			OR = {
+				original_tag = OFY
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 79
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				79 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	initial_trait = {
+		name = ROM_mio_trait_coastal_defense_production
+
+		limit_to_equipment_type = { mio_cat_eq_all_cruiser }
+		production_bonus = {
+			production_cost_factor = -0.05
+		}
+		equipment_bonus = {
+			lg_attack = 0.05
+			naval_range = -0.1
+		}
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+OBA_light_aircraft_organization = {
+	name = ROM_iar_organization
+	include = esicolor_generic_light_aircraft_organization
+	icon = GFX_idea_ROM_iar
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = light_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OBA
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 84
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				84 = { state_designer_availabile = yes }
+			}
+		}
+	}
+
+	add_trait = {
+		token = generic_mio_trait_heavily_armed_aircraft
+		name = generic_mio_trait_heavily_armed_aircraft
+		icon = GFX_generic_mio_department_icon_plane_fighter_combat
+
+		position = { x=2 y=0 }
+		relative_position_id = generic_mio_trait_advanced_aerodynamics
+
+		visible = { has_global_flag = custom_designer_traits_enabled }
+		available = { owner = { has_completed_initial_air_force_focus = yes } }
+
+		equipment_bonus = {
+			air_attack = 0.05
+			air_ground_attack = 0.05
+		}
+	}
+}
+
+OAL_naval_aircraft_organization = {
+	name = ROM_set_organization
+	include = esicolor_generic_naval_aircraft_organization
+	icon = GFX_idea_ROM_SET
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = naval_aircraft_manufacturer_disabled }
+			OR = {
+				original_tag = OAL
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 46
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				46 = { state_designer_availabile = yes }
 			}
 		}
 	}
