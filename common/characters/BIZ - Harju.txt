@@ -1,15 +1,79 @@
 characters={
 	BIZ_konstantin_pats={
 		name=EST_konstantin_pats
-		portraits={
-			civilian={
-				large=GFX_Portrait_estonia_konstantin_pats
-			}
-		}
+		portraits={ civilian={ large=GFX_Portrait_estonia_konstantin_pats } }
+
 		country_leader={
 			ideology=oligarchism
-			expire="1938.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	BIZ_d_army_chief_drill={
+		instance={
+			allowed={ has_dlc="No Step Back" }
+			name=EST_johan_laidoner
+			portraits={
+				army={
+					large=GFX_portrait_EST_johan_laidoner
+					small=GFX_idea_EST_johan_laidoner
+				}
+			}
+
+			advisor={
+				slot=army_chief
+				idea_token=BIZ_d_army_chief_drill
+				cost=100
+				traits={ army_chief_drill_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						812={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="No Step Back" } }
+			name=EST_johan_laidoner
+			portraits={ army={ small=GFX_portrait_europe_generic_land_10_small } }
+
+			advisor={
+				slot=army_chief
+				idea_token=BIZ_d_army_chief_drill
+				cost=100
+				traits={ army_chief_drill_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						812={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+	}
+	BIZ_ac_army_cavalry={
+		name=EST_richard_veermaa
+		portraits={ army={ small=GFX_idea_generic_army_europe_2 } }
+
+		advisor={
+			slot=high_command
+			idea_token=BIZ_ac_army_cavalry
+			ledger=army
+			cost=100
+			traits={ army_cavalry_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					812={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

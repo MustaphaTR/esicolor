@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = BIZ_konstantin_pats
+recruit_character = BIZ_d_army_chief_drill
+random_character = { limit = { is_character = BIZ_d_army_chief_drill } 812 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = BIZ_ac_army_cavalry
+random_character = { limit = { is_character = BIZ_ac_army_cavalry } 812 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

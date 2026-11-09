@@ -7,11 +7,98 @@ characters={
 				small=GFX_idea_EST_artur_sirk
 			}
 		}
+
 		country_leader={
 			traits={ HUN_popular_among_paramilitaries }
 			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	IYI_c_fascist_demagogue={
+		name=EST_hjalmar_mae
+		portraits={ civilian={ small=GFX_idea_EST_hjalmar_mae } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=IYI_c_fascist_demagogue
+			traits={ fascist_demagogue }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=fascism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					191={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_fascism
+					NOT={ has_government=fascism }
+
+					add=30
+				}
+			}
+		}
+	}
+	IYI_f_veteran_anti_bolshevik={
+		name=EST_viktor_puskar
+		portraits={ civilian={ small=GFX_idea_EST_viktor_puskar } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=IYI_f_veteran_anti_bolshevik
+			traits={ veteran_anti_bolshevik }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					191={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					has_war_support > 0.4
+					has_war_support < 0.5
+
+					add=9
+				}
+			}
+		}
+	}
+	IYI_o_economist={
+		name=EST_johan_pitka
+		portraits={ civilian={ small=GFX_idea_EST_johan_pitka } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=IYI_o_economist
+			traits={ economist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					191={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
 		}
 	}
 }

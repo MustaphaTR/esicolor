@@ -12109,6 +12109,35 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	191 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Hjalmar Mäe
+				limit = { has_trait = fascist_demagogue }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = fascist_demagogue
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = subservient_ultranationalist
+				}
+			}
+			if = { # Johan Pitka
+				limit = { has_trait = economist }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = economist
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = vapsid_economist
+				}
+			}
+		}
+	}
 	212 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -12677,6 +12706,52 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	811 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Voldemar Vöölmann
+				limit = { has_trait = communist_revolutionary }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = socialist_justice
+				}
+			}
+		}
+	}
+	813 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Hendrik Allik
+				limit = { has_trait = propaganda_expert }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = propaganda_expert
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = patriotic_socialist
+				}
+			}
+			if = { # Hendrik Allik
+				limit = { has_trait = editor }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = editor
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = revolutionary_poet
+				}
+			}
+		}
+	}
 	848 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -13190,6 +13265,7 @@ retire_custom_named_advisors = {
 	random_country = { limit = { has_character = OLB_e_anti_fascist_agent } retire_character = OLB_e_anti_fascist_agent } # Hans Oster
 	random_country = { limit = { has_character = OFS_q_socialist_firebrand_union_women } retire_character = OFS_q_socialist_firebrand_union_women } # Bozena Machacova-Dostalova
 	random_country = { limit = { has_character = IOO_i_progressive_doctor } retire_character = IOO_i_progressive_doctor } # Olaf J Thorlacius
+	random_country = { limit = { has_character = IYI_f_veteran_anti_bolshevik } retire_character = IYI_f_veteran_anti_bolshevik } # Viktor Puskar
 	random_country = { limit = { has_character = ZBZ_u_nakajima_president } retire_character = ZBZ_u_nakajima_president } # Chikuhei Nakajima
 	if = {
 		limit = { NOT = { has_dlc = "No Step Back" } }

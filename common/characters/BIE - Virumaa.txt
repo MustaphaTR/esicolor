@@ -7,11 +7,188 @@ characters={
 				small=GFX_idea_EST_johannes_kabin
 			}
 		}
+
 		country_leader={
 			traits={ HUN_ardent_stalinist }
 			ideology=stalinism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	BIE_f_propaganda_expert={
+		name=EST_henrik_allik
+		portraits={ civilian={ small=GFX_idea_EST_hendrik_allik } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=BIE_f_propaganda_expert
+			traits={ propaganda_expert }
+
+			available={
+				if={
+					limit={
+						has_focus_tree=horn_of_africa_tree
+						has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+					}
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					813={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					has_war_support > 0.4
+					has_war_support < 0.5
+
+					add=9
+				}
+				modifier={
+					has_global_flag=custom_advisors_only
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=29
+				}
+			}
+		}
+	}
+	BIE_i_backroom_backstabber={
+		name=EST_boris_kumm
+		portraits={ civilian={ small=GFX_idea_EST_boris_kumm } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=BIE_i_backroom_backstabber
+			traits={ backroom_backstabber }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					813={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=5 }
+		}
+	}
+	BIE_j_editor={
+		name=EST_august_jakobson
+		portraits={ civilian={ small=GFX_idea_EST_august_jakobson } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=BIE_j_editor
+			traits={ editor }
+
+			available={
+				if={
+					limit={
+						has_focus_tree=horn_of_africa_tree
+						has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+					}
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					813={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=5
+
+				modifier={
+					has_global_flag=custom_advisors_only
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=25
+				}
+			}
+		}
+	}
+	BIE_c_air_chief_all_weather={
+		name=EST_richard_tomberg
+		portraits={ army={ small=GFX_idea_generic_air_europe_1 } }
+
+		advisor={
+			slot=air_chief
+			idea_token=BIE_c_air_chief_all_weather
+			cost=100
+			traits={ air_chief_all_weather_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					813={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	BIE_aa_army_infantry={
+		instance={
+			allowed={ has_dlc="No Step Back" }
+			name=EST_nikolay_g_karotamm
+			portraits={
+				army={
+					large=GFX_portrait_EST_nikolai_karotamm # Not used in basegame, maybe something better to do with him?
+					small=GFX_idea_EST_nikolai_karotamm
+				}
+			}
+
+			advisor={
+				slot=high_command
+				idea_token=BIE_aa_army_infantry
+				ledger=army
+				cost=100
+				traits={ army_infantry_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						813={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="No Step Back" } }
+			name=EST_nikolay_g_karotamm
+			portraits={ army={ small=GFX_Portrait_Europe_Generic_land_2_small } }
+
+			advisor={
+				slot=high_command
+				idea_token=BIE_aa_army_infantry
+				ledger=army
+				cost=100
+				traits={ army_infantry_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						813={ is_core_of=ROOT }
+					}
+				}
+			}
 		}
 	}
 }

@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = OIE_jaan_tonisson
+recruit_character = OIE_e_popular_figurehead
+random_character = { limit = { is_character = OIE_e_popular_figurehead } 191 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

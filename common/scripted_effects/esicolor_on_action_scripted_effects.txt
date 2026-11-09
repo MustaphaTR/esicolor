@@ -979,6 +979,54 @@ handle_special_generals = {
 			}
 		}
 	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = IYI_artur_sirk ruling_only = yes }
+
+				NOT = { has_global_flag = andres_larka_created }
+			}
+		}
+
+		set_global_flag = andres_larka_created
+		set_character_name = EST_andres_larka
+		set_character_flag = special_general
+
+		if = {
+			limit = { has_dlc = "No Compromise, No Surrender" }
+
+			set_portraits = {
+				civilian = {
+					large=GFX_portrait_EST_andres_larka
+					small=GFX_idea_EST_andres_larka
+				}
+				army = {
+					large=GFX_portrait_EST_andres_larka
+					small=GFX_idea_EST_andres_larka
+				}
+				navy = {
+					large=GFX_portrait_EST_andres_larka
+					small=GFX_idea_EST_andres_larka
+				}
+			}
+		}
+		else = {
+			set_portraits = {
+				civilian = {
+					large=GFX_portrait_europe_generic_land_15
+					small=GFX_portrait_europe_generic_land_15_small
+				}
+				army = {
+					large=GFX_portrait_europe_generic_land_15
+					small=GFX_portrait_europe_generic_land_15_small
+				}
+				navy = {
+					large=GFX_portrait_europe_generic_land_15
+					small=GFX_portrait_europe_generic_land_15_small
+				}
+			}
+		}
+	}
 }
 
 handle_special_admirals = {

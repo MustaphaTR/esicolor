@@ -1,9 +1,7 @@
 characters={
 	BII_jaan_anvelt={
 		instance = {
-			allowed = {
-				has_dlc = "No Step Back"
-			}
+			allowed = { has_dlc = "No Step Back" }
 			name=EST_jaan_anvelt
 			portraits={
 				civilian={
@@ -11,28 +9,59 @@ characters={
 					small=GFX_idea_EST_jaan_anvelt
 				}
 			}
+
 			country_leader={
 				traits={ baltic_revolutionary }
 				ideology=stalinism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
 		instance = {
-			allowed = {
-				NOT = { has_dlc = "No Step Back" }
-			}
+			allowed = { NOT = { has_dlc = "No Step Back" } }
 			name=EST_jaan_anvelt
-			portraits={
-				civilian={
-					large=GFX_Portrait_Europe_Generic_navy_1
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_Europe_Generic_navy_1 } }
+
 			country_leader={
 				traits={ baltic_revolutionary }
 				ideology=stalinism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	BII_d_communist_revolutionary={
+		name=EST_voldemar_voolman
+		portraits={ civilian={ small=GFX_idea_EST_voldemar_voolmann } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=BII_d_communist_revolutionary
+			traits={ communist_revolutionary }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					811={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=30
+				}
 			}
 		}
 	}

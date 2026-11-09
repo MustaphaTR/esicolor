@@ -21,6 +21,16 @@ set_politics = {
 }
 
 recruit_character = BIE_johannes_kabin
+recruit_character = BIE_f_propaganda_expert
+random_character = { limit = { is_character = BIE_f_propaganda_expert } 813 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = BIE_i_backroom_backstabber
+random_character = { limit = { is_character = BIE_i_backroom_backstabber } 813 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = BIE_j_editor
+random_character = { limit = { is_character = BIE_j_editor } 813 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = BIE_c_air_chief_all_weather
+random_character = { limit = { is_character = BIE_c_air_chief_all_weather } 813 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = BIE_aa_army_infantry
+random_character = { limit = { is_character = BIE_aa_army_infantry } 813 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes
