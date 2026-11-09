@@ -1,15 +1,61 @@
 ﻿characters={
 	OII_antanas_smetona={
 		name=LIT_antanas_smetona
-		portraits={
-			civilian={
-				large=GFX_Portrait_lithuania_antanas_smetona
-			}
-		}
+		portraits={ civilian={ large=GFX_Portrait_lithuania_antanas_smetona } }
+
 		country_leader={
 			ideology=oligarchism
-			expire="1938.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OII_e_popular_figurehead={
+		name=LIT_vladas_mironas
+		portraits={ civilian={ small=GFX_portrait_LIT_vladas_mironas_small } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OII_e_popular_figurehead
+			traits={ popular_figurehead }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					11={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					has_stability > 0.35
+					has_stability < 0.5
+
+					add=9
+				}
+			}
+		}
+	}
+	OII_p_captain_of_industry={
+		name=LIT_vladas_jurgutis
+		portraits={ civilian={ small=GFX_idea_LIT_vladas_jurgutis } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OII_p_captain_of_industry
+			traits={ captain_of_industry }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					11={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
 		}
 	}
 }

@@ -11404,6 +11404,40 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	11 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Vladas Mironas
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = priestly_prime_minister
+				}
+			}
+		}
+	}
+	12 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Jānis Rudzutaks
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = marxist_fundamentalist
+				}
+			}
+		}
+	}
 	37 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -12105,6 +12139,23 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = marxist_academic
+				}
+			}
+		}
+	}
+	189 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Antanas Venclova
+				limit = { has_trait = editor }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = editor
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = revolutionary_poet
 				}
 			}
 		}

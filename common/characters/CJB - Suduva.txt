@@ -7,11 +7,80 @@ characters={
 				small=GFX_idea_LIT_kazys_grinius
 			}
 		}
+
 		country_leader={
 			traits={ democratic_crusader }
 			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	CJB_l_compassionate_gentleman={
+		name=LIT_leonas_bistras
+		portraits={ civilian={ small=GFX_portrait_LIT_leonas_bistras_small } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=CJB_l_compassionate_gentleman
+			traits={ compassionate_gentleman }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					814={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=5 }
+		}
+	}
+	CJB_h_prince_of_terror={
+		name=LIT_mykolas_slezevicius
+		portraits={ civilian={ small=GFX_idea_LIT_mykolas_slezevicius } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=CJB_h_prince_of_terror
+			traits={ prince_of_terror }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					814={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					any_owned_state={ resistance > 50 }
+
+					add=9
+				}
+			}
+		}
+	}
+	BIA_i_backroom_backstabber={
+		name=LIT_jonas_staugaitis
+		portraits={ civilian={ small=GFX_idea_LIT_jonas_staugaitis } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=BIA_i_backroom_backstabber
+			traits={ backroom_backstabber }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					814={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=5 }
 		}
 	}
 }

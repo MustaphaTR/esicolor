@@ -58,6 +58,17 @@
 
 			available={
 				if={
+					limit={
+						has_focus_tree=horn_of_africa_tree
+						has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+					}
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
 					limit={ has_global_flag=custom_advisors_only_core }
 
 					12={ is_core_of=ROOT }
@@ -72,6 +83,13 @@
 					has_stability < 0.5
 
 					add=9
+				}
+				modifier={
+					has_global_flag=custom_advisors_only
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=29
 				}
 			}
 		}

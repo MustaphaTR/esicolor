@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = OII_antanas_smetona
+recruit_character = OII_e_popular_figurehead
+random_character = { limit = { is_character = OII_e_popular_figurehead } 11 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OII_p_captain_of_industry
+random_character = { limit = { is_character = OII_p_captain_of_industry } 11 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

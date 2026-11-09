@@ -21,6 +21,12 @@ set_politics = {
 }
 
 recruit_character = CJB_kazys_grinius
+recruit_character = CJB_l_compassionate_gentleman
+random_character = { limit = { is_character = CJB_l_compassionate_gentleman } 814 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = CJB_h_prince_of_terror
+random_character = { limit = { is_character = CJB_h_prince_of_terror } 814 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = BIA_i_backroom_backstabber
+random_character = { limit = { is_character = BIA_i_backroom_backstabber } 814 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

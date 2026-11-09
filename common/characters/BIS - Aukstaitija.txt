@@ -96,4 +96,26 @@ characters={
 			}
 		}
 	}
+
+	#Advisors
+	BIS_ab_army_artillery={
+		name=LIT_juoza_barzda_bradauskas
+		portraits={ army={ small=GFX_idea_generic_army_europe_1 } }
+
+		advisor={
+			slot=high_command
+			idea_token=BIS_ab_army_artillery
+			ledger=army
+			cost=100
+			traits={ army_artillery_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					815={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
 }

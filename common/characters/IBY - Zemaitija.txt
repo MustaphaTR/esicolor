@@ -7,10 +7,71 @@ characters={
 				small=GFX_idea_LIT_antanas_snieskus
 			}
 		}
+
 		country_leader={
 			ideology=stalinism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	IBY_j_editor={
+		name=LIT_antanas_venclova
+		portraits={ civilian={ small=GFX_idea_LIT_antanas_venclova } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=IBY_j_editor
+			traits={ editor }
+
+			available={
+				if={
+					limit={
+						has_focus_tree=horn_of_africa_tree
+						has_global_flag=custom_advisors_only # Adjusted trait gives access to ideology changing.
+					}
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					189={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=5
+
+				modifier={
+					has_global_flag=custom_advisors_only
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=25
+				}
+			}
+		}
+	}
+	IBY_d_army_chief_drill={
+		name=GER_wilhelm_keitel
+		portraits={ army={ small=GFX_idea_generic_army_europe_2 } }
+
+		advisor={
+			slot=army_chief
+			idea_token=IBY_d_army_chief_drill
+			cost=200
+			traits={ army_chief_drill_3 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					189={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = IBY_antanas_snieckus
+recruit_character = IBY_j_editor
+random_character = { limit = { is_character = IBY_j_editor } 189 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = IBY_d_army_chief_drill
+random_character = { limit = { is_character = IBY_d_army_chief_drill } 189 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes
