@@ -1027,6 +1027,62 @@ handle_special_generals = {
 			}
 		}
 	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = ZEI_noe_zhordania ruling_only = yes }
+
+				NOT = { has_global_flag = giorgi_kvinitadze_created }
+			}
+		}
+
+		set_global_flag = giorgi_kvinitadze_created
+		set_character_name = GEO_giorgi_kvinitadze
+		set_character_flag = special_general
+
+		set_portraits = {
+			civilian = {
+				large=GFX_portrait_GEO_giorgi_kvinitadze
+				small=GFX_portrait_GEO_giorgi_kvinitadze_small
+			}
+			army = {
+				large=GFX_portrait_GEO_giorgi_kvinitadze
+				small=GFX_portrait_GEO_giorgi_kvinitadze_small
+			}
+			navy = {
+				large=GFX_portrait_GEO_giorgi_kvinitadze
+				small=GFX_portrait_GEO_giorgi_kvinitadze_small
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:creator = {
+				has_country_leader = { character = ZEI_noe_zhordania ruling_only = yes }
+
+				NOT = { has_global_flag = shalva_maglakelidze_created }
+			}
+		}
+
+		set_global_flag = shalva_maglakelidze_created
+		set_character_name = GEO_shalva_maglakelidze
+		set_character_flag = special_general
+
+		set_portraits = {
+			civilian = {
+				large=GFX_portrait_GEO_shalva_maglakelidze
+				small=GFX_portrait_GEO_shalva_maglakelidze_small
+			}
+			army = {
+				large=GFX_portrait_GEO_shalva_maglakelidze
+				small=GFX_portrait_GEO_shalva_maglakelidze_small
+			}
+			navy = {
+				large=GFX_portrait_GEO_shalva_maglakelidze
+				small=GFX_portrait_GEO_shalva_maglakelidze_small
+			}
+		}
+	}
 }
 
 handle_special_admirals = {
