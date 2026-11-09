@@ -1,9 +1,7 @@
 characters={
 	BIO_janis_balodis={
-		instance = {
-			allowed = {
-				has_dlc = "No Step Back"
-			}
+		instance={
+			allowed={ has_dlc="No Step Back" }
 			name=LAT_janis_balodis
 			portraits={
 				civilian={
@@ -11,28 +9,71 @@ characters={
 					small=GFX_idea_LAT_janis_balodis
 				}
 			}
+
 			country_leader={
 				traits={ latvian_militant }
 				ideology=oligarchism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "No Step Back" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="No Step Back" } }
 			name=LAT_janis_balodis
-			portraits={
-				civilian={
-					large=GFX_Portrait_Europe_Generic_3
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_Europe_Generic_3 } }
+
 			country_leader={
 				traits={ latvian_militant }
 				ideology=oligarchism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	BIO_aa_army_infantry={
+		instance={
+			allowed={ has_dlc="No Step Back" }
+			name=LAT_krisjanis_berkis
+			portraits={
+				army={
+					large=GFX_portrait_LAT_krisjanis_berkis
+					small=GFX_idea_LAT_krisjanis_berkis
+				}
+			}
+
+			advisor={
+				slot=high_command
+				idea_token=BIO_aa_army_infantry
+				ledger=army
+				cost=100
+				traits={ army_infantry_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						810={ is_core_of=ROOT }
+					}
+				}
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="No Step Back" } }
+			name=LAT_krisjanis_berkis
+			portraits={ army={ small=GFX_Portrait_Europe_Generic_land_5_small } }
+
+			advisor={
+				slot=high_command
+				idea_token=BIO_aa_army_infantry
+				ledger=army
+				cost=100
+				traits={ army_infantry_2 }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						810={ is_core_of=ROOT }
+					}
+				}
 			}
 		}
 	}

@@ -1573,7 +1573,15 @@ esicolor_formables = {
 				}
 			}
 
-			set_cosmetic_tag = BAL_ESTONIA
+			if = {
+				limit = { has_country_leader = { character = BII_jaan_anvelt ruling_only = yes } }
+
+				set_cosmetic_tag = BAL_ESTONIA_COMMUNE
+
+				else = {
+					set_cosmetic_tag = BAL_ESTONIA
+				}
+			}
 
 			hidden_effect = {
 				every_state = {

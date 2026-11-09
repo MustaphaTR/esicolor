@@ -485,6 +485,10 @@ defined_text = {
 defined_text = {
 	name = GetIdeologyDef_BAL_ESTONIA
 	text = {
+		trigger = { has_country_leader = { character = BII_jaan_anvelt ruling_only = yes } }
+		localization_key = BAL_ESTONIA_COMMUNE_communism_DEF
+	}
+	text = {
 		trigger = { has_government = neutrality }
 		localization_key = BAL_ESTONIA_neutrality_DEF
 	}

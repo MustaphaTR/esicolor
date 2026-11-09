@@ -21,6 +21,8 @@ set_politics = {
 }
 
 recruit_character = BIO_janis_balodis
+recruit_character = BIO_aa_army_infantry
+random_character = { limit = { is_character = BIO_aa_army_infantry } 810 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

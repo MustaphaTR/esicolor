@@ -1,16 +1,118 @@
 ﻿characters={
 	OIZ_vilis_lacis={
 		name=LAT_vilis_lacis
-		portraits={
-			civilian={
-				large=GFX_portrait_lat_vilis_lacis
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_lat_vilis_lacis } }
+
 		country_leader={
 			traits={ anti_bolshevik_leftist }
 			ideology=marxism
-			expire="1938.1.1.1"
-			id=-1
+		}
+	}
+	
+	#Advisors
+	OIZ_d_communist_revolutionary={
+		name=LAT_augusts_kirhensteins
+		portraits={ civilian={ small=GFX_idea_LAT_augusts_kirhensteins } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OIZ_d_communist_revolutionary
+			traits={ communist_revolutionary }
+
+			available={
+				if={
+					limit={ has_focus_tree=horn_of_africa_tree }
+
+					OR={
+						has_government=communism
+						has_completed_focus=HOA_a_change_in_course
+					}
+				}
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					12={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=0
+
+				modifier={
+					has_country_flag=ai_go_communism
+					NOT={ has_government=communism }
+
+					add=30
+				}
+			}
+		}
+	}
+	OIZ_e_popular_figurehead={
+		name=LAT_janis_rudzutaks
+		portraits={ civilian={ small=GFX_idea_LAT_janis_rudzutaks } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OIZ_e_popular_figurehead
+			traits={ popular_figurehead }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					12={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={
+				factor=1
+
+				modifier={
+					has_stability > 0.35
+					has_stability < 0.5
+
+					add=9
+				}
+			}
+		}
+	}
+	OIZ_a_army_chief_offensive={
+		name=LAT_arturs_sprogis
+		portraits={ army={ small=GFX_idea_generic_army_europe_2 } }
+
+		advisor={
+			slot=army_chief
+			idea_token=OIZ_a_army_chief_offensive
+			cost=100
+			traits={ army_chief_offensive_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					12={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OIZ_cg_navy_screen={
+		name=LAT_janis_berzins
+		portraits={ army={ small=GFX_idea_generic_navy_europe_3 } }
+
+		advisor={
+			slot=high_command
+			idea_token=OIZ_cg_navy_screen
+			ledger=navy
+			cost=100
+			traits={ navy_screen_2 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					12={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

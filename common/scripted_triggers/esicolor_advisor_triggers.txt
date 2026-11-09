@@ -34,6 +34,7 @@ has_custom_democratic_reformer = {
 		original_tag = ESE
 		original_tag = BOI
 		original_tag = BOA
+		original_tag = BOB
 		original_tag = YSL
 	}
 }
@@ -54,6 +55,7 @@ has_custom_fascist_demagogue = {
 }
 has_custom_communist_revolutionary = {
 	OR = {
+		original_tag = OIZ
 		original_tag = OES
 		original_tag = OSE
 		original_tag = OLO
@@ -82,6 +84,7 @@ has_custom_communist_revolutionary = {
 has_custom_popular_figurehead = {
 	OR = {
 		original_tag = OOS
+		original_tag = OIZ
 		original_tag = OIE
 		original_tag = OAS
 		original_tag = OFS
@@ -326,6 +329,7 @@ has_custom_military_theorist = {
 		original_tag = IOF
 		original_tag = EAL
 		original_tag = FZE
+		original_tag = BOB
 		original_tag = YZI
 	}
 }
@@ -410,6 +414,7 @@ has_custom_rocket_scientist = {
 ### Chiefs of Army
 has_custom_army_chief_offensive = {
 	OR = {
+		original_tag = OIZ
 		original_tag = OLA
 		original_tag = OFI
 		original_tag = IIO
@@ -573,6 +578,7 @@ has_custom_army_infantry = {
 	OR = {
 		original_tag = OOY
 		original_tag = OIO
+		original_tag = BIO
 		original_tag = BIE
 	}
 }
@@ -683,7 +689,7 @@ has_custom_navy_capital_ship = {
 }
 has_custom_navy_screen = {
 	OR = {
-		
+		original_tag = OIZ
 	}
 }
 has_custom_navy_carrier = {
@@ -737,5 +743,98 @@ has_custom_air_air_combat_training = {
 		original_tag = OYZ
 		original_tag = YIZ
 		original_tag = YFS
+	}
+}
+
+has_advisor_with_communist_trait = {
+	custom_trigger_tooltip = {
+		tooltip = has_communist_revolutionary
+
+		OR = {
+			has_idea_with_trait = communist_revolutionary
+			has_idea_with_trait = ambitious_union_boss
+			has_idea_with_trait = ARG_communist_insurrectionist
+			has_idea_with_trait = communist_orator
+			has_idea_with_trait = marxist_philosopher
+			has_idea_with_trait = marxist_academic
+			has_idea_with_trait = GER_proletarian_leader
+			has_idea_with_trait = patriotic_socialist
+			has_idea_with_trait = revolutionary_author
+			has_idea_with_trait = HUN_internationalist_marxist
+			has_idea_with_trait = ARG_socialist_feminist
+			has_idea_with_trait = AUS_communist_revolutionary
+			has_idea_with_trait = colonial_communist
+			has_idea_with_trait = SWI_soviet_spy
+			has_idea_with_trait = leftist_intellectual
+			has_idea_with_trait = socialist_writer
+			has_idea_with_trait = revolutionary_poet
+			has_idea_with_trait = PHI_coconut_scientist
+			has_idea_with_trait = NOR_the_womens_front
+			has_idea_with_trait = NOR_radical_trade_unionist
+			has_idea_with_trait = socialist_justice
+			has_idea_with_trait = marxist_fundamentalist
+		}
+	}
+}
+
+has_advisor_with_democratic_trait = {
+	custom_trigger_tooltip = {
+		tooltip = has_democratic_reformer
+
+		OR = {
+			has_idea_with_trait = democratic_reformer
+			has_idea_with_trait = social_reformer
+			has_idea_with_trait = democratic_firebrand
+			has_idea_with_trait = HUN_democracy_advocate
+			has_idea_with_trait = HUN_popular_liberal
+			has_idea_with_trait = socdem_reformist
+			has_idea_with_trait = democratic_crusader
+			has_idea_with_trait = liberal_journalist
+			has_idea_with_trait = womens_rights_activist
+			has_idea_with_trait = gifted_shipping_magnate
+			has_idea_with_trait = leader_of_the_agrarian_union
+			has_idea_with_trait = subservient_democrat
+			has_idea_with_trait = subservient_democrat_democratic
+		}
+	}
+}
+
+has_advisor_with_fascist_trait = {
+	custom_trigger_tooltip = {
+		tooltip = has_fascist_demagogue
+
+		OR = {
+			has_idea_with_trait = fascist_demagogue
+			has_idea_with_trait = syncretic_revanchist
+			has_idea_with_trait = GER_revolutionary_nationalist_advisor
+			has_idea_with_trait = harsh_propagandist
+			has_idea_with_trait = avid_turanist
+			has_idea_with_trait = nazi_sympathizer
+			has_idea_with_trait = national_socialist_paramilitarist
+			has_idea_with_trait = falangist_militarist
+			has_idea_with_trait = fascist_corporatist
+			has_idea_with_trait = JUNO_agricultural_national_socialist
+			has_idea_with_trait = JUNO_national_socialist_occultist
+			has_idea_with_trait = hierarch_minister_of_foreign_affairs
+			has_idea_with_trait = hierarch_minister_of_foreign_affairs_no_bop
+			has_idea_with_trait = SLO_head_of_the_radical_wing
+		}
+	}
+}
+
+has_advisor_with_non_aligned_trait = {
+	custom_trigger_tooltip = {
+		tooltip = has_staunch_monarchist
+
+		OR = {
+			has_idea_with_trait = staunch_monarchist
+			has_idea_with_trait = staunch_traditionalist
+			has_idea_with_trait = grand_vizier_nursi
+			has_idea_with_trait = JUNO_mapuche_traditionalist
+			has_idea_with_trait = JUNO_mapuche_economist
+			has_idea_with_trait = right_industrialist
+			has_idea_with_trait = monarchist_media_mogul
+			has_idea_with_trait = subservient_democrat
+		}
 	}
 }
