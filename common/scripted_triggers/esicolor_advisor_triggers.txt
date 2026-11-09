@@ -24,9 +24,8 @@ has_custom_democratic_reformer = {
 		original_tag = OSO
 		original_tag = OFI
 		original_tag = OBE
-		if = {
-			limit = { NOT = { has_dlc = "Arms Against Tyranny" } }
-
+		AND = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
 			original_tag = IOO
 		}
 		original_tag = ISS
@@ -227,9 +226,8 @@ has_custom_economist = {
 	OR = {
 		original_tag = OOY
 		original_tag = OFZ
-		if = {
-			limit = { has_dlc = "Arms Against Tyranny" }
-
+		AND = {
+			has_dlc = "Arms Against Tyranny"
 			original_tag = IOO
 		}
 		original_tag = IYI
@@ -434,16 +432,14 @@ has_custom_army_chief_defensive = {
 		original_tag = OOY
 		original_tag = OAE
 		original_tag = IOF
-		if = {
-			limit = { NOT = { has_dlc = "La Resistance" } }
-
+		AND = {
+			NOT = { has_dlc = "La Resistance" }
 			original_tag = ISZ
 		}
 		original_tag = EIB
 		original_tag = EZA
-		if = {
-			limit = { NOT = { has_dlc = "No Step Back" } }
-
+		AND = {
+			NOT = { has_dlc = "No Step Back" }
 			original_tag = BIS
 		}
 	}
@@ -567,9 +563,8 @@ has_custom_air_chief_reform = {
 		original_tag = ISZ
 		original_tag = ABF
 		original_tag = FZE
-		if = {
-			limit = { has_dlc = "No Step Back" }
-
+		AND = {
+			has_dlc = "No Step Back"
 			original_tag = BIS
 		}
 	}
