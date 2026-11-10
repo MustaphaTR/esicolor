@@ -1,5 +1,19 @@
 ideas = {
 	country = {
+		# Custom ESI Ideas
+		BALTIC_revolutionary_cabinet_idea = {
+			name = BALTIC_revolutionary_cabinet
+			picture = generic_communism_drift_bonus
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				political_advisor_cost_factor = -0.50
+			}
+		}
+
+		# Basegame Ideas
 		BALTIC_international_brigades = {
 			picture = generic_volunteer_expedition_bonus
 

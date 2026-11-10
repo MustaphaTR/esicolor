@@ -110,11 +110,11 @@ shared_focus = {
 			popularity = 0.05
 		}
 		if = {
-			limit = { 
+			limit = {
 				suitable_fascist_major_on_same_continent = yes 
 			}
 			random_other_country = {
-				limit = { 
+				limit = {
 					is_major = yes
 					capital_scope = { is_on_continent = europe }
 					exists = yes
@@ -769,7 +769,7 @@ shared_focus = {
 			limit = { suitable_democratic_major_same_continent = yes }
 
 			random_other_country = {
-				limit = { 
+				limit = {
 					is_major = yes
 					capital_scope = { is_on_continent = europe }
 					exists = yes
@@ -1058,7 +1058,7 @@ shared_focus = {
 			limit = { suitable_democratic_major_same_continent = yes }
 
 			random_other_country = {
-				limit = { 
+				limit = {
 					is_major = yes
 					capital_scope = { is_on_continent = europe }
 					exists = yes
@@ -1121,7 +1121,7 @@ shared_focus = {
 			limit = { suitable_democratic_major_same_continent = yes }
 
 			random_other_country = {
-				limit = { 
+				limit = {
 					is_major = yes
 					capital_scope = { is_on_continent = europe }
 					exists = yes
@@ -2093,10 +2093,8 @@ shared_focus = {
 			ideology = communism
 			popularity = 0.1
 		}
-		add_ideas = {
-			BALTIC_restore_workers_republic_idea
-			BALTIC_catholic_opposition_idea
-		}
+		add_ideas = { BALTIC_restore_workers_republic_idea }
+		add_ideas = { BALTIC_catholic_opposition_idea }
 
 		if = {
 			limit = {
@@ -2236,22 +2234,26 @@ shared_focus = {
 	completion_reward = {
 		army_experience = 75
 
-		create_corps_commander = {
-			traits = { JAP_communist_sympathizer infantry_officer }
-			attack_skill = 3
-			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 3
-			skill = 3
+		hidden_effect = {
+			create_corps_commander = {
+				traits = { communist_sympathizer infantry_officer }
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 3
+				skill = 3
+			}
+			create_corps_commander = {
+				traits = { communist_sympathizer war_hero }
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+				skill = 3
+			}
 		}
-		create_corps_commander = {
-			traits = { JAP_communist_sympathizer war_hero }
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 3
-			skill = 3
-		}
+		custom_effect_tooltip = BALTIC_soviet_military_staff_infantry_officer_tt
+		custom_effect_tooltip = BALTIC_soviet_military_staff_war_hero_tt
 	}
 }
 
@@ -2296,7 +2298,7 @@ shared_focus = {
 			BALTIC_save_communist_benefactor = yes
 		}
 		var:communist_benefactor = {
-			add_opinion_modifier = { 
+			add_opinion_modifier = {
 				target = ROOT
 				modifier = large_decrease
 			}
@@ -2404,7 +2406,7 @@ shared_focus = {
 			BALTIC_save_communist_benefactor = yes
 		}
 		var:communist_benefactor = {
-			add_opinion_modifier = { 
+			add_opinion_modifier = {
 				target = ROOT
 				modifier = accepted_catholics
 			}
@@ -2480,9 +2482,7 @@ shared_focus = {
 		}
 	}
 
-	bypass = {
-		has_government = communism
-	}
+	bypass = { has_government = communism }
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
@@ -2581,11 +2581,11 @@ shared_focus = {
 		if = {
 			limit = { has_completed_focus = BALTIC_soviet_volunteer_forces }
 
-			division_template = { 
+			division_template = {
 				name = "Soviet Volunteers"
 				division_names_group = SOV_INF_01
 				is_locked = yes
-				regiments = { 
+				regiments = {
 					infantry = { x = 0 y = 0 }
 					infantry = { x = 1 y = 0 }
 					infantry = { x = 2 y = 0 }
@@ -2609,23 +2609,23 @@ shared_focus = {
 			}
 			random_owned_controlled_state = {
 				hidden_effect = {
-					create_unit = { 
+					create_unit = {
 						division = "name = \"1. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
 						owner = ROOT
 					}
-					create_unit = { 
+					create_unit = {
 						division = "name = \"2. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
 						owner = ROOT
 					}
-					create_unit = { 
+					create_unit = {
 						division = "name = \"3. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
 						owner = ROOT
 					}
-					create_unit = { 
+					create_unit = {
 						division = "name = \"4. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
 						owner = ROOT
 					}
-					create_unit = { 
+					create_unit = {
 						division = "name = \"5. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
 						owner = ROOT
 					}
@@ -3006,41 +3006,14 @@ shared_focus = {
 
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
-		#if = {
-		#	limit = {
-		#		original_tag = LIT
-		#	}
-		#	custom_effect_tooltip = available_political_advisor
-		#	show_ideas_tooltip = LIT_mecislovas_gedvilas
-		#	custom_effect_tooltip = available_political_advisor
-		#	show_ideas_tooltip = LIT_antanas_venclova
-		#	custom_effect_tooltip = available_political_advisor
-		#	show_ideas_tooltip = LIT_vincas_mickevicius_kapsukas
-		#}
-		#if = {
-		#	limit = {
-		#		original_tag = LAT
-		#	}
-		#	custom_effect_tooltip = available_political_advisor
-		#	show_ideas_tooltip = LAT_janis_sudrabkalns
-		#	custom_effect_tooltip = available_political_advisor
-		#	show_ideas_tooltip = LAT_emilija_veinberga
-		#	custom_effect_tooltip = available_political_advisor
-		#	show_ideas_tooltip = LAT_janis_rudzutaks
-		#	custom_effect_tooltip = available_political_advisor
-		#	show_ideas_tooltip = LAT_karlis_baumanis
-		#}
-		#if = {
-		#	limit = {
-		#		original_tag = EST
-		#	}
-		#	custom_effect_tooltip = available_political_advisor
-		#	show_ideas_tooltip = EST_august_jakobson
-		#	custom_effect_tooltip = available_political_advisor
-		#	show_ideas_tooltip = EST_voldemar_voolman
-		#	custom_effect_tooltip = available_political_advisor
-		#	show_ideas_tooltip = EST_henrik_allik
-		#}
+		if = {
+			limit = { has_global_flag = custom_advisors_only }
+
+			add_ideas = BALTIC_revolutionary_cabinet_idea
+		}
+		else = {
+			BALTIC_generate_communist_advisors = yes
+		}
 	}
 }
 
@@ -3062,7 +3035,6 @@ shared_focus = {
 	available = {
 		has_civil_war = yes
 		any_other_country = {
-			original_tag = SOV
 			has_government = communism
 			has_war = no
 		}
@@ -3217,11 +3189,11 @@ shared_focus = {
 
 	search_filters = { FOCUS_FILTER_MANPOWER }
 	completion_reward = {
-		division_template = { 
+		division_template = {
 			name = "Red Riflemen"
 			division_names_group = SOV_INF_01
 			is_locked = no
-			regiments = { 
+			regiments = {
 				infantry = { x = 0 y = 0 }
 				infantry = { x = 1 y = 0 }
 				infantry = { x = 2 y = 0 }
@@ -3244,23 +3216,23 @@ shared_focus = {
 			}
 		}
 		random_owned_controlled_state = {
-			create_unit = { 
+			create_unit = {
 				division = "name = \"1. Red Riflemen\" division_template = \"Red Riflemen\" start_experience_factor = 0.5" 
 				owner = ROOT
 			}
-			create_unit = { 
+			create_unit = {
 				division = "name = \"2. Red Riflemen\" division_template = \"Red Riflemen\" start_experience_factor = 0.5" 
 				owner = ROOT
 			}
-			create_unit = { 
+			create_unit = {
 				division = "name = \"3. Red Riflemen\" division_template = \"Red Riflemen\" start_experience_factor = 0.5" 
 				owner = ROOT
 			}
-			create_unit = { 
+			create_unit = {
 				division = "name = \"4. Red Riflemen\" division_template = \"Red Riflemen\" start_experience_factor = 0.5" 
 				owner = ROOT
 			}
-			create_unit = { 
+			create_unit = {
 				division = "name = \"5. Red Riflemen\" division_template = \"Red Riflemen\" start_experience_factor = 0.5" 
 				owner = ROOT
 			}

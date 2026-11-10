@@ -21,17 +21,17 @@ set_politics = {
 }
 
 recruit_character = OIO_ignacy_moscicki
-recruit_character = OIO_b_democratic_reformer
-random_character = { limit = { is_character = OIO_b_democratic_reformer } 10 = { add_to_array = { state_advisors = PREV } } }
-recruit_character = OIO_m_smooth_talking_charmer
-random_character = { limit = { is_character = OIO_m_smooth_talking_charmer } 10 = { add_to_array = { state_advisors = PREV } } }
-recruit_character = OIO_p_captain_of_industry
-random_character = { limit = { is_character = OIO_p_captain_of_industry } 10 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OIO_ab_democratic_reformer
+random_character = { limit = { is_character = OIO_ab_democratic_reformer } 10 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OIO_bi_smooth_talking_charmer
+random_character = { limit = { is_character = OIO_bi_smooth_talking_charmer } 10 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OIO_bl_captain_of_industry
+random_character = { limit = { is_character = OIO_bl_captain_of_industry } 10 = { add_to_array = { state_advisors = PREV } } }
 if = {
 	limit = { has_dlc = "La Resistance" }
 
-	recruit_character = OIO_w_code_breaker
-	random_character = { limit = { is_character = OIO_w_code_breaker } 10 = { add_to_array = { state_advisors = PREV } } }
+	recruit_character = OIO_db_code_breaker
+	random_character = { limit = { is_character = OIO_db_code_breaker } 10 = { add_to_array = { state_advisors = PREV } } }
 }
 recruit_character = OIO_b_air_chief_ground_support
 random_character = { limit = { is_character = OIO_b_air_chief_ground_support } 10 = { add_to_array = { state_advisors = PREV } } }

@@ -750,6 +750,15 @@ has_custom_air_air_combat_training = {
 	}
 }
 
+has_communist_advisor_trait = {
+	OR = {
+		has_trait = communist_revolutionary
+		has_trait = patriotic_socialist
+		has_trait = revolutionary_poet
+		has_trait = socialist_justice
+		has_trait = marxist_fundamentalist
+	}
+}
 has_advisor_with_communist_trait = {
 	custom_trigger_tooltip = {
 		tooltip = has_communist_revolutionary

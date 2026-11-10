@@ -21,15 +21,15 @@ set_politics = {
 }
 
 recruit_character = SOO_getulio_vargas
-recruit_character = SOO_k_ideological_crusader
-random_character = { limit = { is_character = SOO_k_ideological_crusader } 500 = { add_to_array = { state_advisors = PREV } } }
-recruit_character = SOO_l_compassionate_gentleman
-random_character = { limit = { is_character = SOO_l_compassionate_gentleman } 500 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = SOO_bg_ideological_crusader
+random_character = { limit = { is_character = SOO_bg_ideological_crusader } 500 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = SOO_bh_compassionate_gentleman
+random_character = { limit = { is_character = SOO_bh_compassionate_gentleman } 500 = { add_to_array = { state_advisors = PREV } } }
 if = {
 	limit = { has_dlc = "La Resistance" }
 
-	recruit_character = SOO_v_head_of_intelligence
-	random_character = { limit = { is_character = SOO_v_head_of_intelligence } 500 = { add_to_array = { state_advisors = PREV } } }
+	recruit_character = SOO_da_head_of_intelligence
+	random_character = { limit = { is_character = SOO_da_head_of_intelligence } 500 = { add_to_array = { state_advisors = PREV } } }
 }
 
 set_rule = {

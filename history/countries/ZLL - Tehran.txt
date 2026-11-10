@@ -21,13 +21,13 @@ set_politics = {
 }
 
 recruit_character = ZLL_reza_shah_pahlavi
-recruit_character = ZLL_p_captain_of_industry
-random_character = { limit = { is_character = ZLL_p_captain_of_industry } 266 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = ZLL_bl_captain_of_industry
+random_character = { limit = { is_character = ZLL_bl_captain_of_industry } 266 = { add_to_array = { state_advisors = PREV } } }
 if = {
 	limit = { has_dlc = "La Resistance" }
 
-	recruit_character = ZLL_v_head_of_intelligence
-	random_character = { limit = { is_character = ZLL_v_head_of_intelligence } 266 = { add_to_array = { state_advisors = PREV } } }
+	recruit_character = ZLL_da_head_of_intelligence
+	random_character = { limit = { is_character = ZLL_da_head_of_intelligence } 266 = { add_to_array = { state_advisors = PREV } } }
 }
 
 set_rule = {

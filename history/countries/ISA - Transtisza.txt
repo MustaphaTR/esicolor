@@ -21,13 +21,13 @@ set_politics = {
 }
 
 recruit_character = ISA_matyas_rakosi
-recruit_character = ISA_d_communist_revolutionary
-random_character = { limit = { is_character = ISA_d_communist_revolutionary } 154 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = ISA_ad_communist_revolutionary
+random_character = { limit = { is_character = ISA_ad_communist_revolutionary } 154 = { add_to_array = { state_advisors = PREV } } }
 if = {
 	limit = { has_dlc = "La Resistance" }
 
-	recruit_character = ISA_v_head_of_intelligence
-	random_character = { limit = { is_character = ISA_v_head_of_intelligence } 154 = { add_to_array = { state_advisors = PREV } } }
+	recruit_character = ISA_da_head_of_intelligence
+	random_character = { limit = { is_character = ISA_da_head_of_intelligence } 154 = { add_to_array = { state_advisors = PREV } } }
 }
 
 set_rule = {

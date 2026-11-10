@@ -21,15 +21,15 @@ set_politics = {
 }
 
 recruit_character = ISZ_arthur_seyss_inquart
-recruit_character = ISZ_f_propaganda_expert
-random_character = { limit = { is_character = ISZ_f_propaganda_expert } 152 = { add_to_array = { state_advisors = PREV } } }
-recruit_character = ISZ_j_editor
-random_character = { limit = { is_character = ISZ_j_editor } 152 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = ISZ_bb_propaganda_expert
+random_character = { limit = { is_character = ISZ_bb_propaganda_expert } 152 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = ISZ_bf_editor
+random_character = { limit = { is_character = ISZ_bf_editor } 152 = { add_to_array = { state_advisors = PREV } } }
 if = { # These are the same person, but i'm putting them as separate characters for ordering's sake.
 	limit = { has_dlc = "La Resistance" }
 
-	recruit_character = ISZ_v_head_of_intelligence
-	random_character = { limit = { is_character = ISZ_v_head_of_intelligence } 152 = { add_to_array = { state_advisors = PREV } } }
+	recruit_character = ISZ_da_head_of_intelligence
+	random_character = { limit = { is_character = ISZ_da_head_of_intelligence } 152 = { add_to_array = { state_advisors = PREV } } }
 
 	else = {
 		recruit_character = ISZ_b_army_chief_defensive

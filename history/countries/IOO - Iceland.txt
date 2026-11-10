@@ -20,23 +20,23 @@ set_politics = {
 	elections_allowed = yes
 }
 
-recruit_character = IOO_b_democratic_reformer
-recruit_character = IOO_o_economist
+recruit_character = IOO_ab_democratic_reformer
+recruit_character = IOO_bk_economist
 if = {
 	limit = { has_dlc = "Arms Against Tyranny" }
 
-	random_character = { limit = { is_character = IOO_o_economist } 100 = { add_to_array = { state_advisors = PREV } } }
+	random_character = { limit = { is_character = IOO_bk_economist } 100 = { add_to_array = { state_advisors = PREV } } }
 
 	else = {
-		random_character = { limit = { is_character = IOO_b_democratic_reformer } 100 = { add_to_array = { state_advisors = PREV } } }
+		random_character = { limit = { is_character = IOO_ab_democratic_reformer } 100 = { add_to_array = { state_advisors = PREV } } }
 	}
 }
-recruit_character = IOO_e_popular_figurehead
-random_character = { limit = { is_character = IOO_e_popular_figurehead } 100 = { add_to_array = { state_advisors = PREV } } }
-recruit_character = IOO_i_progressive_doctor
-random_character = { limit = { is_character = IOO_i_progressive_doctor } 100 = { add_to_array = { state_advisors = PREV } } }
-recruit_character = IOO_p_captain_of_industry
-random_character = { limit = { is_character = IOO_p_captain_of_industry } 100 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = IOO_ba_popular_figurehead
+random_character = { limit = { is_character = IOO_ba_popular_figurehead } 100 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = IOO_be_progressive_doctor
+random_character = { limit = { is_character = IOO_be_progressive_doctor } 100 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = IOO_bl_captain_of_industry
+random_character = { limit = { is_character = IOO_bl_captain_of_industry } 100 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes
