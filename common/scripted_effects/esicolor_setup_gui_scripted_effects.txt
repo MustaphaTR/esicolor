@@ -816,18 +816,20 @@ setup_gui_start_forts = {
 		limit = { check_variable = { global.setup_forts > -1 } }
 
 		clear_forts = yes
-		set_building_level = {
-			type = bunker
-			level = global.setup_forts
-			province = { all_provinces = yes limit_to_victory_point = yes }
-			instant_build = yes
-		}
-		set_building_level = {
-			type = coastal_bunker
-			level = global.setup_forts
-			province = { all_provinces = yes limit_to_victory_point = yes }
-			instant_build = yes
-		}
+		#every_state = {
+		#	set_building_level = {
+		#		type = bunker
+		#		level = global.setup_forts
+		#		province = { all_provinces = yes limit_to_victory_point = yes }
+		#		instant_build = yes
+		#	}
+		#	set_building_level = {
+		#		type = coastal_bunker
+		#		level = global.setup_forts
+		#		province = { all_provinces = yes limit_to_victory_point = yes }
+		#		instant_build = yes
+		#	}
+		#}
 	}
 }
 
