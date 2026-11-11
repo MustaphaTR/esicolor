@@ -1,0 +1,833 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = news
+
+# Hindenburg Disaster
+news_event = {
+	id = news.42
+	title = news.42.t
+	desc = news.42.d
+	picture = GFX_news_event_025
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = hindenburg_destroyed
+	}
+	
+	option = {
+		name = news.42.a
+	}
+}
+
+# Hindenburg Disaster Averted
+news_event = {
+	id = news.43
+	title = news.43.t
+	desc = news.43.d
+	picture = GFX_news_event_hindenburg_intact
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = hindenburg_survives
+	}
+	
+	option = {
+		name = news.43.a
+	}
+}
+
+# Amelia Earhart Disappears
+news_event = {
+	id = news.48
+	title = news.48.t
+	desc = news.48.d
+	picture = GFX_news_event_028
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = earhart_disappeared
+	}
+	
+	option = {
+		name = news.48.a
+	}
+}
+
+# Amelia Earhart Completes World Flight
+news_event = {
+	id = news.49
+	title = news.49.t
+	desc = news.49.d
+	picture = GFX_news_event_028
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.49.a
+	}
+}
+
+# Hindenburg Trigger (HIDDEN)
+news_event = {
+
+	id = news.51
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1937.5.5
+		date < 1939.5.5
+		country_exists = USA
+		country_exists = GER
+		USA = { has_war = no }
+		GER = { has_war = no }
+		GER = { has_civil_war = no }
+		NOT = { has_global_flag = hindenburg_destroyed }
+		NOT = { has_global_flag = hindenburg_event_in_progress }
+	}
+
+	mean_time_to_happen = {
+		days = 240
+	}
+	
+	immediate = {
+		random_list = {
+			70 = {
+				modifier = {
+					factor = 0
+					has_global_flag = GER_air_safety_regulations_flag
+				}
+				USA = { news_event = { id = news.42 } }
+			}
+			30 = { USA = { news_event = { id = news.43 } } }
+		}
+	}
+	
+	option = {
+		name = news.51.a
+	}
+}
+
+# Amelia Earhart Trigger (HIDDEN)
+news_event = {
+	id = news.54
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1937.7.1
+		NOT = { has_global_flag = earhart_disappeared}
+		country_exists = USA
+		USA = { has_war = no }
+		NOT = { has_country_flag = amelia_active_ace }
+	}
+	
+	immediate = {
+		random_list = {
+			50 = { ENG = { news_event = { id = news.48 } } }
+			50 = { ENG = { news_event = { id = news.49 } } }
+		}
+	}
+	
+	option = {
+		name = news.54.a
+	}
+}
+
+# Games of the XI Olympiad
+news_event = {
+	id = news.66
+	title = news.66.t
+	desc = {
+		text = news.66.d
+		trigger = {
+			NOT = { has_global_flag = GER_civil_war_end }
+		}
+	}
+	desc = {
+		text = news.66.d.b
+		trigger = {
+			has_global_flag = GER_civil_war_end
+		}
+	}
+	picture = GFX_news_event_olympics_1940
+	
+	major = yes
+	
+	trigger = {
+		date > 1936.8.15
+		NOT = { has_global_flag = olympics_1936 }
+		NOT = { has_global_flag = civil_war_olympics }
+		country_exists = GER
+		country_exists = USA
+		GER = { has_war = no }
+		GER = { has_civil_war = no }
+		FRA = { has_war = no }
+		ENG = { has_war = no }
+		USA = { has_war = no }
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	immediate = {
+		set_global_flag = olympics_1936 
+	}
+	
+	option = {
+		name = news.66.a
+		trigger = { 
+			NOT = { TAG = GER }
+		}
+	}
+	option = {
+		name = news.66.b
+		trigger = { TAG = GER }
+	}
+}
+
+# Games of the XII Olympiad (Tokyo)
+news_event = {
+	id = news.67
+	title = news.67.t
+	desc = news.67.d
+	picture = GFX_news_event_070
+	
+	major = yes
+	
+	trigger = {
+		date > 1940.10.5
+		has_global_flag = olympics_1936 
+		NOT = {
+			has_global_flag = olympics_jap_1940
+			has_global_flag = olympics_fin_1940
+		}
+		country_exists = JAP
+		country_exists = USA
+		country_exists = GER
+		GER = { has_war = no }
+		FRA = { has_war = no }
+		ENG = { has_war = no }
+		USA = { has_war = no }
+		JAP = { has_war = no }
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	immediate = {
+		set_global_flag = olympics_jap_1940
+	}
+	
+	option = {
+		name = news.66.a
+	}
+}
+
+# Games of the XII Olympiad (Helsinki)
+news_event = {
+	id = news.68
+	title = news.67.t
+	desc = news.68.d
+	picture = GFX_news_event_069
+	
+	major = yes
+	
+	trigger = {
+		date > 1940.8.3
+		has_global_flag = olympics_1936
+		NOT = {
+			has_global_flag = olympics_jap_1940
+			has_global_flag = olympics_fin_1940
+		}
+		country_exists = FIN
+		country_exists = USA
+		country_exists = GER
+		country_exists = ITA
+		JAP = { has_war = yes }
+		FIN = { has_war = no }
+		ITA = { has_war = no }
+		SOV = { has_war = no }
+		GER = { has_war = no }
+		FRA = { has_war = no }
+		ENG = { has_war = no }
+		USA = { has_war = no }
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	immediate = {
+		set_global_flag = olympics_fin_1940
+	}
+	
+	option = {
+		name = news.66.a
+	}
+}
+
+# Baltic country annexed (base event baltic.5)
+news_event = {
+	id = news.69
+	title = news.69.t
+	desc = news.69.d
+	picture = GFX_news_event_064
+
+	major = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_global_flag = news.69_fired }
+	}
+
+	immediate = {
+		set_global_flag = news.69_fired
+	}
+	
+	option = {
+		name = news.69.a
+		trigger = {
+			has_government = communism
+		}
+	}
+
+	option = {
+		name = news.69.b
+		trigger = {
+			NOT = {
+				has_government = communism
+			}
+		}
+	}
+}
+
+#Baltic country puppeted (base event baltic.5)
+news_event = {
+	id = news.70
+	title = news.70.t
+	desc = news.70.d
+	picture = GFX_news_event_064
+
+	major = yes
+
+	trigger = {
+		NOT = { has_global_flag = news.70_fired }
+	}
+
+	immediate = {
+		set_global_flag = news.70_fired
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.69.a
+		trigger = {
+			has_government = communism
+		}
+	}
+
+	option = {
+		name = news.69.b
+		trigger = {
+			NOT = {
+				has_government = communism
+			}
+		}
+	}
+}
+
+#Hidden event to trigger actual annexation (base event baltic.5)
+news_event = {
+	id = news.71
+
+	hidden = yes
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { FROM = { tag = LIT } }
+		 	SOV = {
+		 		annex_country = {
+				target = LIT
+				transfer_troops = yes } 
+				add_named_threat = { threat = 2 name = soviet.35_threat_LIT }
+			}
+		}
+		if = {
+			limit = { FROM = { tag = FIN } }
+		 	SOV = { 
+		 		annex_country = {
+				target = FIN
+				transfer_troops = yes } 
+				add_named_threat = { threat = 5 name = soviet.35_threat_FIN }
+			}
+		}
+		if = {
+			limit = { FROM = { tag = EST } }
+		 	SOV = { 
+		 		annex_country = {
+				target = EST
+				transfer_troops = yes } 
+				add_named_threat = { threat = 2 name = soviet.35_threat_EST }
+			}
+		}
+		if = {
+			limit = { FROM = { tag = LAT } }
+		 	SOV = {
+		 		annex_country = {
+				target = LAT
+				transfer_troops = yes }
+				add_named_threat = { threat = 2 name = soviet.35_threat_LAT }
+			}
+		}
+	}
+}
+
+# Faction Founded!
+news_event = {
+	id = news.159
+	title = news.159.t
+	desc = {
+		text = news.159.d_01
+		trigger = { FROM = { has_government = neutrality } }
+	}
+	desc = {
+		text = news.159.d_02
+		trigger = { FROM = { has_government = democratic } }
+	}
+	desc = {
+		text = news.159.d_03
+		trigger = { FROM = { has_government = fascism } }
+	}
+	desc = {
+		text = news.159.d_04
+		trigger = { FROM = { has_government = communism } }
+	}
+
+	picture = GFX_news_event_009
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			NOT = { tag = FROM }
+			NOT = { is_in_faction_with = FROM }
+		}
+		name = news.159.a
+		every_other_country = {
+			limit = { is_in_faction_with = FROM }
+			custom_effect_tooltip = news.159.tt
+		}
+	}
+	option = {
+		trigger = { tag = FROM }
+		name = news.159.b
+	}
+	option = {
+		trigger = {
+			NOT = { tag = FROM }
+			is_in_faction_with = FROM
+		}
+		name = news.159.c
+	}
+}
+
+#FROM pursues nuclear technology
+news_event = {
+	id = news.174
+	title = news.174.t
+	picture = GFX_news_event_069
+	desc = news.174.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	#We should follow this development.
+	option = {
+		name = news.174.a
+		trigger = {
+			NOT = {
+				is_in_faction_with = FROM
+				has_war_with = FROM
+				tag = FROM
+			}
+		}
+	}
+
+	#Let us hope their research bears fruit.
+	option = {
+		name = news.174.b
+		trigger = {
+			is_in_faction_with = FROM
+			NOT = {
+				tag = FROM
+			}
+		}
+	}
+
+	#It will never amount to anything.
+	option = {
+		name = news.174.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+
+	#We will conduct our research in secret.
+	option = {
+		name = news.174.e
+		trigger = {
+			tag = FROM
+		}
+	}
+}
+
+#No bananas
+news_event = {
+	id = news.218
+	title = news.218.t
+	desc = news.218.d
+	picture = GFX_news_event_worker_protests
+
+	trigger = {
+		state_originally_from_UKD = yes
+		OR = {
+			has_idea = war_economy
+			has_idea = tot_economic_mobilisation
+			has_idea = totaler_krieg_economy
+		}
+		any_collection_element = {
+			collection = game:all_majors
+			has_war_with = FROM
+		}
+		controls_state = 126
+	}
+
+	mean_time_to_happen = {
+		months = 16
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = news.218.a
+	}
+}
+
+news_event = {
+	id = news.235
+	title = news.235.t
+	desc = news.235.d
+	picture = GFX_news_event_generic_sign_treaty1
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = OLA
+		has_government = fascism
+		378 = { owner = { has_war_with = OLA } }
+		divisions_in_state = {
+			state = 378
+			size > 3
+		}
+		NOT = {
+			OR = {
+				has_global_flag = chaplin_seized
+				has_global_flag = chaplin_resistance
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = chaplin_seized
+		}
+	}
+
+	option = {
+		name = news.235.a
+	}
+}
+
+#NZL finishes Bob Semple tank
+news_event = {
+	id = news.270
+	title = news.270.t
+	desc = news.270.desc
+	picture = GFX_news_event_glorious_vehicle
+
+	major = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		state_originally_from_NZL = yes
+		OR = {
+			has_tech = basic_light_tank 
+			has_tech = basic_light_tank_chassis
+		}
+	}
+
+	option = {
+		name = news.270.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = news.270.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+}
+
+#NZL finishes Big Bob tank
+news_event = {
+	id = news.271
+	title = news.271.t
+	desc = news.271.desc
+	picture = GFX_news_event_glorious_vehicle
+
+	major = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		state_originally_from_NZL = yes
+		has_tech = super_heavy_tank
+	}
+
+	option = {
+		name = news.271.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = news.271.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+}
+
+# GENERIC nation joins an Alliance
+news_event = {
+	id = news.289
+	title = news.289.t
+	picture = GFX_news_event_generic_sign_treaty3
+	desc = news.289.d
+
+	major = yes
+
+	is_triggered_only = yes
+	trigger = { # Added to minimise the amount of spam non-chinese player about the United Front joining
+		FROM = { 
+			is_chinese_warlord = no
+			NOT = {
+				has_faction_template = faction_template_chinese_united_front
+				is_ally_with = event_target:WTT_current_china_leader 
+			}
+		}
+	}
+
+	#Together we will prevail.
+	option = {
+		name = news.289.a
+		trigger = {
+			OR = {
+				has_country_flag = alliance_inviter@FROM
+				has_country_flag = alliance_applicant@FROM
+			}
+		}
+		hidden_effect = {
+			clr_country_flag = alliance_inviter@FROM
+			clr_country_flag = alliance_applicant@FROM
+		}
+	}
+
+	#They prepare for what is coming.
+	option = {
+		name = news.289.b
+		trigger = {
+			NOT = { FROM = { has_war = yes } }
+			event_target:alliance_inviter = {
+				NOT = { has_war = yes }
+			}
+			NOT = {
+				any_allied_country = {
+					has_country_flag = alliance_applicant@FROM
+				}
+			}
+			AND = {
+				NOT = { has_country_flag = alliance_inviter@FROM }
+				NOT = { has_country_flag = alliance_applicant@FROM }
+			}
+		}
+		hidden_effect = {
+			clr_country_flag = alliance_inviter@FROM
+			clr_country_flag = alliance_applicant@FROM
+		}
+	}
+
+	#It will not avail them!
+	option = {
+		name = news.289.c
+		trigger = {
+			any_enemy_country = {
+				OR = {
+					has_country_flag = alliance_inviter@FROM
+					has_country_flag = alliance_applicant@FROM
+				}
+			}
+		}
+		hidden_effect = {
+			clr_country_flag = alliance_inviter@FROM
+			clr_country_flag = alliance_applicant@FROM
+		}
+	}
+
+	#The war escalates...
+	option = {
+		name = news.289.e
+		trigger = {
+			NOT = {
+				any_allied_country = {
+					OR = {
+						has_country_flag = alliance_inviter@FROM
+						has_country_flag = alliance_applicant@FROM
+					}
+				}
+				any_enemy_country = {
+					OR = {
+						has_country_flag = alliance_inviter@FROM
+						has_country_flag = alliance_applicant@FROM
+					}
+				}
+			}
+			event_target:alliance_inviter = {
+				has_war = yes
+			}
+			AND = {
+				NOT = { has_country_flag = alliance_inviter@FROM }
+				NOT = { has_country_flag = alliance_applicant@FROM }
+			}
+		}
+		hidden_effect = {
+			clr_country_flag = alliance_inviter@FROM
+			clr_country_flag = alliance_applicant@FROM
+		}
+	}
+
+	#Our alliance grows stronger.
+	option = {
+		name = news.289.f
+		trigger = {
+			any_allied_country = {
+				OR = {
+					has_country_flag = alliance_inviter@FROM
+					has_country_flag = alliance_applicant@FROM
+				}
+			}
+			AND = {
+				NOT = { has_country_flag = alliance_inviter@FROM }
+				NOT = { has_country_flag = alliance_applicant@FROM }
+			}
+		}
+		hidden_effect = {
+			clr_country_flag = alliance_inviter@FROM
+			clr_country_flag = alliance_applicant@FROM
+		}
+	}
+}
+
+
+news_event = { #Nuclear Reactor Tested
+	id = news.338
+	title = news.338.t
+	desc = news.338.desc
+	picture = GFX_news_event_journalists_speech
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.338.a
+		trigger = {
+			NOT = {	TAG = FROM }
+		}
+	}
+	option = {
+		name = news.338.b
+		trigger = { 
+			TAG = FROM 
+		}
+	}
+}
+
+### Country reunited
+news_event = {
+	id = news.350
+	title = news.350.t
+	desc = news.350.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.350.a
+		trigger = {
+			original_tag = ROOT
+			NOT = { has_government = ROOT }
+		}
+	}
+	option = {
+		name = news.350.b
+		trigger = {
+			original_tag = ROOT
+			has_government = ROOT
+		}
+	}
+	option = {
+		name = news.350.c
+		trigger = {
+			NOT = {
+				original_tag = ROOT
+			}
+		}
+	}
+}
