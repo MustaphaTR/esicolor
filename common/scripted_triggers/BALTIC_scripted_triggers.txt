@@ -1,3 +1,14 @@
+suitable_fascist_major_in_europe = {
+	any_other_country = {
+		is_major = yes
+		capital_scope = { is_on_continent = europe }
+		exists = yes
+		has_capitulated = no
+		has_government = fascism
+		NOT = { has_war_with = ROOT }
+	}
+}
+
 suitable_fascist_major_on_same_continent = {
 	any_other_country = {
 		is_major = yes
