@@ -669,6 +669,9 @@ setup_gui_start_general = {
 	setup_gui_start_province_modifiers = yes
 	setup_gui_start_resources = yes
 
+	setup_gui_start_islands = yes
+	setup_gui_start_continents = yes
+
 	every_country = {
 		limit = { NOT = { original_tag = OOO } }
 
@@ -707,8 +710,6 @@ setup_gui_start_general = {
 	setup_gui_start_starting_army = yes
 
 	setup_gui_start_starting_regions = yes
-	setup_gui_start_islands = yes
-	setup_gui_start_continents = yes
 
 	setup_gui_start_formables = yes
 	setup_gui_start_resource_prospecting = yes
@@ -1469,9 +1470,7 @@ setup_gui_start_islands = {
 
 		every_state = {
 			limit = { is_seperate_island_state = yes }
-			OOO = {
-				transfer_state = PREV
-			}
+			OOO = { transfer_state = PREV }
 		}
 		set_global_flag = islands_removed_seperate
 	}
@@ -1480,9 +1479,7 @@ setup_gui_start_islands = {
 
 		every_state = {
 			limit = { is_unconnected_island_state = yes }
-			OOO = {
-				transfer_state = PREV
-			}
+			OOO = { transfer_state = PREV }
 		}
 		set_global_flag = islands_removed_unconnected
 	}
@@ -1491,9 +1488,7 @@ setup_gui_start_islands = {
 
 		every_state = {
 			limit = { is_island_state_esicolor = yes }
-			OOO = {
-				transfer_state = PREV
-			}
+			OOO = { transfer_state = PREV }
 		}
 		set_global_flag = islands_removed_all
 	}
@@ -1505,9 +1500,7 @@ setup_gui_start_continents = {
 
 		every_state = {
 			limit = { is_on_continent = europe }
-			OOO = {
-				transfer_state = PREV
-			}
+			OOO = { transfer_state = PREV }
 		}
 		set_global_flag = europe_removed
 	}
@@ -1516,9 +1509,7 @@ setup_gui_start_continents = {
 
 		every_state = {
 			limit = { is_on_continent = north_america }
-			OOO = {
-				transfer_state = PREV
-			}
+			OOO = { transfer_state = PREV }
 		}
 		set_global_flag = north_america_removed
 	}
@@ -1527,9 +1518,7 @@ setup_gui_start_continents = {
 
 		every_state = {
 			limit = { is_on_continent = south_america }
-			OOO = {
-				transfer_state = PREV
-			}
+			OOO = { transfer_state = PREV }
 			if = { limit = { has_dynamic_modifier = { modifier = idea_PAR_river_navy } } remove_dynamic_modifier = { modifier = idea_PAR_river_navy } } # This increases resistance and causes Paraguay to rise up against the wasteland tag, remove it.
 		}
 		set_global_flag = south_america_removed
@@ -1539,9 +1528,7 @@ setup_gui_start_continents = {
 
 		every_state = {
 			limit = { is_on_continent = australia }
-			OOO = {
-				transfer_state = PREV
-			}
+			OOO = { transfer_state = PREV }
 		}
 		set_global_flag = australia_removed
 	}
@@ -1550,9 +1537,7 @@ setup_gui_start_continents = {
 
 		every_state = {
 			limit = { is_on_continent = asia }
-			OOO = {
-				transfer_state = PREV
-			}
+			OOO = { transfer_state = PREV }
 		}
 		set_global_flag = asia_removed
 	}
@@ -1561,9 +1546,7 @@ setup_gui_start_continents = {
 
 		every_state = {
 			limit = { is_on_continent = africa }
-			OOO = {
-				transfer_state = PREV
-			}
+			OOO = { transfer_state = PREV }
 		}
 		set_global_flag = africa_removed
 	}
@@ -1572,9 +1555,7 @@ setup_gui_start_continents = {
 
 		every_state = {
 			limit = { is_on_continent = middle_east }
-			OOO = {
-				transfer_state = PREV
-			}
+			OOO = { transfer_state = PREV }
 		}
 		set_global_flag = middle_east_removed
 	}
