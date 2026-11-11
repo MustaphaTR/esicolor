@@ -554,7 +554,14 @@ retire_fortification_engineer = {
 			has_trait = fortification_engineer
 		}
 
-		retire = yes
+		if = {
+			limit = { is_character = YFZ_bo_fortification_engineer }
+
+			remove_advisor_role = { slot = political_advisor }
+		}
+		else = {
+			retire = yes
+		}
 	}
 }
 generate_generic_quartermaster_general = {
@@ -1061,7 +1068,14 @@ retire_air_warfare_theorist = {
 			has_trait = air_warfare_theorist
 		}
 
-		retire = yes
+		if = {
+			limit = { is_character = ABF_j_air_warfare_theorist }
+
+			remove_advisor_role = { slot = theorist }
+		}
+		else = {
+			retire = yes
+		}
 	}
 }
 generate_generic_victory_through_airpower = {
@@ -1560,7 +1574,14 @@ retire_army_chief_old_guard = {
 			has_trait = army_chief_old_guard
 		}
 
-		retire = yes
+		if = {
+			limit = { is_character = YFZ_bo_fortification_engineer }
+
+			remove_advisor_role = { slot = army_chief }
+		}
+		else = {
+			retire = yes
+		}
 	}
 }
 ### Chiefs of Navy
@@ -1966,7 +1987,14 @@ retire_air_chief_reform = {
 			}
 		}
 
-		retire = yes
+		if = {
+			limit = { is_character = ABF_j_air_warfare_theorist }
+
+			remove_advisor_role = { slot = air_chief }
+		}
+		else = {
+			retire = yes
+		}
 	}
 }
 generate_generic_air_chief_old_guard = {
