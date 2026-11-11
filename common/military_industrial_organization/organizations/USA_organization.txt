@@ -1338,12 +1338,17 @@ EYE_motorized_mechanized_organization = {
 	visible = {
 		NOT = { has_global_flag = custom_designer_traits_enabled }
 		owner = {
-			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
 			OR = {
-				original_tag = EYE
+				has_completed_focus = BALTIC_ford_motors
 				AND = {
-					has_global_flag = custom_designers_only
-					owns_state = 393
+					NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+					OR = {
+						original_tag = EYE
+						AND = {
+							has_global_flag = custom_designers_only
+							owns_state = 393
+						}
+					}
 				}
 			}
 		}
@@ -1353,7 +1358,10 @@ EYE_motorized_mechanized_organization = {
 			limit = { has_global_flag = custom_designers_only }
 
 			owner = {
-				393 = { state_designer_availabile = yes }
+				OR = {
+					has_completed_focus = BALTIC_ford_motors
+					393 = { state_designer_availabile = yes }
+				}
 			}
 		}
 	}
@@ -1369,12 +1377,17 @@ EYE_motorized_mechanized_organization_custom = {
 	visible = {
 		has_global_flag = custom_designer_traits_enabled
 		owner = {
-			NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
 			OR = {
-				original_tag = EYE
+				has_completed_focus = BALTIC_ford_motors
 				AND = {
-					has_global_flag = custom_designers_only
-					owns_state = 393
+					NOT = { has_country_flag = motorized_equipment_manufacturer_disabled }
+					OR = {
+						original_tag = EYE
+						AND = {
+							has_global_flag = custom_designers_only
+							owns_state = 393
+						}
+					}
 				}
 			}
 		}
@@ -1384,7 +1397,10 @@ EYE_motorized_mechanized_organization_custom = {
 			limit = { has_global_flag = custom_designers_only }
 
 			owner = {
-				393 = { state_designer_availabile = yes }
+				OR = {
+					has_completed_focus = BALTIC_ford_motors
+					393 = { state_designer_availabile = yes }
+				}
 			}
 		}
 	}

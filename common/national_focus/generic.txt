@@ -329,14 +329,13 @@ focus_tree = {
 		y = 0
 		cost = 10
 		
-		search_filters = {   FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		available_if_capitulated = yes
 
-
 		complete_tooltip = {
 			air_experience = 25
-			if = { limit = { has_country_flag = aviation_effort_AB }
+			var:aviation_effort_ab_state = {
 				add_building_construction = {
 					type = air_base
 					level = 2
@@ -354,51 +353,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus aviation_effort"
 			air_experience = 25
-
-			if = {
-				limit = {
-					capital_scope = {
-						NOT = {
-							free_building_slots = {
-								building = air_base
-								size > 1
-							}
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					ROOT = { set_country_flag = aviation_effort_AB }
-				}
-			}
-			if = {
-				limit = {
-					capital_scope = {
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
-				}
-				capital_scope = {
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					ROOT = { set_country_flag = aviation_effort_AB }
-				}
-			}
+			add_2_air_base_capital_priority = yes
 			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
 				cost_reduction = 0.5
@@ -1096,17 +1051,19 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = production_effort_tt
-				NOT = {
-					has_global_flag = focus_factories_offmap
-					has_global_flag = focus_factories_mixed
+		available = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = focus_factories_offmap
+						has_global_flag = focus_factories_mixed
+					}
 				}
+
 				all_owned_state = {
 					free_building_slots = {
 						building = arms_factory
-						size < 1
+						size > 0
 						include_locked = yes
 					}
 				}
@@ -1242,17 +1199,19 @@ focus_tree = {
 			factor = 2
 		}
 
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = production_effort_tt
-				NOT = {
-					has_global_flag = focus_factories_offmap
-					has_global_flag = focus_factories_mixed
+		available = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = focus_factories_offmap
+						has_global_flag = focus_factories_mixed
+					}
 				}
+
 				all_owned_state = {
 					free_building_slots = {
 						building = arms_factory
-						size < 1
+						size > 0
 						include_locked = yes
 					}
 				}
@@ -1356,19 +1315,18 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 
-
 		ai_will_do = {
 			factor = 2
 		}
 
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = production_effort_tt
-				NOT = { has_global_flag = focus_factories_offmap }
+		available = {
+			if = {
+				limit = { NOT = { has_global_flag = focus_factories_offmap } }
+
 				all_owned_state = {
 					free_building_slots = {
 						building = arms_factory
-						size < 1
+						size > 0
 						include_locked = yes
 					}
 				}
@@ -1377,9 +1335,7 @@ focus_tree = {
 
 		complete_tooltip = {
 			if = {
-				limit = {
-					has_global_flag = focus_factories_offmap
-				}
+				limit = { has_global_flag = focus_factories_offmap }
 
 				add_offsite_building = { type = arms_factory level = 1 }
 			}
@@ -1396,9 +1352,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus production_effort_3"
 			if = {
-				limit = {
-					has_global_flag = focus_factories_offmap
-				}
+				limit = { has_global_flag = focus_factories_offmap }
 
 				add_offsite_building = { type = arms_factory level = 1 }
 			}
@@ -1471,14 +1425,19 @@ focus_tree = {
 			factor = 2
 		}
 
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = construction_effort_tt
-				NOT = { has_global_flag = focus_factories_offmap }
+		available = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = focus_factories_offmap
+						has_global_flag = focus_factories_mixed
+					}
+				}
+
 				all_owned_state = {
 					free_building_slots = {
 						building = industrial_complex
-						size < 2
+						size > 0
 						include_locked = yes
 					}
 				}
@@ -1487,9 +1446,7 @@ focus_tree = {
 
 		complete_tooltip = {
 			if = {
-				limit = {
-					has_global_flag = focus_factories_offmap
-				}
+				limit = { has_global_flag = focus_factories_offmap }
 
 				add_offsite_building = { type = industrial_complex level = 2 }
 			}
@@ -1574,12 +1531,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus extra_tech_slot"
 			if = {
-				limit = {
-					amount_research_slots < 5
-				}
+				limit = { amount_research_slots < 5 }
+
 				add_research_slot = 1
 			}
-
 		}
 	}
 
@@ -1607,9 +1562,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus extra_tech_slot_mil"
 			if = {
-				limit = {
-					amount_research_slots < 5
-				}
+				limit = { amount_research_slots < 5 }
+
 				add_research_slot = 1
 			}
 			else = {
@@ -1645,9 +1599,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus extra_tech_slot_civ"
 			if = {
-				limit = {
-					amount_research_slots < 5
-				}
+				limit = { amount_research_slots < 5 }
+
 				add_research_slot = 1
 			}
 			else = {

@@ -27,6 +27,8 @@ focus_tree = {
 
 	shared_focus = BALTIC_rejoin_the_railways
 	shared_focus = BALTIC_restore_workers_republic
+	shared_focus = LIT_secure_a_loyal_cabinet
+	shared_focus = EST_rally_the_nation
 }
 
 shared_focus = {
@@ -38,7 +40,16 @@ shared_focus = {
 	cost = 5
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
+
+		modifier = {
+			factor = 15
+
+			OR = {
+				arms_factory < 1
+				industrial_complex < 1
+			}
+		}
 	}
 
 	cancel_if_invalid = yes
@@ -110,13 +121,12 @@ shared_focus = {
 			popularity = 0.05
 		}
 		if = {
-			limit = {
-				suitable_fascist_major_on_same_continent = yes 
-			}
+			limit = { suitable_fascist_major_on_same_continent = yes  }
+
 			random_other_country = {
 				limit = {
 					is_major = yes
-					capital_scope = { is_on_continent = europe }
+					is_on_same_continent_as = ROOT
 					exists = yes
 					has_capitulated = no
 					has_government = fascism
@@ -139,6 +149,7 @@ shared_focus = {
 					has_government = fascism
 				}
 			}
+
 			get_best_alliance_match_fascism_effect = yes
 			var:best_leader = {
 				add_opinion_modifier = {
@@ -153,11 +164,12 @@ shared_focus = {
 		}
 		else_if = {
 			limit = {
-				any_other_country ={
+				any_other_country = {
 					is_major = yes
 					has_government = fascism
 				}
 			}
+
 			random_other_country = {
 				limit = {
 					is_major = yes 
@@ -171,7 +183,6 @@ shared_focus = {
 					target = PREV
 					modifier = BALTIC_investments
 				}
-
 			}
 		}
 	}
@@ -209,44 +220,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		upgrade_economy_law = yes
-		capital_scope = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 0
-					include_locked = yes
-				}
-				OR = {
-					is_in_home_area = yes
-					NOT = {
-						owner = {
-							any_owned_state = {
-								free_building_slots = {
-									building = arms_factory
-									size > 0
-									include_locked = yes
-								}
-								is_in_home_area = yes
-							}
-						}
-					}
-				}
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}
+		add_offsite_building = { type = arms_factory level = 1 }
 	}
 }
 
@@ -281,18 +255,9 @@ shared_focus = {
 
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
-		capital_scope = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
 		every_owned_state = {
-			limit = {
-				is_core_of = ROOT
-			}
+			limit = { is_core_of = ROOT }
+
 			add_building_construction = {
 				type = infrastructure
 				level = 1
@@ -300,36 +265,7 @@ shared_focus = {
 			}
 			add_extra_state_shared_building_slots = 1
 		}
-		random_owned_controlled_state = {
-			limit = {
-				is_capital = no
-				free_building_slots = {
-					building = industrial_complex
-					size > 0
-					include_locked = yes
-				}
-				OR = {
-					is_in_home_area = yes
-					NOT = {
-						owner = {
-							any_owned_state = {
-								free_building_slots = {
-									building = industrial_complex
-									size > 0
-									include_locked = yes
-								}
-								is_in_home_area = yes
-							}
-						}
-					}
-				}
-			}
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
+		add_offsite_building = { type = industrial_complex level = 1 }
 	}
 }
 
@@ -363,112 +299,16 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-		if = {
-			limit = { tag = LIT }
+		every_owned_state = {
+			random_select_amount = 4
 
-			814 = {
-				add_building_construction = { type = bunker province = 6281 level = 1 instant_build = yes }
-			}
-			815 = {
-				add_building_construction = { type = bunker province = 9246 level = 2 instant_build = yes }
-				add_building_construction = { type = bunker province = 11226 level = 2 instant_build = yes }
-			}
-			if = {
-				limit = { NOT = { owns_state = 784 } }
-				11 = {
-					add_building_construction = { type = bunker province = 327 level = 2 instant_build = yes }
-					add_building_construction = { type = bunker province = 9404 level = 1 instant_build = yes }
-				}
-				815 = {
-					add_building_construction = { type = bunker province = 11498 level = 2 instant_build = yes }
-				}
-			}
-			else = {
-				784 = {
-					add_building_construction = { type = bunker province = 11342 level = 1 instant_build = yes }
-					add_building_construction = { type = bunker province = 9295 level = 2 instant_build = yes }
-					add_building_construction = { type = bunker province = 3320 level = 1 instant_build = yes }
-					add_building_construction = { type = bunker province = 9274 level = 2 instant_build = yes }
-				}
-			}
-		}
-		if = {
-			limit = { tag = LAT }
-			if = {
-				limit = { controls_state = 809 }
-				809 = {
-					add_building_construction = {
-						type = bunker
-						province = 11358
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = { controls_state = 810 }
-				810 = {
-					add_building_construction = {
-						type = bunker
-						province = 310
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						province = 6459
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						province = 9275
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						province = 222
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						province = 319
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-		}
-		if = {
-			limit = { tag = EST }
-			if = {
-				limit = { controls_state = 191 }
-				191 = {
-					add_building_construction = {
-						type = bunker
-						province = 592
-						level = 2
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						province = 9221
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = { controls_state = 813 }
-				813 = {
-					add_building_construction = {
-						type = bunker
-						province = 4640
-						level = 3
-						instant_build = yes
-					}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_victory_point > 1
 				}
 			}
 		}
@@ -497,6 +337,10 @@ shared_focus = {
 			is_major = yes
 			NOT = { has_war_with = ROOT }
 		}
+		any_owned_state = {
+			is_coastal = yes
+			naval_base > 1
+		}
 	}
 
 	cancel_if_invalid = yes
@@ -504,64 +348,20 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-		if = {
-			limit = { tag = LIT }
-			if = {
-				limit = { controls_state = 189 }
-				189 = {
-					add_building_construction = { type = coastal_bunker province = 6314 level = 6 instant_build = yes }
-				}
+		every_owned_state = {
+			limit = {
+				is_coastal = yes
+				naval_base > 1
 			}
-			if = {
-				limit = { controls_state = 188 }
-				188 = {
-					add_building_construction = { type = coastal_bunker province = 3288 level = 6 instant_build = yes }
-				}
-			}
-		}
-		if = {
-			limit = { tag = EST }
-			every_owned_state = {
-				limit = {
-					controller = { tag = ROOT }
-					OR = {
-						state = 811
-						state = 13
-						state = 812
-						state = 813
-					}
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-		if = {
-			limit = { tag = LAT }
-			every_owned_state = {
-				limit = {
-					controller = { tag = ROOT }
-					OR = {
-						state = 190
-						state = 809
-						state = 808
-						state = 12
-					}
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
-					level = 3
-					instant_build = yes
+
+			add_building_construction = {
+				type = coastal_bunker
+				level = 1
+				instant_build = yes 
+				province = {
+					all_provinces = yes
+					limit_to_coastal = yes
+					limit_to_naval_base = yes
 				}
 			}
 		}
@@ -605,7 +405,7 @@ shared_focus = {
 			random_other_country = {
 				limit = {
 					is_major = yes
-					capital_scope = { is_on_continent = europe }
+					is_on_same_continent_as = ROOT
 					exists = yes
 					has_capitulated = no
 					has_government = fascism
@@ -613,20 +413,21 @@ shared_focus = {
 				}
 				give_fascist_tank_licences = yes
 			}
-			if = {
-				limit = { has_dlc = "Arms Against Tyranny" }
-
-				add_equipment_subsidy = {
-					cic = 500
-					equipment_type = light_tank_chassis
-					seller_trigger = is_fascist_seller_trigger
-				}
-			}
 		}
 		else = {
 			get_best_alliance_match_fascism_effect = yes
 			var:best_leader = {
 				give_fascist_tank_licences = yes
+			}
+		}
+		if = {
+			limit = { has_dlc = "Arms Against Tyranny" }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_equipment_subsidy = {
+				cic = 500
+				equipment_type = light_tank_chassis
+				seller_trigger = is_fascist_seller_trigger
 			}
 		}
 	}
@@ -704,9 +505,9 @@ shared_focus = {
 			limit = { suitable_fascist_major_on_same_continent = yes }
 
 			random_other_country = {
-				limit ={
+				limit = {
 					is_major = yes
-					capital_scope = { is_on_continent = europe }
+					is_on_same_continent_as = ROOT
 					exists = yes
 					has_capitulated = no
 					has_government = fascism
@@ -765,13 +566,13 @@ shared_focus = {
 	completion_reward = {
 		add_ideas = BALTIC_allied_investments_idea
 
-		if = { # (European) Fallback to another European Democracy
+		if = {
 			limit = { suitable_democratic_major_same_continent = yes }
 
 			random_other_country = {
 				limit = {
 					is_major = yes
-					capital_scope = { is_on_continent = europe }
+					is_on_same_continent_as = ROOT
 					exists = yes
 					has_capitulated = no
 					has_government = democratic
@@ -787,7 +588,7 @@ shared_focus = {
 				}
 			}
 		}
-		else_if = { # (International) Fallback to any democratic faction leader. 
+		else_if = {
 			limit = {
 				any_other_country = {
 					is_faction_leader = yes
@@ -806,28 +607,23 @@ shared_focus = {
 				}
 			}
 		}
+
 		if = {
-			limit = {
-				has_idea = export_focus
-			}
+			limit = { has_idea = export_focus }
 			swap_ideas = {
 				remove_idea = export_focus
 				add_idea = free_trade
 			}
 		}
-		if = {
-			limit = {
-				has_idea = limited_exports
-			}
+		else_if = {
+			limit = { has_idea = limited_exports }
 			swap_ideas = {
 				remove_idea = limited_exports
 				add_idea = free_trade
 			}
 		}
-		if = {
-			limit = {
-				has_idea = closed_economy
-			}
+		else_if = {
+			limit = { has_idea = closed_economy }
 			swap_ideas = {
 				remove_idea = closed_economy
 				add_idea = free_trade
@@ -851,12 +647,12 @@ shared_focus = {
 	}
 
 	available = {
-		any_other_country = {
-			exists = yes
-			has_capitulated = no
-			has_government = democratic
-			is_major = yes
-			NOT = { has_war_with = ROOT }
+		393 = {
+			owner = {
+				has_capitulated = no
+				has_government = democratic
+				NOT = { has_war_with = ROOT }
+			}
 		}
 	}
 
@@ -867,12 +663,11 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 
 	completion_reward = {
-		add_offsite_building = { type = arms_factory level = 1 }
+		add_offsite_building = { type = industrial_complex level = 1 }
 
 		if = {
-			limit = {
-				NOT = { has_tech = motorised_infantry }
-			}
+			limit = { NOT = { has_tech = motorised_infantry } }
+
 			add_tech_bonus = {
 				name = BALTIC_ford
 				bonus = 0.5
@@ -892,20 +687,25 @@ shared_focus = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		#IF = {
-		#	limit = {
-		#		has_dlc = "Arms Against Tyranny"
-		#	}	
-		#	custom_effect_tooltip = available_mio_tt
-		#	show_mio_tooltip = USA_ford_motor_company_organization
-		#
-		#	mio:USA_ford_motor_company_organization = {
-		#		add_mio_size = 2
-		#	}
-		#}
-		#ELSE = {
-		#	show_ideas_tooltip = BALTIC_ford
-		#}
+		if = {
+			limit = { has_dlc = "Arms Against Tyranny" }	
+
+			custom_effect_tooltip = available_mio_tt
+			if = {
+				limit = { has_global_flag = custom_designer_traits_enabled }
+
+				show_mio_tooltip = EYE_motorized_mechanized_organization_custom
+				mio:EYE_motorized_mechanized_organization_custom = { add_mio_size = 2 }
+			}
+			else = {
+				show_mio_tooltip = EYE_motorized_mechanized_organization
+				mio:EYE_motorized_mechanized_organization = { add_mio_size = 2 }
+			}
+		}
+		else = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = EYE_motorized_equipment_manufacturer
+		}
 	}
 }
 
@@ -924,12 +724,12 @@ shared_focus = {
 	}
 
 	available = {
-		any_other_country = {
-			exists = yes
-			has_capitulated = no
-			has_government = democratic
-			is_major = yes
-			NOT = { has_war_with = ROOT }
+		132 = {
+			owner = {
+				has_capitulated = no
+				has_government = democratic
+				NOT = { has_war_with = ROOT }
+			}
 		}
 	}
 
@@ -940,23 +740,25 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 
 	completion_reward = {
-		add_offsite_building = { type = industrial_complex level = 2 }
-		add_offsite_building = { type = arms_factory level = 2 }
+		add_offsite_building = { type = arms_factory level = 1 }
 
-		custom_effect_tooltip = generic_skip_one_line_tt
+		if = {
+			limit = { has_dlc = "La Resistance" }
 
-		#IF = {
-		#	limit = {
-		#		has_dlc = "Arms Against Tyranny"
-		#	}
-		#
-		#	custom_effect_tooltip = available_mio_tt
-		#	show_mio_tooltip = ENG_crossley_motors_organization
-		#
-		#	mio:ENG_crossley_motors_organization = {
-		#		add_mio_size = 2
-		#	}
-		#}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = IEZ_armored_car_organization
+
+				mio:IEZ_armored_car_organization = { add_mio_size = 2 }
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = IEZ_armored_car_manufacturer
+			}
+		}
 	}
 }
 
@@ -975,11 +777,12 @@ shared_focus = {
 	}
 
 	available = {
-		ENG = {
-			exists = yes
-			has_capitulated = no
-			has_government = democratic
-			NOT = { has_war_with = ROOT }
+		126 = {
+			owner = {
+				has_capitulated = no
+				has_government = democratic
+				NOT = { has_war_with = ROOT }
+			}
 		}
 	}
 
@@ -989,35 +792,30 @@ shared_focus = {
 
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
-		add_offsite_building = { type = industrial_complex level = 1 }
-		add_offsite_building = { type = arms_factory level = 1 }
+		if = {
+			limit = { has_dlc = "Arms Against Tyranny" }
 
-		custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_mio_tt
+			if = {
+				limit = { has_global_flag = custom_designer_traits_enabled }
 
-		#IF = {
-		#	limit = {
-		#		has_dlc = "Arms Against Tyranny"
-		#	}	
-		#	custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = IZL_infantry_equipment_organization_custom
+				mio:IZL_infantry_equipment_organization_custom = { add_mio_size = 1 }
+			}
+			else = {
+				show_mio_tooltip = IZL_infantry_equipment_organization
+				mio:IZL_infantry_equipment_organization = { add_mio_size = 1 }
+			}
+			show_mio_tooltip = IZL_artillery_organization
+			mio:IZL_artillery_organization = { add_mio_size = 1 }
 		#	show_mio_tooltip = BALTIC_RAF_organization
-		#
-		#	mio:BALTIC_RAF_organization = {
-		#		add_mio_size = 1
-		#	}
-		#	show_mio_tooltip = ENG_royal_arsenal_organization
-		#	mio:ENG_royal_arsenal_organization = {
-		#		add_mio_size = 1
-		#	}
-		#	show_mio_tooltip = ENG_rsaf_enfield_organization
-		#	mio:ENG_rsaf_enfield_organization = {
-		#		add_mio_size = 1
-		#	}
-		#}
-		#ELSE = {
+		#	mio:BALTIC_RAF_organization = { add_mio_size = 1 }
+		}
+		else = {
+			show_ideas_tooltip = IZL_infantry_equipment_manufacturer
+			show_ideas_tooltip = IZL_artillery_manufacturer
 		#	show_ideas_tooltip = BALTIC_RAF
-		#	show_ideas_tooltip = BALTIC_RSAF_enfield
-		#	show_ideas_tooltip = BALTIC_royal_arsenal
-		#}
+		}
 	}
 }
 
@@ -1053,14 +851,13 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		air_experience = 40
-		## Checking for valid Democractic Countries to get aircraft from
-		if = { # (European) Fallback to another European Democracy
+		if = {
 			limit = { suitable_democratic_major_same_continent = yes }
 
 			random_other_country = {
 				limit = {
 					is_major = yes
-					capital_scope = { is_on_continent = europe }
+					is_on_same_continent_as = ROOT
 					exists = yes
 					has_capitulated = no
 					has_government = democratic
@@ -1068,20 +865,21 @@ shared_focus = {
 				}
 				give_aircraft_and_licences = yes
 			}
-			if = {
-				limit = { has_dlc = "Arms Against Tyranny" }
-
-				add_equipment_subsidy = {
-					cic = 500
-					equipment_type = small_plane_airframe
-					seller_trigger = is_democracy_seller_trigger
-				}
-			}
 		}
-		else = { # (International) Fallback to any democratic faction leader. 
+		else = {
 			get_best_alliance_match_democratic_effect = yes
 			var:best_leader = {
 				give_aircraft_and_licences = yes
+			}
+		}
+		if = {
+			limit = { has_dlc = "Arms Against Tyranny" }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_equipment_subsidy = {
+				cic = 500
+				equipment_type = small_plane_airframe
+				seller_trigger = is_democracy_seller_trigger
 			}
 		}
 	}
@@ -1117,13 +915,13 @@ shared_focus = {
 
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
-		if = { # (European) Fallback to another European Democracy
+		if = {
 			limit = { suitable_democratic_major_same_continent = yes }
 
 			random_other_country = {
 				limit = {
 					is_major = yes
-					capital_scope = { is_on_continent = europe }
+					is_on_same_continent_as = ROOT
 					exists = yes
 					has_capitulated = no
 					has_government = democratic
@@ -1131,20 +929,21 @@ shared_focus = {
 				}
 				baltic_give_allied_equipment = yes
 			}
-			if = {
-				limit = { has_dlc = "Arms Against Tyranny" }
-
-				add_equipment_subsidy = {
-					cic = 250
-					equipment_type = infantry_equipment
-					seller_trigger = is_democracy_seller_trigger
-				}
-			}
 		}
-		else = { # (International) Fallback to any democratic faction leader. 
+		else = {
 			get_best_alliance_match_democratic_effect = yes
 			var:best_leader = {
 				baltic_give_allied_equipment = yes
+			}
+		}
+		if = {
+			limit = { has_dlc = "Arms Against Tyranny" }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_equipment_subsidy = {
+				cic = 250
+				equipment_type = infantry_equipment
+				seller_trigger = is_democracy_seller_trigger
 			}
 		}
 	}
@@ -1184,38 +983,19 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		navy_experience = 30
-		if = {
-			limit = {
-				has_global_flag = focus_factories_offmap
-			}
-
-			add_offsite_building = { type = dockyard level = 3 }
-		}
-		else_if = {
-			limit = {
-				has_global_flag = focus_factories_mixed
-			}
-
-			add_1_dockyard_in_random_state = yes
-			add_offsite_building = { type = dockyard level = 2 }
-		}
-		else = {
-			add_3_dockyard_in_random_state = yes
-		}
-
+		add_offsite_building = { type = dockyard level = 1 }
 		every_owned_state = {
 			limit = { is_coastal = yes }
-
 			random_select_amount = 4
 
 			add_building_construction = {
 				type = coastal_bunker
+				level = 1
+				instant_build = yes
 				province = {
 					all_provinces = yes
 					limit_to_coastal = yes
 				}
-				level = 2
-				instant_build = yes
 			}
 		}
 	}
@@ -1233,22 +1013,70 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
 	available_if_capitulated = no
 
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		capital_scope = {
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = construction_effort_tt
+			NOT = { has_global_flag = focus_factories_offmap }
+			all_owned_state = {
+				free_building_slots = {
+					building = industrial_complex
+					size < 1
+					include_locked = yes
+				}
+			}
+		}
+	}
+
+	complete_tooltip = {
+		if = {
+			limit = { has_global_flag = focus_factories_offmap }
+
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+		else_if = {
+			limit = { has_global_flag = focus_factories_mixed }
+
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		else = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
 				level = 2
 				instant_build = yes
 			}
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		if = {
+			limit = { has_global_flag = focus_factories_offmap }
+
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+		else_if = {
+			limit = { has_global_flag = focus_factories_mixed }
+
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_1_industrial_complex_in_random_state = yes
+		}
+		else = {
+			add_1_industrial_complex_in_random_state = yes
+			add_1_industrial_complex_in_random_state = yes
 		}
 	}
 }
@@ -1267,57 +1095,22 @@ shared_focus = {
 		factor = 1
 	}
 
-	available = {
-		OR = {
-			AND = {
-				original_tag = LIT
-				controls_state = 11
-			}
-			AND = {
-				original_tag = LAT
-				controls_state = 12
-			}
-			AND = {
-				original_tag = EST
-				controls_state = 13
-			}
-		}
-	}
-
 	cancel_if_invalid = yes
 	continue_if_invalid = no
 	available_if_capitulated = no
 
 	completion_reward = {
-		if = {
-			limit = { original_tag = LIT }
-			11 = {
-				add_building_construction = { type = bunker province = 6296 level = 2 instant_build = yes }
-				add_building_construction = { type = bunker province = 327 level = 2 instant_build = yes }
-			}
-			814 = {
-				add_building_construction = { type = bunker province = 3272 level = 3 instant_build = yes }
-			}
-		}
-		if = {
-			limit = { original_tag = LAT }
-			808 = {
-				add_building_construction = { type = bunker province = 9340 level = 2 instant_build = yes }
-				add_building_construction = { type = bunker province = 9240 level = 2 instant_build = yes }
-				add_building_construction = { type = bunker province = 10323 level = 2 instant_build = yes }
-			}
-			809 = {
-				add_building_construction = { type = bunker province = 6222 level = 2 instant_build = yes }
-				add_building_construction = { type = bunker province = 265 level = 2 instant_build = yes }
-			}
-		}
-		if = {
-			limit = { original_tag = EST }
-			812 = {
-				add_building_construction = { type = bunker province = 3152 level = 2 instant_build = yes }
-				add_building_construction = { type = bunker province = 567 level = 2 instant_build = yes }
-				add_building_construction = { type = bunker province = 496 level = 3 instant_build = yes }
-				add_building_construction = { type = bunker province = 11426 level = 2 instant_build = yes }
+		every_owned_state = {
+			random_select_amount = 4
+
+			add_building_construction = {
+				type = bunker
+				level = 3
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_victory_point > 1
+				}
 			}
 		}
 	}
@@ -1341,37 +1134,35 @@ shared_focus = {
 	continue_if_invalid = no
 	available_if_capitulated = no
 
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		random_owned_controlled_state = {
-			limit = {
-				is_core_of = ROOT
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = production_effort_tt
+			NOT = {
+				has_global_flag = focus_factories_offmap
+				has_global_flag = focus_factories_mixed
 			}
-			prioritize = { 11 12 13 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			limit = {
-				is_core_of = ROOT
-			}
-			prioritize = { 814 808 811 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
+			all_owned_state = {
+				free_building_slots = {
+					building = arms_factory
+					size < 1
+					include_locked = yes
+				}
 			}
 		}
-		random_owned_controlled_state = {
+	}
+
+	complete_tooltip = {
+		if = {
 			limit = {
-				is_core_of = ROOT
+				OR = {
+					has_global_flag = focus_factories_offmap
+					has_global_flag = focus_factories_mixed
+				}
 			}
-			prioritize = { 188 810 813 }
+
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+		else = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
@@ -1380,12 +1171,30 @@ shared_focus = {
 			}
 		}
 	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = focus_factories_offmap
+					has_global_flag = focus_factories_mixed
+				}
+			}
+
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+		else = {
+			add_1_arms_factory_in_random_state = yes
+		}
+	}
 }
 
 shared_focus = {
 	id = BALTIC_unchain_education
-	icon = GFX_focus_research
+	icon = GFX_focus_generic_military_academy
 	prerequisite = { focus = BALTIC_rebuild_forts }
+	prerequisite = { focus = BALTIC_domestic_motors }
 	x = 2
 	y = 1
 	relative_position_id = BALTIC_rebuild_forts
@@ -1396,22 +1205,64 @@ shared_focus = {
 		factor = 1
 	}
 
-	available = {
-		industrial_complex > 15
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	bypass = {
+		amount_research_slots > 4
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		if = {
+			limit = { amount_research_slots < 5 }
+
+			add_research_slot = 1
+		}
+	}
+}
+
+shared_focus = {
+	id = BALTIC_military_research
+	icon = GFX_focus_research
+	prerequisite = { focus = BALTIC_unchain_education }
+	x = 0
+	y = 1
+	relative_position_id = BALTIC_unchain_education
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
 	}
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
 	available_if_capitulated = no
 
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	available = {
+		OR = {
+			num_of_military_factories > 24
+			num_of_naval_factories > 24
+		}
+	}
 
+	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		if = {
-			limit = {
-				amount_research_slots < 5
-			}
+			limit = { amount_research_slots < 5 }
+
 			add_research_slot = 1
+		}
+		else = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
 		}
 	}
 }
@@ -1419,10 +1270,10 @@ shared_focus = {
 shared_focus = {
 	id = BALTIC_technology_sharing
 	icon = GFX_goal_tfv_generic_tech_sharing
-	prerequisite = { focus = BALTIC_unchain_education }
+	prerequisite = { focus = BALTIC_balticwall focus = BALTIC_request_german_support focus = BALTIC_british_designers focus = BALTIC_baltic_fleet }
 	x = 0
 	y = 1
-	relative_position_id = BALTIC_unchain_education
+	relative_position_id = BALTIC_request_german_support
 
 	cost = 10
 
@@ -1455,26 +1306,19 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		if = {
-			limit = {
-				amount_research_slots < 5
-			}
+			limit = { amount_research_slots < 5 }
+
 			add_research_slot = 1
 		}
 		if = {
-			limit = {
-				NOT = {
-					any_other_country = {
-						is_in_tech_sharing_group = baltic_allied_research
-					}
-				}
-			}
+			limit = { NOT = { any_other_country = { is_in_tech_sharing_group = baltic_allied_research } } }
+
 			custom_effect_tooltip = BALTIC_tech_sharing_tt
 			hidden_effect = {
 				add_to_tech_sharing_group = baltic_allied_research
 				every_other_country = {
-					limit = {
-						is_in_faction_with = ROOT
-					}
+					limit = { is_in_faction_with = ROOT }
+
 					add_to_tech_sharing_group = baltic_allied_research
 				}
 			}
@@ -1518,71 +1362,77 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
+
+		modifier = {
+			factor = 15
+
+			NOT = { arms_factory < 1 }
+			industrial_complex < 1
+		}
 	}
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
 	available_if_capitulated = no
 
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = construction_effort_tt
+			NOT = { has_global_flag = focus_factories_offmap }
+			all_owned_state = {
+				free_building_slots = {
+					building = industrial_complex
+					size < 1
+					include_locked = yes
+				}
+			}
+		}
+	}
+
+	complete_tooltip = {
+		if = {
+			limit = { has_global_flag = focus_factories_offmap }
+
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+		else_if = {
+			limit = { has_global_flag = focus_factories_mixed }
+
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		else = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		if = {
-			limit = { has_idea = LIT_agrarian_society }
+			limit = { has_global_flag = focus_factories_offmap }
 
-			swap_ideas = {
-				remove_idea = LIT_agrarian_society
-				add_idea = LIT_invested_in_farms
-			}
+			add_offsite_building = { type = industrial_complex level = 2 }
 		}
+		else_if = {
+			limit = { has_global_flag = focus_factories_mixed }
 
-		random_owned_controlled_state = {
-			limit = {
-				is_core_of = ROOT
-			}
-			prioritize = { 11 12 13 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_1_industrial_complex_in_random_state = yes
 		}
-		random_owned_controlled_state = {
-			limit = {
-				is_core_of = ROOT
-			}
-			prioritize = { 189 190 191 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			limit = {
-				is_core_of = ROOT
-			}
-			prioritize = { 814 808 811 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			limit = {
-				is_core_of = ROOT
-			}
-			prioritize = { 815 809 812 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
+		else = {
+			add_1_industrial_complex_in_random_state = yes
+			add_1_industrial_complex_in_random_state = yes
 		}
 	}
 }
@@ -1598,44 +1448,71 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
+
+		modifier = {
+			factor = 15
+
+			arms_factory < 1
+		}
 	}
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
 	available_if_capitulated = no
 
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		random_owned_controlled_state = {
-			limit = {
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = production_effort_tt
+			NOT = {
+				has_global_flag = focus_factories_offmap
+				has_global_flag = focus_factories_mixed
+			}
+			all_owned_state = {
 				free_building_slots = {
 					building = arms_factory
-					size > 0
+					size < 1
 					include_locked = yes
 				}
+			}
+		}
+	}
+
+	complete_tooltip = {
+		if = {
+			limit = {
 				OR = {
-					is_in_home_area = yes
-					NOT = {
-						owner = {
-							any_owned_state = {
-								free_building_slots = {
-									building = arms_factory
-									size > 0
-									include_locked = yes
-								}
-								is_in_home_area = yes
-							}
-						}
-					}
+					has_global_flag = focus_factories_offmap
+					has_global_flag = focus_factories_mixed
 				}
 			}
-			add_extra_state_shared_building_slots = 2
+
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+		else = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
-				level = 2
+				level = 1
 				instant_build = yes
 			}
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = focus_factories_offmap
+					has_global_flag = focus_factories_mixed
+				}
+			}
+
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+		else = {
+			add_1_arms_factory_in_random_state = yes
 		}
 	}
 }
@@ -1658,53 +1535,33 @@ shared_focus = {
 	continue_if_invalid = no
 	available_if_capitulated = no
 
+	complete_tooltip = {
+		air_experience = 25
+		var:aviation_effort_ab_state = {
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_doctrine_cost_reduction = {
+			name = air_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = air_doctrine
+		}
+		add_tech_bonus = {
+			name = BALTIC_school_of_aviation_tech_bonus
+			bonus = 0.5
+			uses = 2
+			category = air_equipment
+		}
+	}
+
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	completion_reward = {
 		air_experience = 25
-		if = {
-			limit = {
-				capital_scope = {
-					NOT = {
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 1
-					}
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-				ROOT = { set_country_flag = aviation_effort_AB }
-			}
-		}
-		if = {
-			limit = {
-				capital_scope = {
-					free_building_slots = {
-						building = air_base
-						size > 1
-					}
-				}
-			}
-			capital_scope = {
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-				ROOT = { set_country_flag = aviation_effort_AB }
-			}
-		}
+		add_2_air_base_capital_priority = yes
 		add_doctrine_cost_reduction = {
 			name = air_doc_bonus
 			cost_reduction = 0.5
@@ -1780,39 +1637,29 @@ shared_focus = {
 	continue_if_invalid = no
 	available_if_capitulated = no
 
+	available = {
+		if = {
+			limit = { NOT = { has_global_flag = focus_factories_offmap } }
+
+			all_owned_state = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+		}
+	}
+
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
-		random_owned_controlled_state = {
-			limit = {
-				is_core_of = ROOT
-			}
-			prioritize = { 814 808 811 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
+		if = {
+			limit = { has_global_flag = focus_factories_offmap }
+
+			add_offsite_building = { type = arms_factory level = 1 }
 		}
-		random_owned_controlled_state = {
-			limit = {
-				is_core_of = ROOT
-			}
-			prioritize = { 815 809 812 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}
-		capital_scope = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
-			}
+		else = {
+			add_1_arms_factory_in_random_state = yes
 		}
 	}
 }
@@ -1851,29 +1698,17 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		if = {
-			limit = { state_originally_from_LIT = yes }
-			swap_ideas = {
-				remove_idea = LIT_invested_in_farms
-				add_idea = LIT_invested_in_farms_1
-			}
-		}
-		else_if = {
-			limit = { state_originally_from_LAT = yes }
-			capital_scope = {
-				add_resource = {
-					type = steel
-					amount = 16
+			limit = {
+				any_owned_state = {
+					is_controlled_by = ROOT
+					has_any_resources = yes
 				}
 			}
+			
+			add_more_resources_to_random_state = yes
 		}
-		else_if = {
-			limit = { state_originally_from_EST = yes }
-			capital_scope = {
-				add_resource = {
-					type = oil
-					amount = 8
-				}
-			}
+		else = {
+			add_ideas = LIT_invested_in_farms_1
 		}
 	}
 }
@@ -1945,41 +1780,71 @@ shared_focus = {
 
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
-		random_owned_controlled_state = {
+		if = {
 			limit = {
-				is_coastal = yes
-				free_building_slots = {
-					building = dockyard
-					size > 0
-					include_locked = yes
-				}
-				OR = {
-					is_in_home_area = yes
-					NOT = {
-						owner = {
-							any_owned_state = {
-								free_building_slots = {
-									building = dockyard
-									size > 0
-									include_locked = yes
-								}
-								is_in_home_area = yes
-							}
-						}
-					}
-				}
+				has_global_flag = focus_factories_offmap
 			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard
-				level = 2
-				instant_build = yes
-			}
+
+			add_offsite_building = { type = dockyard level = 3 }
 		}
+		else_if = {
+			limit = {
+				has_global_flag = focus_factories_mixed
+			}
+
+			add_1_dockyard_in_random_state = yes
+			add_offsite_building = { type = dockyard level = 2 }
+		}
+		else = {
+			add_3_dockyard_in_random_state = yes
+		}
+
 		add_equipment_to_stockpile = {
 			type = convoy
 			amount = 150
 		}
+		
+		if = {
+			limit = {
+				capital_scope = {
+					is_coastal = yes
+					naval_base > 0
+					naval_base < 9
+				}
+			}
+			
+			capital_scope = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+				}
+			}
+		}
+		else = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					naval_base > 0
+					naval_base < 9
+				}
+
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+				}
+			}
+		}
+
 		if = {
 			limit = {
 				tag = EST
@@ -2027,31 +1892,29 @@ shared_focus = {
 ###########################
 shared_focus = {
 	id = BALTIC_restore_workers_republic
-	#mutually_exclusive = { focus = LIT_secure_a_loyal_cabinet focus = LAT_suspend_the_constitution focus = EST_era_of_silence focus = EST_rally_the_nation }
+	mutually_exclusive = { focus = LIT_secure_a_loyal_cabinet focus = EST_rally_the_nation }
 	icon = GFX_goal_support_communism
-	x = 25
+	x = 20
 	y = 0
 
 	cost = 10
 
-	#allow_branch = {
-	#	if = {
-	#		limit = {
-	#			has_game_rule = {
-	#				rule = obsolete_focus_branches_visibility
-	#				option = HIDE
-	#			}
-	#		}
-	#		NOT = {
-	#			OR = {
-	#				has_completed_focus = LIT_secure_a_loyal_cabinet
-	#				has_completed_focus = LAT_suspend_the_constitution
-	#				has_completed_focus = EST_era_of_silence
-	#				has_completed_focus = EST_rally_the_nation
-	#			}
-	#		}
-	#	}
-	#}
+	allow_branch = {
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			NOT = {
+				OR = {
+					has_completed_focus = LIT_secure_a_loyal_cabinet
+					has_completed_focus = EST_rally_the_nation
+				}
+			}
+		}
+	}
 
 	ai_will_do = {
 		factor = 5
@@ -2490,43 +2353,25 @@ shared_focus = {
 
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
-		set_variable = {
-			var = civil_war_size_var
-			value = 1
-		}
-		set_variable = {
-			var = communism_support_var
-			value = party_popularity@communism
-		}
+		set_temp_variable = { civil_war_size_var = 1 }
+		set_temp_variable = { communism_support_var = party_popularity@communism }
 
 		if = {
 			limit = { has_completed_focus = BALTIC_secure_military_support }
 
-			add_to_variable = {
-				var = communism_support_var
-				value = 0.2
-			}
+			add_to_temp_variable = { communism_support_var = 0.2 }
 		}
 		if = {
 			limit = { has_idea = BALTIC_catholic_opposition_idea }
 
-			add_to_variable = {
-				var = communism_support_var
-				value = -0.2
-			}
+			add_to_temp_variable = { communism_support_var = -0.2 }
 		}
 		if = {
 			limit = { has_completed_focus = BALTIC_soviet_military_staff }
 
-			add_to_variable = {
-				var = communism_support_var
-				value = 0.1
-			}
+			add_to_temp_variable = { communism_support_var = 0.1 }
 		}
-		subtract_from_variable = {
-			var = civil_war_size_var
-			value = communism_support_var
-		}
+		subtract_from_temp_variable = { civil_war_size_var = communism_support_var }
 
 		if = {
 			limit = { check_variable = { num_owned_states > 1 } }
@@ -2536,7 +2381,7 @@ shared_focus = {
 				ideology = ROOT
 				size = civil_war_size_var
 				keep_unit_leaders_trigger = {
-					has_trait = JAP_communist_sympathizer
+					has_trait = communist_sympathizer
 					NOT = { has_trait = BALTIC_anti_bolshevik }
 				}
 			}
@@ -2546,7 +2391,7 @@ shared_focus = {
 				ruling_party = communism
 				elections_allowed = no
 			}
-			multiply_variable = { civil_war_size_var = -1 }
+			multiply_temp_variable = { civil_war_size_var = -1 }
 			add_stability = civil_war_size_var
 			add_war_support = civil_war_size_var
 		}
@@ -2595,20 +2440,10 @@ shared_focus = {
 					infantry = { x = 1 y = 1 }
 					infantry = { x = 2 y = 1 }
 					infantry = { x = 3 y = 1 }
-
-					infantry = { x = 0 y = 2 }
-					infantry = { x = 1 y = 2 }
-					infantry = { x = 2 y = 2 }
-					infantry = { x = 3 y = 2 }
-				}
-				support = {
-					recon = { x = 0 y = 0 }
-					engineer = { x = 0 y = 1 }
-					artillery = { x = 0 y = 2 }
 				}
 			}
-			random_owned_controlled_state = {
-				hidden_effect = {
+			hidden_effect = {
+				random_owned_controlled_state = {
 					create_unit = {
 						division = "name = \"1. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
 						owner = ROOT
@@ -2649,7 +2484,7 @@ shared_focus = {
 	id = BALTIC_sieze_the_means_of_production
 	icon = GFX_focus_prc_agrarian_socialism
 	prerequisite = { focus = BALTIC_overthrow_the_government }
-	x = 2
+	x = 4
 	y = 1
 	relative_position_id = BALTIC_overthrow_the_government
 
@@ -2667,320 +2502,82 @@ shared_focus = {
 	completion_reward = {
 		add_ideas = { baltic_siezed_means_of_production_idea }
 		custom_effect_tooltip = gain_factories_based_on_investments_tt
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size > 0
-					include_locked = yes
-				}
-				OR = {
-					is_in_home_area = yes
-					NOT = {
-						owner = {
-							any_owned_state = {
-								free_building_slots = {
-									building = industrial_complex
-									size > 0
-									include_locked = yes
-								}
-								is_in_home_area = yes
-							}
-						}
-					}
-				}
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
+		add_1_industrial_complex_in_random_state = yes
 		###Allied Trade Focuses###
 		if = {
-			limit = {
-				has_completed_focus = BALTIC_renew_allied_trade
-			}
+			limit = { has_completed_focus = BALTIC_renew_allied_trade }
+
 			remove_ideas = { BALTIC_allied_investments_idea }
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
+			add_1_industrial_complex_in_random_state = yes
 		}
 		if = {
-			limit = {
-				has_completed_focus = BALTIC_ford_motors
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
+			limit = { has_completed_focus = BALTIC_ford_motors }
+			add_1_arms_factory_in_random_state = yes
 		}
 		if = {
-			limit = {
-				has_completed_focus = BALTIC_crossley_motors
-			}
-			add_offsite_building = { type = industrial_complex level = -1 }
-			add_offsite_building = { type = arms_factory level = -2 }
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 2
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 2
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
+			limit = { has_completed_focus = BALTIC_crossley_motors }
+			add_1_arms_factory_in_random_state = yes
 		}
 		if = {
-			limit = {
-				has_completed_focus = BALTIC_baltic_fleet
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = dockyard
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
+			limit = { has_completed_focus = BALTIC_baltic_fleet }
+			add_1_dockyard_in_random_state = yes
 		}
 		###Axis Investment Ideas###
-		
+
 		if = {
-			limit = {
-				has_completed_focus = BALTIC_axis_investments
-			}
+			limit = { has_completed_focus = BALTIC_axis_investments }
 			remove_ideas = {
 				BALTIC_axis_investments_idea
 				BALTIC_axis_investments_idea_1
 			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+			add_1_arms_factory_in_random_state = yes
 		}
 		if = {
-			limit = {
-				has_completed_focus = BALTIC_german_tank_licences
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
+			limit = { has_completed_focus = BALTIC_german_tank_licences }
+			add_1_arms_factory_in_random_state = yes
 		}
 		if = {
-			limit = {
-				has_completed_focus = BALTIC_german_baltic_industry
+			limit = { has_completed_focus = BALTIC_german_baltic_industry }
+			add_1_industrial_complex_in_random_state = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BALTIC_socialist_education
+	icon = GFX_focus_generic_socialist_science
+	prerequisite = { focus = BALTIC_sieze_the_means_of_production }
+	x = 0
+	y = 1
+	relative_position_id = BALTIC_sieze_the_means_of_production
+
+	cost = 10
+
+	ai_will_do = {
+		base = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		if = {
+			limit = { amount_research_slots < 5 }
+
+			add_research_slot = 1
+		}
+		else = {
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 1.0
+				uses = 1
+				category = electronics
 			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
 			}
 		}
 	}
@@ -3022,7 +2619,7 @@ shared_focus = {
 	icon = GFX_goal_molotov_ribbentrop_pact
 	prerequisite = { focus = BALTIC_overthrow_the_government }
 	prerequisite = { focus = BALTIC_seek_support_of_soviets }
-	x = -2
+	x = -4
 	y = 1
 	relative_position_id = BALTIC_overthrow_the_government
 
@@ -3541,7 +3138,7 @@ shared_focus = {
 	id = BALTIC_focus_on_the_interior_2
 	icon = GFX_focus_attack_germany
 	prerequisite = { focus = BALTIC_focus_on_the_interior }
-	x = -1
+	x = 0
 	y = 2
 	relative_position_id = BALTIC_focus_on_the_interior
 
@@ -3742,5 +3339,428 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 	completion_reward = {
 		war_goal_effect_on_random_neighbour_non_communist = yes
+	}
+}
+
+################################
+#### LOYAL CABINET (NA/DEM) ####
+################################
+shared_focus = {
+	id = LIT_secure_a_loyal_cabinet
+	icon = GFX_goal_generic_neutrality_focus
+	mutually_exclusive = { focus = BALTIC_restore_workers_republic focus = EST_rally_the_nation }
+	x = 34
+	y = 0
+
+	allow_branch = {
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			NOT = {
+				has_completed_focus = BALTIC_restore_workers_republic
+				has_completed_focus = EST_rally_the_nation
+			}
+		}
+	}
+
+	offset = {
+		x = -12
+		y = 0
+		trigger = {
+			has_game_rule = {
+				rule = obsolete_focus_branches_visibility
+				option = HIDE
+			}
+			has_completed_focus = LIT_secure_a_loyal_cabinet
+		}
+	}
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	available = {
+		OR = {
+			has_government = democratic
+			has_idea = democratic_influence
+			has_advisor_with_democratic_trait = yes
+			has_government = neutrality
+			has_idea = neutrality_idea
+			has_idea = neutrality_influence
+			has_advisor_with_non_aligned_trait = yes
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_stability = 0.05
+		add_political_power = 100
+
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			mark_focus_tree_layout_dirty = yes 
+		}
+	}
+}
+
+###############################################
+#### RESTORE PUBLIC ELECTIONS (DEMOCRATIC) ####
+###############################################
+
+shared_focus = {
+	id = LIT_restore_public_elections
+	icon = GFX_goal_support_democracy
+	mutually_exclusive = { focus = LAT_suspend_the_constitution_esi }
+	prerequisite = { focus = LIT_secure_a_loyal_cabinet }
+	x = -3
+	y = 1
+	relative_position_id = LIT_secure_a_loyal_cabinet
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		OR = {
+			has_government = democratic
+			has_idea = democratic_influence
+			has_advisor_with_democratic_trait = yes
+			has_government = neutrality
+			has_idea = neutrality_idea
+			has_idea = neutrality_influence
+			has_advisor_with_non_aligned_trait = yes
+		}
+	}
+
+	bypass = { has_government = democratic }
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+	}
+}
+
+#######################################
+#### SUSPEND THE CONSTITUTION (NA) ####
+#######################################
+shared_focus = {
+	id = LAT_suspend_the_constitution_esi
+	icon = GFX_focus_LAT_suspend_constitution_of_latvia
+	mutually_exclusive = { focus = LIT_restore_public_elections }
+	prerequisite = { focus = LIT_secure_a_loyal_cabinet }
+	x = 3
+	y = 1
+	relative_position_id = LIT_secure_a_loyal_cabinet
+
+	cost = 10
+
+	allow_branch = {
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			NOT = {
+				has_completed_focus = BALTIC_restore_workers_republic
+			}
+		}
+	}
+
+	offset = {
+		x = -12
+		y = 0
+		trigger = {
+			has_game_rule = {
+				rule = obsolete_focus_branches_visibility
+				option = HIDE
+			}
+			has_completed_focus = LAT_suspend_the_constitution
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_political_power = 100
+
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			mark_focus_tree_layout_dirty = yes 
+		}
+	}
+}
+
+shared_focus = {
+	id = LIT_prepare_forest_brothers
+	icon = GFX_focus_generic_forest_brothers
+	prerequisite = { focus = LIT_secure_a_loyal_cabinet focus = EST_rally_the_nation }
+	x = 6
+	y = 1
+	relative_position_id = LIT_secure_a_loyal_cabinet
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		add_ideas = BALTIC_forest_brothers_idea
+	}
+}
+
+####################################
+#### RALLY THE NATION (FASCISM) ####
+####################################
+shared_focus = {
+	id = EST_rally_the_nation
+	icon = GFX_focus_EST_rally_the_nation
+	mutually_exclusive = { focus = BALTIC_restore_workers_republic focus = LIT_secure_a_loyal_cabinet }
+	x = 44
+	y = 0
+
+	cost = 10
+
+	allow_branch = {
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			NOT = {
+				OR = {
+					has_completed_focus = BALTIC_restore_workers_republic
+					has_completed_focus = LIT_secure_a_loyal_cabinet
+				}
+			}
+		}
+	}
+
+	offset = {
+		x = -20
+		y = 0
+		trigger = {
+			has_game_rule = {
+				rule = obsolete_focus_branches_visibility
+				option = HIDE
+			}
+			has_completed_focus = EST_rally_the_nation
+		}
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	available = {
+		OR = {
+			has_government = fascism
+			has_idea = fascist_influence
+			has_advisor_with_fascist_trait = yes
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+			mark_focus_tree_layout_dirty = yes 
+		}
+	}
+}
+
+shared_focus = {
+	id = LAT_empower_paramilitarists
+	icon = GFX_focus_generic_military_academy
+	prerequisite = { focus = EST_rally_the_nation }
+	x = -1
+	y = 1
+	relative_position_id = EST_rally_the_nation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		add_ideas = LAT_paramilitary_idea
+	}
+}
+
+shared_focus = {
+	id = LAT_fanatic_recruitment
+	icon = GFX_goal_generic_wolf_pack
+	prerequisite = { focus = EST_rally_the_nation }
+	x = 1
+	y = 1
+	relative_position_id = EST_rally_the_nation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		fascism > 0.1
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+	completion_reward = {
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_ideas = LAT_paramilitary_fasc_idea
+	}
+}
+
+shared_focus = {
+	id = EST_march_on_capital
+	icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+	prerequisite = { focus = LAT_empower_paramilitarists }
+	prerequisite = { focus = LAT_fanatic_recruitment }
+	x = 1
+	y = 1
+	relative_position_id = LAT_empower_paramilitarists
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = { fascism > 0.4 }
+
+	bypass = {
+		has_government = fascism
+		has_civil_war = no
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		set_temp_variable = {
+			civil_war_size_var = {
+				value = 1
+				subtract = party_popularity@fascism
+			}
+		}
+
+		if = {
+			limit = { check_variable = { num_owned_states > 1 } }
+
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = ROOT
+				size = civil_war_size_var
+			}
+		}
+		else = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			multiply_temp_variable = { civil_war_size_var = -1 }
+			add_stability = civil_war_size_var
+			add_war_support = civil_war_size_var
+		}
+	}
+}
+
+shared_focus = {
+	id = LAT_the_old_ways
+	icon = GFX_focus_LAT_the_old_ways
+	prerequisite = { focus = EST_march_on_capital }
+	x = 0
+	y = 1
+	relative_position_id = EST_march_on_capital
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_ideas = LAT_neopaganism_idea
 	}
 }

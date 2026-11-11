@@ -1,4 +1,43 @@
 ideas = {
+	country = {
+		# These are used in the Baltic generic focus tree.
+		LAT_paramilitary_idea = {
+			name = LAT_paramilitary_idea_esi
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription_factor = 0.2
+			}
+		}
+
+		LAT_paramilitary_fasc_idea = {
+			name = LAT_paramilitary_fasc_idea_esi
+			picture = generic_manpower_bonus
+
+			allowed_civil_war = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			modifier = {
+				conscription = 0.01
+				modifier_army_sub_unit_militia_attack_factor = 0.1
+				modifier_army_sub_unit_militia_defence_factor = 0.1 
+			}
+		}
+
+		LAT_neopaganism_idea = {
+			picture = LAT_neopaganism_1
+
+			modifier = {
+				war_support_factor = 0.1
+				fascism_drift = 0.1
+			}
+		}
+	}
+
 	naval_manufacturer = {
 		designer = yes
 

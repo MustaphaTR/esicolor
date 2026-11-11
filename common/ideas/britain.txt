@@ -30,12 +30,17 @@ ideas = {
 				has_dlc = "La Resistance"
 			}
 			visible = {
-				NOT = { has_country_flag = armored_car_manufacturer_disabled }
 				OR = {
-					original_tag = IEZ
+					has_completed_focus = BALTIC_crossley_motors
 					AND = {
-						has_global_flag = custom_designers_only
-						owns_state = 132
+						NOT = { has_country_flag = armored_car_manufacturer_disabled }
+						OR = {
+							original_tag = IEZ
+							AND = {
+								has_global_flag = custom_designers_only
+								owns_state = 132
+							}
+						}
 					}
 				}
 			}
@@ -383,12 +388,17 @@ ideas = {
 				always = yes
 			}
 			visible = {
-				NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
 				OR = {
-					original_tag = IZL
+					has_completed_focus = BALTIC_british_designers
 					AND = {
-						has_global_flag = custom_designers_only
-						owns_state = 126
+						NOT = { has_country_flag = infantry_equipment_manufacturer_disabled }
+						OR = {
+							original_tag = IZL
+							AND = {
+								has_global_flag = custom_designers_only
+								owns_state = 126
+							}
+						}
 					}
 				}
 			}
@@ -396,7 +406,10 @@ ideas = {
 				if = {
 					limit = { has_global_flag = custom_designers_only }
 
-					126 = { state_designer_availabile = yes }
+					OR = {
+						has_completed_focus = BALTIC_british_designers
+						126 = { state_designer_availabile = yes }
+					}
 				}
 			}
 
@@ -414,12 +427,17 @@ ideas = {
 				always = yes
 			}
 			visible = {
-				NOT = { has_country_flag = artillery_manufacturer_disabled }
 				OR = {
-					original_tag = IZL
+					has_completed_focus = BALTIC_british_designers
 					AND = {
-						has_global_flag = custom_designers_only
-						owns_state = 126
+						NOT = { has_country_flag = artillery_manufacturer_disabled }
+						OR = {
+							original_tag = IZL
+							AND = {
+								has_global_flag = custom_designers_only
+								owns_state = 126
+							}
+						}
 					}
 				}
 			}
@@ -427,7 +445,10 @@ ideas = {
 				if = {
 					limit = { has_global_flag = custom_designers_only }
 
-					126 = { state_designer_availabile = yes }
+					OR = {
+						has_completed_focus = BALTIC_british_designers
+						126 = { state_designer_availabile = yes }
+					}
 				}
 			}
 
