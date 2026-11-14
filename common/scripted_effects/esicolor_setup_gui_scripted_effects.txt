@@ -1261,6 +1261,8 @@ setup_gui_start_advisors = {
 		limit = { check_variable = { global.setup_advisors < -2 } }
 
 		every_country = {
+			limit = { NOT = { original_tag = OOO } }
+
 			randomise_advisors = yes
 			generate_advisors = yes
 		}
@@ -1270,6 +1272,8 @@ setup_gui_start_advisors = {
 		limit = { check_variable = { global.setup_advisors = -2 } }
 
 		every_country = {
+			limit = { NOT = { original_tag = OOO } }
+
 			setup_basegame_advisors = yes
 			generate_advisors = yes
 		}
@@ -1279,6 +1283,8 @@ setup_gui_start_advisors = {
 		limit = { check_variable = { global.setup_advisors = -1 } }
 
 		every_country = {
+			limit = { NOT = { original_tag = OOO } }
+
 			setup_default_advisors = yes
 			generate_advisors = yes
 		}
@@ -1288,6 +1294,8 @@ setup_gui_start_advisors = {
 		limit = { check_variable = { global.setup_advisors = 0 } }
 
 		every_country = {
+			limit = { NOT = { original_tag = OOO } }
+
 			enable_all_advisors = yes
 			generate_advisors = yes
 		}
@@ -1397,32 +1405,32 @@ setup_gui_start_starting_army = {
 		if = {
 			limit = { check_variable = { global.setup_starting_army_type < 0 } }
 
-			every_country = { randomise_starting_army_type = yes }
+			every_country = { limit = { NOT = { original_tag = OOO } } randomise_starting_army_type = yes }
 		}
 		else_if = {
 			limit = { check_variable = { global.setup_starting_army_type = 0 } }
 
-			every_country = { adjust_default_template_size = yes }
+			every_country = { limit = { NOT = { original_tag = OOO } } adjust_default_template_size = yes }
 		}
 		else_if = {
 			limit = { check_variable = { global.setup_starting_army_type = 1 } }
 
-			every_country = { change_default_template_to_militia = yes }
+			every_country = { limit = { NOT = { original_tag = OOO } } change_default_template_to_militia = yes }
 		}
 		else_if = {
 			limit = { check_variable = { global.setup_starting_army_type = 2 } }
 
-			every_country = { change_default_template_to_irregulars = yes }
+			every_country = { limit = { NOT = { original_tag = OOO } } change_default_template_to_irregulars = yes }
 		}
 		else_if = {
 			limit = { check_variable = { global.setup_starting_army_type = 3 } }
 
-			every_country = { change_default_template_to_cavalry = yes }
+			every_country = { limit = { NOT = { original_tag = OOO } } change_default_template_to_cavalry = yes }
 		}
 		else_if = {
 			limit = { check_variable = { global.setup_starting_army_type > 3 } }
 
-			every_country = { change_default_template_to_bicycle = yes }
+			every_country = { limit = { NOT = { original_tag = OOO } } change_default_template_to_bicycle = yes }
 		}
 	}
 	if = {
