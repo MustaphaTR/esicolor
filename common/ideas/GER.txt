@@ -1,5 +1,44 @@
 ideas = {
-	# TECHNOLOGY
+	country = {
+		# These are checked in generic scripted effects file, which i don't want to override. So keeping them here.
+		GER_align_hungary = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+
+			modifier = {
+				fascism_drift = 0.2
+				fascism_acceptance = 85
+			}
+		}
+		GER_align_romania = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+
+			modifier = {
+				fascism_drift = 0.2
+				fascism_acceptance = 85
+			}
+		}
+	}
+
 	tank_manufacturer = { 
 		designer = yes
 

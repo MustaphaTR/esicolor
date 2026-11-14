@@ -899,14 +899,12 @@ setup_gui_start_resources = {
 	if = {
 		limit = { check_variable = { global.setup_resource_types < 0 } }
 
-		# every_state = { clear_resources = yes }
 		setup_default_resources = yes
 	}
 	else_if = {
 		limit = { check_variable = { global.setup_resource_types > -1 } }
 
 		every_state = {
-			# clear_resources = yes
 			set_temp_variable = {
 				max_plus_one = {
 					value = global.setup_resource_types_max

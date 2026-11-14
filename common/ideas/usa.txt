@@ -1,6 +1,6 @@
 ideas = {
 	country = {
-		# This is checked in generic scripted effects file, which i don't want to override. So keeping it here.
+		# These are checked in generic scripted effects file, which i don't want to override. So keeping them here.
 		american_influence_drift_communism = {
 			allowed = { always = no	}
 
@@ -12,6 +12,19 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			modifier = {
 				communism_drift = 0.05
+			}
+		}
+		american_influence_drift_fascism = {
+			allowed = { always = no	}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+			picture = generic_fascism_drift_bonus
+			modifier = {
+				fascism_drift = 0.05
 			}
 		}
 	}
