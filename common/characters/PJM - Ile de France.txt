@@ -7,10 +7,80 @@ characters={
 				small=GFX_idea_maurice_thorez
 			}
 		}
+
 		country_leader={
 			ideology=stalinism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	PJM_be_backroom_backstabber={
+		instance={
+			allowed={ has_dlc="La Resistance" }
+			name=FRA_jacques_duclos
+			portraits={
+				civilian={
+					small=GFX_portrait_FRA_jacques_duclos
+					small=GFX_idea_FRA_jacques_duclos
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=PJM_be_backroom_backstabber
+				traits={ backroom_backstabber }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						16={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="La Resistance" } }
+			name=FRA_jacques_duclos
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_1 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=PJM_be_backroom_backstabber
+				traits={ backroom_backstabber }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						16={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=5 }
+			}
+		}
+	}
+	PJM_br_armaments_organizer={
+		name=FRA_charles_tillon
+		portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_2 } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=PJM_br_armaments_organizer
+			traits={ armaments_organizer }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					16={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
 		}
 	}
 }

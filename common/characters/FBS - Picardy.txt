@@ -1,0 +1,51 @@
+characters={
+	FBS_jacques_doriot={
+		instance={
+			allowed={ has_dlc="La Resistance" }
+			name=FBS_jacques_doriot
+			portraits={
+				civilian={
+					large=GFX_portrait_fra_jacques_doriot
+					small=GFX_portrait_fra_jacques_doriot_small
+				}
+			}
+
+			country_leader={
+				traits={ eager_collaborator }
+				ideology=nazism
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="La Resistance" } }
+			name=FBS_jacques_doriot
+			portraits={ civilian={ large=GFX_portrait_europe_generic_fascism_3 } }
+
+			country_leader={
+				traits={ eager_collaborator }
+				ideology=nazism
+			}
+		}
+	}
+
+	#Advisors
+	FBS_bl_technocrat={
+		name=FRA_pierre_pucheu
+		portraits={ civilian={ small=GFX_idea_FRA_pierre_pucheu } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=FBS_bl_technocrat
+			traits={ technocrat }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					785={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=8 }
+		}
+	}
+}

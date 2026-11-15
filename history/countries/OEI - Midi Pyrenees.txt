@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = OEI_leon_blum
+recruit_character = OEI_bh_compassionate_gentleman
+random_character = { limit = { is_character = OEI_bh_compassionate_gentleman } 31 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OEI_bj_financial_expert
+random_character = { limit = { is_character = OEI_bj_financial_expert } 31 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

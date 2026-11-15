@@ -8,18 +8,28 @@ set_technology = {
 
 set_convoys = 5
 set_popularities = {
-	democratic = 25
-	fascism = 25
-	communism = 25
+	democratic = 15
+	fascism = 45
+	communism = 15
 	neutrality = 25
 }
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = fascism
 	last_election = "1935.10.10"
 	election_frequency = 36
 	elections_allowed = no
 }
 
+recruit_character = FBS_jacques_doriot
+recruit_character = FBS_bl_technocrat
+random_character = { limit = { is_character = FBS_bl_technocrat } 785 = { add_to_array = { state_advisors = PREV } } }
+
 set_rule = {
 	can_generate_female_aces = yes
+}
+
+set_party_name = {
+	ideology = fascism
+	name = FRA_ppf_party
+	long_name = FRA_ppf_party_long
 }

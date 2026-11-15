@@ -21,6 +21,14 @@ set_politics = {
 }
 
 recruit_character = OZL_philippe_petain
+recruit_character = OZL_j_air_warfare_theorist
+random_character = { limit = { is_character = OZL_j_air_warfare_theorist } 26 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OZL_f_air_chief_old_guard
+random_character = { limit = { is_character = OZL_f_air_chief_old_guard } 26 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OZL_ac_army_cavalry
+random_character = { limit = { is_character = OZL_ac_army_cavalry } 26 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = OZL_bc_army_regrouping
+random_character = { limit = { is_character = OZL_bc_army_regrouping } 26 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

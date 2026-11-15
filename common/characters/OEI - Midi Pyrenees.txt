@@ -3,15 +3,56 @@
 		name=FRA_leon_blum
 		portraits={
 			civilian = {
-				large="GFX_portrait_fra_leon_blum"
-				small="GFX_idea_leon_blum"
+				large=GFX_portrait_fra_leon_blum
+				small=GFX_idea_leon_blum
 			}
 		}
+
 		country_leader={
 			traits={ reluctant_interventionist stout_defender }
 			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OEI_bh_compassionate_gentleman={
+		name=FRA_roger_salengro
+		portraits={ civilian={ small=GFX_idea_FRA_roger_salengro } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OEI_bh_compassionate_gentleman
+			traits={ compassionate_gentleman }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					31={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=5 }
+		}
+	}
+	OEI_bj_financial_expert={
+		name=FRA_vincent_auriol
+		portraits={ civilian={ small=GFX_idea_FRA_vincent_auriol } }
+
+		advisor={
+			slot=political_advisor
+			idea_token=OEI_bj_financial_expert
+			traits={ financial_expert }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					31={ is_core_of=ROOT }
+				}
+			}
+
+			ai_will_do={ factor=1 }
 		}
 	}
 }

@@ -1,0 +1,29 @@
+characters={
+	OZI_rene_nicod={
+		instance={
+			allowed={ has_dlc="La Resistance" }
+			name=FRA_rene_nicod
+			portraits={
+				civilian={
+					large=GFX_portrait_fra_rene_nicod
+					small=GFX_portrait_FRA_rene_nicod_small
+				}
+			}
+
+			country_leader={
+				traits={ reluctant_veteran }
+				ideology=marxism
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="La Resistance" } }
+			name=FRA_rene_nicod
+			portraits={ civilian={ large=GFX_Portrait_Europe_Generic_1 } }
+
+			country_leader={
+				traits={ reluctant_veteran }
+				ideology=marxism
+			}
+		}
+	}
+}

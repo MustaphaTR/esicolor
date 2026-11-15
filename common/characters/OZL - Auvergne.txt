@@ -1,15 +1,91 @@
 ﻿characters={
 	OZL_philippe_petain={
 		name=FRA_philippe_petain
-		portraits={
-			civilian={
-				large=GFX_portrait_FRA_philippe_petain
-			}
-		}
+		portraits={ civilian={ large=GFX_portrait_FRA_philippe_petain } }
+
 		country_leader={
 			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+
+	#Advisors
+	OZL_j_air_warfare_theorist={
+		name=FRA_jean_marie_bergeret
+		portraits={ army={ small=GFX_idea_jean_marie_bergeret } }
+
+		advisor={
+			slot=theorist
+			idea_token=OZL_j_air_warfare_theorist
+			ledger=air
+			cost=100
+			traits={ air_warfare_theorist }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					26={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OZL_f_air_chief_old_guard={
+		name=FRA_jean_romatet
+		portraits={ army={ small=GFX_Portrait_France_Generic_land_9_small } }
+
+		advisor={
+			slot=air_chief
+			idea_token=OZL_f_air_chief_old_guard
+			cost=50
+			traits={ air_chief_old_guard }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					26={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OZL_ac_army_cavalry={
+		name=FRA_emile_laure
+		portraits={ army={ small=GFX_Portrait_France_Generic_land_6_small } }
+
+		advisor={
+			slot=high_command
+			idea_token=OZL_ac_army_cavalry
+			ledger=army
+			cost=50
+			traits={ army_cavalry_1 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					26={ is_core_of=ROOT }
+				}
+			}
+		}
+	}
+	OZL_bc_army_regrouping={
+		name=FRA_joseph_doumenc
+		portraits={ army={ small=GFX_Portrait_France_Generic_land_7_small } }
+
+		advisor={
+			slot=high_command
+			idea_token=IBS_bc_army_regrouping
+			ledger=army
+			cost=50
+			traits={ army_regrouping_1 }
+
+			available={
+				if={
+					limit={ has_global_flag=custom_advisors_only_core }
+
+					26={ is_core_of=ROOT }
+				}
+			}
 		}
 	}
 }

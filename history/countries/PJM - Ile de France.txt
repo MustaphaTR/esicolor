@@ -21,6 +21,10 @@ set_politics = {
 }
 
 recruit_character = PJM_maurice_thorez
+recruit_character = PJM_be_backroom_backstabber
+random_character = { limit = { is_character = PJM_be_backroom_backstabber } 16 = { add_to_array = { state_advisors = PREV } } }
+recruit_character = PJM_br_armaments_organizer
+random_character = { limit = { is_character = PJM_br_armaments_organizer } 16 = { add_to_array = { state_advisors = PREV } } }
 
 set_rule = {
 	can_generate_female_aces = yes

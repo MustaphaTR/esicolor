@@ -1,37 +1,74 @@
 ﻿characters={
 	OZA_jean_iii={
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
+		instance={
+			allowed={ has_dlc="La Resistance" }
 			name=OZA_jean_iii
-			portraits={
-				civilian={
-					large=GFX_portrait_fra_jean_duke_of_guise
-				}
-			}
+			portraits={ civilian={ large=GFX_portrait_fra_jean_duke_of_guise } }
+
 			country_leader={
 				traits={ duke_of_orleans }
 				ideology=moderatism
-				expire="1965.1.1.1"
-				id=-1
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
+		instance={
+			allowed={ NOT={ has_dlc="La Resistance" } }
 			name=OZA_jean_iii
-			portraits={
-				civilian={
-					large="gfx/leaders/FRA/Portrait_France_Generic_3.dds"
-				}
-			}
+			portraits={ civilian={ large=GFX_Portrait_France_Generic_3 } }
+
 			country_leader={
 				traits={ duke_of_orleans }
 				ideology=moderatism
-				expire="1965.1.1.1"
-				id=-1
+			}
+		}
+	}
+
+	#Advisors
+	OZA_bc_silent_workhorse={
+		instance={
+			allowed={ has_dlc="La Resistance" }
+			name=FRA_charles_maurras
+			portraits={
+				civilian={
+					large=GFX_portrait_FRA_charles_maurras
+					small=GFX_portrait_FRA_charles_maurras_small
+				}
+			}
+
+			advisor={
+				slot=political_advisor
+				idea_token=OZA_bc_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						24={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="La Resistance" } }
+			name=FRA_charles_maurras
+			portraits={ civilian={ small=GFX_idea_generic_political_advisor_europe_4 } }
+
+			advisor={
+				slot=political_advisor
+				idea_token=OZA_bc_silent_workhorse
+				traits={ silent_workhorse }
+
+				available={
+					if={
+						limit={ has_global_flag=custom_advisors_only_core }
+
+						24={ is_core_of=ROOT }
+					}
+				}
+
+				ai_will_do={ factor=15 }
 			}
 		}
 	}

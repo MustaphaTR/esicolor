@@ -4502,6 +4502,15 @@ remove_political_advisor = {
 			}
 		}
 		6 = {
+			set_country_flag = technocrat_disabled
+
+			modifier = {
+				factor = 0
+
+				has_country_flag = technocrat_disabled
+			}
+		}
+		6 = {
 			set_country_flag = captain_of_industry_disabled
 
 			modifier = {
@@ -4722,6 +4731,22 @@ generate_political_advisors = {
 		}
 
 		retire_economist = yes
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = technocrat_disabled }
+			has_custom_technocrat = no
+		}
+
+		generate_generic_technocrat = yes
+	}
+	else_if = {
+		limit = {
+			has_country_flag = technocrat_disabled
+			has_custom_technocrat = yes
+		}
+
+		retire_technocrat = yes
 	}
 	if = {
 		limit = {
@@ -11163,7 +11188,7 @@ randomise_advisors = {
 	clear_advisor_disabled_flags = yes
 
 	for_loop_effect = {
-		end = 11
+		end = 12
 		remove_political_advisor = yes
 	}
 	for_loop_effect = {
@@ -11436,6 +11461,40 @@ adjust_named_advisor_traits = {
 				add_trait = {
 					slot = political_advisor
 					trait = marxist_fundamentalist
+				}
+			}
+		}
+	}
+	23 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Georges Bonnet
+				limit = { has_trait = popular_figurehead }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = popular_figurehead
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = appeaser
+				}
+			}
+		}
+	}
+	24 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Charles Maurras
+				limit = { has_trait = silent_workhorse }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = silent_workhorse
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = national_integralist
 				}
 			}
 		}
@@ -13333,10 +13392,10 @@ retire_custom_named_advisors = {
 	random_country = { limit = { has_character = OLI_bd_minister_of_the_colonies } retire_character = OLI_bd_minister_of_the_colonies } # Adolf Friedrich of Mecklenburg
 	random_country = { limit = { has_character = OLA_o_rocket_scientist } remove_advisor_role = { character = OLA_o_rocket_scientist slot = high_command } } # Walter Dornberger
 	random_country = { limit = { has_character = OLB_ba_anti_fascist_agent } retire_character = OLB_ba_anti_fascist_agent } # Hans Oster
-	random_country = { limit = { has_character = OFS_bm_socialist_firebrand_union_women } retire_character = OFS_bm_socialist_firebrand_union_women } # Bozena Machacova-Dostalova
+	random_country = { limit = { has_character = OFS_bn_socialist_firebrand_union_women } retire_character = OFS_bn_socialist_firebrand_union_women } # Bozena Machacova-Dostalova
 	random_country = { limit = { has_character = IOO_be_progressive_doctor } retire_character = IOO_be_progressive_doctor } # Olaf J Thorlacius
 	random_country = { limit = { has_character = IYI_bb_veteran_anti_bolshevik } retire_character = IYI_bb_veteran_anti_bolshevik } # Viktor Puskar
-	random_country = { limit = { has_character = ZBZ_bq_nakajima_president } retire_character = ZBZ_bq_nakajima_president } # Chikuhei Nakajima
+	random_country = { limit = { has_character = ZBZ_br_nakajima_president } retire_character = ZBZ_br_nakajima_president } # Chikuhei Nakajima
 	if = {
 		limit = { NOT = { has_dlc = "No Step Back" } }
 
@@ -13881,6 +13940,7 @@ setup_default_advisors = {
 	set_country_flag = smooth_talking_charmer_disabled
 	set_country_flag = financial_expert_disabled
 	set_country_flag = economist_disabled
+	set_country_flag = technocrat_disabled
 	set_country_flag = naval_architect_disabled
 	set_country_flag = quartermaster_general_disabled
 	set_country_flag = armaments_organizer_disabled
@@ -13944,6 +14004,7 @@ setup_basegame_advisors = {
 	set_country_flag = smooth_talking_charmer_disabled
 	set_country_flag = financial_expert_disabled
 	set_country_flag = economist_disabled
+	set_country_flag = technocrat_disabled
 	set_country_flag = naval_architect_disabled
 	set_country_flag = quartermaster_general_disabled
 	set_country_flag = armaments_organizer_disabled
@@ -14088,6 +14149,7 @@ clear_advisor_disabled_flags = {
 	clr_country_flag = smooth_talking_charmer_disabled
 	clr_country_flag = financial_expert_disabled
 	clr_country_flag = economist_disabled
+	clr_country_flag = technocrat_disabled
 	clr_country_flag = captain_of_industry_disabled
 	clr_country_flag = war_industrialist_disabled
 	clr_country_flag = naval_architect_disabled
@@ -14280,10 +14342,10 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = warrior_code } remove_country_leader_trait = warrior_code }
 	if = { limit = { has_country_leader_with_trait = leftist_intellectual } remove_country_leader_trait = leftist_intellectual }
 	if = { limit = { has_country_leader_with_trait = our_right_to_survive } remove_country_leader_trait = our_right_to_survive }
-	if = { limit = { has_country_leader_with_trait = technocrat } remove_country_leader_trait = technocrat }
 	if = { limit = { has_country_leader_with_trait = defender_of_the_peasantry } remove_country_leader_trait = defender_of_the_peasantry }
 	if = { limit = { has_country_leader_with_trait = hardened_officer } remove_country_leader_trait = hardened_officer }
 	if = { limit = { has_country_leader_with_trait = freedom_fighter } remove_country_leader_trait = freedom_fighter }
+	if = { limit = { has_country_leader_with_trait = reluctant_veteran } remove_country_leader_trait = reluctant_veteran }
 	if = { limit = { has_country_leader_with_trait = experienced_insurgent } remove_country_leader_trait = experienced_insurgent }
 	if = { limit = { has_country_leader_with_trait = unpopular_monarch } remove_country_leader_trait = unpopular_monarch }
 	if = { limit = { has_country_leader_with_trait = divisive_absolute_monarch } remove_country_leader_trait = divisive_absolute_monarch }
@@ -14628,6 +14690,7 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = smooth_talking_charmer } remove_country_leader_trait = smooth_talking_charmer }
 	if = { limit = { has_country_leader_with_trait = financial_expert } remove_country_leader_trait = financial_expert }
 	if = { limit = { has_country_leader_with_trait = economist } remove_country_leader_trait = economist }
+	if = { limit = { has_country_leader_with_trait = technocrat } remove_country_leader_trait = technocrat }
 	if = { limit = { has_country_leader_with_trait = captain_of_industry } remove_country_leader_trait = captain_of_industry }
 	if = { limit = { has_country_leader_with_trait = war_industrialist } remove_country_leader_trait = war_industrialist }
 	if = { limit = { has_country_leader_with_trait = fortification_engineer } remove_country_leader_trait = fortification_engineer }
