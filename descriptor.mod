@@ -1,4 +1,4 @@
-version="2.3.9"
+version="2.4.0"
 replace_path="common/ai_strategy_plans"
 replace_path="common/bookmarks"
 replace_path="common/bop"
