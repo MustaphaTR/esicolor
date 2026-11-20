@@ -1,11 +1,29 @@
 ﻿characters={
 	ISA_matyas_rakosi={
-		name=HUN_matyas_rakosi
-		portraits={ civilian={ large=GFX_Portrait_hungary_matyas_rakosi } }
+		instance={
+			allowed={ has_dlc="Gotterdammerung" }
+			name=HUN_matyas_rakosi
+			portraits={
+				civilian{
+					largeGFX_portrait_HUN_matyas_rakosi
+					smallGFX_portrait_HUN_matyas_rakosi_civilian_small
+				}
+			}
 
-		country_leader={
-			traits={ HUN_ardent_stalinist }
-			ideology=stalinism
+			country_leader={
+				traits={ HUN_ardent_stalinist }
+				ideology=stalinism
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="Gotterdammerung" } }
+			name=HUN_matyas_rakosi
+			portraits={ civilian={ large=GFX_Portrait_hungary_matyas_rakosi } }
+
+			country_leader={
+				traits={ HUN_ardent_stalinist }
+				ideology=stalinism
+			}
 		}
 	}
 

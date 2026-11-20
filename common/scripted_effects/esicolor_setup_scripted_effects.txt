@@ -966,84 +966,17 @@ clear_airbases = {
 		instant_build = yes
 	}
 }
-
 place_starting_air_bases = {
 	every_state = {
-		if = {
-			limit = { has_level_1_air_base = yes }
-			set_building_level = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-		else_if = {
-			limit = { has_level_2_air_base = yes }
-			set_building_level = {
-				type = air_base
-				level = 2
-				instant_build = yes
-			}
-		}
-		else_if = {
-			limit = { has_level_3_air_base = yes }
-			set_building_level = {
-				type = air_base
-				level = 3
-				instant_build = yes
-			}
-		}
-		else_if = {
-			limit = { has_level_4_air_base = yes }
-			set_building_level = {
-				type = air_base
-				level = 4
-				instant_build = yes
-			}
-		}
-		else_if = {
-			limit = { has_level_5_air_base = yes }
-			set_building_level = {
-				type = air_base
-				level = 5
-				instant_build = yes
-			}
-		}
-		else_if = {
-			limit = { has_level_6_air_base = yes }
-			set_building_level = {
-				type = air_base
-				level = 6
-				instant_build = yes
-			}
-		}
-		else_if = {
-			limit = { has_level_7_air_base = yes }
-			set_building_level = {
-				type = air_base
-				level = 7
-				instant_build = yes
-			}
-		}
-		else_if = {
-			limit = { has_level_8_air_base = yes }
-			set_building_level = {
-				type = air_base
-				level = 8
-				instant_build = yes
-			}
-		}
-		else_if = {
-			limit = { has_level_10_air_base = yes }
-			set_building_level = {
-				type = air_base
-				level = 10
-				instant_build = yes
-			}
+		limit = { check_variable = { starting_air_bases > 0 } }
+
+		set_building_level = {
+			type = air_base
+			level = starting_air_bases
+			instant_build = yes
 		}
 	}
 }
-
 randomise_air_bases = {
 	every_state = {
 		random_list = {
