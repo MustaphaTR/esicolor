@@ -11843,6 +11843,69 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	78 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Petru Groza
+				limit = { has_trait = communist_revolutionary }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = communist_revolutionary
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = ROM_agrarian_revolutionary
+				}
+			}
+			if = { # Gheorghe Gheorghiu-Dej
+				limit = { has_trait = backroom_backstabber }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = backroom_backstabber
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = ROM_staunch_stalinist
+				}
+			}
+		}
+	}
+	79 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Mihail Sturdza
+				limit = { has_trait = fascist_demagogue }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = fascist_demagogue
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = ROM_legionary_diplomat
+				}
+			}
+		}
+	}
+	83 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Iuliu Maniu
+				limit = { has_trait = democratic_reformer }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = democratic_reformer
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = ROM_sphinx
+				}
+			}
+		}
+	}
 	87 = {
 		for_each_scope_loop = {
 			array = state_advisors
@@ -14608,6 +14671,13 @@ clear_leader_traits = {
 	if = { limit = { has_country_leader_with_trait = AST_revolutionary_equalist } remove_country_leader_trait = AST_revolutionary_equalist }
 	if = { limit = { has_country_leader_with_trait = KAL_hier_to_the_oirat_realm } remove_country_leader_trait = KAL_hier_to_the_oirat_realm }
 	if = { limit = { has_country_leader_with_trait = married_to_latvia } remove_country_leader_trait = married_to_latvia }
+	if = { limit = { has_country_leader_with_trait = camarilla_leader } remove_country_leader_trait = camarilla_leader }
+	if = { limit = { has_country_leader_with_trait = ROM_opportunistic } remove_country_leader_trait = ROM_opportunistic }
+	if = { limit = { has_country_leader_with_trait = ROM_socialist_doctor } remove_country_leader_trait = ROM_socialist_doctor }
+	if = { limit = { has_country_leader_with_trait = ROM_reformer_of_the_military } remove_country_leader_trait = ROM_reformer_of_the_military }
+	if = { limit = { has_country_leader_with_trait = ROM_incorruptible } remove_country_leader_trait = ROM_incorruptible }
+	if = { limit = { has_country_leader_with_trait = ROM_nationalist_symbol } remove_country_leader_trait = ROM_nationalist_symbol }
+	if = { limit = { has_country_leader_with_trait = ROM_dignified } remove_country_leader_trait = ROM_dignified }
 
 	if = { limit = { has_country_leader_with_trait = likes_allies } remove_country_leader_trait = likes_allies }
 	if = { limit = { has_country_leader_with_trait = likes_germany } remove_country_leader_trait = likes_germany }

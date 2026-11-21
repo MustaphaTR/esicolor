@@ -1,17 +1,40 @@
 ﻿characters={
 	OBI_ion_antonescu={
-		name=ROM_ion_antonescu
-		portraits={
-			civilian={
-				large=GFX_Portrait_romania_ion_antonescu
-				small=GFX_idea_ROM_ion_antonescu
+		instance={
+			allowed={ has_dlc="To The Bitter End" }
+			name=ROM_ion_antonescu
+			portraits={
+				civilian={
+					large=GFX_portrait_ROM_ion_antonescu
+					small=GFX_idea_ROM_ion_antonescu
+				}
+			}
+			country_leader={
+				traits={ ROM_reformer_of_the_military ROM_incorruptible }
+				ideology=fascism_ideology
+			}
+			country_leader={
+				traits={ ROM_reformer_of_the_military ROM_incorruptible }
+				ideology=centrism
 			}
 		}
-		country_leader={
-			traits={ prince_of_terror }
-			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
+		instance={
+			allowed={ NOT={ has_dlc="To The Bitter End" } }
+			name=ROM_ion_antonescu
+			portraits={
+				civilian={
+					large=GFX_Portrait_romania_ion_antonescu
+					small=GFX_idea_ROM_ion_antonescu
+				}
+			}
+			country_leader={
+				traits={ ROM_reformer_of_the_military ROM_incorruptible }
+				ideology=fascism_ideology
+			}
+			country_leader={
+				traits={ ROM_reformer_of_the_military ROM_incorruptible }
+				ideology=centrism
+			}
 		}
 	}
 }

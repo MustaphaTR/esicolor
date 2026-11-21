@@ -1,11 +1,24 @@
 ﻿characters={
 	OAL_carol_ii={
-		name=OAL_carol_ii
-		portraits={ civilian={ large=GFX_Portrait_romania_Carol_II } }
+		instance={
+			allowed={ has_dlc="To The Bitter End" }
+			name=OAL_carol_ii
+			portraits={ civilian={ large=GFX_portrait_ROM_carol_ii } }
 
-		country_leader={
-			traits={ hedonist }
-			ideology=despotism
+			country_leader={
+				traits={ hedonist camarilla_leader }
+				ideology=despotism
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="To The Bitter End" } }
+			name=OAL_carol_ii
+			portraits={ civilian={ large=GFX_Portrait_romania_Carol_II } }
+
+			country_leader={
+				traits={ hedonist camarilla_leader }
+				ideology=despotism
+			}
 		}
 	}
 
