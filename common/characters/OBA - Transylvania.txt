@@ -1,11 +1,29 @@
 ﻿characters={
 	OBA_octavian_goga={
-		name=ROM_octavian_goga
-		portraits={ civilian={ large=GFX_Portrait_romania_octavian_goga } }
+		instance={
+			allowed={ has_dlc="To The Bitter End" }
+			name=ROM_octavian_goga
+			portraits={
+				civilian={
+					large=GFX_portrait_ROM_octavian_goga
+					large=GFX_idea_ROM_octavian_goga
+				}
+			}
 
-		country_leader={
-			traits={ anti_democrat }
-			ideology=fascism_ideology
+			country_leader={
+				traits={ anti_democrat }
+				ideology=fascism_ideology
+			}
+		}
+		instance={
+			allowed={ NOT={ has_dlc="To The Bitter End" } }
+			name=ROM_octavian_goga
+			portraits={ civilian={ large=GFX_Portrait_romania_octavian_goga } }
+
+			country_leader={
+				traits={ anti_democrat }
+				ideology=fascism_ideology
+			}
 		}
 	}
 }
