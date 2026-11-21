@@ -11,7 +11,7 @@
 YFI_task_force_ship_organization = {
 	name = ROM_constanta_shipyard_organization
 	include = esicolor_generic_task_force_ship_organization
-	# icon = GFX_idea_generic_naval_manufacturer_2
+	icon = GFX_idea_ROM_constanta_shipyard
 
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
@@ -271,6 +271,37 @@ OBA_infantry_equipment_organization = {
 
 			owner = {
 				84 = { state_designer_availabile = yes }
+			}
+		}
+	}
+}
+
+OBZ_artillery_organization = {
+	name = ROM_resita_works_organization
+	include = esicolor_generic_artillery_organization
+	icon = GFX_idea_ROM_resita
+
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			NOT = { has_country_flag = artillery_manufacturer_disabled }
+			OR = {
+				original_tag = OBZ
+				AND = {
+					has_global_flag = custom_designers_only
+					owns_state = 82
+				}
+			}
+		}
+	}
+	available = {
+		if = {
+			limit = { has_global_flag = custom_designers_only }
+
+			owner = {
+				82 = { state_designer_availabile = yes }
 			}
 		}
 	}
