@@ -11561,6 +11561,23 @@ adjust_named_advisor_traits = {
 			}
 		}
 	}
+	46 = {
+		for_each_scope_loop = {
+			array = state_advisors
+			if = { # Nicolae Malaxa
+				limit = { has_trait = captain_of_industry }
+
+				remove_trait = {
+					slot = political_advisor
+					trait = captain_of_industry
+				}
+				add_trait = {
+					slot = political_advisor
+					trait = ROM_industrial_magnate
+				}
+			}
+		}
+	}
 	47 = {
 		for_each_scope_loop = {
 			array = state_advisors
